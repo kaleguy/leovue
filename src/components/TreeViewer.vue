@@ -79,7 +79,7 @@ export default {
       leftPane.style.width = cur + '%'
       rightPane.style.width = right + '%'
     }, null, 'horizontal')
-    getLeoJSON().then(ldata => {
+    getLeoJSON('example').then(ldata => {
       model.data = ldata
       // console.log('xxx', data.name)
     })
@@ -130,7 +130,7 @@ a {
   background: #eee;
   position: relative;
   cursor: col-resize;
-/*  background-image: url('vertical.png'); */
+  background-image: url('../assets/vertical.png');
   background-repeat: no-repeat;
   background-position: 50%;
 }

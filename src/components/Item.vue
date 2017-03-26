@@ -21,11 +21,19 @@
 var marked = require('marked')
 var hljs = require('highlight.js')
 let currentNode = null
-function showText (rightPane, text) {
+function showText (title, rightPane, text) {
   if (!text) { return }
 
   let language = getLanguage(text)
 
+  if (/^\s*@clean/.test(title)) {
+    var re = /(?:\.([^.]+))?$/
+    var ext = re.exec(title)[1]
+    var ng = ['txt', 'md', 'html']
+    if (ng.indexOf(ext) === -1) {
+      language = ext
+    }
+  }
   // just plain text
   if (!language) {
     rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
@@ -33,8 +41,9 @@ function showText (rightPane, text) {
   }
 
   // remove directives
-  text = removeFirstLine(text)
-
+  if (/^\s*?@/.test(text)) {
+    text = removeFirstLine(text)
+  }
   switch (language) {
     case 'md':
       text = marked(text)
@@ -91,8 +100,7 @@ export default {
       currentNode = this
       currentNode.active = true
 
-      console.log(this)
-      showText(this.targetEl, this.model.text)
+      showText(this.model.name, this.targetEl, this.model.text)
     }
   }
 }

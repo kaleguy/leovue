@@ -5,9 +5,9 @@ function loadXMLDoc (filename, type) {
   return xhttp['response' + type]
 }
 
-function getLeoJSON () {
+function getLeoJSON (filename) {
   var p = new Promise((resolve, reject) => {
-    const xmlString = loadXMLDoc('./static/example.leo', 'Text')
+    const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const xsl = loadXMLDoc('./static/leo.xsl', 'XML')

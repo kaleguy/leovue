@@ -10,19 +10,26 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Top</vh>
-<v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
+<v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
-<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
+<v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
+<v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1" a="E"><vh>Markdown</vh>
+<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
 <v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 <v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
+</v>
+<v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
+<v t="josephorr.20170304115429.1"></v>
+<v t="josephorr.20170304175209.1"></v>
+</v>
+<v t="josephorr.20170326072340.1" a="E"><vh>A File Node</vh>
+<v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
 </v>
 </v>
 </vnodes>
@@ -111,5 +118,34 @@ Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby 
 This node was writen with Markdown.
 
 Use the @language md directive to set the node to markdown.</t>
+<t tx="josephorr.20170326071708.1"></t>
+<t tx="josephorr.20170326072340.1"></t>
+<t tx="josephorr.20170326072346.1">function loadXMLDoc (filename, type) {
+  const xhttp = new XMLHttpRequest()
+  xhttp.open('GET', filename, false) // synchronous
+  xhttp.send('')
+  return xhttp['response' + type]
+}
+
+function getLeoJSON (filename) {
+  var p = new Promise((resolve, reject) =&gt; {
+    const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
+    const oParser = new DOMParser()
+    const xml = oParser.parseFromString(xmlString, 'text/xml')
+    const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    const xsltProcessor = new XSLTProcessor()
+    xsltProcessor.importStylesheet(xsl)
+    const resultDocument = xsltProcessor.transformToFragment(xml, document)
+    let data = resultDocument.textContent
+    data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+    const xdata = null
+    data = 'xdata = ' + data
+    eval(data) // eslint-disable-line JSON.Parse doesn't work because of template strings
+    resolve(xdata)
+  })
+  return p
+}
+
+export {getLeoJSON}</t>
 </tnodes>
 </leo_file>
