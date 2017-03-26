@@ -1,6 +1,6 @@
 # leoviewer
 
-> Viewer for Leo Files
+> Viewer for Leo Files.
 
 ## Build Setup
 

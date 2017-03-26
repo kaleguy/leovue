@@ -18,7 +18,11 @@
 <style scoped>
   DIV {
     text-align: left;
-    background: #0b97c4;
-    font-weight: bold;
+    background: #eee;
+    font-weight: normal;
+    padding:2px;
+    padding-left:6px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
   }
 </style>

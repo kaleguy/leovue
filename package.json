@@ -13,6 +13,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "highlight.js": "^9.10.0",
+    "marked": "^0.3.6",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
   },

@@ -5,7 +5,8 @@
         <ul id="demo">
           <item
             class="item"
-            :model="data.data">
+            :model="data.data"
+            :targetEl="target.el">
           </item>
         </ul>
       </div>
@@ -21,8 +22,6 @@
 import Item from './Item'
 import {getLeoJSON} from '../services/leo.js'
 
-console.log(getLeoJSON)
-
 let model = {
   data: {}
 }
@@ -30,51 +29,9 @@ let model = {
 let leftPane
 let rightPane
 let paneSep
-let currentNode = null
+// let currentNode = null
 
-function showText (text) {
-  if (!text) { return }
-
-  let language = getLanguage(text)
-
-  // just plain text
-  if (!language) {
-    rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
-    return
-  }
-
-  // remove directives
-  text = removeFirstLine(text)
-
-  switch (language) {
-    case 'md':
-     // text = marked(text)
-      rightPane.innerHTML = text
-      break
-    case 'html':
-      rightPane.innerHTML = text
-      break
-    default:
-      text = `<pre><code class="${language}">${text}</code></pre>`
-      rightPane.innerHTML = text
-    //  hljs.highlightBlock(rightPane)
-  }
-}
-function getLanguage (text) {
-  var language = ''
-  var re = /^@language (\w+)/
-  var languageTokens = re.exec(text)
-  if (languageTokens) {
-    language = languageTokens[1]
-    console.log(language)
-  }
-  return language
-}
-
-function removeFirstLine (text) {
-  return text.split(/[\n]/).splice(1).join('\n')
-}
-
+let target = {el: null}
 export default {
   name: 'treeviewer',
   components: {
@@ -83,31 +40,15 @@ export default {
   data: function () {
     return {
       data: model,
+      target: target,
       open: false,
       active: false
-    }
-  },
-  computed: {
-    isFolder: function () {
-      return this.model.data.children && this.model.data.children.length
-    }
-  },
-  methods: {
-    toggle: function () {
-      if (this.isFolder) {
-        this.open = !this.open
-      }
-      if (currentNode) {
-        currentNode.active = false
-      }
-      currentNode = this
-      currentNode.active = true
-      showText(this.model.text)
     }
   },
   mounted: () => {
     leftPane = document.getElementById('left-pane')
     rightPane = document.getElementById('right-pane')
+    target.el = rightPane
     paneSep = document.getElementById('panes-separator')
     rightPane.innerHTML = ''
 
@@ -172,19 +113,6 @@ a {
   color: #42b983;
 }
 
-
-textarea {
-  margin-top:20px;
-  border: none;
-  background-color: transparent;
-  resize: none;
-  outline: none;
-  font-size:16px;
-  font-family: Verdana;
-  height:100%;
-  width:100%;
-
-}
 
 .panes-container {
   display: flex;

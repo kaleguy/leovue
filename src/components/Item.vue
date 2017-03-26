@@ -10,18 +10,64 @@
       <item
         class="item"
         v-for="model in model.children"
-        :model="model">
+        :model="model"
+        :targetEl="targetEl">
       </item>
     </ul>
   </li>
 </template>
 
 <script>
+var marked = require('marked')
+var hljs = require('highlight.js')
 let currentNode = null
+function showText (rightPane, text) {
+  if (!text) { return }
+
+  let language = getLanguage(text)
+
+  // just plain text
+  if (!language) {
+    rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
+    return
+  }
+
+  // remove directives
+  text = removeFirstLine(text)
+
+  switch (language) {
+    case 'md':
+      text = marked(text)
+      rightPane.innerHTML = text
+      break
+    case 'html':
+      rightPane.innerHTML = text
+      break
+    default:
+      text = `<pre><code class="${language}">${text}</code></pre>`
+      rightPane.innerHTML = text
+      hljs.highlightBlock(rightPane)
+  }
+}
+function getLanguage (text) {
+  var language = ''
+  var re = /^@language (\w+)/
+  var languageTokens = re.exec(text)
+  if (languageTokens) {
+    language = languageTokens[1]
+    console.log(language)
+  }
+  return language
+}
+
+function removeFirstLine (text) {
+  return text.split(/[\n]/).splice(1).join('\n')
+}
 export default {
   name: 'item',
   props: {
-    model: Object
+    model: Object,
+    targetEl: Element
   },
   data: function () {
     return {
@@ -46,27 +92,35 @@ export default {
       currentNode.active = true
 
       console.log(this)
-      // showText(this.model.text)
+      showText(this.targetEl, this.model.text)
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+
+
 <style scoped>
-  
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-
+  .item {
+    cursor: pointer;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  ul {
+    padding-left: 1em;
+    line-height: 1.5em;
+    list-style-type: none;
+  }
+  li {
+    white-space: nowrap;
+  }
+  .active {
+    background: #81ff00;
+  }
+  li > div {
+    padding-left:4px;
+  }
 </style>
+
