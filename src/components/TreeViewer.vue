@@ -5,7 +5,9 @@
         <ul id="demo">
           <item
             class="item"
+            :showContent="true"
             :model="data.data"
+            :open="true"
             :targetEl="target.el">
           </item>
         </ul>

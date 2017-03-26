@@ -9,7 +9,9 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="josephorr.20170228222411.2" a="E"><vh>Top</vh>
+<v t="josephorr.20170228222411.2" a="E"><vh>Leo Viewer</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh></v>
+<v t="josephorr.20170326174511.1"><vh>Some Sample Content</vh>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
@@ -32,9 +34,24 @@
 <v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
 </v>
 </v>
+</v>
 </vnodes>
 <tnodes>
-<t tx="josephorr.20170228222411.2">This is the top.</t>
+<t tx="josephorr.20170228222411.2">@language html
+
+&lt;h1&gt;About Leo Viewer&lt;/h1&gt;
+&lt;p&gt;
+Leo Viewer is a web app that can display files created with 
+&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
+&lt;/p&gt;
+&lt;p&gt;
+Leo has some unique features that make it particularly suitable for documenting code and other complex documents.
+&lt;/p&gt;
+&lt;p&gt;
+Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
+text, html, markdown or code. Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
+&lt;/p&gt;
+ </t>
 <t tx="josephorr.20170304103722.1"></t>
 <t tx="josephorr.20170304103726.1">@language md
 
@@ -147,5 +164,14 @@ function getLeoJSON (filename) {
 }
 
 export {getLeoJSON}</t>
+<t tx="josephorr.20170326174500.1">@language html
+&lt;h2&gt;Leo Is an Outlining Editor&lt;/h2&gt;
+
+&lt;img width="500" src="http://www.leoeditor.com/screen-shots/leo-workbook.png" alt="ScreenShot"&gt;</t>
+<t tx="josephorr.20170326174511.1">@language html
+
+&lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
+
+Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
 </tnodes>
 </leo_file>

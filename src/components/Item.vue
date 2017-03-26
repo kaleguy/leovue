@@ -3,10 +3,10 @@
     <div
       :class="{bold: isFolder, active: active}"
       @click="toggle">
-      <span v-if="isFolder">{{open ? '▼' : '▶'}}</span>
+      <span v-if="isFolder">{{isOpen ? '▼' : '▶'}}</span>
       {{model.name}}
     </div>
-    <ul v-show="open" v-if="isFolder">
+    <ul v-show="isOpen" v-if="isFolder">
       <item
         class="item"
         v-for="model in model.children"
@@ -21,11 +21,11 @@
 var marked = require('marked')
 var hljs = require('highlight.js')
 let currentNode = null
+let initialized = false
 function showText (title, rightPane, text) {
+  console.log('TEST', text)
   if (!text) { return }
-
   let language = getLanguage(text)
-
   if (/^\s*@clean/.test(title)) {
     var re = /(?:\.([^.]+))?$/
     var ext = re.exec(title)[1]
@@ -33,13 +33,19 @@ function showText (title, rightPane, text) {
     if (ng.indexOf(ext) === -1) {
       language = ext
     }
+    const langs = {
+      js: 'javascript',
+      ts: 'typescript'
+    }
+    if (langs[ext]) {
+      language = langs[ext]
+    }
   }
   // just plain text
   if (!language) {
     rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
     return
   }
-
   // remove directives
   if (/^\s*?@/.test(text)) {
     text = removeFirstLine(text)
@@ -72,27 +78,38 @@ function getLanguage (text) {
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
+
 export default {
   name: 'item',
   props: {
+    open: Boolean,
     model: Object,
+    showContent: Boolean,
     targetEl: Element
   },
   data: function () {
     return {
-      open: false,
+      reset: true,
+      openFlag: false,
       active: false
     }
   },
   computed: {
     isFolder: function () {
       return this.model.children && this.model.children.length
+    },
+    isOpen: function () {
+      return this.open || this.openFlag
+    },
+    isActive: function () {
+      return this.active
     }
   },
   methods: {
     toggle: function () {
+      this.reset = false
       if (this.isFolder) {
-        this.open = !this.open
+        this.openFlag = !this.openFlag
       }
       if (currentNode) {
         currentNode.active = false
@@ -100,6 +117,18 @@ export default {
       currentNode = this
       currentNode.active = true
 
+      showText(this.model.name, this.targetEl, this.model.text)
+    }
+  },
+  mounted () {
+    if (!currentNode) {
+      currentNode = this
+      this.active = true
+    }
+  },
+  updated () {
+    if (this.showContent && this.model.text && !initialized) {
+      initialized = true
       showText(this.model.name, this.targetEl, this.model.text)
     }
   }
@@ -126,6 +155,10 @@ export default {
   }
   .active {
     background: #81ff00;
+  }
+  .activeb {
+    background: #81ff00;
+    font-weight:bold;
   }
   li > div {
     padding-left:4px;
