@@ -23,8 +23,10 @@ var hljs = require('highlight.js')
 let currentNode = null
 let initialized = false
 function showText (title, rightPane, text) {
-  console.log('TEST', text)
-  if (!text) { return }
+  if (!text) {
+    rightPane.innerHTML = ''
+    return
+  }
   let language = getLanguage(text)
   if (/^\s*@clean/.test(title)) {
     var re = /(?:\.([^.]+))?$/
@@ -46,7 +48,7 @@ function showText (title, rightPane, text) {
     rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
     return
   }
-  // remove directives
+  // remove directives from first line
   if (/^\s*?@/.test(text)) {
     text = removeFirstLine(text)
   }
@@ -59,7 +61,15 @@ function showText (title, rightPane, text) {
       rightPane.innerHTML = text
       break
     default:
+/*
+      text = text.replace(/<script>/g, '')
+      text = text.replace(/<\/script>/g, '')
+      text = text.replace(/</g, '&lt;')
+      text = text.replace(/>/g, '&gt;')
       text = `<pre><code class="${language}">${text}</code></pre>`
+*/
+      // text = text.replace(/<script>/g, '&lt;script&gt;')
+      // text = text.replace(/<\/script>/g, '&lt;/script&gt;')
       rightPane.innerHTML = text
       hljs.highlightBlock(rightPane)
   }
