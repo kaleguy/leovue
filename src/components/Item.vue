@@ -66,8 +66,9 @@ function showText (title, rightPane, text) {
       text = text.replace(/<\/script>/g, '')
       text = text.replace(/</g, '&lt;')
       text = text.replace(/>/g, '&gt;')
-      text = `<pre><code class="${language}">${text}</code></pre>`
 */
+      text = `<pre><code class="${language}">${text}</code></pre>`
+
       // text = text.replace(/<script>/g, '&lt;script&gt;')
       // text = text.replace(/<\/script>/g, '&lt;/script&gt;')
       rightPane.innerHTML = text
