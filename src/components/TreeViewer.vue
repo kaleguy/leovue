@@ -16,10 +16,8 @@
       <div class="right-pane" id="right-pane">
       </div>
     </div>
-
   </div>
 </template>
-
 <script>
 import Item from './Item'
 import {getLeoJSON} from '../services/leo.js'
@@ -81,12 +79,9 @@ export default {
       leftPane.style.width = cur + '%'
       rightPane.style.width = right + '%'
     }, null, 'horizontal')
-    getLeoJSON('example').then(ldata => {
+    getLeoJSON('docs').then(ldata => {
       model.data = ldata
-      // console.log('xxx', data.name)
     })
-    // data.name = 'xxxxx'
-    // console.log(data)
   }
 }
 </script>
@@ -126,6 +121,9 @@ a {
   width: 250px;
   background: #fff;
 }
+.right-pane {
+  max-width: 600px;
+}
 
 .panes-separator {
   width: 11px;
@@ -148,11 +146,14 @@ a {
 .right-pane {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
 }
 .right-pane {
   padding:10px;
   padding-top:0px;
+}
+p {
+  line-height:1.3em;
 }
 
 
