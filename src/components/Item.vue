@@ -10,8 +10,9 @@
       <item
         class="item"
         v-for="model in model.children"
-        :model="model"
-        :targetEl="targetEl">
+          :model="model"
+          :textItems="textItems"
+          :targetEl="targetEl">
       </item>
     </ul>
   </li>
@@ -96,7 +97,8 @@ export default {
     open: Boolean,
     model: Object,
     showContent: Boolean,
-    targetEl: Element
+    targetEl: Element,
+    textItems: Object
   },
   data: function () {
     return {
@@ -127,8 +129,7 @@ export default {
       }
       currentNode = this
       currentNode.active = true
-
-      showText(this.model.name, this.targetEl, this.model.text)
+      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
   },
   mounted () {

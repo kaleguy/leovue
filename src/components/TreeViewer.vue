@@ -7,6 +7,7 @@
             class="item"
             :showContent="true"
             :model="data.data"
+            :textItems="data.textItems"
             :open="true"
             :targetEl="target.el">
           </item>
@@ -23,7 +24,8 @@ import Item from './Item'
 import {getLeoJSON} from '../services/leo.js'
 
 let model = {
-  data: {}
+  data: {},
+  textItems: {}
 }
 
 let leftPane
@@ -80,7 +82,8 @@ export default {
       rightPane.style.width = right + '%'
     }, null, 'horizontal')
     getLeoJSON('docs').then(ldata => {
-      model.data = ldata
+      model.data = ldata.data
+      model.textItems = ldata.textItems
     })
   }
 }

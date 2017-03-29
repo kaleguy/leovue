@@ -9,9 +9,8 @@
     <xsl:variable name="t" select="@t"/>
     <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
     {
-    "t":   "<xsl:value-of select="@t"/>",
+    "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
     "name":"<xsl:value-of select="$nodeSet[1]/vh"/>",
-    "text":`<xsl:value-of select="//t[@tx=$t]"/>`,
     "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
     }
     <xsl:if test="position()!=last()">,</xsl:if>
