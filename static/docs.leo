@@ -38,6 +38,11 @@
 </v>
 <v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
+<v t="josephorr.20170328225527.1" a="E"><vh>@clean ../src/components/TreeViewer.vue</vh>
+<v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
+<v t="josephorr.20170328225718.1"><vh>&lt;&lt; script &gt;&gt;</vh></v>
+<v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -256,5 +261,175 @@ and if the target file is changed in another program, Leo will update the approp
 &lt;/p&gt;</t>
 <t tx="josephorr.20170327233236.1"></t>
 <t tx="josephorr.20170327233257.1"></t>
+<t tx="josephorr.20170328225527.1">&lt;&lt; template &gt;&gt;
+&lt;&lt; script &gt;&gt;
+&lt;&lt; style &gt;&gt;
+</t>
+<t tx="josephorr.20170328225654.1">@language xml
+&lt;template&gt;
+  &lt;div class="treeviewer"&gt;
+    &lt;div class="panes-container"&gt;
+      &lt;div class="left-pane" id="left-pane"&gt;
+        &lt;ul id="demo"&gt;
+          &lt;item
+            class="item"
+            :showContent="true"
+            :model="data.data"
+            :textItems="data.textItems"
+            :open="true"
+            :targetEl="target.el"&gt;
+          &lt;/item&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="panes-separator" id="panes-separator"&gt;&lt;/div&gt;
+      &lt;div class="right-pane" id="right-pane"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</t>
+<t tx="josephorr.20170328225718.1">@language javascript
+
+&lt;script&gt;
+import Item from './Item'
+import {getLeoJSON} from '../services/leo.js'
+
+let model = {
+  data: {},
+  textItems: {}
+}
+
+let leftPane
+let rightPane
+let paneSep
+// let currentNode = null
+
+let target = {el: null}
+export default {
+  name: 'treeviewer',
+  components: {
+    item: Item
+  },
+  data: function () {
+    return {
+      data: model,
+      target: target,
+      open: false,
+      active: false
+    }
+  },
+  mounted: () =&gt; {
+    leftPane = document.getElementById('left-pane')
+    rightPane = document.getElementById('right-pane')
+    target.el = rightPane
+    paneSep = document.getElementById('panes-separator')
+    rightPane.innerHTML = ''
+
+    // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
+    // - the left limit is positioned at 10% of the screen width
+    // - the right limit is positioned at 90% of the screen width
+    var leftLimit = 0
+    var rightLimit = 90
+
+    paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
+      fix.skipX = true
+      if (pageX &lt; window.innerWidth * leftLimit / 100) {
+        pageX = window.innerWidth * leftLimit / 100
+        fix.pageX = pageX
+      }
+      if (pageX &gt; window.innerWidth * rightLimit / 100) {
+        pageX = window.innerWidth * rightLimit / 100
+        fix.pageX = pageX
+      }
+      var cur = pageX / window.innerWidth * 100
+      if (cur &lt; 0) {
+        cur = 0
+      }
+      if (cur &gt; window.innerWidth) {
+        cur = window.innerWidth
+      }
+      var right = (100 - cur - 2)
+      leftPane.style.width = cur + '%'
+      rightPane.style.width = right + '%'
+    }, null, 'horizontal')
+    getLeoJSON('docs').then(ldata =&gt; {
+      model.data = ldata.data
+      model.textItems = ldata.textItems
+    })
+  }
+}
+&lt;/script&gt;</t>
+<t tx="josephorr.20170328225741.1">@language css
+&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+.treeviewer{
+  height: 100%
+}
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+
+
+.panes-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-pane {
+  width: 250px;
+  background: #fff;
+}
+.right-pane {
+  max-width: 600px;
+}
+
+.panes-separator {
+  width: 11px;
+  background: #eee;
+  position: relative;
+  cursor: col-resize;
+  background-image: url('../assets/vertical.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.right-pane {
+  flex: auto;
+  background: #fff;
+}
+
+.panes-container,
+.panes-separator,
+.left-pane,
+.right-pane {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.right-pane {
+  padding:10px;
+  padding-top:0px;
+}
+p {
+  line-height:1.3em;
+}
+
+
+&lt;/style&gt;</t>
 </tnodes>
 </leo_file>

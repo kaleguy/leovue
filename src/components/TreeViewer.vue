@@ -19,6 +19,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import Item from './Item'
 import {getLeoJSON} from '../services/leo.js'
@@ -88,7 +89,6 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
