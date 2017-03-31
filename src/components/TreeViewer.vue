@@ -37,6 +37,8 @@ let paneSep
 let target = {el: null}
 export default {
   name: 'treeviewer',
+  props: {
+  },
   components: {
     item: Item
   },
@@ -45,10 +47,19 @@ export default {
       data: model,
       target: target,
       open: false,
-      active: false
+      active: false,
+      id: 123
     }
   },
-  mounted: () => {
+  watch: {
+    '$route': {
+      handler: function (val, oldVal, changed) {
+        this.id = val.params.id
+      },
+      immediate: true
+    }
+  },
+  mounted: function () {
     leftPane = document.getElementById('left-pane')
     rightPane = document.getElementById('right-pane')
     target.el = rightPane
@@ -82,7 +93,7 @@ export default {
       leftPane.style.width = cur + '%'
       rightPane.style.width = right + '%'
     }, null, 'horizontal')
-    getLeoJSON('docs').then(ldata => {
+    getLeoJSON('docs', this.id).then(ldata => {
       model.data = ldata.data
       model.textItems = ldata.textItems
     })

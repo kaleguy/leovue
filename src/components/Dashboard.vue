@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <appheader/>
-    <treeviewer></treeviewer>
+    <router-view :id="$route.params.id></router-view>
   </div>
 </template>
 
@@ -17,6 +17,13 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      console.log('xssxx')
+      debugger
+      // react to route changes...
     }
   }
 }

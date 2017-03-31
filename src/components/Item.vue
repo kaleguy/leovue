@@ -29,6 +29,12 @@ function showText (title, rightPane, text) {
     return
   }
   let language = getLanguage(text)
+
+  text = text.replace(/<</g, '\u00AB')
+  text = text.replace(/>>/g, '\u00BB')
+
+  /*
+  // get language from extension
   if (/^\s*@clean/.test(title)) {
     var re = /(?:\.([^.]+))?$/
     var ext = re.exec(title)[1]
@@ -44,6 +50,8 @@ function showText (title, rightPane, text) {
       language = langs[ext]
     }
   }
+  */
+
   // just plain text
   if (!language) {
     rightPane.innerHTML = `<textarea readonly>${text}</textarea>`
@@ -62,16 +70,7 @@ function showText (title, rightPane, text) {
       rightPane.innerHTML = text
       break
     default:
-/*
-      text = text.replace(/<script>/g, '')
-      text = text.replace(/<\/script>/g, '')
-      text = text.replace(/</g, '&lt;')
-      text = text.replace(/>/g, '&gt;')
-*/
       text = `<pre><code class="${language}">${text}</code></pre>`
-
-      // text = text.replace(/<script>/g, '&lt;script&gt;')
-      // text = text.replace(/<\/script>/g, '&lt;/script&gt;')
       rightPane.innerHTML = text
       hljs.highlightBlock(rightPane)
   }
@@ -90,7 +89,7 @@ function getLanguage (text) {
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
-
+import router from '../router'
 export default {
   name: 'item',
   props: {
@@ -130,12 +129,22 @@ export default {
       currentNode = this
       currentNode.active = true
       showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+      router.push({name: 'Node', params: { id: this.model.id }})
     }
   },
   mounted () {
     if (!currentNode) {
       currentNode = this
       this.active = true
+    }
+    if (this.model.sel) {
+      console.log('hhhh', this.model.id)
+      this.openFlag = true
+    }
+    if (this.model.sel === 2) {
+      currentNode = this
+      this.active = true
+      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
   },
   updated () {

@@ -9,6 +9,8 @@
     <xsl:variable name="t" select="@t"/>
     <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
     {
+    "id":  <xsl:value-of select="@id"/>,
+    "sel": <xsl:value-of select="@sel"/>,
     "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
     "name":"<xsl:value-of select="$nodeSet[1]/vh"/>",
     "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]

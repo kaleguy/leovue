@@ -6,18 +6,31 @@ function loadXMLDoc (filename, type) {
   xhttp.send('')
   return xhttp['response' + type]
 }
+// let id = 0;
 function cleanText(data){
   // if (! data){ return }
   // debugger;
-  data.name = data.name.replace(/<</g,'\u00AB');
-  data.name = data.name.replace(/>>/g,'\u00BB');
+  // id = id + 1
+  // data.id = id
+  data.name = data.name.replace(/<</g, '\u00AB');
+  data.name = data.name.replace(/>>/g, '\u00BB');
+  data.name = escape(data.name)
   let children = data.children;
   if (!children) { return }
   for (let i = 0; i < children.length; i++){
     cleanText(children[i])
   }
+  data.t = data.t.replace(/^.*?_/,'')
 }
-function getLeoJSON (filename) {
+// set all parent els to @sel = 1
+function setSel(el){
+  let parent = el.parentElement;
+  if (parent){
+    parent.setAttribute('sel', 1)
+    setSel(parent)
+  }
+}
+function getLeoJSON (filename, id) {
   var p = new Promise((resolve, reject) => {
     const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
     const oParser = new DOMParser()
@@ -29,6 +42,7 @@ function getLeoJSON (filename) {
       let elText = el.textContent
       let a = el.getAttribute('tx')
       a = a.replace(/\./g,'_')
+      a = a.replace(/^.*?_/,'')
       if (
          (/^@language /.test(elText)) &&
          (!/^@language html/.test(elText))
@@ -36,6 +50,18 @@ function getLeoJSON (filename) {
         elText = escape(elText)
       }
       textItems[a] = elText
+    }
+    const vnodes = xml.getElementsByTagName('v')
+    for (let i = 0; i < vnodes.length; i++) {
+      vnodes[i].setAttribute('id', i)
+      vnodes[i].setAttribute('sel', 0)
+    }
+    // see if there is a selected element (bookmarked node)
+    // if so, mark it and its parent nodes
+    let el = xml.getElementById(id)
+    if (el) {
+      el.setAttribute('sel', 2)
+      setSel(el)
     }
     const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
     const xsltProcessor = new XSLTProcessor()
