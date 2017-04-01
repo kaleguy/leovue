@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Dashboard from '@/components/Dashboard'
-import TreeViewer from '@/components/TreeViewer'
+import Dashboard from '@/components/Dashboard'
 
 Vue.use(Router)
 
@@ -10,12 +9,12 @@ export default new Router({
     {
       path: '/',
       name: 'TreeView',
-      component: TreeViewer
+      component: Dashboard
     },
     {
       path: '/t/:id',
       name: 'Node',
-      component: TreeViewer
+      component: Dashboard
     }
 
   ]

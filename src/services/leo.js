@@ -45,7 +45,8 @@ function getLeoJSON (filename, id) {
       a = a.replace(/^.*?_/,'')
       if (
          (/^@language /.test(elText)) &&
-         (!/^@language html/.test(elText))
+         (!/^@language html/.test(elText)) &&
+         (!/^@language md/.test(elText))
       ){
         elText = escape(elText)
       }

@@ -11,18 +11,23 @@
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Viewer</vh>
 <v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
-<v t="josephorr.20170327233137.1"><vh>Short Intro</vh></v>
+<v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
+<v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>Chunking</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Viewer</vh></v>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Viewer</vh>
+<v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
+<v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
+<v t="josephorr.20170331200533.1"><vh>Using with Github Pages</vh></v>
+</v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
+<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
+<v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
+</v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
-</v>
-<v t="josephorr.20170304174421.1"><vh>Text</vh>
-<v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
@@ -36,13 +41,16 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1" a="E"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
 <v t="josephorr.20170328225718.1"><vh>&lt;&lt; script &gt;&gt;</vh></v>
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
+</v>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 </v>
 </v>
 </v>
@@ -63,7 +71,14 @@ Using Leo, you can create an outlined document like the one you are viewing. Con
 text, html, markdown or code. Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
 &lt;/p&gt;
  </t>
-<t tx="josephorr.20170304103722.1"></t>
+<t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
+
+To mark content as Markdown, put the following in the first line of the node content:
+
+@language md
+
+When Leo Viewer encounters a node with @language md as the first line, it displays the (html) output, not the md source.
+</t>
 <t tx="josephorr.20170304103726.1">@language md
 
 # A topic
@@ -77,7 +92,20 @@ This one is less so.
 ### Fine Print
 
 We would rather you not read this section.</t>
-<t tx="josephorr.20170304113011.1"></t>
+<t tx="josephorr.20170304113011.1">@language md
+
+Content items in Leo outlines can be code.
+
+To mark content as code, put the following in the first line of the node content:
+
+&lt;span class='directive'&gt;@language languagename&lt;/span&gt;
+
+for example:
+
+&lt;span class='directive'&gt;@language javascript&lt;/span&gt;
+
+When Leo Viewer encounters a node with a language directive as the first line, it displays formatted code, unless the language is 'html' or 'md' in which case Leo Viewer displays the output view, not the source.
+</t>
 <t tx="josephorr.20170304113024.1">@language javascript
 
 function getLanguage(text){
@@ -122,7 +150,16 @@ c.connect(
   user : 'username@domain.com'
   password : 'password'
 )</t>
-<t tx="josephorr.20170304173237.1">This branch has contains an HTML leaf node in it.</t>
+<t tx="josephorr.20170304173237.1">@language md
+
+Content items in Leo outlines can be HTML.
+
+To mark content as HTML, put the following in the first line of the node content:
+
+&lt;span class='directive'&gt;@language html&lt;/span&gt;
+
+When Leo Viewer encounters a node with @language html as the first line, it displays the html output, not the html source.
+</t>
 <t tx="josephorr.20170304174041.1">@language html
 
 &lt;h1&gt;Bee And Flower&lt;/h1&gt;
@@ -134,7 +171,7 @@ An example of HTML content.
     &lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png'&gt;
   &lt;/p&gt;
 &lt;/div&gt;  </t>
-<t tx="josephorr.20170304174421.1"></t>
+<t tx="josephorr.20170304174421.1">Content items in Leo outlines can be plain text.</t>
 <t tx="josephorr.20170304174436.1">This is just some regular text.
 
 And now for some hipster ipsum:
@@ -146,8 +183,10 @@ Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby 
 This node was writen with Markdown.
 
 Use the @language md directive to set the node to markdown.</t>
-<t tx="josephorr.20170326071708.1"></t>
-<t tx="josephorr.20170326072340.1"></t>
+<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that they share the same content. 
+
+The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
+<t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
 <t tx="josephorr.20170326072346.1">@language javascript
 function loadXMLDoc (filename, type) {
   const xhttp = new XMLHttpRequest()
@@ -176,53 +215,36 @@ function getLeoJSON (filename) {
 }
 
 export {getLeoJSON}</t>
-<t tx="josephorr.20170326174500.1">@language html
-&lt;p&gt;
-Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
-&lt;/p&gt;
-&lt;p&gt;
-The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
-displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
-documentation of code.
-&lt;/p&gt;
-&lt;p&gt;
-More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
-programming where documentation comes first, and code is generated from the documentation or
-is developed in tandem with it.
-&lt;/p&gt;</t>
+<t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
 Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
 <t tx="josephorr.20170327233126.1"></t>
-<t tx="josephorr.20170327233137.1">@language html
-&lt;h2&gt;Leo Is an Outlining Editor&lt;/h2&gt;
-&lt;p&gt;
+<t tx="josephorr.20170327233137.1">@language md
+# Leo Is an Outlining Editor
+
 In the screenshot below, you can see an outline or tree in the top left pane, and content for 
 current node being entered into the bottom pane.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo1.png" alt="ScreenShot"&gt;
 
-&lt;h2&gt;Leo Outlines can contain Cloned Nodes&lt;/h2&gt;
-&lt;p&gt;
+&lt;img width="500" height="350" src="static/leo1.png" alt="ScreenShot"&gt;
+
+# Leo Outlines can contain Cloned Nodes
+
 A single node can appear in multiple places in your tree, this is called a "clone" node. This allows Leo Outlines
 to be in effect, three dimensional and arbitrarily complex.
-&lt;/p&gt;
-&lt;p&gt;
+
 In the screenshot below, the "Coffeescript" node has been cloned and is appearing in two places in the tree. When you edit the content of the node and then click on its clone, you'll see that the edited content shows on both.
-&lt;/p&gt;
 
-&lt;img width="500" src="static/leo2.png" alt="ScreenShot"&gt;
+&lt;img width="500" height="350"  src="static/leo2.png" alt="ScreenShot"&gt;
 
-&lt;h2&gt;Leo Outlines can mirror other files&lt;/h2&gt;
-&lt;p&gt;
+# Leo Outlines can mirror other files
+
 The screenshot below shows a node with a '@clean' directive. This tells Leo that the content of the node should mirror the file specified by the directive.
-&lt;/p&gt;
-&lt;p&gt;
+
 This means that, when the target file is updated by another program, the content in the node will automatically update in Leo, regardless of whether that
 content has been divided into subnodes by Leo. To see how this works, read the next section: &lt;b&gt;Chunking&lt;/b&gt;.
-&lt;/p&gt;
 
 &lt;img width="500" src="static/leo3.png" alt="ScreenShot"&gt;</t>
 <t tx="josephorr.20170327233223.1">@language html
@@ -431,5 +453,33 @@ p {
 
 
 &lt;/style&gt;</t>
+<t tx="josephorr.20170331200243.1">@language html
+&lt;p&gt;
+Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
+&lt;/p&gt;
+&lt;p&gt;
+The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
+displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
+documentation of code.
+&lt;/p&gt;
+&lt;p&gt;
+More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
+programming where documentation comes first, and code is generated from the documentation or
+is developed in tandem with it.
+&lt;/p&gt;</t>
+<t tx="josephorr.20170331200411.1"></t>
+<t tx="josephorr.20170331200439.1"></t>
+<t tx="josephorr.20170331200533.1"></t>
+<t tx="josephorr.20170401114539.1"></t>
+<t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
+
+To do this, create a node with a Markdown link, for example:
+
+[This is a link](http://www.example.com)
+
+Leo Viewer will show the external site in the content pane.
+
+The next node has the following title:
+[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</t>
 </tnodes>
 </leo_file>
