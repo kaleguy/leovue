@@ -467,6 +467,7 @@ Current features include:
 * Node titles can be Markdown Urls
 
 Features planned for version 1:
+* Left Nav collapse - expand
 * Keyboard support
 * More configuration options
 * Search
