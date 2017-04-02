@@ -15,6 +15,7 @@
       </div>
       <div class="panes-separator" id="panes-separator"></div>
       <div>
+        <div id="hshim"></div>
         <table class="tlayout">
           <tr>
             <td v-if="lhandle" id="lhandlex"><div id="lhandle"></div></td>
@@ -118,8 +119,18 @@
   .tlayout TD {
     padding: 0
   }
+
   .treeviewer{
     height: 100%
+  }
+  #lhandle {
+    height: 100%;
+    width: 40px;
+    background: #fff;
+    float:left;
+  }
+  #hshim {
+    height: 10px;
   }
   h1, h2 {
     font-weight: normal;
@@ -169,12 +180,7 @@
     background: #fff;
   }
 
-  #lhandle {
-    height: 100%;
-    width: 30px;
-    background: #fff;
-    float:left;
-  }
+
 
   .panes-container,
   .panes-separator,

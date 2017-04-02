@@ -11,18 +11,23 @@
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Viewer</vh>
 <v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
-<v t="josephorr.20170327233137.1"><vh>Short Intro</vh></v>
-<v t="josephorr.20170327233223.1"><vh>Chunking</vh></v>
+<v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
+<v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
+<v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Viewer</vh></v>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Viewer</vh>
+<v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
+<v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
+<v t="josephorr.20170331200533.1"><vh>Using with Github Pages</vh></v>
+</v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
+<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
+<v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
+</v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
-</v>
-<v t="josephorr.20170304174421.1"><vh>Text</vh>
-<v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
@@ -36,8 +41,17 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
+<v t="josephorr.20170328225527.1" a="E"><vh>@clean ../src/components/TreeViewer.vue</vh>
+<v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
+<v t="josephorr.20170328225718.1"><vh>&lt;&lt; script &gt;&gt;</vh></v>
+<v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
+</v>
+</v>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
+<v t="josephorr.20170402095730.1"><vh>[Leo Home Page](http://www.leoeditor.com)</vh></v>
 </v>
 </v>
 </v>
@@ -58,7 +72,14 @@ Using Leo, you can create an outlined document like the one you are viewing. Con
 text, html, markdown or code. Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
 &lt;/p&gt;
  </t>
-<t tx="josephorr.20170304103722.1"></t>
+<t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
+
+To mark content as Markdown, put the following in the first line of the node content:
+
+@language md
+
+When Leo Viewer encounters a node with @language md as the first line, it displays the (html) output, not the md source.
+</t>
 <t tx="josephorr.20170304103726.1">@language md
 
 # A topic
@@ -72,7 +93,20 @@ This one is less so.
 ### Fine Print
 
 We would rather you not read this section.</t>
-<t tx="josephorr.20170304113011.1"></t>
+<t tx="josephorr.20170304113011.1">@language md
+
+Content items in Leo outlines can be code.
+
+To mark content as code, put the following in the first line of the node content:
+
+&lt;span class='directive'&gt;@language languagename&lt;/span&gt;
+
+for example:
+
+&lt;span class='directive'&gt;@language javascript&lt;/span&gt;
+
+When Leo Viewer encounters a node with a language directive as the first line, it displays formatted code, unless the language is 'html' or 'md' in which case Leo Viewer displays the output view, not the source.
+</t>
 <t tx="josephorr.20170304113024.1">@language javascript
 
 function getLanguage(text){
@@ -117,7 +151,16 @@ c.connect(
   user : 'username@domain.com'
   password : 'password'
 )</t>
-<t tx="josephorr.20170304173237.1">This branch has contains an HTML leaf node in it.</t>
+<t tx="josephorr.20170304173237.1">@language md
+
+Content items in Leo outlines can be HTML.
+
+To mark content as HTML, put the following in the first line of the node content:
+
+&lt;span class='directive'&gt;@language html&lt;/span&gt;
+
+When Leo Viewer encounters a node with @language html as the first line, it displays the html output, not the html source.
+</t>
 <t tx="josephorr.20170304174041.1">@language html
 
 &lt;h1&gt;Bee And Flower&lt;/h1&gt;
@@ -129,7 +172,7 @@ An example of HTML content.
     &lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png'&gt;
   &lt;/p&gt;
 &lt;/div&gt;  </t>
-<t tx="josephorr.20170304174421.1"></t>
+<t tx="josephorr.20170304174421.1">Content items in Leo outlines can be plain text.</t>
 <t tx="josephorr.20170304174436.1">This is just some regular text.
 
 And now for some hipster ipsum:
@@ -141,8 +184,10 @@ Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby 
 This node was writen with Markdown.
 
 Use the @language md directive to set the node to markdown.</t>
-<t tx="josephorr.20170326071708.1"></t>
-<t tx="josephorr.20170326072340.1"></t>
+<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that they share the same content. 
+
+The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
+<t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
 <t tx="josephorr.20170326072346.1">@language javascript
 function loadXMLDoc (filename, type) {
   const xhttp = new XMLHttpRequest()
@@ -171,90 +216,255 @@ function getLeoJSON (filename) {
 }
 
 export {getLeoJSON}</t>
-<t tx="josephorr.20170326174500.1">@language html
-&lt;p&gt;
-Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
-&lt;/p&gt;
-&lt;p&gt;
-The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
-displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
-documentation of code.
-&lt;/p&gt;
-&lt;p&gt;
-More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
-programming where documentation comes first, and code is generated from the documentation or
-is developed in tandem with it.
-&lt;/p&gt;</t>
+<t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
 Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
-<t tx="josephorr.20170327233126.1"></t>
-<t tx="josephorr.20170327233137.1">@language html
-&lt;h2&gt;Leo Is an Outlining Editor&lt;/h2&gt;
-&lt;p&gt;
-In the screenshot below, you can see an outline or tree in the top left pane, and content for 
-current node being entered into the bottom pane.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo1.png" alt="ScreenShot"&gt;
+<t tx="josephorr.20170327233126.1">This section contains on guide on using the Leo Viewer program to view files created in Leo.</t>
+<t tx="josephorr.20170327233137.1"></t>
+<t tx="josephorr.20170327233223.1"></t>
+<t tx="josephorr.20170327233236.1">@language md
 
-&lt;h2&gt;Leo Outlines can contain Cloned Nodes&lt;/h2&gt;
-&lt;p&gt;
-A single node can appear in multiple places in your tree, this is called a "clone" node. This allows Leo Outlines
-to be in effect, three dimensional and arbitrarily complex.
-&lt;/p&gt;
-&lt;p&gt;
-In the screenshot below, the "Coffeescript" node has been cloned and is appearing in two places in the tree. When you edit the content of the node and then click on its clone, you'll see that the edited content shows on both.
-&lt;/p&gt;
+# Additional Features of Leo
 
-&lt;img width="500" src="static/leo2.png" alt="ScreenShot"&gt;
+Leo has more features than can be listed in a brief summary.
 
-&lt;h2&gt;Leo Outlines can mirror other files&lt;/h2&gt;
-&lt;p&gt;
-The screenshot below shows a node with a '@clean' directive. This tells Leo that the content of the node should mirror the file specified by the directive.
-&lt;/p&gt;
-&lt;p&gt;
-This means that, when the target file is updated by another program, the content in the node will automatically update in Leo, regardless of whether that
-content has been divided into subnodes by Leo. To see how this works, read the next section: &lt;b&gt;Chunking&lt;/b&gt;.
-&lt;/p&gt;
+Some additional features include:
 
-&lt;img width="500" src="static/leo3.png" alt="ScreenShot"&gt;</t>
-<t tx="josephorr.20170327233223.1">@language html
-&lt;p&gt;
-In the screenshot below, we've created a new node with a @clean directive with a file name. 
-We've pasted the contents of the file into the node.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo4.png" alt="ScreenShot"&gt;
+* IDE editing features in content pane
+* Fully programmable, the Leo Outline is available to Python scripts running in Leo.
+* Compose programs from Outlines
+* Create unit tests automatically with @test and @suite scripts
+* Import other outline formats</t>
+<t tx="josephorr.20170327233257.1">@language md
 
-&lt;p&gt;
-This is a Vuejs component file, with three sections. We're going to break the sections out into 
-separate nodes. First create a section name using double angle brackets.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo5.png" alt="ScreenShot"&gt;
+# Installing Leo
 
-&lt;p&gt;
-Now select the section name plus the code you want to put in a sub node.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo6.png" alt="ScreenShot"&gt;
+[Installation page on the Leo Site](http://leoeditor.com/installing.html)</t>
+<t tx="josephorr.20170328225527.1">&lt;&lt; template &gt;&gt;
+&lt;&lt; script &gt;&gt;
+&lt;&lt; style &gt;&gt;
+</t>
+<t tx="josephorr.20170328225654.1">@language xml
+&lt;template&gt;
+  &lt;div class="treeviewer"&gt;
+    &lt;div class="panes-container"&gt;
+      &lt;div class="left-pane" id="left-pane"&gt;
+        &lt;ul id="demo"&gt;
+          &lt;item
+            class="item"
+            :showContent="true"
+            :model="data.data"
+            :textItems="data.textItems"
+            :open="true"
+            :targetEl="target.el"&gt;
+          &lt;/item&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="panes-separator" id="panes-separator"&gt;&lt;/div&gt;
+      &lt;div class="right-pane" id="right-pane"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</t>
+<t tx="josephorr.20170328225718.1">@language javascript
 
-&lt;p&gt;
-Enter Cmd-Shift-D to chunk the selected content into a subnode.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo7.png" alt="ScreenShot"&gt;
+&lt;script&gt;
+import Item from './Item'
+import {getLeoJSON} from '../services/leo.js'
 
-&lt;p&gt;
-Repeat this process with the other sections of the Vuejs component, now each
-has its own node. 
-&lt;/p&gt;
-&lt;img width="500" src="static/leo8.png" alt="ScreenShot"&gt;
+let model = {
+  data: {},
+  textItems: {}
+}
 
-&lt;p&gt;
-This is a simple example, but using Leo it is possible to quickly break up a large,
-complex set of code into manageable pieces. The target file is not affected,
-and if the target file is changed in another program, Leo will update the appropriate nodes.
-&lt;/p&gt;</t>
-<t tx="josephorr.20170327233236.1"></t>
-<t tx="josephorr.20170327233257.1"></t>
+let leftPane
+let rightPane
+let paneSep
+// let currentNode = null
+
+let target = {el: null}
+export default {
+  name: 'treeviewer',
+  components: {
+    item: Item
+  },
+  data: function () {
+    return {
+      data: model,
+      target: target,
+      open: false,
+      active: false
+    }
+  },
+  mounted: () =&gt; {
+    leftPane = document.getElementById('left-pane')
+    rightPane = document.getElementById('right-pane')
+    target.el = rightPane
+    paneSep = document.getElementById('panes-separator')
+    rightPane.innerHTML = ''
+
+    // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
+    // - the left limit is positioned at 10% of the screen width
+    // - the right limit is positioned at 90% of the screen width
+    var leftLimit = 0
+    var rightLimit = 90
+
+    paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
+      fix.skipX = true
+      if (pageX &lt; window.innerWidth * leftLimit / 100) {
+        pageX = window.innerWidth * leftLimit / 100
+        fix.pageX = pageX
+      }
+      if (pageX &gt; window.innerWidth * rightLimit / 100) {
+        pageX = window.innerWidth * rightLimit / 100
+        fix.pageX = pageX
+      }
+      var cur = pageX / window.innerWidth * 100
+      if (cur &lt; 0) {
+        cur = 0
+      }
+      if (cur &gt; window.innerWidth) {
+        cur = window.innerWidth
+      }
+      var right = (100 - cur - 2)
+      leftPane.style.width = cur + '%'
+      rightPane.style.width = right + '%'
+    }, null, 'horizontal')
+    getLeoJSON('docs').then(ldata =&gt; {
+      model.data = ldata.data
+      model.textItems = ldata.textItems
+    })
+  }
+}
+&lt;/script&gt;</t>
+<t tx="josephorr.20170328225741.1">@language css
+&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+.treeviewer{
+  height: 100%
+}
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+
+
+.panes-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-pane {
+  width: 250px;
+  background: #fff;
+}
+.right-pane {
+  max-width: 600px;
+}
+
+.panes-separator {
+  width: 11px;
+  background: #eee;
+  position: relative;
+  cursor: col-resize;
+  background-image: url('../assets/vertical.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.right-pane {
+  flex: auto;
+  background: #fff;
+}
+
+.panes-container,
+.panes-separator,
+.left-pane,
+.right-pane {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.right-pane {
+  padding:10px;
+  padding-top:0px;
+}
+p {
+  line-height:1.3em;
+}
+
+
+&lt;/style&gt;</t>
+<t tx="josephorr.20170331200243.1">@language md
+
+# About Leo
+
+Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
+
+The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
+displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
+documentation of code.
+
+More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
+programming where documentation comes first, and code is generated from the documentation or
+is developed in tandem with it.</t>
+<t tx="josephorr.20170331200411.1"></t>
+<t tx="josephorr.20170331200439.1">@language md
+
+# Leo Viewer
+
+Leo Viewer is a web app that can display files created with 
+&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
+
+Using Leo, you can create outlined content. Using Leo Viewer you can display this
+content as a web page.
+
+The content you are reading was created in Leo, if you're reading this on the Leo Viewer
+site, then this content is being displayed via the Leo Viiewer.
+
+Leo Viewer is current at version 0.9. Some features are being reworked, at which point 
+version 1.0 will be released.
+
+Current features include:
+* Display Leo content including markdown, html and code highlighting
+* Bookmarkable nodes
+
+Features in development:
+* Themes
+* D3 Trees</t>
+<t tx="josephorr.20170331200533.1"></t>
+<t tx="josephorr.20170401114539.1"></t>
+<t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
+
+To do this, create a node with a Markdown link in the title, for example:
+
+[This is a link](http://www.example.com)
+
+Leo Viewer will show the external site in the content pane.
+
+The next nodes have the following titles:
+
+[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
+
+[Leo Home Page](http://www.leoeditor.com)</t>
+<t tx="josephorr.20170402095730.1"></t>
 </tnodes>
 </leo_file>

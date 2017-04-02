@@ -30,12 +30,11 @@ const hljs = require('highlight.js')
 let currentNode = null
 let initialized = false
 function showText (title, panel, text) {
+  // TODO: replace this with Vuex
+  document.getElementById('lhandlex').style.display = 'block'
+  document.getElementById('hshim').style.display = 'block'
   if (/^\[/.test(title)) {
-    // TODO: replace this with Vuex
-    document.getElementById('lhandlex').style.display = 'none'
     return showSite(title, panel)
-  } else {
-    document.getElementById('lhandlex').style.display = 'block'
   }
   if (!text) {
     panel.innerHTML = ''
@@ -119,6 +118,7 @@ function showSite (title, panel) {
   if (!url) { return }
   const ext = getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
+  // TODO: add spinner
   if (ext === 'md') {
     axios.get(url)
       .then(function (response) {
@@ -131,6 +131,9 @@ function showSite (title, panel) {
       })
     return
   }
+  // TODO: replace this with Vuex
+  document.getElementById('lhandlex').style.display = 'none'
+  document.getElementById('hshim').style.display = 'none'
   const iframeHTML = `
     <iframe
        style="position:absolute"

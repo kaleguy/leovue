@@ -23,7 +23,7 @@
 <v t="josephorr.20170331200533.1"><vh>Using with Github Pages</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
-<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
+<v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
@@ -49,8 +49,9 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
+<v t="josephorr.20170402095730.1"><vh>[Leo Home Page](http://www.leoeditor.com)</vh></v>
 </v>
 </v>
 </v>
@@ -221,11 +222,27 @@ export {getLeoJSON}</t>
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
 Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
-<t tx="josephorr.20170327233126.1"></t>
+<t tx="josephorr.20170327233126.1">This section contains on guide on using the Leo Viewer program to view files created in Leo.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
-<t tx="josephorr.20170327233236.1"></t>
-<t tx="josephorr.20170327233257.1"></t>
+<t tx="josephorr.20170327233236.1">@language md
+
+# Additional Features of Leo
+
+Leo has more features than can be listed in a brief summary.
+
+Some additional features include:
+
+* IDE editing features in content pane
+* Fully programmable, the Leo Outline is available to Python scripts running in Leo.
+* Compose programs from Outlines
+* Create unit tests automatically with @test and @suite scripts
+* Import other outline formats</t>
+<t tx="josephorr.20170327233257.1">@language md
+
+# Installing Leo
+
+[Installation page on the Leo Site](http://leoeditor.com/installing.html)</t>
 <t tx="josephorr.20170328225527.1">&lt;&lt; template &gt;&gt;
 &lt;&lt; script &gt;&gt;
 &lt;&lt; style &gt;&gt;
@@ -396,33 +413,60 @@ p {
 
 
 &lt;/style&gt;</t>
-<t tx="josephorr.20170331200243.1">@language html
-&lt;p&gt;
+<t tx="josephorr.20170331200243.1">@language md
+
+# About Leo
+
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
-&lt;/p&gt;
-&lt;p&gt;
+
 The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
 displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
 documentation of code.
-&lt;/p&gt;
-&lt;p&gt;
+
 More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
 programming where documentation comes first, and code is generated from the documentation or
-is developed in tandem with it.
-&lt;/p&gt;</t>
+is developed in tandem with it.</t>
 <t tx="josephorr.20170331200411.1"></t>
-<t tx="josephorr.20170331200439.1"></t>
+<t tx="josephorr.20170331200439.1">@language md
+
+# Leo Viewer
+
+Leo Viewer is a web app that can display files created with 
+&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
+
+Using Leo, you can create outlined content. Using Leo Viewer you can display this
+content as a web page.
+
+The content you are reading was created in Leo, if you're reading this on the Leo Viewer
+site, then this content is being displayed via the Leo Viiewer.
+
+Leo Viewer is current at version 0.9. Some features are being reworked, at which point 
+version 1.0 will be released.
+
+Current features include:
+* Display Leo content including markdown, html and code highlighting
+* Bookmarkable nodes
+
+Features in development:
+* Themes
+* D3 Trees
+* More configuration options
+* Electron (desktop) version</t>
 <t tx="josephorr.20170331200533.1"></t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
 
-To do this, create a node with a Markdown link, for example:
+To do this, create a node with a Markdown link in the title, for example:
 
 [This is a link](http://www.example.com)
 
 Leo Viewer will show the external site in the content pane.
 
-The next node has the following title:
-[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</t>
+The next nodes have the following titles:
+
+[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
+
+[Leo Home Page](http://www.leoeditor.com)</t>
+<t tx="josephorr.20170402095730.1"></t>
 </tnodes>
 </leo_file>
