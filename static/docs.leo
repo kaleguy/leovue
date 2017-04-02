@@ -461,6 +461,8 @@ site, then this content is being displayed via the Leo Viewer.
 Leo Viewer is currently at version 0.9. Some features are being reworked or added, at which point 
 version 1.0 will be released.
 
+Leo Viewer 0.9 only is tested in Chrome and may not display correctly in other browsers.
+
 Current features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
