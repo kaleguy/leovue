@@ -14,15 +14,16 @@
         </ul>
       </div>
       <div class="panes-separator" id="panes-separator"></div>
-      <div>
-        <div id="hshim"></div>
-        <table class="tlayout">
-          <tr>
-            <td v-if="lhandle" id="lhandlex"><div id="lhandle"></div></td>
-            <td><div class="right-pane" id="right-pane"></div></td>
-          </tr>
-        </table>
-      </div>
+      <table id="tlayout">
+        <tr>
+          <td><div id="lhandle"></div></td>
+          <td>
+            <div id="hshim"></div>
+            <div class="right-pane" id="right-pane"></div>
+          </td>
+        </tr>
+      </table>
+      <div style='min-height:100%' id="vpane"></div>
     </div>
   </div>
 </template>
@@ -110,7 +111,10 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .tlayout {
+  #vpane {
+    width: 100%;
+  }
+  #tlayout {
     background: #fff;
     height: 100%;
     margin: 0;

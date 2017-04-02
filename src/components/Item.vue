@@ -31,8 +31,8 @@ let currentNode = null
 let initialized = false
 function showText (title, panel, text) {
   // TODO: replace this with Vuex
-  document.getElementById('lhandlex').style.display = 'block'
-  document.getElementById('hshim').style.display = 'block'
+  document.getElementById('tlayout').style.display = 'block'
+  document.getElementById('vpane').style.display = 'none'
   if (/^\[/.test(title)) {
     return showSite(title, panel)
   }
@@ -132,11 +132,11 @@ function showSite (title, panel) {
     return
   }
   // TODO: replace this with Vuex
-  document.getElementById('lhandlex').style.display = 'none'
-  document.getElementById('hshim').style.display = 'none'
+  document.getElementById('tlayout').style.display = 'none'
+  document.getElementById('vpane').style.display = 'block'
+  panel = document.getElementById('vpane')
   const iframeHTML = `
     <iframe
-       style="position:absolute"
        src="" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
@@ -225,6 +225,7 @@ export default {
       currentNode.active = false
       currentNode = this
       this.active = true
+      this.initialized = true
       showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
     if (!currentNode) {
