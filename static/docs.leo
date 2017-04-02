@@ -20,7 +20,6 @@
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Viewer</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
-<v t="josephorr.20170331200533.1"><vh>Using with Github Pages</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
@@ -417,16 +416,35 @@ p {
 
 # About Leo
 
-Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including programming.
+Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
 The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
 displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
 documentation of code.
 
-More advanced uses are able to use Leo to practice a type of "Literate Programming", that is, a style of
+More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of
 programming where documentation comes first, and code is generated from the documentation or
 is developed in tandem with it.</t>
-<t tx="josephorr.20170331200411.1"></t>
+<t tx="josephorr.20170331200411.1">@language md
+
+# Installing and Using Leo Viewer
+
+To use Leo Viewer, copy the files in the [dist folder at github](https://github.com/kaleguy/leoviewer) to your server. A web server is
+required, you can't simply open Leo Viewer from your local file system. If you want to views
+files on your local machine without a server, use a node utility like 'http-server'
+
+You will be able to open Leo Viewer by opening index.html in your browser. If you are not 
+serving Leo Viewer from the root of your domain, you'll need to first edit the "base" tag in
+index.html.
+
+About setting the base, for example, the file you are reading is hosted at https://kaleguy.github.io/leoviewer/.
+So the base tag for the index.html for this installation of Leo Viewer looks like this:
+
+`&lt;base href='/leoviewer/'&gt;`
+
+The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can open this leo file using the Leo program and edit it,
+or replace it with your own file. Currently the name of this file is not configurable, this feature will be added in the next release.
+</t>
 <t tx="josephorr.20170331200439.1">@language md
 
 # Leo Viewer
@@ -437,22 +455,22 @@ Leo Viewer is a web app that can display files created with
 Using Leo, you can create outlined content. Using Leo Viewer you can display this
 content as a web page.
 
-The content you are reading was created in Leo, if you're reading this on the Leo Viewer
-site, then this content is being displayed via the Leo Viiewer.
+The content you are reading was created in Leo. If you're reading this on the Leo Viewer
+site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is current at version 0.9. Some features are being reworked, at which point 
+Leo Viewer is currently at version 0.9. Some features are being reworked, at which point 
 version 1.0 will be released.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
+* Node titles can be Markdown Urls
 
 Features in development:
 * Themes
 * D3 Trees
 * More configuration options
 * Electron (desktop) version</t>
-<t tx="josephorr.20170331200533.1"></t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
 

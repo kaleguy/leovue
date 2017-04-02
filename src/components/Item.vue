@@ -233,9 +233,9 @@ export default {
     }
   },
   updated () {
-    if (this.showContent && this.model.text && !initialized) {
+    if (this.showContent && this.model.t && !initialized) {
       initialized = true
-      showText(this.model.name, this.targetEl, this.model.text)
+      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
   }
 }
