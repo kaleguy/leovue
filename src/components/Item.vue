@@ -31,7 +31,11 @@ let currentNode = null
 let initialized = false
 function showText (title, panel, text) {
   if (/^\[/.test(title)) {
+    // TODO: replace this with Vuex
+    document.getElementById('lhandlex').style.display = 'none'
     return showSite(title, panel)
+  } else {
+    document.getElementById('lhandlex').style.display = 'block'
   }
   if (!text) {
     panel.innerHTML = ''
@@ -129,6 +133,7 @@ function showSite (title, panel) {
   }
   const iframeHTML = `
     <iframe
+       style="position:absolute"
        src="" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"

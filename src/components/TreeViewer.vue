@@ -17,7 +17,7 @@
       <div>
         <table class="tlayout">
           <tr>
-            <td><div id="lhandle"></div></td>
+            <td v-if="lhandle" id="lhandlex"><div id="lhandle"></div></td>
             <td><div class="right-pane" id="right-pane"></div></td>
           </tr>
         </table>
@@ -54,7 +54,8 @@
         target: target,
         open: false,
         active: false,
-        id: 123
+        id: 123,
+        lhandle: true
       }
     },
     watch: {
@@ -111,6 +112,11 @@
   .tlayout {
     background: #fff;
     height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .tlayout TD {
+    padding: 0
   }
   .treeviewer{
     height: 100%
@@ -185,6 +191,5 @@
   p {
     line-height:1.3em;
   }
-
 
 </style>
