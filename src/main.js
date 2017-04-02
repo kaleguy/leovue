@@ -6,6 +6,7 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+require('./simpledrag.js')
 new Vue({
   el: '#app',
   router,

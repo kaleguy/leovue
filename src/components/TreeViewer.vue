@@ -14,10 +14,14 @@
         </ul>
       </div>
       <div class="panes-separator" id="panes-separator"></div>
-      <table><tr>
-        <td><div id="lhandle"></div></td>
-        <td><div class="right-pane" id="right-pane"></div></td>
-      </tr></table>
+      <div>
+        <table class="tlayout">
+          <tr>
+            <td><div id="lhandle"></div></td>
+            <td><div class="right-pane" id="right-pane"></div></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -104,7 +108,10 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .tlayout {
+    background: #fff;
+    height: 100%;
+  }
   .treeviewer{
     height: 100%
   }
@@ -125,7 +132,6 @@
   a {
     color: #42b983;
   }
-
 
   .panes-container {
     display: flex;
