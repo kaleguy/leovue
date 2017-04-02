@@ -458,7 +458,7 @@ content as a web page.
 The content you are reading was created in Leo. If you're reading this on the Leo Viewer
 site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is currently at version 0.9. Some features are being reworked, at which point 
+Leo Viewer is currently at version 0.9. Some features are being reworked or added, at which point 
 version 1.0 will be released.
 
 Current features include:
@@ -466,11 +466,17 @@ Current features include:
 * Bookmarkable nodes
 * Node titles can be Markdown Urls
 
-Features in development:
+Features planned for version 1:
+* Keyboard support
+* More configuration options
+* Search
+
+Features planned for version 2:
 * Themes
 * D3 Trees
-* More configuration options
-* Electron (desktop) version</t>
+* Electron (desktop) version
+
+Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
 
