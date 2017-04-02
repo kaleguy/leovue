@@ -64,7 +64,15 @@ function getLeoJSON (filename, id) {
       el.setAttribute('sel', 2)
       setSel(el)
     }
-    const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    var scripts = document.getElementsByTagName('script'),
+      str     = '',
+      i       = 0,
+      il      = scripts.length;
+    for (; i<il; i++) {
+      if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
+    }
+    const xsl = oParser.parseFromString(str, 'text/xml')
     const xsltProcessor = new XSLTProcessor()
     xsltProcessor.importStylesheet(xsl)
     const resultDocument = xsltProcessor.transformToFragment(xml, document)

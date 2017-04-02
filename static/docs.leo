@@ -13,7 +13,7 @@
 <v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
-<v t="josephorr.20170327233223.1"><vh>Chunking</vh></v>
+<v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
@@ -222,65 +222,8 @@ export {getLeoJSON}</t>
 
 Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
 <t tx="josephorr.20170327233126.1"></t>
-<t tx="josephorr.20170327233137.1">@language md
-# Leo Is an Outlining Editor
-
-In the screenshot below, you can see an outline or tree in the top left pane, and content for 
-current node being entered into the bottom pane.
-
-&lt;img width="500" height="350" src="static/leo1.png" alt="ScreenShot"&gt;
-
-# Leo Outlines can contain Cloned Nodes
-
-A single node can appear in multiple places in your tree, this is called a "clone" node. This allows Leo Outlines
-to be in effect, three dimensional and arbitrarily complex.
-
-In the screenshot below, the "Coffeescript" node has been cloned and is appearing in two places in the tree. When you edit the content of the node and then click on its clone, you'll see that the edited content shows on both.
-
-&lt;img width="500" height="350"  src="static/leo2.png" alt="ScreenShot"&gt;
-
-# Leo Outlines can mirror other files
-
-The screenshot below shows a node with a '@clean' directive. This tells Leo that the content of the node should mirror the file specified by the directive.
-
-This means that, when the target file is updated by another program, the content in the node will automatically update in Leo, regardless of whether that
-content has been divided into subnodes by Leo. To see how this works, read the next section: &lt;b&gt;Chunking&lt;/b&gt;.
-
-&lt;img width="500" src="static/leo3.png" alt="ScreenShot"&gt;</t>
-<t tx="josephorr.20170327233223.1">@language html
-&lt;p&gt;
-In the screenshot below, we've created a new node with a @clean directive with a file name. 
-We've pasted the contents of the file into the node.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo4.png" alt="ScreenShot"&gt;
-
-&lt;p&gt;
-This is a Vuejs component file, with three sections. We're going to break the sections out into 
-separate nodes. First create a section name using double angle brackets.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo5.png" alt="ScreenShot"&gt;
-
-&lt;p&gt;
-Now select the section name plus the code you want to put in a sub node.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo6.png" alt="ScreenShot"&gt;
-
-&lt;p&gt;
-Enter Cmd-Shift-D to chunk the selected content into a subnode.
-&lt;/p&gt;
-&lt;img width="500" src="static/leo7.png" alt="ScreenShot"&gt;
-
-&lt;p&gt;
-Repeat this process with the other sections of the Vuejs component, now each
-has its own node. 
-&lt;/p&gt;
-&lt;img width="500" src="static/leo8.png" alt="ScreenShot"&gt;
-
-&lt;p&gt;
-This is a simple example, but using Leo it is possible to quickly break up a large,
-complex set of code into manageable pieces. The target file is not affected,
-and if the target file is changed in another program, Leo will update the appropriate nodes.
-&lt;/p&gt;</t>
+<t tx="josephorr.20170327233137.1"></t>
+<t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1"></t>
 <t tx="josephorr.20170327233257.1"></t>
 <t tx="josephorr.20170328225527.1">&lt;&lt; template &gt;&gt;

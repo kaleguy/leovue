@@ -71,7 +71,6 @@ function showText (title, panel, text) {
   }
   switch (language) {
     case 'md':
-      console.log('rendering d', text)
       text = md.render(text)
       panel.innerHTML = text
       break
@@ -85,6 +84,24 @@ function showText (title, panel, text) {
   }
 }
 
+function replaceRelUrls (html, base) {
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(html, 'text/html')
+  const images = doc.images
+  for (let i = 0; i < images.length; i++) {
+    let image = images[i]
+    let src = image.getAttribute('src')
+    if (/http:/.test(src)) { return }
+    if (/^\//.test(src)) {
+      src = base + src
+    } else {
+      src = base + '/' + src
+    }
+    image.setAttribute('src', src)
+  }
+  return doc.body.innerHTML
+}
+
 function getFileExtension (filename) {
   const re = /(?:\.([^.]+))?$/
   const ext = re.exec(filename)[1]
@@ -94,14 +111,16 @@ function getFileExtension (filename) {
 function showSite (title, panel) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
-  const pageTitle = match[1]
   const url = match[2]
+  if (!url) { return }
   const ext = getFileExtension(url)
+  const base = url.substring(0, url.lastIndexOf('/'))
   if (ext === 'md') {
     axios.get(url)
       .then(function (response) {
-        const text = md.render(response.data)
-        panel.innerHTML = text
+        let html = md.render(response.data)
+        html = replaceRelUrls(html, base)
+        panel.innerHTML = html
       })
       .catch(function (error) {
         console.log(error)
@@ -117,7 +136,6 @@ function showSite (title, panel) {
   `
   panel.innerHTML = iframeHTML
   let iframe = document.getElementsByTagName('iframe')[0]
-  console.log(ext, pageTitle)
   iframe.src = url
 }
 
@@ -127,7 +145,6 @@ function getLanguage (text) {
   let languageTokens = re.exec(text)
   if (languageTokens) {
     language = languageTokens[1]
-    console.log(language)
   }
   return language
 }
