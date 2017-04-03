@@ -113,6 +113,7 @@
 <style scoped>
   #vpane {
     width: 100%;
+    background: #fff;
   }
   #tlayout {
     background: #fff;

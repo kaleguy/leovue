@@ -48,9 +48,9 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
-<v t="josephorr.20170402095730.1"><vh>[Leo Home Page](http://www.leoeditor.com)</vh></v>
+<v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
 </v>
@@ -489,11 +489,17 @@ To do this, create a node with a Markdown link in the title, for example:
 
 Leo Viewer will show the external site in the content pane.
 
-The next nodes have the following titles:
+The next node has the following title:
 
 [A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
 
-[Leo Home Page](http://www.leoeditor.com)</t>
-<t tx="josephorr.20170402095730.1"></t>
+Note that if Leo Viewer is hosted on via https (e.g. Github Pages) only https links will work here.
+
+The second node in this section has the following title:
+
+[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
+
+This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and 
+converts it to HTML before displaying it.</t>
 </tnodes>
 </leo_file>
