@@ -188,33 +188,98 @@ Use the @language md directive to set the node to markdown.</t>
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
 <t tx="josephorr.20170326072346.1">@language javascript
+import escape from 'escape-html'
+
 function loadXMLDoc (filename, type) {
   const xhttp = new XMLHttpRequest()
   xhttp.open('GET', filename, false) // synchronous
   xhttp.send('')
   return xhttp['response' + type]
 }
-
-function getLeoJSON (filename) {
+// let id = 0;
+function cleanText(data){
+  // if (! data){ return }
+  // debugger;
+  // id = id + 1
+  // data.id = id
+  data.name = data.name.replace(/&lt;&lt;/g, '\u00AB');
+  data.name = data.name.replace(/&gt;&gt;/g, '\u00BB');
+  data.name = escape(data.name)
+  let children = data.children;
+  if (!children) { return }
+  for (let i = 0; i &lt; children.length; i++){
+    cleanText(children[i])
+  }
+  data.t = data.t.replace(/^.*?_/,'')
+}
+// set all parent els to @sel = 1
+function setSel(el){
+  let parent = el.parentElement;
+  if (parent){
+    parent.setAttribute('sel', 1)
+    setSel(parent)
+  }
+}
+function getLeoJSON (filename, id) {
   var p = new Promise((resolve, reject) =&gt; {
     const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
-    const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    const tnodes = xml.getElementsByTagName('t')
+    let textItems = {}
+    for (let i = 0; i &lt; tnodes.length; i++){
+      let el = tnodes[i]
+      let elText = el.textContent
+      let a = el.getAttribute('tx')
+      a = a.replace(/\./g,'_')
+      a = a.replace(/^.*?_/,'')
+      if (
+         (/^@language /.test(elText)) &amp;&amp;
+         (!/^@language html/.test(elText)) &amp;&amp;
+         (!/^@language md/.test(elText))
+      ){
+        elText = escape(elText)
+      }
+      textItems[a] = elText
+    }
+    const vnodes = xml.getElementsByTagName('v')
+    for (let i = 0; i &lt; vnodes.length; i++) {
+      vnodes[i].setAttribute('id', i)
+      vnodes[i].setAttribute('sel', 0)
+    }
+    // see if there is a selected element (bookmarked node)
+    // if so, mark it and its parent nodes
+    let el = xml.getElementById(id)
+    if (el) {
+      el.setAttribute('sel', 2)
+      setSel(el)
+    }
+    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    var scripts = document.getElementsByTagName('script'),
+      str     = '',
+      i       = 0,
+      il      = scripts.length;
+    for (; i&lt;il; i++) {
+      if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
+    }
+    const xsl = oParser.parseFromString(str, 'text/xml')
     const xsltProcessor = new XSLTProcessor()
     xsltProcessor.importStylesheet(xsl)
     const resultDocument = xsltProcessor.transformToFragment(xml, document)
     let data = resultDocument.textContent
     data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
-    const xdata = null
-    data = 'xdata = ' + data
-    eval(data) // eslint-disable-line JSON.Parse doesn't work because of template strings
+    data = JSON.parse(data)
+    cleanText(data)
+    const xdata = {}
+    xdata.data = data
+    xdata.textItems = textItems
     resolve(xdata)
   })
   return p
 }
 
-export {getLeoJSON}</t>
+export {getLeoJSON}
+</t>
 <t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
@@ -263,155 +328,201 @@ Some additional features include:
         &lt;/ul&gt;
       &lt;/div&gt;
       &lt;div class="panes-separator" id="panes-separator"&gt;&lt;/div&gt;
-      &lt;div class="right-pane" id="right-pane"&gt;
-      &lt;/div&gt;
+      &lt;table id="tlayout"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div id="lhandle"&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div id="hshim"&gt;&lt;/div&gt;
+            &lt;div class="right-pane" id="right-pane"&gt;&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;div style='min-height:100%' id="vpane"&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/template&gt;</t>
+&lt;/template&gt;
+</t>
 <t tx="josephorr.20170328225718.1">@language javascript
 
 &lt;script&gt;
-import Item from './Item'
-import {getLeoJSON} from '../services/leo.js'
+  import Item from './Item'
+  import {getLeoJSON} from '../services/leo.js'
 
-let model = {
-  data: {},
-  textItems: {}
-}
-
-let leftPane
-let rightPane
-let paneSep
-// let currentNode = null
-
-let target = {el: null}
-export default {
-  name: 'treeviewer',
-  components: {
-    item: Item
-  },
-  data: function () {
-    return {
-      data: model,
-      target: target,
-      open: false,
-      active: false
-    }
-  },
-  mounted: () =&gt; {
-    leftPane = document.getElementById('left-pane')
-    rightPane = document.getElementById('right-pane')
-    target.el = rightPane
-    paneSep = document.getElementById('panes-separator')
-    rightPane.innerHTML = ''
-
-    // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
-    // - the left limit is positioned at 10% of the screen width
-    // - the right limit is positioned at 90% of the screen width
-    var leftLimit = 0
-    var rightLimit = 90
-
-    paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
-      fix.skipX = true
-      if (pageX &lt; window.innerWidth * leftLimit / 100) {
-        pageX = window.innerWidth * leftLimit / 100
-        fix.pageX = pageX
-      }
-      if (pageX &gt; window.innerWidth * rightLimit / 100) {
-        pageX = window.innerWidth * rightLimit / 100
-        fix.pageX = pageX
-      }
-      var cur = pageX / window.innerWidth * 100
-      if (cur &lt; 0) {
-        cur = 0
-      }
-      if (cur &gt; window.innerWidth) {
-        cur = window.innerWidth
-      }
-      var right = (100 - cur - 2)
-      leftPane.style.width = cur + '%'
-      rightPane.style.width = right + '%'
-    }, null, 'horizontal')
-    getLeoJSON('docs').then(ldata =&gt; {
-      model.data = ldata.data
-      model.textItems = ldata.textItems
-    })
+  let model = {
+    data: {},
+    textItems: {}
   }
-}
-&lt;/script&gt;</t>
+
+  let leftPane
+  let rightPane
+  let paneSep
+  // let currentNode = null
+
+  let target = {el: null}
+  export default {
+    name: 'treeviewer',
+    props: {
+    },
+    components: {
+      item: Item
+    },
+    data: function () {
+      return {
+        data: model,
+        target: target,
+        open: false,
+        active: false,
+        id: 123,
+        lhandle: true
+      }
+    },
+    watch: {
+      '$route': {
+        handler: function (val, oldVal, changed) {
+          this.id = val.params.id
+        },
+        immediate: true
+      }
+    },
+    mounted: function () {
+      leftPane = document.getElementById('left-pane')
+      rightPane = document.getElementById('right-pane')
+      target.el = rightPane
+      paneSep = document.getElementById('panes-separator')
+      rightPane.innerHTML = ''
+
+      // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
+      // - the left limit is positioned at 10% of the screen width
+      // - the right limit is positioned at 90% of the screen width
+      var leftLimit = 0
+      var rightLimit = 90
+
+      paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
+        fix.skipX = true
+        if (pageX &lt; window.innerWidth * leftLimit / 100) {
+          pageX = window.innerWidth * leftLimit / 100
+          fix.pageX = pageX
+        }
+        if (pageX &gt; window.innerWidth * rightLimit / 100) {
+          pageX = window.innerWidth * rightLimit / 100
+          fix.pageX = pageX
+        }
+        var cur = pageX / window.innerWidth * 100
+        if (cur &lt; 0) {
+          cur = 0
+        }
+        if (cur &gt; window.innerWidth) {
+          cur = window.innerWidth
+        }
+        var right = (100 - cur - 2)
+        leftPane.style.width = cur + '%'
+        rightPane.style.width = right + '%'
+      }, null, 'horizontal')
+      getLeoJSON('docs', this.id).then(ldata =&gt; {
+        model.data = ldata.data
+        model.textItems = ldata.textItems
+      })
+    }
+  }
+&lt;/script&gt;
+</t>
 <t tx="josephorr.20170328225741.1">@language css
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
 &lt;style scoped&gt;
+  #vpane {
+    width: 100%;
+    background: #fff;
+  }
+  #tlayout {
+    background: #fff;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .tlayout TD {
+    padding: 0
+  }
 
-.treeviewer{
-  height: 100%
-}
-h1, h2 {
-  font-weight: normal;
-}
+  .treeviewer{
+    height: 100%
+  }
+  #lhandle {
+    height: 100%;
+    width: 40px;
+    background: #fff;
+    float:left;
+  }
+  #hshim {
+    height: 10px;
+  }
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 
+  .panes-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
 
-.panes-container {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
+  .left-pane {
+    width: 250px;
+    background: #fff;
+  }
+  .right-pane {
+    max-width: 600px;
+    min-width: 500px;
+  }
 
-.left-pane {
-  width: 250px;
-  background: #fff;
-}
-.right-pane {
-  max-width: 600px;
-}
+  .panes-separator {
+    width: 11px;
+    background: #eee;
+    position: relative;
+    cursor: col-resize;
+    /*background-image: url('../assets/vertical.png');*/
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
 
-.panes-separator {
-  width: 11px;
-  background: #eee;
-  position: relative;
-  cursor: col-resize;
-  background-image: url('../assets/vertical.png');
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.right-pane {
-  flex: auto;
-  background: #fff;
-}
-
-.panes-container,
-.panes-separator,
-.left-pane,
-.right-pane {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-.right-pane {
-  padding:10px;
-  padding-top:0px;
-}
-p {
-  line-height:1.3em;
-}
+  .right-pane {
+    flex: auto;
+    background: #fff;
+  }
 
 
-&lt;/style&gt;</t>
+
+  .panes-container,
+  .panes-separator,
+  .left-pane,
+  .right-pane {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  .right-pane {
+    padding:0px;
+    padding-top:0px;
+  }
+  p {
+    line-height:1.3em;
+  }
+
+&lt;/style&gt;
+</t>
 <t tx="josephorr.20170331200243.1">@language md
 
 # About Leo
@@ -431,7 +542,7 @@ is developed in tandem with it.</t>
 
 To use Leo Viewer, copy the files in the [dist folder at github](https://github.com/kaleguy/leoviewer) to your server. A web server is
 required, you can't simply open Leo Viewer from your local file system. If you want to views
-files on your local machine without a server, use a node utility like 'http-server'
+files on your local machine without a server, use a node utility like 'http-server'.
 
 You will be able to open Leo Viewer by opening index.html in your browser. If you are not 
 serving Leo Viewer from the root of your domain, you'll need to first edit the "base" tag in
@@ -441,6 +552,10 @@ About setting the base, for example, the file you are reading is hosted at https
 So the base tag for the index.html for this installation of Leo Viewer looks like this:
 
 `&lt;base href='/leoviewer/'&gt;`
+
+You can also run Leo Viewer from github pages. Fork the repository on Github, 
+then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
+be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as just described). 
 
 The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can open this leo file using the Leo program and edit it,
 or replace it with your own file. Currently the name of this file is not configurable, this feature will be added in the next release.
