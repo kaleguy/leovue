@@ -28,7 +28,6 @@ const md = require('markdown-it')({
 
 const hljs = require('highlight.js')
 let currentNode = null
-let initialized = false
 function showText (title, panel, text) {
   // TODO: replace this with Vuex
   document.getElementById('tlayout').style.display = 'block'
@@ -175,7 +174,8 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false
+      active: false,
+      initialized: false
     }
   },
   computed: {
@@ -234,9 +234,9 @@ export default {
     }
   },
   updated () {
-    if (this.showContent && this.model.t && !initialized) {
-      initialized = true
-      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+    if (this.showContent && this.model.t && !this.initialized) {
+      this.initialized = true
+      // showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
   }
 }
