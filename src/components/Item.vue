@@ -11,6 +11,7 @@
         class="item"
         v-for="model in model.children"
           :model="model"
+          :key="model.id"
           :textItems="textItems"
           :targetEl="targetEl">
       </item>

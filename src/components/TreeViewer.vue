@@ -23,12 +23,13 @@
           </td>
         </tr>
       </table>
-      <div style='min-height:100%' id="vpane"></div>
+      <div style="min-height:100%" id="vpane"></div>
     </div>
   </div>
 </template>
 
 <script>
+
   import Item from './Item'
   import {getLeoJSON} from '../services/leo.js'
 
@@ -109,7 +110,7 @@
     }
   }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
   #vpane {
     width: 100%;

@@ -1,10 +1,18 @@
 import escape from 'escape-html'
+import axios from 'axios'
 
-function loadXMLDoc (filename, type) {
-  const xhttp = new XMLHttpRequest()
-  xhttp.open('GET', filename, false) // synchronous
-  xhttp.send('')
-  return xhttp['response' + type]
+function loadDoc (filename) {
+  var p = new Promise((resolve, reject) => {
+    axios.get(filename)
+      .then(function (response) {
+        resolve(response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+        reject()
+      })
+  })
+  return p
 }
 // let id = 0;
 function cleanText(data){
@@ -32,7 +40,15 @@ function setSel(el){
 }
 function getLeoJSON (filename, id) {
   var p = new Promise((resolve, reject) => {
-    const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
+    loadDoc('./static/' + filename + '.leo', 'Text')
+      .then((xmlString) => {
+        resolve(transformLeoXML(xmlString, id))
+      })
+  })
+  return p
+}
+function transformLeoXML (xmlString, id) {
+    if (! id){ id = 0}
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -83,9 +99,7 @@ function getLeoJSON (filename, id) {
     const xdata = {}
     xdata.data = data
     xdata.textItems = textItems
-    resolve(xdata)
-  })
-  return p
+    return xdata
 }
 
 export {getLeoJSON}
