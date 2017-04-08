@@ -71,8 +71,8 @@ H1 {margin: 0}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
-&lt;text class="cls-2" transform="translate(90 222)"&gt;viewer&lt;/text&gt;
 &lt;text class="cls-1" transform="translate(35 156.2)"&gt;LEO&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(90 208)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
@@ -244,8 +244,8 @@ Some additional features include:
           &lt;item
             class="item"
             :showContent="true"
-            :model="data.data"
-            :textItems="data.textItems"
+            :model="data"
+            :textItems="text"
             :open="true"
             :targetEl="target.el"&gt;
           &lt;/item&gt;
@@ -270,12 +270,7 @@ Some additional features include:
 
 &lt;script&gt;
   import Item from './Item'
-  import {getLeoJSON} from '../services/leo.js'
 
-  let model = {
-    data: {},
-    textItems: {}
-  }
   let leftPane
   let rightPane
   let paneSep
@@ -289,20 +284,26 @@ Some additional features include:
     },
     data: function () {
       return {
-        data: model,
         target: target,
         open: false,
         active: false,
-        id: 123,
         lhandle: true
       }
     },
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
+        //  this.id = val.params.id
         },
         immediate: true
+      }
+    },
+    computed: {
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
       }
     },
     mounted: function () {
@@ -339,10 +340,13 @@ Some additional features include:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
+      this.$store.dispatch('loadLeo', {filename: 'docs'})
+      /*
       getLeoJSON('docs', this.id).then(ldata =&gt; {
         model.data = ldata.data
         model.textItems = ldata.textItems
       })
+      */
     }
   }
 &lt;/script&gt;
@@ -423,8 +427,6 @@ Some additional features include:
     flex: auto;
     background: #fff;
   }
-
-
 
   .panes-container,
   .panes-separator,
@@ -581,8 +583,8 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString, id) {
-    if (! id){ id = 0}
+function transformLeoXML (xmlString) {
+    let id = 0
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -636,7 +638,7 @@ function transformLeoXML (xmlString, id) {
     return xdata
 }
 
-export {getLeoJSON}
+export {getLeoJSON, transformLeoXML}
 </t>
 </tnodes>
 </leo_file>

@@ -51,11 +51,12 @@
           }
         }
         var reader = new FileReader()
+        var me = this
         reader.onload = function (xml) {
-          console.log(xml.srcElement.result)
-          this.$store.dispatch('loadLeoFromXML', {xml: xml})
+          const xmlString = xml.srcElement.result
+          me.$store.dispatch('loadLeoFromXML', {xml: xmlString})
         }
-        reader.readAsDataURL(f)
+        reader.readAsText(f)
       }
 
     }
