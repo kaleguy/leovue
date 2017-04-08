@@ -53,7 +53,6 @@
         var reader = new FileReader()
         reader.onload = function (xml) {
           console.log(xml.srcElement.result)
-          debugger
         }
         reader.readAsDataURL(f)
       }
