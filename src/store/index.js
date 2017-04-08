@@ -8,18 +8,26 @@ export default new Vuex.Store({
   state: {
     leotext: {},
     leodata: {},
-    filename: ''
+    filename: '',
+    initialized: false
   },
   mutations: {
     LEO (state, o) {
       state.leodata = o.data
       state.leotext = o.text
       state.filename = o.filename
+    },
+    INIT (state) {
+      state.initialized = true
+    },
+    RESET (state) {
+      state.initialized = false
     }
   },
   actions: {
     loadLeo (context, o) {
       getLeoJSON(o.filename).then(ldata => {
+        context.commit('RESET')
         context.commit('LEO', {
           data: ldata.data,
           text: ldata.textItems,
@@ -29,7 +37,7 @@ export default new Vuex.Store({
     },
     loadLeoFromXML (context, o) {
       const ldata = transformLeoXML(o.xml)
-      debugger
+      context.commit('RESET')
       context.commit('LEO', {
         data: ldata.data,
         text: ldata.textItems,

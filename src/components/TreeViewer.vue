@@ -101,12 +101,6 @@
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
       this.$store.dispatch('loadLeo', {filename: 'docs'})
-      /*
-      getLeoJSON('docs', this.id).then(ldata => {
-        model.data = ldata.data
-        model.textItems = ldata.textItems
-      })
-      */
     }
   }
 </script>

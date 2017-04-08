@@ -175,8 +175,7 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false,
-      initialized: false
+      active: false
     }
   },
   computed: {
@@ -201,6 +200,9 @@ export default {
       } else {
         return this.name
       }
+    },
+    initialized () {
+      return this.$store.state.initialized
     }
   },
   methods: {
@@ -236,7 +238,7 @@ export default {
   },
   updated () {
     if (this.showContent && this.model.t && !this.initialized) {
-      this.initialized = true
+      this.$store.commit('INIT')
       showText(this.model.name, this.targetEl, this.textItems[this.model.t])
     }
   }
