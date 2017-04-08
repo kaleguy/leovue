@@ -71,12 +71,11 @@ H1 {margin: 0}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
-&lt;text class="cls-2" transform="translate(95 202)"&gt;viewer&lt;/text&gt;
-&lt;text class="cls-1" transform="translate(34 156.2)"&gt;LEO&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(90 222)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-1" transform="translate(35 156.2)"&gt;LEO&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
-&lt;h1&gt;About Leo Viewer&lt;/h1&gt;
 &lt;p&gt;
 Leo Viewer is a web app that can display files created with 
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.

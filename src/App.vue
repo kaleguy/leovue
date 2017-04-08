@@ -53,6 +53,7 @@
         var reader = new FileReader()
         reader.onload = function (xml) {
           console.log(xml.srcElement.result)
+          this.$store.dispatch('loadLeoFromXML', {xml: xml})
         }
         reader.readAsDataURL(f)
       }

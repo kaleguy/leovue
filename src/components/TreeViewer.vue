@@ -6,8 +6,8 @@
           <item
             class="item"
             :showContent="true"
-            :model="data.data"
-            :textItems="data.textItems"
+            :model="data"
+            :textItems="text"
             :open="true"
             :targetEl="target.el">
           </item>
@@ -30,12 +30,7 @@
 
 <script>
   import Item from './Item'
-  import {getLeoJSON} from '../services/leo.js'
 
-  let model = {
-    data: {},
-    textItems: {}
-  }
   let leftPane
   let rightPane
   let paneSep
@@ -49,20 +44,26 @@
     },
     data: function () {
       return {
-        data: model,
         target: target,
         open: false,
         active: false,
-        id: 123,
         lhandle: true
       }
     },
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
+        //  this.id = val.params.id
         },
         immediate: true
+      }
+    },
+    computed: {
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
       }
     },
     mounted: function () {
@@ -99,10 +100,13 @@
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
+      this.$store.dispatch('loadLeo', {filename: 'docs'})
+      /*
       getLeoJSON('docs', this.id).then(ldata => {
         model.data = ldata.data
         model.textItems = ldata.textItems
       })
+      */
     }
   }
 </script>
@@ -181,8 +185,6 @@
     flex: auto;
     background: #fff;
   }
-
-
 
   .panes-container,
   .panes-separator,

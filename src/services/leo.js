@@ -41,8 +41,8 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString, id) {
-    if (! id){ id = 0}
+function transformLeoXML (xmlString) {
+    let id = 0
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -96,4 +96,4 @@ function transformLeoXML (xmlString, id) {
     return xdata
 }
 
-export {getLeoJSON}
+export {getLeoJSON, transformLeoXML}
