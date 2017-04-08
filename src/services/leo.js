@@ -1,6 +1,5 @@
 import escape from 'escape-html'
 import axios from 'axios'
-
 function loadDoc (filename) {
   var p = new Promise((resolve, reject) => {
     axios.get(filename)
@@ -14,12 +13,7 @@ function loadDoc (filename) {
   })
   return p
 }
-// let id = 0;
 function cleanText(data){
-  // if (! data){ return }
-  // debugger;
-  // id = id + 1
-  // data.id = id
   data.name = data.name.replace(/<</g, '\u00AB');
   data.name = data.name.replace(/>>/g, '\u00BB');
   data.name = escape(data.name)

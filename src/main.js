@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import Icon from 'vue-awesome/components/Icon.vue'
+import 'vue-awesome/icons'
+Vue.component('icon', Icon)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

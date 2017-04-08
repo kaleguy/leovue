@@ -13,15 +13,16 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "axios": "^0.16.0",
     "highlight.js": "^9.10.0",
     "marked": "^0.3.6",
     "vue": "^2.2.2",
+    "vue-awesome": "^2.2.3",
     "vue-router": "^2.2.0",
     "vuex": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
-    "axios": "^0.16.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",

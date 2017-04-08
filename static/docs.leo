@@ -40,15 +40,15 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
-<v t="josephorr.20170326072346.1"><vh>@clean ../src/services/leo.js</vh></v>
-<v t="josephorr.20170328225527.1" a="E"><vh>@clean ../src/components/TreeViewer.vue</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
+<v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
 <v t="josephorr.20170328225718.1"><vh>&lt;&lt; script &gt;&gt;</vh></v>
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -57,6 +57,24 @@
 </vnodes>
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
+
+&lt;div style="border:1px solid #ff"&gt;
+&lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 220"&gt;
+&lt;defs&gt;
+&lt;style&gt;
+H1 {margin: 0}
+.cls-1{font-size:172px;stroke:#000;stroke-width:14px;}
+.cls-1,.cls-2{stroke-miterlimit:10;font-family:Nunito Sans;} 
+.cls-2{font-size:70px;fill:#f2f2f2;stroke:gray;}
+.cls-3{letter-spacing:-0.02em;}
+.cls-4{letter-spacing:-0.02em;}
+&lt;/style&gt;
+&lt;/defs&gt;
+&lt;title&gt;leoviewer&lt;/title&gt;
+&lt;text class="cls-2" transform="translate(95 202)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-1" transform="translate(34 156.2)"&gt;LEO&lt;/text&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
 
 &lt;h1&gt;About Leo Viewer&lt;/h1&gt;
 &lt;p&gt;
@@ -187,99 +205,6 @@ Use the @language md directive to set the node to markdown.</t>
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
-<t tx="josephorr.20170326072346.1">@language javascript
-import escape from 'escape-html'
-
-function loadXMLDoc (filename, type) {
-  const xhttp = new XMLHttpRequest()
-  xhttp.open('GET', filename, false) // synchronous
-  xhttp.send('')
-  return xhttp['response' + type]
-}
-// let id = 0;
-function cleanText(data){
-  // if (! data){ return }
-  // debugger;
-  // id = id + 1
-  // data.id = id
-  data.name = data.name.replace(/&lt;&lt;/g, '\u00AB');
-  data.name = data.name.replace(/&gt;&gt;/g, '\u00BB');
-  data.name = escape(data.name)
-  let children = data.children;
-  if (!children) { return }
-  for (let i = 0; i &lt; children.length; i++){
-    cleanText(children[i])
-  }
-  data.t = data.t.replace(/^.*?_/,'')
-}
-// set all parent els to @sel = 1
-function setSel(el){
-  let parent = el.parentElement;
-  if (parent){
-    parent.setAttribute('sel', 1)
-    setSel(parent)
-  }
-}
-function getLeoJSON (filename, id) {
-  var p = new Promise((resolve, reject) =&gt; {
-    const xmlString = loadXMLDoc('./static/' + filename + '.leo', 'Text')
-    const oParser = new DOMParser()
-    const xml = oParser.parseFromString(xmlString, 'text/xml')
-    const tnodes = xml.getElementsByTagName('t')
-    let textItems = {}
-    for (let i = 0; i &lt; tnodes.length; i++){
-      let el = tnodes[i]
-      let elText = el.textContent
-      let a = el.getAttribute('tx')
-      a = a.replace(/\./g,'_')
-      a = a.replace(/^.*?_/,'')
-      if (
-         (/^@language /.test(elText)) &amp;&amp;
-         (!/^@language html/.test(elText)) &amp;&amp;
-         (!/^@language md/.test(elText))
-      ){
-        elText = escape(elText)
-      }
-      textItems[a] = elText
-    }
-    const vnodes = xml.getElementsByTagName('v')
-    for (let i = 0; i &lt; vnodes.length; i++) {
-      vnodes[i].setAttribute('id', i)
-      vnodes[i].setAttribute('sel', 0)
-    }
-    // see if there is a selected element (bookmarked node)
-    // if so, mark it and its parent nodes
-    let el = xml.getElementById(id)
-    if (el) {
-      el.setAttribute('sel', 2)
-      setSel(el)
-    }
-    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
-    var scripts = document.getElementsByTagName('script'),
-      str     = '',
-      i       = 0,
-      il      = scripts.length;
-    for (; i&lt;il; i++) {
-      if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
-    }
-    const xsl = oParser.parseFromString(str, 'text/xml')
-    const xsltProcessor = new XSLTProcessor()
-    xsltProcessor.importStylesheet(xsl)
-    const resultDocument = xsltProcessor.transformToFragment(xml, document)
-    let data = resultDocument.textContent
-    data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
-    data = JSON.parse(data)
-    cleanText(data)
-    const xdata = {}
-    xdata.data = data
-    xdata.textItems = textItems
-    resolve(xdata)
-  })
-  return p
-}
-
-export {getLeoJSON}
-</t>
 <t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
@@ -352,12 +277,9 @@ Some additional features include:
     data: {},
     textItems: {}
   }
-
   let leftPane
   let rightPane
   let paneSep
-  // let currentNode = null
-
   let target = {el: null}
   export default {
     name: 'treeviewer',
@@ -616,5 +538,106 @@ The second node in this section has the following title:
 
 This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and 
 converts it to HTML before displaying it.</t>
+<t tx="josephorr.20170408092907.1">@language javascript
+import escape from 'escape-html'
+import axios from 'axios'
+function loadDoc (filename) {
+  var p = new Promise((resolve, reject) =&gt; {
+    axios.get(filename)
+      .then(function (response) {
+        resolve(response.data)
+      })
+      .catch(function (error) {
+        console.log(error)
+        reject()
+      })
+  })
+  return p
+}
+function cleanText(data){
+  data.name = data.name.replace(/&lt;&lt;/g, '\u00AB');
+  data.name = data.name.replace(/&gt;&gt;/g, '\u00BB');
+  data.name = escape(data.name)
+  let children = data.children;
+  if (!children) { return }
+  for (let i = 0; i &lt; children.length; i++){
+    cleanText(children[i])
+  }
+  data.t = data.t.replace(/^.*?_/,'')
+}
+// set all parent els to @sel = 1
+function setSel(el){
+  let parent = el.parentElement;
+  if (parent){
+    parent.setAttribute('sel', 1)
+    setSel(parent)
+  }
+}
+function getLeoJSON (filename, id) {
+  var p = new Promise((resolve, reject) =&gt; {
+    loadDoc('./static/' + filename + '.leo', 'Text')
+      .then((xmlString) =&gt; {
+        resolve(transformLeoXML(xmlString, id))
+      })
+  })
+  return p
+}
+function transformLeoXML (xmlString, id) {
+    if (! id){ id = 0}
+    const oParser = new DOMParser()
+    const xml = oParser.parseFromString(xmlString, 'text/xml')
+    const tnodes = xml.getElementsByTagName('t')
+    let textItems = {}
+    for (let i = 0; i &lt; tnodes.length; i++){
+      let el = tnodes[i]
+      let elText = el.textContent
+      let a = el.getAttribute('tx')
+      a = a.replace(/\./g,'_')
+      a = a.replace(/^.*?_/,'')
+      if (
+         (/^@language /.test(elText)) &amp;&amp;
+         (!/^@language html/.test(elText)) &amp;&amp;
+         (!/^@language md/.test(elText))
+      ){
+        elText = escape(elText)
+      }
+      textItems[a] = elText
+    }
+    const vnodes = xml.getElementsByTagName('v')
+    for (let i = 0; i &lt; vnodes.length; i++) {
+      vnodes[i].setAttribute('id', i)
+      vnodes[i].setAttribute('sel', 0)
+    }
+    // see if there is a selected element (bookmarked node)
+    // if so, mark it and its parent nodes
+    let el = xml.getElementById(id)
+    if (el) {
+      el.setAttribute('sel', 2)
+      setSel(el)
+    }
+    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
+    var scripts = document.getElementsByTagName('script'),
+      str     = '',
+      i       = 0,
+      il      = scripts.length;
+    for (; i&lt;il; i++) {
+      if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
+    }
+    const xsl = oParser.parseFromString(str, 'text/xml')
+    const xsltProcessor = new XSLTProcessor()
+    xsltProcessor.importStylesheet(xsl)
+    const resultDocument = xsltProcessor.transformToFragment(xml, document)
+    let data = resultDocument.textContent
+    data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+    data = JSON.parse(data)
+    cleanText(data)
+    const xdata = {}
+    xdata.data = data
+    xdata.textItems = textItems
+    return xdata
+}
+
+export {getLeoJSON}
+</t>
 </tnodes>
 </leo_file>
