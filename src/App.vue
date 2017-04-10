@@ -96,4 +96,9 @@ HTML, BODY
 .directive
    color: #990000;
 
+.md
+  margin-left: 40px
+  margin-top: 10px
+  max-width: 600px
+
 </style>

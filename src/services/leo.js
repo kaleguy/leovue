@@ -1,5 +1,6 @@
 import escape from 'escape-html'
 import axios from 'axios'
+
 function loadDoc (filename) {
   var p = new Promise((resolve, reject) => {
     axios.get(filename)
@@ -24,7 +25,7 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-// set all parent els to @sel = 1
+// set all parent els of given el to @sel = 1
 function setSel(el){
   let parent = el.parentElement;
   if (parent){
@@ -41,8 +42,7 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString) {
-    let id = 0
+function transformLeoXML (xmlString, id) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')

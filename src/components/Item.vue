@@ -13,6 +13,7 @@
           :model="model"
           :key="model.id"
           :textItems="textItems"
+          :vTargetEl="vTargetEl"
           :targetEl="targetEl">
       </item>
     </ul>
@@ -30,12 +31,6 @@ const md = require('markdown-it')({
 const hljs = require('highlight.js')
 let currentNode = null
 function showText (title, panel, text) {
-  // TODO: replace this with Vuex
-  document.getElementById('tlayout').style.display = 'block'
-  document.getElementById('vpane').style.display = 'none'
-  if (/^\[/.test(title)) {
-    return showSite(title, panel)
-  }
   if (!text) {
     panel.innerHTML = ''
     return
@@ -123,6 +118,7 @@ function showSite (title, panel) {
     axios.get(url)
       .then(function (response) {
         let html = md.render(response.data)
+        html = '<div class="md">' + html + '</div>'
         html = replaceRelUrls(html, base)
         panel.innerHTML = html
       })
@@ -131,10 +127,6 @@ function showSite (title, panel) {
       })
     return
   }
-  // TODO: replace this with Vuex
-  document.getElementById('tlayout').style.display = 'none'
-  document.getElementById('vpane').style.display = 'block'
-  panel = document.getElementById('vpane')
   const iframeHTML = `
     <iframe
        src="" height="100%" width="100%"
@@ -167,8 +159,9 @@ export default {
   props: {
     open: Boolean,
     model: Object,
-    showContent: Boolean,
+    showContentFlag: Boolean,
     targetEl: Element,
+    vTargetEl: Element,
     textItems: Object
   },
   data: function () {
@@ -216,10 +209,20 @@ export default {
       }
       currentNode = this
       currentNode.active = true
-      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+      this.showContent()
       router.push({name: 'Node', params: { id: this.model.id }})
+    },
+    showContent: function () {
+      if (/^\[/.test(this.model.name)) {
+        this.$store.commit('CONTENT_PANE', {type: 'site'})
+        return showSite(this.model.name, this.vTargetEl)
+      } else {
+        this.$store.commit('CONTENT_PANE', {type: 'text'})
+        showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+      }
     }
   },
+
   mounted () {
     if (this.model.sel) {
       this.openFlag = true
@@ -228,8 +231,8 @@ export default {
       currentNode.active = false
       currentNode = this
       this.active = true
-      this.initialized = true
-      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+      this.$store.commit('INIT')
+      this.showContent()
     }
     if (!currentNode) {
       currentNode = this
@@ -237,9 +240,9 @@ export default {
     }
   },
   updated () {
-    if (this.showContent && this.model.t && !this.initialized) {
+    if (this.showContentFlag && this.model.t && !this.initialized) {
       this.$store.commit('INIT')
-      showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+      this.showContent()
     }
   }
 }
@@ -263,15 +266,15 @@ export default {
   li {
     white-space: nowrap;
   }
+  li > div {
+    padding-left:4px;
+  }
   .active {
     background: #81ff00;
   }
   .activeb {
     background: #81ff00;
     font-weight:bold;
-  }
-  li > div {
-    padding-left:4px;
   }
 </style>
 

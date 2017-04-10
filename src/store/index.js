@@ -9,7 +9,8 @@ export default new Vuex.Store({
     leotext: {},
     leodata: {},
     filename: '',
-    initialized: false
+    initialized: false,
+    contentPane: 'text'
   },
   mutations: {
     LEO (state, o) {
@@ -22,11 +23,15 @@ export default new Vuex.Store({
     },
     RESET (state) {
       state.initialized = false
+    },
+    CONTENT_PANE (state, o) {
+      // debugger
+      state.contentPane = o.type
     }
   },
   actions: {
     loadLeo (context, o) {
-      getLeoJSON(o.filename).then(ldata => {
+      getLeoJSON(o.filename, o.id).then(ldata => {
         context.commit('RESET')
         context.commit('LEO', {
           data: ldata.data,

@@ -5,27 +5,14 @@
         <ul id="demo">
           <item
             class="item"
-            :showContentFlag="true"
+            :showContent="true"
             :model="data"
             :textItems="text"
             :open="true"
-            :targetEl="target.el"
-            :vTargetEl="target.v">
+            :targetEl="target.el">
           </item>
         </ul>
       </div>
-      <div class="panes-separator" id="panes-separator"></div>
-      <table v-show="textContent" id="tlayout">
-        <tr>
-          <td><div id="lhandle"></div></td>
-          <td>
-            <div id="hshim"></div>
-            <div class="right-pane" id="right-pane"></div>
-          </td>
-        </tr>
-      </table>
-      <div v-show="iframeContent" style='min-height:100%' id="vpane"></div>
-    </div>
   </div>
 </template>
 
@@ -33,14 +20,12 @@
   import Item from './Item'
 
   let leftPane
-  let vPane
   let rightPane
   let paneSep
-  let target = {el: null, v: null}
+  let target = {el: null}
   export default {
     name: 'treeviewer',
     props: {
-      id: 0
     },
     components: {
       item: Item
@@ -56,7 +41,7 @@
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
+        //  this.id = val.params.id
         },
         immediate: true
       }
@@ -67,28 +52,12 @@
       },
       text () {
         return this.$store.state.leotext
-      },
-      iframeContent () {
-        if (this.$store.state.contentPane === 'site') {
-          return true
-        } else {
-          return false
-        }
-      },
-      textContent () {
-        if (this.$store.state.contentPane === 'text') {
-          return true
-        } else {
-          return false
-        }
       }
     },
     mounted: function () {
       leftPane = document.getElementById('left-pane')
-      vPane = document.getElementById('vpane')
       rightPane = document.getElementById('right-pane')
-      target.el = rightPane // regular content
-      target.v = vPane  // iframe content
+      target.el = rightPane
       paneSep = document.getElementById('panes-separator')
       rightPane.innerHTML = ''
 
@@ -119,7 +88,7 @@
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
+      this.$store.dispatch('loadLeo', {filename: 'docs'})
     }
   }
 </script>
@@ -214,6 +183,5 @@
   p {
     line-height:1.3em;
   }
-
 
 </style>
