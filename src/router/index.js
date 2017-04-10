@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Dashboard from '@/components/Dashboard'
+import TreeViewer from '@/components/TreeViewer'
+import AccordionViewer from '@/components/AccordionViewer'
 
 Vue.use(Router)
 
@@ -8,14 +10,29 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TreeView',
-      component: Dashboard
+      component: Dashboard,
+      children: [{
+        path: '',
+        component: TreeViewer
+      }]
     },
     {
       path: '/t/:id',
-      name: 'Node',
-      component: Dashboard
+      component: Dashboard,
+      children: [{
+        name: 'Node',
+        path: '',
+        component: TreeViewer
+      }]
+    },
+    {
+      path: '/a/:id',
+      component: Dashboard,
+      children: [{
+        name: 'ANode',
+        path: '',
+        component: AccordionViewer
+      }]
     }
-
   ]
 })

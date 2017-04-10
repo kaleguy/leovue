@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <appheader/>
-    <treeviewer :id="$route.params.id"></treeviewer>
+    <router-view :id="$route.params.id"></router-view>
   </div>
 </template>
 

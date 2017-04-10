@@ -17,6 +17,7 @@
           :targetEl="targetEl">
       </item>
     </ul>
+    <div v-show="inline">TEST</div>
   </li>
 </template>
 
@@ -168,7 +169,8 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false
+      active: false,
+      inline: false
     }
   },
   computed: {
@@ -213,6 +215,9 @@ export default {
       router.push({name: 'Node', params: { id: this.model.id }})
     },
     showContent: function () {
+      if (!this.targetEl) {
+        return
+      }
       if (/^\[/.test(this.model.name)) {
         this.$store.commit('CONTENT_PANE', {type: 'site'})
         return showSite(this.model.name, this.vTargetEl)
