@@ -71,12 +71,11 @@ H1 {margin: 0}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
-&lt;text class="cls-2" transform="translate(95 202)"&gt;viewer&lt;/text&gt;
-&lt;text class="cls-1" transform="translate(34 156.2)"&gt;LEO&lt;/text&gt;
+&lt;text class="cls-1" transform="translate(35 156.2)"&gt;LEO&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(90 208)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
-&lt;h1&gt;About Leo Viewer&lt;/h1&gt;
 &lt;p&gt;
 Leo Viewer is a web app that can display files created with 
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
@@ -231,6 +230,12 @@ Some additional features include:
 
 # Installing Leo
 
+To install on Windows, unzip the following file and run leoApp.exe from the unzipped folder.
+
+[Leo 5.3](https://sourceforge.net/projects/leo/files/Leo/Quick%20Install/Leo_5.3-b1_Win.zip/download)
+
+For other environments, see the:
+
 [Installation page on the Leo Site](http://leoeditor.com/installing.html)</t>
 <t tx="josephorr.20170328225527.1">&lt;&lt; template &gt;&gt;
 &lt;&lt; script &gt;&gt;
@@ -244,16 +249,17 @@ Some additional features include:
         &lt;ul id="demo"&gt;
           &lt;item
             class="item"
-            :showContent="true"
-            :model="data.data"
-            :textItems="data.textItems"
+            :showContentFlag="true"
+            :model="data"
+            :textItems="text"
             :open="true"
-            :targetEl="target.el"&gt;
+            :targetEl="target.el"
+            :vTargetEl="target.v"&gt;
           &lt;/item&gt;
         &lt;/ul&gt;
       &lt;/div&gt;
       &lt;div class="panes-separator" id="panes-separator"&gt;&lt;/div&gt;
-      &lt;table id="tlayout"&gt;
+      &lt;table v-show="textContent" id="tlayout"&gt;
         &lt;tr&gt;
           &lt;td&gt;&lt;div id="lhandle"&gt;&lt;/div&gt;&lt;/td&gt;
           &lt;td&gt;
@@ -262,7 +268,7 @@ Some additional features include:
           &lt;/td&gt;
         &lt;/tr&gt;
       &lt;/table&gt;
-      &lt;div style='min-height:100%' id="vpane"&gt;&lt;/div&gt;
+      &lt;div v-show="iframeContent" style='min-height:100%' id="vpane"&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/template&gt;
@@ -271,16 +277,12 @@ Some additional features include:
 
 &lt;script&gt;
   import Item from './Item'
-  import {getLeoJSON} from '../services/leo.js'
 
-  let model = {
-    data: {},
-    textItems: {}
-  }
   let leftPane
+  let vPane
   let rightPane
   let paneSep
-  let target = {el: null}
+  let target = {el: null, v: null}
   export default {
     name: 'treeviewer',
     props: {
@@ -290,26 +292,50 @@ Some additional features include:
     },
     data: function () {
       return {
-        data: model,
         target: target,
         open: false,
         active: false,
-        id: 123,
         lhandle: true
       }
     },
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
+        //  this.id = val.params.id
         },
         immediate: true
       }
     },
+    computed: {
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
+      },
+      iframeContent () {
+        console.log('ii', this.$store.state.contentPane)
+        if (this.$store.state.contentPane === 'site') {
+          return true
+        } else {
+          return false
+        }
+      },
+      textContent () {
+        console.log('tt', this.$store.state.contentPane)
+        if (this.$store.state.contentPane === 'text') {
+          return true
+        } else {
+          return false
+        }
+      }
+    },
     mounted: function () {
       leftPane = document.getElementById('left-pane')
+      vPane = document.getElementById('vpane')
       rightPane = document.getElementById('right-pane')
-      target.el = rightPane
+      target.el = rightPane // regular content
+      target.v = vPane  // iframe content
       paneSep = document.getElementById('panes-separator')
       rightPane.innerHTML = ''
 
@@ -340,10 +366,7 @@ Some additional features include:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      getLeoJSON('docs', this.id).then(ldata =&gt; {
-        model.data = ldata.data
-        model.textItems = ldata.textItems
-      })
+      this.$store.dispatch('loadLeo', {filename: 'docs'})
     }
   }
 &lt;/script&gt;
@@ -425,8 +448,6 @@ Some additional features include:
     background: #fff;
   }
 
-
-
   .panes-container,
   .panes-separator,
   .left-pane,
@@ -442,6 +463,7 @@ Some additional features include:
   p {
     line-height:1.3em;
   }
+
 
 &lt;/style&gt;
 </t>
@@ -541,6 +563,7 @@ converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
 import escape from 'escape-html'
 import axios from 'axios'
+
 function loadDoc (filename) {
   var p = new Promise((resolve, reject) =&gt; {
     axios.get(filename)
@@ -565,7 +588,7 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-// set all parent els to @sel = 1
+// set all parent els of given el to @sel = 1
 function setSel(el){
   let parent = el.parentElement;
   if (parent){
@@ -582,8 +605,8 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString, id) {
-    if (! id){ id = 0}
+function transformLeoXML (xmlString) {
+    let id = 0
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -637,7 +660,7 @@ function transformLeoXML (xmlString, id) {
     return xdata
 }
 
-export {getLeoJSON}
+export {getLeoJSON, transformLeoXML}
 </t>
 </tnodes>
 </leo_file>
