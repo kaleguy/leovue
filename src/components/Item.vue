@@ -17,6 +17,7 @@
           :vTargetEl="vTargetEl"
           :targetEl="targetEl">
       </item>
+      <div v-show="inline" class="hshim"></div>
     </ul>
   </li>
 </template>
@@ -221,7 +222,7 @@ export default {
     showContent: function () {
       if (!this.targetEl) {
         const contentEl = document.getElementById('item-' + this.model.id)
-        contentEl.innerHTML = this.textItems[this.model.t]
+        showText(this.model.name, contentEl, this.textItems[this.model.t])
         return
       }
       if (/^\[/.test(this.model.name)) {
@@ -290,6 +291,10 @@ export default {
   .inline {
     max-width: 700px;
     white-space: normal;
+    padding:30px;
+  }
+  .hshim {
+    height: 40px;
   }
 </style>
 
