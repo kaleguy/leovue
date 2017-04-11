@@ -1,14 +1,14 @@
 <template>
   <div class="accordionviewer">
     <div class="panes-container">
-      <div class="left-pane" id="left-pane">
+      <div class="center-pane" id="center-pane">
         <ul id="demo">
           <item
             class="item"
             :showContentFlag="true"
             :model="data"
             :textItems="text"
-            :open="true">
+            :open="false">
           </item>
         </ul>
       </div>
@@ -58,32 +58,12 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #vpane {
-    width: 100%;
-    background: #fff;
-  }
-  #tlayout {
-    background: #fff;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .tlayout TD {
-    padding: 0
-  }
 
-  .treeviewer{
+
+  .accordionviewer{
     height: 100%
   }
-  #lhandle {
-    height: 100%;
-    width: 40px;
-    background: #fff;
-    float:left;
-  }
-  #hshim {
-    height: 10px;
-  }
+
   h1, h2 {
     font-weight: normal;
   }
@@ -108,41 +88,17 @@
     overflow: hidden;
   }
 
-  .left-pane {
-    width: 250px;
+  .center-pane {
+    width: 900px;
     background: #fff;
-  }
-  .right-pane {
-    max-width: 600px;
-    min-width: 500px;
+    margin-left:auto;
+    margin-right:auto;
   }
 
-  .panes-separator {
-    width: 11px;
-    background: #eee;
-    position: relative;
-    cursor: col-resize;
-    /*background-image: url('../assets/vertical.png');*/
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-
-  .right-pane {
-    flex: auto;
-    background: #fff;
-  }
-
-  .panes-container,
-  .panes-separator,
-  .left-pane,
-  .right-pane {
+  .panes-container {
     margin: 0;
     padding: 0;
     min-height: 100%;
-  }
-  .right-pane {
-    padding:0px;
-    padding-top:0px;
   }
   p {
     line-height:1.3em;

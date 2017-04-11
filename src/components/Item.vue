@@ -6,6 +6,7 @@
       <span v-if="isFolder">{{isOpen ? '▼' : '▶'}}</span>
       {{vtitle}}
     </div>
+    <div v-show="inline" :id="'item-' + model.id" class="inline"></div>
     <ul v-show="isOpen" v-if="isFolder">
       <item
         class="item"
@@ -17,7 +18,6 @@
           :targetEl="targetEl">
       </item>
     </ul>
-    <div v-show="inline">TEST</div>
   </li>
 </template>
 
@@ -169,8 +169,7 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false,
-      inline: false
+      active: false
     }
   },
   computed: {
@@ -198,24 +197,31 @@ export default {
     },
     initialized () {
       return this.$store.state.initialized
+    },
+    inline () {
+      return ((!this.targetEl) && this.isOpen)
     }
+
   },
   methods: {
     toggle: function () {
       this.reset = false
-      if (this.isFolder) {
-        this.openFlag = !this.openFlag
-      }
+      // if (this.isFolder) {
+      this.openFlag = !this.openFlag
+      // }
       if (currentNode) {
         currentNode.active = false
       }
       currentNode = this
       currentNode.active = true
       this.showContent()
-      router.push({name: 'Node', params: { id: this.model.id }})
+      var routeName = this.$route.name
+      router.push({name: routeName, params: { id: this.model.id }})
     },
     showContent: function () {
       if (!this.targetEl) {
+        const contentEl = document.getElementById('item-' + this.model.id)
+        contentEl.innerHTML = this.textItems[this.model.t]
         return
       }
       if (/^\[/.test(this.model.name)) {
@@ -280,6 +286,10 @@ export default {
   .activeb {
     background: #81ff00;
     font-weight:bold;
+  }
+  .inline {
+    max-width: 700px;
+    white-space: normal;
   }
 </style>
 

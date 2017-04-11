@@ -12,6 +12,7 @@ export default new Router({
       path: '/',
       component: Dashboard,
       children: [{
+        name: 'Top',
         path: '',
         component: TreeViewer
       }]
