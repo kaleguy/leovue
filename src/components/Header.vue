@@ -1,20 +1,40 @@
 <template>
   <div class="holder">
-  <div class="header">
-  Leo Viewer
-    <div @click="toggle" class="icon" style="padding:0;margin:0">
-      <icon class="icon bars" name="bars"></icon>
+    <div class="header">
+      Leo Viewer
+      <div @click="toggle" class="icon" style="padding:0;margin:0">
+        <icon class="icon bars" name="bars"></icon>
+      </div>
+      <div class="vshim"></div>
+      <icon class="icon" name="arrow-right"></icon>
+      <icon class="icon" name="arrow-left"></icon>
     </div>
-    <div class="vshim"></div>
-    <icon class="icon" name="arrow-right"></icon>
-    <icon class="icon" name="arrow-left"></icon>
-  </div>
-  <div id="menu" class="menu">
-    <div class="menu-header">View Type</div>
-    <div class="menu-item">Outline</div>
-    <div class="menu-item">Inline</div>
-    <div class="menu-separator"></div>
-  </div>
+    <div id="menu" class="menu">
+      <div class="menu-header">View Type</div>
+
+      <div class="menu-item"
+           @click="setViewType('tree')">
+        <div class="icon-box">
+          <icon
+            name="check"
+            v-show="viewType === 'tree'"
+            class="check"></icon>
+        </div>
+        <div class="menu-label">Outline</div>
+      </div>
+
+      <div class="menu-item"
+           @click="setViewType('inline')">
+        <div class="icon-box">
+          <icon name="check"
+                v-show="viewType === 'inline'"
+                class="check"></icon>
+        </div>
+        <div class="menu-label">Inline</div>
+      </div>
+
+      <div class="menu-separator"></div>
+    </div>
   </div>
 </template>
 
@@ -27,7 +47,7 @@
       }
     },
     methods: {
-      toggle: function () {
+      toggle () {
         console.log(this.menu)
         const menuEl = document.getElementById('menu')
         if (this.menu) {
@@ -36,6 +56,14 @@
           menuEl.style.width = '160px'
         }
         this.menu = !this.menu
+      },
+      setViewType (type) {
+        this.$store.commit('VIEW_TYPE', {type: type})
+      }
+    },
+    computed: {
+      viewType () {
+        return this.$store.state.viewType
       }
     }
   }
@@ -43,11 +71,21 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+  .check
+    margin-top: 2px
+    margin-bottom: -3px
   .bars
     cursor: pointer
   .holder
     padding: 0
     margin: 0
+  .icon-box
+    width: 20px
+    margin-left: 20px
+    display: inline-block
+  .menu-label
+    width: 80px
+    display: inline
   .menu-header
     padding: 10px
     font-weight: bold
@@ -55,8 +93,9 @@
     white-space: nowrap
   .menu-item
     padding: 4px
-    text-align: center
+    // text-align: center
     white-space: nowrap
+    cursor: pointer
   .menu
     position: absolute
     background: #ccc

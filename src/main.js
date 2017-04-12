@@ -8,6 +8,7 @@ import Icon from 'vue-awesome/components/Icon.vue'
 import 'vue-awesome/icons/bars'
 import 'vue-awesome/icons/arrow-left'
 import 'vue-awesome/icons/arrow-right'
+import 'vue-awesome/icons/check'
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
