@@ -59,6 +59,15 @@
       },
       setViewType (type) {
         this.$store.commit('VIEW_TYPE', {type: type})
+        console.log('tt', type)
+        switch (type) {
+          case 'tree':
+            this.$router.replace({path: '/t/2', params: {id: 1}})
+            break
+          case 'inline':
+            this.$router.replace({path: '/a/2', params: {id: 1}})
+            break
+        }
       }
     },
     computed: {
