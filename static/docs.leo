@@ -286,6 +286,7 @@ For other environments, see the:
   export default {
     name: 'treeviewer',
     props: {
+      id: 0
     },
     components: {
       item: Item
@@ -301,7 +302,7 @@ For other environments, see the:
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-        //  this.id = val.params.id
+          this.id = val.params.id
         },
         immediate: true
       }
@@ -314,7 +315,6 @@ For other environments, see the:
         return this.$store.state.leotext
       },
       iframeContent () {
-        console.log('ii', this.$store.state.contentPane)
         if (this.$store.state.contentPane === 'site') {
           return true
         } else {
@@ -322,7 +322,6 @@ For other environments, see the:
         }
       },
       textContent () {
-        console.log('tt', this.$store.state.contentPane)
         if (this.$store.state.contentPane === 'text') {
           return true
         } else {
@@ -366,7 +365,7 @@ For other environments, see the:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs'})
+      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
     }
   }
 &lt;/script&gt;
@@ -605,8 +604,7 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString) {
-    let id = 0
+function transformLeoXML (xmlString, id) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -625,6 +623,7 @@ function transformLeoXML (xmlString) {
         elText = escape(elText)
       }
       textItems[a] = elText
+      // h
     }
     const vnodes = xml.getElementsByTagName('v')
     for (let i = 0; i &lt; vnodes.length; i++) {

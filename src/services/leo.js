@@ -61,6 +61,7 @@ function transformLeoXML (xmlString, id) {
         elText = escape(elText)
       }
       textItems[a] = elText
+      // h
     }
     const vnodes = xml.getElementsByTagName('v')
     for (let i = 0; i < vnodes.length; i++) {

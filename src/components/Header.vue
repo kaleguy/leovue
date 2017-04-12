@@ -1,10 +1,20 @@
 <template>
-  <div class="Header">
+  <div class="holder">
+  <div class="header">
   Leo Viewer
-    <icon class="icon" name="bars"></icon>
+    <div @click="toggle" class="icon" style="padding:0;margin:0">
+      <icon class="icon bars" name="bars"></icon>
+    </div>
     <div class="vshim"></div>
     <icon class="icon" name="arrow-right"></icon>
     <icon class="icon" name="arrow-left"></icon>
+  </div>
+  <div id="menu" class="menu">
+    <div class="menu-header">View Type</div>
+    <div class="menu-item">Outline</div>
+    <div class="menu-item">Inline</div>
+    <div class="menu-separator"></div>
+  </div>
   </div>
 </template>
 
@@ -13,30 +23,69 @@
     name: 'appheader',
     data () {
       return {
+        menu: true
+      }
+    },
+    methods: {
+      toggle: function () {
+        console.log(this.menu)
+        const menuEl = document.getElementById('menu')
+        if (this.menu) {
+          menuEl.style.width = 0
+        } else {
+          menuEl.style.width = '160px'
+        }
+        this.menu = !this.menu
       }
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  DIV {
-    text-align: left;
-    background: #eee;
-    font-weight: normal;
-    padding:2px;
-    padding-left:6px;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-  }
-  .icon {
-    float: right;
-    padding:3px;
-    padding-right: 7px;
-    color: #333;
-  }
-  .vshim {
-    width: 8px;
-    float: right;
-  }
+<style lang="sass" scoped>
+  .bars
+    cursor: pointer
+  .holder
+    padding: 0
+    margin: 0
+  .menu-header
+    padding: 10px
+    font-weight: bold
+    text-align: center
+    white-space: nowrap
+  .menu-item
+    padding: 4px
+    text-align: center
+    white-space: nowrap
+  .menu
+    position: absolute
+    background: #ccc
+    width: 160px
+    right: 0
+    height: 100%
+    border-left: 1px solid #999
+    border-top: 1px solid #ccc
+    //-webkit-box-shadow: 10px 0 5px -2px #888;
+    //box-shadow: 10px 0 5px -2px #888;
+    box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
+    transition: width .5s
+  .menu-separator
+    border: 1px solid #ddd
+    margin-top: 10px
+  .header
+    text-align: left
+    background: #eee
+    font-weight: normal
+    padding: 2px
+    padding-left: 6px
+    color: #333
+    border-bottom: 1px solid #ddd
+  .icon
+    float: right
+    padding: 3px
+    padding-right: 7px
+    color: #333
+  .vshim
+    width: 8px
+    float: right
 </style>
