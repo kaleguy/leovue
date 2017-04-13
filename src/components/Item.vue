@@ -217,7 +217,6 @@ export default {
       this.reset = false
       this.openFlag = !this.openFlag
       if (this.isFolder) {
-        // this.openFlag = !this.openFlag
         const ul = this.$el.getElementsByTagName('UL')[0]
         ul.style.display = 'block'
         if (this.isOpen) {
@@ -225,17 +224,16 @@ export default {
         } else {
           Velocity(ul, 'slideUp', {duration: duration, easing: easing})
         }
-      } else {
-        if (!this.targetEl) {
-          this.inline = true
-          duration = 300
-          const il = this.$el.getElementsByClassName('inline')[0]
-          il.style.display = 'block'
-          if (this.isOpen) {
-            Velocity(il, 'slideDown', {duration: duration, easing: easing})
-          } else {
-            Velocity(il, 'slideUp', {duration: duration, easing: easing})
-          }
+      }
+      if (!this.targetEl) {
+        this.inline = true
+        duration = 300
+        const il = this.$el.getElementsByClassName('inline')[0]
+        il.style.display = 'block'
+        if (this.isOpen) {
+          Velocity(il, 'slideDown', {duration: duration, easing: easing})
+        } else {
+          Velocity(il, 'slideUp', {duration: duration, easing: easing})
         }
       }
       if (currentNode) {
@@ -250,9 +248,11 @@ export default {
     showContent: function () {
       if (!this.targetEl) {
         const contentEl = document.getElementById('item-' + this.model.id)
+        console.log('TESTX', contentEl, this.textItems[this.model.t])
         showText(this.model.name, contentEl, this.textItems[this.model.t])
         return
       }
+      // test for presence of url in title, if so it is external content
       if (/^\[/.test(this.model.name)) {
         this.$store.commit('CONTENT_PANE', {type: 'site'})
         return showSite(this.model.name, this.vTargetEl)
@@ -324,6 +324,7 @@ export default {
   }
   li {
     white-space: nowrap;
+    min-width: 760px;
   }
   li > div {
     padding-left:4px;
@@ -331,6 +332,7 @@ export default {
   .active {
     background: #81ff00;
     border: 1px solid #81dd00;
+    max-width: 762px;
   }
   .activeb {
     background: #81ff00;

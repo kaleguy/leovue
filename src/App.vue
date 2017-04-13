@@ -82,7 +82,7 @@ HTML, BODY
     height: 100%
     width: 100%
 
-.right-pane .text
+.right-pane .text, .inline .text
     margin-top: 20px
     border: none
     background-color: transparent
