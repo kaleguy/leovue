@@ -8,7 +8,7 @@
       </span>
       {{vtitle}}
     </div>
-    <div v-show="inline" :id="'item-' + model.id" class="inline"></div>
+    <div v-show="inline"  :id="'item-' + model.id" class="inline"></div>
     <ul style="display:none" v-if="isFolder">
       <item
         class="item"
@@ -173,7 +173,8 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false
+      active: false,
+      inline: false
     }
   },
   computed: {
@@ -201,25 +202,39 @@ export default {
     },
     initialized () {
       return this.$store.state.initialized
-    },
-    inline () {
-      return ((!this.targetEl) && this.isOpen)
     }
+    // ,
+    // inline () {
+      // return ((!this.targetEl) && this.isOpen)
+    // }
 
   },
   methods: {
     toggle: function () {
-      const duration = 300
+      let duration = 100
       const easing = 'easeOutExpo'
       this.reset = false
+      this.openFlag = !this.openFlag
       if (this.isFolder) {
-        this.openFlag = !this.openFlag
+        // this.openFlag = !this.openFlag
         const ul = this.$el.getElementsByTagName('UL')[0]
         ul.style.display = 'block'
         if (this.isOpen) {
           Velocity(ul, 'slideDown', {duration: duration, easing: easing})
         } else {
           Velocity(ul, 'slideUp', {duration: duration, easing: easing})
+        }
+      } else {
+        if (!this.targetEl) {
+          this.inline = true
+          duration = 300
+          const il = this.$el.getElementsByClassName('inline')[0]
+          il.style.display = 'block'
+          if (this.isOpen) {
+            Velocity(il, 'slideDown', {duration: duration, easing: easing})
+          } else {
+            Velocity(il, 'slideUp', {duration: duration, easing: easing})
+          }
         }
       }
       if (currentNode) {
@@ -248,7 +263,7 @@ export default {
   },
   mounted () {
     if (this.model.sel) {
-      this.openFlag = true
+      // this.openFlag = true
     }
     if (this.model.sel === 2) {
       currentNode.active = false
@@ -314,9 +329,14 @@ export default {
     max-width: 700px;
     white-space: normal;
     padding:30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
   }
   .hshim {
-    height: 40px;
+    height: 15px;
   }
 </style>
 
