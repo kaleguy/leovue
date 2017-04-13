@@ -58,7 +58,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #ff"&gt;
+&lt;div style="border:1px solid #fff; width:400px;margin-left:auto;margin-right:auto;"&gt;
 &lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 220"&gt;
 &lt;defs&gt;
 &lt;style&gt;
@@ -473,7 +473,7 @@ For other environments, see the:
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
 The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
-displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
+displaying it with Leo Viewer. Leo has features that make it particularly suitable for creating 
 documentation of code.
 
 More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of

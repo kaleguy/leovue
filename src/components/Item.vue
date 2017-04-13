@@ -3,7 +3,9 @@
     <div
       :class="{bold: isFolder, active: active}"
       @click="toggle">
-      <span v-if="isFolder">{{isOpen ? '▼' : '▶'}}</span>
+      <span v-if="isFolder">
+        <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
+      </span>
       {{vtitle}}
     </div>
     <div v-show="inline" :id="'item-' + model.id" class="inline"></div>
@@ -156,6 +158,7 @@ function removeFirstLine (text) {
 }
 import router from '../router'
 import axios from 'axios'
+import Velocity from 'velocity-animate'
 export default {
   name: 'item',
   props: {
@@ -206,10 +209,19 @@ export default {
   },
   methods: {
     toggle: function () {
+      const duration = 1000
+      const easing = 'easeOutExpo'
       this.reset = false
-      // if (this.isFolder) {
-      this.openFlag = !this.openFlag
-      // }
+      if (this.isFolder) {
+        this.openFlag = !this.openFlag
+        const ul = this.$el.getElementsByTagName('UL')[0]
+        ul.style.display = 'block'
+        if (this.openFlag) {
+          Velocity(ul, 'slideDown', {duration: duration, easing: easing})
+        } else {
+          Velocity(ul, 'slideUp', {duration: duration, easing: easing})
+        }
+      }
       if (currentNode) {
         currentNode.active = false
       }
@@ -264,6 +276,17 @@ export default {
 
 
 <style scoped>
+  .arrow {
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+  }
+  .arrowdown {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
   .item {
     cursor: pointer;
   }

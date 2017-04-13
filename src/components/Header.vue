@@ -52,8 +52,10 @@
         const menuEl = document.getElementById('menu')
         if (this.menu) {
           menuEl.style.width = 0
+          menuEl.style.borderLeft = 'none'
         } else {
           menuEl.style.width = '160px'
+          menuEl.style.borderLeft = '1px solid #ccc'
         }
         this.menu = !this.menu
       },
