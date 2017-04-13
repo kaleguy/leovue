@@ -4,9 +4,9 @@
       :class="{bold: isFolder, active: active}"
       @click="toggle">
       <span v-if="isFolder">
-        <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
+        <div class="arrow" v-bind:class="{arrowdown: isOpen, topItemIcon: top}">▶</div>
       </span>
-      {{vtitle}}
+      <span v-bind:class="{topItem: top}">{{vtitle}}</span>
     </div>
     <div v-show="inline"  :id="'item-' + model.id" class="inline"></div>
     <ul style="display:none" v-if="isFolder">
@@ -167,7 +167,8 @@ export default {
     showContentFlag: Boolean,
     targetEl: Element,
     vTargetEl: Element,
-    textItems: Object
+    textItems: Object,
+    top: Boolean
   },
   data: function () {
     return {
@@ -290,6 +291,14 @@ export default {
 
 
 <style scoped>
+  .topItem {
+    font-size: 30px;
+  }
+  .topItemIcon {
+    vertical-align: top;
+    padding-left: 20px;
+    margin-right: -10px;
+  }
   .arrow {
     -webkit-transition: all .1s ease;
     transition: all .1s ease;
@@ -303,6 +312,7 @@ export default {
   }
   .item {
     cursor: pointer;
+    width: 100%;
   }
   .bold {
     font-weight: bold;
@@ -320,6 +330,7 @@ export default {
   }
   .active {
     background: #81ff00;
+    border: 1px solid #81dd00;
   }
   .activeb {
     background: #81ff00;
@@ -331,9 +342,10 @@ export default {
     padding:30px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 4px;
+    margin-bottom: 16px;
     border:1px solid #ccc;
+    // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
   }
   .hshim {
     height: 15px;

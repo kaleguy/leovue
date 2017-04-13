@@ -5,6 +5,7 @@
         <ul id="demo">
           <item
             class="item"
+            :top="true"
             :showContentFlag="true"
             :model="data"
             :textItems="text"
@@ -138,7 +139,9 @@
   .tlayout TD {
     padding: 0
   }
-
+  .first-item{
+    font-size: 30px;
+  }
   .treeviewer{
     height: 100%
   }
