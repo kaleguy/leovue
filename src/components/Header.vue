@@ -9,9 +9,9 @@
       <icon class="icon" name="arrow-right"></icon>
       <icon class="icon" name="arrow-left"></icon>
     </div>
+
     <div id="menu" class="menu">
       <div class="menu-header">View Type</div>
-
       <div class="menu-item"
            @click="setViewType('tree')">
         <div class="icon-box">
@@ -22,7 +22,6 @@
         </div>
         <div class="menu-label">Outline</div>
       </div>
-
       <div class="menu-item"
            @click="setViewType('inline')">
         <div class="icon-box">
@@ -32,9 +31,9 @@
         </div>
         <div class="menu-label">Inline</div>
       </div>
-
       <div class="menu-separator"></div>
     </div>
+
   </div>
 </template>
 
@@ -43,7 +42,7 @@
     name: 'appheader',
     data () {
       return {
-        menu: true
+        menu: false
       }
     },
     methods: {
@@ -61,7 +60,6 @@
       },
       setViewType (type) {
         this.$store.commit('VIEW_TYPE', {type: type})
-        console.log('tt', type)
         switch (type) {
           case 'tree':
             this.$router.replace({path: '/t/2', params: {id: 1}})
@@ -110,7 +108,7 @@
   .menu
     position: absolute
     background: #ccc
-    width: 160px
+    width: 0
     right: 0
     height: 100%
     border-left: 1px solid #999

@@ -58,7 +58,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #ff"&gt;
+&lt;div style="border:1px solid #fff; width:400px;margin-left:auto;margin-right:auto;"&gt;
 &lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 220"&gt;
 &lt;defs&gt;
 &lt;style&gt;
@@ -286,6 +286,7 @@ For other environments, see the:
   export default {
     name: 'treeviewer',
     props: {
+      id: 0
     },
     components: {
       item: Item
@@ -301,7 +302,7 @@ For other environments, see the:
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-        //  this.id = val.params.id
+          this.id = val.params.id
         },
         immediate: true
       }
@@ -314,7 +315,6 @@ For other environments, see the:
         return this.$store.state.leotext
       },
       iframeContent () {
-        console.log('ii', this.$store.state.contentPane)
         if (this.$store.state.contentPane === 'site') {
           return true
         } else {
@@ -322,7 +322,6 @@ For other environments, see the:
         }
       },
       textContent () {
-        console.log('tt', this.$store.state.contentPane)
         if (this.$store.state.contentPane === 'text') {
           return true
         } else {
@@ -366,7 +365,7 @@ For other environments, see the:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs'})
+      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
     }
   }
 &lt;/script&gt;
@@ -474,7 +473,7 @@ For other environments, see the:
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
 The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
-displaying it with Leo Viewer. In particular, Leo has features that make it particularly suitable for creating 
+displaying it with Leo Viewer. Leo has features that make it particularly suitable for creating 
 documentation of code.
 
 More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of
@@ -605,8 +604,7 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString) {
-    let id = 0
+function transformLeoXML (xmlString, id) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -625,6 +623,7 @@ function transformLeoXML (xmlString) {
         elText = escape(elText)
       }
       textItems[a] = elText
+      // h
     }
     const vnodes = xml.getElementsByTagName('v')
     for (let i = 0; i &lt; vnodes.length; i++) {
