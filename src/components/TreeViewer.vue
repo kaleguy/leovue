@@ -15,6 +15,7 @@
         </ul>
       </div>
       <div class="panes-separator" id="panes-separator"></div>
+      <div style="height:100%">
       <table v-show="textContent" id="tlayout">
         <tr>
           <td><div id="lhandle"></div></td>
@@ -24,6 +25,7 @@
           </td>
         </tr>
       </table>
+      </div>
       <div v-show="iframeContent" style='min-height:100%' id="vpane"></div>
     </div>
   </div>
@@ -126,12 +128,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #vpane {
-    width: 100%;
     background: #fff;
   }
   #tlayout {
     background: #fff;
-    min-height: 100%;
     margin: 0;
     padding: 0;
   }

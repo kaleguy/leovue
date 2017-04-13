@@ -9,7 +9,7 @@
       {{vtitle}}
     </div>
     <div v-show="inline" :id="'item-' + model.id" class="inline"></div>
-    <ul v-show="isOpen" v-if="isFolder">
+    <ul style="display:none" v-if="isFolder">
       <item
         class="item"
         v-for="model in model.children"
@@ -209,14 +209,14 @@ export default {
   },
   methods: {
     toggle: function () {
-      const duration = 1000
+      const duration = 300
       const easing = 'easeOutExpo'
       this.reset = false
       if (this.isFolder) {
         this.openFlag = !this.openFlag
         const ul = this.$el.getElementsByTagName('UL')[0]
         ul.style.display = 'block'
-        if (this.openFlag) {
+        if (this.isOpen) {
           Velocity(ul, 'slideDown', {duration: duration, easing: easing})
         } else {
           Velocity(ul, 'slideUp', {duration: duration, easing: easing})
@@ -246,7 +246,6 @@ export default {
       }
     }
   },
-
   mounted () {
     if (this.model.sel) {
       this.openFlag = true
