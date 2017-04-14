@@ -11,7 +11,11 @@ export default new Vuex.Store({
     filename: '',
     initialized: false,
     contentPane: 'text',
-    viewType: 'tree'
+    viewType: 'tree',
+    currentItem: {
+      hasNext: false,
+      hasPrev: false
+    }
   },
   mutations: {
     LEO (state, o) {
@@ -31,6 +35,11 @@ export default new Vuex.Store({
     },
     VIEW_TYPE (state, o) {
       state.viewType = o.type
+    },
+    CURRENT_ITEM (state, o) {
+      for (let k in o) {
+        state.currentItem[k] = o[k]
+      }
     }
   },
   actions: {

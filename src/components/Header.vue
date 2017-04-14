@@ -107,15 +107,16 @@
     cursor: pointer
   .menu
     position: absolute
+    overflow: hidden
     background: #ccc
     width: 0
     right: 0
     height: 100%
-    border-left: 1px solid #999
+    //border-left: 1px solid #999
     border-top: 1px solid #ccc
     //-webkit-box-shadow: 10px 0 5px -2px #888;
     //box-shadow: 10px 0 5px -2px #888;
-    box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
+    //box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
     transition: width .5s
   .menu-separator
     border: 1px solid #ddd

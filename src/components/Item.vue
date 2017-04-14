@@ -10,7 +10,10 @@
       </div>
       <span v-bind:class="{topItem: top}">{{vtitle}}</span>
     </div>
-    <div v-show="inline"  :id="'item-' + model.id" class="inline"></div>
+    <div v-show="inline"
+         v-bind:ref="'item-' + model.id"
+         :id="'item-' + model.id"
+         class="inline"></div>
     <ul style="display:none" v-if="isFolder">
       <item
         class="item"
@@ -246,6 +249,25 @@ export default {
       this.showContent()
       var routeName = this.$route.name
       router.push({name: routeName, params: { id: this.model.id }})
+      try {
+        this.nextSibling = this.$el.nextElementSibling.nextElementSibling // next will always be hshim, need next.next
+        this.prevSibling = this.$el.previousElementSibling // next will always be hshim, need next.next
+      } catch (e) {
+
+      }
+      let hasNext = false
+      let hasPrev = false
+      if (this.nextSibling) {
+        hasNext = true
+      }
+      if (this.prevSibling) {
+        hasPrev = true
+      }
+      const currentItem = {
+        hasNext,
+        hasPrev
+      }
+      this.$store.commit('CURRENT_ITEM', currentItem)
     },
     showContent: function () {
       if (!this.targetEl) {

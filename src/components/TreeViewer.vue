@@ -17,13 +17,13 @@
       <div class="panes-separator" id="panes-separator"></div>
       <div v-show="textContent" id="tlayout">
         <div id="lhandle" class="handle">
-          <div class="handle-button">
+          <div class="handle-button" v-show="hasPrev">
             <icon class="icon" name="chevron-left"></icon>
           </div>
         </div>
         <div class="right-pane" id="right-pane"></div>
         <div id="rhandle" class="handle">
-          <div class="handle-button">
+          <div class="handle-button" v-show="hasNext">
             <icon class="icon" name="chevron-right"></icon>
           </div>
         </div>
@@ -54,7 +54,8 @@
         target: target,
         open: false,
         active: false,
-        lhandle: true
+        lhandle: true,
+        rightSibling: null
       }
     },
     watch: {
@@ -85,6 +86,12 @@
         } else {
           return false
         }
+      },
+      hasNext () {
+        return this.$store.state.currentItem.hasNext
+      },
+      hasPrev () {
+        return this.$store.state.currentItem.hasPrev
       }
     },
     mounted: function () {
@@ -133,6 +140,10 @@
     width: 100%;
     background: #fff;
   }
+  .right-pane {
+    max-width: 620px;
+    min-width: 500px;
+  }
   #tlayout {
     background: #fff;
     min-height: 100%;
@@ -176,10 +187,6 @@
     width: 250px;
     background: #fff;
   }
-  .right-pane {
-    max-width: 600px;
-    min-width: 500px;
-  }
   .panes-separator {
     width: 11px;
     background: #eee;
@@ -218,16 +225,18 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
+    color: #ccf;
+    margin-left: 9px;
   }
   .handle {
-    width:40px;
+    width:50px;
     align-items: center;
     flex: auto;
     display: flex;
   }
   #lhandle {
     height: 100%;
-    width: 40px;
+    min-width: 50px;
     background: #fff;
   }
 </style>
