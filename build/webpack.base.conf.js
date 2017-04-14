@@ -26,15 +26,15 @@ module.exports = {
       '@': resolve('src'),
     }
   },
-  plugins: [
+/*  plugins: [
     new GoogleFontsPlugin({
       fonts: [
         { family: "Nunito" },
         { family: "Nunito Sans" }
       ]
-      /* ...options */
+      /!* ...options *!/
     })
-  ],
+  ],*/
   module: {
     rules: [
       {

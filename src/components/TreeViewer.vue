@@ -5,7 +5,6 @@
         <ul id="demo">
           <item
             class="item"
-            :top="true"
             :showContentFlag="true"
             :model="data"
             :textItems="text"
@@ -16,16 +15,18 @@
         </ul>
       </div>
       <div class="panes-separator" id="panes-separator"></div>
-      <div style="height:100%">
-      <table v-show="textContent" id="tlayout">
-        <tr>
-          <td><div id="lhandle"></div></td>
-          <td>
-            <div id="hshim"></div>
-            <div class="right-pane" id="right-pane"></div>
-          </td>
-        </tr>
-      </table>
+      <div v-show="textContent" id="tlayout">
+        <div id="lhandle" class="handle">
+          <div class="handle-button">
+            <icon class="icon" name="chevron-left"></icon>
+          </div>
+        </div>
+        <div class="right-pane" id="right-pane"></div>
+        <div id="rhandle" class="handle">
+          <div class="handle-button">
+            <icon class="icon" name="chevron-right"></icon>
+          </div>
+        </div>
       </div>
       <div v-show="iframeContent" style='min-height:100%' id="vpane"></div>
     </div>
@@ -129,27 +130,23 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #vpane {
+    width: 100%;
     background: #fff;
   }
   #tlayout {
     background: #fff;
+    min-height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
   }
   .tlayout TD {
     padding: 0
   }
-  .first-item{
-    font-size: 30px;
-  }
+
   .treeviewer{
     height: 100%
-  }
-  #lhandle {
-    height: 100%;
-    width: 40px;
-    background: #fff;
-    float:left;
   }
   #hshim {
     height: 10px;
@@ -167,17 +164,14 @@
     display: inline-block;
     margin: 0 10px;
   }
-
   a {
     color: #42b983;
   }
-
   .panes-container {
     display: flex;
     width: 100%;
     overflow: hidden;
   }
-
   .left-pane {
     width: 250px;
     background: #fff;
@@ -186,7 +180,6 @@
     max-width: 600px;
     min-width: 500px;
   }
-
   .panes-separator {
     width: 11px;
     background: #eee;
@@ -196,12 +189,10 @@
     background-repeat: no-repeat;
     background-position: 50%;
   }
-
   .right-pane {
     flex: auto;
     background: #fff;
   }
-
   .panes-container,
   .panes-separator,
   .left-pane,
@@ -217,6 +208,26 @@
   p {
     line-height:1.3em;
   }
-
-
+  .handle-button {
+    height:20px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .handle {
+    width:40px;
+    align-items: center;
+    flex: auto;
+    display: flex;
+  }
+  #lhandle {
+    height: 100%;
+    width: 40px;
+    background: #fff;
+  }
 </style>

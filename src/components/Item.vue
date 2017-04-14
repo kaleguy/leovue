@@ -3,9 +3,11 @@
     <div
       :class="{bold: isFolder, active: active}"
       @click="toggle">
-      <span v-if="isFolder">
-        <div class="arrow" v-bind:class="{arrowdown: isOpen, topItemIcon: top}">▶</div>
-      </span>
+      <div v-bind:class="{'icon-bracket': top}"
+           style="display:inline-block"
+           v-if="isFolder">
+        <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
+      </div>
       <span v-bind:class="{topItem: top}">{{vtitle}}</span>
     </div>
     <div v-show="inline"  :id="'item-' + model.id" class="inline"></div>
@@ -299,12 +301,19 @@ export default {
     padding-left: 20px;
     margin-right: -10px;
   }
+  .icon-bracket {
+    display:inline-block;
+    height: 100%;
+    vertical-align: middle;
+    padding-bottom: 8px;
+  }
   .arrow {
     -webkit-transition: all .1s ease;
     transition: all .1s ease;
     text-align: center;
     display: inline-block;
     width: 20px;
+    height: 20px;
   }
   .arrowdown {
     -webkit-transform: rotate(90deg);

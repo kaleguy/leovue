@@ -64,7 +64,7 @@
 &lt;style&gt;
 H1 {margin: 0}
 .cls-1{font-size:172px;stroke:#000;stroke-width:14px;}
-.cls-1,.cls-2{stroke-miterlimit:10;font-family:Nunito Sans;} 
+.cls-1,.cls-2{stroke-miterlimit:10;font-family:Verdana;} 
 .cls-2{font-size:70px;fill:#f2f2f2;stroke:gray;}
 .cls-3{letter-spacing:-0.02em;}
 .cls-4{letter-spacing:-0.02em;}
@@ -72,7 +72,7 @@ H1 {margin: 0}
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
 &lt;text class="cls-1" transform="translate(35 156.2)"&gt;LEO&lt;/text&gt;
-&lt;text class="cls-2" transform="translate(90 208)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(88 208)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
