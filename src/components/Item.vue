@@ -11,11 +11,11 @@
       <span v-bind:class="{topItem: top}">{{vtitle}}</span>
     </div>
     <div v-show="inline"
-         v-bind:ref="'item-' + model.id"
          :id="'item-' + model.id"
          class="inline"></div>
     <ul style="display:none" v-if="isFolder">
       <item
+        :data-id="id"
         class="item"
         v-for="model in model.children"
           :model="model"
@@ -248,6 +248,9 @@ export default {
       currentNode.active = true
       this.showContent()
       var routeName = this.$route.name
+      if (routeName === 'Top') {
+        routeName = 'Node'
+      }
       router.push({name: routeName, params: { id: this.model.id }})
       try {
         this.nextSibling = this.$el.nextElementSibling.nextElementSibling // next will always be hshim, need next.next
@@ -268,6 +271,9 @@ export default {
         hasPrev
       }
       this.$store.commit('CURRENT_ITEM', currentItem)
+      const myObject = this.$refs['item-7']
+      const foo = document.getElementById('xx-7')
+      console.log(myObject, foo)
     },
     showContent: function () {
       if (!this.targetEl) {
@@ -329,12 +335,19 @@ export default {
     vertical-align: middle;
     padding-bottom: 8px;
   }
+  .icon-bracket .arrow {
+    display:inline-block;
+    height: 100%;
+    vertical-align: middle;
+    padding-bottom: 8px;
+    width: 20px;
+  }
   .arrow {
     -webkit-transition: all .1s ease;
     transition: all .1s ease;
     text-align: center;
     display: inline-block;
-    width: 20px;
+    width: 13px;
     height: 20px;
   }
   .arrowdown {

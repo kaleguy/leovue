@@ -1,32 +1,20 @@
 <template>
-  <div class="accordionviewer">
-    <div class="panes-container">
-      <div class="center-pane" id="center-pane">
-        <ul>
-          <item
-            class="item"
-            :top="true"
-            :showContentFlag="true"
-            :model="data"
-            :textItems="text"
-            :open="false">
-          </item>
-        </ul>
-      </div>
-    </div>
+  <div class="d3viewer">
+   <h1>TEST</h1>
   </div>
 </template>
 
 <script>
-  import Item from './Item'
+  import D3Tree from 'vued3tree'
+
+  console.log(D3Tree)
 
   let target = {el: null}
   export default {
-    name: 'accordionviewer',
+    name: 'd3viewer',
     props: {
     },
     components: {
-      item: Item
     },
     data: function () {
       return {

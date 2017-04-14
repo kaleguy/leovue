@@ -7,6 +7,7 @@
             class="item"
             :showContentFlag="true"
             :model="data"
+            :top="true"
             :textItems="text"
             :open="true"
             :targetEl="target.el"

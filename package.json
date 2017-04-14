@@ -20,6 +20,7 @@
     "vue": "^2.2.6",
     "vue-awesome": "^2.2.3",
     "vue-router": "^2.2.0",
+    "vued3tree": "0.0.2",
     "vuex": "^2.2.1"
   },
   "devDependencies": {
