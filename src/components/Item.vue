@@ -159,6 +159,7 @@ function getLanguage (text) {
   return language
 }
 
+/*
 function getParentEls (arr, el) {
   if (el.parentElement) {
     arr.push(el.parentElement)
@@ -167,6 +168,7 @@ function getParentEls (arr, el) {
     return arr
   }
 }
+*/
 
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
@@ -300,6 +302,7 @@ export default {
     }
   },
   watch: {
+/*
     '$route': {
       handler: function (val, oldVal, changed) {
         if (!this.$el) {
@@ -316,6 +319,7 @@ export default {
       },
       immediate: true
     }
+*/
   },
   mounted () {
 /*

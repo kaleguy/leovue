@@ -132,6 +132,11 @@
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
       this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
+    },
+    updated () {
+      const selectedItem = this.$route.params.id
+      var reds = JSON.search(this.data, '//*[id="' + selectedItem + '"]/ancestor::*')
+      console.log(selectedItem, reds)
     }
   }
 </script>
