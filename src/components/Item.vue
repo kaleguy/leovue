@@ -1,21 +1,20 @@
 <template>
-  <li>
+  <li :x-id="model.id">
     <div
-      :class="{bold: isFolder, active: active}"
+      :class="{bold: isFolder, active: active, topItem: top}"
       @click="toggle">
       <div v-bind:class="{'icon-bracket': top}"
-           style="display:inline-block"
+           style="display:inline-block; padding-left:3px; padding-right:3px;"
            v-if="isFolder">
         <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
       </div>
-      <span v-bind:class="{topItem: top}">{{vtitle}}</span>
+      <span>{{vtitle}}</span>
     </div>
     <div v-show="inline"
          :id="'item-' + model.id"
          class="inline"></div>
     <ul style="display:none" v-if="isFolder">
       <item
-        :data-id="id"
         class="item"
         v-for="model in model.children"
           :model="model"
@@ -24,7 +23,9 @@
           :vTargetEl="vTargetEl"
           :targetEl="targetEl">
       </item>
-      <div v-show="inline" class="hshim"></div>
+      <div v-show="inline"
+           :id="'item-' + model.id"
+           class="hshim"></div>
     </ul>
   </li>
 </template>
@@ -158,6 +159,15 @@ function getLanguage (text) {
   return language
 }
 
+function getParentEls (arr, el) {
+  if (el.parentElement) {
+    arr.push(el.parentElement)
+    getParentEls(arr, el.parentElement)
+  } else {
+    return arr
+  }
+}
+
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
@@ -271,9 +281,6 @@ export default {
         hasPrev
       }
       this.$store.commit('CURRENT_ITEM', currentItem)
-      const myObject = this.$refs['item-7']
-      const foo = document.getElementById('xx-7')
-      console.log(myObject, foo)
     },
     showContent: function () {
       if (!this.targetEl) {
@@ -292,10 +299,26 @@ export default {
       }
     }
   },
-  mounted () {
-    if (this.model.sel) {
-      // this.openFlag = true
+  watch: {
+    '$route': {
+      handler: function (val, oldVal, changed) {
+        if (!this.$el) {
+          return
+        }
+        const id = val.params.id
+        if (!oldVal) {
+          oldVal = {params: {}}
+        }
+        const oid = oldVal.params.id
+        const parentEls = getParentEls([], this.$el)
+        if (!parentEls) { return }
+        console.log('ID', id, oldVal.params.id, oid, parentEls)
+      },
+      immediate: true
     }
+  },
+  mounted () {
+/*
     if (this.model.sel === 2) {
       currentNode.active = false
       currentNode = this
@@ -307,6 +330,7 @@ export default {
       currentNode = this
       this.active = true
     }
+*/
   },
   updated () {
     if (this.showContentFlag && this.model.t && !this.initialized) {
@@ -321,8 +345,11 @@ export default {
 
 
 <style scoped>
-  .topItem {
+  .topItem SPAN {
     font-size: 30px;
+  }
+  .topItem {
+    margin-bottom: 10px;
   }
   .topItemIcon {
     vertical-align: top;
@@ -334,12 +361,13 @@ export default {
     height: 100%;
     vertical-align: middle;
     padding-bottom: 8px;
+    padding-left: 0;
   }
   .icon-bracket .arrow {
     display:inline-block;
     height: 100%;
     vertical-align: middle;
-    padding-bottom: 8px;
+    padding-bottom: 2px;
     width: 20px;
   }
   .arrow {
@@ -347,7 +375,7 @@ export default {
     transition: all .1s ease;
     text-align: center;
     display: inline-block;
-    width: 13px;
+    width: 11px;
     height: 20px;
   }
   .arrowdown {
