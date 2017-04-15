@@ -82,11 +82,6 @@
         },
         immediate: true
       } */
-      '$store.initializedData': {
-        handler: function () {
-          console.log('hi')
-        }
-      }
     },
     computed: {
       data () {

@@ -339,6 +339,10 @@ export default {
     }
   },
   updated () {
+    if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
+      this.$store.commit('INIT') // set that current item has been shown
+      this.showContent()
+    }
   }
 }
 </script>

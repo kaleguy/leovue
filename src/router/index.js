@@ -9,7 +9,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', redirect: '/t/0' },
+    { path: '/', redirect: '/t/1' },
     {
       path: '/t/:id',
       component: Dashboard,

@@ -25,14 +25,6 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-// set all parent els of given el to @sel = 1
-/*function setSel(el){
-  let parent = el.parentElement;
-  if (parent){
-    parent.setAttribute('sel', 1)
-    setSel(parent)
-  }
-}*/
 function getLeoJSON (filename, id) {
   var p = new Promise((resolve, reject) => {
     loadDoc('./static/' + filename + '.leo', 'Text')
@@ -65,19 +57,8 @@ function transformLeoXML (xmlString, id) {
     }
     const vnodes = xml.getElementsByTagName('v')
     for (let i = 0; i < vnodes.length; i++) {
-      vnodes[i].setAttribute('id', i)
-      vnodes[i].setAttribute('sel', 0)
+      vnodes[i].setAttribute('id', i + 1)
     }
-    // see if there is a selected element (bookmarked node)
-    // if so, mark it and its parent nodes
-/*
-    let el = xml.getElementById(id)
-    if (el) {
-      el.setAttribute('sel', 2)
-      setSel(el)
-    }
-*/
-    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
     var scripts = document.getElementsByTagName('script'),
       str     = '',
       i       = 0,

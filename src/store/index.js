@@ -25,7 +25,6 @@ function setData (context, ldata, filename) {
     return acc
   }, [])
   openItemIds.push(selectedId)
-  console.log(openItemIds)
   context.commit('OPEN_ITEMS', {openItemIds})
   const currentItem = {
     id: selectedId
@@ -65,7 +64,6 @@ export default new Vuex.Store({
       state.initialized = false
     },
     CONTENT_PANE (state, o) {
-      // debugger
       state.contentPane = o.type
     },
     VIEW_TYPE (state, o) {
