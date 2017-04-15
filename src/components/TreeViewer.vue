@@ -1,15 +1,13 @@
 <template>
   <div class="treeviewer">
     <div class="panes-container">
-      <div class="left-pane" id="left-pane">
+      <div class="left-pane unselectable" id="left-pane">
         <ul id="demo">
           <item
             class="item"
-            :showContentFlag="true"
             :model="data"
             :top="true"
             :textItems="text"
-            :open="true"
             :targetEl="target.el"
             :vTargetEl="target.v">
           </item>
@@ -29,7 +27,7 @@
           </div>
         </div>
       </div>
-      <div v-show="iframeContent" style='min-height:100%' id="vpane"></div>
+      <div v-show="iframeContent" style="min-height:100%; display:flex; background:#fff" id="vpane"></div>
     </div>
   </div>
 </template>
@@ -60,11 +58,34 @@
       }
     },
     watch: {
+/*
       '$route': {
         handler: function (val, oldVal, changed) {
           this.id = val.params.id
+          // if (this.$store.state.initialized) { return }
+          const selectedId = this.$route.params.id
+          // return if already selected
+          if (selectedId === this.$store.state.currentItem.id) { return }
+          const openItems = JSON.search(this.data, '//!*[id="' + selectedId + '"]/ancestor::*')
+          if (!openItems) { return }
+          const openItemIds = openItems.reduce((acc, o) => {
+            acc.push(o.id)
+            return acc
+          }, [])
+          // debugger
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
+          const currentItem = {
+            id: selectedId
+          }
+          this.$store.commit('CURRENT_ITEM', currentItem)
+          console.log('ci', openItemIds, selectedId)
         },
         immediate: true
+      } */
+      '$store.initializedData': {
+        handler: function () {
+          console.log('hi')
+        }
       }
     },
     computed: {
@@ -134,16 +155,13 @@
       this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
     },
     updated () {
-      const selectedItem = this.$route.params.id
-      var reds = JSON.search(this.data, '//*[id="' + selectedItem + '"]/ancestor::*')
-      console.log(selectedItem, reds)
     }
   }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #vpane {
-    width: 100%;
+    width: 100%;”
     background: #fff;
   }
   .right-pane {
@@ -244,5 +262,17 @@
     height: 100%;
     min-width: 50px;
     background: #fff;
+  }
+  .unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
   }
 </style>

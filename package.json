@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.16.0",
     "highlight.js": "^9.10.0",
+    "lodash.pull": "^4.1.0",
     "marked": "^0.3.6",
     "velocity-animate": "^1.5.0",
     "vue": "^2.2.6",

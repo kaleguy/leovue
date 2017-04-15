@@ -4,7 +4,9 @@
       :class="{bold: isFolder, active: active, topItem: top}"
       @click="toggle">
       <div v-bind:class="{'icon-bracket': top}"
-           style="display:inline-block; padding-left:3px; padding-right:3px;"
+           style="display:inline-block;
+           padding-left:3px;
+           padding-right:3px;"
            v-if="isFolder">
         <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
       </div>
@@ -13,7 +15,7 @@
     <div v-show="inline"
          :id="'item-' + model.id"
          class="inline"></div>
-    <ul style="display:none" v-if="isFolder">
+    <ul v-show="isOpen" v-if="isFolder">
       <item
         class="item"
         v-for="model in model.children"
@@ -39,7 +41,7 @@ const md = require('markdown-it')({
 })
 
 const hljs = require('highlight.js')
-let currentNode = null
+// let currentNode = null
 function showText (title, panel, text) {
   if (!text) {
     panel.innerHTML = ''
@@ -179,9 +181,8 @@ import Velocity from 'velocity-animate'
 export default {
   name: 'item',
   props: {
-    open: Boolean,
     model: Object,
-    showContentFlag: Boolean,
+    showContentFlag: Boolean, // force show of content, not waiting for click
     targetEl: Element,
     vTargetEl: Element,
     textItems: Object,
@@ -191,7 +192,6 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      active: false,
       inline: false
     }
   },
@@ -200,10 +200,14 @@ export default {
       return this.model.children && this.model.children.length
     },
     isOpen: function () {
-      return this.open || this.openFlag
+      const ids = this.$store.state.openItemIds
+      let open = true
+      if (ids.indexOf(this.model.id) === -1) { open = false }
+      return open
     },
-    isActive: function () {
-      return this.active
+    active: function () {
+      if (!this.model) { return }
+      return this.$store.state.currentItem.id === this.model.id
     },
     vtitle: function () {
       const re = /^\[(.*?)\]\((.*?)\)$/
@@ -229,19 +233,35 @@ export default {
   },
   methods: {
     toggle: function () {
-      let duration = 100
+      // toggle the tree node
+      let duration = 500
       const easing = 'easeOutExpo'
-      this.reset = false
-      this.openFlag = !this.openFlag
+      this.reset = false // TODO: remove
+      // toggle the open/close state of the item
+      let openItemIds = this.$store.state.openItemIds.slice(0)
+      if (!this.isOpen) {
+        openItemIds.push(this.model.id)
+      } else {
+        const a = []
+        openItemIds.forEach((id) => {
+          if (id === this.model.id) {
+          } else {
+            a.push(id)
+          }
+        })
+        openItemIds = a
+      }
+      this.$store.commit('OPEN_ITEMS', {openItemIds})
       if (this.isFolder) {
         const ul = this.$el.getElementsByTagName('UL')[0]
         ul.style.display = 'block'
         if (this.isOpen) {
-          Velocity(ul, 'slideDown', {duration: duration, easing: easing})
+          Velocity(ul, 'slideDown', {duration, easing})
         } else {
-          Velocity(ul, 'slideUp', {duration: duration, easing: easing})
+          Velocity(ul, 'slideUp', {duration, easing})
         }
       }
+      // toggle inline content if in inline mode
       if (!this.targetEl) {
         this.inline = true
         duration = 300
@@ -253,11 +273,13 @@ export default {
           Velocity(il, 'slideUp', {duration: duration, easing: easing})
         }
       }
+/*
       if (currentNode) {
         currentNode.active = false
       }
       currentNode = this
       currentNode.active = true
+*/
       this.showContent()
       var routeName = this.$route.name
       if (routeName === 'Top') {
@@ -279,6 +301,7 @@ export default {
         hasPrev = true
       }
       const currentItem = {
+        id: this.model.id,
         hasNext,
         hasPrev
       }
@@ -287,7 +310,6 @@ export default {
     showContent: function () {
       if (!this.targetEl) {
         const contentEl = document.getElementById('item-' + this.model.id)
-        console.log('TESTX', contentEl, this.textItems[this.model.t])
         showText(this.model.name, contentEl, this.textItems[this.model.t])
         return
       }
@@ -305,42 +327,18 @@ export default {
 /*
     '$route': {
       handler: function (val, oldVal, changed) {
-        if (!this.$el) {
-          return
-        }
-        const id = val.params.id
-        if (!oldVal) {
-          oldVal = {params: {}}
-        }
-        const oid = oldVal.params.id
-        const parentEls = getParentEls([], this.$el)
-        if (!parentEls) { return }
-        console.log('ID', id, oldVal.params.id, oid, parentEls)
       },
       immediate: true
     }
 */
   },
   mounted () {
-/*
-    if (this.model.sel === 2) {
-      currentNode.active = false
-      currentNode = this
-      this.active = true
-      this.$store.commit('INIT')
+    if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
+      this.$store.commit('INIT') // set that current item has been shown
       this.showContent()
     }
-    if (!currentNode) {
-      currentNode = this
-      this.active = true
-    }
-*/
   },
   updated () {
-    if (this.showContentFlag && this.model.t && !this.initialized) {
-      this.$store.commit('INIT')
-      this.showContent()
-    }
   }
 }
 </script>
@@ -407,7 +405,6 @@ export default {
   }
   .active {
     background: #81ff00;
-    border: 1px solid #81dd00;
     max-width: 762px;
   }
   .activeb {

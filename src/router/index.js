@@ -9,15 +9,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      component: Dashboard,
-      children: [{
-        name: 'Top',
-        path: '',
-        component: TreeViewer
-      }]
-    },
+    { path: '/', redirect: '/t/0' },
     {
       path: '/t/:id',
       component: Dashboard,

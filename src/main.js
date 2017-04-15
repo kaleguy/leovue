@@ -10,7 +10,7 @@ import 'vue-awesome/icons/arrow-left'
 import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
-import 'vue-awesome/icons/chevron-right'
+import 'vue-awesome/icons/'
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
