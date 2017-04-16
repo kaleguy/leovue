@@ -16,13 +16,13 @@
       <div class="panes-separator" id="panes-separator"></div>
       <div v-show="textContent" id="tlayout">
         <div id="lhandle" class="handle">
-          <div class="handle-button" v-show="hasPrev">
+          <div class="handle-button" v-show="hasPrev" @click="goPrev">
             <icon class="icon" name="chevron-left"></icon>
           </div>
         </div>
         <div class="right-pane" id="right-pane"></div>
         <div id="rhandle" class="handle">
-          <div class="handle-button" v-show="hasNext">
+          <div class="handle-button" v-show="hasNext" @click="goNext">
             <icon class="icon" name="chevron-right"></icon>
           </div>
         </div>
@@ -64,6 +64,16 @@
         immediate: true
       }
     },
+    methods: {
+      goNext () {
+        const next = this.$store.state.currentItem.next
+        console.log(next)
+      },
+      goPrev () {
+        const prev = this.$store.state.currentItem.next
+        console.log(prev)
+      }
+    },
     computed: {
       data () {
         return this.$store.state.leodata
@@ -86,10 +96,10 @@
         }
       },
       hasNext () {
-        return this.$store.state.currentItem.hasNext
+        return this.$store.state.currentItem.next
       },
       hasPrev () {
-        return this.$store.state.currentItem.hasPrev
+        return this.$store.state.currentItem.prev
       }
     },
     mounted: function () {

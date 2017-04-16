@@ -43,8 +43,8 @@ export default new Vuex.Store({
     viewType: 'tree',
     currentItem: {
       id: 0,
-      hasNext: false,
-      hasPrev: false
+      next: 0,
+      prev: 0
     },
     openItemIds: []
   },

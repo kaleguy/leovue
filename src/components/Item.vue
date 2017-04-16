@@ -230,10 +230,6 @@ export default {
     initialized () {
       return this.$store.state.initialized
     }
-    // ,
-    // inline () {
-      // return ((!this.targetEl) && this.isOpen)
-    // }
 
   },
   methods: {
@@ -283,37 +279,28 @@ export default {
           Velocity(il, 'slideUp', {duration: duration, easing: easing})
         }
       }
-/*
-      if (currentNode) {
-        currentNode.active = false
-      }
-      currentNode = this
-      currentNode.active = true
-*/
       this.showContent()
       var routeName = this.$route.name
       if (routeName === 'Top') {
         routeName = 'Node'
       }
       router.push({name: routeName, params: { id: this.model.id }})
-      try {
-        this.nextSibling = this.$el.nextElementSibling.nextElementSibling // next will always be hshim, need next.next
-        this.prevSibling = this.$el.previousElementSibling // next will always be hshim, need next.next
-      } catch (e) {
 
+      // TODO: replace this with defiant.js
+      const nextSibling = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
+      const prevSibling = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::*')
+      let next = 0
+      let prev = 0
+      if (nextSibling[0]) {
+        next = nextSibling[0].id
       }
-      let hasNext = false
-      let hasPrev = false
-      if (this.nextSibling) {
-        hasNext = true
-      }
-      if (this.prevSibling) {
-        hasPrev = true
+      if (prevSibling[0]) {
+        prev = prevSibling[0].id
       }
       const currentItem = {
         id: this.model.id,
-        hasNext,
-        hasPrev
+        next,
+        prev
       }
       this.$store.commit('CURRENT_ITEM', currentItem)
     },
