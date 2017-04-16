@@ -8,7 +8,7 @@
            padding-left:3px;
            padding-right:3px;"
            v-if="isFolder">
-        <div class="arrow" v-bind:class="{arrowdown: isOpen}">▶</div>
+        <div class="arrow" v-bind:class="{arrowdown: isOpenA}">▶</div>
       </div>
       <span>{{vtitle}}</span>
     </div>
@@ -193,7 +193,8 @@ export default {
     return {
       reset: true,
       openFlag: false,
-      inline: false
+      inline: false,
+      closearrow: false
     }
   },
   computed: {
@@ -205,6 +206,9 @@ export default {
       let open = true
       if (ids.indexOf(this.model.id) === -1) { open = false }
       return open
+    },
+    isOpenA: function () {
+      return this.isOpen && !this.closearrow
     },
     active: function () {
       if (!this.model) { return }
@@ -251,15 +255,20 @@ export default {
           }
         })
         openItemIds = a
+        this.closearrow = true
       }
-      this.$store.commit('OPEN_ITEMS', {openItemIds})
       if (this.isFolder) {
         const ul = this.$el.getElementsByTagName('UL')[0]
         ul.style.display = 'block'
-        if (this.isOpen) {
+        if (!this.isOpen) {
           Velocity(ul, 'slideDown', {duration, easing})
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
         } else {
-          Velocity(ul, 'slideUp', {duration, easing})
+          const me = this
+          Velocity(ul, 'slideUp', {duration, easing}).then(function (els) {
+            me.$store.commit('OPEN_ITEMS', {openItemIds})
+            me.closearrow = false
+          })
         }
       }
       // toggle inline content if in inline mode
