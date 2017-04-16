@@ -14,7 +14,8 @@
     </div>
     <div v-show="inline"
          :id="'item-' + model.id"
-         class="inline"></div>
+         class="inline">
+    </div>
     <ul v-show="isOpen" v-if="isFolder">
       <item
         class="item"
@@ -70,6 +71,7 @@ function showText (title, panel, text) {
     }
   }
   */
+
   // just plain text
   if (!language) {
     panel.innerHTML = `<div class="text">${text}</div>`
@@ -182,7 +184,6 @@ export default {
   name: 'item',
   props: {
     model: Object,
-    showContentFlag: Boolean, // force show of content, not waiting for click
     targetEl: Element,
     vTargetEl: Element,
     textItems: Object,
@@ -308,18 +309,29 @@ export default {
       this.$store.commit('CURRENT_ITEM', currentItem)
     },
     showContent: function () {
+      let targetEl = this.targetEl
+      let vTargetEl = this.vTargetEl
+      let inline = false
+      if (!targetEl) {
+        inline = true
+        targetEl = document.getElementById('item-' + this.model.id)
+        vTargetEl = targetEl
+      }
       if (!this.targetEl) {
-        const contentEl = document.getElementById('item-' + this.model.id)
-        showText(this.model.name, contentEl, this.textItems[this.model.t])
-        return
+        // const contentEl = document.getElementById('item-' + this.model.id)
+        // showText(this.model.name, contentEl, this.textItems[this.model.t])
+        // return
       }
       // test for presence of url in title, if so it is external content
       if (/^\[/.test(this.model.name)) {
         this.$store.commit('CONTENT_PANE', {type: 'site'})
-        return showSite(this.model.name, this.vTargetEl)
+        if (inline) {
+          vTargetEl.className = 'vinline'
+        }
+        return showSite(this.model.name, vTargetEl)
       } else {
         this.$store.commit('CONTENT_PANE', {type: 'text'})
-        showText(this.model.name, this.targetEl, this.textItems[this.model.t])
+        showText(this.model.name, targetEl, this.textItems[this.model.t])
       }
     }
   },
@@ -410,6 +422,7 @@ export default {
   .active {
     background: #81ff00;
     max-width: 762px;
+    border-radius: 4px;
   }
   .activeb {
     background: #81ff00;
@@ -424,7 +437,20 @@ export default {
     margin-top: 4px;
     margin-bottom: 16px;
     border:1px solid #ccc;
+    border-radius: 4px;
     // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
+  }
+  .vinline {
+    max-width: 700px;
+    white-space: normal;
+    padding:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+  // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
   }
   .hshim {
     height: 15px;

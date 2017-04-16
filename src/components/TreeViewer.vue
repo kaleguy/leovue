@@ -58,30 +58,11 @@
       }
     },
     watch: {
-/*
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
-          // if (this.$store.state.initialized) { return }
-          const selectedId = this.$route.params.id
-          // return if already selected
-          if (selectedId === this.$store.state.currentItem.id) { return }
-          const openItems = JSON.search(this.data, '//!*[id="' + selectedId + '"]/ancestor::*')
-          if (!openItems) { return }
-          const openItemIds = openItems.reduce((acc, o) => {
-            acc.push(o.id)
-            return acc
-          }, [])
-          // debugger
-          this.$store.commit('OPEN_ITEMS', {openItemIds})
-          const currentItem = {
-            id: selectedId
-          }
-          this.$store.commit('CURRENT_ITEM', currentItem)
-          console.log('ci', openItemIds, selectedId)
         },
         immediate: true
-      } */
+      }
     },
     computed: {
       data () {

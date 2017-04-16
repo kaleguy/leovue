@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="holder">
     <div class="header">
       Leo Viewer
@@ -10,6 +11,8 @@
       <icon class="icon" name="arrow-left"></icon>
     </div>
 
+
+  </div>
     <div id="menu" class="menu">
       <div class="menu-header">View Type</div>
       <div class="menu-item"
@@ -33,7 +36,6 @@
       </div>
       <div class="menu-separator"></div>
     </div>
-
   </div>
 </template>
 
@@ -88,6 +90,8 @@
   .holder
     padding: 0
     margin: 0
+    position: fixed
+    width: 100%
   .icon-box
     width: 20px
     margin-left: 20px
@@ -106,7 +110,8 @@
     white-space: nowrap
     cursor: pointer
   .menu
-    position: absolute
+    position: fixed
+    top: 27px
     overflow: hidden
     background: #ccc
     width: 0

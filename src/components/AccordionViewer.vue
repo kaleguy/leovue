@@ -6,7 +6,6 @@
           <item
             class="item"
             :top="true"
-            :showContentFlag="true"
             :model="data"
             :textItems="text"
             :open="false">

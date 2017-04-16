@@ -1,7 +1,9 @@
 <template>
   <div class="dashboard">
     <appheader/>
-    <router-view :id="$route.params.id"></router-view>
+    <div id="main">
+      <router-view :id="$route.params.id"></router-view>
+    </div>
   </div>
 </template>
 
@@ -42,7 +44,9 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-
+#main {
+  padding-top: 20px;
+}
 a {
   color: #42b983;
 }
