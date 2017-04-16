@@ -448,6 +448,8 @@ export default {
     padding-bottom: 0;
     margin-top: 4px;
     margin-bottom: 16px;
+    height: 600px;
+    width: 760px;
     border:1px solid #ccc;
     border-radius: 4px;
   // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)

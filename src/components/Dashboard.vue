@@ -46,6 +46,7 @@ li {
 }
 #main {
   padding-top: 20px;
+  height: 100%;
 }
 a {
   color: #42b983;
