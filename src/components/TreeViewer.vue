@@ -71,7 +71,7 @@
         this.resetCurrentItem(next)
       },
       goPrev () {
-        const prev = this.$store.state.currentItem.next
+        const prev = this.$store.state.currentItem.prev
         this.resetCurrentItem(prev)
       },
       resetCurrentItem (id) {

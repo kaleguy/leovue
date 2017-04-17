@@ -177,7 +177,6 @@ function getParentEls (arr, el) {
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
-import router from '../router'
 import axios from 'axios'
 import Velocity from 'velocity-animate'
 export default {
@@ -280,11 +279,6 @@ export default {
         }
       }
       this.showContent()
-      var routeName = this.$route.name
-      if (routeName === 'Top') {
-        routeName = 'Node'
-      }
-      router.push({name: routeName, params: { id: this.model.id }})
       const currentItem = {
         id: this.model.id
       }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {getLeoJSON, transformLeoXML} from '../services/leo.js'
+import router from '../router'
 
 Vue.use(Vuex)
 
@@ -12,8 +13,7 @@ function setData (context, ldata, filename) {
     text: ldata.textItems,
     filename: filename
   })
-  // if there is a route, set the open nodes and current item
-  // not using $route because doesn't seem accessible in store
+  // TODO: change to context.route
   const hash = window.location.hash
   const match = hash.match(/(\d+)/)
   if (!match) { return }
@@ -31,7 +31,6 @@ function setData (context, ldata, filename) {
   }
   context.commit('CURRENT_ITEM', currentItem)
 }
-
 export default new Vuex.Store({
   state: {
     leotext: {},
@@ -71,16 +70,20 @@ export default new Vuex.Store({
     },
     CURRENT_ITEM (state, o) {
       const id = o.id
-      const nextSibling = JSON.search(state.leodata, '//*[id="' + id + '"]/following-sibling::*')
-      const prevSibling = JSON.search(state.leodata, '//*[id="' + id + '"]/preceding-sibling::*')
+      const nextSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/following-sibling::*')
+      const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
+      // console.log('AA', id, nextSibling, prevSibling)
       let next = 0
       let prev = 0
       if (nextSibling[0]) {
         next = nextSibling[0].id
       }
       if (prevSibling[0]) {
-        prev = prevSibling[0].id
+        // console.log('PP', id, next, nextSibling, prevSibling[0])
+        prev = prevSibling[prevSibling.length - 1].id
       }
+      console.log('prev = ', prev, prevSibling)
+      // console.log('xx', next, prev)
       if (id - prev !== 1) {
         prev = 0
       }
@@ -90,6 +93,11 @@ export default new Vuex.Store({
       state.currentItem.id = id
       state.currentItem.prev = prev
       state.currentItem.next = next
+      var routeName = state.route.name
+      if (routeName === 'Top') {
+        routeName = 'Node'
+      }
+      router.replace({name: routeName, params: { id }})
     },
     OPEN_ITEMS (state, o) {
       const ids = state.openItemIds
