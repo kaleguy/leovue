@@ -70,9 +70,26 @@ export default new Vuex.Store({
       state.viewType = o.type
     },
     CURRENT_ITEM (state, o) {
-      for (let k in o) {
-        state.currentItem[k] = o[k]
+      const id = o.id
+      const nextSibling = JSON.search(state.leodata, '//*[id="' + id + '"]/following-sibling::*')
+      const prevSibling = JSON.search(state.leodata, '//*[id="' + id + '"]/preceding-sibling::*')
+      let next = 0
+      let prev = 0
+      if (nextSibling[0]) {
+        next = nextSibling[0].id
       }
+      if (prevSibling[0]) {
+        prev = prevSibling[0].id
+      }
+      if (id - prev !== 1) {
+        prev = 0
+      }
+      if (next - id !== 1) {
+        next = 0
+      }
+      state.currentItem.id = id
+      state.currentItem.prev = prev
+      state.currentItem.next = next
     },
     OPEN_ITEMS (state, o) {
       const ids = state.openItemIds

@@ -285,22 +285,8 @@ export default {
         routeName = 'Node'
       }
       router.push({name: routeName, params: { id: this.model.id }})
-
-      // TODO: replace this with defiant.js
-      const nextSibling = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
-      const prevSibling = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::*')
-      let next = 0
-      let prev = 0
-      if (nextSibling[0]) {
-        next = nextSibling[0].id
-      }
-      if (prevSibling[0]) {
-        prev = prevSibling[0].id
-      }
       const currentItem = {
-        id: this.model.id,
-        next,
-        prev
+        id: this.model.id
       }
       this.$store.commit('CURRENT_ITEM', currentItem)
     },

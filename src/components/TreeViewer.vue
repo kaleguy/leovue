@@ -34,6 +34,7 @@
 
 <script>
   import Item from './Item'
+  import router from '../router'
 
   let leftPane
   let vPane
@@ -67,11 +68,17 @@
     methods: {
       goNext () {
         const next = this.$store.state.currentItem.next
-        console.log(next)
+        this.resetCurrentItem(next)
       },
       goPrev () {
         const prev = this.$store.state.currentItem.next
-        console.log(prev)
+        this.resetCurrentItem(prev)
+      },
+      resetCurrentItem (id) {
+        router.replace('/t/' + id)
+        const currentItem = { id }
+        this.$store.commit('RESET')
+        this.$store.commit('CURRENT_ITEM', currentItem)
       }
     },
     computed: {
