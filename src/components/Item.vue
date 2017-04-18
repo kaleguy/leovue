@@ -10,7 +10,7 @@
            v-if="isFolder">
         <div class="arrow" v-bind:class="{arrowdown: isOpenA}">▶</div>
       </div>
-      <span>{{vtitle}}</span>
+      <span class="otitle">{{vtitle}}</span>
     </div>
     <div v-show="inline"
          :id="'item-' + model.id"
@@ -120,7 +120,7 @@ function getFileExtension (filename) {
   return ext
 }
 
-function showSite (title, panel) {
+function showSite (title, panel, tpanel) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
   const url = match[2]
@@ -134,7 +134,9 @@ function showSite (title, panel) {
         let html = md.render(response.data)
         html = '<div class="md">' + html + '</div>'
         html = replaceRelUrls(html, base)
-        panel.innerHTML = html
+        showText(title, tpanel, html)
+        this.$store.commit('CONTENT_PANE', {type: 'text'})
+        // panel.innerHTML = html
       })
       .catch(function (error) {
         console.log(error)
@@ -151,6 +153,7 @@ function showSite (title, panel) {
   panel.innerHTML = iframeHTML
   let iframe = document.getElementsByTagName('iframe')[0]
   iframe.src = url
+  this.$store.commit('CONTENT_PANE', {type: 'site'})
 }
 
 function getLanguage (text) {
@@ -278,7 +281,7 @@ export default {
           Velocity(il, 'slideUp', {duration: duration, easing: easing})
         }
       }
-      this.showContent()
+      // this.showContent()
       const currentItem = {
         id: this.model.id
       }
@@ -300,11 +303,10 @@ export default {
       }
       // test for presence of url in title, if so it is external content
       if (/^\[/.test(this.model.name)) {
-        this.$store.commit('CONTENT_PANE', {type: 'site'})
         if (inline) {
           vTargetEl.className = 'vinline'
         }
-        return showSite(this.model.name, vTargetEl)
+        return showSite(this.model.name, vTargetEl, targetEl)
       } else {
         this.$store.commit('CONTENT_PANE', {type: 'text'})
         showText(this.model.name, targetEl, this.textItems[this.model.t])
@@ -385,12 +387,15 @@ export default {
   }
   ul {
     padding-left: 1em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     list-style-type: none;
+    margin-bottom: 8px;
   }
   li {
     white-space: nowrap;
     min-width: 760px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
   li > div {
     padding-left:4px;
@@ -398,7 +403,6 @@ export default {
   .active {
     background: #81ff00;
     max-width: 762px;
-    border-radius: 4px;
   }
   .activeb {
     background: #81ff00;
@@ -432,6 +436,9 @@ export default {
   }
   .hshim {
     height: 15px;
+  }
+  .otitle {
+    padding-left: 4px;
   }
 </style>
 

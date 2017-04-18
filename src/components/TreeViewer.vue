@@ -16,8 +16,11 @@
       <div class="panes-separator" id="panes-separator"></div>
       <div v-show="textContent" id="tlayout">
         <div id="lhandle" class="handle">
-          <div class="handle-button" v-show="hasPrev" @click="goPrev">
-            <icon class="icon" name="chevron-left"></icon>
+          <div class="handle-button"
+               v-show="hasPrev"
+               @click="goPrev">
+            <icon class="icon"
+                  name="chevron-left"></icon>
           </div>
         </div>
         <div class="right-pane" id="right-pane"></div>
@@ -176,9 +179,6 @@
   .treeviewer{
     height: 100%
   }
-  #hshim {
-    height: 10px;
-  }
   h1, h2 {
     font-weight: normal;
   }
@@ -213,10 +213,6 @@
     background-repeat: no-repeat;
     background-position: 50%;
   }
-  .right-pane {
-    flex: auto;
-    background: #fff;
-  }
   .panes-container,
   .panes-separator,
   .left-pane,
@@ -226,8 +222,10 @@
     min-height: 100%;
   }
   .right-pane {
+    flex: auto;
+    background: #fff;
     padding:0px;
-    padding-top:0px;
+    padding-top: 10px;
   }
   p {
     line-height:1.3em;

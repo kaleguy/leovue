@@ -45,7 +45,9 @@ export default new Vuex.Store({
       next: 0,
       prev: 0
     },
-    openItemIds: []
+    openItemIds: [],
+    history: [0],
+    historyIndex: 0
   },
   mutations: {
     LEO (state, o) {
@@ -72,18 +74,14 @@ export default new Vuex.Store({
       const id = o.id
       const nextSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/following-sibling::*')
       const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
-      // console.log('AA', id, nextSibling, prevSibling)
       let next = 0
       let prev = 0
       if (nextSibling[0]) {
         next = nextSibling[0].id
       }
       if (prevSibling[0]) {
-        // console.log('PP', id, next, nextSibling, prevSibling[0])
         prev = prevSibling[prevSibling.length - 1].id
       }
-      console.log('prev = ', prev, prevSibling)
-      // console.log('xx', next, prev)
       if (id - prev !== 1) {
         prev = 0
       }
@@ -98,11 +96,17 @@ export default new Vuex.Store({
         routeName = 'Node'
       }
       router.replace({name: routeName, params: { id }})
+      state.history.push(id)
+      state.historyIndex = state.historyIndex + 1
+      state.initialized = false
     },
     OPEN_ITEMS (state, o) {
       const ids = state.openItemIds
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
+    },
+    HISTORY_INDEX (state, o) {
+      state.historyIndex = o.historyIndex
     }
   },
   actions: {

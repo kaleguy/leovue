@@ -1,18 +1,20 @@
 <template>
   <div>
-  <div class="holder">
-    <div class="header">
-      Leo Viewer
-      <div @click="toggle" class="icon" style="padding:0;margin:0">
-        <icon class="icon bars" name="bars"></icon>
+    <div class="holder">
+      <div class="header">
+        Leo Viewer
+        <div @click="toggle"    class="icon icon-button">
+          <icon class="icon" name="bars"></icon>
+        </div>
+        <div @click="goForward" class="icon icon-button">
+          <icon class="icon" name="arrow-right"></icon>
+        </div>
+        <div @click="goBack"    class="icon icon-button">
+          <icon class="icon" name="arrow-left"></icon>
+        </div>
+        <div class="vshim"></div>
       </div>
-      <div class="vshim"></div>
-      <icon class="icon" name="arrow-right"></icon>
-      <icon class="icon" name="arrow-left"></icon>
     </div>
-
-
-  </div>
     <div id="menu" class="menu">
       <div class="menu-header">View Type</div>
       <div class="menu-item"
@@ -64,12 +66,25 @@
         this.$store.commit('VIEW_TYPE', {type: type})
         switch (type) {
           case 'tree':
-            this.$router.replace({path: '/t/2', params: {id: 1}})
+            this.$router.replace({path: '/t/1', params: {id: 1}})
             break
           case 'inline':
-            this.$router.replace({path: '/a/2', params: {id: 1}})
+            this.$router.replace({path: '/a/1', params: {id: 1}})
             break
         }
+      },
+      goBack () {
+        const history = this.$store.state.history
+        let historyIndex = this.$store.state.historyIndex
+        if (historyIndex > 0) {
+          historyIndex = historyIndex - 1
+        }
+        const id = history[historyIndex]
+        this.$store.commit('HISTORY_INDEX', { historyIndex })
+        this.$store.commit('CURRENT_ITEM', { id })
+      },
+      goForward () {
+
       }
     },
     computed: {
@@ -85,8 +100,6 @@
   .check
     margin-top: 2px
     margin-bottom: -3px
-  .bars
-    cursor: pointer
   .holder
     padding: 0
     margin: 0
@@ -136,9 +149,14 @@
     border-bottom: 1px solid #ddd
   .icon
     float: right
-    padding: 3px
+    padding: 0
+    padding-top: 2px
     padding-right: 7px
-    color: #333
+    color: #666
+  .icon-button
+    cursor: pointer
+    margin: 0
+    padding: 0
   .vshim
     width: 8px
     float: right
