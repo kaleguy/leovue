@@ -12,24 +12,23 @@
       </div>
       <span class="otitle">{{vtitle}}</span>
     </div>
-    <div v-show="inline"
-         :id="'item-' + model.id"
-         class="inline">
-    </div>
-    <ul v-show="isOpen" v-if="isFolder">
-      <item
-        class="item"
-        v-for="model in model.children"
+    <div class="child-items">
+      <div v-show="isOpenInline"
+           :id="'item-' + model.id"
+           class="inline">
+      </div>
+      <ul v-show="isOpen" v-if="isFolder">
+        <item
+          class="item"
+          v-for="model in model.children"
           :model="model"
           :key="model.id"
           :textItems="textItems"
           :vTargetEl="vTargetEl"
           :targetEl="targetEl">
-      </item>
-      <div v-show="inline"
-           :id="'item-' + model.id"
-           class="hshim"></div>
-    </ul>
+        </item>
+      </ul>
+    </div>
   </li>
 </template>
 
@@ -209,6 +208,9 @@ export default {
       if (ids.indexOf(this.model.id) === -1) { open = false }
       return open
     },
+    isOpenInline: function () {
+      return this.isOpen && this.inline
+    },
     isOpenA: function () {
       return this.isOpen && !this.closearrow
     },
@@ -237,8 +239,8 @@ export default {
   methods: {
     toggle: function () {
       // toggle the tree node
-      let duration = 500
-      const easing = 'easeOutExpo'
+      let duration = 200
+      const easing = 'linear'
       this.reset = false // TODO: remove
       // toggle the open/close state of the item
       let openItemIds = this.$store.state.openItemIds.slice(0)
@@ -255,33 +257,54 @@ export default {
         openItemIds = a
         this.closearrow = true
       }
+      let inline = true
+      if (this.targetEl) {
+        inline = false
+      }
+      this.inline = inline
       if (this.isFolder) {
-        const ul = this.$el.getElementsByTagName('UL')[0]
+        const ul = this.$el.getElementsByClassName('child-items')[0]
+        const il = this.$el.getElementsByClassName('inline')[0]
         ul.style.display = 'block'
+        if (inline) {
+          il.style.display = 'block'
+        }
         if (!this.isOpen) {
           Velocity(ul, 'slideDown', {duration, easing})
+          // if (inline){
+          //  Velocity(il, 'slideDown', {duration, easing})
+          // }
           this.$store.commit('OPEN_ITEMS', {openItemIds})
         } else {
           const me = this
           Velocity(ul, 'slideUp', {duration, easing}).then(function (els) {
             me.$store.commit('OPEN_ITEMS', {openItemIds})
             me.closearrow = false
+            // this.inline = false
+            // if (inline){
+            //  Velocity(ul, 'slideDown', {duration, easing})
+            // }
           })
         }
       }
       // toggle inline content if in inline mode
-      if (!this.targetEl) {
-        this.inline = true
+      if (inline && !this.isFolder) {
         duration = 300
         const il = this.$el.getElementsByClassName('inline')[0]
         il.style.display = 'block'
-        if (this.isOpen) {
+        if (!this.isOpen) {
           Velocity(il, 'slideDown', {duration: duration, easing: easing})
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
         } else {
-          Velocity(il, 'slideUp', {duration: duration, easing: easing})
+          const me = this
+          Velocity(il, 'slideUp', {duration, easing}).then(function (els) {
+            me.$store.commit('OPEN_ITEMS', {openItemIds})
+            me.closearrow = false
+          })
         }
       }
-      // this.showContent()
+
+      // TODO: put this after Velocity promise
       const currentItem = {
         id: this.model.id
       }
@@ -292,7 +315,7 @@ export default {
       let vTargetEl = this.vTargetEl
       let inline = false
       if (!targetEl) {
-        inline = true
+        this.inline = true
         targetEl = document.getElementById('item-' + this.model.id)
         vTargetEl = targetEl
       }
@@ -439,6 +462,10 @@ export default {
   }
   .otitle {
     padding-left: 4px;
+  }
+  .child-items {
+    margin: 0;
+    padding: 0;
   }
 </style>
 

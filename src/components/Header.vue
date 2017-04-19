@@ -3,14 +3,21 @@
     <div class="holder">
       <div class="header">
         Leo Viewer
-        <div @click="toggle"    class="icon icon-button">
+        <div @click="toggle" class="icon icon-button">
           <icon class="icon" name="bars"></icon>
         </div>
-        <div @click="goForward" class="icon icon-button">
-          <icon class="icon" name="arrow-right"></icon>
+        <div class="button-shim"></div>
+        <div @click="goForward"
+             class="icon icon-button">
+          <icon class="icon"
+                :class="{disabled: noForward}"
+                name="arrow-right"></icon>
         </div>
-        <div @click="goBack"    class="icon icon-button">
-          <icon class="icon" name="arrow-left"></icon>
+        <div @click="goBack"
+             class="icon icon-button disabled">
+          <icon class="icon"
+                :class="{disabled: noBack}"
+                name="arrow-left"></icon>
         </div>
         <div class="vshim"></div>
       </div>
@@ -51,7 +58,6 @@
     },
     methods: {
       toggle () {
-        console.log(this.menu)
         const menuEl = document.getElementById('menu')
         if (this.menu) {
           menuEl.style.width = 0
@@ -72,24 +78,39 @@
             this.$router.replace({path: '/a/1', params: {id: 1}})
             break
         }
+        setTimeout(this.toggle, 500)
       },
       goBack () {
+        if (this.noBack) { return }
         const history = this.$store.state.history
         let historyIndex = this.$store.state.historyIndex
         if (historyIndex > 0) {
           historyIndex = historyIndex - 1
         }
         const id = history[historyIndex]
-        this.$store.commit('HISTORY_INDEX', { historyIndex })
-        this.$store.commit('CURRENT_ITEM', { id })
+        this.$store.commit('CURRENT_ITEM', { id, historyIndex })
       },
       goForward () {
-
+        if (this.noForward) { return }
+        const history = this.$store.state.history
+        let historyIndex = this.$store.state.historyIndex
+        const id = history[historyIndex + 1]
+        if (historyIndex < history.length - 1) {
+          historyIndex = historyIndex + 1
+        }
+        this.$store.commit('CURRENT_ITEM', { id, historyIndex })
       }
     },
     computed: {
       viewType () {
         return this.$store.state.viewType
+      },
+      noBack () {
+        // console.log('xx', this.$store.state.history.length, this.$store.state.history)
+        return this.$store.state.historyIndex < 2
+      },
+      noForward () {
+        return this.$store.state.historyIndex >= this.$store.state.history.length - 1
       }
     }
   }
@@ -160,4 +181,10 @@
   .vshim
     width: 8px
     float: right
+  .disabled
+    color: #ccc
+  .button-shim
+    width: 8px
+    float: right
+    height: 16px
 </style>

@@ -71,6 +71,8 @@ export default new Vuex.Store({
       state.viewType = o.type
     },
     CURRENT_ITEM (state, o) {
+      // TODO: check old state
+      // check prev/forward for identical
       const id = o.id
       const nextSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/following-sibling::*')
       const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
@@ -96,18 +98,24 @@ export default new Vuex.Store({
         routeName = 'Node'
       }
       router.replace({name: routeName, params: { id }})
-      state.history.push(id)
-      state.historyIndex = state.historyIndex + 1
+
+      if (typeof o.historyIndex !== 'undefined') {
+        state.historyIndex = o.historyIndex
+      } else {
+        state.history.push(id)
+        state.historyIndex = state.historyIndex + 1
+      }
       state.initialized = false
     },
     OPEN_ITEMS (state, o) {
       const ids = state.openItemIds
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
-    },
+    }
+    /*,
     HISTORY_INDEX (state, o) {
       state.historyIndex = o.historyIndex
-    }
+    } */
   },
   actions: {
     loadLeo (context, o) {
