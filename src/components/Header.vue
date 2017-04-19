@@ -25,20 +25,20 @@
     <div id="menu" class="menu">
       <div class="menu-header">View Type</div>
       <div class="menu-item"
-           @click="setViewType('tree')">
+           @click="setViewType('t')">
         <div class="icon-box">
           <icon
             name="check"
-            v-show="viewType === 'tree'"
+            v-show="viewType === 't'"
             class="check"></icon>
         </div>
         <div class="menu-label">Outline</div>
       </div>
       <div class="menu-item"
-           @click="setViewType('inline')">
+           @click="setViewType('a')">
         <div class="icon-box">
           <icon name="check"
-                v-show="viewType === 'inline'"
+                v-show="viewType === 'a'"
                 class="check"></icon>
         </div>
         <div class="menu-label">Inline</div>
@@ -69,15 +69,7 @@
         this.menu = !this.menu
       },
       setViewType (type) {
-        this.$store.commit('VIEW_TYPE', {type: type})
-        switch (type) {
-          case 'tree':
-            this.$router.replace({path: '/t/1', params: {id: 1}})
-            break
-          case 'inline':
-            this.$router.replace({path: '/a/1', params: {id: 1}})
-            break
-        }
+        this.$router.replace({path: '/' + type + '/' + this.$store.state.currentItem.id})
         setTimeout(this.toggle, 500)
       },
       goBack () {

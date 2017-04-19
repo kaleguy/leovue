@@ -5,7 +5,7 @@ import router from '../router'
 
 Vue.use(Vuex)
 
-function setData (context, ldata, filename) {
+function setData (context, ldata, filename, route) {
   context.commit('RESET')
   context.commit('INIT_DATA')
   context.commit('LEO', {
@@ -13,11 +13,18 @@ function setData (context, ldata, filename) {
     text: ldata.textItems,
     filename: filename
   })
-  // TODO: change to context.route
+/*
   const hash = window.location.hash
   const match = hash.match(/(\d+)/)
   if (!match) { return }
   const selectedId = +match[0]
+*/
+  const selectedId = route.params.id
+  if (!selectedId) { return }
+  const match = route.path.match(/\/(\w+)\//)
+  let pathType = match[0]
+  pathType = pathType.replace(/\//g, '')
+  context.commit('VIEW_TYPE', {type: pathType})
   const openItems = JSON.search(ldata.data, '//*[id="' + selectedId + '"]/ancestor::*')
   if (!openItems) { return }
   const openItemIds = openItems.reduce((acc, o) => {
@@ -71,9 +78,12 @@ export default new Vuex.Store({
       state.viewType = o.type
     },
     CURRENT_ITEM (state, o) {
-      // TODO: check old state
-      // check prev/forward for identical
       const id = o.id
+      // check current for identical
+      if (o.id === state.currentItem.id) {
+        return
+      }
+      // TODO: check prev/next for identical
       const nextSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/following-sibling::*')
       const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
       let next = 0
@@ -120,12 +130,12 @@ export default new Vuex.Store({
   actions: {
     loadLeo (context, o) {
       getLeoJSON(o.filename, o.id).then(ldata => {
-        setData(context, ldata, o.filename)
+        setData(context, ldata, o.filename, o.route)
       })
     },
     loadLeoFromXML (context, o) {
       const ldata = transformLeoXML(o.xml)
-      setData(context, ldata, 'dnd')
+      setData(context, ldata, 'dnd', o.route)
     }
   }
 })

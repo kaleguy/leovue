@@ -148,7 +148,7 @@
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
+      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id, route: this.$route})
     },
     updated () {
     }
