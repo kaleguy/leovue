@@ -8,16 +8,17 @@
            padding-left:3px;
            padding-right:3px;"
            v-if="isFolder">
-        <div class="arrow" v-bind:class="{arrowdown: isOpenA}">▶</div>
+        <div class="arrow"
+             v-bind:class="{arrowdown: isOpenA}">▶</div>
       </div>
       <span class="otitle">{{vtitle}}</span>
     </div>
-    <div class="child-items">
+    <div v-show="isOpen" class="child-items">
       <div v-show="isOpenInline"
            :id="'item-' + model.id"
            class="inline">
       </div>
-      <ul v-show="isOpen" v-if="isFolder">
+      <ul v-if="isFolder">
         <item
           class="item"
           v-for="model in model.children"
@@ -271,16 +272,17 @@ export default {
           il.style.display = 'block'
         }
         if (!this.isOpen) {
-          Velocity(ul, 'slideDown', {duration, easing})
+          // const me = this
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
+          Velocity(ul, 'slideDown', {duration, easing}).then((els) => {
+          })
           // if (inline){
           //  Velocity(il, 'slideDown', {duration, easing})
           // }
-          this.$store.commit('OPEN_ITEMS', {openItemIds})
         } else {
-          const me = this
-          Velocity(ul, 'slideUp', {duration, easing}).then(function (els) {
-            me.$store.commit('OPEN_ITEMS', {openItemIds})
-            me.closearrow = false
+          Velocity(ul, 'slideUp', {duration, easing}).then((els) => {
+            this.$store.commit('OPEN_ITEMS', {openItemIds})
+            this.closearrow = false
             // this.inline = false
             // if (inline){
             //  Velocity(ul, 'slideDown', {duration, easing})
