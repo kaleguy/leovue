@@ -6,19 +6,13 @@ import router from '../router'
 Vue.use(Vuex)
 
 function setData (context, ldata, filename, route) {
-  context.commit('RESET')
-  context.commit('INIT_DATA')
+  context.commit('RESET') // content item has not been drawn
+  context.commit('INIT_DATA') // loaded the leo data
   context.commit('LEO', {
     data: ldata.data,
     text: ldata.textItems,
     filename: filename
   })
-/*
-  const hash = window.location.hash
-  const match = hash.match(/(\d+)/)
-  if (!match) { return }
-  const selectedId = +match[0]
-*/
   const selectedId = route.params.id
   if (!selectedId) { return }
   const match = route.path.match(/\/(\w+)\//)
@@ -31,10 +25,10 @@ function setData (context, ldata, filename, route) {
     acc.push(+o.id)
     return acc
   }, [])
-  openItemIds.push(selectedId)
+  openItemIds.push(+selectedId)
   context.commit('OPEN_ITEMS', {openItemIds})
   const currentItem = {
-    id: selectedId
+    id: +selectedId
   }
   context.commit('CURRENT_ITEM', currentItem)
 }

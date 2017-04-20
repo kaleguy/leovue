@@ -27,6 +27,7 @@
           :vTargetEl="vTargetEl"
           :targetEl="targetEl">
         </item>
+        <div v-show="isOpenInline" class="hshim"></div>
       </ul>
     </div>
   </li>
