@@ -12,12 +12,10 @@
     name: 'app',
     methods: {
       dragover_handler (ev) {
-        console.log('dragOver')
         // Prevent default select and drag behavior
         ev.preventDefault()
       },
       dragend_handler (ev) {
-        console.log('dragEnd')
         // Remove all of the drag data
         var dt = ev.dataTransfer
         if (dt.items) {
@@ -31,7 +29,6 @@
         }
       },
       drop_handler (ev) {
-        console.log('Drop')
         ev.preventDefault()
         // If dropped items aren't files, reject them
         var dt = ev.dataTransfer
@@ -51,14 +48,20 @@
           }
         }
         var reader = new FileReader()
-        var me = this
-        reader.onload = function (xml) {
+        reader.onload = (xml) => {
           const xmlString = xml.srcElement.result
-          me.$store.dispatch('loadLeoFromXML', {xml: xmlString})
+          this.$store.dispatch('loadLeoFromXML', {xml: xmlString, route: this.$route})
         }
         reader.readAsText(f)
       }
 
+    },
+    mounted () {
+      let filename = 'docs'
+      if (window.lconfig.filename) {
+        filename = window.lconfig.filename
+      }
+      this.$store.dispatch('loadLeo', {filename, id: this.id, route: this.$route})
     }
   }
 </script>
@@ -67,38 +70,48 @@
 
 $mycolor: #2c3e50
 
-#app
-    font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    color: $mycolor
-    margin: 0
-    padding: 0
-    height: 100%
-
 HTML, BODY
-    margin: 0
-    padding: 0
-    height: 100%
-    width: 100%
+  margin: 0
+  padding: 0
+  height: 100%
+  width: 100%
+
+#app
+  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $mycolor
+  margin: 0
+  padding: 0
+  height: 100%
 
 .right-pane .text, .inline .text
-    margin-top: 20px
-    border: none
-    background-color: transparent
-    resize: none
-    outline: none
-    font-size: 16px
-    height: 100%
-    white-space: pre-line
-    width: 100%
+  margin-top: 20px
+  border: none
+  background-color: transparent
+  resize: none
+  outline: none
+  font-size: 16px
+  height: 100%
+  white-space: pre-line
+  width: 100%
 
 .directive
-   color: #990000;
+  color: #990000;
 
 .md
   margin-left: 40px
   margin-top: 10px
   max-width: 600px
+
+.unselectable
+ -moz-user-select: -moz-none
+ -khtml-user-select: none
+ -webkit-user-select: none
+ //  Introduced in IE 10.
+ //  See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+ -ms-user-select: none
+ user-select: none
+
 
 </style>

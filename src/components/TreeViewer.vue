@@ -148,7 +148,6 @@
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id, route: this.$route})
     },
     updated () {
     }
@@ -253,17 +252,5 @@
     height: 100%;
     min-width: 50px;
     background: #fff;
-  }
-  .unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
-    -ms-user-select: none;
-    user-select: none;
   }
 </style>

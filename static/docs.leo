@@ -81,7 +81,7 @@ Leo Viewer is a web app that can display files created with
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 &lt;/p&gt;
 &lt;p&gt;
-Leo has some unique features that make it particularly suitable for documenting code and other complex documents.
+Leo has Sfeatures that make it particularly suitable for documenting code and other complex documents.
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
@@ -210,7 +210,7 @@ The nodes in this branch are clones of nodes appearing elsewhere in this documen
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
 Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with the Leo Viewer.</t>
-<t tx="josephorr.20170327233126.1">This section contains on guide on using the Leo Viewer program to view files created in Leo.</t>
+<t tx="josephorr.20170327233126.1">This section contains a guide to using the Leo Viewer program to view files created in Leo.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1">@language md
@@ -245,30 +245,36 @@ For other environments, see the:
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
     &lt;div class="panes-container"&gt;
-      &lt;div class="left-pane" id="left-pane"&gt;
+      &lt;div class="left-pane unselectable" id="left-pane"&gt;
         &lt;ul id="demo"&gt;
           &lt;item
             class="item"
-            :showContentFlag="true"
             :model="data"
+            :top="true"
             :textItems="text"
-            :open="true"
             :targetEl="target.el"
             :vTargetEl="target.v"&gt;
           &lt;/item&gt;
         &lt;/ul&gt;
       &lt;/div&gt;
       &lt;div class="panes-separator" id="panes-separator"&gt;&lt;/div&gt;
-      &lt;table v-show="textContent" id="tlayout"&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div id="lhandle"&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;
-            &lt;div id="hshim"&gt;&lt;/div&gt;
-            &lt;div class="right-pane" id="right-pane"&gt;&lt;/div&gt;
-          &lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-      &lt;div v-show="iframeContent" style='min-height:100%' id="vpane"&gt;&lt;/div&gt;
+      &lt;div v-show="textContent" id="tlayout"&gt;
+        &lt;div id="lhandle" class="handle"&gt;
+          &lt;div class="handle-button"
+               v-show="hasPrev"
+               @click="goPrev"&gt;
+            &lt;icon class="icon"
+                  name="chevron-left"&gt;&lt;/icon&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right-pane" id="right-pane"&gt;&lt;/div&gt;
+        &lt;div id="rhandle" class="handle"&gt;
+          &lt;div class="handle-button" v-show="hasNext" @click="goNext"&gt;
+            &lt;icon class="icon" name="chevron-right"&gt;&lt;/icon&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div v-show="iframeContent" style="min-height:100%; display:flex; background:#fff" id="vpane"&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/template&gt;
@@ -277,6 +283,7 @@ For other environments, see the:
 
 &lt;script&gt;
   import Item from './Item'
+  import router from '../router'
 
   let leftPane
   let vPane
@@ -296,15 +303,31 @@ For other environments, see the:
         target: target,
         open: false,
         active: false,
-        lhandle: true
+        lhandle: true,
+        rightSibling: null
       }
     },
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
-          this.id = val.params.id
         },
         immediate: true
+      }
+    },
+    methods: {
+      goNext () {
+        const next = this.$store.state.currentItem.next
+        this.resetCurrentItem(next)
+      },
+      goPrev () {
+        const prev = this.$store.state.currentItem.prev
+        this.resetCurrentItem(prev)
+      },
+      resetCurrentItem (id) {
+        router.replace('/t/' + id)
+        const currentItem = { id }
+        this.$store.commit('RESET')
+        this.$store.commit('CURRENT_ITEM', currentItem)
       }
     },
     computed: {
@@ -327,6 +350,12 @@ For other environments, see the:
         } else {
           return false
         }
+      },
+      hasNext () {
+        return this.$store.state.currentItem.next
+      },
+      hasPrev () {
+        return this.$store.state.currentItem.prev
       }
     },
     mounted: function () {
@@ -365,7 +394,9 @@ For other environments, see the:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id})
+      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id, route: this.$route})
+    },
+    updated () {
     }
   }
 &lt;/script&gt;
@@ -374,14 +405,20 @@ For other environments, see the:
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
 &lt;style scoped&gt;
   #vpane {
-    width: 100%;
+    width: 100%;”
     background: #fff;
+  }
+  .right-pane {
+    max-width: 620px;
+    min-width: 500px;
   }
   #tlayout {
     background: #fff;
     min-height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
   }
   .tlayout TD {
     padding: 0
@@ -389,15 +426,6 @@ For other environments, see the:
 
   .treeviewer{
     height: 100%
-  }
-  #lhandle {
-    height: 100%;
-    width: 40px;
-    background: #fff;
-    float:left;
-  }
-  #hshim {
-    height: 10px;
   }
   h1, h2 {
     font-weight: normal;
@@ -412,26 +440,18 @@ For other environments, see the:
     display: inline-block;
     margin: 0 10px;
   }
-
   a {
     color: #42b983;
   }
-
   .panes-container {
     display: flex;
     width: 100%;
     overflow: hidden;
   }
-
   .left-pane {
     width: 250px;
     background: #fff;
   }
-  .right-pane {
-    max-width: 600px;
-    min-width: 500px;
-  }
-
   .panes-separator {
     width: 11px;
     background: #eee;
@@ -441,12 +461,6 @@ For other environments, see the:
     background-repeat: no-repeat;
     background-position: 50%;
   }
-
-  .right-pane {
-    flex: auto;
-    background: #fff;
-  }
-
   .panes-container,
   .panes-separator,
   .left-pane,
@@ -456,14 +470,50 @@ For other environments, see the:
     min-height: 100%;
   }
   .right-pane {
+    flex: auto;
+    background: #fff;
     padding:0px;
-    padding-top:0px;
+    padding-top: 10px;
   }
   p {
     line-height:1.3em;
   }
+  .handle-button {
+    height:20px;
+    width: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccf;
+    margin-left: 9px;
+  }
+  .handle {
+    width:50px;
+    align-items: center;
+    flex: auto;
+    display: flex;
+  }
+  #lhandle {
+    height: 100%;
+    min-width: 50px;
+    background: #fff;
+  }
+  .unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 
-
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+  }
 &lt;/style&gt;
 </t>
 <t tx="josephorr.20170331200243.1">@language md
@@ -484,7 +534,7 @@ is developed in tandem with it.</t>
 # Installing and Using Leo Viewer
 
 To use Leo Viewer, copy the files in the [dist folder at github](https://github.com/kaleguy/leoviewer) to your server. A web server is
-required, you can't simply open Leo Viewer from your local file system. If you want to views
+required, you can't simply open Leo Viewer from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
 You will be able to open Leo Viewer by opening index.html in your browser. If you are not 
@@ -498,10 +548,12 @@ So the base tag for the index.html for this installation of Leo Viewer looks lik
 
 You can also run Leo Viewer from github pages. Fork the repository on Github, 
 then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
-be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as just described). 
+be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as described above). 
 
 The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can open this leo file using the Leo program and edit it,
 or replace it with your own file. Currently the name of this file is not configurable, this feature will be added in the next release.
+
+For a quick look at a Leo file, you can also drag and drop the file on to Leo Viewer.
 </t>
 <t tx="josephorr.20170331200439.1">@language md
 
@@ -525,16 +577,18 @@ Current features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
 * Node titles can be Markdown Urls
+* Outline and Inline views
+* Drag and drop a Leo file to display
 
 Features planned for version 1:
 * Left Nav collapse - expand
 * Keyboard support
 * More configuration options
 * Search
+* D3 Trees
 
 Features planned for version 2:
 * Themes
-* D3 Trees
 * Electron (desktop) version
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
@@ -551,7 +605,7 @@ The next node has the following title:
 
 [A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
 
-Note that if Leo Viewer is hosted on via https (e.g. Github Pages) only https links will work here.
+Note that if Leo Viewer is served via https (e.g. Github Pages) only https links will work here.
 
 The second node in this section has the following title:
 
@@ -587,14 +641,6 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-// set all parent els of given el to @sel = 1
-function setSel(el){
-  let parent = el.parentElement;
-  if (parent){
-    parent.setAttribute('sel', 1)
-    setSel(parent)
-  }
-}
 function getLeoJSON (filename, id) {
   var p = new Promise((resolve, reject) =&gt; {
     loadDoc('./static/' + filename + '.leo', 'Text')
@@ -627,17 +673,8 @@ function transformLeoXML (xmlString, id) {
     }
     const vnodes = xml.getElementsByTagName('v')
     for (let i = 0; i &lt; vnodes.length; i++) {
-      vnodes[i].setAttribute('id', i)
-      vnodes[i].setAttribute('sel', 0)
+      vnodes[i].setAttribute('id', i + 1)
     }
-    // see if there is a selected element (bookmarked node)
-    // if so, mark it and its parent nodes
-    let el = xml.getElementById(id)
-    if (el) {
-      el.setAttribute('sel', 2)
-      setSel(el)
-    }
-    // const xsl = loadXMLDoc('./static/leo.xsl', 'XML')
     var scripts = document.getElementsByTagName('script'),
       str     = '',
       i       = 0,

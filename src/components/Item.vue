@@ -337,6 +337,15 @@ export default {
         this.$store.commit('CONTENT_PANE', {type: 'text'})
         showText(this.model.name, targetEl, this.textItems[this.model.t])
       }
+    },
+    setContent: function () {
+      if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
+        this.$store.commit('INIT') // set that current item has been shown
+        this.showContent()
+      }
+      if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
+        this.showContent()
+      }
     }
   },
   watch: {
@@ -348,17 +357,12 @@ export default {
     }
 */
   },
+  // TODO: refactor next two methocs
   mounted () {
-    if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
-      this.$store.commit('INIT') // set that current item has been shown
-      this.showContent()
-    }
+    this.setContent()
   },
   updated () {
-    if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
-      this.$store.commit('INIT') // set that current item has been shown
-      this.showContent()
-    }
+    this.setContent()
   }
 }
 </script>
@@ -398,7 +402,8 @@ export default {
     text-align: center;
     display: inline-block;
     width: 11px;
-    height: 20px;
+    height: 21px;
+    margin-top: 2px;
   }
   .arrowdown {
     -webkit-transform: rotate(90deg);
@@ -413,15 +418,15 @@ export default {
   }
   ul {
     padding-left: 1em;
-    line-height: 1.3em;
+    line-height: 1.4em;
     list-style-type: none;
     margin-bottom: 8px;
   }
   li {
     white-space: nowrap;
     min-width: 760px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-top: 4px;
   }
   li > div {
     padding-left:4px;

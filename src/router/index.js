@@ -7,6 +7,7 @@ import AccordionViewer from '@/components/AccordionViewer'
 
 Vue.use(Router)
 
+// TODO: add not found link
 export default new Router({
   routes: [
     { path: '/', redirect: '/t/1' },

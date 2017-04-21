@@ -5,9 +5,7 @@
 </template>
 
 <script>
-  import D3Tree from 'vued3tree'
-
-  console.log(D3Tree)
+  // import D3Tree from 'vued3tree'
 
   let target = {el: null}
   export default {

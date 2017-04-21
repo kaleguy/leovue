@@ -4,6 +4,13 @@
   <!--
   <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans" rel="stylesheet">
   -->
+  <script>
+    var lconfig = {
+      showapptitle: true,
+      doctitle: '',
+      filename: 'docs'
+    }
+  </script>
   <style type="text/css">
 
     .hljs {
@@ -109,9 +116,16 @@
           urlParams[$1] = $3;
         }
       );
+      for (k in urlParams){
+        v = urlParams[k]
+        if (typeof v !== 'undefined'){
+          lconfig[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'");
+        }
+      }
+      console.log(lconfig)
       return urlParams;
     }
-
+    parseQueryString(window.location.href)
   </script>
 </head>
 <body>

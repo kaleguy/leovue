@@ -2,7 +2,9 @@
   <div>
     <div class="holder">
       <div class="header">
-        Leo Viewer
+        <span v-if="config.showapptitle" class="app-title">Leo Viewer</span>
+        <span v-if="config.doctitle">: </span>
+        <span class="doc-title">{{ config.doctitle }}</span>
         <div @click="toggle" class="icon icon-button">
           <icon class="icon" name="bars"></icon>
         </div>
@@ -103,7 +105,11 @@
       },
       noForward () {
         return this.$store.state.historyIndex >= this.$store.state.history.length - 1
+      },
+      config () {
+        return window.lconfig
       }
+
     }
   }
 </script>
@@ -179,4 +185,9 @@
     width: 8px
     float: right
     height: 16px
+  .app-title
+    font-weight: normal
+    color: #333
+  .doc-title
+    font-weight: bold
 </style>

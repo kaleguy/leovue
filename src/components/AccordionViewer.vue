@@ -52,7 +52,6 @@
       }
     },
     mounted: function () {
-      this.$store.dispatch('loadLeo', {filename: 'docs', route: this.$route})
     }
   }
 </script>
