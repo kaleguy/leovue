@@ -71,6 +71,8 @@
         this.menu = !this.menu
       },
       setViewType (type) {
+        this.$store.commit('VIEW_TYPE', {type})
+        this.$store.commit('RESET')
         this.$router.replace({path: '/' + type + '/' + this.$store.state.currentItem.id})
         setTimeout(this.toggle, 500)
       },
@@ -100,7 +102,6 @@
         return this.$store.state.viewType
       },
       noBack () {
-        // console.log('xx', this.$store.state.history.length, this.$store.state.history)
         return this.$store.state.historyIndex < 2
       },
       noForward () {

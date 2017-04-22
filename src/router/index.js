@@ -10,7 +10,6 @@ Vue.use(Router)
 // TODO: add not found link
 export default new Router({
   routes: [
-    { path: '/', redirect: '/t/1' },
     {
       path: '/t/:id',
       component: Dashboard,

@@ -8,6 +8,7 @@
             :top="true"
             :model="data"
             :textItems="text"
+            :targetEl="false"
             :open="false">
           </item>
         </ul>

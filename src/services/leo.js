@@ -25,16 +25,19 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-function getLeoJSON (filename, id) {
+function getLeoJSON (filename) {
+  if (filename.indexOf('#') > 0) {
+    filename = filename.substring(0, filename.indexOf('#'))
+  }
   var p = new Promise((resolve, reject) => {
     loadDoc('./static/' + filename + '.leo', 'Text')
       .then((xmlString) => {
-        resolve(transformLeoXML(xmlString, id))
+        resolve(transformLeoXML(xmlString))
       })
   })
   return p
 }
-function transformLeoXML (xmlString, id) {
+function transformLeoXML (xmlString) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')

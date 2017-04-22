@@ -20,6 +20,7 @@
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Viewer</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
+<v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
@@ -58,7 +59,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #fff; width:400px;margin-left:auto;margin-right:auto;"&gt;
+&lt;div style="border:1px solid #fff; width:300px;margin-left:auto;margin-right:auto;"&gt;
 &lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 220"&gt;
 &lt;defs&gt;
 &lt;style&gt;
@@ -71,8 +72,8 @@ H1 {margin: 0}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
-&lt;text class="cls-1" transform="translate(35 156.2)"&gt;LEO&lt;/text&gt;
-&lt;text class="cls-2" transform="translate(88 208)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-1" transform="translate(25 156.2)"&gt;LEO&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(78 208)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
@@ -81,7 +82,7 @@ Leo Viewer is a web app that can display files created with
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 &lt;/p&gt;
 &lt;p&gt;
-Leo has Sfeatures that make it particularly suitable for documenting code and other complex documents.
+Leo has features that make it particularly suitable for documenting code and other complex documents.
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
@@ -292,9 +293,6 @@ For other environments, see the:
   let target = {el: null, v: null}
   export default {
     name: 'treeviewer',
-    props: {
-      id: 0
-    },
     components: {
       item: Item
     },
@@ -359,6 +357,7 @@ For other environments, see the:
       }
     },
     mounted: function () {
+      console.log('TV mounted')
       leftPane = document.getElementById('left-pane')
       vPane = document.getElementById('vpane')
       rightPane = document.getElementById('right-pane')
@@ -394,7 +393,6 @@ For other environments, see the:
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
-      this.$store.dispatch('loadLeo', {filename: 'docs', id: this.id, route: this.$route})
     },
     updated () {
     }
@@ -502,18 +500,6 @@ For other environments, see the:
     min-width: 50px;
     background: #fff;
   }
-  .unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
-    -ms-user-select: none;
-    user-select: none;
-  }
 &lt;/style&gt;
 </t>
 <t tx="josephorr.20170331200243.1">@language md
@@ -539,9 +525,10 @@ files on your local machine without a server, use a node utility like 'http-serv
 
 You will be able to open Leo Viewer by opening index.html in your browser. If you are not 
 serving Leo Viewer from the root of your domain, you'll need to first edit the "base" tag in
-index.html.
+index.html. 
 
-About setting the base, for example, the file you are reading is hosted at https://kaleguy.github.io/leoviewer/.
+About setting the base, for example, the file you are reading is 
+hosted on Github Pages at https://kaleguy.github.io/leoviewer/.
 So the base tag for the index.html for this installation of Leo Viewer looks like this:
 
 `&lt;base href='/leoviewer/'&gt;`
@@ -583,13 +570,8 @@ Current features include:
 Features planned for version 1:
 * Left Nav collapse - expand
 * Keyboard support
-* More configuration options
 * Search
 * D3 Trees
-
-Features planned for version 2:
-* Themes
-* Electron (desktop) version
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
@@ -641,16 +623,19 @@ function cleanText(data){
   }
   data.t = data.t.replace(/^.*?_/,'')
 }
-function getLeoJSON (filename, id) {
+function getLeoJSON (filename) {
+  if (filename.indexOf('#') &gt; 0) {
+    filename = filename.substring(0, filename.indexOf('#'))
+  }
   var p = new Promise((resolve, reject) =&gt; {
     loadDoc('./static/' + filename + '.leo', 'Text')
       .then((xmlString) =&gt; {
-        resolve(transformLeoXML(xmlString, id))
+        resolve(transformLeoXML(xmlString))
       })
   })
   return p
 }
-function transformLeoXML (xmlString, id) {
+function transformLeoXML (xmlString) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -697,6 +682,27 @@ function transformLeoXML (xmlString, id) {
 }
 
 export {getLeoJSON, transformLeoXML}
+</t>
+<t tx="josephorr.20170421082838.1">@language md
+
+# Basic Configuration Options
+
+Leo loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
+
+To tell Leo Viewer to load a different file, either pass a 'filename' parameter on the url, or edit the configuration section of index.html.
+
+[Example of Leo File from URL parameter](/index.html?filename=examples/example)
+
+Currently Available Parameters:
+* filename: name of leo file to load (without .leo extension)
+* doctitle: Title for the Leo file (will show in top menubar)
+* showapptitle: Display 'Leoviewer' in upper left of app
+
+Using parameters on the URL:
+
+```
+http://www.mysite.com/leoviewer?filename=example&amp;title=My Leo File&amp;showapptitle=false
+```
 </t>
 </tnodes>
 </leo_file>

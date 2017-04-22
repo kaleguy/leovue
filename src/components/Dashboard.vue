@@ -2,7 +2,7 @@
   <div class="dashboard">
     <appheader/>
     <div id="main">
-      <router-view :id="$route.params.id"></router-view>
+      <router-view :id="id"></router-view>
     </div>
   </div>
 </template>
@@ -19,6 +19,15 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  computed: {
+    id: function () {
+      if (!this.$route.params.id) {
+        return +1
+      } else {
+        return this.$route.params.id
+      }
     }
   },
   watch: {

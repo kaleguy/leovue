@@ -61,7 +61,9 @@
       if (window.lconfig.filename) {
         filename = window.lconfig.filename
       }
-      this.$store.dispatch('loadLeo', {filename, id: this.id, route: this.$route})
+      if (!this.$store.initializedData) {
+        this.$store.dispatch('loadLeo', {filename, route: this.$route})
+      }
     }
   }
 </script>

@@ -16,6 +16,7 @@
     <div v-show="isOpen" class="child-items">
       <div v-show="isOpenInline"
            :id="'item-' + model.id"
+           v-html="myContent"
            class="inline">
       </div>
       <ul v-if="isFolder">
@@ -43,10 +44,9 @@ const md = require('markdown-it')({
 })
 
 const hljs = require('highlight.js')
-// let currentNode = null
-function showText (title, panel, text) {
+function showText (text) {
   if (!text) {
-    panel.innerHTML = ''
+    this.$store.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
   let language = getLanguage(text)
@@ -75,25 +75,28 @@ function showText (title, panel, text) {
 
   // just plain text
   if (!language) {
-    panel.innerHTML = `<div class="text">${text}</div>`
-    return
+    language = 'plaintext'
   }
   // remove directives from first line
   if (/^\s*?@/.test(text)) {
     text = removeFirstLine(text)
   }
   switch (language) {
+    case 'plaintext':
+      text = `<div class="text">${text}</div>`
+      break
     case 'md':
       text = md.render(text)
-      panel.innerHTML = text
       break
     case 'html':
-      panel.innerHTML = text
       break
     default:
       text = `<pre><code class="${language}">${text}</code></pre>`
-      panel.innerHTML = text
-      hljs.highlightBlock(panel)
+      text = hljs.highligh(text)
+  }
+  this.$store.commit('CURRENT_ITEM_CONTENT', { text })
+  if (this.inline) {
+    this.myContent = text
   }
 }
 
@@ -120,8 +123,8 @@ function getFileExtension (filename) {
   const ext = re.exec(filename)[1]
   return ext
 }
-
-function showSite (title, panel, tpanel) {
+// TODO: replace DOM manipulation in this function?
+function showSite (title, panel) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
   const url = match[2]
@@ -131,19 +134,19 @@ function showSite (title, panel, tpanel) {
   // TODO: add spinner
   if (ext === 'md') {
     axios.get(url)
-      .then(function (response) {
+      .then((response) => {
         let html = md.render(response.data)
         html = '<div class="md">' + html + '</div>'
         html = replaceRelUrls(html, base)
-        showText(title, tpanel, html)
-        this.$store.commit('CONTENT_PANE', {type: 'text'})
-        // panel.innerHTML = html
+        showText.call(this, html)
+        this.$store.commit('CONTENT_PANE', {type: 'text'}) // TODO: still needed?
       })
       .catch(function (error) {
         console.log(error)
       })
     return
   }
+  panel.className = 'vinline'
   const iframeHTML = `
     <iframe
        src="" height="100%" width="100%"
@@ -187,7 +190,7 @@ export default {
   name: 'item',
   props: {
     model: Object,
-    targetEl: Element,
+    targetEl: Boolean,
     vTargetEl: Element,
     textItems: Object,
     top: Boolean
@@ -197,7 +200,8 @@ export default {
       reset: true,
       openFlag: false,
       inline: false,
-      closearrow: false
+      closearrow: false,
+      myContent: ''
     }
   },
   computed: {
@@ -236,7 +240,6 @@ export default {
     initialized () {
       return this.$store.state.initialized
     }
-
   },
   methods: {
     toggle: function () {
@@ -293,7 +296,11 @@ export default {
       // toggle inline content if in inline mode
       if (inline && !this.isFolder) {
         duration = 300
-        const il = this.$el.getElementsByClassName('inline')[0]
+        // TODO: refactor this
+        let il = this.$el.getElementsByClassName('inline')[0]
+        if (!il) {
+          il = this.$el.getElementsByClassName('vinline')[0]
+        }
         il.style.display = 'block'
         if (!this.isOpen) {
           Velocity(il, 'slideDown', {duration: duration, easing: easing})
@@ -316,26 +323,17 @@ export default {
     showContent: function () {
       let targetEl = this.targetEl
       let vTargetEl = this.vTargetEl
-      let inline = false
+      // let inline = false
       if (!targetEl) {
         this.inline = true
-        targetEl = document.getElementById('item-' + this.model.id)
-        vTargetEl = targetEl
-      }
-      if (!this.targetEl) {
-        // const contentEl = document.getElementById('item-' + this.model.id)
-        // showText(this.model.name, contentEl, this.textItems[this.model.t])
-        // return
+        vTargetEl = document.getElementById('item-' + this.model.id)
       }
       // test for presence of url in title, if so it is external content
       if (/^\[/.test(this.model.name)) {
-        if (inline) {
-          vTargetEl.className = 'vinline'
-        }
-        return showSite(this.model.name, vTargetEl, targetEl)
+        return showSite.call(this, this.model.name, vTargetEl)
       } else {
         this.$store.commit('CONTENT_PANE', {type: 'text'})
-        showText(this.model.name, targetEl, this.textItems[this.model.t])
+        showText.call(this, this.textItems[this.model.t])
       }
     },
     setContent: function () {
@@ -463,6 +461,7 @@ export default {
     width: 760px;
     border:1px solid #ccc;
     border-radius: 4px;
+    overflow: auto;
   // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
   }
   .hshim {

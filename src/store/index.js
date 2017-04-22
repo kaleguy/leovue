@@ -13,10 +13,15 @@ function setData (context, ldata, filename, route) {
     text: ldata.textItems,
     filename: filename
   })
-  const selectedId = route.params.id
-  if (!selectedId) { return }
+  let selectedId = route.params.id
+  if (!selectedId) {
+    selectedId = 1
+  }
   const match = route.path.match(/\/(\w+)\//)
-  let pathType = match[0]
+  let pathType = 't'
+  if (match) {
+    pathType = match[0]
+  }
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
   const openItems = JSON.search(ldata.data, '//*[id="' + selectedId + '"]/ancestor::*')
@@ -46,6 +51,7 @@ export default new Vuex.Store({
       next: 0,
       prev: 0
     },
+    currentItemContent: '',
     openItemIds: [],
     history: [0],
     historyIndex: 0
@@ -71,13 +77,16 @@ export default new Vuex.Store({
     VIEW_TYPE (state, o) {
       state.viewType = o.type
     },
+    CURRENT_ITEM_CONTENT (state, o) {
+      state.currentItemContent = o.text
+    },
     CURRENT_ITEM (state, o) {
       const id = o.id
       // check current for identical
       if (o.id === state.currentItem.id) {
         return
       }
-      // TODO: check prev/next for identical
+      // TODO: check prev/next for identical before change
       const nextSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/following-sibling::*')
       const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
       let next = 0
@@ -130,6 +139,9 @@ export default new Vuex.Store({
     loadLeoFromXML (context, o) {
       const ldata = transformLeoXML(o.xml)
       setData(context, ldata, 'dnd', o.route)
+    },
+    setCurrentContent (context, o) {
+      context.commit('CURRENT_ITEM_CONTENT', o)
     }
   }
 })

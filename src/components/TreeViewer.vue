@@ -13,9 +13,12 @@
           </item>
         </ul>
       </div>
-      <div class="panes-separator" id="panes-separator"></div>
-      <div v-show="textContent" id="tlayout">
-        <div id="lhandle" class="handle">
+      <div class="panes-separator"
+           id="panes-separator"></div>
+      <div v-show="textContent"
+           id="tlayout">
+        <div id="lhandle"
+             class="handle">
           <div class="handle-button"
                v-show="hasPrev"
                @click="goPrev">
@@ -23,10 +26,15 @@
                   name="chevron-left"></icon>
           </div>
         </div>
-        <div class="right-pane" id="right-pane"></div>
-        <div id="rhandle" class="handle">
-          <div class="handle-button" v-show="hasNext" @click="goNext">
-            <icon class="icon" name="chevron-right"></icon>
+        <div class="right-pane"
+             v-html="currentItemContent"></div>
+        <div id="rhandle"
+             class="handle">
+          <div class="handle-button"
+               v-show="hasNext"
+               @click="goNext">
+            <icon class="icon"
+                  name="chevron-right"></icon>
           </div>
         </div>
       </div>
@@ -43,12 +51,9 @@
   let vPane
   let rightPane
   let paneSep
-  let target = {el: null, v: null}
+  let target = {el: true, v: null}
   export default {
     name: 'treeviewer',
-    props: {
-      id: 0
-    },
     components: {
       item: Item
     },
@@ -105,6 +110,10 @@
           return false
         }
       },
+      currentItemContent () {
+        // console.log('xxxx', this.$store.state.currentItemContent)
+        return this.$store.state.currentItemContent
+      },
       hasNext () {
         return this.$store.state.currentItem.next
       },
@@ -113,13 +122,12 @@
       }
     },
     mounted: function () {
+      // TODO: clean up targets
       leftPane = document.getElementById('left-pane')
       vPane = document.getElementById('vpane')
       rightPane = document.getElementById('right-pane')
-      target.el = rightPane // regular content
       target.v = vPane  // iframe content
       paneSep = document.getElementById('panes-separator')
-      rightPane.innerHTML = ''
 
       // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
       // - the left limit is positioned at 10% of the screen width
@@ -158,10 +166,6 @@
   #vpane {
     width: 100%;”
     background: #fff;
-  }
-  .right-pane {
-    max-width: 620px;
-    min-width: 500px;
   }
   #tlayout {
     background: #fff;
@@ -225,6 +229,8 @@
     background: #fff;
     padding:0px;
     padding-top: 10px;
+    max-width: 620px;
+    min-width: 500px;
   }
   p {
     line-height:1.3em;

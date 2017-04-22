@@ -122,7 +122,10 @@
           lconfig[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'");
         }
       }
-      console.log(lconfig)
+      var hash = window.location.hash
+      if (!hash) {
+        window.location.hash = 't/1'
+      }
       return urlParams;
     }
     parseQueryString(window.location.href)
