@@ -31,9 +31,11 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="josephorr.20170228222411.2">top</t>
-<t tx="josephorr.20170228222452.1">reg</t>
-<t tx="josephorr.20170228222513.1">NA</t>
+<t tx="josephorr.20170228222411.2">This is a simple Leo outline example.
+
+Most nodes are empty.</t>
+<t tx="josephorr.20170228222452.1">Some Regions.</t>
+<t tx="josephorr.20170228222513.1">North America</t>
 <t tx="josephorr.20170228222521.1"></t>
 <t tx="josephorr.20170228222526.1"></t>
 <t tx="josephorr.20170228222534.1"></t>
