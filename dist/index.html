@@ -1,4 +1,8 @@
-<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans" rel=stylesheet><style type=text/css>.hljs {
+<!DOCTYPE html><html><head><script>var lconfig = {
+      showapptitle: true,
+      doctitle: '',
+      filename: 'docs'
+    }</script><style type=text/css>.hljs {
       display: block;
       overflow-x: auto;
       padding: 0.5em;
@@ -71,7 +75,6 @@
         <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
         {
         "id":  <xsl:value-of select="@id"/>,
-        "sel": <xsl:value-of select="@sel"/>,
         "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
         "name":"<xsl:value-of select="$nodeSet[1]/vh"/>",
         "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
@@ -81,7 +84,7 @@
 
       <xsl:template match="text()"/>
 
-    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script>var parseQueryString = function(url) {
+    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script src=static/defiant.js></script><script>var parseQueryString = function(url) {
       var urlParams = {};
       url.replace(
         new RegExp("([^?=&]+)(=([^&]*))?", "g"),
@@ -89,5 +92,16 @@
           urlParams[$1] = $3;
         }
       );
+      for (k in urlParams){
+        v = urlParams[k]
+        if (typeof v !== 'undefined'){
+          lconfig[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'");
+        }
+      }
+      var hash = window.location.hash
+      if (!hash) {
+        window.location.hash = 't/1'
+      }
       return urlParams;
-    }</script><link href=static/css/app.b5313926265aa411d67c1661de68c71d.css rel=stylesheet><link href=fonts.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.ed1882edf0080d5f2002.js></script><script type=text/javascript src=static/js/vendor.d352c1923e8e449042dc.js></script><script type=text/javascript src=static/js/app.13e560827a52439afd31.js></script></body></html>
+    }
+    parseQueryString(window.location.href)</script><link href=static/css/app.c0c1632c5714e065b96a68f0ace8d939.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.0f67f3c20700ec067429.js></script><script type=text/javascript src=static/js/vendor.d5e5631acbf44d261b82.js></script><script type=text/javascript src=static/js/app.97e0fa68e7e12b13e133.js></script></body></html>
