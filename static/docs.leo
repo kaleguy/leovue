@@ -571,7 +571,8 @@ Leo Viewer 0.9 only is tested in Chrome and may not display correctly in other b
 Current features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
-* Node titles can be Markdown Urls
+* Node titles can be urls to markdown files
+* Node titles can be urls to html pages
 * Outline and Inline views
 * Drag and drop a Leo file to display
 
@@ -580,6 +581,8 @@ Features planned for version 1:
 * Keyboard support
 * Search
 * D3 Trees
+* Accordion Mode (close other nodes except ancestors)
+* SEO version (static html files)
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>

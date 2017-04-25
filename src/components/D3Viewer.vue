@@ -1,11 +1,16 @@
 <template>
-  <div class="d3viewer">
-   <h1>TEST</h1>
+  <div>
+    <div>
+      <d3tree ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
+              :margin-x="Marginx" :margin-y="Marginy" :type="type"
+              :layout-type="layoutType" :duration="duration"
+              class="tree"></d3tree>
+    </div>
   </div>
 </template>
 
 <script>
-  // import D3Tree from 'vued3tree'
+  import D3tree from '../lib/D3tree'
 
   let target = {el: null}
   export default {
@@ -13,13 +18,24 @@
     props: {
     },
     components: {
+      D3tree
     },
     data: function () {
       return {
         target: target,
         open: false,
         active: false,
-        lhandle: true
+        lhandle: true,
+        type: 'tree',
+        layoutType: 'euclidean',
+        duration: 750,
+        Marginx: 30,
+        Marginy: 30,
+        nodeText: 'name',
+        currentNode: null,
+        zoomable: true,
+        isLoading: false,
+        events: []
       }
     },
     watch: {
@@ -32,6 +48,7 @@
     },
     computed: {
       data () {
+        // console.log('D', this.$store.state.leodata)
         return this.$store.state.leodata
       },
       text () {
@@ -39,54 +56,14 @@
       }
     },
     mounted: function () {
-      this.$store.dispatch('loadLeo', {filename: 'docs'})
     }
   }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .accordionviewer{
-    height: 100%
-  }
-
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  .panes-container {
-    display: flex;
+  .tree {
+    height: 600px;
     width: 100%;
-    overflow: hidden;
-  }
-
-  .center-pane {
-    width: 900px;
-    background: #fff;
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .panes-container {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-  p {
-    line-height:1.3em;
   }
 
 </style>
