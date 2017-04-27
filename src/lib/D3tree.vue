@@ -148,7 +148,7 @@ export default {
 
   methods: {
     getSize () {
-      var width = this.$el.clientWidth
+      var width = this.$el.clientWidth + 80
       var height = this.$el.clientHeight
       return { width, height }
     },
@@ -202,7 +202,8 @@ export default {
 
       const text = allNodes.append('text')
         .attr('dy', '.35em')
-        .text(d => {
+        .text((d, i) => {
+          if (i === 0) { return '' }
           let t = d.data[this.nodeText]
           const re = /^\[(.*?)\]\((.*?)\)$/
           const match = re.exec(t)

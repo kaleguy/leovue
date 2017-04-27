@@ -29,7 +29,7 @@
         type: 'tree',
         layoutType: 'euclidean',
         duration: 750,
-        Marginx: 30,
+        Marginx: 100,
         Marginy: 30,
         nodeText: 'name',
         currentNode: null,
@@ -65,5 +65,4 @@
     height: 600px;
     width: 100%;
   }
-
 </style>
