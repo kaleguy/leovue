@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pane">
     <div v-show="textContent"
          id="tlayout">
       <div id="lhandle"
@@ -142,6 +142,8 @@ export default {
     padding-top: 10px;
     max-width: 620px;
     min-width: 500px;
+    height: calc(100vh - 26px);
+    overflow: auto;
   }
   p {
     line-height:1.3em;
@@ -157,5 +159,9 @@ export default {
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
+  }
+  .pane {
+    height: 100%;
+    background: #fff;
   }
 </style>

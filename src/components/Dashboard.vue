@@ -54,7 +54,7 @@ li {
   margin: 0 10px;
 }
 #main {
-  padding-top: 20px;
+  padding-top: 26px;
   height: 100%;
 }
 a {

@@ -102,7 +102,7 @@ HTML, BODY
   color: #990000;
 
 .md
-  margin-left: 40px
+  margin-left: 20px
   margin-top: 10px
   max-width: 600px
 
@@ -115,5 +115,7 @@ HTML, BODY
  -ms-user-select: none
  user-select: none
 
+a
+  color: #42b983
 
 </style>

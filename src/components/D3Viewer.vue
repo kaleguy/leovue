@@ -1,16 +1,20 @@
 <template>
-  <div>
+  <div class="d3viewer">
+<!--
     <div>
       <d3tree ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
               :margin-x="Marginx" :margin-y="Marginy" :type="type"
               :layout-type="layoutType" :duration="duration"
               class="tree"></d3tree>
     </div>
+-->
+    <splitpane></splitpane>
   </div>
 </template>
 
 <script>
   import D3tree from '../lib/D3tree'
+  import SplitPane from './SplitPane'
 
   let target = {el: null}
   export default {
@@ -18,7 +22,8 @@
     props: {
     },
     components: {
-      D3tree
+      D3tree,
+      splitpane: SplitPane
     },
     data: function () {
       return {
@@ -61,8 +66,8 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .tree {
-    height: 600px;
+  .d3viewer {
+    height: 100%;
     width: 100%;
   }
 </style>

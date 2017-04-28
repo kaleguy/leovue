@@ -136,7 +136,7 @@ function showSite (title, panel) {
     axios.get(url)
       .then((response) => {
         let html = md.render(response.data)
-        html = '<div class="md">' + html + '</div>'
+        html = '@language md\n<div class="md">' + html + '</div>'
         html = replaceRelUrls(html, base)
         showText.call(this, html)
         this.$store.commit('CONTENT_PANE', {type: 'text'}) // TODO: still needed?
