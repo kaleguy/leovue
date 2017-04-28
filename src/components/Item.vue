@@ -26,7 +26,6 @@
           :model="model"
           :key="model.id"
           :textItems="textItems"
-          :vTargetEl="vTargetEl"
           :targetEl="targetEl">
         </item>
         <div v-show="isOpenInline" class="hshim"></div>
@@ -124,7 +123,7 @@ function getFileExtension (filename) {
   return ext
 }
 // TODO: replace DOM manipulation in this function?
-function showSite (title, panel) {
+function showSite (title, inline) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
   const url = match[2]
@@ -146,17 +145,21 @@ function showSite (title, panel) {
       })
     return
   }
-  panel.className = 'vinline'
+  let iframeClass = 'vinline'
+  if (!inline) {
+    iframeClass = 'voutline'
+  }
   const iframeHTML = `
+    <div class='${iframeClass}'>
     <iframe
-       src="" height="100%" width="100%"
+       src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
        frameBorder="0" />
+   </div>
   `
-  panel.innerHTML = iframeHTML
-  let iframe = document.getElementsByTagName('iframe')[0]
-  iframe.src = url
+  this.myContent = iframeHTML
+  this.$store.commit('IFRAME_HTML', {iframeHTML})
   this.$store.commit('CONTENT_PANE', {type: 'site'})
 }
 
@@ -191,7 +194,6 @@ export default {
   props: {
     model: Object,
     targetEl: Boolean,
-    vTargetEl: Element,
     textItems: Object,
     top: Boolean
   },
@@ -322,15 +324,13 @@ export default {
     },
     showContent: function () {
       let targetEl = this.targetEl
-      let vTargetEl = this.vTargetEl
       // let inline = false
       if (!targetEl) {
         this.inline = true
-        vTargetEl = document.getElementById('item-' + this.model.id)
       }
       // test for presence of url in title, if so it is external content
       if (/^\[/.test(this.model.name)) {
-        return showSite.call(this, this.model.name, vTargetEl)
+        return showSite.call(this, this.model.name, this.inline)
       } else {
         this.$store.commit('CONTENT_PANE', {type: 'text'})
         showText.call(this, this.textItems[this.model.t])

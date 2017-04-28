@@ -6,7 +6,7 @@
       </div>
       <div class="panes-separator"
            id="panes-separator"></div>
-      <div id="right-pane">
+      <div id="right-pane" class="right-pane">
         <slot name="right"></slot>
       </div>
     </div>
@@ -91,11 +91,6 @@
     padding: 0;
   }
   .right-pane {
-    flex: auto;
-    background: #fff;
-    padding:0px;
-    padding-top: 10px;
-    max-width: 620px;
-    min-width: 500px;
+    width: 100%;
   }
 </style>

@@ -54,7 +54,8 @@ export default new Vuex.Store({
     currentItemContent: '',
     openItemIds: [],
     history: [0],
-    historyIndex: 0
+    historyIndex: 0,
+    iframeHTML: ''
   },
   mutations: {
     LEO (state, o) {
@@ -73,6 +74,9 @@ export default new Vuex.Store({
     },
     CONTENT_PANE (state, o) {
       state.contentPane = o.type
+    },
+    IFRAME_HTML (state, o) {
+      state.iframeHTML = o.iframeHTML
     },
     VIEW_TYPE (state, o) {
       state.viewType = o.type

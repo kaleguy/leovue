@@ -11,6 +11,7 @@
   export default {
     name: 'app',
     methods: {
+      // drag and drop a leo file
       dragover_handler (ev) {
         // Prevent default select and drag behavior
         ev.preventDefault()
@@ -102,9 +103,10 @@ HTML, BODY
   color: #990000;
 
 .md
-  margin-left: 20px
+  margin-left: 10px
   margin-top: 10px
   max-width: 600px
+  padding-right: 10px
 
 .unselectable
  -moz-user-select: -moz-none

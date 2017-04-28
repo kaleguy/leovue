@@ -7,8 +7,7 @@
           :model="data"
           :top="true"
           :textItems="text"
-          :targetEl="target.el"
-          :vTargetEl="target.v">
+          :targetEl="target.el">
         </item>
       </ul>
       <contentpane slot="right"></contentpane>

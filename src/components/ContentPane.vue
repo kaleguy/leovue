@@ -23,7 +23,11 @@
         </div>
       </div>
     </div>
-    <div v-show="iframeContent" style="min-height:100%; display:flex; background:#fff" id="vpane"></div>
+    <div v-show="iframeContent"
+         style="min-height:100%; display:flex; background:#fff; width: 100%"
+         v-html="iframeHTML"
+         id="vpane">
+    </div>
   </div>
 </template>
 
@@ -79,6 +83,13 @@ export default {
       // console.log('xxxx', this.$store.state.currentItemContent)
       return this.$store.state.currentItemContent
     },
+    iframeHTML () {
+      if (this.iframeContent) {
+        return this.$store.state.iframeHTML
+      } else {
+        return ''
+      }
+    },
     hasNext () {
       return this.$store.state.currentItem.next
     },
@@ -92,7 +103,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   .handle-button {
     height:20px;
     width: 20px;
@@ -149,8 +160,8 @@ export default {
     line-height:1.3em;
   }
   #vpane {
-    width: 100%;”
-  background: #fff;
+    width: 100%;
+    background: #fff;
   }
   #tlayout {
     background: #fff;
@@ -163,5 +174,9 @@ export default {
   .pane {
     height: 100%;
     background: #fff;
+    width: 100%;
+  }
+  .voutline {
+    width: 100%;
   }
 </style>
