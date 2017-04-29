@@ -105,7 +105,7 @@ HTML, BODY
 .md
   margin-left: 10px
   margin-top: 10px
-  max-width: 600px
+  max-width: 700px
   padding-right: 10px
 
 .unselectable

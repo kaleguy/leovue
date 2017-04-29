@@ -32,36 +32,6 @@ function getLanguage (text) {
   return language
 }
 
-/*
- function getParentEls (arr, el) {
-   if (el.parentElement) {
-   arr.push(el.parentElement)
-   getParentEls(arr, el.parentElement)
-   } else {
-   return arr
-   }
- }
- */
-
-// get language from extension
-/*
-if (/^\s*@clean/.test(title)) {
-  var re = /(?:\.([^.]+))?$/
-  var ext = re.exec(title)[1]
-  var ng = ['txt', 'md', 'html']
-  if (ng.indexOf(ext) === -1) {
-    language = ext
-  }
-  const langs = {
-    js: 'javascript',
-    ts: 'typescript'
-  }
-  if (langs[ext]) {
-    language = langs[ext]
-  }
-}
-*/
-
 function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
@@ -72,3 +42,61 @@ module.exports = {
   getLanguage,
   removeFirstLine
 }
+
+/*
+ showContent: function () {
+ let targetEl = this.targetEl
+ if (!targetEl) {
+ this.inline = true
+ }
+ // test for presence of url in title, if so it is external content
+ if (/^\[/.test(this.model.name)) {
+ return showSite.call(this, this.model.name, this.inline)
+ } else {
+ this.$store.commit('CONTENT_PANE', {type: 'text'})
+ showText.call(this, this.textItems[this.model.t])
+ }
+ }
+ */
+
+/* ,
+ setContent: function () {
+ if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
+ this.$store.commit('INIT') // set that current item has been shown
+ this.showContent()
+ }
+ if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
+ this.showContent()
+ }
+ }
+ */
+
+/*
+ function getParentEls (arr, el) {
+ if (el.parentElement) {
+ arr.push(el.parentElement)
+ getParentEls(arr, el.parentElement)
+ } else {
+ return arr
+ }
+ }
+ */
+
+// get language from extension
+/*
+ if (/^\s*@clean/.test(title)) {
+ var re = /(?:\.([^.]+))?$/
+ var ext = re.exec(title)[1]
+ var ng = ['txt', 'md', 'html']
+ if (ng.indexOf(ext) === -1) {
+ language = ext
+ }
+ const langs = {
+ js: 'javascript',
+ ts: 'typescript'
+ }
+ if (langs[ext]) {
+ language = langs[ext]
+ }
+ }
+ */

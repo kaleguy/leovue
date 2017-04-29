@@ -151,7 +151,7 @@ export default {
     background: #fff;
     padding:0px;
     padding-top: 10px;
-    max-width: 620px;
+    max-width: 700px;
     min-width: 500px;
     height: calc(100vh - 26px);
     overflow: auto;

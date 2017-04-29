@@ -63,13 +63,10 @@
         this.onEvent('onClick', evt)
       },
       onEvent (eventName, data) {
-        console.log('data', data.data.id)
-        const text = 'this is a test'
-        this.$store.commit('CURRENT_ITEM_CONTENT', { text })
         this.events.push({eventName, data: data.data})
-        // console.log({eventName, data: data})
+        const id = data.data.id
+        this.$store.dispatch('setCurrentItem', {id})
       }
-
     },
     watch: {
       '$route': {

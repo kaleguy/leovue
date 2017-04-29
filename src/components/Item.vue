@@ -173,22 +173,15 @@ export default {
           })
         }
       }
-
       // TODO: put this after Velocity promise
-      const item = this.model
-      debugger
-      this.$store.dispatch('setCurrentItem', {item})
+      const id = this.model.id
+      this.$store.dispatch('setCurrentItem', {id})
     }
-  }
-  /* ,
-
+  },
   mounted () {
-    this.setContent()
   },
   updated () {
-    this.setContent()
   }
-  */
 }
 </script>
 

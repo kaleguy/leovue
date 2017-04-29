@@ -4,16 +4,17 @@ import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
 import axios from 'axios'
 const util = require('../util.js')
-
-Vue.use(Vuex)
-
 const md = require('markdown-it')({
   html: true,
   linkify: true,
   typographer: true
 })
 const hljs = require('highlight.js')
+
+Vue.use(Vuex)
+
 function showText (context, text) {
+  context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
     text = ''
     context.commit('CURRENT_ITEM_CONTENT', { text })
@@ -48,7 +49,7 @@ function showText (context, text) {
   context.commit('CURRENT_ITEM_CONTENT', { text })
 }
 
-function showSite (title, inline) {
+function showSite (context, title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
   const url = match[2]
@@ -62,61 +63,32 @@ function showSite (title, inline) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        showText.call(this, html)
-        this.$store.commit('CONTENT_PANE', {type: 'text'})
+        showText(context, html)
+        context.commit('CONTENT_PANE', {type: 'text'})
       })
       .catch(function (error) {
         console.log(error)
       })
     return
   }
-  let iframeClass = 'vinline'
-  if (!inline) {
-    iframeClass = 'voutline'
-  }
   const iframeHTML = `
-    <div class='${iframeClass}'>
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
        frameBorder="0" />
-   </div>
   `
-  this.$store.commit('IFRAME_HTML', {iframeHTML})
-  this.$store.commit('CONTENT_PANE', {type: 'site'})
+  context.commit('IFRAME_HTML', {iframeHTML})
+  context.commit('CONTENT_PANE', {type: 'site'})
 }
 
-/*
-showContent: function () {
-  let targetEl = this.targetEl
-  if (!targetEl) {
-    this.inline = true
-  }
-  // test for presence of url in title, if so it is external content
-  if (/^\[/.test(this.model.name)) {
-    return showSite.call(this, this.model.name, this.inline)
-  } else {
-    this.$store.commit('CONTENT_PANE', {type: 'text'})
-    showText.call(this, this.textItems[this.model.t])
-  }
-}
-*/
-
-/* ,
-setContent: function () {
-  if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
-    this.$store.commit('INIT') // set that current item has been shown
-    this.showContent()
-  }
-  if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
-    this.showContent()
-  }
-}
-*/
-
-// ===============================================
-
+/**
+ * setData set the data from the Leo file.
+ * @param context
+ * @param ldata
+ * @param filename
+ * @param route
+ */
 function setData (context, ldata, filename, route) {
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
@@ -125,10 +97,11 @@ function setData (context, ldata, filename, route) {
     text: ldata.textItems,
     filename: filename
   })
-  let selectedId = route.params.id
-  if (!selectedId) {
-    selectedId = 1
+  let id = route.params.id
+  if (!id) {
+    id = 1
   }
+  // TODO: use vuex-router
   const match = route.path.match(/\/(\w+)\//)
   let pathType = 't'
   if (match) {
@@ -136,18 +109,15 @@ function setData (context, ldata, filename, route) {
   }
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
-  const openItems = JSON.search(ldata.data, '//*[id="' + selectedId + '"]/ancestor::*')
+  const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
   if (!openItems) { return }
   const openItemIds = openItems.reduce((acc, o) => {
     acc.push(+o.id)
     return acc
   }, [])
-  openItemIds.push(+selectedId)
+  openItemIds.push(+id)
   context.commit('OPEN_ITEMS', {openItemIds})
-  const currentItem = {
-    id: +selectedId
-  }
-  context.commit('CURRENT_ITEM', currentItem)
+  context.dispatch('setCurrentItem', {id})
 }
 export default new Vuex.Store({
   state: {
@@ -242,10 +212,6 @@ export default new Vuex.Store({
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
     }
-    /*,
-    HISTORY_INDEX (state, o) {
-      state.historyIndex = o.historyIndex
-    } */
   },
   actions: {
     loadLeo (context, o) {
@@ -258,11 +224,17 @@ export default new Vuex.Store({
       setData(context, ldata, 'dnd', o.route)
     },
     setCurrentItem (context, o) {
-      const item = o.item
-      context.commit('CURRENT_ITEM', {id: item.id})
-      context.commit('CONTENT_PANE', {type: 'text'})
-      showText(context, context.state.leotext[item.t])
-      console.log(showSite)
+      const id = o.id
+      context.commit('CURRENT_ITEM', {id})
+      let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
+      if (item) {
+        item = item[0]
+        if (/^\[/.test(item.name)) {
+          showSite(context, item.name)
+        } else {
+          showText(context, context.state.leotext[item.t])
+        }
+      }
     }
   }
 })
