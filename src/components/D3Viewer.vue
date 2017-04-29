@@ -1,5 +1,5 @@
 <template>
-  <div class="d3viewer">
+  <div class="treeviewer">
 <!--
     <div>
       <d3tree ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
@@ -8,13 +8,26 @@
               class="tree"></d3tree>
     </div>
 -->
-    <splitpane></splitpane>
+    <splitpane>
+      <div slot="left">
+          <d3tree
+                  style="height:600px"
+                  ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
+                  :margin-x="Marginx" :margin-y="Marginy" :type="type"
+                  :layout-type="layoutType" :duration="duration"
+                  @clicked="onClick"
+                  class="tree"></d3tree>
+
+      </div>
+      <contentpane slot="right"></contentpane>
+    </splitpane>
   </div>
 </template>
 
 <script>
   import D3tree from '../lib/D3tree'
   import SplitPane from './SplitPane'
+  import ContentPane from './ContentPane'
 
   let target = {el: null}
   export default {
@@ -23,7 +36,8 @@
     },
     components: {
       D3tree,
-      splitpane: SplitPane
+      splitpane: SplitPane,
+      contentpane: ContentPane
     },
     data: function () {
       return {
@@ -42,6 +56,20 @@
         isLoading: false,
         events: []
       }
+    },
+    methods: {
+      onClick (evt) {
+        this.currentNode = evt.element
+        this.onEvent('onClick', evt)
+      },
+      onEvent (eventName, data) {
+        console.log('data', data.data.id)
+        const text = 'this is a test'
+        this.$store.commit('CURRENT_ITEM_CONTENT', { text })
+        this.events.push({eventName, data: data.data})
+        // console.log({eventName, data: data})
+      }
+
     },
     watch: {
       '$route': {

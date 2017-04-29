@@ -36,158 +36,6 @@
 
 <script>
 
-const md = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typographer: true
-})
-
-const hljs = require('highlight.js')
-function showText (text) {
-  if (!text) {
-    this.$store.commit('CURRENT_ITEM_CONTENT', { text })
-    return
-  }
-  let language = getLanguage(text)
-
-  text = text.replace(/<</g, '\u00AB')
-  text = text.replace(/>>/g, '\u00BB')
-
-  /*
-  // get language from extension
-  if (/^\s*@clean/.test(title)) {
-    var re = /(?:\.([^.]+))?$/
-    var ext = re.exec(title)[1]
-    var ng = ['txt', 'md', 'html']
-    if (ng.indexOf(ext) === -1) {
-      language = ext
-    }
-    const langs = {
-      js: 'javascript',
-      ts: 'typescript'
-    }
-    if (langs[ext]) {
-      language = langs[ext]
-    }
-  }
-  */
-
-  // just plain text
-  if (!language) {
-    language = 'plaintext'
-  }
-  // remove directives from first line
-  if (/^\s*?@/.test(text)) {
-    text = removeFirstLine(text)
-  }
-  switch (language) {
-    case 'plaintext':
-      text = `<div class="text">${text}</div>`
-      break
-    case 'md':
-      text = md.render(text)
-      break
-    case 'html':
-      break
-    default:
-      text = `<pre><code class="${language}">${text}</code></pre>`
-      text = hljs.highligh(text)
-  }
-  this.$store.commit('CURRENT_ITEM_CONTENT', { text })
-  if (this.inline) {
-    this.myContent = text
-  }
-}
-
-function replaceRelUrls (html, base) {
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(html, 'text/html')
-  const images = doc.images
-  for (let i = 0; i < images.length; i++) {
-    let image = images[i]
-    let src = image.getAttribute('src')
-    if (/http:/.test(src)) { return }
-    if (/^\//.test(src)) {
-      src = base + src
-    } else {
-      src = base + '/' + src
-    }
-    image.setAttribute('src', src)
-  }
-  return doc.body.innerHTML
-}
-
-function getFileExtension (filename) {
-  const re = /(?:\.([^.]+))?$/
-  const ext = re.exec(filename)[1]
-  return ext
-}
-// TODO: replace DOM manipulation in this function?
-function showSite (title, inline) {
-  const re = /^\[(.*?)\]\((.*?)\)$/
-  const match = re.exec(title)
-  const url = match[2]
-  if (!url) { return }
-  const ext = getFileExtension(url)
-  const base = url.substring(0, url.lastIndexOf('/'))
-  // TODO: add spinner
-  if (ext === 'md') {
-    axios.get(url)
-      .then((response) => {
-        let html = md.render(response.data)
-        html = '@language md\n<div class="md">' + html + '</div>'
-        html = replaceRelUrls(html, base)
-        showText.call(this, html)
-        this.$store.commit('CONTENT_PANE', {type: 'text'}) // TODO: still needed?
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
-    return
-  }
-  let iframeClass = 'vinline'
-  if (!inline) {
-    iframeClass = 'voutline'
-  }
-  const iframeHTML = `
-    <div class='${iframeClass}'>
-    <iframe
-       src="${url}" height="100%" width="100%"
-       marginwidth="0" marginheight="0"
-       hspace="0" vspace="0"
-       frameBorder="0" />
-   </div>
-  `
-  this.myContent = iframeHTML
-  this.$store.commit('IFRAME_HTML', {iframeHTML})
-  this.$store.commit('CONTENT_PANE', {type: 'site'})
-}
-
-function getLanguage (text) {
-  let language = ''
-  const re = /^@language (\w+)/
-  let languageTokens = re.exec(text)
-  if (languageTokens) {
-    language = languageTokens[1]
-  }
-  return language
-}
-
-/*
-function getParentEls (arr, el) {
-  if (el.parentElement) {
-    arr.push(el.parentElement)
-    getParentEls(arr, el.parentElement)
-  } else {
-    return arr
-  }
-}
-*/
-
-function removeFirstLine (text) {
-  return text.split(/[\n]/).splice(1).join('\n')
-}
-import axios from 'axios'
 import Velocity from 'velocity-animate'
 export default {
   name: 'item',
@@ -202,8 +50,7 @@ export default {
       reset: true,
       openFlag: false,
       inline: false,
-      closearrow: false,
-      myContent: ''
+      closearrow: false
     }
   },
   computed: {
@@ -241,6 +88,17 @@ export default {
     },
     initialized () {
       return this.$store.state.initialized
+    },
+    myContent () {
+      if (this.inline) {
+        if (this.$store.state.contentType === 'site') {
+          return this.$store.state.iframeHTML
+        } else {
+          return this.$store.state.currentItemContent
+        }
+      } else {
+        return ''
+      }
     }
   },
   methods: {
@@ -317,57 +175,24 @@ export default {
       }
 
       // TODO: put this after Velocity promise
-      const currentItem = {
-        id: this.model.id
-      }
-      this.$store.commit('CURRENT_ITEM', currentItem)
-    },
-    showContent: function () {
-      let targetEl = this.targetEl
-      // let inline = false
-      if (!targetEl) {
-        this.inline = true
-      }
-      // test for presence of url in title, if so it is external content
-      if (/^\[/.test(this.model.name)) {
-        return showSite.call(this, this.model.name, this.inline)
-      } else {
-        this.$store.commit('CONTENT_PANE', {type: 'text'})
-        showText.call(this, this.textItems[this.model.t])
-      }
-    },
-    setContent: function () {
-      if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
-        this.$store.commit('INIT') // set that current item has been shown
-        this.showContent()
-      }
-      if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
-        this.showContent()
-      }
+      const item = this.model
+      debugger
+      this.$store.dispatch('setCurrentItem', {item})
     }
-  },
-  watch: {
-/*
-    '$route': {
-      handler: function (val, oldVal, changed) {
-      },
-      immediate: true
-    }
-*/
-  },
-  // TODO: refactor next two methocs
+  }
+  /* ,
+
   mounted () {
     this.setContent()
   },
   updated () {
     this.setContent()
   }
+  */
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
-
 <style scoped>
   .topItem SPAN {
     font-size: 30px;

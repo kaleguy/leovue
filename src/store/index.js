@@ -2,8 +2,120 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
+import axios from 'axios'
+const util = require('../util.js')
 
 Vue.use(Vuex)
+
+const md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true
+})
+const hljs = require('highlight.js')
+function showText (context, text) {
+  if (!text) {
+    text = ''
+    context.commit('CURRENT_ITEM_CONTENT', { text })
+    return
+  }
+  let language = util.getLanguage(text)
+
+  text = text.replace(/<</g, '\u00AB')
+  text = text.replace(/>>/g, '\u00BB')
+
+  // just plain text
+  if (!language) {
+    language = 'plaintext'
+  }
+  // remove directives from first line
+  if (/^\s*?@/.test(text)) {
+    text = util.removeFirstLine(text)
+  }
+  switch (language) {
+    case 'plaintext':
+      text = `<div class="text">${text}</div>`
+      break
+    case 'md':
+      text = md.render(text)
+      break
+    case 'html':
+      break
+    default:
+      text = `<pre><code class="${language}">${text}</code></pre>`
+      text = hljs.highligh(text)
+  }
+  context.commit('CURRENT_ITEM_CONTENT', { text })
+}
+
+function showSite (title, inline) {
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(title)
+  const url = match[2]
+  if (!url) { return }
+  const ext = util.getFileExtension(url)
+  const base = url.substring(0, url.lastIndexOf('/'))
+  // TODO: add spinner
+  if (ext === 'md') {
+    axios.get(url)
+      .then((response) => {
+        let html = md.render(response.data)
+        html = '@language md\n<div class="md">' + html + '</div>'
+        html = util.replaceRelUrls(html, base)
+        showText.call(this, html)
+        this.$store.commit('CONTENT_PANE', {type: 'text'})
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+    return
+  }
+  let iframeClass = 'vinline'
+  if (!inline) {
+    iframeClass = 'voutline'
+  }
+  const iframeHTML = `
+    <div class='${iframeClass}'>
+    <iframe
+       src="${url}" height="100%" width="100%"
+       marginwidth="0" marginheight="0"
+       hspace="0" vspace="0"
+       frameBorder="0" />
+   </div>
+  `
+  this.$store.commit('IFRAME_HTML', {iframeHTML})
+  this.$store.commit('CONTENT_PANE', {type: 'site'})
+}
+
+/*
+showContent: function () {
+  let targetEl = this.targetEl
+  if (!targetEl) {
+    this.inline = true
+  }
+  // test for presence of url in title, if so it is external content
+  if (/^\[/.test(this.model.name)) {
+    return showSite.call(this, this.model.name, this.inline)
+  } else {
+    this.$store.commit('CONTENT_PANE', {type: 'text'})
+    showText.call(this, this.textItems[this.model.t])
+  }
+}
+*/
+
+/* ,
+setContent: function () {
+  if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
+    this.$store.commit('INIT') // set that current item has been shown
+    this.showContent()
+  }
+  if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
+    this.showContent()
+  }
+}
+*/
+
+// ===============================================
 
 function setData (context, ldata, filename, route) {
   context.commit('RESET') // content item has not been drawn
@@ -86,6 +198,7 @@ export default new Vuex.Store({
     },
     CURRENT_ITEM (state, o) {
       const id = o.id
+      console.log('ID', id)
       // check current for identical
       if (o.id === state.currentItem.id) {
         return
@@ -144,8 +257,12 @@ export default new Vuex.Store({
       const ldata = transformLeoXML(o.xml)
       setData(context, ldata, 'dnd', o.route)
     },
-    setCurrentContent (context, o) {
-      context.commit('CURRENT_ITEM_CONTENT', o)
+    setCurrentItem (context, o) {
+      const item = o.item
+      context.commit('CURRENT_ITEM', {id: item.id})
+      context.commit('CONTENT_PANE', {type: 'text'})
+      showText(context, context.state.leotext[item.t])
+      console.log(showSite)
     }
   }
 })
