@@ -19,6 +19,7 @@ module.exports = {
   'rules': {
     // 'no-unused-vars': 0,
     // allow paren-less arrow functions
+    'no-unreachable' : 0,
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,

@@ -188,7 +188,6 @@ export default {
         originBuilder = d => origin
         forExit = d => ({x: source.x, y: source.y})
       }
-
       const root = this.internaldata.root
       const links = this.internaldata.g.selectAll('.linktree')
          .data(this.internaldata.tree(root).descendants().slice(1), d => d.id)
@@ -205,6 +204,7 @@ export default {
         .text((d, i) => {
           if (i === 0) { return '' }
           let t = d.data[this.nodeText]
+          // remove leo directive, TODO: take this out of component
           const re = /^\[(.*?)\]\((.*?)\)$/
           const match = re.exec(t)
           if (match) {
@@ -225,7 +225,10 @@ export default {
       updateLinks.attr('d', d => drawLink(originBuilder(d), originBuilder(d), this.layout))
 
       const updateAndNewLinks = links.merge(updateLinks)
-      const updateAndNewLinksPromise = toPromise(updateAndNewLinks.transition().duration(this.duration).attr('d', d => drawLink(d, d.parent, this.layout)))
+      const updateAndNewLinksPromise = toPromise(updateAndNewLinks
+          .transition()
+          .duration(this.duration)
+          .attr('d', d => drawLink(d, d.parent, this.layout)))
 
       const exitingLinksPromise = toPromise(links.exit().transition().duration(this.duration).attr('d', d => drawLink(forExit(d), forExit(d), this.layout)).remove())
 
@@ -278,6 +281,15 @@ export default {
       this.maxTextLenght = {first, last}
       this.internaldata.svg.call(this.internaldata.zoom.transform, this.currentTransform)
       this.layout.size(this.internaldata.tree, this.getSize(), this.margin, this.maxTextLenght)
+
+      allNodes.each((d) => {
+        const depth = d.ancestors().length
+        if (depth > 2) {
+          this.collapse(d, false)
+        }
+      })
+
+      console.log('update')
       return this.updateGraph(source)
     },
 

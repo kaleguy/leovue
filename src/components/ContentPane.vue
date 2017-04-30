@@ -175,6 +175,7 @@ export default {
     height: 100%;
     background: #fff;
     width: 100%;
+    position: relative;
   }
   .voutline {
     width: 100%;

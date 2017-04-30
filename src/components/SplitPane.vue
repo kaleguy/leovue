@@ -1,6 +1,7 @@
 <template>
     <div class="panes-container">
       <div class="left-pane unselectable"
+           :style="leftPaneStyle"
            id="left-pane">
          <slot name="left"></slot>
       </div>
@@ -18,6 +19,9 @@
   let paneSep
   export default {
     name: 'splitpane',
+    props: {
+      leftPaneStyle: String
+    },
     data: function () {
       return {
       }
@@ -71,7 +75,6 @@
     height: 100%;
   }
   .left-pane {
-    width: 250px;
     background: #fff;
   }
   .panes-separator {

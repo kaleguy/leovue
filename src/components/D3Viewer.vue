@@ -1,14 +1,6 @@
 <template>
   <div class="treeviewer">
-<!--
-    <div>
-      <d3tree ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
-              :margin-x="Marginx" :margin-y="Marginy" :type="type"
-              :layout-type="layoutType" :duration="duration"
-              class="tree"></d3tree>
-    </div>
--->
-    <splitpane>
+    <splitpane leftPaneStyle="width:500px">
       <div slot="left">
           <d3tree
                   style="height:600px"
@@ -48,7 +40,7 @@
         type: 'tree',
         layoutType: 'euclidean',
         duration: 750,
-        Marginx: 100,
+        Marginx: 60,
         Marginy: 30,
         nodeText: 'name',
         currentNode: null,

@@ -45,6 +45,24 @@
         </div>
         <div class="menu-label">Inline</div>
       </div>
+      <div class="menu-item"
+           @click="setViewType('d')">
+        <div class="icon-box">
+          <icon name="check"
+                v-show="viewType === 'd'"
+                class="check"></icon>
+        </div>
+        <div class="menu-label">Graphic Tree</div>
+      </div>
+      <div class="menu-item"
+           @click="setViewType('z')">
+        <div class="icon-box">
+          <icon name="check"
+                v-show="viewType === 'z'"
+                class="check"></icon>
+        </div>
+        <div class="menu-label">Dendrogram</div>
+      </div>
       <div class="menu-separator"></div>
     </div>
   </div>
@@ -144,6 +162,7 @@
     cursor: pointer
   .menu
     position: fixed
+    z-index: 111
     top: 27px
     overflow: hidden
     background: #ccc
