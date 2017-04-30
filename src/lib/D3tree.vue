@@ -63,6 +63,10 @@ const props = {
   zoomable: {
     type: Boolean,
     default: false
+  },
+  openDepth: {
+    type: Number,
+    default: -1
   }
 }
 
@@ -281,13 +285,14 @@ export default {
       this.maxTextLenght = {first, last}
       this.internaldata.svg.call(this.internaldata.zoom.transform, this.currentTransform)
       this.layout.size(this.internaldata.tree, this.getSize(), this.margin, this.maxTextLenght)
-
-      allNodes.each((d) => {
-        const depth = d.ancestors().length
-        if (depth > 2) {
-          this.collapse(d, false)
-        }
-      })
+      if (this.openDepth > 0 && this.layoutType === 'euclidean') {
+        allNodes.each((d) => {
+          const depth = d.ancestors().length
+          if (depth > this.openDepth) {
+            this.collapse(d, false)
+          }
+        })
+      }
 
       console.log('update')
       return this.updateGraph(source)

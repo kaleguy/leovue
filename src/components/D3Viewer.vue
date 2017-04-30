@@ -3,7 +3,8 @@
     <splitpane leftPaneStyle="width:500px">
       <div slot="left">
           <d3tree
-                  style="height:600px"
+                  style="height:680px"
+                  :openDepth="2"
                   ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
                   :margin-x="Marginx" :margin-y="Marginy" :type="type"
                   :layout-type="layoutType" :duration="duration"
@@ -75,6 +76,9 @@
       },
       text () {
         return this.$store.state.leotext
+      },
+      layoutType () {
+        return 'd'
       }
     },
     mounted: function () {
