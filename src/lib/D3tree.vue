@@ -67,6 +67,10 @@ const props = {
   openDepth: {
     type: Number,
     default: -1
+  },
+  reset: {
+    type: Number,
+    default: 0
   }
 }
 
@@ -248,7 +252,6 @@ export default {
         .attr('opacity', 1))
 
       allNodes.append('circle')
-
       text.attr('x', d => { return d.textInfo ? d.textInfo.x : 0 })
           .attr('dx', function (d) { return d.textInfo ? anchorTodx(d.textInfo.anchor, this) : 0 })
           .attr('transform', d => 'rotate(' + (d.textInfo ? d.textInfo.rotate : 0) + ')')
@@ -273,18 +276,6 @@ export default {
                   .attr('transform', d => translate(forExit(d), this.layout))
                   .attr('opacity', 0).remove())
       exitingNodes.select('circle').attr('r', 1e-6)
-
-      const leaves = root.leaves()
-      const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
-      const last = Math.max(...extremeNodes.map(node => node.getComputedTextLength())) + 6
-      const first = text.node().getComputedTextLength() + 6
-      if (last <= this.maxTextLenght.last && first <= this.maxTextLenght.first) {
-        return Promise.all([allNodesPromise, exitingNodesPromise, textTransition, updateAndNewLinksPromise, exitingLinksPromise])
-      }
-
-      this.maxTextLenght = {first, last}
-      this.internaldata.svg.call(this.internaldata.zoom.transform, this.currentTransform)
-      this.layout.size(this.internaldata.tree, this.getSize(), this.margin, this.maxTextLenght)
       if (this.openDepth > 0 && this.layoutType === 'euclidean') {
         allNodes.each((d) => {
           const depth = d.ancestors().length
@@ -292,9 +283,20 @@ export default {
             this.collapse(d, false)
           }
         })
+      } else {
+        allNodes.each(d => this.expand(d, false))
       }
+      const leaves = root.leaves()
+      const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
+      const last = Math.max(...extremeNodes.map(node => node.getComputedTextLength())) + 6
+      const first = text.node().getComputedTextLength() + 6
+      if (last <= this.maxTextLenght.last && first <= this.maxTextLenght.first) {
+        return Promise.all([allNodesPromise, exitingNodesPromise, textTransition, updateAndNewLinksPromise, exitingLinksPromise])
+      }
+      this.maxTextLenght = {first, last}
+      this.internaldata.svg.call(this.internaldata.zoom.transform, this.currentTransform)
+      this.layout.size(this.internaldata.tree, this.getSize(), this.margin, this.maxTextLenght)
 
-      console.log('update')
       return this.updateGraph(source)
     },
 
@@ -488,13 +490,16 @@ export default {
       this.internaldata.tree = this.tree
       this.redraw()
     },
+    reset () {
+      this.completeRedraw({margin: {x: this.marginX, y: this.marginY}})
+    },
 
     marginX (newMarginX, oldMarginX) {
-      this.completeRedraw({margin: {x: oldMarginX, y: this.marginY}})
+      this.completeRedraw({margin: {x: newMarginX, y: this.marginY}})
     },
 
     marginY (newMarginY, oldMarginY) {
-      this.completeRedraw({margin: {x: this.marginX, y: oldMarginY}})
+      this.completeRedraw({margin: {x: this.marginX, y: newMarginY}})
     },
 
     layout (newLayout, oldLayout) {

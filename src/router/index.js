@@ -36,6 +36,24 @@ export default new Router({
         path: '',
         component: D3Viewer
       }]
+    },
+    {
+      path: '/z/:id',
+      component: Dashboard,
+      children: [{
+        name: 'ZNode',
+        path: '',
+        component: D3Viewer
+      }]
+    },
+    {
+      path: '/r/:id',
+      component: Dashboard,
+      children: [{
+        name: 'RNode',
+        path: '',
+        component: D3Viewer
+      }]
     }
   ]
 })

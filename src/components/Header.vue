@@ -63,6 +63,15 @@
         </div>
         <div class="menu-label">Dendrogram</div>
       </div>
+      <div class="menu-item"
+           @click="setViewType('r')">
+        <div class="icon-box">
+          <icon name="check"
+                v-show="viewType === 'r'"
+                class="check"></icon>
+        </div>
+        <div class="menu-label">Radial Tree</div>
+      </div>
       <div class="menu-separator"></div>
     </div>
   </div>
@@ -92,6 +101,7 @@
         this.$store.commit('VIEW_TYPE', {type})
         this.$store.commit('RESET')
         this.$router.replace({path: '/' + type + '/' + this.$store.state.currentItem.id})
+        // close the menu
         setTimeout(this.toggle, 500)
       },
       goBack () {

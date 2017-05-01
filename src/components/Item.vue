@@ -64,7 +64,7 @@ export default {
       return open
     },
     isOpenInline: function () {
-      return this.isOpen && this.inline
+      return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
       return this.isOpen && !this.closearrow
@@ -90,7 +90,7 @@ export default {
       return this.$store.state.initialized
     },
     myContent () {
-      if (this.inline) {
+      if (this.$route.name === 'ANode') {
         if (this.$store.state.contentType === 'site') {
           return this.$store.state.iframeHTML
         } else {

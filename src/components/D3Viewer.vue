@@ -3,8 +3,9 @@
     <splitpane leftPaneStyle="width:500px">
       <div slot="left">
           <d3tree
-                  style="height:680px"
-                  :openDepth="2"
+                  style="height:calc(100vh - 26px)"
+                  :reset="reset"
+                  :openDepth="openDepth"
                   ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
                   :margin-x="Marginx" :margin-y="Marginy" :type="type"
                   :layout-type="layoutType" :duration="duration"
@@ -38,16 +39,13 @@
         open: false,
         active: false,
         lhandle: true,
-        type: 'tree',
-        layoutType: 'euclidean',
         duration: 750,
-        Marginx: 60,
-        Marginy: 30,
         nodeText: 'name',
         currentNode: null,
         zoomable: true,
         isLoading: false,
-        events: []
+        events: [],
+        reset: 0
       }
     },
     methods: {
@@ -71,17 +69,39 @@
     },
     computed: {
       data () {
-        // console.log('D', this.$store.state.leodata)
         return this.$store.state.leodata
       },
       text () {
         return this.$store.state.leotext
       },
+      openDepth () {
+        if (this.$store.state.viewType === 'd') {
+          return 2
+        }
+        return -1
+      },
+      type () {
+        this.reset = this.reset + 1
+        if (this.$store.state.viewType === 'z') { return 'cluster' }
+        return 'tree'
+      },
       layoutType () {
-        return 'd'
+        if (this.$store.state.viewType === 'r') { return 'circular' }
+        return 'euclidean'
+      },
+      Marginx () {
+        if (this.$store.state.viewType === 'r') { return -300 }
+        return 60
+      },
+      Marginy () {
+        if (this.$store.state.viewType === 'r') { return -200 }
+        return 30
       }
     },
     mounted: function () {
+    },
+    updated () {
+      // console.log('updated')
     }
   }
 </script>
