@@ -153,6 +153,7 @@
     margin: 0
     position: fixed
     width: 100%
+    z-index: 111
   .icon-box
     width: 20px
     margin-left: 20px
@@ -186,7 +187,7 @@
     //box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
     transition: width .5s
   .menu-separator
-    border: 1px solid #ddd
+    border-bottom: 1px solid #ddd
     margin-top: 10px
   .header
     text-align: left

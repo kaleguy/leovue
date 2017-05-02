@@ -53,7 +53,7 @@ function transformLeoXML (xmlString) {
          (!/^@language html/.test(elText)) &&
          (!/^@language md/.test(elText))
       ){
-        elText = escape(elText)
+        // elText = escape(elText)
       }
       textItems[a] = elText
       // h

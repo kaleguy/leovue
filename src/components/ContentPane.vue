@@ -11,8 +11,9 @@
                 name="chevron-left"></icon>
         </div>
       </div>
-      <div class="right-pane"
-           v-html="currentItemContent"></div>
+      <div class="right-cpane"
+           v-html="currentItemContent">
+      </div>
       <div id="rhandle"
            class="handle">
         <div class="handle-button"
@@ -117,41 +118,21 @@ export default {
     color: #ccf;
     margin-left: 9px;
   }
+  #lhandle {
+    max-width: 50px;
+  }
   .handle {
     width:50px;
     align-items: center;
     flex: auto;
     display: flex;
   }
-  #lhandle {
-    height: 100%;
-    min-width: 50px;
-    max-width: 50px;
-    background: #fff;
-  }
-  .panes-separator {
-    width: 11px;
-    background: #eee;
-    position: relative;
-    cursor: col-resize;
-    /*background-image: url('../assets/vertical.png');*/
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-  .panes-container,
-  .panes-separator,
-  .left-pane,
-  .right-pane {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-  .right-pane {
+  .right-cpane {
     flex: auto;
     background: #fff;
     padding:0px;
     padding-top: 10px;
-    max-width: 700px;
+    max-width: 600px;
     min-width: 500px;
     height: calc(100vh - 26px);
     overflow: auto;
@@ -162,6 +143,7 @@ export default {
   #vpane {
     width: 100%;
     background: #fff;
+    height: 100%;
   }
   #tlayout {
     background: #fff;
@@ -178,6 +160,5 @@ export default {
     position: relative;
   }
   .voutline {
-    width: 100%;
   }
 </style>

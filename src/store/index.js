@@ -43,8 +43,10 @@ function showText (context, text) {
     case 'html':
       break
     default:
-      text = `<pre><code class="${language}">${text}</code></pre>`
-      text = hljs.highligh(text)
+      const mu = hljs.highlight(language, text)
+      text = mu.value
+      // text = `<pre><code class="${language}">${text}</code></pre>`
+      text = `<pre>${text}</pre>`
   }
   context.commit('CURRENT_ITEM_CONTENT', { text })
 }
