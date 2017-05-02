@@ -13,13 +13,7 @@ const hljs = require('highlight.js')
 
 Vue.use(Vuex)
 
-function showText (context, text) {
-  context.commit('CONTENT_PANE', {type: 'text'})
-  if (!text) {
-    text = ''
-    context.commit('CURRENT_ITEM_CONTENT', { text })
-    return
-  }
+function formatText (text) {
   let language = util.getLanguage(text)
 
   text = text.replace(/<</g, '\u00AB')
@@ -48,6 +42,17 @@ function showText (context, text) {
       // text = `<pre><code class="${language}">${text}</code></pre>`
       text = `<pre>${text}</pre>`
   }
+  return text
+}
+
+function showText (context, text) {
+  context.commit('CONTENT_PANE', {type: 'text'})
+  if (!text) {
+    text = ''
+    context.commit('CURRENT_ITEM_CONTENT', { text })
+    return
+  }
+  text = formatText(text)
   context.commit('CURRENT_ITEM_CONTENT', { text })
 }
 
@@ -65,6 +70,7 @@ function showSite (context, title) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
+        html = formatText(html)
         showText(context, html)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
@@ -82,6 +88,50 @@ function showSite (context, title) {
   `
   context.commit('IFRAME_HTML', {iframeHTML})
   context.commit('CONTENT_PANE', {type: 'site'})
+}
+
+function setSiteItem (context, item) {
+  const title = item.name
+  const id = item.id
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(title)
+  const url = match[2]
+  if (!url) { return }
+  const ext = util.getFileExtension(url)
+  const base = url.substring(0, url.lastIndexOf('/'))
+  // TODO: add spinner
+  if (ext === 'md') {
+    axios.get(url)
+      .then((response) => {
+        let html = md.render(response.data)
+        html = '@language md\n<div class="md">' + html + '</div>'
+        html = util.replaceRelUrls(html, base)
+        const newItem = {
+          id: id,
+          t: html
+        }
+        console.log('CC', id)
+        context.commit('CONTENT_ITEM_UPDATE')
+        context.commit('CONTENT_ITEM', {item: newItem})
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+    return
+  }
+  const iframeHTML = `
+    <iframe
+       src="${url}" height="100%" width="100%"
+       marginwidth="0" marginheight="0"
+       hspace="0" vspace="0"
+       frameBorder="0" />
+  `
+  const newItem = {
+    id: id,
+    t: iframeHTML
+  }
+  // context.commit('IFRAME_HTML', {iframeHTML})
+  context.commit('CONTENT_ITEM', {item: newItem})
 }
 
 /**
@@ -120,6 +170,8 @@ function setData (context, ldata, filename, route) {
   openItemIds.push(+id)
   context.commit('OPEN_ITEMS', {openItemIds})
   context.dispatch('setCurrentItem', {id})
+  const ids = openItemIds
+  context.dispatch('setContentItems', {ids})
 }
 export default new Vuex.Store({
   state: {
@@ -136,10 +188,12 @@ export default new Vuex.Store({
       prev: 0
     },
     currentItemContent: '',
+    contentItems: {},
     openItemIds: [],
     history: [0],
     historyIndex: 0,
-    iframeHTML: ''
+    iframeHTML: '',
+    contentItemsUpdateCount: 0
   },
   mutations: {
     LEO (state, o) {
@@ -168,9 +222,17 @@ export default new Vuex.Store({
     CURRENT_ITEM_CONTENT (state, o) {
       state.currentItemContent = o.text
     },
+    // for inline content, keep hash of content items
+    CONTENT_ITEM (state, o) {
+      const item = o.item
+      state.contentItems[item.id] = item.t
+    },
+    CONTENT_ITEM_UPDATE (state, o) {
+      state.contentItemsUpdateCount = state.contentItemsUpdateCount + 1
+      console.log('FF', state.contentItemsUpdateCount)
+    },
     CURRENT_ITEM (state, o) {
       const id = o.id
-      console.log('ID', id)
       // check current for identical
       if (o.id === state.currentItem.id) {
         return
@@ -213,6 +275,7 @@ export default new Vuex.Store({
       const ids = state.openItemIds
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
+      // console.log('IDS', ids)
     }
   },
   actions: {
@@ -224,6 +287,26 @@ export default new Vuex.Store({
     loadLeoFromXML (context, o) {
       const ldata = transformLeoXML(o.xml)
       setData(context, ldata, 'dnd', o.route)
+    },
+    setContentItems (context, o) {
+      const ids = o.ids
+      ids.forEach(id => {
+        let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
+        if (item) {
+          item = item[0]
+          if (/^\[/.test(item.name)) {
+            setSiteItem(context, item)
+          } else {
+            let text = context.state.leotext[item.t]
+            text = formatText(text)
+            const newItem = {
+              t: text,
+              id: id
+            }
+            context.commit('CONTENT_ITEM', {item: newItem})
+          }
+        }
+      })
     },
     setCurrentItem (context, o) {
       const id = o.id

@@ -50,7 +50,8 @@ export default {
       reset: true,
       openFlag: false,
       inline: false,
-      closearrow: false
+      closearrow: false,
+      myContent: ''
     }
   },
   computed: {
@@ -89,16 +90,22 @@ export default {
     initialized () {
       return this.$store.state.initialized
     },
-    myContent () {
+    xmyContent () {
       if (this.$route.name === 'ANode') {
+        const text = this.$store.state.contentItems[this.model.id]
+        if (text) {
+          return text
+        }
+        console.log('no item for ', this.model.id, this.$store.state.contentItems)
         if (this.$store.state.contentType === 'site') {
-          return this.$store.state.iframeHTML
+          // return this.$store.state.iframeHTML
         } else {
-          return this.$store.state.currentItemContent
+          // return this.$store.state.currentItemContent
         }
       } else {
-        return ''
       }
+      // console.log(this.$store.state.contentItems)
+      return this.$route.name
     }
   },
   methods: {
@@ -176,6 +183,19 @@ export default {
       // TODO: put this after Velocity promise
       const id = this.model.id
       this.$store.dispatch('setCurrentItem', {id})
+    }
+  },
+  watch: {
+    '$store.state.contentItemsUpdateCount': {
+      handler: function (val, oldVal, changed) {
+        console.log('hi', val, oldVal, changed)
+        if (val > 0 && val !== oldVal) {
+          const text = this.$store.state.contentItems[this.model.id]
+          this.myContent = text
+        }
+      },
+      deep: true,
+      immediate: true
     }
   },
   mounted () {

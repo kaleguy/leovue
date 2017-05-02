@@ -54,9 +54,9 @@ export default {
     },
     resetCurrentItem (id) {
       router.replace('/t/' + id)
-      const currentItem = { id }
-      this.$store.commit('RESET')
-      this.$store.commit('CURRENT_ITEM', currentItem)
+      // const currentItem = { id }
+      // this.$store.commit('RESET')
+      this.$store.dispatch('setCurrentItem', {id})
     }
   },
   computed: {
