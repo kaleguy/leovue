@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Dashboard from '@/components/Dashboard'
 import TreeViewer from '@/components/TreeViewer'
 import D3Viewer from '@/components/D3Viewer'
+import DbViewer from '@/components/DbViewer'
 import AccordionViewer from '@/components/AccordionViewer'
 
 Vue.use(Router)
@@ -53,6 +54,15 @@ export default new Router({
         name: 'RNode',
         path: '',
         component: D3Viewer
+      }]
+    },
+    {
+      path: '/w/:id',
+      component: Dashboard,
+      children: [{
+        name: 'WNode',
+        path: '',
+        component: DbViewer
       }]
     }
   ]
