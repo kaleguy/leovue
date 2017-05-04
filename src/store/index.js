@@ -45,18 +45,24 @@ function formatText (text) {
   return text
 }
 
-function showText (context, text) {
+function showText (context, text, id) {
   context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
     text = ''
+    console.log('NO TEXT')
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
   text = formatText(text)
+  // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
+  // hash of all content items
+  const newItem = { id, t: text }
+  context.commit('CONTENT_ITEM', {item: newItem})
+  context.commit('CONTENT_ITEM_UPDATE')
 }
 
-function showSite (context, title) {
+function showSite (context, title, id) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
   const url = match[2]
@@ -71,7 +77,7 @@ function showSite (context, title) {
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
         html = formatText(html)
-        showText(context, html)
+        showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
       .catch(function (error) {
@@ -110,7 +116,6 @@ function setSiteItem (context, item) {
           id: id,
           t: html
         }
-        console.log('CC', id)
         context.commit('CONTENT_ITEM_UPDATE')
         context.commit('CONTENT_ITEM', {item: newItem})
       })
@@ -119,7 +124,7 @@ function setSiteItem (context, item) {
       })
     return
   }
-  const iframeHTML = `
+  const iframeHTML = `<h1>test</h1>
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
@@ -132,6 +137,7 @@ function setSiteItem (context, item) {
   }
   // context.commit('IFRAME_HTML', {iframeHTML})
   context.commit('CONTENT_ITEM', {item: newItem})
+  context.commit('CONTENT_ITEM_UPDATE')
 }
 
 /**
@@ -229,7 +235,6 @@ export default new Vuex.Store({
     },
     CONTENT_ITEM_UPDATE (state, o) {
       state.contentItemsUpdateCount = state.contentItemsUpdateCount + 1
-      console.log('FF', state.contentItemsUpdateCount)
     },
     CURRENT_ITEM (state, o) {
       const id = o.id
@@ -304,6 +309,7 @@ export default new Vuex.Store({
               id: id
             }
             context.commit('CONTENT_ITEM', {item: newItem})
+            context.commit('CONTENT_ITEM_UPDATE')
           }
         }
       })
@@ -315,9 +321,9 @@ export default new Vuex.Store({
       if (item) {
         item = item[0]
         if (/^\[/.test(item.name)) {
-          showSite(context, item.name)
+          showSite(context, item.name, id)
         } else {
-          showText(context, context.state.leotext[item.t])
+          showText(context, context.state.leotext[item.t], id)
         }
       }
     }

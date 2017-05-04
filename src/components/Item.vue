@@ -89,23 +89,6 @@ export default {
     },
     initialized () {
       return this.$store.state.initialized
-    },
-    xmyContent () {
-      if (this.$route.name === 'ANode') {
-        const text = this.$store.state.contentItems[this.model.id]
-        if (text) {
-          return text
-        }
-        console.log('no item for ', this.model.id, this.$store.state.contentItems)
-        if (this.$store.state.contentType === 'site') {
-          // return this.$store.state.iframeHTML
-        } else {
-          // return this.$store.state.currentItemContent
-        }
-      } else {
-      }
-      // console.log(this.$store.state.contentItems)
-      return this.$route.name
     }
   },
   methods: {
@@ -187,10 +170,12 @@ export default {
   },
   watch: {
     '$store.state.contentItemsUpdateCount': {
-      handler: function (val, oldVal, changed) {
-        console.log('hi', val, oldVal, changed)
+      handler: function (val, oldVal) {
+        if (!this.isOpenInline) { return }
+        // console.log('item update count', val, oldVal)
         if (val > 0 && val !== oldVal) {
           const text = this.$store.state.contentItems[this.model.id]
+          // if (!text) { return }
           this.myContent = text
         }
       },
