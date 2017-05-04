@@ -87,6 +87,9 @@ export default {
         return this.name
       }
     },
+    inlineClass: function () {
+      return 'inline'
+    },
     initialized () {
       return this.$store.state.initialized
     }
@@ -172,7 +175,7 @@ export default {
     '$store.state.contentItemsUpdateCount': {
       handler: function (val, oldVal) {
         if (!this.isOpenInline) { return }
-        // console.log('item update count', val, oldVal)
+        console.log('item update count', val, oldVal)
         if (val > 0 && val !== oldVal) {
           const text = this.$store.state.contentItems[this.model.id]
           // if (!text) { return }
@@ -191,7 +194,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   .topItem SPAN {
     font-size: 30px;
   }
@@ -260,7 +263,7 @@ export default {
     background: #81ff00;
     font-weight:bold;
   }
-  .inline {
+  .inline .content {
     max-width: 700px;
     white-space: normal;
     padding:30px;

@@ -42,6 +42,7 @@ function formatText (text) {
       // text = `<pre><code class="${language}">${text}</code></pre>`
       text = `<pre>${text}</pre>`
   }
+  text = `<div class='content'>${text}</div>`
   return text
 }
 
@@ -86,14 +87,17 @@ function showSite (context, title, id) {
     return
   }
   const iframeHTML = `
+    <div class="vinline>"
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
        frameBorder="0" />
+    </div>
   `
   context.commit('IFRAME_HTML', {iframeHTML})
   context.commit('CONTENT_PANE', {type: 'site'})
+  // context.commit('CONTENT_ITEM_UPDATE')
 }
 
 function setSiteItem (context, item) {
@@ -124,12 +128,14 @@ function setSiteItem (context, item) {
       })
     return
   }
-  const iframeHTML = `<h1>test</h1>
+  const iframeHTML = `
+    <div class="vinline">
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
        frameBorder="0" />
+    </div>
   `
   const newItem = {
     id: id,
@@ -322,6 +328,7 @@ export default new Vuex.Store({
         item = item[0]
         if (/^\[/.test(item.name)) {
           showSite(context, item.name, id)
+          setSiteItem(context, item)
         } else {
           showText(context, context.state.leotext[item.t], id)
         }
