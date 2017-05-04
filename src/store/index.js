@@ -181,9 +181,9 @@ function setData (context, ldata, filename, route) {
   }, [])
   openItemIds.push(+id)
   context.commit('OPEN_ITEMS', {openItemIds})
-  context.dispatch('setCurrentItem', {id})
   const ids = openItemIds
   context.dispatch('setContentItems', {ids})
+  context.dispatch('setCurrentItem', {id})
 }
 export default new Vuex.Store({
   state: {

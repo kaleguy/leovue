@@ -71,8 +71,9 @@ export default {
       return this.isOpen && !this.closearrow
     },
     active: function () {
+      // TODO: change ids to strings
       if (!this.model) { return }
-      return this.$store.state.currentItem.id === this.model.id
+      return +this.$store.state.currentItem.id === +this.model.id
     },
     vtitle: function () {
       const re = /^\[(.*?)\]\((.*?)\)$/
