@@ -1,3 +1,4 @@
 build/*.js
 config/*.js
 src/services/leo.js
+src/vue-grid-layout.js

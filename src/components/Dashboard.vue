@@ -8,13 +8,11 @@
 </template>
 
 <script>
-import TreeViewer from './TreeViewer'
 import AppHeader from './Header'
 
 export default {
   name: 'dashboard',
   components: {
-    treeviewer: TreeViewer,
     appheader: AppHeader
   },
   data () {

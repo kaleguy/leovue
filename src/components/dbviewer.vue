@@ -1,24 +1,38 @@
 <template>
-  <div>
+  <div style="height:100%;width:100%'">
     <grid-layout
-      :layout='layout'
-      :col-num='12'
-      :row-height='30'
-      :is-draggable='true'
-      :is-resizable='true'
-      :vertical-compact='true'
-      :margin='[10, 10]'
-      :use-css-transforms='true'
+      :layout="layout"
+      :col-num="12"
+      :row-height="30"
+      :is-draggable="true"
+      :is-resizable="true"
+      :vertical-compact="true"
+      :margin="[10, 10]"
+      :use-css-transforms="true"
     >
-
-      <grid-item v-for='item in layout'
-                 :key='item.i'
-                 :x='item.x'
-                 :y='item.y'
-                 :w='item.w'
-                 :h='item.h'
-                 :i='item.i'>
-        {{item.i}}
+      <grid-item
+       :x="tbox.x"
+       :y="tbox.y"
+       :w="tbox.w"
+       :h="tbox.h"
+       :i="tbox.i">
+        <ul>
+          <item
+            class="item"
+            :model="data"
+            :top="true"
+            :textItems="text"
+            :targetEl="target.el">
+          </item>
+        </ul>
+      </grid-item>
+      <grid-item
+        :x="cbox.x"
+        :y="cbox.y"
+        :w="cbox.w"
+        :h="cbox.h"
+        :i="cbox.i">
+        <contentpane></contentpane>
       </grid-item>
     </grid-layout>
   </div>
@@ -26,42 +40,35 @@
 
 <script>
   import VueGridLayout from 'vue-grid-layout'
+  import Item from './Item'
+  import ContentPane from './ContentPane'
 
-  var testLayout = [
-    {'x': 0, 'y': 0, 'w': 2, 'h': 2, 'i': '0'},
-    {'x': 2, 'y': 0, 'w': 2, 'h': 4, 'i': '1'},
-    {'x': 4, 'y': 0, 'w': 2, 'h': 5, 'i': '2'},
-    {'x': 6, 'y': 0, 'w': 2, 'h': 3, 'i': '3'},
-    {'x': 8, 'y': 0, 'w': 2, 'h': 3, 'i': '4'},
-    {'x': 10, 'y': 0, 'w': 2, 'h': 3, 'i': '5'},
-    {'x': 0, 'y': 5, 'w': 2, 'h': 5, 'i': '6'},
-    {'x': 2, 'y': 5, 'w': 2, 'h': 5, 'i': '7'},
-    {'x': 4, 'y': 5, 'w': 2, 'h': 5, 'i': '8'},
-    {'x': 6, 'y': 4, 'w': 2, 'h': 4, 'i': '9'},
-    {'x': 8, 'y': 4, 'w': 2, 'h': 4, 'i': '10'},
-    {'x': 10, 'y': 4, 'w': 2, 'h': 4, 'i': '11'},
-    {'x': 0, 'y': 10, 'w': 2, 'h': 5, 'i': '12'},
-    {'x': 2, 'y': 10, 'w': 2, 'h': 5, 'i': '13'},
-    {'x': 4, 'y': 8, 'w': 2, 'h': 4, 'i': '14'},
-    {'x': 6, 'y': 8, 'w': 2, 'h': 4, 'i': '15'},
-    {'x': 8, 'y': 10, 'w': 2, 'h': 5, 'i': '16'},
-    {'x': 10, 'y': 4, 'w': 2, 'h': 2, 'i': '17'},
-    {'x': 0, 'y': 9, 'w': 2, 'h': 3, 'i': '18'},
-    {'x': 2, 'y': 6, 'w': 2, 'h': 2, 'i': '19'}
+  const layout = [
+    {'x': 0, 'y': 0, 'w': 4, 'h': 4, 'i': '0'},
+    {'x': 4, 'y': 0, 'w': 8, 'h': 4, 'i': '1'}
   ]
 
-  var GridLayout = VueGridLayout.GridLayout
-  var GridItem = VueGridLayout.GridItem
+  const GridLayout = VueGridLayout.GridLayout
+  const GridItem = VueGridLayout.GridItem
+  const target = {el: true, v: null}
 
   export default {
     name: 'dbviewer',
     components: {
       GridLayout,
-      GridItem
+      GridItem,
+      item: Item,
+      contentpane: ContentPane
+    },
+    props: {
+      panelHeight: {
+        type: Number,
+        default: 16.5
+      }
     },
     data () {
       return {
-        layout: testLayout
+        layout, target
       }
     },
     computed: {
@@ -70,7 +77,22 @@
       },
       text () {
         return this.$store.state.leotext
+      },
+      xlayout () {
+        // layout.forEach(l => { l.h = 10 })
+        return layout
+      },
+      tbox () {
+        this.layout[0].h = this.panelHeight
+        return this.layout[0]
+      },
+      cbox () {
+        this.layout[1].h = this.panelHeight
+        return this.layout[1]
       }
+    },
+    mounted () {
+      // this.panelHeight = 8
     }
 
   }
@@ -94,7 +116,7 @@
   }
 
   .vue-grid-item:not(.vue-grid-placeholder) {
-    background: #ccc;
+    background: #fff;
     border: 1px solid black;
   }
 
@@ -103,7 +125,7 @@
   }
 
   .vue-grid-item.static {
-    background: #cce;
+    background: #fff;
   }
 
   .vue-grid-item .text {
@@ -124,6 +146,12 @@
 
   .vue-grid-item .add {
     cursor: pointer;
+  }
+  .vue-grid-item .right-cpane {
+    height: auto;
+  }
+  .vue-grid-item .pane {
+    overflow: scroll;
   }
 
 
