@@ -198,6 +198,7 @@ export default {
 <style>
   .topItem SPAN {
     font-size: 30px;
+    line-height: 1.5;
   }
   .topItem {
     margin-bottom: 10px;

@@ -122,7 +122,8 @@ export default {
       maxTextLenght: {
         first: 0,
         last: 0
-      }
+      },
+      initialize: false
     }
   },
 
@@ -276,15 +277,19 @@ export default {
                   .attr('transform', d => translate(forExit(d), this.layout))
                   .attr('opacity', 0).remove())
       exitingNodes.select('circle').attr('r', 1e-6)
-      if (this.openDepth > 0 && this.layoutType === 'euclidean') {
-        allNodes.each((d) => {
-          const depth = d.ancestors().length
-          if (depth > this.openDepth) {
-            this.collapse(d, false)
-          }
-        })
-      } else {
-        allNodes.each(d => this.expand(d, false))
+      if (!this.initialized) {
+        this.initialized = true
+        if (this.openDepth > 0 && this.layoutType === 'euclidean') {
+          allNodes.each((d) => {
+            const depth = d.ancestors().length
+            if (depth > this.openDepth) {
+              this.collapse(d, false)
+            }
+          })
+          // this.initialized = true
+        } else {
+          allNodes.each(d => this.expand(d, false))
+        }
       }
       const leaves = root.leaves()
       const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()
