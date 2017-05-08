@@ -65,7 +65,7 @@ export default {
       return open
     },
     isOpenInline: function () {
-      console.log(this.isOpen && this.$route.name === 'ANode')
+      // console.log(this.isOpen && this.$route.name === 'ANode')
       return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
@@ -149,15 +149,16 @@ export default {
       }
       // toggle inline content if in inline mode
       if (inline && !this.isFolder) {
+        console.log('CLICK')
         duration = 300
         // TODO: refactor this
         let il = this.$el.getElementsByClassName('inline')[0]
-        if (!il) {
-          il = this.$el.getElementsByClassName('vinline')[0]
-        }
+        // if (!il) {
+        //   il = this.$el.getElementsByClassName('vinline')[0]
+        // }
         il.style.display = 'block'
         if (!this.isOpen) {
-          Velocity(il, 'slideDown', {duration: duration, easing: easing}).then(els => {
+          Velocity(il, 'slideDown', {duration, easing}).then(els => {
             this.$store.commit('OPEN_ITEMS', {openItemIds})
           })
         } else {

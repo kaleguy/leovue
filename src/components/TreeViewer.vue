@@ -1,6 +1,6 @@
 <template>
   <div class="treeviewer">
-    <splitpane leftPaneStyle="width:250px">
+    <splitpane leftPaneStyle="width:360px">
       <ul slot="left">
         <item
           class="item"
