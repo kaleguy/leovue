@@ -91,7 +91,7 @@
       },
       Marginx () {
         if (this.$store.state.viewType === 'r') { return -300 }
-        return 60
+        return 80
       },
       Marginy () {
         if (this.$store.state.viewType === 'r') { return -200 }

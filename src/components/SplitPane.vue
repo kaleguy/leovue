@@ -96,4 +96,7 @@
   .right-pane {
     width: 100%;
   }
+  #left-pane {
+    overflow-y: scroll;
+  }
 </style>

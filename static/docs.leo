@@ -64,16 +64,16 @@
 &lt;defs&gt;
 &lt;style&gt;
 H1 {margin: 0}
-.cls-1{font-size:172px;stroke:#000;stroke-width:14px;}
+.cls-1{font-size:122px;stroke:#000;stroke-width:14px;}
 .cls-1,.cls-2{stroke-miterlimit:10;font-family:Verdana;} 
-.cls-2{font-size:70px;fill:#f2f2f2;stroke:gray;}
+.cls-2{font-size:40px;fill:#f2f2f2;stroke:gray;}
 .cls-3{letter-spacing:-0.02em;}
 .cls-4{letter-spacing:-0.02em;}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
 &lt;text class="cls-1" transform="translate(25 156.2)"&gt;LEO&lt;/text&gt;
-&lt;text class="cls-2" transform="translate(78 208)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(82 188)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
@@ -86,7 +86,9 @@ Leo has features that make it particularly suitable for documenting code and oth
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
-text, html, markdown or code. Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
+text, html, markdown or code. Content nodes can also point to other documents or websites.
+&lt;p&gt;
+Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
 &lt;/p&gt;
  </t>
 <t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
@@ -457,7 +459,7 @@ function transformLeoXML (xmlString) {
          (!/^@language html/.test(elText)) &amp;&amp;
          (!/^@language md/.test(elText))
       ){
-        elText = escape(elText)
+        // elText = escape(elText)
       }
       textItems[a] = elText
       // h

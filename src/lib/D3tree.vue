@@ -277,19 +277,25 @@ export default {
                   .attr('transform', d => translate(forExit(d), this.layout))
                   .attr('opacity', 0).remove())
       exitingNodes.select('circle').attr('r', 1e-6)
-      if (!this.initialized) {
-        this.initialized = true
-        if (this.openDepth > 0 && this.layoutType === 'euclidean') {
+      if (!this.initialized && this.layoutType === 'euclidean' && this.type === 'tree') {
+        if (this.openDepth > 0) {
           allNodes.each((d) => {
             const depth = d.ancestors().length
             if (depth > this.openDepth) {
               this.collapse(d, false)
             }
           })
+          if (this.layoutType === 'euclidean') { this.initialized = true }
           // this.initialized = true
         } else {
           allNodes.each(d => this.expand(d, false))
         }
+      }
+      console.log(this.layoutType, this.initialized)
+      if (this.type !== 'tree') {
+        console.log('here')
+        allNodes.each(d => this.expand(d, false))
+        this.initialized = false
       }
       const leaves = root.leaves()
       const extremeNodes = text.filter(d => leaves.indexOf(d) !== -1).nodes()

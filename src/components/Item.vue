@@ -65,6 +65,7 @@ export default {
       return open
     },
     isOpenInline: function () {
+      console.log(this.isOpen && this.$route.name === 'ANode')
       return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
@@ -98,7 +99,7 @@ export default {
   methods: {
     toggle: function () {
       // toggle the tree node
-      let duration = 200
+      let duration = 300
       const easing = 'linear'
       this.reset = false // TODO: remove
       // toggle the open/close state of the item
@@ -129,15 +130,14 @@ export default {
           il.style.display = 'block'
         }
         if (!this.isOpen) {
-          // const me = this
-          this.$store.commit('OPEN_ITEMS', {openItemIds})
-          Velocity(ul, 'slideDown', {duration, easing}).then((els) => {
+          Velocity(ul, 'slideDown', {duration, easing}).then(els => {
+            this.$store.commit('OPEN_ITEMS', {openItemIds})
           })
           // if (inline){
           //  Velocity(il, 'slideDown', {duration, easing})
           // }
         } else {
-          Velocity(ul, 'slideUp', {duration, easing}).then((els) => {
+          Velocity(ul, 'slideUp', {duration, easing}).then(els => {
             this.$store.commit('OPEN_ITEMS', {openItemIds})
             this.closearrow = false
             // this.inline = false
@@ -157,13 +157,13 @@ export default {
         }
         il.style.display = 'block'
         if (!this.isOpen) {
-          Velocity(il, 'slideDown', {duration: duration, easing: easing})
-          this.$store.commit('OPEN_ITEMS', {openItemIds})
+          Velocity(il, 'slideDown', {duration: duration, easing: easing}).then(els => {
+            this.$store.commit('OPEN_ITEMS', {openItemIds})
+          })
         } else {
-          const me = this
-          Velocity(il, 'slideUp', {duration, easing}).then(function (els) {
-            me.$store.commit('OPEN_ITEMS', {openItemIds})
-            me.closearrow = false
+          Velocity(il, 'slideUp', {duration, easing}).then(els => {
+            this.$store.commit('OPEN_ITEMS', {openItemIds})
+            this.closearrow = false
           })
         }
       }
@@ -176,7 +176,6 @@ export default {
     '$store.state.contentItemsUpdateCount': {
       handler: function (val, oldVal) {
         if (!this.isOpenInline) { return }
-        console.log('item update count', val, oldVal)
         if (val > 0 && val !== oldVal) {
           const text = this.$store.state.contentItems[this.model.id]
           // if (!text) { return }

@@ -72,6 +72,15 @@
         </div>
         <div class="menu-label">Radial Tree</div>
       </div>
+      <div class="menu-item"
+           @click="setViewType('w')">
+        <div class="icon-box">
+          <icon name="check"
+                v-show="viewType === 'w'"
+                class="check"></icon>
+        </div>
+        <div class="menu-label">Movable Panes</div>
+      </div>
       <div class="menu-separator"></div>
     </div>
   </div>
@@ -92,7 +101,7 @@
           menuEl.style.width = 0
           menuEl.style.borderLeft = 'none'
         } else {
-          menuEl.style.width = '160px'
+          menuEl.style.width = '180px'
           menuEl.style.borderLeft = '1px solid #ccc'
         }
         this.menu = !this.menu

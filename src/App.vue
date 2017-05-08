@@ -79,6 +79,9 @@ HTML, BODY
   height: 100%
   width: 100%
 
+H1
+  margin: 4px
+
 #app
   font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased

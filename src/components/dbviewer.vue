@@ -128,7 +128,7 @@
     background: #fff;
   }
 
-  .vue-grid-item .text {
+  .xvue-grid-item .text {
     font-size: 24px;
     text-align: center;
     position: absolute;
@@ -151,6 +151,9 @@
     height: auto;
   }
   .vue-grid-item .pane {
+    overflow: scroll;
+  }
+  .vue-grid-item {
     overflow: scroll;
   }
 

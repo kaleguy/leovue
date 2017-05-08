@@ -87,7 +87,7 @@ function showSite (context, title, id) {
     return
   }
   const iframeHTML = `
-    <div class="vinline>"
+    <div style="width:100%">
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"
@@ -116,6 +116,7 @@ function setSiteItem (context, item) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
+        html = formatText(html)
         const newItem = {
           id: id,
           t: html
