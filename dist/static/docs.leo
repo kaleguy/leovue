@@ -22,7 +22,7 @@
 <v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Some Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -64,16 +64,16 @@
 &lt;defs&gt;
 &lt;style&gt;
 H1 {margin: 0}
-.cls-1{font-size:172px;stroke:#000;stroke-width:14px;}
+.cls-1{font-size:122px;stroke:#000;stroke-width:14px;}
 .cls-1,.cls-2{stroke-miterlimit:10;font-family:Verdana;} 
-.cls-2{font-size:70px;fill:#f2f2f2;stroke:gray;}
+.cls-2{font-size:40px;fill:#f2f2f2;stroke:gray;}
 .cls-3{letter-spacing:-0.02em;}
 .cls-4{letter-spacing:-0.02em;}
 &lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
 &lt;text class="cls-1" transform="translate(25 156.2)"&gt;LEO&lt;/text&gt;
-&lt;text class="cls-2" transform="translate(78 208)"&gt;viewer&lt;/text&gt;
+&lt;text class="cls-2" transform="translate(82 188)"&gt;viewer&lt;/text&gt;
 &lt;/svg&gt;
 &lt;/div&gt;
 
@@ -86,7 +86,9 @@ Leo has features that make it particularly suitable for documenting code and oth
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
-text, html, markdown or code. Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
+text, html, markdown or code. Content nodes can also point to other documents or websites.
+&lt;p&gt;
+Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
 &lt;/p&gt;
  </t>
 <t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
@@ -245,46 +247,18 @@ For other environments, see the:
 <t tx="josephorr.20170328225654.1">@language xml
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
-    &lt;div class="panes-container"&gt;
-      &lt;div class="left-pane unselectable" id="left-pane"&gt;
-        &lt;ul id="demo"&gt;
-          &lt;item
-            class="item"
-            :model="data"
-            :top="true"
-            :textItems="text"
-            :targetEl="target.el"
-            :vTargetEl="target.v"&gt;
-          &lt;/item&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;div class="panes-separator"
-           id="panes-separator"&gt;&lt;/div&gt;
-      &lt;div v-show="textContent"
-           id="tlayout"&gt;
-        &lt;div id="lhandle"
-             class="handle"&gt;
-          &lt;div class="handle-button"
-               v-show="hasPrev"
-               @click="goPrev"&gt;
-            &lt;icon class="icon"
-                  name="chevron-left"&gt;&lt;/icon&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="right-pane"
-             v-html="currentItemContent"&gt;&lt;/div&gt;
-        &lt;div id="rhandle"
-             class="handle"&gt;
-          &lt;div class="handle-button"
-               v-show="hasNext"
-               @click="goNext"&gt;
-            &lt;icon class="icon"
-                  name="chevron-right"&gt;&lt;/icon&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div v-show="iframeContent" style="min-height:100%; display:flex; background:#fff" id="vpane"&gt;&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;splitpane leftPaneStyle="width:250px"&gt;
+      &lt;ul slot="left"&gt;
+        &lt;item
+          class="item"
+          :model="data"
+          :top="true"
+          :textItems="text"
+          :targetEl="target.el"&gt;
+        &lt;/item&gt;
+      &lt;/ul&gt;
+      &lt;contentpane slot="right"&gt;&lt;/contentpane&gt;
+    &lt;/splitpane&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 </t>
@@ -292,48 +266,20 @@ For other environments, see the:
 
 &lt;script&gt;
   import Item from './Item'
-  import router from '../router'
+  import ContentPane from './ContentPane'
+  import SplitPane from './SplitPane'
 
-  let leftPane
-  let vPane
-  let rightPane
-  let paneSep
   let target = {el: true, v: null}
   export default {
     name: 'treeviewer',
     components: {
-      item: Item
+      item: Item,
+      contentpane: ContentPane,
+      splitpane: SplitPane
     },
     data: function () {
       return {
-        target: target,
-        open: false,
-        active: false,
-        lhandle: true,
-        rightSibling: null
-      }
-    },
-    watch: {
-      '$route': {
-        handler: function (val, oldVal, changed) {
-        },
-        immediate: true
-      }
-    },
-    methods: {
-      goNext () {
-        const next = this.$store.state.currentItem.next
-        this.resetCurrentItem(next)
-      },
-      goPrev () {
-        const prev = this.$store.state.currentItem.prev
-        this.resetCurrentItem(prev)
-      },
-      resetCurrentItem (id) {
-        router.replace('/t/' + id)
-        const currentItem = { id }
-        this.$store.commit('RESET')
-        this.$store.commit('CURRENT_ITEM', currentItem)
+        target: target
       }
     },
     computed: {
@@ -342,171 +288,22 @@ For other environments, see the:
       },
       text () {
         return this.$store.state.leotext
-      },
-      iframeContent () {
-        if (this.$store.state.contentPane === 'site') {
-          return true
-        } else {
-          return false
-        }
-      },
-      textContent () {
-        if (this.$store.state.contentPane === 'text') {
-          return true
-        } else {
-          return false
-        }
-      },
-      currentItemContent () {
-        // console.log('xxxx', this.$store.state.currentItemContent)
-        return this.$store.state.currentItemContent
-      },
-      hasNext () {
-        return this.$store.state.currentItem.next
-      },
-      hasPrev () {
-        return this.$store.state.currentItem.prev
       }
-    },
-    mounted: function () {
-      // TODO: clean up targets
-      leftPane = document.getElementById('left-pane')
-      vPane = document.getElementById('vpane')
-      rightPane = document.getElementById('right-pane')
-      target.v = vPane  // iframe content
-      paneSep = document.getElementById('panes-separator')
-
-      // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
-      // - the left limit is positioned at 10% of the screen width
-      // - the right limit is positioned at 90% of the screen width
-      var leftLimit = 0
-      var rightLimit = 90
-
-      paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
-        fix.skipX = true
-        if (pageX &lt; window.innerWidth * leftLimit / 100) {
-          pageX = window.innerWidth * leftLimit / 100
-          fix.pageX = pageX
-        }
-        if (pageX &gt; window.innerWidth * rightLimit / 100) {
-          pageX = window.innerWidth * rightLimit / 100
-          fix.pageX = pageX
-        }
-        var cur = pageX / window.innerWidth * 100
-        if (cur &lt; 0) {
-          cur = 0
-        }
-        if (cur &gt; window.innerWidth) {
-          cur = window.innerWidth
-        }
-        var right = (100 - cur - 2)
-        leftPane.style.width = cur + '%'
-        rightPane.style.width = right + '%'
-      }, null, 'horizontal')
-    },
-    updated () {
     }
+
   }
 &lt;/script&gt;
 </t>
 <t tx="josephorr.20170328225741.1">@language css
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
 &lt;style scoped&gt;
-  #vpane {
-    width: 100%;”
-    background: #fff;
-  }
-  #tlayout {
-    background: #fff;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  .tlayout TD {
-    padding: 0
-  }
-
   .treeviewer{
     height: 100%
   }
-  h1, h2 {
-    font-weight: normal;
-  }
-
   ul {
     list-style-type: none;
     padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  .panes-container {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-  .left-pane {
-    width: 250px;
-    background: #fff;
-  }
-  .panes-separator {
-    width: 11px;
-    background: #eee;
-    position: relative;
-    cursor: col-resize;
-    /*background-image: url('../assets/vertical.png');*/
-    background-repeat: no-repeat;
-    background-position: 50%;
-  }
-  .panes-container,
-  .panes-separator,
-  .left-pane,
-  .right-pane {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-  .right-pane {
-    flex: auto;
-    background: #fff;
-    padding:0px;
-    padding-top: 10px;
-    max-width: 620px;
-    min-width: 500px;
-  }
-  p {
-    line-height:1.3em;
-  }
-  .handle-button {
-    height:20px;
-    width: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ccf;
-    margin-left: 9px;
-  }
-  .handle {
-    width:50px;
-    align-items: center;
-    flex: auto;
-    display: flex;
-  }
-  #lhandle {
-    height: 100%;
-    min-width: 50px;
-    background: #fff;
+    padding-left: 10px;
   }
 &lt;/style&gt;
 </t>
@@ -571,7 +368,8 @@ Leo Viewer 0.9 only is tested in Chrome and may not display correctly in other b
 Current features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
-* Node titles can be Markdown Urls
+* Node titles can be urls to markdown files
+* Node titles can be urls to html pages
 * Outline and Inline views
 * Drag and drop a Leo file to display
 
@@ -580,6 +378,8 @@ Features planned for version 1:
 * Keyboard support
 * Search
 * D3 Trees
+* Accordion Mode (close other nodes except ancestors)
+* SEO version (static html files)
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
@@ -659,7 +459,7 @@ function transformLeoXML (xmlString) {
          (!/^@language html/.test(elText)) &amp;&amp;
          (!/^@language md/.test(elText))
       ){
-        elText = escape(elText)
+        // elText = escape(elText)
       }
       textItems[a] = elText
       // h
