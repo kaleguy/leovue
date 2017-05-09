@@ -1,6 +1,6 @@
 {
   "name": "leoviewer",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Viewer for Leo Files",
   "author": "Joe Orr <joe.orr@gmail.com>",
   "private": true,

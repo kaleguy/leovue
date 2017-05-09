@@ -154,80 +154,80 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-  .check
-    margin-top: 2px
-    margin-bottom: -3px
-  .holder
-    padding: 0
-    margin: 0
-    position: fixed
-    width: 100%
-    z-index: 111
-  .icon-box
-    width: 20px
-    margin-left: 20px
-    display: inline-block
-  .menu-label
-    width: 80px
-    display: inline
-  .menu-header
-    padding: 10px
-    font-weight: bold
-    text-align: center
-    white-space: nowrap
-  .menu-item
-    padding: 4px
-    // text-align: center
-    white-space: nowrap
-    cursor: pointer
-  .menu
-    position: fixed
-    z-index: 111
-    top: 27px
-    overflow: hidden
-    background: #ccc
-    width: 0
-    right: 0
-    height: 100%
-    //border-left: 1px solid #999
-    border-top: 1px solid #ccc
-    //-webkit-box-shadow: 10px 0 5px -2px #888;
-    //box-shadow: 10px 0 5px -2px #888;
-    //box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
-    transition: width .5s
-  .menu-separator
-    border-bottom: 1px solid #ddd
-    margin-top: 10px
-  .header
-    text-align: left
-    background: #eee
-    font-weight: normal
-    padding: 2px
-    padding-left: 6px
-    color: #333
-    border-bottom: 1px solid #ddd
-  .icon
-    float: right
-    padding: 0
-    padding-top: 2px
-    padding-right: 7px
-    color: #666
-  .icon-button
-    cursor: pointer
-    margin: 0
-    padding: 0
-  .vshim
-    width: 8px
-    float: right
-  .disabled
-    color: #ccc
-  .button-shim
-    width: 8px
-    float: right
-    height: 16px
-  .app-title
-    font-weight: normal
-    color: #333
-  .doc-title
-    font-weight: bold
+.check
+  margin-top: 2px
+  margin-bottom: -3px
+.holder
+  padding: 0
+  margin: 0
+  position: fixed
+  width: 100%
+  z-index: 111
+.icon-box
+  width: 20px
+  margin-left: 20px
+  display: inline-block
+.menu-label
+  width: 80px
+  display: inline
+.menu-header
+  padding: 10px
+  font-weight: bold
+  text-align: center
+  white-space: nowrap
+.menu-item
+  padding: 4px
+  // text-align: center
+  white-space: nowrap
+  cursor: pointer
+.menu
+  position: fixed
+  z-index: 111
+  top: 27px
+  overflow: hidden
+  background: #ccc
+  width: 0
+  right: 0
+  height: 100%
+  //border-left: 1px solid #999
+  border-top: 1px solid #ccc
+  //-webkit-box-shadow: 10px 0 5px -2px #888;
+  //box-shadow: 10px 0 5px -2px #888;
+  //box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
+  transition: width .5s
+.menu-separator
+  border-bottom: 1px solid #ddd
+  margin-top: 10px
+.header
+  text-align: left
+  background: #eee
+  font-weight: normal
+  padding: 2px
+  padding-left: 6px
+  color: #333
+  border-bottom: 1px solid #ddd
+.icon
+  float: right
+  padding: 0
+  padding-top: 2px
+  padding-right: 7px
+  color: #666
+.icon-button
+  cursor: pointer
+  margin: 0
+  padding: 0
+.vshim
+  width: 8px
+  float: right
+.disabled
+  color: #ccc
+.button-shim
+  width: 8px
+  float: right
+  height: 16px
+.app-title
+  font-weight: normal
+  color: #333
+.doc-title
+  font-weight: bold
 </style>

@@ -148,7 +148,7 @@ function setSiteItem (context, item) {
 }
 
 /**
- * setData set the data from the Leo file.
+ * setData Load data from the Leo file.
  * @param context
  * @param ldata
  * @param filename
@@ -186,6 +186,7 @@ function setData (context, ldata, filename, route) {
   context.dispatch('setContentItems', {ids})
   context.dispatch('setCurrentItem', {id})
 }
+// ========= The Store ===============
 export default new Vuex.Store({
   state: {
     leotext: {},

@@ -4,6 +4,7 @@ import Dashboard from '@/components/Dashboard'
 import TreeViewer from '@/components/TreeViewer'
 import D3Viewer from '@/components/D3Viewer'
 import DbViewer from '@/components/DbViewer'
+import Settings from '@/components/Settings'
 import AccordionViewer from '@/components/AccordionViewer'
 
 Vue.use(Router)
@@ -64,6 +65,10 @@ export default new Router({
         path: '',
         component: DbViewer
       }]
+    },
+    {
+      path: '/settings',
+      component: Settings
     }
   ]
 })

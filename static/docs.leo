@@ -247,7 +247,7 @@ For other environments, see the:
 <t tx="josephorr.20170328225654.1">@language xml
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
-    &lt;splitpane leftPaneStyle="width:250px"&gt;
+    &lt;splitpane leftPaneStyle="width:360px"&gt;
       &lt;ul slot="left"&gt;
         &lt;item
           class="item"
@@ -360,10 +360,9 @@ content as a web page.
 The content you are reading was created in Leo. If you're reading this on the Leo Viewer
 site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is currently at version 0.9. Some features are being reworked or added, at which point 
-version 1.0 will be released.
+Leo Viewer is currently at version 0.9.4 
 
-Leo Viewer 0.9 only is tested in Chrome and may not display correctly in other browsers.
+Leo Viewer 0.9.x only is tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -372,14 +371,15 @@ Current features include:
 * Node titles can be urls to html pages
 * Outline and Inline views
 * Drag and drop a Leo file to display
+* Graphic trees
 
 Features planned for version 1:
 * Left Nav collapse - expand
 * Keyboard support
 * Search
-* D3 Trees
 * Accordion Mode (close other nodes except ancestors)
 * SEO version (static html files)
+* Load Leo files into subtrees
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
