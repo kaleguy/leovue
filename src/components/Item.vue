@@ -125,17 +125,10 @@ export default {
           this.$store.commit('OPEN_ITEMS', {openItemIds})
           Velocity(ul, 'slideDown', {duration, easing}).then(els => {
           })
-          // if (inline){
-          //  Velocity(il, 'slideDown', {duration, easing})
-          // }
         } else {
           Velocity(ul, 'slideUp', {duration, easing}).then(els => {
             this.$store.commit('OPEN_ITEMS', {openItemIds})
             this.closearrow = false
-            // this.inline = false
-            // if (inline){
-            //  Velocity(ul, 'slideDown', {duration, easing})
-            // }
           })
         }
       }

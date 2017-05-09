@@ -25,61 +25,17 @@
       </div>
     </div>
     <div id="menu" class="menu">
-      <div class="menu-header">View Type</div>
-      <div class="menu-item"
-           @click="setViewType('t')">
+    <div class="menu-header">View Type</div>
+      <div  v-for="v in viewTypes"
+            class="menu-item"
+           @click="setViewType(v.type)">
         <div class="icon-box">
           <icon
             name="check"
-            v-show="viewType === 't'"
+            v-show="viewType === v.type"
             class="check"></icon>
         </div>
-        <div class="menu-label">Outline</div>
-      </div>
-      <div class="menu-item"
-           @click="setViewType('a')">
-        <div class="icon-box">
-          <icon name="check"
-                v-show="viewType === 'a'"
-                class="check"></icon>
-        </div>
-        <div class="menu-label">Inline</div>
-      </div>
-      <div class="menu-item"
-           @click="setViewType('d')">
-        <div class="icon-box">
-          <icon name="check"
-                v-show="viewType === 'd'"
-                class="check"></icon>
-        </div>
-        <div class="menu-label">Graphic Tree</div>
-      </div>
-      <div class="menu-item"
-           @click="setViewType('z')">
-        <div class="icon-box">
-          <icon name="check"
-                v-show="viewType === 'z'"
-                class="check"></icon>
-        </div>
-        <div class="menu-label">Dendrogram</div>
-      </div>
-      <div class="menu-item"
-           @click="setViewType('r')">
-        <div class="icon-box">
-          <icon name="check"
-                v-show="viewType === 'r'"
-                class="check"></icon>
-        </div>
-        <div class="menu-label">Radial Tree</div>
-      </div>
-      <div class="menu-item"
-           @click="setViewType('w')">
-        <div class="icon-box">
-          <icon name="check"
-                v-show="viewType === 'w'"
-                class="check"></icon>
-        </div>
-        <div class="menu-label">Movable Panes</div>
+        <div class="menu-label">{{v.name}}</div>
       </div>
       <div class="menu-separator"></div>
     </div>
@@ -91,7 +47,14 @@
     name: 'appheader',
     data () {
       return {
-        menu: false
+        menu: false,
+        viewTypes: [
+          {name: 'Outline', type: 't'},
+          {name: 'Inline', type: 'a'},
+          {name: 'Graphic Tree', type: 'd'},
+          {name: 'Dendrogram', type: 'z'},
+          {name: 'Movable Panes', type: 'w'}
+        ]
       }
     },
     methods: {
