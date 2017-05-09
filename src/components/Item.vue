@@ -65,7 +65,6 @@ export default {
       return open
     },
     isOpenInline: function () {
-      // console.log(this.isOpen && this.$route.name === 'ANode')
       return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
@@ -107,14 +106,7 @@ export default {
       if (!this.isOpen) {
         openItemIds.push(this.model.id)
       } else {
-        const a = []
-        openItemIds.forEach((id) => {
-          if (id === this.model.id) {
-          } else {
-            a.push(id)
-          }
-        })
-        openItemIds = a
+        openItemIds = openItemIds.filter(id => id !== this.model.id)
         this.closearrow = true
       }
       let inline = true
@@ -130,8 +122,8 @@ export default {
           il.style.display = 'block'
         }
         if (!this.isOpen) {
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
           Velocity(ul, 'slideDown', {duration, easing}).then(els => {
-            this.$store.commit('OPEN_ITEMS', {openItemIds})
           })
           // if (inline){
           //  Velocity(il, 'slideDown', {duration, easing})
@@ -149,17 +141,16 @@ export default {
       }
       // toggle inline content if in inline mode
       if (inline && !this.isFolder) {
-        console.log('CLICK')
         duration = 300
         // TODO: refactor this
         let il = this.$el.getElementsByClassName('inline')[0]
         // if (!il) {
         //   il = this.$el.getElementsByClassName('vinline')[0]
         // }
-        il.style.display = 'block'
+        il.parentElement.style.display = 'block'
         if (!this.isOpen) {
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
           Velocity(il, 'slideDown', {duration, easing}).then(els => {
-            this.$store.commit('OPEN_ITEMS', {openItemIds})
           })
         } else {
           Velocity(il, 'slideUp', {duration, easing}).then(els => {
@@ -168,7 +159,6 @@ export default {
           })
         }
       }
-      // TODO: put this after Velocity promise
       const id = this.model.id
       this.$store.dispatch('setCurrentItem', {id})
     }
