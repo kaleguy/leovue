@@ -61,7 +61,7 @@ export default {
     isOpen: function () {
       const ids = this.$store.state.openItemIds
       let open = true
-      if (ids.indexOf(this.model.id) === -1) { open = false }
+      if (ids.indexOf(this.model.id + '') === -1) { open = false }
       return open
     },
     isOpenInline: function () {
@@ -73,7 +73,7 @@ export default {
     active: function () {
       // TODO: change ids to strings
       if (!this.model) { return }
-      return +this.$store.state.currentItem.id === +this.model.id
+      return this.$store.state.currentItem.id === this.model.id
     },
     vtitle: function () {
       const re = /^\[(.*?)\]\((.*?)\)$/

@@ -164,7 +164,7 @@ function setData (context, ldata, filename, route) {
   })
   let id = route.params.id
   if (!id) {
-    id = 1
+    id = '1'
   }
   // TODO: use vuex-router
   const match = route.path.match(/\/(\w+)\//)
@@ -177,10 +177,10 @@ function setData (context, ldata, filename, route) {
   const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
   if (!openItems) { return }
   const openItemIds = openItems.reduce((acc, o) => {
-    acc.push(+o.id)
+    acc.push(o.id + '')
     return acc
   }, [])
-  openItemIds.push(+id)
+  openItemIds.push(id + '')
   context.commit('OPEN_ITEMS', {openItemIds})
   const ids = openItemIds
   context.dispatch('setContentItems', {ids})

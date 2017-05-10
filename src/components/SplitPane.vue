@@ -6,7 +6,13 @@
          <slot name="left"></slot>
       </div>
       <div class="panes-separator"
-           id="panes-separator"></div>
+           id="panes-separator">
+           <div class="split-left"
+                @click="slide('left')"><icon name="angle-double-left"></icon></div>
+           <div class="split-right"
+                v-show="showRightButton"
+                @click="slide('right')"><icon name="angle-double-right"></icon></div>
+      </div>
       <div id="right-pane" class="right-pane">
         <slot name="right"></slot>
       </div>
@@ -24,17 +30,34 @@
     },
     data: function () {
       return {
+        showRightButton: false,
+        leftPaneWidth: 0
       }
     },
     methods: {
+      slide: function (direction) {
+        if (direction === 'left') {
+          this.leftPaneWidth = leftPane.style.width
+          leftPane.style.width = 0
+          this.showRightButton = true
+        } else {
+          leftPane.style.width = this.leftPaneWidth
+          this.showRightButton = false
+        }
+      }
     },
     computed: {
+      xshowRightButton: function () {
+        console.log('wtf')
+        if (!leftPane) { return }
+        console.log('left')
+        return !leftPane.style.width
+      }
     },
     mounted: function () {
       leftPane = document.getElementById('left-pane')
       rightPane = document.getElementById('right-pane')
       paneSep = document.getElementById('panes-separator')
-
       // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
       // - the left limit is positioned at 10% of the screen width
       // - the right limit is positioned at 90% of the screen width
@@ -76,15 +99,16 @@
   }
   .left-pane {
     background: #fff;
+    transition: width .3s
   }
   .panes-separator {
     width: 11px;
     background: #eee;
     position: relative;
     cursor: col-resize;
-    /*background-image: url('../assets/vertical.png');*/
+    background-image: url('../assets/vertical.png');
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: 50% 46%;
   }
   .panes-container,
   .panes-separator,
@@ -98,5 +122,17 @@
   }
   #left-pane {
     overflow-y: scroll;
+  }
+  .split-left, .split-right {
+    margin-left: 0px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  .split-left {
+    margin-top: calc(50vh - 116px);
+  }
+  .split-right {
+    margin-top: calc(128px);
   }
 </style>

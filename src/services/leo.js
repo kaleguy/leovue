@@ -15,9 +15,10 @@ function loadDoc (filename) {
   return p
 }
 function cleanText(data){
-  data.name = data.name.replace(/<</g, '\u00AB');
-  data.name = data.name.replace(/>>/g, '\u00BB');
+  data.name = data.name.replace(/<</g, '\u00AB')
+  data.name = data.name.replace(/>>/g, '\u00BB')
   data.name = escape(data.name)
+  data.id = data.id + '';
   let children = data.children;
   if (!children) { return }
   for (let i = 0; i < children.length; i++){
@@ -63,9 +64,9 @@ function transformLeoXML (xmlString) {
       vnodes[i].setAttribute('id', i + 1)
     }
     var scripts = document.getElementsByTagName('script'),
-      str     = '',
-      i       = 0,
-      il      = scripts.length;
+        str     = '',
+        i       = 0,
+        il      = scripts.length;
     for (; i<il; i++) {
       if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
     }
