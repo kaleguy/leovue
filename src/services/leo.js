@@ -14,31 +14,40 @@ function loadDoc (filename) {
   })
   return p
 }
-function cleanText(data){
+function cleanText(data, startId){
   data.name = data.name.replace(/<</g, '\u00AB')
   data.name = data.name.replace(/>>/g, '\u00BB')
   data.name = escape(data.name)
-  data.id = data.id + '';
+  data.id = data.id + ''; // probably unneeded now
   let children = data.children;
   if (!children) { return }
   for (let i = 0; i < children.length; i++){
-    cleanText(children[i])
+    cleanText(children[i], startId)
   }
   data.t = data.t.replace(/^.*?_/,'')
+  if (startId) {
+    data.t = startId + '-' + data.t + ''
+  }
 }
-function getLeoJSON (filename) {
+function getLeoJSON (filename, id) {
   if (filename.indexOf('#') > 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
   var p = new Promise((resolve, reject) => {
-    loadDoc('./static/' + filename + '.leo', 'Text')
-      .then((xmlString) => {
-        resolve(transformLeoXML(xmlString))
+    if (!filename.match(/static/)) {
+      filename = '/static/' + filename
+    }
+    if (!filename.match(/\.leo$/)) {
+      filename = filename + '.leo'
+    }
+    loadDoc(filename, 'Text')
+      .then(xmlString => {
+        resolve(transformLeoXML(xmlString, id))
       })
   })
   return p
 }
-function transformLeoXML (xmlString) {
+function transformLeoXML (xmlString, startId) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -49,6 +58,9 @@ function transformLeoXML (xmlString) {
       let a = el.getAttribute('tx')
       a = a.replace(/\./g,'_')
       a = a.replace(/^.*?_/,'')
+      if (startId) {
+        a = startId + '-' + a
+      }
       if (
          (/^@language /.test(elText)) &&
          (!/^@language html/.test(elText)) &&
@@ -60,8 +72,13 @@ function transformLeoXML (xmlString) {
       // h
     }
     const vnodes = xml.getElementsByTagName('v')
+    let pid
     for (let i = 0; i < vnodes.length; i++) {
-      vnodes[i].setAttribute('id', i + 1)
+      pid = i + 1
+      if (startId) {
+        pid = startId + '-' + pid
+      }
+      vnodes[i].setAttribute('id', '"' +pid + '"')
     }
     var scripts = document.getElementsByTagName('script'),
         str     = '',
@@ -77,7 +94,7 @@ function transformLeoXML (xmlString) {
     let data = resultDocument.textContent
     data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
     data = JSON.parse(data)
-    cleanText(data)
+    cleanText(data, startId)
     const xdata = {}
     xdata.data = data
     xdata.textItems = textItems

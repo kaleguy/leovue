@@ -33,13 +33,17 @@
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
+<v t="josephorr.20170304103722.1" a="E"><vh>Markdown</vh>
 <v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 <v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
+<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](example.md)</vh></v>
 </v>
 <v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
+</v>
+<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
+<v t="josephorr.20170511083006.1"><vh>[Example](example.leo)</vh></v>
 </v>
 <v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
@@ -49,7 +53,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -421,9 +425,10 @@ function loadDoc (filename) {
   return p
 }
 function cleanText(data){
-  data.name = data.name.replace(/&lt;&lt;/g, '\u00AB');
-  data.name = data.name.replace(/&gt;&gt;/g, '\u00BB');
+  data.name = data.name.replace(/&lt;&lt;/g, '\u00AB')
+  data.name = data.name.replace(/&gt;&gt;/g, '\u00BB')
   data.name = escape(data.name)
+  data.id = data.id + '';
   let children = data.children;
   if (!children) { return }
   for (let i = 0; i &lt; children.length; i++){
@@ -469,9 +474,9 @@ function transformLeoXML (xmlString) {
       vnodes[i].setAttribute('id', i + 1)
     }
     var scripts = document.getElementsByTagName('script'),
-      str     = '',
-      i       = 0,
-      il      = scripts.length;
+        str     = '',
+        i       = 0,
+        il      = scripts.length;
     for (; i&lt;il; i++) {
       if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
     }
@@ -512,5 +517,8 @@ Using parameters on the URL:
 http://www.mysite.com/leoviewer?filename=example&amp;title=My Leo File&amp;showapptitle=false
 ```
 </t>
+<t tx="josephorr.20170511082833.1"></t>
+<t tx="josephorr.20170511083006.1"></t>
+<t tx="josephorr.20170511084727.1"></t>
 </tnodes>
 </leo_file>

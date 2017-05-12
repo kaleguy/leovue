@@ -56,6 +56,7 @@ export default {
   },
   computed: {
     isFolder: function () {
+      if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
       return this.model.children && this.model.children.length
     },
     isOpen: function () {

@@ -50,7 +50,7 @@ function showText (context, text, id) {
   context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
     text = ''
-    console.log('NO TEXT')
+    // console.log('NO TEXT', id, context.state.leotext)
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
@@ -63,10 +63,47 @@ function showText (context, text, id) {
   context.commit('CONTENT_ITEM_UPDATE')
 }
 
-function showSite (context, title, id) {
+function isRelative (url) {
+  var ok = true
+  if (/^http/.test(ok)) {
+    ok = false
+  }
+  return ok
+}
+
+function loadLeoNode (context, item) {
+  const title = item.name
+  const id = item.id
+  let {url, label} = getUrlFromTitle(title)
+  console.log('LABEL', label)
+  getLeoJSON(url, id).then(data => {
+    let text = data.textItems
+    context.commit('ADDTEXT', { text })
+    data = data.data
+    if (name) {
+      item.name = data.name
+      item.children = data.children
+    } else {
+      item.name = label
+      item.children.push(data)
+    }
+  })
+}
+function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
-  const url = match[2]
+  let url = match[2]
+  let label = match[1]
+  if (!url) { return null }
+  if (isRelative(url)) {
+    url = 'static/' + url
+  }
+  return {url, label}
+}
+
+function showSite (context, title, id) {
+  let {url, label} = getUrlFromTitle(title)
+  console.log(label)
   if (!url) { return }
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
@@ -100,13 +137,9 @@ function showSite (context, title, id) {
   // context.commit('CONTENT_ITEM_UPDATE')
 }
 
-function setSiteItem (context, item) {
-  const title = item.name
-  const id = item.id
-  const re = /^\[(.*?)\]\((.*?)\)$/
-  const match = re.exec(title)
-  const url = match[2]
-  if (!url) { return }
+function setSiteItem (context, title, id) {
+  let {url, label} = getUrlFromTitle(title)
+  console.log(label) // TODO: remove this, it is here for eshint
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
   // TODO: add spinner
@@ -148,7 +181,7 @@ function setSiteItem (context, item) {
 }
 
 /**
- * setData Load data from the Leo file.
+ * setData Set data loaded from the Leo file.
  * @param context
  * @param ldata
  * @param filename
@@ -214,6 +247,12 @@ export default new Vuex.Store({
       state.leodata = o.data
       state.leotext = o.text
       state.filename = o.filename
+    },
+    ADDTEXT (state, o) {
+      const text = o.text
+      for (let k in text) {
+        state.leotext[k] = text[k]
+      }
     },
     INIT (state) {
       state.initialized = true
@@ -288,7 +327,6 @@ export default new Vuex.Store({
       const ids = state.openItemIds
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
-      // console.log('IDS', ids)
     }
   },
   actions: {
@@ -308,7 +346,7 @@ export default new Vuex.Store({
         if (item) {
           item = item[0]
           if (/^\[/.test(item.name)) {
-            setSiteItem(context, item)
+            setSiteItem(context, item.name, item.id)
           } else {
             let text = context.state.leotext[item.t]
             text = formatText(text)
@@ -329,9 +367,14 @@ export default new Vuex.Store({
       if (item) {
         item = item[0]
         if (/^\[/.test(item.name)) {
-          showSite(context, item.name, id)
-          setSiteItem(context, item)
+          if (/\.leo\)$/.test(item.name)) {
+            loadLeoNode(context, item)
+          } else {
+            showSite(context, item.name, id)
+            setSiteItem(context, item.name, id)
+          }
         } else {
+          // console.log(item.t, context.state.leotext[item.t], context.state.leotext)
           showText(context, context.state.leotext[item.t], id)
         }
       }
