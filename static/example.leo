@@ -24,16 +24,16 @@
 <v t="josephorr.20170228224930.1"><vh>Italy</vh></v>
 </v>
 </v>
-<v t="josephorr.20170228222534.1"><vh>Vegetables</vh>
+<v t="josephorr.20170228222534.1" a="E"><vh>Vegetables</vh>
 <v t="josephorr.20170228222538.1"><vh>Broccoli</vh></v>
 <v t="josephorr.20170228222548.1"><vh>Spinach</vh></v>
 </v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="josephorr.20170228222411.2">top</t>
-<t tx="josephorr.20170228222452.1">reg</t>
-<t tx="josephorr.20170228222513.1">NA</t>
+<t tx="josephorr.20170228222411.2">This is the content for top node of the example file.</t>
+<t tx="josephorr.20170228222452.1">A few regions... most of the nodes in this subtree have no content.</t>
+<t tx="josephorr.20170228222513.1">North America</t>
 <t tx="josephorr.20170228222521.1"></t>
 <t tx="josephorr.20170228222526.1"></t>
 <t tx="josephorr.20170228222534.1"></t>
@@ -43,7 +43,7 @@
 <t tx="josephorr.20170228224930.1"></t>
 <t tx="josephorr.20170228224939.1"></t>
 <t tx="josephorr.20170228224946.1"></t>
-<t tx="josephorr.20170228225033.1"></t>
-<t tx="josephorr.20170228225040.1"></t>
+<t tx="josephorr.20170228225033.1">Canada is north of the US</t>
+<t tx="josephorr.20170228225040.1">The US is between Mexico and Canada.</t>
 </tnodes>
 </leo_file>

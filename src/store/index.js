@@ -65,7 +65,7 @@ function showText (context, text, id) {
 
 function isRelative (url) {
   var ok = true
-  if (/^http/.test(ok)) {
+  if (/^http/.test(url)) {
     ok = false
   }
   return ok
@@ -95,6 +95,7 @@ function getUrlFromTitle (title) {
   let url = match[2]
   let label = match[1]
   if (!url) { return null }
+  debugger
   if (isRelative(url)) {
     url = 'static/' + url
   }
@@ -181,7 +182,7 @@ function setSiteItem (context, title, id) {
 }
 
 /**
- * setData Set data loaded from the Leo file.
+ * setData Set data loaded from the Leo file, get content for open items (from path).
  * @param context
  * @param ldata
  * @param filename
@@ -214,6 +215,15 @@ function setData (context, ldata, filename, route) {
     return acc
   }, [])
   openItemIds.push(id + '')
+  // preload any file that is on the path
+  openItemIds.forEach(id => {
+    if (/-/.test(id)) {
+      console.log('LOAD:', id)
+      // const subTreeId = /(\d+)-/
+      // const fileNode = url.substring(0, url.lastIndexOf('/'))
+    }
+  })
+  // 28-1/28-2/28-2-1/28-2-4
   context.commit('OPEN_ITEMS', {openItemIds})
   const ids = openItemIds
   context.dispatch('setContentItems', {ids})
@@ -339,6 +349,8 @@ export default new Vuex.Store({
       const ldata = transformLeoXML(o.xml)
       setData(context, ldata, 'dnd', o.route)
     },
+    // Given a list of ids, get the content. Needed for
+    // inline mode and displaying content in a path.
     setContentItems (context, o) {
       const ids = o.ids
       ids.forEach(id => {

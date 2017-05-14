@@ -33,7 +33,7 @@
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1" a="E"><vh>Markdown</vh>
+<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
 <v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 <v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
 <v t="josephorr.20170511084727.1"><vh>[Markdown from a file](example.md)</vh></v>
@@ -45,7 +45,7 @@
 <v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Example](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -53,7 +53,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -424,31 +424,40 @@ function loadDoc (filename) {
   })
   return p
 }
-function cleanText(data){
+function cleanText(data, startId){
   data.name = data.name.replace(/&lt;&lt;/g, '\u00AB')
   data.name = data.name.replace(/&gt;&gt;/g, '\u00BB')
   data.name = escape(data.name)
-  data.id = data.id + '';
+  data.id = data.id + ''; // probably unneeded now
   let children = data.children;
   if (!children) { return }
   for (let i = 0; i &lt; children.length; i++){
-    cleanText(children[i])
+    cleanText(children[i], startId)
   }
   data.t = data.t.replace(/^.*?_/,'')
+  if (startId) {
+    data.t = startId + '-' + data.t + ''
+  }
 }
-function getLeoJSON (filename) {
+function getLeoJSON (filename, id) {
   if (filename.indexOf('#') &gt; 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
   var p = new Promise((resolve, reject) =&gt; {
-    loadDoc('./static/' + filename + '.leo', 'Text')
-      .then((xmlString) =&gt; {
-        resolve(transformLeoXML(xmlString))
+    if (!filename.match(/static/)) {
+      filename = '/static/' + filename
+    }
+    if (!filename.match(/\.leo$/)) {
+      filename = filename + '.leo'
+    }
+    loadDoc(filename, 'Text')
+      .then(xmlString =&gt; {
+        resolve(transformLeoXML(xmlString, id))
       })
   })
   return p
 }
-function transformLeoXML (xmlString) {
+function transformLeoXML (xmlString, startId) {
     const oParser = new DOMParser()
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
@@ -459,6 +468,9 @@ function transformLeoXML (xmlString) {
       let a = el.getAttribute('tx')
       a = a.replace(/\./g,'_')
       a = a.replace(/^.*?_/,'')
+      if (startId) {
+        a = startId + '-' + a
+      }
       if (
          (/^@language /.test(elText)) &amp;&amp;
          (!/^@language html/.test(elText)) &amp;&amp;
@@ -470,8 +482,13 @@ function transformLeoXML (xmlString) {
       // h
     }
     const vnodes = xml.getElementsByTagName('v')
+    let pid
     for (let i = 0; i &lt; vnodes.length; i++) {
-      vnodes[i].setAttribute('id', i + 1)
+      pid = i + 1
+      if (startId) {
+        pid = startId + '-' + pid
+      }
+      vnodes[i].setAttribute('id', '"' +pid + '"')
     }
     var scripts = document.getElementsByTagName('script'),
         str     = '',
@@ -487,7 +504,7 @@ function transformLeoXML (xmlString) {
     let data = resultDocument.textContent
     data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
     data = JSON.parse(data)
-    cleanText(data)
+    cleanText(data, startId)
     const xdata = {}
     xdata.data = data
     xdata.textItems = textItems
@@ -517,8 +534,20 @@ Using parameters on the URL:
 http://www.mysite.com/leoviewer?filename=example&amp;title=My Leo File&amp;showapptitle=false
 ```
 </t>
-<t tx="josephorr.20170511082833.1"></t>
-<t tx="josephorr.20170511083006.1"></t>
+<t tx="josephorr.20170511082833.1">@language md 
+
+Leo Viewer can load .leo files into nodes in a parent .leo file.
+
+The child node of this node has the following title:
+
+```
+[Example](example.leo)
+```
+Since the title points to a .leo file, the leo file is loaded into the node when the node is clicked.
+
+The subtree isn't loaded until you click on the node, so outlines can contain many child outlines and still have fast page load.
+</t>
+<t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
 <t tx="josephorr.20170511084727.1"></t>
 </tnodes>
 </leo_file>

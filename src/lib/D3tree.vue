@@ -291,7 +291,6 @@ export default {
           allNodes.each(d => this.expand(d, false))
         }
       }
-      console.log(this.layoutType, this.initialized)
       if (this.type !== 'tree') {
         console.log('here')
         allNodes.each(d => this.expand(d, false))
