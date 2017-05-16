@@ -93,8 +93,9 @@ function transformLeoXML (xmlString, startId) {
     const resultDocument = xsltProcessor.transformToFragment(xml, document)
     let data = resultDocument.textContent
     data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+    data = '[' + data + ']'
     data = JSON.parse(data)
-    cleanText(data, startId)
+    data.forEach(d => cleanText(d, startId))
     const xdata = {}
     xdata.data = data
     xdata.textItems = textItems

@@ -2,13 +2,15 @@
   <div class="treeviewer">
     <splitpane leftPaneStyle="width:360px">
       <ul slot="left">
+        <div v-for="itemdata in data">
         <item
           class="item"
-          :model="data"
-          :top="true"
+          :model="itemdata"
+          :top="top"
           :textItems="text"
           :targetEl="target.el">
         </item>
+        </div>
       </ul>
       <contentpane slot="right"></contentpane>
     </splitpane>
@@ -34,6 +36,12 @@
       }
     },
     computed: {
+
+      top () {
+        // console.log(this.$store.state.leodata)
+        if (this.$store.state.leodata.length > 1) { return false }
+        return true
+      },
       data () {
         return this.$store.state.leodata
       },

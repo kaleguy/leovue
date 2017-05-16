@@ -13,6 +13,11 @@ const hljs = require('highlight.js')
 
 Vue.use(Vuex)
 
+/**
+ * return formatter text, e.g. markdown or html
+ * @param text {string}
+ * @returns {string}
+ */
 function formatText (text) {
   let language = util.getLanguage(text)
 
@@ -62,7 +67,23 @@ function showText (context, text, id) {
   context.commit('CONTENT_ITEM', {item: newItem})
   context.commit('CONTENT_ITEM_UPDATE')
 }
-
+/**
+ * Get subtree names for preloading bookmarked nodes
+ * @param acc {array} - accumulator
+ * @param p {string} - path, e.g. 28-2-10-5
+ * @param startIndex {integer} - start with O to get all
+ */
+function getRoots (acc, p, startIndex) {
+  const i = p.indexOf('-', startIndex)
+  if (i < 0) { return }
+  acc.push(p.substring(0, i))
+  getRoots(acc, p, i + 1)
+}
+/**
+ * Is url relative
+ * @param url {string}
+ * @returns {boolean} - if is relative
+ */
 function isRelative (url) {
   var ok = true
   if (/^http/.test(url)) {
@@ -70,7 +91,6 @@ function isRelative (url) {
   }
   return ok
 }
-
 function loadLeoNode (context, item) {
   const title = item.name
   const id = item.id
@@ -95,7 +115,6 @@ function getUrlFromTitle (title) {
   let url = match[2]
   let label = match[1]
   if (!url) { return null }
-  debugger
   if (isRelative(url)) {
     url = 'static/' + url
   }
@@ -211,7 +230,7 @@ function setData (context, ldata, filename, route) {
   const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
   if (!openItems) { return }
   const openItemIds = openItems.reduce((acc, o) => {
-    acc.push(o.id + '')
+    if (o.id) { acc.push(o.id + '') }
     return acc
   }, [])
   openItemIds.push(id + '')
@@ -219,6 +238,7 @@ function setData (context, ldata, filename, route) {
   openItemIds.forEach(id => {
     if (/-/.test(id)) {
       console.log('LOAD:', id)
+      console.log(getRoots())
       // const subTreeId = /(\d+)-/
       // const fileNode = url.substring(0, url.lastIndexOf('/'))
     }

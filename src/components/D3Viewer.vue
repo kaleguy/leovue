@@ -6,9 +6,14 @@
                   style="height:calc(100vh - 26px)"
                   :reset="reset"
                   :openDepth="openDepth"
-                  ref="tree" :zoomable="zoomable" :data="data" :node-text="nodeText"
-                  :margin-x="Marginx" :margin-y="Marginy" :type="type"
-                  :layout-type="layoutType" :duration="duration"
+                  ref="tree"
+                  :zoomable="zoomable"
+                  :data="data"
+                  :node-text="nodeText"
+                  :margin-x="Marginx" :margin-y="Marginy"
+                  :type="type"
+                  :layout-type="layoutType"
+                  :duration="duration"
                   @clicked="onClick"
                   class="tree"></d3tree>
 
@@ -69,7 +74,17 @@
     },
     computed: {
       data () {
-        return this.$store.state.leodata
+        let d = this.$store.state.leodata
+        if (d.length > 1) {
+          const root = {
+            name: 'test',
+            id: 0,
+            children: d
+          }
+          return root
+        } else {
+          return d[0]
+        }
       },
       text () {
         return this.$store.state.leotext

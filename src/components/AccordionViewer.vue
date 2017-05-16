@@ -3,14 +3,16 @@
     <div class="panes-container">
       <div class="center-pane" id="center-pane">
         <ul>
+          <div v-for="itemdata in data">
           <item
             class="item"
             :top="true"
-            :model="data"
+            :model="itemdata"
             :textItems="text"
             :targetEl="false"
             :open="false">
           </item>
+          </div>
         </ul>
       </div>
     </div>
