@@ -17,13 +17,15 @@
        :h="tbox.h"
        :i="tbox.i">
         <ul>
+          <div v-for="itemdata in data">
           <item
             class="item"
-            :model="data"
+            :model="itemdata"
             :top="true"
             :textItems="text"
             :targetEl="target.el">
           </item>
+          </div>
         </ul>
       </grid-item>
       <grid-item

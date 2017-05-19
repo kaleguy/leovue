@@ -17,7 +17,10 @@ function loadDoc (filename) {
 function cleanText(data, startId){
   data.name = data.name.replace(/<</g, '\u00AB')
   data.name = data.name.replace(/>>/g, '\u00BB')
-  data.name = escape(data.name)
+  data.name = data.name.replace(/'/g, '\x27')
+  data.name = data.name.replace(/"/g, '\x22')
+  //data.name = escape(data.name)
+  data.name = data.name.replace(/&#39;/g,'\x27')
   data.id = data.id + ''; // probably unneeded now
   let children = data.children;
   if (!children) { return }

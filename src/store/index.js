@@ -14,7 +14,7 @@ const hljs = require('highlight.js')
 Vue.use(Vuex)
 
 /**
- * return formatter text, e.g. markdown or html
+ * return formatted text, e.g. markdown or html
  * @param text {string}
  * @returns {string}
  */
@@ -75,9 +75,9 @@ function showText (context, text, id) {
  */
 function getRoots (acc, p, startIndex) {
   const i = p.indexOf('-', startIndex)
-  if (i < 0) { return }
+  if (i < 0) { return acc }
   acc.push(p.substring(0, i))
-  getRoots(acc, p, i + 1)
+  return getRoots(acc, p, i + 1)
 }
 /**
  * Is url relative
@@ -92,22 +92,26 @@ function isRelative (url) {
   return ok
 }
 function loadLeoNode (context, item) {
-  const title = item.name
-  const id = item.id
-  let {url, label} = getUrlFromTitle(title)
-  console.log('LABEL', label)
-  getLeoJSON(url, id).then(data => {
-    let text = data.textItems
-    context.commit('ADDTEXT', { text })
-    data = data.data
-    if (name) {
-      item.name = data.name
-      item.children = data.children
-    } else {
-      item.name = label
-      item.children.push(data)
-    }
-  })
+  const p = new Promise((resolve, reject) => {
+    const title = item.name
+    const id = item.id
+    let {url, label} = getUrlFromTitle(title)
+    getLeoJSON(url, id).then(data => {
+      let text = data.textItems
+      context.commit('ADDTEXT', {text})
+      data = data.data
+      const name = '' // TODO: need to add logic here for replacing node
+      if (name) {
+        item.name = data.name
+        item.children = data.children
+      } else {
+        item.name = label
+        item.children = data
+      }
+      resolve(true)
+    })
+  }).catch(e => console.log('Error: ', e))
+  return p
 }
 function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
@@ -227,27 +231,38 @@ function setData (context, ldata, filename, route) {
   }
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
-  const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
-  if (!openItems) { return }
-  const openItemIds = openItems.reduce((acc, o) => {
-    if (o.id) { acc.push(o.id + '') }
-    return acc
-  }, [])
-  openItemIds.push(id + '')
-  // preload any file that is on the path
-  openItemIds.forEach(id => {
-    if (/-/.test(id)) {
-      console.log('LOAD:', id)
-      console.log(getRoots())
-      // const subTreeId = /(\d+)-/
-      // const fileNode = url.substring(0, url.lastIndexOf('/'))
-    }
+  const path = route.path
+  let npath = null
+  if (path) {
+    npath = path.substring(path.indexOf(2, '/'))
+  }
+  let subtrees = []
+  if (npath) {
+    subtrees = getRoots([], npath)
+  }
+  loadSubtrees(context, subtrees, ldata.data).then(() => {
+    const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
+    if (!openItems) { return }
+    if (!openItems.length) { return }
+    const openItemIds = openItems.reduce((acc, o) => {
+      if (o.id) { acc.push(o.id + '') }
+      return acc
+    }, [])
+    openItemIds.push(id + '')
+    context.commit('OPEN_ITEMS', {openItemIds})
+    const ids = openItemIds
+    context.dispatch('setContentItems', {ids})
+    context.dispatch('setCurrentItem', {id})
   })
-  // 28-1/28-2/28-2-1/28-2-4
-  context.commit('OPEN_ITEMS', {openItemIds})
-  const ids = openItemIds
-  context.dispatch('setContentItems', {ids})
-  context.dispatch('setCurrentItem', {id})
+}
+function loadSubtrees (context, trees, data) {
+  if (!trees.length) { return Promise.resolve() }
+  const p = new Promise((resolve, reject) => {
+    let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
+    loadLeoNode(context, item).then(res => resolve(res))
+    resolve(true)
+  })
+  return p
 }
 // ========= The Store ===============
 export default new Vuex.Store({
@@ -400,7 +415,7 @@ export default new Vuex.Store({
         item = item[0]
         if (/^\[/.test(item.name)) {
           if (/\.leo\)$/.test(item.name)) {
-            loadLeoNode(context, item)
+            loadLeoNode(context, item).then(res => console.log('subtree loaded.'))
           } else {
             showSite(context, item.name, id)
             setSiteItem(context, item.name, id)

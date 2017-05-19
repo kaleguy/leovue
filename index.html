@@ -90,10 +90,12 @@
       <xsl:template match="v">
         <xsl:variable name="t" select="@t"/>
         <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
+        <xsl:variable name="double_quote">"</xsl:variable>
+        <xsl:variable name="apos">'</xsl:variable>
         {
         "id":  <xsl:value-of select="@id"/>,
         "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
-        "name":"<xsl:value-of select="$nodeSet[1]/vh"/>",
+        "name":"<xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/>",
         "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
         }
         <xsl:if test="position()!=last()">,</xsl:if>

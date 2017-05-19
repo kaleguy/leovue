@@ -45,7 +45,7 @@
 <v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Example](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -53,7 +53,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -253,13 +253,15 @@ For other environments, see the:
   &lt;div class="treeviewer"&gt;
     &lt;splitpane leftPaneStyle="width:360px"&gt;
       &lt;ul slot="left"&gt;
+        &lt;div v-for="itemdata in data"&gt;
         &lt;item
           class="item"
-          :model="data"
-          :top="true"
+          :model="itemdata"
+          :top="top"
           :textItems="text"
           :targetEl="target.el"&gt;
         &lt;/item&gt;
+        &lt;/div&gt;
       &lt;/ul&gt;
       &lt;contentpane slot="right"&gt;&lt;/contentpane&gt;
     &lt;/splitpane&gt;
@@ -287,6 +289,12 @@ For other environments, see the:
       }
     },
     computed: {
+
+      top () {
+        // console.log(this.$store.state.leodata)
+        if (this.$store.state.leodata.length &gt; 1) { return false }
+        return true
+      },
       data () {
         return this.$store.state.leodata
       },
@@ -427,7 +435,10 @@ function loadDoc (filename) {
 function cleanText(data, startId){
   data.name = data.name.replace(/&lt;&lt;/g, '\u00AB')
   data.name = data.name.replace(/&gt;&gt;/g, '\u00BB')
-  data.name = escape(data.name)
+  data.name = data.name.replace(/'/g, '\x27')
+  data.name = data.name.replace(/"/g, '\x22')
+  //data.name = escape(data.name)
+  data.name = data.name.replace(/&amp;#39;/g,'\x27')
   data.id = data.id + ''; // probably unneeded now
   let children = data.children;
   if (!children) { return }
@@ -503,8 +514,9 @@ function transformLeoXML (xmlString, startId) {
     const resultDocument = xsltProcessor.transformToFragment(xml, document)
     let data = resultDocument.textContent
     data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+    data = '[' + data + ']'
     data = JSON.parse(data)
-    cleanText(data, startId)
+    data.forEach(d =&gt; cleanText(d, startId))
     const xdata = {}
     xdata.data = data
     xdata.textItems = textItems

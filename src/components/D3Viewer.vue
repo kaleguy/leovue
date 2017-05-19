@@ -1,6 +1,6 @@
 <template>
   <div class="treeviewer">
-    <splitpane leftPaneStyle="width:500px">
+    <splitpane leftPaneStyle="width:900px">
       <div slot="left">
           <d3tree
                   style="height:calc(100vh - 26px)"

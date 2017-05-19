@@ -1,27 +1,9023 @@
 {
-  "id":  "1",
-  "t":   "josephorr_20170515100137_2",
-  "name":"flat menu 1",
-  "children":[]
+"id":  "1",
+"t":   "ekr_20050831195449",
+"name":"** Read me first **",
+"children":[]
 }
 ,
 {
 "id":  "2",
-"t":   "josephorr_20170515100214_1",
-"name":"flat menu 2",
-"children":[]
-}
-,
+"t":   "ekr_20070610174018",
+"name":"Startup",
+"children":[
 {
 "id":  "3",
-"t":   "josephorr_20170515100229_1",
-"name":"flat menu 3",
+"t":   "ekr_20050407144417",
+"name":"@settings",
+"children":[
+{
+"id":  "4",
+"t":   "ekr_20150318043636_16",
+"name":"@bool check_outline_after_read = True",
 "children":[]
 }
 ,
 {
-"id":  "4",
-"t":   "josephorr_20170515100236_1",
-"name":"flat menu 4",
+"id":  "5",
+"t":   "ekr_20150318043636_17",
+"name":"@bool check_outline_before_save = True",
 "children":[]
 }
+,
+{
+"id":  "6",
+"t":   "ekr_20141117065749_3",
+"name":"@bool wikiview-active = False",
+"children":[]
+}
+,
+{
+"id":  "7",
+"t":   "ekr_20111108052738_5507",
+"name":"@shortcuts",
+"children":[]
+}
+,
+{
+"id":  "8",
+"t":   "ekr_20130816100419_17299",
+"name":"@string target_language = rest",
+"children":[]
+}
+,
+{
+"id":  "9",
+"t":   "ekr_20150222035621_5",
+"name":"@bool body_pane_wraps = True",
+"children":[]
+}
+,
+{
+"id":  "10",
+"t":   "ekr_20100907092300_4440",
+"name":"Inkscape options",
+"children":[
+{
+"id":  "11",
+"t":   "ekr_20100907092300_4441",
+"name":"@string inkscape-template = ../docs/inkscape-template.svg",
+"children":[]
+}
+,
+{
+"id":  "12",
+"t":   "ekr_20100907092300_4442",
+"name":"@string inkscape-bin = "c:\Program Files (x86)\Inkscape\inkscape.exe"",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "13",
+"t":   "ekr_20101009114830_4724",
+"name":"File options",
+"children":[
+{
+"id":  "14",
+"t":   "ekr_20080412124815_1",
+"name":"@bool fixedWindow = False",
+"children":[]
+}
+,
+{
+"id":  "15",
+"t":   "ekr_20101009114830_4723",
+"name":"@bool put_expansion_bits_in_leo_files = False",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "16",
+"t":   "ekr_20050407144342",
+"name":"@page http plugin",
+"children":[
+{
+"id":  "17",
+"t":   "ekr_20050407144342_1",
+"name":"@bool http_active = False",
+"children":[]
+}
+,
+{
+"id":  "18",
+"t":   "ekr_20050407144342_2",
+"name":"@int  port = 8080",
+"children":[]
+}
+,
+{
+"id":  "19",
+"t":   "ekr_20050407144342_3",
+"name":"@string rst_http_attributename = rst_http_attribute",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "20",
+"t":   "ekr_20050812123002",
+"name":"@page rst3 options",
+"children":[
+{
+"id":  "21",
+"t":   "ekr_20131009050634_17658",
+"name":"@bool rst3_call_docutils = False",
+"children":[]
+}
+,
+{
+"id":  "22",
+"t":   "ekr_20131009050634_17625",
+"name":"@bool rst3_code_mode = False",
+"children":[]
+}
+,
+{
+"id":  "23",
+"t":   "ekr_20150319142303_4",
+"name":"@bool rst3_debug = False",
+"children":[]
+}
+,
+{
+"id":  "24",
+"t":   "ekr_20050812123002_7",
+"name":"@bool rst3_format_headlines = True",
+"children":[]
+}
+,
+{
+"id":  "25",
+"t":   "ekr_20131009050634_17627",
+"name":"@bool rst3_generate_rst = True",
+"children":[]
+}
+,
+{
+"id":  "26",
+"t":   "ekr_20131009050634_17610",
+"name":"@bool rst3_http_server_support = False",
+"children":[]
+}
+,
+{
+"id":  "27",
+"t":   "ekr_20050812123002_6",
+"name":"@bool rst3_massage_body = False",
+"children":[]
+}
+,
+{
+"id":  "28",
+"t":   "ekr_20131009050634_17630",
+"name":"@bool rst3_show_headlines = True",
+"children":[]
+}
+,
+{
+"id":  "29",
+"t":   "ekr_20131009052848_6456",
+"name":"@bool rst3_show_leo_directives = True",
+"children":[]
+}
+,
+{
+"id":  "30",
+"t":   "ekr_20131009050634_17631",
+"name":"@bool rst3_show_organizer_nodes = True",
+"children":[]
+}
+,
+{
+"id":  "31",
+"t":   "ekr_20150320085538_4",
+"name":"@bool rst3_silent = True",
+"children":[]
+}
+,
+{
+"id":  "32",
+"t":   "ekr_20131009050634_17622",
+"name":"@bool rst3_verbose = False",
+"children":[]
+}
+,
+{
+"id":  "33",
+"t":   "ekr_20131009050634_17623",
+"name":"@bool rst3_write_intermediate_file = True",
+"children":[]
+}
+,
+{
+"id":  "34",
+"t":   "ekr_20051202072010",
+"name":"@string rst3_default_path =",
+"children":[]
+}
+,
+{
+"id":  "35",
+"t":   "ekr_20131009050634_17616",
+"name":"@string rst3_stylesheet_path = ..\doc",
+"children":[]
+}
+,
+{
+"id":  "36",
+"t":   "ekr_20131027064821_18685",
+"name":"@string rst3_write_intermediate_extension = .txt",
+"children":[]
+}
+,
+{
+"id":  "37",
+"t":   "ekr_20050812123002_1",
+"name":"Http options...",
+"children":[
+{
+"id":  "38",
+"t":   "ekr_20050812123002_2",
+"name":"@bool rst3_clear_http_attributes = False",
+"children":[]
+}
+,
+{
+"id":  "39",
+"t":   "ekr_20050812123002_3",
+"name":"@string rst3_http_attributename = rst_http_attribute",
+"children":[]
+}
+,
+{
+"id":  "40",
+"t":   "ekr_20050812123002_4",
+"name":"@bool rst3_http_server_support = False",
+"children":[]
+}
+,
+{
+"id":  "41",
+"t":   "ekr_20050812123002_5",
+"name":"@string rst3_node_begin_marker = http-node-marker-",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "42",
+"t":   "ekr_20131017051340_16847",
+"name":"Buttons",
+"children":[
+{
+"id":  "43",
+"t":   "ekr_20111017085134_16158",
+"name":" Slideshow Buttons",
+"children":[
+{
+"id":  "44",
+"t":   "ekr_20111017085134_16159",
+"name":"@@button copy-@screenshot-node",
+"children":[
+{
+"id":  "45",
+"t":   "ekr_20111017085134_16160",
+"name":"@screenshot",
+"children":[
+{
+"id":  "46",
+"t":   "ekr_20111017085134_16161",
+"name":"To Do List",
+"children":[
+{
+"id":  "47",
+"t":   "ekr_20111017085134_16162",
+"name":"Urgent",
+"children":[]
+}
+,
+{
+"id":  "48",
+"t":   "ekr_20111017085134_16163",
+"name":"Important",
+"children":[]
+}
+,
+{
+"id":  "49",
+"t":   "ekr_20111017085134_16164",
+"name":"Soon",
+"children":[]
+}
+,
+{
+"id":  "50",
+"t":   "ekr_20111017085134_16165",
+"name":"Whenever",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "51",
+"t":   "ekr_20111017085134_16166",
+"name":"Diary",
+"children":[
+{
+"id":  "52",
+"t":   "ekr_20111017085134_16167",
+"name":"2009",
+"children":[
+{
+"id":  "53",
+"t":   "ekr_20111017085134_16168",
+"name":"Jul 2009",
+"children":[]
+}
+,
+{
+"id":  "54",
+"t":   "ekr_20111017085134_16169",
+"name":"Aug 2009",
+"children":[]
+}
+,
+{
+"id":  "55",
+"t":   "ekr_20111017085134_16170",
+"name":"Sep 2009",
+"children":[]
+}
+,
+{
+"id":  "56",
+"t":   "ekr_20111017085134_16171",
+"name":"Oct 2009",
+"children":[]
+}
+,
+{
+"id":  "57",
+"t":   "ekr_20111017085134_16172",
+"name":"Nov 2009",
+"children":[]
+}
+,
+{
+"id":  "58",
+"t":   "ekr_20111017085134_16173",
+"name":"Dec 2009",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "59",
+"t":   "ekr_20111017085134_16174",
+"name":"2010",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "60",
+"t":   "ekr_20111017085134_16175",
+"name":"@select Urgent",
+"children":[]
+}
+,
+{
+"id":  "61",
+"t":   "ekr_20111017085134_16176",
+"name":"@@button ins-@slide-nodes",
+"children":[]
+}
+,
+{
+"id":  "62",
+"t":   "ekr_20111017085134_16177",
+"name":"@@button make-slide @key=Alt-8",
+"children":[]
+}
+,
+{
+"id":  "63",
+"t":   "ekr_20111017085134_16178",
+"name":"@@button make-slide-show @key=Alt-8",
+"children":[]
+}
+,
+{
+"id":  "64",
+"t":   "ekr_20111017085134_16179",
+"name":"@@button meld",
+"children":[
+{
+"id":  "65",
+"t":   "ekr_20111017085134_16180",
+"name":"class MeldController",
+"children":[
+{
+"id":  "66",
+"t":   "ekr_20111017085134_16181",
+"name":"utils",
+"children":[
+{
+"id":  "67",
+"t":   "ekr_20111017085134_16182",
+"name":"finalize & fix",
+"children":[]
+}
+,
+{
+"id":  "68",
+"t":   "ekr_20111017085134_16183",
+"name":"has_at_no_screenshot_node",
+"children":[]
+}
+,
+{
+"id":  "69",
+"t":   "ekr_20111017085134_16184",
+"name":"match",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "70",
+"t":   "ekr_20111017085134_16185",
+"name":"run & helpers",
+"children":[
+{
+"id":  "71",
+"t":   "ekr_20111017085134_16186",
+"name":"adjust_slideshow & helper",
+"children":[
+{
+"id":  "72",
+"t":   "ekr_20111017085134_16187",
+"name":"adjust_slide_node & helpers",
+"children":[
+{
+"id":  "73",
+"t":   "ekr_20111017085134_16188",
+"name":"add_at_url_final_output_file",
+"children":[]
+}
+,
+{
+"id":  "74",
+"t":   "ekr_20111017085134_16189",
+"name":"add_image_directive",
+"children":[]
+}
+,
+{
+"id":  "75",
+"t":   "ekr_20111017085134_16190",
+"name":"delete_at_url_built_slide_node",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "76",
+"t":   "ekr_20111017085134_16191",
+"name":"check & helpers",
+"children":[
+{
+"id":  "77",
+"t":   "ekr_20111017085134_16192",
+"name":"check_dir",
+"children":[]
+}
+,
+{
+"id":  "78",
+"t":   "ekr_20111017085134_16193",
+"name":"count_slide_nodes",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "79",
+"t":   "ekr_20111017085134_16194",
+"name":"copy_files & helper",
+"children":[
+{
+"id":  "80",
+"t":   "ekr_20111017085134_16195",
+"name":"copy_file",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "81",
+"t":   "ekr_20111017085134_16196",
+"name":"get_wink_screenshots",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "82",
+"t":   "ekr_20111017085134_16197",
+"name":"@@button renumber nodes",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "83",
+"t":   "ekr_20111017085134_16198",
+"name":"@@button remove-image-directives",
+"children":[]
+}
+,
+{
+"id":  "84",
+"t":   "ekr_20111017085134_16199",
+"name":"@@button remove-built-slides",
+"children":[]
+}
+,
+{
+"id":  "85",
+"t":   "ekr_20111017085134_16200",
+"name":"@@button remove-final-output",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "86",
+"t":   "ekr_20130803073926_17120",
+"name":"@@button clean-mail",
+"children":[]
+}
+,
+{
+"id":  "87",
+"t":   "sps_20100708203040_19008",
+"name":"@@button generate-full-userguide",
+"children":[
+{
+"id":  "88",
+"t":   "sps_20100708203040_19009",
+"name":"<< html manual >>",
+"children":[]
+}
+,
+{
+"id":  "89",
+"t":   "sps_20100708203040_19010",
+"name":"<< pdf manual >>",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "90",
+"t":   "ville_20090705224948_5734",
+"name":"@@button generate-userguide",
+"children":[
+{
+"id":  "91",
+"t":   "ville_20090705225609_5736",
+"name":"<< html manual >>",
+"children":[]
+}
+,
+{
+"id":  "92",
+"t":   "ville_20090705225609_5738",
+"name":"<< pdf manual >>",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "93",
+"t":   "ekr_20150314044011_7",
+"name":"@@button remove dups",
+"children":[]
+}
+,
+{
+"id":  "94",
+"t":   "ekr_20161120074501_1",
+"name":"@button make-md-heads",
+"children":[
+{
+"id":  "95",
+"t":   "ekr_20161120075731_1",
+"name":"markup",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "96",
+"t":   "ekr_20131016083406_16724",
+"name":"@button make-sphinx",
+"children":[]
+}
+,
+{
+"id":  "97",
+"t":   "ekr_20161204055040_1",
+"name":"@button make-md-toc",
+"children":[
+{
+"id":  "98",
+"t":   "ekr_20161204055436_1",
+"name":"run",
+"children":[]
+}
+,
+{
+"id":  "99",
+"t":   "ekr_20161204060843_1",
+"name":"mak_link",
+"children":[]
+}
+,
+{
+"id":  "100",
+"t":   "ekr_20161204055804_1",
+"name":"make_toc",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "101",
+"t":   "ekr_20170212105226_1",
+"name":"@button IntroSlides @key=Ctrl-9",
+"children":[
+{
+"id":  "102",
+"t":   "ekr_20170212105226_2",
+"name":"<< imports >>",
+"children":[]
+}
+,
+{
+"id":  "103",
+"t":   "ekr_20170212105226_3",
+"name":"<< class IntroSlides >>",
+"children":[
+{
+"id":  "104",
+"t":   "ekr_20170212105226_4",
+"name":"setup",
+"children":[]
+}
+,
+{
+"id":  "105",
+"t":   "ekr_20170212105226_5",
+"name":"setup_script",
+"children":[]
+}
+,
+{
+"id":  "106",
+"t":   "ekr_20170212105226_6",
+"name":"teardown",
+"children":[]
+}
+,
+{
+"id":  "107",
+"t":   "ekr_20170212105226_7",
+"name":"teardown_script",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "108",
+"t":   "ekr_20170212105226_8",
+"name":"<< main >>",
+"children":[]
+}
+,
+{
+"id":  "109",
+"t":   "ekr_20170212105226_9",
+"name":"Leo's Main Window",
+"children":[
+{
+"id":  "110",
+"t":   "ekr_20031218072017_2608",
+"name":"@@file leoApp.py",
+"children":[
+{
+"id":  "111",
+"t":   "ekr_20120219194520_10463",
+"name":"<< imports >> (leoApp)",
+"children":[]
+}
+,
+{
+"id":  "112",
+"t":   "ekr_20161026122804_1",
+"name":"class IdleTimeManager",
+"children":[
+{
+"id":  "113",
+"t":   "ekr_20161026125611_1",
+"name":"itm.add_callback",
+"children":[]
+}
+,
+{
+"id":  "114",
+"t":   "ekr_20161026124810_1",
+"name":"itm.on_idle",
+"children":[]
+}
+,
+{
+"id":  "115",
+"t":   "ekr_20161028034808_1",
+"name":"itm.start",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "116",
+"t":   "ekr_20120209051836_10241",
+"name":"class LeoApp",
+"children":[
+{
+"id":  "117",
+"t":   "ekr_20150509193643_1",
+"name":"app.Birth",
+"children":[
+{
+"id":  "118",
+"t":   "ekr_20031218072017_1416",
+"name":"app.__init__ (helpers contain language dicts)",
+"children":[
+{
+"id":  "119",
+"t":   "ekr_20161028035755_1",
+"name":"<< LeoApp: command-line arguments >>",
+"children":[]
+}
+,
+{
+"id":  "120",
+"t":   "ekr_20161028035835_1",
+"name":"<< LeoApp: Debugging & statistics >>",
+"children":[]
+}
+,
+{
+"id":  "121",
+"t":   "ekr_20161028035902_1",
+"name":"<< LeoApp: error messages >>",
+"children":[]
+}
+,
+{
+"id":  "122",
+"t":   "ekr_20161028035924_1",
+"name":"<< LeoApp: global directories >>",
+"children":[]
+}
+,
+{
+"id":  "123",
+"t":   "ekr_20161028035956_1",
+"name":"<< LeoApp: global data >>",
+"children":[]
+}
+,
+{
+"id":  "124",
+"t":   "ekr_20161028040028_1",
+"name":"<< LeoApp: global controller/manager objects >>",
+"children":[]
+}
+,
+{
+"id":  "125",
+"t":   "ekr_20161028040054_1",
+"name":"<< LeoApp: global status vars >>",
+"children":[]
+}
+,
+{
+"id":  "126",
+"t":   "ekr_20161028040141_1",
+"name":"<< LeoApp: the global log >>",
+"children":[]
+}
+,
+{
+"id":  "127",
+"t":   "ekr_20161028040204_1",
+"name":"<< LeoApp: global types >>",
+"children":[]
+}
+,
+{
+"id":  "128",
+"t":   "ekr_20161028040229_1",
+"name":"<< LeoApp: plugins and event handlers >>",
+"children":[]
+}
+,
+{
+"id":  "129",
+"t":   "ekr_20161028040303_1",
+"name":"<< LeoApp: scripting ivars >>",
+"children":[]
+}
+,
+{
+"id":  "130",
+"t":   "ekr_20161028040330_1",
+"name":"<< LeoApp: unit testing ivars >>",
+"children":[]
+}
+,
+{
+"id":  "131",
+"t":   "ekr_20140729162415_18086",
+"name":"app.init_at_auto_names",
+"children":[]
+}
+,
+{
+"id":  "132",
+"t":   "ekr_20140729162415_18091",
+"name":"app.init_at_file_names",
+"children":[]
+}
+,
+{
+"id":  "133",
+"t":   "ekr_20031218072017_1417",
+"name":"app.define_global_constants",
+"children":[]
+}
+,
+{
+"id":  "134",
+"t":   "ekr_20141102043816_5",
+"name":"app.define_delegate_language_dict",
+"children":[]
+}
+,
+{
+"id":  "135",
+"t":   "ekr_20120522160137_9909",
+"name":"app.define_language_delims_dict",
+"children":[]
+}
+,
+{
+"id":  "136",
+"t":   "ekr_20120522160137_9910",
+"name":"app.define_language_extension_dict",
+"children":[]
+}
+,
+{
+"id":  "137",
+"t":   "ekr_20120522160137_9911",
+"name":"app.define_extension_dict",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "138",
+"t":   "ekr_20150509193629_1",
+"name":"app.cmd (decorator)",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "139",
+"t":   "ekr_20031218072017_2609",
+"name":"app.closeLeoWindow",
+"children":[]
+}
+,
+{
+"id":  "140",
+"t":   "ville_20090602181814_6219",
+"name":"app.commanders",
+"children":[]
+}
+,
+{
+"id":  "141",
+"t":   "ekr_20090717112235_6007",
+"name":"app.computeSignon",
+"children":[]
+}
+,
+{
+"id":  "142",
+"t":   "ekr_20100831090251_5838",
+"name":"app.createXGui",
+"children":[
+{
+"id":  "143",
+"t":   "ekr_20100831090251_5840",
+"name":"app.createCursesGui",
+"children":[]
+}
+,
+{
+"id":  "144",
+"t":   "ekr_20090619065122_8593",
+"name":"app.createDefaultGui",
+"children":[]
+}
+,
+{
+"id":  "145",
+"t":   "ekr_20031218072017_1938",
+"name":"app.createNullGuiWithScript",
+"children":[]
+}
+,
+{
+"id":  "146",
+"t":   "ekr_20090202191501_1",
+"name":"app.createQtGui",
+"children":[]
+}
+,
+{
+"id":  "147",
+"t":   "ekr_20090126063121_3",
+"name":"app.createWxGui",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "148",
+"t":   "ekr_20031218072017_2612",
+"name":"app.destroyAllOpenWithFiles",
+"children":[]
+}
+,
+{
+"id":  "149",
+"t":   "ekr_20031218072017_2615",
+"name":"app.destroyWindow",
+"children":[]
+}
+,
+{
+"id":  "150",
+"t":   "ekr_20031218072017_1732",
+"name":"app.finishQuit",
+"children":[]
+}
+,
+{
+"id":  "151",
+"t":   "ekr_20031218072017_2616",
+"name":"app.forceShutdown",
+"children":[]
+}
+,
+{
+"id":  "152",
+"t":   "ekr_20031218072017_2188",
+"name":"app.newCommander",
+"children":[]
+}
+,
+{
+"id":  "153",
+"t":   "ekr_20031218072017_2617",
+"name":"app.onQuit (enabled)",
+"children":[]
+}
+,
+{
+"id":  "154",
+"t":   "ekr_20120304065838_15588",
+"name":"app.selectLeoWindow",
+"children":[]
+}
+,
+{
+"id":  "155",
+"t":   "ville_20090620122043_6275",
+"name":"app.setGlobalDb",
+"children":[]
+}
+,
+{
+"id":  "156",
+"t":   "ekr_20031218072017_1978",
+"name":"app.setLeoID",
+"children":[
+{
+"id":  "157",
+"t":   "ekr_20031218072017_1979",
+"name":"<< return if we can set leoID from sys.leoID>>",
+"children":[]
+}
+,
+{
+"id":  "158",
+"t":   "ekr_20031218072017_1980",
+"name":"<< return if we can set leoID from "leoID.txt" >>",
+"children":[]
+}
+,
+{
+"id":  "159",
+"t":   "ekr_20060211140947_1",
+"name":"<< return if we can set leoID from os.getenv('USER') >>",
+"children":[]
+}
+,
+{
+"id":  "160",
+"t":   "ekr_20031218072017_1981",
+"name":"<< put up a dialog requiring a valid id >>",
+"children":[]
+}
+,
+{
+"id":  "161",
+"t":   "ekr_20031218072017_1982",
+"name":"<< attempt to create leoID.txt >> (changed)",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "162",
+"t":   "ekr_20031218072017_1847",
+"name":"app.setLog, lockLog, unlocklog",
+"children":[]
+}
+,
+{
+"id":  "163",
+"t":   "ekr_20031218072017_2619",
+"name":"app.writeWaitingLog",
+"children":[]
+}
+,
+{
+"id":  "164",
+"t":   "ekr_20120427064024_10068",
+"name":"app.Detecting already-open files",
+"children":[
+{
+"id":  "165",
+"t":   "ekr_20120427064024_10064",
+"name":"app.checkForOpenFile",
+"children":[]
+}
+,
+{
+"id":  "166",
+"t":   "ekr_20120427064024_10066",
+"name":"app.forgetOpenFile",
+"children":[]
+}
+,
+{
+"id":  "167",
+"t":   "ekr_20120427064024_10065",
+"name":"app.rememberOpenFile",
+"children":[]
+}
+,
+{
+"id":  "168",
+"t":   "ekr_20150621062355_1",
+"name":"app.runAlreadyOpenDialog",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "169",
+"t":   "ekr_20120209051836_10242",
+"name":"class LoadManager",
+"children":[
+{
+"id":  "170",
+"t":   "ekr_20120214060149_15851",
+"name":" LM.ctor",
+"children":[]
+}
+,
+{
+"id":  "171",
+"t":   "ekr_20120211121736_10812",
+"name":"LM.Directory & file utils",
+"children":[
+{
+"id":  "172",
+"t":   "ekr_20120219154958_10481",
+"name":"LM.completeFileName",
+"children":[]
+}
+,
+{
+"id":  "173",
+"t":   "ekr_20120209051836_10372",
+"name":"LM.computeLeoSettingsPath",
+"children":[]
+}
+,
+{
+"id":  "174",
+"t":   "ekr_20120209051836_10373",
+"name":"LM.computeMyLeoSettingsPath",
+"children":[]
+}
+,
+{
+"id":  "175",
+"t":   "ekr_20120209051836_10252",
+"name":"LM.computeStandardDirectories & helpers",
+"children":[
+{
+"id":  "176",
+"t":   "ekr_20120209051836_10253",
+"name":"lm.computeGlobalConfigDir",
+"children":[]
+}
+,
+{
+"id":  "177",
+"t":   "ekr_20120209051836_10254",
+"name":"lm.computeHomeDir",
+"children":[]
+}
+,
+{
+"id":  "178",
+"t":   "ekr_20120209051836_10260",
+"name":"lm.computeHomeLeoDir",
+"children":[]
+}
+,
+{
+"id":  "179",
+"t":   "ekr_20120209051836_10255",
+"name":"lm.computeLeoDir",
+"children":[]
+}
+,
+{
+"id":  "180",
+"t":   "ekr_20120209051836_10256",
+"name":"lm.computeLoadDir",
+"children":[
+{
+"id":  "181",
+"t":   "ekr_20120209051836_10257",
+"name":"<< resolve symlinks >>",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "182",
+"t":   "ekr_20120213164030_10697",
+"name":"lm.computeMachineName",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "183",
+"t":   "ekr_20120211121736_10772",
+"name":"LM.computeWorkbookFileName",
+"children":[]
+}
+,
+{
+"id":  "184",
+"t":   "ekr_20120219154958_10485",
+"name":"LM.reportDirectories",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "185",
+"t":   "ekr_20120215062153_10740",
+"name":"LM.Settings",
+"children":[
+{
+"id":  "186",
+"t":   "ekr_20120130101219_10182",
+"name":"lm.computeBindingLetter",
+"children":[]
+}
+,
+{
+"id":  "187",
+"t":   "ekr_20120223062418_10421",
+"name":"lm.computeLocalSettings",
+"children":[]
+}
+,
+{
+"id":  "188",
+"t":   "ekr_20121126202114_3",
+"name":"lm.createDefaultSettingsDicts",
+"children":[]
+}
+,
+{
+"id":  "189",
+"t":   "ekr_20120214165710_10726",
+"name":"lm.createSettingsDicts",
+"children":[]
+}
+,
+{
+"id":  "190",
+"t":   "ekr_20120223062418_10414",
+"name":"LM.getPreviousSettings",
+"children":[]
+}
+,
+{
+"id":  "191",
+"t":   "ekr_20120214132927_10723",
+"name":"lm.mergeShortcutsDicts & helpers",
+"children":[
+{
+"id":  "192",
+"t":   "ekr_20120311070142_9904",
+"name":"lm.checkForDuplicateShortcuts",
+"children":[]
+}
+,
+{
+"id":  "193",
+"t":   "ekr_20120214132927_10724",
+"name":"lm.invert",
+"children":[]
+}
+,
+{
+"id":  "194",
+"t":   "ekr_20120214132927_10725",
+"name":"lm.uninvert",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "195",
+"t":   "ekr_20120222103014_10312",
+"name":"lm.openSettingsFile",
+"children":[]
+}
+,
+{
+"id":  "196",
+"t":   "ekr_20120213081706_10382",
+"name":"lm.readGlobalSettingsFiles",
+"children":[]
+}
+,
+{
+"id":  "197",
+"t":   "ekr_20120214165710_10838",
+"name":"lm.traceSettingsDict",
+"children":[]
+}
+,
+{
+"id":  "198",
+"t":   "ekr_20120214165710_10822",
+"name":"lm.traceShortcutsDict",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "199",
+"t":   "ekr_20120219154958_10452",
+"name":"LM.load & helpers",
+"children":[
+{
+"id":  "200",
+"t":   "ekr_20150225133846_7",
+"name":"LM.doDiff",
+"children":[]
+}
+,
+{
+"id":  "201",
+"t":   "ekr_20120219154958_10477",
+"name":"LM.doPrePluginsInit & helpers",
+"children":[
+{
+"id":  "202",
+"t":   "ekr_20120219154958_10478",
+"name":"LM.createGui",
+"children":[]
+}
+,
+{
+"id":  "203",
+"t":   "ekr_20120219154958_10479",
+"name":"LM.createSpecialGui",
+"children":[]
+}
+,
+{
+"id":  "204",
+"t":   "ekr_20120219154958_10480",
+"name":"LM.adjustSysPath",
+"children":[]
+}
+,
+{
+"id":  "205",
+"t":   "ekr_20120219154958_10482",
+"name":"LM.getDefaultFile",
+"children":[]
+}
+,
+{
+"id":  "206",
+"t":   "ekr_20120219154958_10484",
+"name":"LM.initApp",
+"children":[]
+}
+,
+{
+"id":  "207",
+"t":   "ekr_20120219154958_10486",
+"name":"LM.scanOptions & helper",
+"children":[
+{
+"id":  "208",
+"t":   "ekr_20120219154958_10483",
+"name":"LM.computeFilesList",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "209",
+"t":   "ekr_20160718072648_1",
+"name":"LM.setStdStreams",
+"children":[
+{
+"id":  "210",
+"t":   "ekr_20160718091844_1",
+"name":"class LeoStdOut",
+"children":[
+{
+"id":  "211",
+"t":   "ekr_20160718102306_1",
+"name":"LeoStdOut.write",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "212",
+"t":   "ekr_20120219154958_10487",
+"name":"LM.doPostPluginsInit & helpers",
+"children":[
+{
+"id":  "213",
+"t":   "ekr_20120219154958_10488",
+"name":"LM.initFocusAndDraw",
+"children":[]
+}
+,
+{
+"id":  "214",
+"t":   "ekr_20120219154958_10489",
+"name":"LM.make_screen_shot",
+"children":[]
+}
+,
+{
+"id":  "215",
+"t":   "ekr_20131028155339_17098",
+"name":"LM.openEmptyWorkBook",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "216",
+"t":   "ekr_20120219154958_10491",
+"name":"LM.isValidPython & emergency (Tk) dialog class",
+"children":[
+{
+"id":  "217",
+"t":   "ekr_20120219154958_10492",
+"name":"<< define emergency dialog class >>",
+"children":[
+{
+"id":  "218",
+"t":   "ekr_20120219154958_10493",
+"name":"__init__ (emergencyDialog)",
+"children":[]
+}
+,
+{
+"id":  "219",
+"t":   "ekr_20120219154958_10494",
+"name":"createButtons",
+"children":[]
+}
+,
+{
+"id":  "220",
+"t":   "ekr_20120219154958_10495",
+"name":"createTopFrame",
+"children":[]
+}
+,
+{
+"id":  "221",
+"t":   "ekr_20120219154958_10496",
+"name":"okButton",
+"children":[]
+}
+,
+{
+"id":  "222",
+"t":   "ekr_20120219154958_10497",
+"name":"onKey",
+"children":[]
+}
+,
+{
+"id":  "223",
+"t":   "ekr_20120219154958_10498",
+"name":"run",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "224",
+"t":   "ekr_20120223062418_10393",
+"name":"LM.loadLocalFile & helper",
+"children":[
+{
+"id":  "225",
+"t":   "ekr_20120223062418_10394",
+"name":"LM.openFileByName & helpers",
+"children":[
+{
+"id":  "226",
+"t":   "ekr_20120223062418_10405",
+"name":"LM.createMenu",
+"children":[]
+}
+,
+{
+"id":  "227",
+"t":   "ekr_20120223062418_10406",
+"name":"LM.findOpenFile",
+"children":[]
+}
+,
+{
+"id":  "228",
+"t":   "ekr_20120223062418_10407",
+"name":"LM.finishOpen",
+"children":[]
+}
+,
+{
+"id":  "229",
+"t":   "ekr_20120223062418_10408",
+"name":"LM.initWrapperLeoFile",
+"children":[]
+}
+,
+{
+"id":  "230",
+"t":   "ekr_20120223062418_10419",
+"name":"LM.isLeoFile & LM.isZippedFile",
+"children":[]
+}
+,
+{
+"id":  "231",
+"t":   "ekr_20120224161905_10030",
+"name":"LM.openLeoOrZipFile",
+"children":[]
+}
+,
+{
+"id":  "232",
+"t":   "ekr_20120223062418_10416",
+"name":"LM.openLeoFile",
+"children":[]
+}
+,
+{
+"id":  "233",
+"t":   "ekr_20120223062418_10410",
+"name":"LM.openZipFile",
+"children":[]
+}
+,
+{
+"id":  "234",
+"t":   "ekr_20120223062418_10412",
+"name":"LM.readOpenedLeoFile",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "235",
+"t":   "ekr_20160430063406_1",
+"name":"LM.revertCommander",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "236",
+"t":   "ekr_20120223062418_10420",
+"name":"class PreviousSettings",
+"children":[]
+}
+,
+{
+"id":  "237",
+"t":   "ekr_20120225072226_10283",
+"name":"class RecentFilesManager",
+"children":[
+{
+"id":  "238",
+"t":   "ekr_20041201080436",
+"name":"rf.appendToRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "239",
+"t":   "ekr_20120225072226_10289",
+"name":"rf.cleanRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "240",
+"t":   "ekr_20120225072226_10297",
+"name":"rf.clearRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "241",
+"t":   "ekr_20120225072226_10301",
+"name":"rf.createRecentFilesMenuItems",
+"children":[]
+}
+,
+{
+"id":  "242",
+"t":   "ekr_20120225072226_10286",
+"name":"rf.getRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "243",
+"t":   "ekr_20120225072226_10304",
+"name":"rf.getRecentFilesTable",
+"children":[]
+}
+,
+{
+"id":  "244",
+"t":   "ekr_20070224115832",
+"name":"rf.readRecentFiles & helpers",
+"children":[
+{
+"id":  "245",
+"t":   "ekr_20061010121944",
+"name":"rf.createRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "246",
+"t":   "ekr_20050424115658",
+"name":"rf.readRecentFilesFile",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "247",
+"t":   "ekr_20120225072226_10285",
+"name":"rf.sanitize",
+"children":[]
+}
+,
+{
+"id":  "248",
+"t":   "ekr_20120215072959_12478",
+"name":"rf.setRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "249",
+"t":   "ekr_20120225072226_10293",
+"name":"rf.sortRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "250",
+"t":   "ekr_20031218072017_2083",
+"name":"rf.updateRecentFiles",
+"children":[]
+}
+,
+{
+"id":  "251",
+"t":   "ekr_20050424114937_2",
+"name":"rf.writeRecentFilesFile & helper",
+"children":[
+{
+"id":  "252",
+"t":   "ekr_20050424131051",
+"name":"rf.writeRecentFilesFileHelper",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "253",
+"t":   "ekr_20150514125218_1",
+"name":"Top-level-commands",
+"children":[
+{
+"id":  "254",
+"t":   "ekr_20150514125218_2",
+"name":"ctrl-click-at-cursor",
+"children":[]
+}
+,
+{
+"id":  "255",
+"t":   "ekr_20150514125218_3",
+"name":"enable/disable/toggle-idle-time-events",
+"children":[]
+}
+,
+{
+"id":  "256",
+"t":   "ekr_20150514125218_4",
+"name":"join-leo-irc",
+"children":[]
+}
+,
+{
+"id":  "257",
+"t":   "ekr_20150514125218_5",
+"name":"open-url",
+"children":[]
+}
+,
+{
+"id":  "258",
+"t":   "ekr_20150514125218_6",
+"name":"open-url-under-cursor",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "259",
+"t":   "ekr_20170213112231_1",
+"name":"New Node",
+"children":[]
+}
+,
+{
+"id":  "260",
+"t":   "ekr_20170212113230_1",
+"name":"@@test init method",
+"children":[]
+}
+,
+{
+"id":  "261",
+"t":   "ekr_20170212113214_1",
+"name":"@@suite plugins syntax",
+"children":[
+{
+"id":  "262",
+"t":   "ekr_20170212113214_2",
+"name":"makePluginsTestSuite",
+"children":[]
+}
+,
+{
+"id":  "263",
+"t":   "ekr_20170212113214_3",
+"name":"class pluginTestCase",
+"children":[
+{
+"id":  "264",
+"t":   "ekr_20170212113214_4",
+"name":"__init__",
+"children":[]
+}
+,
+{
+"id":  "265",
+"t":   "ekr_20170212113214_5",
+"name":"fail",
+"children":[]
+}
+,
+{
+"id":  "266",
+"t":   "ekr_20170212113214_6",
+"name":"runTest",
+"children":[]
+}
+,
+{
+"id":  "267",
+"t":   "ekr_20170212113214_7",
+"name":"setUp",
+"children":[]
+}
+,
+{
+"id":  "268",
+"t":   "ekr_20170212113214_8",
+"name":"shortDescription",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "269",
+"t":   "ekr_20170212113214_9",
+"name":"class lastTestCase",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "270",
+"t":   "ekr_20170212105226_10",
+"name":"intro-slides-script",
+"children":[
+{
+"id":  "271",
+"t":   "ekr_20170212105226_11",
+"name":"Slide 1: Leo's main window",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "272",
+"t":   "ekr_20131017051340_16850",
+"name":"Scripts",
+"children":[
+{
+"id":  "273",
+"t":   "ekr_20150313192232_12",
+"name":"Script: check all command names",
+"children":[]
+}
+,
+{
+"id":  "274",
+"t":   "ekr_20101111175617_5037",
+"name":"Script: get-plugin-docstrings",
+"children":[
+{
+"id":  "275",
+"t":   "ekr_20101111175617_56915",
+"name":"class controller",
+"children":[
+{
+"id":  "276",
+"t":   "ekr_20101112045055_13356",
+"name":"allowDir",
+"children":[]
+}
+,
+{
+"id":  "277",
+"t":   "ekr_20101112222250_5322",
+"name":"allowFile",
+"children":[]
+}
+,
+{
+"id":  "278",
+"t":   "ekr_20101112045055_13355",
+"name":"createDocs",
+"children":[]
+}
+,
+{
+"id":  "279",
+"t":   "ekr_20101112045055_13354",
+"name":"createSummary",
+"children":[]
+}
+,
+{
+"id":  "280",
+"t":   "ekr_20101111175617_14683",
+"name":"getDocString",
+"children":[]
+}
+,
+{
+"id":  "281",
+"t":   "ekr_20101112045055_13357",
+"name":"getFirstParagraph",
+"children":[]
+}
+,
+{
+"id":  "282",
+"t":   "ekr_20101111175617_24328",
+"name":"openPlugins",
+"children":[]
+}
+,
+{
+"id":  "283",
+"t":   "ekr_20101111175617_5787",
+"name":"run",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "284",
+"t":   "ekr_20131013060803_16851",
+"name":"Script: generate position trace",
+"children":[]
+}
+,
+{
+"id":  "285",
+"t":   "ekr_20131030082936_17514",
+"name":"get-child-headlines",
+"children":[]
+}
+,
+{
+"id":  "286",
+"t":   "ekr_20170213143631_1",
+"name":"Script: Stand-alone slide",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "287",
+"t":   "ekr_20131007143750_16111",
+"name":"To do",
+"children":[
+{
+"id":  "288",
+"t":   "ekr_20131108071132_17025",
+"name":"improve MacOS install: chmod",
+"children":[]
+}
+,
+{
+"id":  "289",
+"t":   "ekr_20131028213522_17137",
+"name":"Examples for cheat sheet",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "290",
+"t":   "ekr_20100805171546_4412",
+"name":"Web pages",
+"children":[
+{
+"id":  "291",
+"t":   "ville_20090609182215_5676",
+"name":"@auto-rst treecaching.txt",
+"children":[]
+}
+,
+{
+"id":  "292",
+"t":   "ekr_20090428133936_2",
+"name":"@edit html\conf.py",
+"children":[]
+}
+,
+{
+"id":  "293",
+"t":   "ekr_20101112045055_5064",
+"name":"@file plugin_catalog.py",
+"children":[]
+}
+,
+{
+"id":  "294",
+"t":   "ekr_20101112045055_5065",
+"name":"@url docs generated from plugin_catalog.py",
+"children":[]
+}
+,
+{
+"id":  "295",
+"t":   "ekr_20131005214621_16088",
+"name":"Home page",
+"children":[
+{
+"id":  "296",
+"t":   "ekr_20100808060203_4273",
+"name":"@file html/index.html",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "297",
+"t":   "ekr_20101007100904_4372",
+"name":"Slideshows",
+"children":[
+{
+"id":  "298",
+"t":   "ekr_20101028110015_8271",
+"name":"@file slideshows.txt",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "299",
+"t":   "ekr_20101115152915_4937",
+"name":"wikipedia entry",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "300",
+"t":   "ekr_20040414161647",
+"name":"Leo's Documentation",
+"children":[
+{
+"id":  "301",
+"t":   "ekr_20170215081358_1",
+"name":" Table of contents",
+"children":[
+{
+"id":  "302",
+"t":   "ekr_20170215075612_1",
+"name":"@rst html\leo_toc.html",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "303",
+"t":   "ekr_20140216125129_16666",
+"name":"Additonal web pages",
+"children":[
+{
+"id":  "304",
+"t":   "ekr_20131030184445_16582",
+"name":"@rst html/leoLinks.html ",
+"children":[]
+}
+,
+{
+"id":  "305",
+"t":   "ekr_20090711120622_10447",
+"name":"@rst html/screen-shots.html",
+"children":[
+{
+"id":  "306",
+"t":   "ekr_20170322084431_1",
+"name":"Leo's main window",
+"children":[]
+}
+,
+{
+"id":  "307",
+"t":   "ekr_20170322084657_1",
+"name":"A dark theme",
+"children":[]
+}
+,
+{
+"id":  "308",
+"t":   "ekr_20090811090022_14453",
+"name":"Leo's main window on Linux",
+"children":[]
+}
+,
+{
+"id":  "309",
+"t":   "ekr_20090811090022_14452",
+"name":"Leo's rendering pane",
+"children":[]
+}
+,
+{
+"id":  "310",
+"t":   "ekr_20170322084909_1",
+"name":"Using Leo to manage a PhD thesis",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "311",
+"t":   "ekr_20131120115900_16329",
+"name":"@rst html/screencasts.html",
+"children":[]
+}
+,
+{
+"id":  "312",
+"t":   "ekr_20100821182153_4343",
+"name":"@rst html/slides.html",
+"children":[]
+}
+,
+{
+"id":  "313",
+"t":   "ekr_20170130080532_1",
+"name":"@auto-md ../doc/demo.md",
+"children":[]
+}
+,
+{
+"id":  "314",
+"t":   "ekr_20170202125807_1",
+"name":"@auto-md ../doc/colorizer.md",
+"children":[]
+}
+,
+{
+"id":  "315",
+"t":   "ekr_20161120073024_1",
+"name":"Technical docs on GitHub",
+"children":[
+{
+"id":  "316",
+"t":   "ekr_20161120073038_1",
+"name":"@auto-md importers.md ",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "317",
+"t":   "ekr_20131017094004_16739",
+"name":"How to...",
+"children":[
+{
+"id":  "318",
+"t":   "ekr_20090401113141_1",
+"name":"How to generate odt/rtf/pdf files",
+"children":[
+{
+"id":  "319",
+"t":   "ekr_20090620131445_5595",
+"name":"Post from ville",
+"children":[]
+}
+,
+{
+"id":  "320",
+"t":   "ekr_20090401113141_2",
+"name":"@rst c:/test/test.html",
+"children":[
+{
+"id":  "321",
+"t":   "ekr_20090401113141_4",
+"name":"section 1",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "322",
+"t":   "ekr_20101104024804_4898",
+"name":"How to generate these docs",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "323",
+"t":   "ekr_20131023151757_17122",
+"name":"Preliminaries",
+"children":[
+{
+"id":  "324",
+"t":   "ekr_20131008041326_16079",
+"name":"@rst html/preliminaries.html",
+"children":[]
+}
+,
+{
+"id":  "325",
+"t":   "ekr_20131017174814_17479",
+"name":"@rst html/preface.html",
+"children":[]
+}
+,
+{
+"id":  "326",
+"t":   "ekr_20050831184021_4",
+"name":"@rst html/testimonials.html",
+"children":[
+{
+"id":  "327",
+"t":   "ekr_20050830074815_1",
+"name":"Leo is revolutionary",
+"children":[]
+}
+,
+{
+"id":  "328",
+"t":   "ekr_20050830074815_2",
+"name":"Leo is a showcase Python application",
+"children":[]
+}
+,
+{
+"id":  "329",
+"t":   "ekr_20050830074815_3",
+"name":"Leo is fun, even addicting",
+"children":[]
+}
+,
+{
+"id":  "330",
+"t":   "ekr_20050830074815_4",
+"name":"Leo is a flexible, powerful IDE",
+"children":[]
+}
+,
+{
+"id":  "331",
+"t":   "ekr_20050830074815_5",
+"name":"Leo is a superb outliner",
+"children":[]
+}
+,
+{
+"id":  "332",
+"t":   "ekr_20050830074815_6",
+"name":"Leo is an excellent PIM",
+"children":[]
+}
+,
+{
+"id":  "333",
+"t":   "ekr_20050830074815_8",
+"name":"Leo is a superb documentation tool",
+"children":[]
+}
+,
+{
+"id":  "334",
+"t":   "ekr_20050830074815_9",
+"name":"Leo simplifies the understanding of complex systems",
+"children":[]
+}
+,
+{
+"id":  "335",
+"t":   "ekr_20050830074815_10",
+"name":"Leo is stable, well designed and well supported",
+"children":[]
+}
+,
+{
+"id":  "336",
+"t":   "ekr_20150326140024_1",
+"name":"Steve Zatz explains why @clean changes everything",
+"children":[]
+}
+,
+{
+"id":  "337",
+"t":   "ekr_20131023151757_17124",
+"name":"Quotes from Leo's developers",
+"children":[]
+}
+,
+{
+"id":  "338",
+"t":   "ekr_20050830074815_11",
+"name":"Longer quotes...",
+"children":[
+{
+"id":  "339",
+"t":   "ekr_20050830074815_12",
+"name":" Speed Ream's slashdot article",
+"children":[]
+}
+,
+{
+"id":  "340",
+"t":   "ekr_20050830074815_13",
+"name":"Joe Orr",
+"children":[]
+}
+,
+{
+"id":  "341",
+"t":   "ekr_20050830074815_14",
+"name":"Dan Winkler",
+"children":[]
+}
+,
+{
+"id":  "342",
+"t":   "ekr_20050830074815_15",
+"name":"Dan Winkler 2",
+"children":[]
+}
+,
+{
+"id":  "343",
+"t":   "ekr_20050830074815_16",
+"name":"Dan Winkler 3",
+"children":[]
+}
+,
+{
+"id":  "344",
+"t":   "ekr_20131025044901_17144",
+"name":"Steve Litt",
+"children":[]
+}
+,
+{
+"id":  "345",
+"t":   "ekr_20141210095600_11",
+"name":"Dave Williams",
+"children":[]
+}
+,
+{
+"id":  "346",
+"t":   "ekr_20150923111606_1",
+"name":"John Lunzer",
+"children":[]
+}
+,
+{
+"id":  "347",
+"t":   "ekr_20170309071256_1",
+"name":"John Lunzer 2",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "348",
+"t":   "ekr_20160304081437_7",
+"name":"Why Leo is noteworthy",
+"children":[
+{
+"id":  "349",
+"t":   "ekr_20160304081437_8",
+"name":"Offray Luna Cárdenas",
+"children":[]
+}
+,
+{
+"id":  "350",
+"t":   "ekr_20160304081437_9",
+"name":"Speed's comments",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "351",
+"t":   "ekr_20040414172218_4",
+"name":"@rst html/acknowledgements.html",
+"children":[]
+}
+,
+{
+"id":  "352",
+"t":   "ekr_20090221070927_1",
+"name":"@rst html/license.html",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "353",
+"t":   "ekr_20131008041326_16092",
+"name":"Installing & running Leo",
+"children":[
+{
+"id":  "354",
+"t":   "ekr_20131015104133_16766",
+"name":"@rst html/getting-started.html",
+"children":[]
+}
+,
+{
+"id":  "355",
+"t":   "ekr_20111127144911_5544",
+"name":"@rst html/download.html",
+"children":[
+{
+"id":  "356",
+"t":   "tbrown_20140412113009_50227",
+"name":"Snapshots",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "357",
+"t":   "ekr_20131008041326_16094",
+"name":"@rst html/installing.html",
+"children":[
+{
+"id":  "358",
+"t":   "ekr_20141105052052_4",
+"name":"Dependencies",
+"children":[]
+}
+,
+{
+"id":  "359",
+"t":   "ekr_20101125062332_5090",
+"name":"Installing packages",
+"children":[]
+}
+,
+{
+"id":  "360",
+"t":   "ekr_20170206073848_1",
+"name":"Installing Leo itself",
+"children":[
+{
+"id":  "361",
+"t":   "ekr_20170206073747_2",
+"name":"Installing Leo on Windows",
+"children":[
+{
+"id":  "362",
+"t":   "ekr_20170206073747_3",
+"name":"Using the single-click installer",
+"children":[]
+}
+,
+{
+"id":  "363",
+"t":   "ekr_20170206073747_4",
+"name":"Installing from sources (Windows)",
+"children":[]
+}
+,
+{
+"id":  "364",
+"t":   "ekr_20170206073747_5",
+"name":"Creating Windows file associations",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "365",
+"t":   "ekr_20170206073747_10",
+"name":"Installing Leo with git",
+"children":[]
+}
+,
+{
+"id":  "366",
+"t":   "ekr_20170206073747_6",
+"name":"Installing Leo on Linux",
+"children":[
+{
+"id":  "367",
+"t":   "ekr_20170206073747_7",
+"name":"Installing from a debian package",
+"children":[]
+}
+,
+{
+"id":  "368",
+"t":   "ekr_20170206073747_8",
+"name":"Installing from sources (Linux)",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "369",
+"t":   "ekr_20170206073747_9",
+"name":"Installing Leo on MacOs 10.7 (Lion) and later",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "370",
+"t":   "ekr_20131008041326_16140",
+"name":"@rst html/running.html",
+"children":[
+{
+"id":  "371",
+"t":   "ekr_20131008041326_16151",
+"name":"Running Leo",
+"children":[
+{
+"id":  "372",
+"t":   "ekr_20131008041326_16152",
+"name":"Running Leo the first time",
+"children":[]
+}
+,
+{
+"id":  "373",
+"t":   "ekr_20131008041326_16153",
+"name":"Running Leo in batch mode",
+"children":[]
+}
+,
+{
+"id":  "374",
+"t":   "ekr_20131008041326_16154",
+"name":"Running Leo from a console window",
+"children":[]
+}
+,
+{
+"id":  "375",
+"t":   "ekr_20131008041326_16155",
+"name":"The .leo directory",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "376",
+"t":   "ekr_20131008041326_16156",
+"name":"Leo's command-line options",
+"children":[]
+}
+,
+{
+"id":  "377",
+"t":   "ekr_20150323154836_1",
+"name":"Leo's workbook file",
+"children":[]
+}
+,
+{
+"id":  "378",
+"t":   "ekr_20141124094250_2",
+"name":"Using sessions",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "379",
+"t":   "ekr_20050831195331_1",
+"name":"FAQ",
+"children":[
+{
+"id":  "380",
+"t":   "ekr_20050830115714",
+"name":"@rst html\FAQ.html",
+"children":[
+{
+"id":  "381",
+"t":   "ekr_20050830120007",
+"name":"@rst-no-head Links (FAQ)",
+"children":[]
+}
+,
+{
+"id":  "382",
+"t":   "ekr_20090212054250_5",
+"name":"Getting Leo",
+"children":[
+{
+"id":  "383",
+"t":   "ekr_20090212054250_6",
+"name":"Where can I get official releases of Leo?",
+"children":[]
+}
+,
+{
+"id":  "384",
+"t":   "ekr_20080603124653_1",
+"name":"How do I use git to get the latest sources from Leo's GitHub site?",
+"children":[]
+}
+,
+{
+"id":  "385",
+"t":   "ekr_20090212054250_7",
+"name":"How can I get recent snapshots of Leo?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "386",
+"t":   "ekr_20070623145346",
+"name":"Installing Leo",
+"children":[
+{
+"id":  "387",
+"t":   "ekr_20090202191501_7",
+"name":"Leo's installer failed, what do I do?",
+"children":[]
+}
+,
+{
+"id":  "388",
+"t":   "ekr_20150313053238_40",
+"name":"Common problems",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "389",
+"t":   "ekr_20050830115714_26",
+"name":"Customizing Leo",
+"children":[
+{
+"id":  "390",
+"t":   "ekr_20050830115714_29",
+"name":"How can I add support for a new language?",
+"children":[]
+}
+,
+{
+"id":  "391",
+"t":   "ekr_20141108064630_18",
+"name":"How can I create a pane for matplotlib charts?",
+"children":[]
+}
+,
+{
+"id":  "392",
+"t":   "ekr_20060915112109",
+"name":"How can I enable and disable support for psyco?",
+"children":[]
+}
+,
+{
+"id":  "393",
+"t":   "ekr_20141108064630_16",
+"name":"How can I put background images in the body pane?",
+"children":[]
+}
+,
+{
+"id":  "394",
+"t":   "ekr_20160304081437_3",
+"name":"How can I use a dark theme in Leo?",
+"children":[]
+}
+,
+{
+"id":  "395",
+"t":   "ekr_20060805094325",
+"name":"How can I use Leo's legacy key bindings?",
+"children":[]
+}
+,
+{
+"id":  "396",
+"t":   "ekr_20050830120844",
+"name":"How do I add a new menu item from a plugin?",
+"children":[]
+}
+,
+{
+"id":  "397",
+"t":   "ekr_20110531155858_20564",
+"name":"How do I set selection colors?",
+"children":[]
+}
+,
+{
+"id":  "398",
+"t":   "ekr_20091105080104_9031",
+"name":"How do I specify qt fonts?",
+"children":[]
+}
+,
+{
+"id":  "399",
+"t":   "ekr_20050830115714_30",
+"name":"How do I submit a plugin?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "400",
+"t":   "ekr_20050830115714_1",
+"name":"Learning to use Leo",
+"children":[
+{
+"id":  "401",
+"t":   "ekr_20161207052511_1",
+"name":"How can I learn Leo, or python, or anything",
+"children":[]
+}
+,
+{
+"id":  "402",
+"t":   "ekr_20110531155858_20559",
+"name":"How does EKR (Leo's developer) use Leo?",
+"children":[]
+}
+,
+{
+"id":  "403",
+"t":   "ekr_20141108064630_8",
+"name":"How does EKR use clones?",
+"children":[]
+}
+,
+{
+"id":  "404",
+"t":   "ekr_20120229094652_15152",
+"name":"How does Leo handle clone conflicts?",
+"children":[]
+}
+,
+{
+"id":  "405",
+"t":   "ekr_20050830115714_2",
+"name":"What's the best way to learn to use Leo?",
+"children":[]
+}
+,
+{
+"id":  "406",
+"t":   "ekr_20060111192108",
+"name":"When is deleting a node dangerous?",
+"children":[]
+}
+,
+{
+"id":  "407",
+"t":   "ekr_20050830115714_7",
+"name":"When is using a section better than using a method?",
+"children":[]
+}
+,
+{
+"id":  "408",
+"t":   "ekr_20170228103914_1",
+"name":"When may I delete clones safely?",
+"children":[]
+}
+,
+{
+"id":  "409",
+"t":   "ekr_20110521135104_18151",
+"name":"Why doesn't Leo support cross-file clones?",
+"children":[]
+}
+,
+{
+"id":  "410",
+"t":   "ekr_20050830115714_4",
+"name":"Why should I use clones?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "411",
+"t":   "ekr_20101025080245_6084",
+"name":"Leo in Shared environments",
+"children":[
+{
+"id":  "412",
+"t":   "ekr_20050830115714_12",
+"name":"How should I use Leo with git, etc.?",
+"children":[]
+}
+,
+{
+"id":  "413",
+"t":   "ekr_20090706042206_14718",
+"name":"How can I use Leo cooperatively without sentinels?",
+"children":[]
+}
+,
+{
+"id":  "414",
+"t":   "ekr_20120229094652_15137",
+"name":"What's the recommended way to upgrade Leo?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "415",
+"t":   "ekr_20141109053526_4",
+"name":"Scipting & Testing",
+"children":[
+{
+"id":  "416",
+"t":   "ekr_20141108064630_15",
+"name":"How can I create buttons with dropdown menus?",
+"children":[]
+}
+,
+{
+"id":  "417",
+"t":   "ekr_20120229094652_15099",
+"name":"How can I make commonly-used scripts widely accessible?",
+"children":[]
+}
+,
+{
+"id":  "418",
+"t":   "ekr_20160415031743_21",
+"name":"How can I organize large docstrings?",
+"children":[]
+}
+,
+{
+"id":  "419",
+"t":   "ekr_20160428105918_1",
+"name":"How can I run pylint outside of Leo?",
+"children":[]
+}
+,
+{
+"id":  "420",
+"t":   "ekr_20131115075142_16636",
+"name":"How can I test settings easily?",
+"children":[]
+}
+,
+{
+"id":  "421",
+"t":   "ekr_20141108064630_12",
+"name":"How can I use setuptools instead of .bat files?",
+"children":[]
+}
+,
+{
+"id":  "422",
+"t":   "ekr_20141108064630_13",
+"name":"How can scripts call functions from Leo's core?",
+"children":[]
+}
+,
+{
+"id":  "423",
+"t":   "ekr_20141108064630_10",
+"name":"How do I run unit tests from Leo?",
+"children":[]
+}
+,
+{
+"id":  "424",
+"t":   "ekr_20141108064630_14",
+"name":"How to use leo to make mathematical notes?",
+"children":[]
+}
+,
+{
+"id":  "425",
+"t":   "ekr_20160304081437_6",
+"name":"Tip: run unit tests locally using clones",
+"children":[]
+}
+,
+{
+"id":  "426",
+"t":   "ekr_20080527063511_1",
+"name":"What is an easy way to profile code?",
+"children":[]
+}
+,
+{
+"id":  "427",
+"t":   "ekr_20160309092522_1",
+"name":"What is the Stupendous Aha and why does it matter?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "428",
+"t":   "ekr_20050830115714_118",
+"name":"Tips and techniques",
+"children":[
+{
+"id":  "429",
+"t":   "ekr_20050830115714_113",
+"name":"How can I create a template .leo file?",
+"children":[]
+}
+,
+{
+"id":  "430",
+"t":   "ekr_20170131092936_1",
+"name":"How can I create and use markdown files?",
+"children":[]
+}
+,
+{
+"id":  "431",
+"t":   "ekr_20150415111549_1",
+"name":"How can I customize the clone-find-all commands?",
+"children":[]
+}
+,
+{
+"id":  "432",
+"t":   "ekr_20050830115714_120",
+"name":"How can I display graphics in Leo?",
+"children":[]
+}
+,
+{
+"id":  "433",
+"t":   "ekr_20150415110715_1",
+"name":"How can I eliminate clone wars?",
+"children":[]
+}
+,
+{
+"id":  "434",
+"t":   "ekr_20050830115714_74",
+"name":"How can I import many files at once?",
+"children":[]
+}
+,
+{
+"id":  "435",
+"t":   "ekr_20150416100041_1",
+"name":"How can I organize data so I can find stuff later?",
+"children":[]
+}
+,
+{
+"id":  "436",
+"t":   "ekr_20120229094652_15124",
+"name":"How can I restore focus without using the mouse",
+"children":[]
+}
+,
+{
+"id":  "437",
+"t":   "ekr_20050830115714_116",
+"name":"How can I show Leo files with Excel?",
+"children":[]
+}
+,
+{
+"id":  "438",
+"t":   "ekr_20160414191631_1",
+"name":"How can I simulate more flexible clones?",
+"children":[]
+}
+,
+{
+"id":  "439",
+"t":   "ekr_20141030042423_9",
+"name":"How can I specify the root directory of a thumb drive?",
+"children":[]
+}
+,
+{
+"id":  "440",
+"t":   "ekr_20120229094652_15148",
+"name":"How can I use BibTeX citations from Leo?",
+"children":[]
+}
+,
+{
+"id":  "441",
+"t":   "ekr_20150415111217_1",
+"name":"How can I use clones to reorganize an outline?",
+"children":[]
+}
+,
+{
+"id":  "442",
+"t":   "ekr_20130807203905_16526",
+"name":"How can I use git to check Leo's importers?",
+"children":[]
+}
+,
+{
+"id":  "443",
+"t":   "ekr_20160304081437_4",
+"name":"How can I use Leo in virtualenv?",
+"children":[]
+}
+,
+{
+"id":  "444",
+"t":   "ekr_20050830120857",
+"name":"How can I use Leo to develop Leo itself?",
+"children":[]
+}
+,
+{
+"id":  "445",
+"t":   "ekr_20160304081437_5",
+"name":"How can I use Leo with git?",
+"children":[]
+}
+,
+{
+"id":  "446",
+"t":   "ekr_20141109053526_8",
+"name":"How can I use the GTD workflow in Leo?",
+"children":[]
+}
+,
+{
+"id":  "447",
+"t":   "ekr_20050830115714_119",
+"name":"How can I use two copies of Leo to advantage?",
+"children":[]
+}
+,
+{
+"id":  "448",
+"t":   "ekr_20131122055946_16401",
+"name":"How to make a screencast",
+"children":[
+{
+"id":  "449",
+"t":   "ekr_20131122055946_16402",
+"name":"Use a script to open your app",
+"children":[]
+}
+,
+{
+"id":  "450",
+"t":   "ekr_20131122055946_16403",
+"name":"Debug your workflow with short videos",
+"children":[]
+}
+,
+{
+"id":  "451",
+"t":   "ekr_20131122055946_16404",
+"name":"Emulate the screencast.com tutorials",
+"children":[]
+}
+,
+{
+"id":  "452",
+"t":   "ekr_20131122055946_16405",
+"name":"Record your first real take",
+"children":[]
+}
+,
+{
+"id":  "453",
+"t":   "ekr_20131122055946_16406",
+"name":"Edit your raw take",
+"children":[]
+}
+,
+{
+"id":  "454",
+"t":   "ekr_20131122055946_16407",
+"name":"Summary",
+"children":[]
+}
+,
+{
+"id":  "455",
+"t":   "ekr_20131129061821_16884",
+"name":"Additional tips",
+"children":[]
+}
+,
+{
+"id":  "456",
+"t":   "ekr_20131211054925_16388",
+"name":"Tips for improving audio",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "457",
+"t":   "ekr_20170228104217_1",
+"name":"What are some useful abbreviations?",
+"children":[]
+}
+,
+{
+"id":  "458",
+"t":   "ekr_20150415105956_1",
+"name":"Why is Alt-N (goto-next-clone) important?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "459",
+"t":   "ekr_20050830115714_76",
+"name":"Trouble shooting",
+"children":[
+{
+"id":  "460",
+"t":   "ekr_20090130144433_1",
+"name":"How do I get help?",
+"children":[]
+}
+,
+{
+"id":  "461",
+"t":   "ekr_20090130144433_2",
+"name":"How do I report bugs?",
+"children":[]
+}
+,
+{
+"id":  "462",
+"t":   "ekr_20080813064908_2",
+"name":"My old .leo files won't load using Leo 4.5 or later. What should I do?",
+"children":[]
+}
+,
+{
+"id":  "463",
+"t":   "ekr_20050830115714_115",
+"name":"Error messages from the rst3 plugin aren't helpful. What can I do?",
+"children":[]
+}
+,
+{
+"id":  "464",
+"t":   "ekr_20050906090012",
+"name":"How can I run Leo from a console window?",
+"children":[]
+}
+,
+{
+"id":  "465",
+"t":   "ekr_20050830115714_77",
+"name":"How can I use Python's pdb debugger with Leo?",
+"children":[]
+}
+,
+{
+"id":  "466",
+"t":   "ekr_20160123060917_1",
+"name":"How do I make Ctrl-Shift-0 work on Windows 8 or 10?",
+"children":[]
+}
+,
+{
+"id":  "467",
+"t":   "ekr_20160318142213_1",
+"name":"I am having trouble installing Leo on MacOS. What should I do?",
+"children":[]
+}
+,
+{
+"id":  "468",
+"t":   "ekr_20050830115714_17",
+"name":"I can't write Imported files.  What's going on?",
+"children":[]
+}
+,
+{
+"id":  "469",
+"t":   "ekr_20060329101442",
+"name":"Nothing (or almost nothing) happens when I start Leo.  What should I do?",
+"children":[]
+}
+,
+{
+"id":  "470",
+"t":   "ekr_20050830115714_117",
+"name":"The new Python decorator syntax causes problems.  What can I do?",
+"children":[]
+}
+,
+{
+"id":  "471",
+"t":   "ekr_20070623145346_1",
+"name":"Running Python setup.py install from the leo directory doesn't work.  Why not?",
+"children":[]
+}
+,
+{
+"id":  "472",
+"t":   "ekr_20070816092449",
+"name":"I can't run the LeoBridge module outside of leo/core.  What should I do?",
+"children":[]
+}
+,
+{
+"id":  "473",
+"t":   "ekr_20101026082911_5538",
+"name":"Why didn't Leo update my @clean outline as expected?",
+"children":[]
+}
+,
+{
+"id":  "474",
+"t":   "ekr_20120229094652_15130",
+"name":"Why do Qt windows disappear in my scripts?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "475",
+"t":   "ekr_20071026055929",
+"name":"Unicode issues",
+"children":[
+{
+"id":  "476",
+"t":   "ekr_20061021164213",
+"name":"I can not enter non-ascii characters.  What can I do?",
+"children":[]
+}
+,
+{
+"id":  "477",
+"t":   "ekr_20050830115714_9",
+"name":"Some characters in external files look funny. What can I do?",
+"children":[]
+}
+,
+{
+"id":  "478",
+"t":   "ekr_20060917130130",
+"name":"I get weird results when defining unicode strings in scripts.  What is going on?",
+"children":[]
+}
+,
+{
+"id":  "479",
+"t":   "ekr_20050830115714_10",
+"name":"Some characters are garbled when importing files. What can I do?",
+"children":[]
+}
+,
+{
+"id":  "480",
+"t":   "ekr_20071026055929_1",
+"name":"Python's print statement shows 'byte hash' for unicode characters.  What can I do?",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "481",
+"t":   "ekr_20050830115714_13",
+"name":"Using external files",
+"children":[
+{
+"id":  "482",
+"t":   "ekr_20050830115714_14",
+"name":"How do I inhibit sentinels in external files?",
+"children":[]
+}
+,
+{
+"id":  "483",
+"t":   "ekr_20050830115714_16",
+"name":"How do I prevent Leo from expanding sections?",
+"children":[]
+}
+,
+{
+"id":  "484",
+"t":   "ekr_20050830115714_18",
+"name":"How can I create Javascript comments?",
+"children":[]
+}
+,
+{
+"id":  "485",
+"t":   "ekr_20050830115714_19",
+"name":"How can I disable PHP comments?",
+"children":[]
+}
+,
+{
+"id":  "486",
+"t":   "ekr_20050830115714_20",
+"name":"How can I use Leo with unsupported languages?",
+"children":[]
+}
+,
+{
+"id":  "487",
+"t":   "ekr_20050830115714_21",
+"name":"How do I make external files start with a shebang line?",
+"children":[]
+}
+,
+{
+"id":  "488",
+"t":   "ekr_20050830115714_24",
+"name":"Can @file trees contain material not in the external file?",
+"children":[]
+}
+,
+{
+"id":  "489",
+"t":   "ekr_20050830115714_25",
+"name":"How can I use Leo with older C compilers",
+"children":[]
+}
+,
+{
+"id":  "490",
+"t":   "ekr_20060529053407",
+"name":"Why can't I use @ignore directives in @file trees?",
+"children":[]
+}
+,
+{
+"id":  "491",
+"t":   "shadow_20080825171547_9",
+"name":"How can I avoid getting long lines in external files?",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "492",
+"t":   "ekr_20091130111843_6787",
+"name":"Tutorials",
+"children":[
+{
+"id":  "493",
+"t":   "ekr_20091130111843_6788",
+"name":"@rst html\tutorial.html",
+"children":[]
+}
+,
+{
+"id":  "494",
+"t":   "ekr_20131008041326_16203",
+"name":"@rst html\tutorial-basics.html",
+"children":[
+{
+"id":  "495",
+"t":   "ekr_20131002055813_15973",
+"name":"Leo's main window",
+"children":[]
+}
+,
+{
+"id":  "496",
+"t":   "ekr_20170215105125_1",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "497",
+"t":   "ekr_20170215031129_1",
+"name":"Outlines and clones",
+"children":[]
+}
+,
+{
+"id":  "498",
+"t":   "ekr_20131004064408_16020",
+"name":"Leo directives",
+"children":[]
+}
+,
+{
+"id":  "499",
+"t":   "ekr_20131003040744_18221",
+"name":"External files",
+"children":[
+{
+"id":  "500",
+"t":   "ekr_20170314060847_1",
+"name":"\@file",
+"children":[]
+}
+,
+{
+"id":  "501",
+"t":   "ekr_20170314060926_1",
+"name":"Markup",
+"children":[]
+}
+,
+{
+"id":  "502",
+"t":   "ekr_20170314061000_1",
+"name":"\@clean",
+"children":[]
+}
+,
+{
+"id":  "503",
+"t":   "ekr_20170314061022_1",
+"name":"\@all",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "504",
+"t":   "ekr_20131001100335_15940",
+"name":"Configuring Leo",
+"children":[]
+}
+,
+{
+"id":  "505",
+"t":   "ekr_20131009100732_19038",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "506",
+"t":   "ekr_20170215082032_1",
+"name":"Scripting basics",
+"children":[
+{
+"id":  "507",
+"t":   "ekr_20170217093636_1",
+"name":"Markup",
+"children":[]
+}
+,
+{
+"id":  "508",
+"t":   "ekr_20170217093639_1",
+"name":"c, g and p",
+"children":[]
+}
+,
+{
+"id":  "509",
+"t":   "ekr_20170217093640_1",
+"name":"Accessing outline data",
+"children":[]
+}
+,
+{
+"id":  "510",
+"t":   "ekr_20170217093640_2",
+"name":"\@button and @command nodes",
+"children":[]
+}
+,
+{
+"id":  "511",
+"t":   "ekr_20170217093640_3",
+"name":"\@test nodes",
+"children":[]
+}
+,
+{
+"id":  "512",
+"t":   "ekr_20170217093641_1",
+"name":"Autocompletion and calltips",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "513",
+"t":   "ekr_20131005214621_16090",
+"name":"Summary",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "514",
+"t":   "ekr_20131008041326_16222",
+"name":"@rst html\tutorial-pim.html",
+"children":[
+{
+"id":  "515",
+"t":   "ekr_20131004073415_16044",
+"name":"Clones",
+"children":[]
+}
+,
+{
+"id":  "516",
+"t":   "ekr_20131018100353_16706",
+"name":"Clones accelerate work flow by creating views",
+"children":[]
+}
+,
+{
+"id":  "517",
+"t":   "ekr_20131009100732_16760",
+"name":"Using abbreviations and templates",
+"children":[]
+}
+,
+{
+"id":  "518",
+"t":   "ekr_20131009100732_16737",
+"name":"Using URLs",
+"children":[]
+}
+,
+{
+"id":  "519",
+"t":   "ekr_20170312083548_1",
+"name":"Using Chapters",
+"children":[]
+}
+,
+{
+"id":  "520",
+"t":   "ekr_20131008041326_16066",
+"name":"Summary",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "521",
+"t":   "ekr_20131008041326_16241",
+"name":"@rst html\tutorial-rst3.html",
+"children":[
+{
+"id":  "522",
+"t":   "ekr_20131030071311_17087",
+"name":"@rst-ignore notes",
+"children":[]
+}
+,
+{
+"id":  "523",
+"t":   "ekr_20131102044158_16488",
+"name":"Install docutils and (optional) sphinx",
+"children":[]
+}
+,
+{
+"id":  "524",
+"t":   "ekr_20131009100732_16748",
+"name":"Create the @rst node",
+"children":[]
+}
+,
+{
+"id":  "525",
+"t":   "ekr_20131027064821_17144",
+"name":"The output and intermediate files",
+"children":[]
+}
+,
+{
+"id":  "526",
+"t":   "ekr_20131009100732_16754",
+"name":"Choose docutils or sphinx",
+"children":[
+{
+"id":  "527",
+"t":   "ekr_20131027064821_18689",
+"name":"Setting up conf.py for sphinx",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "528",
+"t":   "ekr_20131009100732_16750",
+"name":"Put a title in the @rst node ",
+"children":[]
+}
+,
+{
+"id":  "529",
+"t":   "ekr_20131024051649_17136",
+"name":"Start the chapter",
+"children":[]
+}
+,
+{
+"id":  "530",
+"t":   "ekr_20131024051649_17137",
+"name":"Create sections and subsections",
+"children":[]
+}
+,
+{
+"id":  "531",
+"t":   "ekr_20131009100732_16751",
+"name":"Write your document",
+"children":[]
+}
+,
+{
+"id":  "532",
+"t":   "ekr_20131009100732_16752",
+"name":"Run the rst3 command",
+"children":[]
+}
+,
+{
+"id":  "533",
+"t":   "ekr_20131028213522_17150",
+"name":"Other topics",
+"children":[
+{
+"id":  "534",
+"t":   "ekr_20131009100732_16755",
+"name":"\@rst-no-head suppresses sections",
+"children":[]
+}
+,
+{
+"id":  "535",
+"t":   "ekr_20131025044901_17147",
+"name":"\@rst-ignore & @rst-ignore-tree ignore text",
+"children":[]
+}
+,
+{
+"id":  "536",
+"t":   "ekr_20131025044901_17148",
+"name":"Inserting raw markup",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "537",
+"t":   "ekr_20131005214621_16128",
+"name":"Summary",
+"children":[]
+}
+,
+{
+"id":  "538",
+"t":   "ekr_20131009100732_16753",
+"name":"Further study",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "539",
+"t":   "ekr_20040403171740",
+"name":"@rst html\tutorial-scripting.html",
+"children":[
+{
+"id":  "540",
+"t":   "ekr_20131013060803_16852",
+"name":"Hello world",
+"children":[]
+}
+,
+{
+"id":  "541",
+"t":   "ekr_20170313111502_1",
+"name":"Create outline nodes",
+"children":[]
+}
+,
+{
+"id":  "542",
+"t":   "ekr_20170313111626_1",
+"name":"Generate an output file from nodes",
+"children":[]
+}
+,
+{
+"id":  "543",
+"t":   "ekr_20070120075236",
+"name":"Predefined symbols: c, g and p",
+"children":[]
+}
+,
+{
+"id":  "544",
+"t":   "ekr_20131014050027_16801",
+"name":"Positions and vnodes",
+"children":[]
+}
+,
+{
+"id":  "545",
+"t":   "ekr_20131012060912_16775",
+"name":"Generators",
+"children":[]
+}
+,
+{
+"id":  "546",
+"t":   "ekr_20150312080344_12",
+"name":"wrappers vs. widgets",
+"children":[]
+}
+,
+{
+"id":  "547",
+"t":   "ekr_20131016021541_16893",
+"name":"Summary",
+"children":[]
+}
+,
+{
+"id":  "548",
+"t":   "ekr_20131017051340_16732",
+"name":"@rst-ignore-tree scripting examples",
+"children":[
+{
+"id":  "549",
+"t":   "ekr_20131017051340_16733",
+"name":"An example outline",
+"children":[]
+}
+,
+{
+"id":  "550",
+"t":   "ekr_20131017051340_16735",
+"name":"Example position scripts",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "551",
+"t":   "ekr_20131008041326_16080",
+"name":"Users Guide",
+"children":[
+{
+"id":  "552",
+"t":   "ekr_20131008041326_16082",
+"name":"@rst html/usersguide.html",
+"children":[]
+}
+,
+{
+"id":  "553",
+"t":   "EKR_20040524104904_211",
+"name":"Customizing Leo",
+"children":[
+{
+"id":  "554",
+"t":   "ekr_20050901101608_4",
+"name":"@rst html\customizing.html",
+"children":[
+{
+"id":  "555",
+"t":   "EKR_20040524104904_140",
+"name":"Specifying settings",
+"children":[
+{
+"id":  "556",
+"t":   "ekr_20090116130002_1",
+"name":"Configuration directories",
+"children":[]
+}
+,
+{
+"id":  "557",
+"t":   "ekr_20090116094356_2",
+"name":"Search order for settings files",
+"children":[]
+}
+,
+{
+"id":  "558",
+"t":   "ekr_20090116094356_3",
+"name":"Safe rules for local settings",
+"children":[]
+}
+,
+{
+"id":  "559",
+"t":   "ekr_20070317043727",
+"name":"Organizer nodes",
+"children":[]
+}
+,
+{
+"id":  "560",
+"t":   "ekr_20080411111008_1",
+"name":"\@ignore and \@if nodes",
+"children":[]
+}
+,
+{
+"id":  "561",
+"t":   "ekr_20070317043727_2",
+"name":"Simple settings nodes",
+"children":[]
+}
+,
+{
+"id":  "562",
+"t":   "ekr_20070317043727_3",
+"name":"Complex settings nodes",
+"children":[
+{
+"id":  "563",
+"t":   "ekr_20090116094356_5",
+"name":"\@button",
+"children":[]
+}
+,
+{
+"id":  "564",
+"t":   "ekr_20090116094356_6",
+"name":"\@commands",
+"children":[]
+}
+,
+{
+"id":  "565",
+"t":   "ekr_20160428111506_1",
+"name":"\@command-history",
+"children":[]
+}
+,
+{
+"id":  "566",
+"t":   "ekr_20090116094356_7",
+"name":"\@data",
+"children":[]
+}
+,
+{
+"id":  "567",
+"t":   "ekr_20090116094356_8",
+"name":"\@enabled-plugins",
+"children":[]
+}
+,
+{
+"id":  "568",
+"t":   "ekr_20090116094356_11",
+"name":"\@font",
+"children":[]
+}
+,
+{
+"id":  "569",
+"t":   "ekr_20090116094356_10",
+"name":"\@menuat",
+"children":[]
+}
+,
+{
+"id":  "570",
+"t":   "ekr_20090116094356_9",
+"name":"\@menus",
+"children":[]
+}
+,
+{
+"id":  "571",
+"t":   "ekr_20090116094356_14",
+"name":"\@mode",
+"children":[]
+}
+,
+{
+"id":  "572",
+"t":   "ekr_20090116094356_13",
+"name":"\@recentfiles",
+"children":[]
+}
+,
+{
+"id":  "573",
+"t":   "ekr_20090116094356_12",
+"name":"\@shortcuts",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "574",
+"t":   "ekr_20060105214753",
+"name":"Input modes",
+"children":[]
+}
+,
+{
+"id":  "575",
+"t":   "ekr_20050306090601",
+"name":"Adding extensible attributes to nodes and .leo files",
+"children":[]
+}
+,
+{
+"id":  "576",
+"t":   "ekr_20170228112643_1",
+"name":"Decluttering headlines",
+"children":[]
+}
+,
+{
+"id":  "577",
+"t":   "ekr_20080310093038_4",
+"name":"Translating Leo's menus and messages",
+"children":[]
+}
+,
+{
+"id":  "578",
+"t":   "ekr_20100122073254_11655",
+"name":"Writing new importers",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "579",
+"t":   "ekr_20050831184021_1",
+"name":"Creating documents with the rst3 Command",
+"children":[
+{
+"id":  "580",
+"t":   "ekr_20050818163826",
+"name":"@rst html\rstplugin3.html",
+"children":[
+{
+"id":  "581",
+"t":   "ekr_20100813075851_4296",
+"name":"Options",
+"children":[
+{
+"id":  "582",
+"t":   "ekr_20100809122216_4286",
+"name":"General options",
+"children":[]
+}
+,
+{
+"id":  "583",
+"t":   "ekr_20050818163826_7",
+"name":"Headline commands",
+"children":[]
+}
+,
+{
+"id":  "584",
+"t":   "ekr_20050818163826_8",
+"name":"Option doc parts",
+"children":[]
+}
+,
+{
+"id":  "585",
+"t":   "ekr_20050818163826_9",
+"name":"Settings give defaults for options",
+"children":[]
+}
+,
+{
+"id":  "586",
+"t":   "ekr_20050818163826_5",
+"name":"Http plugin options",
+"children":[]
+}
+,
+{
+"id":  "587",
+"t":   "ekr_20110612104631_16414",
+"name":"Section expansion options",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "588",
+"t":   "ekr_20100813075851_4297",
+"name":"Other topics",
+"children":[
+{
+"id":  "589",
+"t":   "ekr_20100810091118_4298",
+"name":"Markup doc parts",
+"children":[]
+}
+,
+{
+"id":  "590",
+"t":   "ekr_20050818163826_11",
+"name":"Required cascading style sheets",
+"children":[]
+}
+,
+{
+"id":  "591",
+"t":   "ekr_20060527103630",
+"name":"Controlling the rst3 command from scripts",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "592",
+"t":   "ekr_20050818163826_13",
+"name":"Further study",
+"children":[]
+}
+,
+{
+"id":  "593",
+"t":   "ekr_20050818163826_14",
+"name":"Theory of operation",
+"children":[]
+}
+,
+{
+"id":  "594",
+"t":   "ekr_20050818163826_4",
+"name":"Advanced topics",
+"children":[
+{
+"id":  "595",
+"t":   "ekr_20100810203016_4298",
+"name":"Modes",
+"children":[]
+}
+,
+{
+"id":  "596",
+"t":   "ekr_20100810091118_4301",
+"name":"Code mode options",
+"children":[]
+}
+,
+{
+"id":  "597",
+"t":   "ekr_20100810091118_4306",
+"name":"Rst mode options",
+"children":[]
+}
+,
+{
+"id":  "598",
+"t":   "ekr_20050818163826_10",
+"name":"The code-block directive",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "599",
+"t":   "ekr_20050818163826_16",
+"name":"Acknowledgements",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "600",
+"t":   "ekr_20050912125144",
+"name":"Plugins",
+"children":[
+{
+"id":  "601",
+"t":   "ekr_20050912125144_1",
+"name":"@rst html\plugins.html",
+"children":[
+{
+"id":  "602",
+"t":   "ekr_20070814104719",
+"name":"Enabling plugins",
+"children":[]
+}
+,
+{
+"id":  "603",
+"t":   "ekr_20101113063552_9398",
+"name":"Summary",
+"children":[]
+}
+,
+{
+"id":  "604",
+"t":   "ekr_20101113063552_9528",
+"name":"Gui-independent plugins",
+"children":[
+{
+"id":  "605",
+"t":   "ekr_20101113063552_9412",
+"name":"Commands & directives",
+"children":[
+{
+"id":  "606",
+"t":   "ekr_20101113063552_9413",
+"name":"add_directives.py",
+"children":[]
+}
+,
+{
+"id":  "607",
+"t":   "ekr_20101113063552_9414",
+"name":"bzr_qcommands.py",
+"children":[]
+}
+,
+{
+"id":  "608",
+"t":   "ekr_20170314091824_1",
+"name":"codewisecompleter.py",
+"children":[]
+}
+,
+{
+"id":  "609",
+"t":   "ekr_20170314091826_1",
+"name":"ctagscompleter.py",
+"children":[]
+}
+,
+{
+"id":  "610",
+"t":   "ekr_20101113063552_9415",
+"name":"empty_leo_file.py",
+"children":[]
+}
+,
+{
+"id":  "611",
+"t":   "ekr_20170314091927_1",
+"name":"ftp.py",
+"children":[]
+}
+,
+{
+"id":  "612",
+"t":   "ekr_20170314091958_1",
+"name":"gitarchive.py",
+"children":[]
+}
+,
+{
+"id":  "613",
+"t":   "ekr_20101113063552_9416",
+"name":"import_cisco_config.py",
+"children":[]
+}
+,
+{
+"id":  "614",
+"t":   "ekr_20101113063552_9417",
+"name":"initinclass.py",
+"children":[]
+}
+,
+{
+"id":  "615",
+"t":   "ekr_20170314092023_1",
+"name":"leofeeds.py",
+"children":[]
+}
+,
+{
+"id":  "616",
+"t":   "ekr_20170314092041_1",
+"name":"leomail.py",
+"children":[]
+}
+,
+{
+"id":  "617",
+"t":   "ekr_20101113063552_9418",
+"name":"leo_interface.py",
+"children":[]
+}
+,
+{
+"id":  "618",
+"t":   "ekr_20101113063552_9419",
+"name":"lineNumbers.py",
+"children":[]
+}
+,
+{
+"id":  "619",
+"t":   "ekr_20101113063552_9420",
+"name":"macros.py",
+"children":[]
+}
+,
+{
+"id":  "620",
+"t":   "ekr_20170314092107_1",
+"name":"markup_inline.py",
+"children":[]
+}
+,
+{
+"id":  "621",
+"t":   "ekr_20101113063552_9421",
+"name":"mod_autosave.py",
+"children":[]
+}
+,
+{
+"id":  "622",
+"t":   "ekr_20101113063552_9422",
+"name":"mod_read_dir_outline.py",
+"children":[]
+}
+,
+{
+"id":  "623",
+"t":   "ekr_20101113063552_9423",
+"name":"mod_timestamp.py",
+"children":[]
+}
+,
+{
+"id":  "624",
+"t":   "ekr_20101113063552_9798",
+"name":"nodeActions.py",
+"children":[]
+}
+,
+{
+"id":  "625",
+"t":   "ekr_20170314092126_1",
+"name":"nodediff.py",
+"children":[]
+}
+,
+{
+"id":  "626",
+"t":   "ekr_20101113063552_9425",
+"name":"outline_export.py",
+"children":[]
+}
+,
+{
+"id":  "627",
+"t":   "ekr_20101113063552_9426",
+"name":"paste_as_headlines.py",
+"children":[]
+}
+,
+{
+"id":  "628",
+"t":   "ekr_20101113063552_9427",
+"name":"pretty_print.py",
+"children":[]
+}
+,
+{
+"id":  "629",
+"t":   "ekr_20101113063552_9428",
+"name":"quickMove.py",
+"children":[]
+}
+,
+{
+"id":  "630",
+"t":   "ekr_20101113063552_9429",
+"name":"setHomeDirectory.py",
+"children":[]
+}
+,
+{
+"id":  "631",
+"t":   "ekr_20170314092144_1",
+"name":"sftp.py",
+"children":[]
+}
+,
+{
+"id":  "632",
+"t":   "ekr_20170314092158_1",
+"name":"threadutil.py",
+"children":[]
+}
+,
+{
+"id":  "633",
+"t":   "ekr_20101113063552_9430",
+"name":"word_count.py",
+"children":[]
+}
+,
+{
+"id":  "634",
+"t":   "ekr_20170314092222_1",
+"name":"xml_edit",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "635",
+"t":   "ekr_20101113063552_9431",
+"name":"Debugging",
+"children":[
+{
+"id":  "636",
+"t":   "ekr_20101113063552_9432",
+"name":"debugger_pudb.py",
+"children":[]
+}
+,
+{
+"id":  "637",
+"t":   "ekr_20101113063552_9433",
+"name":"dump_globals.py",
+"children":[]
+}
+,
+{
+"id":  "638",
+"t":   "ekr_20101113063552_9434",
+"name":"enable_gc.py",
+"children":[]
+}
+,
+{
+"id":  "639",
+"t":   "ekr_20101113063552_9435",
+"name":"quit_leo.py",
+"children":[]
+}
+,
+{
+"id":  "640",
+"t":   "ekr_20101113063552_9436",
+"name":"trace_gc_plugin.py",
+"children":[]
+}
+,
+{
+"id":  "641",
+"t":   "ekr_20101113063552_9437",
+"name":"trace_keys.py",
+"children":[]
+}
+,
+{
+"id":  "642",
+"t":   "ekr_20101113063552_9438",
+"name":"trace_tags.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "643",
+"t":   "ekr_20101113063552_9439",
+"name":"External programs",
+"children":[
+{
+"id":  "644",
+"t":   "ekr_20101113063552_9440",
+"name":"ipython.py",
+"children":[]
+}
+,
+{
+"id":  "645",
+"t":   "ekr_20101113063552_9442",
+"name":"open_shell.py",
+"children":[]
+}
+,
+{
+"id":  "646",
+"t":   "ekr_20101113063552_9443",
+"name":"tomboy_import.py",
+"children":[]
+}
+,
+{
+"id":  "647",
+"t":   "ekr_20101113063552_9444",
+"name":"vim.py",
+"children":[]
+}
+,
+{
+"id":  "648",
+"t":   "ekr_20101113063552_9445",
+"name":"xemacs.py",
+"children":[]
+}
+,
+{
+"id":  "649",
+"t":   "ekr_20101113063552_9446",
+"name":"word_export.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "650",
+"t":   "ekr_20101113063552_9447",
+"name":"Files and nodes",
+"children":[
+{
+"id":  "651",
+"t":   "ekr_20101113063552_9448",
+"name":"active_path.py",
+"children":[]
+}
+,
+{
+"id":  "652",
+"t":   "ekr_20101113063552_9449",
+"name":"at_folder.py",
+"children":[]
+}
+,
+{
+"id":  "653",
+"t":   "ekr_20101113063552_9450",
+"name":"at_produce.py",
+"children":[]
+}
+,
+{
+"id":  "654",
+"t":   "ekr_20101113063552_9451",
+"name":"at_view.py",
+"children":[]
+}
+,
+{
+"id":  "655",
+"t":   "ekr_20101113063552_9452",
+"name":"backlink.py",
+"children":[]
+}
+,
+{
+"id":  "656",
+"t":   "ekr_20101113063552_9453",
+"name":"datenodes.py",
+"children":[]
+}
+,
+{
+"id":  "657",
+"t":   "ekr_20101113063552_9454",
+"name":"expfolder.py",
+"children":[]
+}
+,
+{
+"id":  "658",
+"t":   "ekr_20101113063552_9455",
+"name":"FileActions.py",
+"children":[]
+}
+,
+{
+"id":  "659",
+"t":   "ekr_20101113063552_9456",
+"name":"geotag.py",
+"children":[]
+}
+,
+{
+"id":  "660",
+"t":   "ekr_20170314091501_1",
+"name":"injarnder.py",
+"children":[]
+}
+,
+{
+"id":  "661",
+"t":   "ekr_20101113063552_9457",
+"name":"leocursor.py",
+"children":[]
+}
+,
+{
+"id":  "662",
+"t":   "ekr_20170314091526_1",
+"name":"leoOPML.py",
+"children":[]
+}
+,
+{
+"id":  "663",
+"t":   "ekr_20101113063552_9458",
+"name":"mime.py",
+"children":[]
+}
+,
+{
+"id":  "664",
+"t":   "ekr_20101113063552_9459",
+"name":"multifile.py",
+"children":[]
+}
+,
+{
+"id":  "665",
+"t":   "ekr_20101113063552_9460",
+"name":"niceNosent.py",
+"children":[]
+}
+,
+{
+"id":  "666",
+"t":   "ekr_20170314091627_1",
+"name":"notebook.py",
+"children":[]
+}
+,
+{
+"id":  "667",
+"t":   "ekr_20101113063552_9461",
+"name":"read_only_nodes.py",
+"children":[]
+}
+,
+{
+"id":  "668",
+"t":   "ekr_20101113063552_9462",
+"name":"run_nodes.py",
+"children":[]
+}
+,
+{
+"id":  "669",
+"t":   "ekr_20101113063552_9464",
+"name":"startfile.py",
+"children":[]
+}
+,
+{
+"id":  "670",
+"t":   "ekr_20130815102041_15632",
+"name":"timestamp.py",
+"children":[]
+}
+,
+{
+"id":  "671",
+"t":   "ekr_20101113063552_9466",
+"name":"xsltWithNodes.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "672",
+"t":   "ekr_20101113063552_9467",
+"name":"Scripting",
+"children":[
+{
+"id":  "673",
+"t":   "ekr_20050912125735_363",
+"name":"dyna_menu",
+"children":[]
+}
+,
+{
+"id":  "674",
+"t":   "ekr_20101113063552_9468",
+"name":"leoscreen.py",
+"children":[]
+}
+,
+{
+"id":  "675",
+"t":   "ekr_20101113063552_9469",
+"name":"mod_scripting.py",
+"children":[]
+}
+,
+{
+"id":  "676",
+"t":   "ekr_20101113063552_9470",
+"name":"script_io_to_body.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "677",
+"t":   "ekr_20101113063552_9471",
+"name":"Servers",
+"children":[
+{
+"id":  "678",
+"t":   "ekr_20101113063552_9472",
+"name":"leoremote.py",
+"children":[]
+}
+,
+{
+"id":  "679",
+"t":   "ekr_20101113063552_9473",
+"name":"mod_http.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "680",
+"t":   "ekr_20101113063552_9474",
+"name":"Slideshows and screenshots",
+"children":[
+{
+"id":  "681",
+"t":   "ekr_20170225081012_1",
+"name":"demo.py",
+"children":[]
+}
+,
+{
+"id":  "682",
+"t":   "ekr_20101113063552_9475",
+"name":"screenshots.py",
+"children":[]
+}
+,
+{
+"id":  "683",
+"t":   "ekr_20101113063552_9463",
+"name":"slideshow.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "684",
+"t":   "ekr_20101113063552_9476",
+"name":"Text formatting",
+"children":[
+{
+"id":  "685",
+"t":   "ekr_20101113063552_9477",
+"name":"bibtex.py",
+"children":[]
+}
+,
+{
+"id":  "686",
+"t":   "ekr_20101113063552_9478",
+"name":"dtest.py",
+"children":[]
+}
+,
+{
+"id":  "687",
+"t":   "ekr_20101113063552_9800",
+"name":"leo_to_html.py",
+"children":[]
+}
+,
+{
+"id":  "688",
+"t":   "ekr_20101113063552_9480",
+"name":"leo_to_rtf.py",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "689",
+"t":   "ekr_20101113063552_9482",
+"name":"User interface",
+"children":[
+{
+"id":  "690",
+"t":   "ekr_20101113063552_9484",
+"name":"chapter_hoist.py",
+"children":[]
+}
+,
+{
+"id":  "691",
+"t":   "ekr_20101113063552_9486",
+"name":"EditAttributes.py",
+"children":[]
+}
+,
+{
+"id":  "692",
+"t":   "ekr_20101113063552_9487",
+"name":"interact.py",
+"children":[]
+}
+,
+{
+"id":  "693",
+"t":   "ekr_20101113063552_9488",
+"name":"maximizeNewWindows.py",
+"children":[]
+}
+,
+{
+"id":  "694",
+"t":   "ekr_20101113063552_9489",
+"name":"mod_framesize.py",
+"children":[]
+}
+,
+{
+"id":  "695",
+"t":   "ekr_20101113063552_9794",
+"name":"plugins_menu.py",
+"children":[]
+}
+,
+{
+"id":  "696",
+"t":   "ekr_20101113063552_9491",
+"name":"redirect_to_log.py",
+"children":[]
+}
+,
+{
+"id":  "697",
+"t":   "ekr_20101113063552_9492",
+"name":"scripts_menu.py",
+"children":[]
+}
+,
+{
+"id":  "698",
+"t":   "ekr_20101113063552_9483",
+"name":"UNL.py",
+"children":[]
+}
+,
+{
+"id":  "699",
+"t":   "ekr_20101113063552_9493",
+"name":"zenity_file_dialogs.py",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "700",
+"t":   "ekr_20101113063552_9399",
+"name":"Qt only plugins",
+"children":[
+{
+"id":  "701",
+"t":   "ekr_20101113063552_9400",
+"name":"attrib_edit.py",
+"children":[]
+}
+,
+{
+"id":  "702",
+"t":   "ekr_20141105055521_8",
+"name":"bigdash.py",
+"children":[]
+}
+,
+{
+"id":  "703",
+"t":   "ekr_20131009100732_19039",
+"name":"bookmarks.py",
+"children":[]
+}
+,
+{
+"id":  "704",
+"t":   "ekr_20101113063552_9401",
+"name":"colorize_headlines.py",
+"children":[]
+}
+,
+{
+"id":  "705",
+"t":   "ekr_20101113063552_9402",
+"name":"contextmenu.py",
+"children":[]
+}
+,
+{
+"id":  "706",
+"t":   "ekr_20170314090749_1",
+"name":"dragdropgoodies.py",
+"children":[]
+}
+,
+{
+"id":  "707",
+"t":   "ekr_20101113063552_9411",
+"name":"graphcanvas.py",
+"children":[]
+}
+,
+{
+"id":  "708",
+"t":   "ekr_20130815102041_15628",
+"name":"leomylyn.py",
+"children":[]
+}
+,
+{
+"id":  "709",
+"t":   "ekr_20141105055521_5",
+"name":"livecode.py",
+"children":[]
+}
+,
+{
+"id":  "710",
+"t":   "ekr_20101113063552_9403",
+"name":"nav_qt.py",
+"children":[]
+}
+,
+{
+"id":  "711",
+"t":   "ekr_20141105055521_6",
+"name":"nodetags.py",
+"children":[]
+}
+,
+{
+"id":  "712",
+"t":   "ekr_20130815102041_15618",
+"name":"printing.py",
+"children":[]
+}
+,
+{
+"id":  "713",
+"t":   "ekr_20101113063552_9404",
+"name":"projectwizard.py",
+"children":[]
+}
+,
+{
+"id":  "714",
+"t":   "ekr_20170314090824_1",
+"name":"python_terminal.py",
+"children":[]
+}
+,
+{
+"id":  "715",
+"t":   "ekr_20170314090914_1",
+"name":"QNCalendarWidgets",
+"children":[]
+}
+,
+{
+"id":  "716",
+"t":   "ekr_20101113063552_9405",
+"name":"quicksearch.py",
+"children":[]
+}
+,
+{
+"id":  "717",
+"t":   "ekr_20170314091002_1",
+"name":"richtext.py",
+"children":[]
+}
+,
+{
+"id":  "718",
+"t":   "ekr_20130815102041_15630",
+"name":"screen_capture.py",
+"children":[]
+}
+,
+{
+"id":  "719",
+"t":   "ekr_20130815102041_15631",
+"name":"screencast.py",
+"children":[]
+}
+,
+{
+"id":  "720",
+"t":   "ekr_20101113063552_9406",
+"name":"scrolledmessage.py",
+"children":[]
+}
+,
+{
+"id":  "721",
+"t":   "ekr_20170314091035_1",
+"name":"settings_finder.py",
+"children":[]
+}
+,
+{
+"id":  "722",
+"t":   "ekr_20101113063552_9407",
+"name":"spydershell.py",
+"children":[]
+}
+,
+{
+"id":  "723",
+"t":   "ekr_20101113063552_9408",
+"name":"stickynotes.py",
+"children":[]
+}
+,
+{
+"id":  "724",
+"t":   "ekr_20170314091127_1",
+"name":"systray.py",
+"children":[]
+}
+,
+{
+"id":  "725",
+"t":   "ekr_20101113063552_9409",
+"name":"todo.py",
+"children":[]
+}
+,
+{
+"id":  "726",
+"t":   "ekr_20131009100732_19040",
+"name":"valuespace.py",
+"children":[]
+}
+,
+{
+"id":  "727",
+"t":   "ekr_20101113063552_9410",
+"name":"viewrendered.py",
+"children":[]
+}
+,
+{
+"id":  "728",
+"t":   "ekr_20141105055521_7",
+"name":"viewrendered2.py",
+"children":[]
+}
+,
+{
+"id":  "729",
+"t":   "ekr_20170314091206_1",
+"name":"wikiview.py",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "730",
+"t":   "EKR_20040524104904_99",
+"name":"Commands Reference",
+"children":[
+{
+"id":  "731",
+"t":   "ekr_20050901101608_2",
+"name":"@rst html\commands.html",
+"children":[
+{
+"id":  "732",
+"t":   "ekr_20131001100335_15946",
+"name":"Executing commands from the minibuffer",
+"children":[
+{
+"id":  "733",
+"t":   "ekr_20170312085351_1",
+"name":"Typing completion",
+"children":[]
+}
+,
+{
+"id":  "734",
+"t":   "ekr_20170312085434_1",
+"name":"Filename completion",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "735",
+"t":   "ekr_20170215102815_1",
+"name":"Most important commands",
+"children":[
+{
+"id":  "736",
+"t":   "ekr_20131004191204_16079",
+"name":"File operations & sessions",
+"children":[]
+}
+,
+{
+"id":  "737",
+"t":   "ekr_20150315132217_3",
+"name":"Switching focus",
+"children":[]
+}
+,
+{
+"id":  "738",
+"t":   "ekr_20131002055813_19835",
+"name":"Outline commands",
+"children":[]
+}
+,
+{
+"id":  "739",
+"t":   "ekr_20131002055813_19036",
+"name":"Selecting outline nodes",
+"children":[]
+}
+,
+{
+"id":  "740",
+"t":   "ekr_20131002055813_19037",
+"name":"Moving the cursor",
+"children":[]
+}
+,
+{
+"id":  "741",
+"t":   "ekr_20131001100335_15938",
+"name":"Finding & replacing text",
+"children":[]
+}
+,
+{
+"id":  "742",
+"t":   "ekr_20131002055813_19837",
+"name":"Undoing and redoing changes",
+"children":[]
+}
+,
+{
+"id":  "743",
+"t":   "ekr_20160428113347_1",
+"name":"Clone-find commands",
+"children":[]
+}
+,
+{
+"id":  "744",
+"t":   "ekr_20131001100335_15947",
+"name":"Help commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "745",
+"t":   "ekr_20170215103337_1",
+"name":"All other commands",
+"children":[
+{
+"id":  "746",
+"t":   "ekr_20160428110816_1",
+"name":"Clone-find commands",
+"children":[]
+}
+,
+{
+"id":  "747",
+"t":   "ekr_20150318110552_10",
+"name":"Debug commands",
+"children":[
+{
+"id":  "748",
+"t":   "ekr_20161020064204_1",
+"name":"Running External debuggers",
+"children":[]
+}
+,
+{
+"id":  "749",
+"t":   "ekr_20161020064706_1",
+"name":"Printing settings and other data",
+"children":[]
+}
+,
+{
+"id":  "750",
+"t":   "ekr_20161020064436_1",
+"name":"Other debugging commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "751",
+"t":   "ekr_20150318110552_18",
+"name":"Edit commands",
+"children":[
+{
+"id":  "752",
+"t":   "ekr_20150318110552_21",
+"name":"Cutting, pasting and selecting text",
+"children":[]
+}
+,
+{
+"id":  "753",
+"t":   "ekr_20150318110552_22",
+"name":"Indenting body text",
+"children":[]
+}
+,
+{
+"id":  "754",
+"t":   "ekr_20150318110552_23",
+"name":"Adding and deleting comments in body text",
+"children":[]
+}
+,
+{
+"id":  "755",
+"t":   "ekr_20150323200607_1",
+"name":"Moving the cursor",
+"children":[]
+}
+,
+{
+"id":  "756",
+"t":   "ekr_20150318110552_24",
+"name":"Text formatting commands",
+"children":[]
+}
+,
+{
+"id":  "757",
+"t":   "ekr_20150318110552_25",
+"name":"Creating nodes from body text",
+"children":[]
+}
+,
+{
+"id":  "758",
+"t":   "ekr_20150318110552_26",
+"name":"Executing Python scripts in body text",
+"children":[]
+}
+,
+{
+"id":  "759",
+"t":   "ekr_20150318110552_27",
+"name":"Multiple body editors",
+"children":[]
+}
+,
+{
+"id":  "760",
+"t":   "ekr_20150318110552_20",
+"name":"Undoing changes",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "761",
+"t":   "ekr_20150323185514_1",
+"name":"Emacs-like commands",
+"children":[
+{
+"id":  "762",
+"t":   "ekr_20150318110552_74",
+"name":"Abbreviation commands",
+"children":[]
+}
+,
+{
+"id":  "763",
+"t":   "ekr_20150318110552_8",
+"name":"Cursor movement commands",
+"children":[]
+}
+,
+{
+"id":  "764",
+"t":   "ekr_20150323185921_1",
+"name":"Emacs text formatting",
+"children":[]
+}
+,
+{
+"id":  "765",
+"t":   "ekr_20150323185151_1",
+"name":"Macro commands",
+"children":[]
+}
+,
+{
+"id":  "766",
+"t":   "ekr_20150323103115_1",
+"name":"Rectangle commands",
+"children":[]
+}
+,
+{
+"id":  "767",
+"t":   "ekr_20150318110552_56",
+"name":"Scrolling the outline pane",
+"children":[]
+}
+,
+{
+"id":  "768",
+"t":   "ekr_20150323185611_1",
+"name":"Yank, kill & delete commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "769",
+"t":   "ekr_20150318110552_29",
+"name":"File commands",
+"children":[
+{
+"id":  "770",
+"t":   "ekr_20150318110552_30",
+"name":"Loading, saving & reverting files",
+"children":[]
+}
+,
+{
+"id":  "771",
+"t":   "ekr_20150318110552_31",
+"name":"Closing outlines & quitting Leo",
+"children":[]
+}
+,
+{
+"id":  "772",
+"t":   "ekr_20150318110552_32",
+"name":"Importing & exporting files",
+"children":[]
+}
+,
+{
+"id":  "773",
+"t":   "ekr_20150318110552_33",
+"name":"Using sessions",
+"children":[]
+}
+,
+{
+"id":  "774",
+"t":   "ekr_20150318110552_34",
+"name":"Communicating with external editors ",
+"children":[]
+}
+,
+{
+"id":  "775",
+"t":   "ekr_20150318110552_35",
+"name":"Creating & deleting directories & files",
+"children":[]
+}
+,
+{
+"id":  "776",
+"t":   "ekr_20150318110552_36",
+"name":"Managing recent files",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "777",
+"t":   "ekr_20150318110552_37",
+"name":"Help commands",
+"children":[]
+}
+,
+{
+"id":  "778",
+"t":   "ekr_20150323200950_1",
+"name":"Language conversion commands",
+"children":[]
+}
+,
+{
+"id":  "779",
+"t":   "ekr_20150318110552_38",
+"name":"Minibuffer commands",
+"children":[]
+}
+,
+{
+"id":  "780",
+"t":   "ekr_20150318110552_75",
+"name":"Miscellaneous commands",
+"children":[]
+}
+,
+{
+"id":  "781",
+"t":   "ekr_20150318110552_39",
+"name":"Mouseless Leo commands",
+"children":[
+{
+"id":  "782",
+"t":   "ekr_20150318110552_40",
+"name":"Event simulation commands",
+"children":[]
+}
+,
+{
+"id":  "783",
+"t":   "ekr_20150318110552_41",
+"name":"Focus commands",
+"children":[]
+}
+,
+{
+"id":  "784",
+"t":   "ekr_20150318110552_42",
+"name":"Pane commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "785",
+"t":   "ekr_20150318110552_43",
+"name":"Outline commands",
+"children":[
+{
+"id":  "786",
+"t":   "ekr_20150318110552_44",
+"name":"Creating, cloning & destroying nodes",
+"children":[]
+}
+,
+{
+"id":  "787",
+"t":   "ekr_20150318110552_45",
+"name":"Expanding & contracting nodes",
+"children":[]
+}
+,
+{
+"id":  "788",
+"t":   "ekr_20150318110552_46",
+"name":"Editing headlines",
+"children":[]
+}
+,
+{
+"id":  "789",
+"t":   "ekr_20150318110552_47",
+"name":"Selecting nodes",
+"children":[]
+}
+,
+{
+"id":  "790",
+"t":   "ekr_20150318110552_48",
+"name":"Cutting, pasting & deleting nodes",
+"children":[]
+}
+,
+{
+"id":  "791",
+"t":   "ekr_20150318110552_49",
+"name":"Moving & reorganizing nodes",
+"children":[]
+}
+,
+{
+"id":  "792",
+"t":   "ekr_20150318110552_50",
+"name":"Converting between outlines and text",
+"children":[]
+}
+,
+{
+"id":  "793",
+"t":   "ekr_20150318110552_51",
+"name":"Dragging nodes",
+"children":[]
+}
+,
+{
+"id":  "794",
+"t":   "ekr_20150318110552_52",
+"name":"Marking nodes",
+"children":[]
+}
+,
+{
+"id":  "795",
+"t":   "ekr_20150318110552_53",
+"name":"Operations on marked nodes",
+"children":[]
+}
+,
+{
+"id":  "796",
+"t":   "ekr_20150318110552_54",
+"name":"Comparing outlines",
+"children":[]
+}
+,
+{
+"id":  "797",
+"t":   "ekr_20150318110552_55",
+"name":"Using Chapters",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "798",
+"t":   "ekr_20150318110552_79",
+"name":"Plugins commands",
+"children":[]
+}
+,
+{
+"id":  "799",
+"t":   "ekr_20150318110552_57",
+"name":"Search & spell commands",
+"children":[
+{
+"id":  "800",
+"t":   "ekr_20150318110552_59",
+"name":"Basic searches",
+"children":[]
+}
+,
+{
+"id":  "801",
+"t":   "ekr_20150318110552_60",
+"name":"Incremental find commands",
+"children":[]
+}
+,
+{
+"id":  "802",
+"t":   "ekr_20150318110552_61",
+"name":"Word search and regex search commands",
+"children":[]
+}
+,
+{
+"id":  "803",
+"t":   "ekr_20150318110552_62",
+"name":"Check boxes and their commands",
+"children":[]
+}
+,
+{
+"id":  "804",
+"t":   "ekr_20150318110552_63",
+"name":"Radio buttons and their commands ",
+"children":[]
+}
+,
+{
+"id":  "805",
+"t":   "ekr_20150318110552_64",
+"name":"Spell commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "806",
+"t":   "ekr_20150318110552_65",
+"name":"Settings commands",
+"children":[]
+}
+,
+{
+"id":  "807",
+"t":   "ekr_20150603161559_1",
+"name":"Code beautification commands",
+"children":[
+{
+"id":  "808",
+"t":   "ekr_20150603120140_1",
+"name":"What the Python beautifier does",
+"children":[]
+}
+,
+{
+"id":  "809",
+"t":   "ekr_20150603120515_1",
+"name":"What the Python beautifier doesn't do",
+"children":[]
+}
+,
+{
+"id":  "810",
+"t":   "ekr_20150603115243_1",
+"name":"Beautifier directives",
+"children":[]
+}
+,
+{
+"id":  "811",
+"t":   "ekr_20150603115204_1",
+"name":"Beautifier settings",
+"children":[]
+}
+,
+{
+"id":  "812",
+"t":   "ekr_20150603115311_1",
+"name":"Beautifier rough edges",
+"children":[]
+}
+,
+{
+"id":  "813",
+"t":   "ekr_20150603115400_1",
+"name":"Stand-alone beautifier",
+"children":[]
+}
+,
+{
+"id":  "814",
+"t":   "ekr_20150603120245_1",
+"name":"Enough is enough",
+"children":[]
+}
+,
+{
+"id":  "815",
+"t":   "ekr_20150603120150_1",
+"name":"Summary of the beautifier",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "816",
+"t":   "ekr_20150318110552_86",
+"name":"Unit testing commands",
+"children":[]
+}
+,
+{
+"id":  "817",
+"t":   "ekr_20150318110552_66",
+"name":"Window-related commands",
+"children":[]
+}
+,
+{
+"id":  "818",
+"t":   "ekr_20150318110552_87",
+"name":"Vim mode commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "819",
+"t":   "ekr_20150323161357_1",
+"name":"Key Reference",
+"children":[
+{
+"id":  "820",
+"t":   "ekr_20150323161357_2",
+"name":"Selecting outline nodes",
+"children":[]
+}
+,
+{
+"id":  "821",
+"t":   "ekr_20150323161357_3",
+"name":"Moving outline nodes",
+"children":[]
+}
+,
+{
+"id":  "822",
+"t":   "ekr_20150323161357_4",
+"name":"Moving the cursor",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "823",
+"t":   "ekr_20150323102918_1",
+"name":"@rst-ignore Not documented",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "824",
+"t":   "ekr_20131005214621_16130",
+"name":"Directives Reference",
+"children":[
+{
+"id":  "825",
+"t":   "ekr_20131009065148_31758",
+"name":"@rst html/directives.html",
+"children":[
+{
+"id":  "826",
+"t":   "ekr_20100806170836_4392",
+"name":"Part 1: \@<file> directives",
+"children":[
+{
+"id":  "827",
+"t":   "ekr_20100806170836_4393",
+"name":"\@asis <path>",
+"children":[]
+}
+,
+{
+"id":  "828",
+"t":   "ekr_20100806170836_4396",
+"name":"\@auto <path>",
+"children":[
+{
+"id":  "829",
+"t":   "ekr_20160410045234_1",
+"name":"\@auto sanity checks",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "830",
+"t":   "ekr_20100806170836_4399",
+"name":"\@clean <path>",
+"children":[]
+}
+,
+{
+"id":  "831",
+"t":   "ekr_20100806170836_4395",
+"name":"\@edit <path>",
+"children":[]
+}
+,
+{
+"id":  "832",
+"t":   "ekr_20100806170836_4403",
+"name":"\@file <path> (aka @thin)",
+"children":[]
+}
+,
+{
+"id":  "833",
+"t":   "ekr_20160410044518_1",
+"name":"\@nosent <path>",
+"children":[]
+}
+,
+{
+"id":  "834",
+"t":   "ekr_20100806170836_4402",
+"name":"\@shadow <path> (deprecated)",
+"children":[]
+}
+,
+{
+"id":  "835",
+"t":   "ekr_20160410043905_1",
+"name":"Path expressions",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "836",
+"t":   "ekr_20100806170836_4411",
+"name":"Part 2: \@all and \@others",
+"children":[]
+}
+,
+{
+"id":  "837",
+"t":   "ekr_20100806170836_4398",
+"name":"Part 3: Syntax coloring directives",
+"children":[]
+}
+,
+{
+"id":  "838",
+"t":   "ekr_20100806170836_4408",
+"name":"Part 4: Dangerous directives",
+"children":[]
+}
+,
+{
+"id":  "839",
+"t":   "ekr_20100804133903_7262",
+"name":"Part 5: All other directives",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "840",
+"t":   "ekr_20101025080245_5798",
+"name":"Leo and Other Programs",
+"children":[
+{
+"id":  "841",
+"t":   "ekr_20131008041326_16100",
+"name":"@rst html/leoandotherprograms.html",
+"children":[]
+}
+,
+{
+"id":  "842",
+"t":   "ekr_20061025065357",
+"name":"Leo and Emacs",
+"children":[
+{
+"id":  "843",
+"t":   "ekr_20061025065357_1",
+"name":"@rst html\emacs.html",
+"children":[
+{
+"id":  "844",
+"t":   "ekr_20170315072706_1",
+"name":"Leo vs org mode",
+"children":[]
+}
+,
+{
+"id":  "845",
+"t":   "ekr_20140720203932_17747",
+"name":"Using org-mode (.org) files in Leo",
+"children":[]
+}
+,
+{
+"id":  "846",
+"t":   "ekr_20061025081359",
+"name":"Controlling Leo from Emacs using Pymacs",
+"children":[]
+}
+,
+{
+"id":  "847",
+"t":   "ekr_20061025070825_1",
+"name":"Functions in leoPymacs.py",
+"children":[]
+}
+,
+{
+"id":  "848",
+"t":   "ekr_20061025142434",
+"name":"The minibuffer",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "849",
+"t":   "TL_20080804095315_1",
+"name":"Leo and Vim",
+"children":[
+{
+"id":  "850",
+"t":   "TL_20080804095315_2",
+"name":"@rst html\vimBindings.html",
+"children":[
+{
+"id":  "851",
+"t":   "ekr_20140810085801_18230",
+"name":"Using Leo's native vim mode",
+"children":[
+{
+"id":  "852",
+"t":   "ekr_20140810153947_6747",
+"name":"Supported commands",
+"children":[]
+}
+,
+{
+"id":  "853",
+"t":   "ekr_20140810153947_6752",
+"name":"Differences from the real vim",
+"children":[]
+}
+,
+{
+"id":  "854",
+"t":   "ekr_20140810153947_6749",
+"name":"Abbreviations",
+"children":[]
+}
+,
+{
+"id":  "855",
+"t":   "ekr_20140810153947_6750",
+"name":"Colon commands",
+"children":[]
+}
+,
+{
+"id":  "856",
+"t":   "ekr_20140810153947_6751",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "857",
+"t":   "ekr_20140720203932_17748",
+"name":"Using vimoutline (.otl) files in Leo",
+"children":[]
+}
+,
+{
+"id":  "858",
+"t":   "ekr_20140810085801_18231",
+"name":"Using stand-alone vim bindings",
+"children":[
+{
+"id":  "859",
+"t":   "TL_20080804095315_4",
+"name":"Installing vim bindings",
+"children":[]
+}
+,
+{
+"id":  "860",
+"t":   "TL_20080804095315_5",
+"name":"General commands",
+"children":[]
+}
+,
+{
+"id":  "861",
+"t":   "TL_20080804095315_6",
+"name":"Body pane commands",
+"children":[]
+}
+,
+{
+"id":  "862",
+"t":   "TL_20080804095315_7",
+"name":"Outline commands",
+"children":[]
+}
+,
+{
+"id":  "863",
+"t":   "TL_20080804095315_8",
+"name":"Commands not supported",
+"children":[]
+}
+,
+{
+"id":  "864",
+"t":   "TL_20080804095315_9",
+"name":"Avoiding changes to 'tag' files",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "865",
+"t":   "ekr_20080203101507",
+"name":"ILeo - the IPython bridge",
+"children":[
+{
+"id":  "866",
+"t":   "ekr_20080203101507_1",
+"name":"@rst html\IPythonBridge.html",
+"children":[
+{
+"id":  "867",
+"t":   "vivainio_20080302174639_1",
+"name":"Overview",
+"children":[]
+}
+,
+{
+"id":  "868",
+"t":   "vivainio_20080302174639_2",
+"name":"Starting ILeo",
+"children":[]
+}
+,
+{
+"id":  "869",
+"t":   "ekr_20131001045038_18981",
+"name":"Running Leo scripts from IPython",
+"children":[]
+}
+,
+{
+"id":  "870",
+"t":   "ekr_20131001045038_18980",
+"name":"Running IPython scripts from Leo",
+"children":[]
+}
+,
+{
+"id":  "871",
+"t":   "ekr_20131001045038_18979",
+"name":"ILeo as an IPython notebook",
+"children":[]
+}
+,
+{
+"id":  "872",
+"t":   "ekr_20131001100236_15927",
+"name":"ILeo and the valuespace plugin",
+"children":[]
+}
+,
+{
+"id":  "873",
+"t":   "ekr_20131001045038_17448",
+"name":"Acknowledgements and history",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "874",
+"t":   "ekr_20070317033759",
+"name":"Embedding Leo with the leoBridge module",
+"children":[
+{
+"id":  "875",
+"t":   "ekr_20070317033759_1",
+"name":"@rst html\leoBridge.html",
+"children":[
+{
+"id":  "876",
+"t":   "ekr_20070317033759_3",
+"name":"The basics",
+"children":[]
+}
+,
+{
+"id":  "877",
+"t":   "ekr_20150328073917_1",
+"name":"Example: running unit tests from leoBridge",
+"children":[]
+}
+,
+{
+"id":  "878",
+"t":   "ekr_20071210094621",
+"name":"Running leoBridge from within Leo",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "879",
+"t":   "ekr_20060913164304",
+"name":"Leo and ZODB",
+"children":[
+{
+"id":  "880",
+"t":   "ekr_20060913164304_1",
+"name":"@rst html\zodb.html",
+"children":[
+{
+"id":  "881",
+"t":   "ekr_20060913170145",
+"name":"Configuring Leo to use zodb",
+"children":[]
+}
+,
+{
+"id":  "882",
+"t":   "ekr_20060913170403",
+"name":"Initing zodb",
+"children":[]
+}
+,
+{
+"id":  "883",
+"t":   "ekr_20060913170403_1",
+"name":"Writing data to zodb",
+"children":[]
+}
+,
+{
+"id":  "884",
+"t":   "ekr_20060913175437",
+"name":"Defining zodb keys",
+"children":[]
+}
+,
+{
+"id":  "885",
+"t":   "ekr_20060913170403_2",
+"name":"Reading data from zodb",
+"children":[]
+}
+,
+{
+"id":  "886",
+"t":   "ekr_20060913175437_1",
+"name":"About connections",
+"children":[]
+}
+,
+{
+"id":  "887",
+"t":   "ekr_20060913165542_1",
+"name":"Convenience routines",
+"children":[
+{
+"id":  "888",
+"t":   "ekr_20060913165542_2",
+"name":"g.init_zodb (pathToZodbStorage,verbose=True)",
+"children":[]
+}
+,
+{
+"id":  "889",
+"t":   "ekr_20060913165542_3",
+"name":"v.detach()",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "890",
+"t":   "ekr_20101025080245_5799",
+"name":"Advanced Topics",
+"children":[
+{
+"id":  "891",
+"t":   "ekr_20131008041326_16099",
+"name":"@rst html/intermediatetopics.html",
+"children":[]
+}
+,
+{
+"id":  "892",
+"t":   "ekr_20060430221745",
+"name":"Controlling syntax coloring",
+"children":[
+{
+"id":  "893",
+"t":   "ekr_20060430221745_1",
+"name":"@rst html\coloring.html",
+"children":[
+{
+"id":  "894",
+"t":   "ekr_20060830142929",
+"name":"Syntax coloring settings",
+"children":[]
+}
+,
+{
+"id":  "895",
+"t":   "ekr_20060430220749",
+"name":"Files",
+"children":[]
+}
+,
+{
+"id":  "896",
+"t":   "ekr_20060502084233",
+"name":"The colorizer's inner loop",
+"children":[]
+}
+,
+{
+"id":  "897",
+"t":   "ekr_20060502084233_1",
+"name":"Format of colorizer control files",
+"children":[
+{
+"id":  "898",
+"t":   "ekr_20060502100550",
+"name":"Ruleset names",
+"children":[]
+}
+,
+{
+"id":  "899",
+"t":   "ekr_20060502090516",
+"name":"x.properties",
+"children":[]
+}
+,
+{
+"id":  "900",
+"t":   "ekr_20060510085547",
+"name":"Attribute dictionaries and x.attributesDictDict",
+"children":[]
+}
+,
+{
+"id":  "901",
+"t":   "ekr_20060502090516_1",
+"name":"Keyword dictionaries and x.keywordsDictDict",
+"children":[]
+}
+,
+{
+"id":  "902",
+"t":   "ekr_20060502090516_2",
+"name":"Rules, rules dictionaries and x.rulesDictDict",
+"children":[]
+}
+,
+{
+"id":  "903",
+"t":   "ekr_20060503072213",
+"name":"x.importDict and imported versus delegated rulesets",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "904",
+"t":   "ekr_20060502122950",
+"name":"Rule methods",
+"children":[
+{
+"id":  "905",
+"t":   "ekr_20060503064515",
+"name":"Arguments to rule methods",
+"children":[]
+}
+,
+{
+"id":  "906",
+"t":   "ekr_20060502122950_7",
+"name":"match_eol_span",
+"children":[]
+}
+,
+{
+"id":  "907",
+"t":   "ekr_20060502122950_10",
+"name":"match_eol_span_regexp",
+"children":[]
+}
+,
+{
+"id":  "908",
+"t":   "ekr_20060502122950_13",
+"name":"match_keywords",
+"children":[]
+}
+,
+{
+"id":  "909",
+"t":   "ekr_20060502122950_14",
+"name":"match_mark_following",
+"children":[]
+}
+,
+{
+"id":  "910",
+"t":   "ekr_20060502125223",
+"name":"match_mark_previous",
+"children":[]
+}
+,
+{
+"id":  "911",
+"t":   "ekr_20060502122950_40",
+"name":"match_seq",
+"children":[]
+}
+,
+{
+"id":  "912",
+"t":   "ekr_20060502122950_41",
+"name":"match_seq_regexp",
+"children":[]
+}
+,
+{
+"id":  "913",
+"t":   "ekr_20060502122950_42",
+"name":"match_span",
+"children":[]
+}
+,
+{
+"id":  "914",
+"t":   "ekr_20060502122950_47",
+"name":"match_span_regexp",
+"children":[]
+}
+,
+{
+"id":  "915",
+"t":   "ekr_20060502122950_48",
+"name":"match_terminate",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "916",
+"t":   "ekr_20060612102055",
+"name":"Writing Plugins",
+"children":[
+{
+"id":  "917",
+"t":   "ekr_20060612103240",
+"name":"@rst html\writingPlugins.html",
+"children":[
+{
+"id":  "918",
+"t":   "ekr_20131008041326_16053",
+"name":"Writing Plugins",
+"children":[]
+}
+,
+{
+"id":  "919",
+"t":   "EKR_20040524104904_224",
+"name":"Important security warnings",
+"children":[]
+}
+,
+{
+"id":  "920",
+"t":   "peckj_20130813123907_6841",
+"name":"Documenting plugins",
+"children":[]
+}
+,
+{
+"id":  "921",
+"t":   "ekr_20131012191145_16789",
+"name":"c ivars & properties",
+"children":[]
+}
+,
+{
+"id":  "922",
+"t":   "ekr_20050903074833",
+"name":"Handling events",
+"children":[
+{
+"id":  "923",
+"t":   "ekr_20050903074833_1",
+"name":"Summary of event handlers",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "924",
+"t":   "EKR_20040524104904_240",
+"name":"Support for unit testing",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "925",
+"t":   "ekr_20070628083442",
+"name":"Unit testing with Leo",
+"children":[
+{
+"id":  "926",
+"t":   "ekr_20070628083442_1",
+"name":"@rst html\unitTesting.html",
+"children":[
+{
+"id":  "927",
+"t":   "ekr_20070628084351",
+"name":"Using @test nodes",
+"children":[]
+}
+,
+{
+"id":  "928",
+"t":   "ekr_20070628094515_1",
+"name":"Using @suite nodes",
+"children":[]
+}
+,
+{
+"id":  "929",
+"t":   "ekr_20120229094652_15125",
+"name":"Using @mark-for-unit-tests",
+"children":[]
+}
+,
+{
+"id":  "930",
+"t":   "ekr_20170301013432_1",
+"name":"Test driven development in Leo",
+"children":[]
+}
+,
+{
+"id":  "931",
+"t":   "ekr_20070628094515_2",
+"name":"How the unit test commands work",
+"children":[]
+}
+,
+{
+"id":  "932",
+"t":   "ekr_20080729064227_6",
+"name":"\@button timer",
+"children":[]
+}
+,
+{
+"id":  "933",
+"t":   "ekr_20080729064227_7",
+"name":"\@button profile",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "934",
+"t":   "ekr_20060527105211",
+"name":"Debugging with Leo",
+"children":[
+{
+"id":  "935",
+"t":   "ekr_20060527105617",
+"name":"@rst html\debuggers.html",
+"children":[
+{
+"id":  "936",
+"t":   "ekr_20070116062405",
+"name":"Using g.trace and g.pdb",
+"children":[]
+}
+,
+{
+"id":  "937",
+"t":   "ekr_20060527112801",
+"name":"Settings for winpdb",
+"children":[]
+}
+,
+{
+"id":  "938",
+"t":   "ekr_20070115172724",
+"name":"Debugging scripts with winpdb",
+"children":[
+{
+"id":  "939",
+"t":   "ekr_20070115172724_1",
+"name":"The debug command",
+"children":[]
+}
+,
+{
+"id":  "940",
+"t":   "ekr_20070115172724_3",
+"name":"The execute-script command with explicit debugger breaks",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "941",
+"t":   "ekr_20131015104133_16763",
+"name":"A scripting miscellany",
+"children":[
+{
+"id":  "942",
+"t":   "ekr_20131015091948_16784",
+"name":"@rst html\scripting-miscellany.html",
+"children":[
+{
+"id":  "943",
+"t":   "ekr_20131014053720_16816",
+"name":"\@button example",
+"children":[]
+}
+,
+{
+"id":  "944",
+"t":   "ekr_20150817125512_1",
+"name":"Comparing two similar outlines",
+"children":[]
+}
+,
+{
+"id":  "945",
+"t":   "ekr_20161014160238_1",
+"name":"Creating code that will run on both Python 2 and 3",
+"children":[]
+}
+,
+{
+"id":  "946",
+"t":   "ekr_20110531155858_20563",
+"name":"Creating minimal outlines",
+"children":[]
+}
+,
+{
+"id":  "947",
+"t":   "ekr_20111115063523_13619",
+"name":"Creating Qt Windows from Leo scripts",
+"children":[]
+}
+,
+{
+"id":  "948",
+"t":   "ekr_20161014050133_1",
+"name":"Cutting and pasting text",
+"children":[]
+}
+,
+{
+"id":  "949",
+"t":   "ekr_20071026183116",
+"name":"g.app.gui.run* methods run dialogs",
+"children":[]
+}
+,
+{
+"id":  "950",
+"t":   "ekr_20040403173920_19",
+"name":"Getting commander preferences",
+"children":[]
+}
+,
+{
+"id":  "951",
+"t":   "ekr_20050907094633",
+"name":"Getting configuration settings",
+"children":[]
+}
+,
+{
+"id":  "952",
+"t":   "ekr_20080922124033_1",
+"name":"Getting interactive input in scripts and commands",
+"children":[]
+}
+,
+{
+"id":  "953",
+"t":   "ekr_20080109074102",
+"name":"Inserting and deleting icons",
+"children":[]
+}
+,
+{
+"id":  "954",
+"t":   "ekr_20040403173920_18",
+"name":"Invoking commands from scripts",
+"children":[]
+}
+,
+{
+"id":  "955",
+"t":   "ekr_20050417072710_1",
+"name":"Making operations undoable",
+"children":[]
+}
+,
+{
+"id":  "956",
+"t":   "ekr_20100506062734_11593",
+"name":"Modifying plugins with @script scripts",
+"children":[]
+}
+,
+{
+"id":  "957",
+"t":   "ekr_20090223065025_3",
+"name":"Modifying the body pane directly",
+"children":[]
+}
+,
+{
+"id":  "958",
+"t":   "ekr_20070122093626",
+"name":"Recovering vnodes",
+"children":[]
+}
+,
+{
+"id":  "959",
+"t":   "ekr_20150318043636_14",
+"name":"Recursive import script",
+"children":[]
+}
+,
+{
+"id":  "960",
+"t":   "ekr_20120317130339_8282",
+"name":"Retaining pointers to Qt windows",
+"children":[]
+}
+,
+{
+"id":  "961",
+"t":   "ekr_20150323102036_1",
+"name":"Running code at idle time",
+"children":[]
+}
+,
+{
+"id":  "962",
+"t":   "ekr_20161029072351_1",
+"name":"Running code in separate processes",
+"children":[]
+}
+,
+{
+"id":  "963",
+"t":   "ekr_20040403173920_24",
+"name":"Running Leo in batch mode",
+"children":[]
+}
+,
+{
+"id":  "964",
+"t":   "ekr_20081205084002_2",
+"name":"Working with directives and paths",
+"children":[]
+}
+,
+{
+"id":  "965",
+"t":   "ekr_20131012060912_16788",
+"name":"Writing g.es output to other tabs",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "966",
+"t":   "ekr_20131008041326_16178",
+"name":"Exploring Leo's Code Base",
+"children":[
+{
+"id":  "967",
+"t":   "ekr_20131009065148_31760",
+"name":"@rst html/theory.html",
+"children":[
+{
+"id":  "968",
+"t":   "ekr_20131011050613_16868",
+"name":"How to explore Leo's sources",
+"children":[
+{
+"id":  "969",
+"t":   "ekr_20131012060912_16768",
+"name":"Finding commands",
+"children":[]
+}
+,
+{
+"id":  "970",
+"t":   "ekr_20131011050613_16870",
+"name":"Finding key-handling code",
+"children":[]
+}
+,
+{
+"id":  "971",
+"t":   "ekr_20131011050613_16871",
+"name":"Finding redraw and refocus code",
+"children":[]
+}
+,
+{
+"id":  "972",
+"t":   "ekr_20150323111053_1",
+"name":"Finding all uses of a symbol",
+"children":[]
+}
+,
+{
+"id":  "973",
+"t":   "ekr_20131011050613_16862",
+"name":"Debugging with g.trace, g.callers & g.pdb",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "974",
+"t":   "ekr_20131011050613_16860",
+"name":"The design of Leo's classes",
+"children":[]
+}
+,
+{
+"id":  "975",
+"t":   "ekr_20131011050613_16876",
+"name":"Fragile methods",
+"children":[]
+}
+,
+{
+"id":  "976",
+"t":   "ekr_20131011050613_16866",
+"name":"Read long comments with caution",
+"children":[]
+}
+,
+{
+"id":  "977",
+"t":   "ekr_20131011050613_16815",
+"name":"Startup",
+"children":[]
+}
+,
+{
+"id":  "978",
+"t":   "EKR_20040524104904_268",
+"name":"Unicode",
+"children":[]
+}
+,
+{
+"id":  "979",
+"t":   "ekr_20131012060912_16770",
+"name":"Why key handling is complex",
+"children":[]
+}
+,
+{
+"id":  "980",
+"t":   "ekr_20150311123850_39",
+"name":"Leo must have sentinels, even without clones",
+"children":[]
+}
+,
+{
+"id":  "981",
+"t":   "ekr_20150417041505_1",
+"name":"Setting focus",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "982",
+"t":   "ekr_20140810085801_18216",
+"name":"Vim Mode Theory of Operation",
+"children":[
+{
+"id":  "983",
+"t":   "ekr_20140810085801_18232",
+"name":"@rst html/vim-theory.html",
+"children":[
+{
+"id":  "984",
+"t":   "ekr_20140810085801_18217",
+"name":"The big picture",
+"children":[]
+}
+,
+{
+"id":  "985",
+"t":   "ekr_20140811083910_18246",
+"name":"A simple key handler",
+"children":[]
+}
+,
+{
+"id":  "986",
+"t":   "ekr_20140810085801_18221",
+"name":"A more complex key handler",
+"children":[
+{
+"id":  "987",
+"t":   "ekr_20140810085801_18222",
+"name":"vim_d",
+"children":[]
+}
+,
+{
+"id":  "988",
+"t":   "ekr_20140810085801_18223",
+"name":"vim_d2",
+"children":[]
+}
+,
+{
+"id":  "989",
+"t":   "ekr_20140810085801_18224",
+"name":"vim_d3",
+"children":[]
+}
+,
+{
+"id":  "990",
+"t":   "ekr_20140810085801_18225",
+"name":"vis_d",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "991",
+"t":   "ekr_20140810085801_18226",
+"name":"Code level details",
+"children":[
+{
+"id":  "992",
+"t":   "ekr_20140810085801_18227",
+"name":"Initialization",
+"children":[]
+}
+,
+{
+"id":  "993",
+"t":   "ekr_20140810085801_18228",
+"name":"Dispatchers",
+"children":[]
+}
+,
+{
+"id":  "994",
+"t":   "ekr_20140810085801_18218",
+"name":"About key handlers",
+"children":[]
+}
+,
+{
+"id":  "995",
+"t":   "ekr_20140810085801_18219",
+"name":"Ivars for key handlers",
+"children":[]
+}
+,
+{
+"id":  "996",
+"t":   "ekr_20150312080344_14",
+"name":"Handling tabs",
+"children":[]
+}
+,
+{
+"id":  "997",
+"t":   "ekr_20140810085801_18220",
+"name":"API's for key handlers",
+"children":[]
+}
+,
+{
+"id":  "998",
+"t":   "ekr_20140810085801_18229",
+"name":"vc.return_value and internal error checking",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "999",
+"t":   "ekr_20131019035402_17557",
+"name":"The Leonine world",
+"children":[
+{
+"id":  "1000",
+"t":   "ekr_20131019035402_17573",
+"name":"@rst html\leonine-world.html",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1001",
+"t":   "ekr_20131008041326_16091",
+"name":"Cheat Sheet",
+"children":[
+{
+"id":  "1002",
+"t":   "ekr_20131007143750_16070",
+"name":"@rst html\cheatsheet.html",
+"children":[
+{
+"id":  "1003",
+"t":   "ekr_20131019061259_16693",
+"name":"Key bindings",
+"children":[
+{
+"id":  "1004",
+"t":   "ekr_20131015035606_16778",
+"name":"Selecting outline nodes",
+"children":[]
+}
+,
+{
+"id":  "1005",
+"t":   "ekr_20131015035606_16800",
+"name":"Moving outline nodes",
+"children":[]
+}
+,
+{
+"id":  "1006",
+"t":   "ekr_20131015035606_16780",
+"name":"Moving the cursor",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1007",
+"t":   "ekr_20131015035606_16801",
+"name":"Frequently used commands",
+"children":[]
+}
+,
+{
+"id":  "1008",
+"t":   "ekr_20160428104050_1",
+"name":"Gathering find commands",
+"children":[]
+}
+,
+{
+"id":  "1009",
+"t":   "ekr_20131015035606_16786",
+"name":"Leo directives",
+"children":[]
+}
+,
+{
+"id":  "1010",
+"t":   "ekr_20131015035606_16788",
+"name":"Settings",
+"children":[]
+}
+,
+{
+"id":  "1011",
+"t":   "ekr_20131031101712_16486",
+"name":"Node types",
+"children":[]
+}
+,
+{
+"id":  "1012",
+"t":   "ekr_20131016103844_16730",
+"name":"Notable Plugins",
+"children":[]
+}
+,
+{
+"id":  "1013",
+"t":   "ekr_20131015035606_16799",
+"name":"External files (@<file> nodes)",
+"children":[]
+}
+,
+{
+"id":  "1014",
+"t":   "ekr_20160410103017_1",
+"name":"Sections",
+"children":[]
+}
+,
+{
+"id":  "1015",
+"t":   "ekr_20131007143750_16074",
+"name":"Scripting",
+"children":[
+{
+"id":  "1016",
+"t":   "ekr_20131019061259_16686",
+"name":"Pre-defined symbols",
+"children":[]
+}
+,
+{
+"id":  "1017",
+"t":   "ekr_20170315020214_1",
+"name":"LeoApp class",
+"children":[]
+}
+,
+{
+"id":  "1018",
+"t":   "ekr_20131019061259_16688",
+"name":"Commands class",
+"children":[]
+}
+,
+{
+"id":  "1019",
+"t":   "ekr_20131019061259_16690",
+"name":"VNode class",
+"children":[]
+}
+,
+{
+"id":  "1020",
+"t":   "ekr_20131019061259_16691",
+"name":"Position class",
+"children":[]
+}
+,
+{
+"id":  "1021",
+"t":   "ekr_20131019061259_16692",
+"name":"leo.core.leoGlobals module",
+"children":[]
+}
+,
+{
+"id":  "1022",
+"t":   "ekr_20170311120214_1",
+"name":"Test driven development",
+"children":[]
+}
+,
+{
+"id":  "1023",
+"t":   "ekr_20170403185500_1",
+"name":"Performance gotchas",
+"children":[]
+}
+,
+{
+"id":  "1024",
+"t":   "ekr_20170314164228_1",
+"name":"About names",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1025",
+"t":   "ekr_20131028213522_17138",
+"name":"Command-line options",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1026",
+"t":   "ekr_20150312080344_67",
+"name":"History of Leo",
+"children":[
+{
+"id":  "1027",
+"t":   "ekr_20150312080344_68",
+"name":"@rst html/history.html",
+"children":[
+{
+"id":  "1028",
+"t":   "ekr_20050902105852",
+"name":"1995: Beginnings",
+"children":[]
+}
+,
+{
+"id":  "1029",
+"t":   "ekr_20050902105852_1",
+"name":"1996: Breakthroughs",
+"children":[]
+}
+,
+{
+"id":  "1030",
+"t":   "ekr_20050902105852_2",
+"name":"1996-1998: Apple and YellowBox",
+"children":[]
+}
+,
+{
+"id":  "1031",
+"t":   "ekr_20050902105852_3",
+"name":"1999-2001: Borland C++",
+"children":[]
+}
+,
+{
+"id":  "1032",
+"t":   "ekr_20050902105852_4",
+"name":"2001: Discovering Python",
+"children":[]
+}
+,
+{
+"id":  "1033",
+"t":   "ekr_20050902105852_6",
+"name":"2001: Putting sentinel lines in external files",
+"children":[
+{
+"id":  "1034",
+"t":   "EKR_20040524104904_248",
+"name":"Overview",
+"children":[]
+}
+,
+{
+"id":  "1035",
+"t":   "EKR_20040524104904_249",
+"name":"First steps",
+"children":[]
+}
+,
+{
+"id":  "1036",
+"t":   "EKR_20040524104904_250",
+"name":"A prototype: simplified noweb",
+"children":[]
+}
+,
+{
+"id":  "1037",
+"t":   "EKR_20040524104904_251",
+"name":"Avoiding error notifications",
+"children":[]
+}
+,
+{
+"id":  "1038",
+"t":   "EKR_20040524104904_252",
+"name":"The write code",
+"children":[]
+}
+,
+{
+"id":  "1039",
+"t":   "EKR_20040524104904_253",
+"name":"The read code",
+"children":[]
+}
+,
+{
+"id":  "1040",
+"t":   "EKR_20040524104904_254",
+"name":"The load/save code",
+"children":[]
+}
+,
+{
+"id":  "1041",
+"t":   "EKR_20040524104904_255",
+"name":"Attributes, mirroring and dummy nodes",
+"children":[]
+}
+,
+{
+"id":  "1042",
+"t":   "EKR_20040524104904_256",
+"name":"Clones",
+"children":[]
+}
+,
+{
+"id":  "1043",
+"t":   "EKR_20040524104904_257",
+"name":"Error recovery, at last",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1044",
+"t":   "ekr_20050902105852_7",
+"name":"2002: Untangling @file is easy!",
+"children":[]
+}
+,
+{
+"id":  "1045",
+"t":   "ekr_20050902105852_8",
+"name":"2002: Leo 3.x: Continuous improvement",
+"children":[]
+}
+,
+{
+"id":  "1046",
+"t":   "ekr_20050902105852_5",
+"name":"2003: SourceForge: new energy",
+"children":[]
+}
+,
+{
+"id":  "1047",
+"t":   "ekr_20050902105852_9",
+"name":"2003: 4.0: New read logic eliminates read errors, eliminated child indices",
+"children":[]
+}
+,
+{
+"id":  "1048",
+"t":   "ekr_20050902105852_10",
+"name":"2004: 4.1: The debut of gnx's",
+"children":[]
+}
+,
+{
+"id":  "1049",
+"t":   "ekr_20050902105852_11",
+"name":"2004: 4.2: generators, uA's the end of sync problems, shared tnodes",
+"children":[]
+}
+,
+{
+"id":  "1050",
+"t":   "ekr_20050902105852_12",
+"name":"2005: 4.3: @settings trees, plugins manager, predefined c, g, p",
+"children":[]
+}
+,
+{
+"id":  "1051",
+"t":   "ekr_20060629083935",
+"name":"2006: 4.4: The minibuffer, key bindings autocompletion, multiple log panes",
+"children":[]
+}
+,
+{
+"id":  "1052",
+"t":   "ekr_20080315115427_568",
+"name":"2006-2008: 4.4.x: Hundreds of improvements",
+"children":[
+{
+"id":  "1053",
+"t":   "ekr_20060822140418",
+"name":"4.4.1: new colorizer, slideshow, multiple editors",
+"children":[]
+}
+,
+{
+"id":  "1054",
+"t":   "ekr_20061008190905",
+"name":"4.4.2: autocontract, opml, zodb, sax, myLeoSettings, leoPymacs",
+"children":[]
+}
+,
+{
+"id":  "1055",
+"t":   "ekr_20070316182323",
+"name":"4.4.3: winpdb, leoBridge, gui reorg, chapters",
+"children":[]
+}
+,
+{
+"id":  "1056",
+"t":   "ekr_20070806090235",
+"name":"4.4.4: @auto, @menus, threading syntax colorer, the Great Graph Aha",
+"children":[]
+}
+,
+{
+"id":  "1057",
+"t":   "ekr_20071115102421",
+"name":"4.4.5: Directives in headlines",
+"children":[]
+}
+,
+{
+"id":  "1058",
+"t":   "ekr_20080106114331",
+"name":"4.4.6: Bug fixes",
+"children":[]
+}
+,
+{
+"id":  "1059",
+"t":   "ekr_20080218154129",
+"name":"4.4.7: The ipython plugin",
+"children":[]
+}
+,
+{
+"id":  "1060",
+"t":   "ekr_20080311060457_215",
+"name":"4.4.8: translation",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1061",
+"t":   "ekr_20101025080245_6085",
+"name":"2008: 4.5: Code reorg, @shadow, vim bindings",
+"children":[]
+}
+,
+{
+"id":  "1062",
+"t":   "ekr_20101025080245_6086",
+"name":"2009: 4.6: Caching, Qt gui, @edit, @auto-rst",
+"children":[]
+}
+,
+{
+"id":  "1063",
+"t":   "ekr_20101025080245_6087",
+"name":"2010: 4.7: The one node world & Python 3k",
+"children":[]
+}
+,
+{
+"id":  "1064",
+"t":   "ekr_20101025080245_6089",
+"name":"2010: 4.8: New sentinels & recovery nodes",
+"children":[]
+}
+,
+{
+"id":  "1065",
+"t":   "ekr_20131008041326_16253",
+"name":"2011: 4.9: The end of Tk, autocompleter, vr pane",
+"children":[]
+}
+,
+{
+"id":  "1066",
+"t":   "ekr_20131031101712_16685",
+"name":"2012: 4.10: Many improvements",
+"children":[]
+}
+,
+{
+"id":  "1067",
+"t":   "ekr_20131031101712_17211",
+"name":"2013: 4.11: More improvements",
+"children":[]
+}
+,
+{
+"id":  "1068",
+"t":   "ekr_20150312013449_4",
+"name":"2014: 5.0 Vim mode, plays well with others",
+"children":[]
+}
+,
+{
+"id":  "1069",
+"t":   "ekr_20150220200101_2",
+"name":"2015: 5.1 @clean",
+"children":[
+{
+"id":  "1070",
+"t":   "ekr_20150313053238_44",
+"name":"Steve Zatz: in praise of @clean",
+"children":[]
+}
+,
+{
+"id":  "1071",
+"t":   "ekr_20150313053238_45",
+"name":"EKR: Why @clean is so important",
+"children":[]
+}
+,
+{
+"id":  "1072",
+"t":   "ekr_20150312080344_28",
+"name":"Genesis of @clean",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1073",
+"t":   "ekr_20050831184021_5",
+"name":"Appendices & glossary",
+"children":[
+{
+"id":  "1074",
+"t":   "ekr_20131008041326_16341",
+"name":"@rst html/appendices.html",
+"children":[
+{
+"id":  "1075",
+"t":   "EKR_20040524104904_357",
+"name":"Format of .leo files",
+"children":[]
+}
+,
+{
+"id":  "1076",
+"t":   "ekr_20060921064744_1",
+"name":"Format of external files",
+"children":[]
+}
+,
+{
+"id":  "1077",
+"t":   "EKR_20040524104904_354",
+"name":"Unicode reference",
+"children":[]
+}
+,
+{
+"id":  "1078",
+"t":   "ekr_20120319170934_6109",
+"name":"Valid URL's",
+"children":[]
+}
+,
+{
+"id":  "1079",
+"t":   "ekr_20150210062226_4",
+"name":"The Mulder/Ream update algorithm",
+"children":[
+{
+"id":  "1080",
+"t":   "ekr_20150220145456_4",
+"name":"What the algorithm does",
+"children":[]
+}
+,
+{
+"id":  "1081",
+"t":   "ekr_20080730212711_52",
+"name":"Guesses don't matter",
+"children":[]
+}
+,
+{
+"id":  "1082",
+"t":   "ekr_20150210062226_5",
+"name":"Background of the code",
+"children":[]
+}
+,
+{
+"id":  "1083",
+"t":   "ekr_20150211131925_9",
+"name":"Aha: the x.sentinels array",
+"children":[]
+}
+,
+{
+"id":  "1084",
+"t":   "ekr_20150210062226_6",
+"name":"Strategy & proof of correctness",
+"children":[]
+}
+,
+{
+"id":  "1085",
+"t":   "ekr_20150210062226_7",
+"name":"Summary",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1086",
+"t":   "ekr_20050901084134",
+"name":"Why I like Python",
+"children":[
+{
+"id":  "1087",
+"t":   "ekr_20050901092232_2",
+"name":"Clarity",
+"children":[]
+}
+,
+{
+"id":  "1088",
+"t":   "ekr_20050901092232_3",
+"name":"Power",
+"children":[]
+}
+,
+{
+"id":  "1089",
+"t":   "ekr_20050901092232_4",
+"name":"Safety",
+"children":[]
+}
+,
+{
+"id":  "1090",
+"t":   "ekr_20050901092232_5",
+"name":"Speed",
+"children":[]
+}
+,
+{
+"id":  "1091",
+"t":   "ekr_20050901092232_6",
+"name":"Conclusions",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1092",
+"t":   "ekr_20091111112709_6672",
+"name":"@rst html/glossary.html",
+"children":[
+{
+"id":  "1093",
+"t":   "ekr_20100804133903_7250",
+"name":"\@",
+"children":[]
+}
+,
+{
+"id":  "1094",
+"t":   "ekr_20100804133903_7251",
+"name":"A - C",
+"children":[]
+}
+,
+{
+"id":  "1095",
+"t":   "ekr_20100804133903_7252",
+"name":"D - G",
+"children":[]
+}
+,
+{
+"id":  "1096",
+"t":   "ekr_20100804133903_7253",
+"name":"H - L",
+"children":[]
+}
+,
+{
+"id":  "1097",
+"t":   "ekr_20100804133903_7254",
+"name":"M - O",
+"children":[]
+}
+,
+{
+"id":  "1098",
+"t":   "ekr_20100804133903_7255",
+"name":"P - R",
+"children":[]
+}
+,
+{
+"id":  "1099",
+"t":   "ekr_20100804133903_7256",
+"name":"S - Z",
+"children":[]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1100",
+"t":   "ekr_20060620094033",
+"name":"What's New...",
+"children":[
+{
+"id":  "1101",
+"t":   "ekr_20101025080245_5791",
+"name":"@rst html/what-is-new.html",
+"children":[
+{
+"id":  "1102",
+"t":   "ekr_20071116062917_2",
+"name":"@rst-no-head links",
+"children":[]
+}
+,
+{
+"id":  "1103",
+"t":   "ekr_20170123090814_1",
+"name":"What's new in Leo 5.5",
+"children":[
+{
+"id":  "1104",
+"t":   "ekr_20170123090841_2",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1105",
+"t":   "ekr_20170123090841_6",
+"name":"Created new @button scripts",
+"children":[]
+}
+,
+{
+"id":  "1106",
+"t":   "ekr_20170123090841_22",
+"name":"Code",
+"children":[]
+}
+,
+{
+"id":  "1107",
+"t":   "ekr_20170123090841_26",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1108",
+"t":   "ekr_20170316061456_1",
+"name":"Settings",
+"children":[]
+}
+,
+{
+"id":  "1109",
+"t":   "ekr_20170316063618_1",
+"name":"Command-line options",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1110",
+"t":   "ekr_20161014053105_1",
+"name":"What's new in Leo 5.4",
+"children":[
+{
+"id":  "1111",
+"t":   "ekr_20161014053127_1",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1112",
+"t":   "ekr_20161014053707_1",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1113",
+"t":   "ekr_20161014054015_1",
+"name":"Other features",
+"children":[]
+}
+,
+{
+"id":  "1114",
+"t":   "ekr_20161014054147_1",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1115",
+"t":   "ekr_20160417112500_1",
+"name":"What's new in Leo 5.3",
+"children":[
+{
+"id":  "1116",
+"t":   "ekr_20160417112511_1",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1117",
+"t":   "ekr_20160417112540_32",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1118",
+"t":   "ekr_20160417112540_33",
+"name":"Plugins",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1119",
+"t":   "ekr_20160310062634_1",
+"name":"What's new in Leo 5.2",
+"children":[
+{
+"id":  "1120",
+"t":   "ekr_20160310062651_1",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1121",
+"t":   "ekr_20160310063235_1",
+"name":"Commands & directives",
+"children":[]
+}
+,
+{
+"id":  "1122",
+"t":   "ekr_20160310064208_5",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1123",
+"t":   "ekr_20160310064208_18",
+"name":"Plugins & scripts",
+"children":[]
+}
+,
+{
+"id":  "1124",
+"t":   "ekr_20160310064208_24",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1125",
+"t":   "ekr_20150212182032_4",
+"name":"What's new in Leo 5.1",
+"children":[
+{
+"id":  "1126",
+"t":   "ekr_20150312080344_33",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1127",
+"t":   "ekr_20160310060817_1",
+"name":"Commands & settings",
+"children":[]
+}
+,
+{
+"id":  "1128",
+"t":   "ekr_20150311123850_41",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1129",
+"t":   "ekr_20150311123850_56",
+"name":"Why @clean is so important",
+"children":[]
+}
+,
+{
+"id":  "1130",
+"t":   "ekr_20150220115528_4",
+"name":"The Mulder/Ream update algorithm",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1131",
+"t":   "ekr_20141105050314_25",
+"name":"What's new in Leo 5.0",
+"children":[
+{
+"id":  "1132",
+"t":   "ekr_20150312080344_31",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1133",
+"t":   "ekr_20141105052052_2",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1134",
+"t":   "ekr_20141105050314_163",
+"name":"Features",
+"children":[
+{
+"id":  "1135",
+"t":   "ekr_20150312080344_20",
+"name":"A plugable architecture for @auto nodes",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1136",
+"t":   "ekr_20141105050314_181",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "1137",
+"t":   "ekr_20141105050314_197",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1138",
+"t":   "ekr_20131019190351_16664",
+"name":"What's new in Leo 4.11",
+"children":[
+{
+"id":  "1139",
+"t":   "ekr_20150312080344_32",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1140",
+"t":   "ekr_20131019190351_16947",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1141",
+"t":   "ekr_20131019190351_16975",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1142",
+"t":   "ekr_20131019190351_16990",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "1143",
+"t":   "ekr_20131019190351_17002",
+"name":"Scripts in scripts.leo",
+"children":[]
+}
+,
+{
+"id":  "1144",
+"t":   "ekr_20131019190351_17004",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1145",
+"t":   "ekr_20120320153011_6055",
+"name":"What's new in Leo 4.10",
+"children":[
+{
+"id":  "1146",
+"t":   "ekr_20150312080344_63",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1147",
+"t":   "ekr_20150312080344_65",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1148",
+"t":   "ekr_20150312080344_66",
+"name":"Classes",
+"children":[]
+}
+,
+{
+"id":  "1149",
+"t":   "ekr_20120320153011_8400",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1150",
+"t":   "ekr_20110601105631_19349",
+"name":"What's new in Leo 4.9",
+"children":[
+{
+"id":  "1151",
+"t":   "ekr_20150312080344_59",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1152",
+"t":   "ekr_20150312080344_61",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1153",
+"t":   "ekr_20150312080344_60",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1154",
+"t":   "ekr_20101025080245_5805",
+"name":"What's new in Leo 4.8",
+"children":[
+{
+"id":  "1155",
+"t":   "ekr_20150312080344_56",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1156",
+"t":   "ekr_20150312080344_58",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1157",
+"t":   "ekr_20150312080344_57",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1158",
+"t":   "ekr_20100129054823_11924",
+"name":"What's new in Leo 4.7",
+"children":[
+{
+"id":  "1159",
+"t":   "ekr_20150312080344_55",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1160",
+"t":   "ekr_20100129054823_11931",
+"name":"Command-line options",
+"children":[]
+}
+,
+{
+"id":  "1161",
+"t":   "ekr_20100211221936_7098",
+"name":"Commands",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1162",
+"t":   "ekr_20090324145450_20",
+"name":"What's new in Leo 4.6",
+"children":[
+{
+"id":  "1163",
+"t":   "ekr_20150312080344_52",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1164",
+"t":   "ekr_20090324145450_40",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1165",
+"t":   "ekr_20150312080344_53",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1166",
+"t":   "ekr_20080806211440_185",
+"name":"What's new in Leo 4.5",
+"children":[
+{
+"id":  "1167",
+"t":   "ekr_20080806211440_188",
+"name":"Highlights",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1168",
+"t":   "ekr_20080314081157_127",
+"name":"What's new in Leo 4.4.8",
+"children":[
+{
+"id":  "1169",
+"t":   "ekr_20150312080344_50",
+"name":"Highlights",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1170",
+"t":   "ekr_20150312080344_47",
+"name":"What's new in Leo 4.4.7",
+"children":[
+{
+"id":  "1171",
+"t":   "ekr_20150312080344_48",
+"name":"Highlights",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1172",
+"t":   "ekr_20071217093444",
+"name":"What's new in Leo 4.4.6",
+"children":[
+{
+"id":  "1173",
+"t":   "ekr_20150312080344_46",
+"name":"Highlights",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1174",
+"t":   "ekr_20071116062917",
+"name":"What's new in Leo 4.4.5",
+"children":[
+{
+"id":  "1175",
+"t":   "ekr_20150312080344_45",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1176",
+"t":   "ekr_20071116062917_18",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1177",
+"t":   "ekr_20071116062917_3",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1178",
+"t":   "ekr_20070809145744",
+"name":"What's new in Leo 4.4.4",
+"children":[
+{
+"id":  "1179",
+"t":   "ekr_20150312080344_37",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1180",
+"t":   "ekr_20070809145744_4",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1181",
+"t":   "ekr_20070809145744_5",
+"name":"Features",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1182",
+"t":   "ekr_20070513113903",
+"name":"What's new in Leo 4.4.3",
+"children":[
+{
+"id":  "1183",
+"t":   "ekr_20150312080344_36",
+"name":"Highlights",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1184",
+"t":   "ekr_20060928172457",
+"name":"What's new in Leo 4.4.2",
+"children":[
+{
+"id":  "1185",
+"t":   "ekr_20060929043325",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1186",
+"t":   "ekr_20061009111417_18",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1187",
+"t":   "ekr_20060928172457_4",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1188",
+"t":   "ekr_20060928172457_5",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "1189",
+"t":   "ekr_20061009111417_11",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1190",
+"t":   "ekr_20060620094033_1",
+"name":"What's new in Leo 4.4.1",
+"children":[
+{
+"id":  "1191",
+"t":   "ekr_20150312080344_35",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1192",
+"t":   "ekr_20060620130636",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1193",
+"t":   "ekr_20060620095949_15",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1194",
+"t":   "ekr_20060620130943",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "1195",
+"t":   "ekr_20060620095949_25",
+"name":"Settings",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1196",
+"t":   "ekr_20060620094033_2",
+"name":"What's new in Leo 4.4",
+"children":[
+{
+"id":  "1197",
+"t":   "ekr_20150312080344_34",
+"name":"Highlights",
+"children":[]
+}
+,
+{
+"id":  "1198",
+"t":   "ekr_20070622212132",
+"name":"Commands",
+"children":[]
+}
+,
+{
+"id":  "1199",
+"t":   "ekr_20060620133820_16",
+"name":"Features",
+"children":[]
+}
+,
+{
+"id":  "1200",
+"t":   "ekr_20060620140130",
+"name":"Plugins",
+"children":[]
+}
+,
+{
+"id":  "1201",
+"t":   "ekr_20060620140228",
+"name":"Settings",
+"children":[]
+}
+]
+}
+]
+}
+]
+}
+]
+}
+,
+{
+"id":  "1202",
+"t":   "ekr_20170123085934_1",
+"name":"Leo 5.5 release notes",
+"children":[
+{
+"id":  "1203",
+"t":   "ekr_20170123090348_1",
+"name":"Most important features",
+"children":[
+{
+"id":  "1204",
+"t":   "ekr_20170123084701_1",
+"name":"Fixed huge performance bug in syntax coloring",
+"children":[]
+}
+,
+{
+"id":  "1205",
+"t":   "ekr_20170123084609_24",
+"name":"Optionally run pyflakes when saving files",
+"children":[]
+}
+,
+{
+"id":  "1206",
+"t":   "ekr_20170124034150_1",
+"name":"Greatly improved javascript and perl importers",
+"children":[]
+}
+,
+{
+"id":  "1207",
+"t":   "ekr_20170205185641_2",
+"name":"Optionally colorize doc parts using rST",
+"children":[]
+}
+,
+{
+"id":  "1208",
+"t":   "ekr_20170124014606_1",
+"name":"#371: execute-script supports multiple @language direcitves",
+"children":[]
+}
+,
+{
+"id":  "1209",
+"t":   "ekr_20170124020217_1",
+"name":"#334: Rewrote all of Leo's importers",
+"children":[]
+}
+,
+{
+"id":  "1210",
+"t":   "ekr_20170123084609_26",
+"name":"#328: The pylint command now runs in the background",
+"children":[]
+}
+,
+{
+"id":  "1211",
+"t":   "ekr_20170124024347_1",
+"name":"#311: Simplified Leo's argument logic",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1212",
+"t":   "ekr_20170123084609_8",
+"name":"Bugs",
+"children":[
+{
+"id":  "1213",
+"t":   "ekr_20170123084609_14",
+"name":"#325: Simplify the organization of commands",
+"children":[]
+}
+,
+{
+"id":  "1214",
+"t":   "ekr_20170228101933_21",
+"name":"#340: finish (for 5.5) reload-settings",
+"children":[]
+}
+,
+{
+"id":  "1215",
+"t":   "ekr_20170228101933_2",
+"name":"#343: (unicode problems in file names)",
+"children":[]
+}
+,
+{
+"id":  "1216",
+"t":   "ekr_20170228101933_50",
+"name":"#344: @string view-rendered-default-kind not functional",
+"children":[]
+}
+,
+{
+"id":  "1217",
+"t":   "ekr_20170123084609_17",
+"name":"#348: (CDATA errors)",
+"children":[]
+}
+,
+{
+"id":  "1218",
+"t":   "ekr_20170308145129_169",
+"name":"#350: themes not working as documented",
+"children":[]
+}
+,
+{
+"id":  "1219",
+"t":   "ekr_20170308145129_59",
+"name":"#352: Importer unit tests create both @clean and @file",
+"children":[]
+}
+,
+{
+"id":  "1220",
+"t":   "ekr_20170205185641_4",
+"name":"#367: goto-script problems",
+"children":[]
+}
+,
+{
+"id":  "1221",
+"t":   "ekr_20170205185641_5",
+"name":"#371: support multiple languages in scripts",
+"children":[]
+}
+,
+{
+"id":  "1222",
+"t":   "ekr_20170124015707_1",
+"name":"#374: Leo can confuse directives with decorators",
+"children":[]
+}
+,
+{
+"id":  "1223",
+"t":   "ekr_20170205185641_6",
+"name":"#375: improve jedit.setTag",
+"children":[]
+}
+,
+{
+"id":  "1224",
+"t":   "ekr_20170205185641_7",
+"name":"#380: New colorizer doesn't update properly...",
+"children":[]
+}
+,
+{
+"id":  "1225",
+"t":   "ekr_20170228101933_17",
+"name":"#381: (default importer encoding problems)",
+"children":[]
+}
+,
+{
+"id":  "1226",
+"t":   "ekr_20170205185641_8",
+"name":"#387: New file is marked as changed",
+"children":[]
+}
+,
+{
+"id":  "1227",
+"t":   "ekr_20170205185641_9",
+"name":"#388: wikiview plugin",
+"children":[]
+}
+,
+{
+"id":  "1228",
+"t":   "ekr_20170205185641_10",
+"name":"#389: syntax coloring changes",
+"children":[]
+}
+,
+{
+"id":  "1229",
+"t":   "ekr_20170228101933_14",
+"name":"#391: Read File Into Node" with empty file",
+"children":[]
+}
+,
+{
+"id":  "1230",
+"t":   "ekr_20170205190147_1",
+"name":"#392: @auto-rst file.txt: -rst ignored on read",
+"children":[]
+}
+,
+{
+"id":  "1231",
+"t":   "ekr_20170205185641_11",
+"name":"#395: beautify-node can hang",
+"children":[]
+}
+,
+{
+"id":  "1232",
+"t":   "ekr_20170205185641_12",
+"name":"#396: Show images in Leo's body pane ",
+"children":[]
+}
+,
+{
+"id":  "1233",
+"t":   "ekr_20170206095132_1",
+"name":"#402: python's input statement hangs Leo",
+"children":[]
+}
+,
+{
+"id":  "1234",
+"t":   "ekr_20170228101933_19",
+"name":"#403: goto-global-line error",
+"children":[]
+}
+,
+{
+"id":  "1235",
+"t":   "ekr_20170228101933_9",
+"name":"#408: c.recursiveImport uncaught exception...",
+"children":[]
+}
+,
+{
+"id":  "1236",
+"t":   "ekr_20170228101933_8",
+"name":"#409: urls no longer colored",
+"children":[]
+}
+,
+{
+"id":  "1237",
+"t":   "ekr_20170308145129_2",
+"name":"#416: PageUp binding problem",
+"children":[]
+}
+,
+{
+"id":  "1238",
+"t":   "ekr_20170228101933_51",
+"name":"#426: console registerCommand - Chapter_hoist plugin",
+"children":[]
+}
+,
+{
+"id":  "1239",
+"t":   "ekr_20170228101933_49",
+"name":"#427: multiple vnodes...",
+"children":[]
+}
+,
+{
+"id":  "1240",
+"t":   "ekr_20170228101933_52",
+"name":"#429: goto line number...",
+"children":[]
+}
+,
+{
+"id":  "1241",
+"t":   "ekr_20170303051729_1",
+"name":"#430: rst import...",
+"children":[]
+}
+,
+{
+"id":  "1242",
+"t":   "ekr_20170308145129_32",
+"name":"#431: Simplify importer tables",
+"children":[]
+}
+,
+{
+"id":  "1243",
+"t":   "ekr_20170308145129_13",
+"name":"#434: Potential bug in settings",
+"children":[]
+}
+,
+{
+"id":  "1244",
+"t":   "ekr_20170228101933_15",
+"name":"Disabled compare_ast",
+"children":[]
+}
+,
+{
+"id":  "1245",
+"t":   "ekr_20170123084609_13",
+"name":"Fixed attribute error in To_Python.go",
+"children":[]
+}
+,
+{
+"id":  "1246",
+"t":   "ekr_20170123084609_9",
+"name":"Fixed bug in bracket matching",
+"children":[]
+}
+,
+{
+"id":  "1247",
+"t":   "ekr_20170228101933_6",
+"name":"Fixed bug in rst3 command",
+"children":[]
+}
+,
+{
+"id":  "1248",
+"t":   "ekr_20170123084609_12",
+"name":"Fixed crash after ! in tab completion",
+"children":[]
+}
+,
+{
+"id":  "1249",
+"t":   "ekr_20170123084609_16",
+"name":"Fixed crash in autocomplete (with backspace key?)",
+"children":[]
+}
+,
+{
+"id":  "1250",
+"t":   "ekr_20170205201047_1",
+"name":"Fixed crash in elisp importer",
+"children":[]
+}
+,
+{
+"id":  "1251",
+"t":   "ekr_20170123084609_11",
+"name":"Fixed date in About Leo dialog",
+"children":[]
+}
+,
+{
+"id":  "1252",
+"t":   "ekr_20170228101933_3",
+"name":"Fixed problem when ~/.leo/workbook.leo does not exist",
+"children":[]
+}
+,
+{
+"id":  "1253",
+"t":   "ekr_20170308145129_141",
+"name":"Fixed recursive import problems",
+"children":[]
+}
+,
+{
+"id":  "1254",
+"t":   "ekr_20170228101933_16",
+"name":"Fixed several importer bugs",
+"children":[]
+}
+,
+{
+"id":  "1255",
+"t":   "ekr_20170303063731_1",
+"name":"g.findRootWithPredicate preserves node order",
+"children":[]
+}
+,
+{
+"id":  "1256",
+"t":   "ekr_20170228101933_7",
+"name":"g.openUrlOnClick now catches all exceptions",
+"children":[]
+}
+,
+{
+"id":  "1257",
+"t":   "ekr_20170308145129_132",
+"name":"The pylint command now runs files in the expected order",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1258",
+"t":   "ekr_20170123084609_18",
+"name":"Code",
+"children":[
+{
+"id":  "1259",
+"t":   "ekr_20170123084609_20",
+"name":"Added BackgroundProcessManager class",
+"children":[]
+}
+,
+{
+"id":  "1260",
+"t":   "ekr_20170123084609_28",
+"name":"Added four new generators",
+"children":[]
+}
+,
+{
+"id":  "1261",
+"t":   "ekr_20170228101933_10",
+"name":"Added g.findRootWithPredicate",
+"children":[]
+}
+,
+{
+"id":  "1262",
+"t":   "ekr_20170123084609_19",
+"name":"Added IdleTimeManager",
+"children":[]
+}
+,
+{
+"id":  "1263",
+"t":   "ekr_20170219074525_1",
+"name":"All generators yield copies of positions",
+"children":[]
+}
+,
+{
+"id":  "1264",
+"t":   "ekr_20170228101933_12",
+"name":"Created g.handleUnl",
+"children":[]
+}
+,
+{
+"id":  "1265",
+"t":   "ekr_20170219074554_1",
+"name":"Replaced c.nullPosition() by None",
+"children":[]
+}
+,
+{
+"id":  "1266",
+"t":   "ekr_20170228101933_13",
+"name":"Rewrote FreeMindImporter class",
+"children":[]
+}
+,
+{
+"id":  "1267",
+"t":   "ekr_20170228101933_18",
+"name":"Simplified Leo's read/write helpers",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1268",
+"t":   "ekr_20170225082023_1",
+"name":"Documentation",
+"children":[
+{
+"id":  "1269",
+"t":   "ekr_20170225035122_1",
+"name":"Added new entries to the plugins documentation",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1270",
+"t":   "ekr_20170123084609_22",
+"name":"Features",
+"children":[
+{
+"id":  "1271",
+"t":   "ekr_20170205185641_3",
+"name":"#257: chapter-select-forward/back",
+"children":[]
+}
+,
+{
+"id":  "1272",
+"t":   "ekr_20170228112247_1",
+"name":"#349: Added --load-type=LOAD_TYPE command-line option",
+"children":[]
+}
+,
+{
+"id":  "1273",
+"t":   "ekr_20170203060220_1",
+"name":"#356: Scripting docs for hew users",
+"children":[]
+}
+,
+{
+"id":  "1274",
+"t":   "ekr_20170123152852_1",
+"name":"#379: Removed many never-used commands",
+"children":[]
+}
+,
+{
+"id":  "1275",
+"t":   "ekr_20170123084609_29",
+"name":"#438: Allow script abbreviations in headlines",
+"children":[]
+}
+,
+{
+"id":  "1276",
+"t":   "ekr_20170123084609_27",
+"name":"<Alt-X>99 is the same as <Alt-G>99",
+"children":[]
+}
+,
+{
+"id":  "1277",
+"t":   "ekr_20170313152439_1",
+"name":"Added decluttering of headlines",
+"children":[]
+}
+,
+{
+"id":  "1278",
+"t":   "ekr_20170228125816_1",
+"name":"Added justify-toggle-auto and autojustify-on-at-start",
+"children":[]
+}
+,
+{
+"id":  "1279",
+"t":   "ekr_20170311055647_1",
+"name":"Added leo/Icons/transparent folders and icons",
+"children":[]
+}
+,
+{
+"id":  "1280",
+"t":   "ekr_20170303113742_1",
+"name":"Added open-themes-leo command and corresponding menu item",
+"children":[]
+}
+,
+{
+"id":  "1281",
+"t":   "ekr_20170313151821_1",
+"name":"Added several new scripts and @button nodes to scripts.leo",
+"children":[]
+}
+,
+{
+"id":  "1282",
+"t":   "ekr_20170123084609_25",
+"name":"leoDist.leo appears in the File menu",
+"children":[]
+}
+,
+{
+"id":  "1283",
+"t":   "ekr_20170228104028_1",
+"name":"New unl:// links replace file:// syntax",
+"children":[]
+}
+,
+{
+"id":  "1284",
+"t":   "ekr_20170228101933_20",
+"name":"re: Make UNL links active",
+"children":[]
+}
+,
+{
+"id":  "1285",
+"t":   "ekr_20170228104123_1",
+"name":"Added reload-settings and reload-all-settings commands",
+"children":[]
+}
+,
+{
+"id":  "1286",
+"t":   "ekr_20170228182610_1",
+"name":"Rewrote leomail plugin",
+"children":[]
+}
+,
+{
+"id":  "1287",
+"t":   "ekr_20170123084609_30",
+"name":"The markdown importer now regularizes sections",
+"children":[]
+}
+,
+{
+"id":  "1288",
+"t":   "ekr_20170228124856_1",
+"name":"VR supports @jupyter",
+"children":[]
+}
+]
+}
+,
+{
+"id":  "1289",
+"t":   "ekr_20170316061434_1",
+"name":"Settings and command-line options",
+"children":[]
+}
+]
+}
+]

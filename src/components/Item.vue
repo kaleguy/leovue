@@ -14,9 +14,7 @@
       <span class="otitle">{{vtitle}}</span>
     </div>
     <div v-show="isOpen" class="child-items">
-      <div v-show="isOpenInline"
-           :id="'item-' + model.id"
-           v-html="myContent"
+      <div v-html="myContent"
            class="inline">
       </div>
       <ul v-if="isFolder">
@@ -28,8 +26,8 @@
           :textItems="textItems"
           :targetEl="targetEl">
         </item>
-        <div v-show="isOpenInline" class="hshim"></div>
       </ul>
+      <div v-show="isOpenInline" class="hshim"></div>
     </div>
   </li>
 </template>
@@ -66,7 +64,9 @@ export default {
       return open
     },
     isOpenInline: function () {
-      return this.isOpen && this.$route.name === 'ANode'
+      return this.$route.name === 'ANode'
+      // return true
+      // return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
       return this.isOpen && !this.closearrow
@@ -89,9 +89,6 @@ export default {
         return this.name
       }
     },
-    inlineClass: function () {
-      return 'inline'
-    },
     initialized () {
       return this.$store.state.initialized
     }
@@ -110,48 +107,16 @@ export default {
         openItemIds = openItemIds.filter(id => id !== this.model.id)
         this.closearrow = true
       }
-      let inline = true
-      if (this.targetEl) {
-        inline = false
-      }
-      this.inline = inline
-      if (this.isFolder) {
-        const ul = this.$el.getElementsByClassName('child-items')[0]
-        const il = this.$el.getElementsByClassName('inline')[0]
-        ul.style.display = 'block'
-        if (inline) {
-          il.style.display = 'block'
-        }
-        if (!this.isOpen) {
+      const ul = this.$el.getElementsByClassName('child-items')[0]
+      if (!this.isOpen) {
+        this.$store.commit('OPEN_ITEMS', {openItemIds})
+        Velocity(ul, 'slideDown', {duration, easing}).then(els => {
+        })
+      } else {
+        Velocity(ul, 'slideUp', {duration, easing}).then(els => {
           this.$store.commit('OPEN_ITEMS', {openItemIds})
-          Velocity(ul, 'slideDown', {duration, easing}).then(els => {
-          })
-        } else {
-          Velocity(ul, 'slideUp', {duration, easing}).then(els => {
-            this.$store.commit('OPEN_ITEMS', {openItemIds})
-            this.closearrow = false
-          })
-        }
-      }
-      // toggle inline content if in inline mode
-      if (inline && !this.isFolder) {
-        duration = 300
-        // TODO: refactor this
-        let il = this.$el.getElementsByClassName('inline')[0]
-        // if (!il) {
-        //   il = this.$el.getElementsByClassName('vinline')[0]
-        // }
-        il.parentElement.style.display = 'block'
-        if (!this.isOpen) {
-          this.$store.commit('OPEN_ITEMS', {openItemIds})
-          Velocity(il, 'slideDown', {duration, easing}).then(els => {
-          })
-        } else {
-          Velocity(il, 'slideUp', {duration, easing}).then(els => {
-            this.$store.commit('OPEN_ITEMS', {openItemIds})
-            this.closearrow = false
-          })
-        }
+          this.closearrow = false
+        })
       }
       const id = this.model.id
       this.$store.dispatch('setCurrentItem', {id})
@@ -242,9 +207,9 @@ li > div
   padding: 30px
   padding-top: 20px
   padding-bottom: 20px
-  margin-top: 4px
+  //margin-top: 4px
   margin-bottom: 16px
-  border: 1px solid $contentBorderColor
+  border: 6px solid $contentBorderColor
   border-radius: 4px
   // box-shadow: -4px 0 8px -4px rgba(31, 31, 31, 0.8)
 .vinline
