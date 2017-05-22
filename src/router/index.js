@@ -6,6 +6,7 @@ import D3Viewer from '@/components/D3Viewer'
 import DbViewer from '@/components/DbViewer'
 import Settings from '@/components/Settings'
 import AccordionViewer from '@/components/AccordionViewer'
+import NestedViewer from '@/components/NestedViewer'
 
 Vue.use(Router)
 
@@ -28,6 +29,15 @@ export default new Router({
         name: 'ANode',
         path: '',
         component: AccordionViewer
+      }]
+    },
+    {
+      path: '/n/:id',
+      component: Dashboard,
+      children: [{
+        name: 'NNode',
+        path: '',
+        component: NestedViewer
       }]
     },
     {

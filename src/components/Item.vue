@@ -1,5 +1,5 @@
 <template>
-  <li :x-id="model.id">
+  <li :id="model.id" v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div
       :class="{bold: isFolder, active: active, topItem: top}"
       @click="toggle">
@@ -24,6 +24,7 @@
           :model="model"
           :key="model.id"
           :textItems="textItems"
+          :accordion="accordion"
           :targetEl="targetEl">
         </item>
       </ul>
@@ -41,7 +42,8 @@ export default {
     model: Object,
     targetEl: Boolean,
     textItems: Object,
-    top: Boolean
+    top: Boolean,
+    accordion: Boolean
   },
   data: function () {
     return {
@@ -56,6 +58,33 @@ export default {
     isFolder: function () {
       if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
       return this.model.children && this.model.children.length
+    },
+    isClosedSibling: function () {
+      if (this.isOpen) { return ' open' }
+      const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
+      const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
+      var foo = nextSiblings.length + '_' + prevSiblings.length
+      return foo
+      // check if any siblings are open
+      // if yes then return true
+      // else return false
+    },
+    hasOpenSibling: function () {
+      // if (this.isOpen) { return ' open' }
+      const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
+      const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
+      let siblings = nextSiblings.concat(prevSiblings)
+      siblings = siblings.map(s => s.id)
+      let hasOpen = false
+      const ids = this.$store.state.openItemIds
+      siblings.forEach(sid => {
+        if (ids.indexOf(sid + '') > -1) { hasOpen = true }
+      })
+      hasOpen = false
+      return hasOpen
+      // check if any siblings are open
+      // if yes then return true
+      // else return false
     },
     isOpen: function () {
       const ids = this.$store.state.openItemIds
@@ -112,14 +141,33 @@ export default {
         this.$store.commit('OPEN_ITEMS', {openItemIds})
         Velocity(ul, 'slideDown', {duration, easing}).then(els => {
         })
+        if (this.accordion) {
+          this.closeSiblings(easing, 'Up')
+        }
       } else {
         Velocity(ul, 'slideUp', {duration, easing}).then(els => {
           this.$store.commit('OPEN_ITEMS', {openItemIds})
           this.closearrow = false
         })
+        if (this.accordion) {
+          this.closeSiblings(easing, 'Down')
+        }
       }
       const id = this.model.id
       this.$store.dispatch('setCurrentItem', {id})
+      // close siblings if in accordion mode
+    },
+    closeSiblings: function (easing, direction) {
+      const duration = 500
+      const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
+      const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
+      let siblings = nextSiblings.concat(prevSiblings)
+      siblings = siblings.map(s => s.id)
+      siblings.forEach(sid => {
+        let el = document.getElementById(sid)
+        Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
+        })
+      })
     }
   },
   watch: {
@@ -183,18 +231,6 @@ $contentBorderColor: #ccc
   width: 100%
 .bold
   font-weight: bold
-ul
-  padding-left: 1em
-  line-height: 1.4em
-  list-style-type: none
-  margin-bottom: 8px
-li
-  white-space: nowrap
-  min-width: 760px
-  margin-bottom: 4px
-  margin-top: 4px
-li > div
-  padding-left: 4px
 .active
   background: #81ff00
   max-width: 762px
@@ -233,4 +269,10 @@ li > div
 .child-items
   margin: 0
   padding: 0
+.unselected-sibling
+  background-color: yellow
+  height: 0
+  overflow: hidden
+  -webkit-transition: height 4s ease
+  transition: height 4s ease
 </style>

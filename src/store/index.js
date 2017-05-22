@@ -258,9 +258,9 @@ function setData (context, ldata, filename, route) {
 function loadSubtrees (context, trees, data) {
   if (!trees.length) { return Promise.resolve() }
   const p = new Promise((resolve, reject) => {
+    // TODO: this just loads the first subtree, need to load all
     let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
     loadLeoNode(context, item).then(res => resolve(res))
-    resolve(true)
   })
   return p
 }
