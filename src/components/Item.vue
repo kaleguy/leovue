@@ -1,17 +1,20 @@
 <template>
   <li :id="model.id" v-bind:class="{'unselected-sibling': hasOpenSibling}">
-    <div
-      :class="{bold: isFolder, active: active, topItem: top}"
-      @click="toggle">
-      <div v-bind:class="{'icon-bracket': top}"
-           style="display:inline-block;
-           padding-left:3px;
-           padding-right:3px;"
-           v-if="isFolder">
-        <div class="arrow"
-             v-bind:class="{arrowdown: isOpenA}">▶</div>
+    <div class="item-box"
+         :class="{bold: isFolder, active: active, topItem: top}">
+      <div
+        @click="toggle">
+        <div v-bind:class="{'icon-bracket': top}"
+             style="display:inline-block;
+             padding-left:3px;
+             padding-right:3px;"
+             v-if="isFolder">
+          <div class="arrow"
+               v-bind:class="{arrowdown: isOpenA}">▶</div>
+        </div>
+        <div v-if="!isFolder" class="leaf-button"></div>
+        <span class="otitle">{{vtitle}}</span>
       </div>
-      <span class="otitle">{{vtitle}}</span>
     </div>
     <div v-show="isOpen" class="child-items">
       <div v-html="myContent"
@@ -140,18 +143,18 @@ export default {
       if (!this.isOpen) {
         this.$store.commit('OPEN_ITEMS', {openItemIds})
         Velocity(ul, 'slideDown', {duration, easing}).then(els => {
+          if (this.accordion) {
+            this.closeSiblings(easing, 'Up')
+          }
         })
-        if (this.accordion) {
-          this.closeSiblings(easing, 'Up')
-        }
       } else {
         Velocity(ul, 'slideUp', {duration, easing}).then(els => {
           this.$store.commit('OPEN_ITEMS', {openItemIds})
           this.closearrow = false
+          if (this.accordion) {
+            this.closeSiblings(easing, 'Down')
+          }
         })
-        if (this.accordion) {
-          this.closeSiblings(easing, 'Down')
-        }
       }
       const id = this.model.id
       this.$store.dispatch('setCurrentItem', {id})

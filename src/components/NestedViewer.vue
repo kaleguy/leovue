@@ -51,6 +51,11 @@
 <style lang="sass">
 .nestedviewer
   height: 100%
+  margin-left: 6px
+  .item-box
+    border: 2px solid #ccc
+    margin-right: 3px
+    padding-left: 6px
   ul
     list-style-type: none
     padding: 0
@@ -60,9 +65,15 @@
     margin-bottom: 8px
   li
     white-space: nowrap
-    min-width: 760px
     margin-bottom: 4px
     margin-top: 4px
   li > div
     padding-left: 0
+  .leaf-button
+    width: 10px
+    padding-left: 4px
+    height: 10px
+    display: inline-block
+  .leaf-button::after
+    content: '○'
 </style>

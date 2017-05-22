@@ -55,13 +55,12 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
 .treeviewer
+  margin-left: -10px
   height: 100%
   ul
     list-style-type: none;
     padding: 0;
     padding-left: 10px;
-  ul
-    padding-left: 1em
     line-height: 1.4em
     list-style-type: none
     margin-bottom: 8px
