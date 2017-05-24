@@ -51,7 +51,7 @@ function parseQueryString (config, url) {
     }
   }
   var hash = window.location.hash
-  if (!hash) {
+  if (!hash || hash.length < 3) {
     window.location.hash = 't/1'
   }
   return urlParams
