@@ -38,7 +38,7 @@ function getLeoJSON (filename, id) {
   }
   var p = new Promise((resolve, reject) => {
     if (!filename.match(/static/)) {
-      filename = '/static/' + filename
+      filename = 'static/' + filename
     }
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
