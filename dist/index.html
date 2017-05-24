@@ -1,6 +1,7 @@
-<!DOCTYPE html><html><head><script>var lconfig = {
-      showapptitle: true,
-      doctitle: '',
+<!DOCTYPE html><html><head><script>window.lconfig = {
+      showAppTitle: false,
+      showHeader: false,
+      docTitle: '',
       filename: 'docs'
     }</script><style type=text/css>.hljs {
       display: block;
@@ -73,10 +74,12 @@
       <xsl:template match="v">
         <xsl:variable name="t" select="@t"/>
         <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
+        <xsl:variable name="double_quote">"</xsl:variable>
+        <xsl:variable name="apos">'</xsl:variable>
         {
         "id":  <xsl:value-of select="@id"/>,
         "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
-        "name":"<xsl:value-of select="$nodeSet[1]/vh"/>",
+        "name":"<xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/>",
         "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
         }
         <xsl:if test="position()!=last()">,</xsl:if>
@@ -84,24 +87,4 @@
 
       <xsl:template match="text()"/>
 
-    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script src=static/defiant.js></script><script src=static/vue-grid-layout.js></script><script>var parseQueryString = function(url) {
-      var urlParams = {};
-      url.replace(
-        new RegExp("([^?=&]+)(=([^&]*))?", "g"),
-        function($0, $1, $2, $3) {
-          urlParams[$1] = $3;
-        }
-      );
-      for (k in urlParams){
-        v = urlParams[k]
-        if (typeof v !== 'undefined'){
-          lconfig[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'");
-        }
-      }
-      var hash = window.location.hash
-      if (!hash) {
-        window.location.hash = 't/1'
-      }
-      return urlParams;
-    }
-    parseQueryString(window.location.href)</script><link href=static/css/app.d98b58668fd00907ed1a1c826e6a13fb.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.db68a8c2f265853abe1b.js></script><script type=text/javascript src=static/js/vendor.10303b588dfb7e5633b9.js></script><script type=text/javascript src=static/js/app.88f5910fc9ebb7a11adc.js></script></body></html>
+    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script src=static/defiant.js></script><script src=static/vue-grid-layout.js></script><link href=static/css/app.a4b708d7f02ab27fe46bd12a26612c6d.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.2863f52d63542ae2b788.js></script><script type=text/javascript src=static/js/vendor.5d47e3c0601e3c9b5e1a.js></script><script type=text/javascript src=static/js/app.e5bcff189acc38ff59b2.js></script></body></html>
