@@ -14,6 +14,9 @@ import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
 sync(store, router)
 
+const util = require('./util.js')
+util.parseQueryString(window.lconfig, window.location.href) // fill in global config object from url params
+
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false

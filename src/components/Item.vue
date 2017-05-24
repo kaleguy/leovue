@@ -12,6 +12,7 @@
           <div class="arrow"
                v-bind:class="{arrowdown: isOpenA}">▶</div>
         </div>
+        <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
         <span class="otitle">{{vtitle}}</span>
       </div>
@@ -278,4 +279,6 @@ $contentBorderColor: #ccc
   overflow: hidden
   -webkit-transition: height 4s ease
   transition: height 4s ease
+.leo-box
+  display: none
 </style>

@@ -36,11 +36,34 @@ function removeFirstLine (text) {
   return text.split(/[\n]/).splice(1).join('\n')
 }
 
+function parseQueryString (config, url) {
+  var urlParams = {}
+  url.replace(
+    new RegExp('([^?=&]+)(=([^&]*))?', 'g'),
+    function ($0, $1, $2, $3) {
+      urlParams[$1] = $3
+    }
+  )
+  for (let k in urlParams) {
+    let v = urlParams[k]
+    if (typeof v !== 'undefined') {
+      config[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'")
+    }
+  }
+  var hash = window.location.hash
+  if (!hash) {
+    window.location.hash = 't/1'
+  }
+  return urlParams
+}
+// parseQueryString(window.location.href)
+
 module.exports = {
   replaceRelUrls,
   getFileExtension,
   getLanguage,
-  removeFirstLine
+  removeFirstLine,
+  parseQueryString
 }
 
 /*

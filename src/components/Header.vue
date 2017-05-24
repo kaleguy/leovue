@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="holder">
-      <div class="header">
-        <span v-if="config.showapptitle" class="app-title">Leo Viewer</span>
-        <span v-if="config.doctitle">: </span>
+      <div class="header" v-if="config.showHeader">
+        <span v-if="config.showAppTitle" class="app-title">Leo Viewer</span>
+        <span v-if="config.docTitle">: </span>
         <span class="doc-title">{{ config.doctitle }}</span>
         <div @click="toggle" class="icon icon-button">
           <icon class="icon" name="bars"></icon>
@@ -170,6 +170,7 @@
   padding-left: 6px
   color: #333
   border-bottom: 1px solid #ddd
+  height: 21px
 .icon
   float: right
   padding: 0
