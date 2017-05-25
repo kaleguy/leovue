@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <appheader/>
-    <div id="main">
+    <div id="main" :class="{'header-space': config.showHeader}">
       <router-view :id="id"></router-view>
     </div>
   </div>
@@ -26,6 +26,9 @@ export default {
       } else {
         return this.$route.params.id
       }
+    },
+    config () {
+      return window.lconfig
     }
   },
   watch: {
@@ -52,7 +55,6 @@ li {
   margin: 0 10px;
 }
 #main {
-  padding-top: 26px;
   height: 100%;
 }
 a {
@@ -60,5 +62,8 @@ a {
 }
 .dashboard{
   height: 100%;
+}
+.header-space {
+  padding-top: 26px;
 }
 </style>
