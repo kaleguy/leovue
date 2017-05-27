@@ -47,15 +47,7 @@
     name: 'appheader',
     data () {
       return {
-        menu: false,
-        viewTypes: [
-          {name: 'Outline', type: 't'},
-          {name: 'Inline', type: 'a'},
-          {name: 'Graphic Tree', type: 'd'},
-          {name: 'Dendrogram', type: 'z'},
-          {name: 'Nested Menu', type: 'n'},
-          {name: 'Movable Panes', type: 'w'}
-        ]
+        menu: false
       }
     },
     methods: {
@@ -101,6 +93,20 @@
     computed: {
       viewType () {
         return this.$store.state.viewType
+      },
+      viewTypes () {
+        let viewTypes = [
+          {name: 'Outline', type: 't'},
+          {name: 'Inline', type: 'a'},
+          {name: 'Graphic Tree', type: 'd'},
+          {name: 'Dendrogram', type: 'z'},
+          {name: 'Nested Menu', type: 'n'},
+          {name: 'Movable Panes', type: 'w'}
+        ]
+        if (this.config.hideDendrogram) {
+          viewTypes = viewTypes.splice(3, 1)
+        }
+        return viewTypes
       },
       noBack () {
         return this.$store.state.historyIndex < 2

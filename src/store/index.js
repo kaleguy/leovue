@@ -19,6 +19,7 @@ Vue.use(Vuex)
  * @returns {string}
  */
 function formatText (text) {
+  if (!text) { return '' }
   let language = util.getLanguage(text)
 
   text = text.replace(/<</g, '\u00AB')
@@ -87,9 +88,22 @@ function getRoots (acc, p, startIndex) {
 function isRelative (url) {
   var ok = true
   if (/^http/.test(url)) {
-    ok = false
+    return false
+  }
+  if (window.lconfig.filename) {
+    return false
   }
   return ok
+}
+/**
+ * Chop the end of a string off
+ * @param s {string} The input string
+ * @param c {string} The character from which the string will be chopped
+ * @returns {string} The chopped string
+ */
+function chop (s, c) {
+  if (s.indexOf(c) < 0) { return s }
+  return s.substring(0, s.lastIndexOf(c))
 }
 function loadLeoNode (context, item) {
   const p = new Promise((resolve, reject) => {
@@ -100,7 +114,7 @@ function loadLeoNode (context, item) {
       let text = data.textItems
       context.commit('ADDTEXT', {text})
       data = data.data
-      const name = '' // TODO: need to add logic here for replacing node
+      const name = '' // TODO: need to add logic here for replacing node option
       if (name) {
         item.name = data.name
         item.children = data.children
@@ -121,6 +135,13 @@ function getUrlFromTitle (title) {
   if (!url) { return null }
   if (isRelative(url)) {
     url = 'static/' + url
+  }
+  if (window.lconfig.filename) {
+    let u = window.lconfig.filename
+    u = chop(u, '#')
+    u = chop(u, '?')
+    u = chop(u, '/')
+    url = u + '/' + url
   }
   return {url, label}
 }
@@ -415,13 +436,13 @@ export default new Vuex.Store({
         item = item[0]
         if (/^\[/.test(item.name)) {
           if (/\.leo\)$/.test(item.name)) {
-            loadLeoNode(context, item).then(res => console.log('subtree loaded.'))
+            loadLeoNode(context, item, true).then(res => console.log('subtree loaded.'))
           } else {
             showSite(context, item.name, id)
             setSiteItem(context, item.name, id)
           }
         } else {
-          // console.log(item.t, context.state.leotext[item.t], context.state.leotext)
+          console.log(item.t)
           showText(context, context.state.leotext[item.t], id)
         }
       }

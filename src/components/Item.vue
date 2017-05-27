@@ -74,6 +74,8 @@ export default {
       // else return false
     },
     hasOpenSibling: function () {
+      if (!this.accordion) { return false }
+      // TODO: this is slow, need to refactor, possibly replace defiant wth parent pointer on item
       // if (this.isOpen) { return ' open' }
       const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
       const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')

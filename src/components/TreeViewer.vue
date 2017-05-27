@@ -40,6 +40,7 @@
       top () {
         // console.log(this.$store.state.leodata)
         if (this.$store.state.leodata.length > 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
         return true
       },
       data () {

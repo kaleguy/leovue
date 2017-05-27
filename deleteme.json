@@ -1,0 +1,229 @@
+[
+  {
+    "id":  "1",
+    "t":   "N65536",
+    "name":"The Play",
+    "children":[
+      {
+        "id":  "2",
+        "t":   "N65642",
+        "name":"ACT I",
+        "children":[
+          {
+            "id":  "3",
+            "t":   "N65647",
+            "name":"SCENE I. King Lear's palace.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "4",
+            "t":   "N67201",
+            "name":"SCENE II. The Earl of Gloucester's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "5",
+            "t":   "N68098",
+            "name":"SCENE III. The Duke of Albany's palace.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "6",
+            "t":   "N68236",
+            "name":"SCENE IV. A hall in the same.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "7",
+            "t":   "N70060",
+            "name":"SCENE V. Court before the same.",
+            "children":[]
+          }
+        ]
+      }
+    ,
+      {
+        "id":  "8",
+        "t":   "N70397",
+        "name":"ACT II",
+        "children":[
+          {
+            "id":  "9",
+            "t":   "N70402",
+            "name":"SCENE I. GLOUCESTER's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "10",
+            "t":   "N71113",
+            "name":"SCENE II. Before Gloucester's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "11",
+            "t":   "N72061",
+            "name":"SCENE III. A wood.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "12",
+            "t":   "N72142",
+            "name":"
+            SCENE IV. Before GLOUCESTER's castle. KENT in the stocks.
+            ",
+            "children":[]
+          }
+        ]
+      }
+    ,
+      {
+        "id":  "13",
+        "t":   "N73811",
+        "name":"ACT III",
+        "children":[
+          {
+            "id":  "14",
+            "t":   "N73816",
+            "name":"SCENE I. A heath.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "15",
+            "t":   "N74068",
+            "name":"SCENE II. Another part of the heath. Storm still.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "16",
+            "t":   "N74473",
+            "name":"SCENE III. Gloucester's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "17",
+            "t":   "N74587",
+            "name":"SCENE IV. The heath. Before a hovel.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "18",
+            "t":   "N75541",
+            "name":"SCENE V. Gloucester's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "19",
+            "t":   "N75685",
+            "name":"
+            SCENE VI. A chamber in a farmhouse adjoining the castle.
+            ",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "20",
+            "t":   "N76297",
+            "name":"SCENE VII. Gloucester's castle.",
+            "children":[]
+          }
+        ]
+      }
+    ,
+      {
+        "id":  "21",
+        "t":   "N77018",
+        "name":"ACT IV",
+        "children":[
+          {
+            "id":  "22",
+            "t":   "N77023",
+            "name":"SCENE I. The heath.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "23",
+            "t":   "N77506",
+            "name":"SCENE II. Before ALBANY's palace.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "24",
+            "t":   "N78052",
+            "name":"SCENE III. The French camp near Dover.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "25",
+            "t":   "N78376",
+            "name":"SCENE IV. The same. A tent.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "26",
+            "t":   "N78520",
+            "name":"SCENE V. Gloucester's castle.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "27",
+            "t":   "N78781",
+            "name":"SCENE VI. Fields near Dover.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "28",
+            "t":   "N80329",
+            "name":"SCENE VII. A tent in the French camp. LEAR on a bed asleep, soft music playing; Gentleman, and others attending.",
+            "children":[]
+          }
+        ]
+      }
+    ,
+      {
+        "id":  "29",
+        "t":   "N80936",
+        "name":"ACT V",
+        "children":[
+          {
+            "id":  "30",
+            "t":   "N80941",
+            "name":"SCENE I. The British camp, near Dover.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "31",
+            "t":   "N81379",
+            "name":"SCENE II. A field between the two camps.",
+            "children":[]
+          }
+        ,
+          {
+            "id":  "32",
+            "t":   "N81475",
+            "name":"SCENE III. The British camp near Dover.",
+            "children":[]
+          }
+        ]
+      }
+    ]
+  }
+]

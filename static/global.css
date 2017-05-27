@@ -1,4 +1,29 @@
+/* shakespeare */
+.ptitle {
+  text-align:center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.pdetail {
+  text-align: center;
+  height: 1.5em;
+  font-size: 11px;
+}
+.speaker {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.line {
+  margin-left: 40px;
+}
+.stagedir {
+  font-style: italic;
+  margin: 6px;
+  font-size: .9em;
+}
 
+/* highlight */
 .hljs {
   display: block;
   overflow-x: auto;

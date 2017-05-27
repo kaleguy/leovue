@@ -32,12 +32,25 @@ function cleanText(data, startId){
     data.t = startId + '-' + data.t + ''
   }
 }
+/**
+ * TODO: move to util, also is in store/index
+ * Is url relative
+ * @param url {string}
+ * @returns {boolean} - if is relative
+ */
+function isRelative (url) {
+  var ok = true
+  if (/^http/.test(url)) {
+    ok = false
+  }
+  return ok
+}
 function getLeoJSON (filename, id) {
   if (filename.indexOf('#') > 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
   var p = new Promise((resolve, reject) => {
-    if (!filename.match(/static/)) {
+    if (!filename.match(/static/) && isRelative(filename)) {
       filename = 'static/' + filename
     }
     if (!filename.match(/\.leo$/)) {
