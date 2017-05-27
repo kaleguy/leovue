@@ -436,8 +436,10 @@ export default new Vuex.Store({
         item = item[0]
         if (/^\[/.test(item.name)) {
           if (/\.leo\)$/.test(item.name)) {
+            console.log('load leo')
             loadLeoNode(context, item, true).then(res => console.log('subtree loaded.'))
           } else {
+            console.log('load site')
             showSite(context, item.name, id)
             setSiteItem(context, item.name, id)
           }

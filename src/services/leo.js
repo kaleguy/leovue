@@ -2,6 +2,7 @@ import escape from 'escape-html'
 import axios from 'axios'
 
 function loadDoc (filename) {
+  console.log('loading file:', filename)
   var p = new Promise((resolve, reject) => {
     axios.get(filename)
       .then(function (response) {
