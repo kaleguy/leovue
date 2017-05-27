@@ -33,7 +33,7 @@ function cleanText(data, startId){
   }
 }
 /**
- * TODO: move to util, also is in store/index
+ * TODO: move to util, also is in store/index, review logic for relative / subtrees
  * Is url relative
  * @param url {string}
  * @returns {boolean} - if is relative

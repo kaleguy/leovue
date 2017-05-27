@@ -1,0 +1,89 @@
+/* shakespeare */
+.ptitle {
+  text-align:center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.pdetail {
+  text-align: center;
+  height: 1.5em;
+  font-size: 11px;
+}
+.speaker {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.line {
+  margin-left: 40px;
+}
+.stagedir {
+  font-style: italic;
+  margin: 6px;
+  font-size: .9em;
+}
+
+/* highlight */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: white;
+  color: black;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+  color: #a31515;
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+  color: #2b91af;
+}
+
+.hljs-doctag {
+  color: #808080;
+}
+
+.hljs-attr {
+  color: #f00;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #00b0e8;
+}
+
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
