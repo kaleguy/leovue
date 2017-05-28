@@ -56,6 +56,7 @@
     border: 2px solid #ccc
     margin-right: 3px
     padding-left: 6px
+    overflow: hidden
   ul
     list-style-type: none
     padding: 0

@@ -13,7 +13,6 @@
 <v t="josephorr.20170515105708.1"><vh>flat menu 2</vh></v>
 <v t="josephorr.20170516180823.1"><vh>flat menu 3</vh></v>
 <v t="josephorr.20170516180828.1"><vh>flat menu 4</vh></v>
-<v t="josephorr.20170518090617.1"><vh>@string inkscape-bin = "c:\Program Files (x86)\Inkscape\inkscape.exe"</vh></v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20170515100137.2">"TEST"
@@ -36,6 +35,5 @@ Fixie brooklyn migas sriracha VHS. Unicorn ugh umami, raclette tumblr fanny pack
 Courtesy of Hipster Ipsum.
 
 Stumptown crucifix asymmetrical prism flannel. Shoreditch fixie roof party taxidermy kale chips, retro raclette portland plaid. Salvia fap gochujang pop-up, 8-bit enamel pin af freegan pabst 90's brunch fingerstache cray church-key tattooed. Wolf subway tile pour-over, gentrify truffaut brooklyn health goth tilde letterpress pork belly mumblecore bicycle rights whatever single-origin coffee DIY. Kitsch gluten-free yr blog, keytar tofu wayfarers neutra you probably haven't heard of them art party. Iceland marfa mixtape lomo, flexitarian squid brunch lyft ennui microdosing. Whatever enamel pin vinyl, blog pitchfork PBR&amp;B tousled.</t>
-<t tx="josephorr.20170518090617.1"></t>
 </tnodes>
 </leo_file>
