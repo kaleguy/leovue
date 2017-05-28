@@ -104,7 +104,7 @@
           {name: 'Movable Panes', type: 'w'}
         ]
         if (this.config.hideDendrogram) {
-          viewTypes = viewTypes.splice(3, 1)
+          viewTypes.splice(3, 1)
         }
         return viewTypes
       },
