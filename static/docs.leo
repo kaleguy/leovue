@@ -43,7 +43,7 @@
 <v t="josephorr.20170304175209.1"></v>
 </v>
 <v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
-<v t="josephorr.20170511083006.1"><vh>[Example](example.leo)</vh></v>
+<v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
 <v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
@@ -293,6 +293,7 @@ For other environments, see the:
       top () {
         // console.log(this.$store.state.leodata)
         if (this.$store.state.leodata.length &gt; 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
         return true
       },
       data () {
@@ -308,15 +309,24 @@ For other environments, see the:
 </t>
 <t tx="josephorr.20170328225741.1">@language css
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
-&lt;style scoped&gt;
-  .treeviewer{
-    height: 100%
-  }
-  ul {
+&lt;style lang="sass"&gt;
+.treeviewer
+  margin-left: -10px
+  height: 100%
+  ul
     list-style-type: none;
     padding: 0;
     padding-left: 10px;
-  }
+    line-height: 1.4em
+    list-style-type: none
+    margin-bottom: 8px
+  li
+    white-space: nowrap
+    min-width: 760px
+    margin-bottom: 4px
+    margin-top: 4px
+  li &gt; div
+    padding-left: 4px
 &lt;/style&gt;
 </t>
 <t tx="josephorr.20170331200243.1">@language md
@@ -372,7 +382,7 @@ content as a web page.
 The content you are reading was created in Leo. If you're reading this on the Leo Viewer
 site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is currently at version 0.9.4 
+Leo Viewer is currently at version 0.9.6 
 
 Leo Viewer 0.9.x only is tested in Chrome and may not display correctly in other browsers.
 
@@ -384,14 +394,13 @@ Current features include:
 * Outline and Inline views
 * Drag and drop a Leo file to display
 * Graphic trees
+* Load Leo files into subtrees
+* Nested menu mode
 
 Features planned for version 1:
-* Left Nav collapse - expand
 * Keyboard support
 * Search
-* Accordion Mode (close other nodes except ancestors)
 * SEO version (static html files)
-* Load Leo files into subtrees
 
 Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
@@ -420,6 +429,7 @@ import escape from 'escape-html'
 import axios from 'axios'
 
 function loadDoc (filename) {
+  console.log('loading file:', filename)
   var p = new Promise((resolve, reject) =&gt; {
     axios.get(filename)
       .then(function (response) {
@@ -450,13 +460,26 @@ function cleanText(data, startId){
     data.t = startId + '-' + data.t + ''
   }
 }
+/**
+ * TODO: move to util, also is in store/index, review logic for relative / subtrees
+ * Is url relative
+ * @param url {string}
+ * @returns {boolean} - if is relative
+ */
+function isRelative (url) {
+  var ok = true
+  if (/^http/.test(url)) {
+    ok = false
+  }
+  return ok
+}
 function getLeoJSON (filename, id) {
   if (filename.indexOf('#') &gt; 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
   var p = new Promise((resolve, reject) =&gt; {
-    if (!filename.match(/static/)) {
-      filename = '/static/' + filename
+    if (!filename.match(/static/) &amp;&amp; isRelative(filename)) {
+      filename = 'static/' + filename
     }
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'

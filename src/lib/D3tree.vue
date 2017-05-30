@@ -315,6 +315,7 @@ export default {
         this.collapse(d)
       } else {
         this.expand(d)
+        // this.redraw()
       }
     },
 

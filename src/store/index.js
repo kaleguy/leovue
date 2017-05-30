@@ -106,17 +106,17 @@ function chop (s, c) {
   return s.substring(0, s.lastIndexOf(c))
 }
 function loadLeoNode (context, item) {
+  console.log('LOADING SUBTREE')
   const p = new Promise((resolve, reject) => {
     const title = item.name
     const id = item.id
     let {url, label} = getUrlFromTitle(title)
     getLeoJSON(url, id).then(data => {
       let text = data.textItems
-      context.commit('ADDTEXT', {text})
       data = data.data
-      const name = '' // TODO: need to add logic here for replacing node option
-      if (name) {
-        item.name = data.name
+      context.commit('ADDTEXT', {text})
+      if (data.length === 1) {
+        data = data[0]
         item.children = data.children
       } else {
         item.name = label
@@ -136,7 +136,11 @@ function getUrlFromTitle (title) {
   if (isRelative(url)) {
     url = 'static/' + url
   }
-  if (window.lconfig.filename) {
+  let cname = window.lconfig.filename
+  if (cname.indexOf('/') < 0) {
+    cname = ''
+  }
+  if (cname) {
     let u = window.lconfig.filename
     u = chop(u, '#')
     u = chop(u, '?')
