@@ -116,9 +116,14 @@ function loadLeoNode (context, item) {
       data = data.data
       context.commit('ADDTEXT', {text})
       if (data.length === 1) {
+        context.commit('RESET') // content item has not been drawn
+        console.log('RESET')
+        context.dispatch('setCurrentItem', {id})
         data = data[0]
         item.children = data.children
-      } else {
+        item.t = data.t
+        item.name = label // convert to regular title so won't reload
+      } else { // TODO: trunkless load logic in complete
         item.name = label
         item.children = data
       }
