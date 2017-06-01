@@ -24,6 +24,7 @@
     "vue-awesome": "^2.2.3",
     "vue-grid-layout": "^2.1.6",
     "vue-router": "^2.2.0",
+    "vue-youtube-embed": "^2.1.1",
     "vued3tree": "0.0.2",
     "vuex": "^2.2.1",
     "vuex-router-sync": "^4.1.2"
