@@ -26,8 +26,9 @@
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20170304173237.1"><vh>HTML</vh>
+<v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
+<v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
@@ -194,7 +195,8 @@ An example of HTML content.
   &lt;p&gt;
     &lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png'&gt;
   &lt;/p&gt;
-&lt;/div&gt;  </t>
+&lt;/div&gt;
+ </t>
 <t tx="josephorr.20170304174421.1">Content items in Leo outlines can be plain text.</t>
 <t tx="josephorr.20170304174436.1">This is just some regular text.
 
@@ -584,5 +586,17 @@ The subtree isn't loaded until you click on the node, so outlines can contain ma
 </t>
 <t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
 <t tx="josephorr.20170511084727.1"></t>
+<t tx="josephorr.20170602132642.1">@language html
+
+&lt;p&gt;
+The &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue Youtube component&lt;/a&gt; can be added to your html.
+&lt;/p&gt;
+&lt;p&gt;
+In the future additional  Vue components will be supported.
+&lt;/p&gt;
+
+&lt;div&gt;
+&lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
+&lt;/div&gt;  </t>
 </tnodes>
 </leo_file>

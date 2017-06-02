@@ -11,8 +11,8 @@
                 name="chevron-left"></icon>
         </div>
       </div>
-      <div class="right-cpane"
-           v-html="currentItemContent">
+      <div class="right-cpane">
+        <component :is="dynComponent" v-bind="$props"/>
       </div>
       <div id="rhandle"
            class="handle">
@@ -96,6 +96,13 @@ export default {
     },
     hasPrev () {
       return this.$store.state.currentItem.prev
+    },
+    dynComponent () {
+      const template = this.currentItemContent ? this.currentItemContent : '<div>nothing here yet</div>'
+      return {
+        template, // use content as template for this component
+        props: this.$options.props // re-use current props definitions
+      }
     }
   },
   watch: {
