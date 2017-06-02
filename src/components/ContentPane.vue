@@ -98,7 +98,7 @@ export default {
       return this.$store.state.currentItem.prev
     },
     dynComponent () {
-      const template = this.currentItemContent ? this.currentItemContent : '<div>nothing here yet</div>'
+      const template = this.currentItemContent ? this.currentItemContent : '<div> </div>'
       return {
         template, // use content as template for this component
         props: this.$options.props // re-use current props definitions
