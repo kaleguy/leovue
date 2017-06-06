@@ -51,8 +51,13 @@ function parseQueryString (config, url) {
     }
   }
   var hash = window.location.hash
-  if (!hash || hash.length < 3) {
-    window.location.hash = 't/1'
+  var baseMode = 't'
+  if (window.lconfig.baseMode) { baseMode = window.lconfig.baseMode }
+  if (hash.length < 3) {
+    window.location.hash = baseMode + '/1'
+  }
+  if (!hash) {
+    window.location.hash = '#' + baseMode + '/1'
   }
   return urlParams
 }

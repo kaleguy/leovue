@@ -28,6 +28,8 @@
 </v>
 <v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
+</v>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
@@ -67,14 +69,6 @@
 &lt;div style="border:1px solid #fff; width:300px;margin-left:auto;margin-right:auto;"&gt;
 &lt;svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387 220"&gt;
 &lt;defs&gt;
-&lt;style&gt;
-H1 {margin: 0}
-.cls-1{font-size:122px;stroke:#000;stroke-width:14px;}
-.cls-1,.cls-2{stroke-miterlimit:10;font-family:Verdana;} 
-.cls-2{font-size:40px;fill:#f2f2f2;stroke:gray;}
-.cls-3{letter-spacing:-0.02em;}
-.cls-4{letter-spacing:-0.02em;}
-&lt;/style&gt;
 &lt;/defs&gt;
 &lt;title&gt;leoviewer&lt;/title&gt;
 &lt;text class="cls-1" transform="translate(25 156.2)"&gt;LEO&lt;/text&gt;
@@ -91,7 +85,7 @@ Leo has features that make it particularly suitable for documenting code and oth
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined document like the one you are viewing. Content nodes can contain
-text, html, markdown or code. Content nodes can also point to other documents or websites.
+text, html, markdown or code. Content nodes can also point to other documents or websites. 
 &lt;p&gt;
 Using Leo Viewer, users can view your document as a normal webpage without having to install Leo.
 &lt;/p&gt;
@@ -384,7 +378,7 @@ content as a web page.
 The content you are reading was created in Leo. If you're reading this on the Leo Viewer
 site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is currently at version 0.9.6 
+Leo Viewer is currently at version 0.9.7 
 
 Leo Viewer 0.9.x only is tested in Chrome and may not display correctly in other browsers.
 
@@ -398,13 +392,14 @@ Current features include:
 * Graphic trees
 * Load Leo files into subtrees
 * Nested menu mode
+* Content nodes can have Vue.js components
 
 Features planned for version 1:
-* Keyboard support
 * Search
 * SEO version (static html files)
+* Keyboard support
 
-Leo Viewer is an Open Source project. The code is licensed under the MIT license.</t>
+Leo Viewer is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
 
@@ -589,14 +584,27 @@ The subtree isn't loaded until you click on the node, so outlines can contain ma
 <t tx="josephorr.20170602132642.1">@language html
 
 &lt;p&gt;
-The &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue Youtube component&lt;/a&gt; can be added to your html.
-&lt;/p&gt;
-&lt;p&gt;
-In the future additional  Vue components will be supported.
+An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js Youtube component&lt;/a&gt; add to an HTML content node.
 &lt;/p&gt;
 
 &lt;div&gt;
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
 &lt;/div&gt;  </t>
+<t tx="josephorr.20170605184042.1">@language md
+
+Leoviewer is written in Vue.js, and Vue components can be added to content panes.
+
+At the moment only the Vue.js Youtube component is supported by default. However, you can
+easily add any other Vue.js component by declaring it in the main.js file like so:
+
+```
+import VueYouTubeEmbed from 'vue-youtube-embed'
+Vue.use(VueYouTubeEmbed)
+```
+
+In your html content, add the Vue.js Youtube component like so:
+```
+&lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
+```</t>
 </tnodes>
 </leo_file>

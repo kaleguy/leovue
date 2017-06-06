@@ -3,8 +3,8 @@
     <div class="holder">
       <div class="header" v-if="config.showHeader">
         <span v-if="config.showAppTitle" class="app-title">Leo Viewer</span>
-        <span v-if="config.docTitle">: </span>
-        <span class="doc-title">{{ config.doctitle }}</span>
+        <span v-if="config.showAppTitle && config.docTitle">: </span>
+        <span class="doc-title">{{ config.docTitle }}</span>
         <div @click="toggle" class="icon icon-button">
           <icon class="icon" name="bars"></icon>
         </div>
@@ -25,10 +25,10 @@
       </div>
     </div>
     <div id="menu" class="menu">
-    <div class="menu-header">View Type</div>
+      <div class="menu-header">View Type</div>
       <div  v-for="v in viewTypes"
             class="menu-item"
-           @click="setViewType(v.type)">
+            @click="setViewType(v.type)">
         <div class="icon-box">
           <icon
             name="check"
@@ -38,6 +38,7 @@
         <div class="menu-label">{{v.name}}</div>
       </div>
       <div class="menu-separator"></div>
+      <div class="menu-footer"><a href="http://kaleguy.github.io/leoviewer">Leoviewer</a></div>
     </div>
   </div>
 </template>
@@ -103,8 +104,9 @@
           {name: 'Nested Menu', type: 'n'},
           {name: 'Movable Panes', type: 'w'}
         ]
-        if (this.config.hideDendrogram) {
-          viewTypes.splice(3, 1)
+        console.log(this.config)
+        if (this.config.viewTypes) {
+          return this.config.viewTypes
         }
         return viewTypes
       },
@@ -201,4 +203,13 @@
   color: #333
 .doc-title
   font-weight: bold
+.menu-footer
+  color: #fff
+  position: absolute
+  bottom: 60px
+  width: 100%
+  text-align: center
+  A
+    color: #fff
+    text-decoration: none
 </style>

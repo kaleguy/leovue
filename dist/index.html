@@ -3,8 +3,16 @@
       showHeader: true,
       docTitle: '',
       filename: 'docs',
-      firstNodeAsTitle: false,
-      hideDendrogram: true
+      firstNodeAsTitle: true,
+      baseMode: 't',
+      viewTypes: [
+        {name: 'Outline', type: 't'},
+        {name: 'Inline', type: 'a'},
+        {name: 'Graphic Tree', type: 'd'},
+        {name: 'Dendrogram', type: 'z'},
+        {name: 'Nested Menu', type: 'n'},
+        {name: 'Movable Panes', type: 'w'}
+      ]
     }</script><script src=static/leo.xsl type=leo/xsl-template><xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <xsl:template match="/">
@@ -27,4 +35,4 @@
 
       <xsl:template match="text()"/>
 
-    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script src=static/defiant.js></script><script src=static/vue-grid-layout.js></script><link href=static/css/app.c2b508cca10795ad14013aa32e950cf4.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.3fa1870283b51435218c.js></script><script type=text/javascript src=static/js/vendor.b2dbb2aad89a62e4fe78.js></script><script type=text/javascript src=static/js/app.8bba789aad8b3cb6f582.js></script></body></html>
+    </xsl:stylesheet></script><meta charset=utf-8><title>leoviewer</title><base href=/ ><script src=static/defiant.js></script><script src=static/vue-grid-layout.js></script><link href=static/css/app.css?3e23dd7ccf7d74b8eb52212bc608d0cd rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.js?4b3a85099637b6916ad8></script><script type=text/javascript src=static/js/vendor.js?9824e730579d17d88438></script><script type=text/javascript src=static/js/app.js?c4ed5dc1b7898df177d2></script></body></html>

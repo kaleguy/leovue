@@ -11,8 +11,16 @@
       showHeader: true,
       docTitle: '',
       filename: 'docs',
-      firstNodeAsTitle: false,
-      hideDendrogram: true
+      firstNodeAsTitle: true,
+      baseMode: 't',
+      viewTypes: [
+        {name: 'Outline', type: 't'},
+        {name: 'Inline', type: 'a'},
+        {name: 'Graphic Tree', type: 'd'},
+        {name: 'Dendrogram', type: 'z'},
+        {name: 'Nested Menu', type: 'n'},
+        {name: 'Movable Panes', type: 'w'}
+      ]
     }
   </script>
   <script src="static/leo.xsl" type="leo/xsl-template">
