@@ -10,6 +10,8 @@ import NestedViewer from '@/components/NestedViewer'
 
 Vue.use(Router)
 
+const baseMode = window.lconfig.baseMode
+
 // TODO: add not found link
 export default new Router({
   routes: [
@@ -79,6 +81,10 @@ export default new Router({
     {
       path: '/settings',
       component: Settings
+    },
+    {
+      path: '*',
+      redirect: '/' + baseMode + '/1'
     }
   ]
 })
