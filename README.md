@@ -11,9 +11,9 @@ Use the Leo Editor to create tree-based websites.
 
 [Live Site with Docs](https://kaleguy.github.io/leoviewer/)
 
-[Plays of William Shakespeare](examples/shakespeare/)
+[Plays of William Shakespeare](https://kaleguy.github.io/leoviewer/examples/shakespeare/)
 
-[Plays of William Shakespeare, version with nested menus and no header](examples/shakespeare_n/)
+[Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leoviewer/examples/shakespeare_n/)
 
 ## Build Setup
 
