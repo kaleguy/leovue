@@ -10,7 +10,8 @@ import NestedViewer from '@/components/NestedViewer'
 
 Vue.use(Router)
 
-const baseMode = window.lconfig.baseMode
+let baseMode = window.lconfig.baseMode
+if (!baseMode) { baseMode = 't' }
 
 // TODO: add not found link
 export default new Router({
