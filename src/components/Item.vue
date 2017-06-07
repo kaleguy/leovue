@@ -78,7 +78,6 @@ export default {
       // TODO: this is slow, need to refactor, possibly replace defiant wth parent pointer on item
       // if (this.isOpen) { return ' open' }
       if (!this.isOpen) { return }
-      console.log('sibling')
       const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
       const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
       let siblings = nextSiblings.concat(prevSiblings)
@@ -241,7 +240,7 @@ $contentBorderColor: #ccc
   font-weight: bold
 .active
   background: #81ff00
-  max-width: 762px
+  max-width: 772px
 .activeb
   background: #81ff00
   font-weight: bold

@@ -59,49 +59,11 @@
   }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   .accordionviewer{
     height: 100%
   }
-
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
+  .accordionviewer UL {
     list-style-type: none;
-    padding: 0;
   }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  .panes-container {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .center-pane {
-    width: 900px;
-    background: #fff;
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .panes-container {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-  p {
-    line-height:1.3em;
-  }
-
 </style>

@@ -48,9 +48,7 @@
     },
     computed: {
       xshowRightButton: function () {
-        console.log('wtf')
         if (!leftPane) { return }
-        console.log('left')
         return !leftPane.style.width
       }
     },

@@ -104,7 +104,6 @@
           {name: 'Nested Menu', type: 'n'},
           {name: 'Movable Panes', type: 'w'}
         ]
-        console.log(this.config)
         if (this.config.viewTypes) {
           return this.config.viewTypes
         }

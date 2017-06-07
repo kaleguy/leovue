@@ -292,7 +292,6 @@ export default {
         }
       }
       if (this.type !== 'tree') {
-        console.log('here')
         allNodes.each(d => this.expand(d, false))
         this.initialized = false
       }
@@ -315,6 +314,13 @@ export default {
         this.collapse(d)
       } else {
         this.expand(d)
+        const title = d.data.name
+        if (/^\[/.test(title)) {
+          console.log('REDRAW')
+          this.redraw()
+        } else {
+          console.log('RR', title)
+        }
         // this.redraw()
       }
     },
