@@ -62,6 +62,12 @@
 </v>
 </v>
 </v>
+<v t="josephorr.20170608085513.1" a="E"><vh>Recovered Nodes</vh>
+<v t="josephorr.20170608085513.2"><vh>Recovered node "&lt;&lt; script &gt;&gt;" from TreeViewer.vue</vh>
+<v t="josephorr.20170608085513.3"><vh>old:&lt;&lt; script &gt;&gt;</vh></v>
+<v t="josephorr.20170608085513.4"><vh>new:&lt;&lt; script &gt;&gt;</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
@@ -287,7 +293,6 @@ For other environments, see the:
     computed: {
 
       top () {
-        // console.log(this.$store.state.leodata)
         if (this.$store.state.leodata.length &gt; 1) { return false }
         if (window.lconfig.firstNodeAsTitle === false) { return false }
         return true
@@ -606,5 +611,124 @@ In your html content, add the Vue.js Youtube component like so:
 ```
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
 ```</t>
+<t tx="josephorr.20170608085513.1"></t>
+<t tx="josephorr.20170608085513.2">(uncached) josephorr.20170328225718.1
+Diff...
+  @language javascript
+  
+  &lt;script&gt;
+    import Item from './Item'
+    import ContentPane from './ContentPane'
+    import SplitPane from './SplitPane'
+  
+    let target = {el: true, v: null}
+    export default {
+      name: 'treeviewer',
+      components: {
+        item: Item,
+        contentpane: ContentPane,
+        splitpane: SplitPane
+      },
+      data: function () {
+        return {
+          target: target
+        }
+      },
+      computed: {
+  
+        top () {
++         // console.log(this.$store.state.leodata)
+          if (this.$store.state.leodata.length &gt; 1) { return false }
+          if (window.lconfig.firstNodeAsTitle === false) { return false }
+          return true
+        },
+        data () {
+          return this.$store.state.leodata
+        },
+        text () {
+          return this.$store.state.leotext
+        }
+      }
+  
+    }
+  &lt;/script&gt;
+</t>
+<t tx="josephorr.20170608085513.3">@language javascript
+
+&lt;script&gt;
+  import Item from './Item'
+  import ContentPane from './ContentPane'
+  import SplitPane from './SplitPane'
+
+  let target = {el: true, v: null}
+  export default {
+    name: 'treeviewer',
+    components: {
+      item: Item,
+      contentpane: ContentPane,
+      splitpane: SplitPane
+    },
+    data: function () {
+      return {
+        target: target
+      }
+    },
+    computed: {
+
+      top () {
+        // console.log(this.$store.state.leodata)
+        if (this.$store.state.leodata.length &gt; 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
+        return true
+      },
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
+      }
+    }
+
+  }
+&lt;/script&gt;
+</t>
+<t tx="josephorr.20170608085513.4">@language javascript
+
+&lt;script&gt;
+  import Item from './Item'
+  import ContentPane from './ContentPane'
+  import SplitPane from './SplitPane'
+
+  let target = {el: true, v: null}
+  export default {
+    name: 'treeviewer',
+    components: {
+      item: Item,
+      contentpane: ContentPane,
+      splitpane: SplitPane
+    },
+    data: function () {
+      return {
+        target: target
+      }
+    },
+    computed: {
+
+      top () {
+        if (this.$store.state.leodata.length &gt; 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
+        return true
+      },
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
+      }
+    }
+
+  }
+&lt;/script&gt;
+</t>
 </tnodes>
 </leo_file>

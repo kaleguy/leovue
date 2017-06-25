@@ -12,6 +12,7 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+
 import VueYouTubeEmbed from 'vue-youtube-embed'
 Vue.use(VueYouTubeEmbed)
 
