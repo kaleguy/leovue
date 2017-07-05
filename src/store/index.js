@@ -90,6 +90,9 @@ function isRelative (url) {
   if (/^http/.test(url)) {
     return false
   }
+  if (/^\//.test(url)) {
+  //  return false
+  }
   if (window.lconfig.filename) {
     return false
   }
@@ -139,7 +142,7 @@ function getUrlFromTitle (title) {
   let label = match[1]
   if (!url) { return null }
   if (isRelative(url)) {
-    url = 'static/' + url
+    // url = 'static/' + url
   }
   let cname = window.lconfig.filename
   if (cname.indexOf('/') < 0) {

@@ -36,10 +36,10 @@
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
+<v t="josephorr.20170304103722.1" a="E"><vh>Markdown</vh>
 <v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 <v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
-<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](example.md)</vh></v>
+<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](static/example.md)</vh></v>
 </v>
 <v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
@@ -60,12 +60,6 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-</v>
-</v>
-<v t="josephorr.20170608085513.1" a="E"><vh>Recovered Nodes</vh>
-<v t="josephorr.20170608085513.2"><vh>Recovered node "&lt;&lt; script &gt;&gt;" from TreeViewer.vue</vh>
-<v t="josephorr.20170608085513.3"><vh>old:&lt;&lt; script &gt;&gt;</vh></v>
-<v t="josephorr.20170608085513.4"><vh>new:&lt;&lt; script &gt;&gt;</vh></v>
 </v>
 </v>
 </vnodes>
@@ -611,124 +605,5 @@ In your html content, add the Vue.js Youtube component like so:
 ```
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
 ```</t>
-<t tx="josephorr.20170608085513.1"></t>
-<t tx="josephorr.20170608085513.2">(uncached) josephorr.20170328225718.1
-Diff...
-  @language javascript
-  
-  &lt;script&gt;
-    import Item from './Item'
-    import ContentPane from './ContentPane'
-    import SplitPane from './SplitPane'
-  
-    let target = {el: true, v: null}
-    export default {
-      name: 'treeviewer',
-      components: {
-        item: Item,
-        contentpane: ContentPane,
-        splitpane: SplitPane
-      },
-      data: function () {
-        return {
-          target: target
-        }
-      },
-      computed: {
-  
-        top () {
-+         // console.log(this.$store.state.leodata)
-          if (this.$store.state.leodata.length &gt; 1) { return false }
-          if (window.lconfig.firstNodeAsTitle === false) { return false }
-          return true
-        },
-        data () {
-          return this.$store.state.leodata
-        },
-        text () {
-          return this.$store.state.leotext
-        }
-      }
-  
-    }
-  &lt;/script&gt;
-</t>
-<t tx="josephorr.20170608085513.3">@language javascript
-
-&lt;script&gt;
-  import Item from './Item'
-  import ContentPane from './ContentPane'
-  import SplitPane from './SplitPane'
-
-  let target = {el: true, v: null}
-  export default {
-    name: 'treeviewer',
-    components: {
-      item: Item,
-      contentpane: ContentPane,
-      splitpane: SplitPane
-    },
-    data: function () {
-      return {
-        target: target
-      }
-    },
-    computed: {
-
-      top () {
-        // console.log(this.$store.state.leodata)
-        if (this.$store.state.leodata.length &gt; 1) { return false }
-        if (window.lconfig.firstNodeAsTitle === false) { return false }
-        return true
-      },
-      data () {
-        return this.$store.state.leodata
-      },
-      text () {
-        return this.$store.state.leotext
-      }
-    }
-
-  }
-&lt;/script&gt;
-</t>
-<t tx="josephorr.20170608085513.4">@language javascript
-
-&lt;script&gt;
-  import Item from './Item'
-  import ContentPane from './ContentPane'
-  import SplitPane from './SplitPane'
-
-  let target = {el: true, v: null}
-  export default {
-    name: 'treeviewer',
-    components: {
-      item: Item,
-      contentpane: ContentPane,
-      splitpane: SplitPane
-    },
-    data: function () {
-      return {
-        target: target
-      }
-    },
-    computed: {
-
-      top () {
-        if (this.$store.state.leodata.length &gt; 1) { return false }
-        if (window.lconfig.firstNodeAsTitle === false) { return false }
-        return true
-      },
-      data () {
-        return this.$store.state.leodata
-      },
-      text () {
-        return this.$store.state.leotext
-      }
-    }
-
-  }
-&lt;/script&gt;
-</t>
 </tnodes>
 </leo_file>

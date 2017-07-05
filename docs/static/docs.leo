@@ -36,10 +36,10 @@
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
+<v t="josephorr.20170304103722.1" a="E"><vh>Markdown</vh>
 <v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 <v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
-<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](example.md)</vh></v>
+<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](static/example.md)</vh></v>
 </v>
 <v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
@@ -287,7 +287,6 @@ For other environments, see the:
     computed: {
 
       top () {
-        // console.log(this.$store.state.leodata)
         if (this.$store.state.leodata.length &gt; 1) { return false }
         if (window.lconfig.firstNodeAsTitle === false) { return false }
         return true
