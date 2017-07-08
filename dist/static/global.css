@@ -1,3 +1,8 @@
+.section-title {
+  font-size: 140px;
+  font-weight: bold;
+}
+
 /* title */
 H1 {margin: 0}
 .cls-1{font-size:122px;stroke:#000;stroke-width:14px;}
