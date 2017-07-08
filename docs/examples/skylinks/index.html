@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <base href="/examples/skylinks/">
-  <link href=../../static/global.css rel=stylesheet>
+  <base href="/leoviewer/examples/skylinks/">
     <script>
       window.lconfig = {
         showAppTitle: false,
@@ -21,34 +20,14 @@
         ]
       }
     </script>
-  <script type=leo/xsl-template>
-    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-      <xsl:template match="/">
-        <xsl:apply-templates/>
-      </xsl:template>
-      <xsl:template match="v">
-        <xsl:variable name="t" select="@t"/>
-        <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
-        <xsl:variable name="double_quote">"</xsl:variable>
-        <xsl:variable name="apos">'</xsl:variable>
-        {
-        "id":  <xsl:value-of select="@id"/>,
-        "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
-        "name":"<xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/>",
-        "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
-        }
-        <xsl:if test="position()!=last()">,</xsl:if>
-      </xsl:template>
-      <xsl:template match="text()"/>
-    </xsl:stylesheet>
-  </script><meta charset=utf-8><title>leoviewer</title>
-  <script src=../../static/defiant.js></script>
-  <script src=../../static/vue-grid-layout.js></script>
-  <link href=../../static/css/app.css?c2b508cca10795ad14013aa32e950cf4 rel=stylesheet></head>
+    <meta charset=utf-8>
+    <title>leoviewer</title>
+    <link href=../../static/css/app.css?c2b508cca10795ad14013aa32e950cf4 rel=stylesheet>
+  </head>
     <body>
       <div id=app></div>
-      <script type=text/javascript src=../../static/js/manifest.js?962dd01d9bfbf304e992></script>
-      <script type=text/javascript src=../../static/js/vendor.js?b2dbb2aad89a62e4fe78></script>
-      <script type=text/javascript src=../../static/js/app.js?8bba789aad8b3cb6f582></script>
+        <script type=text/javascript src=../../static/js/manifest.js?962dd01d9bfbf304e992></script>
+        <script type=text/javascript src=../../static/js/vendor.js?b2dbb2aad89a62e4fe78></script>
+        <script type=text/javascript src=../../static/js/app.js?8bba789aad8b3cb6f582></script>
     </body>
 </html>
