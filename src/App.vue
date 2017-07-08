@@ -58,7 +58,7 @@
 
     },
     mounted () {
-      let filename = 'docs'
+      let filename = 'static/docs'
       if (window.lconfig.filename) {
         filename = window.lconfig.filename
       }
@@ -70,6 +70,8 @@
 </script>
 
 <style lang="sass">
+
+@import './assets/global.sass'
 
 $mycolor: #2c3e50
 

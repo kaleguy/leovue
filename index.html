@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans" rel="stylesheet">
-  -->
   <base href="/">
-  <link href="static/global.css" rel="stylesheet">
   <script>
     window.lconfig = {
       showAppTitle: true,
       showHeader: true,
       docTitle: '',
-      filename: 'docs',
+      filename: 'static/docs',
       firstNodeAsTitle: true,
       baseMode: 't',
       viewTypes: [
@@ -24,32 +20,6 @@
       ]
     }
   </script>
-  <script src="static/leo.xsl" type="leo/xsl-template">
-    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-      <xsl:template match="/">
-        <xsl:apply-templates/>
-      </xsl:template>
-
-      <xsl:template match="v">
-        <xsl:variable name="t" select="@t"/>
-        <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
-        <xsl:variable name="double_quote">"</xsl:variable>
-        <xsl:variable name="apos">'</xsl:variable>
-        {
-        "id":  <xsl:value-of select="@id"/>,
-        "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
-        "name":"<xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/>",
-        "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
-        }
-        <xsl:if test="position()!=last()">,</xsl:if>
-      </xsl:template>
-
-      <xsl:template match="text()"/>
-
-    </xsl:stylesheet>
-  </script>
-
   <meta charset="utf-8">
   <title>leoviewer</title>
   <script src="static/defiant.js"></script>

@@ -1,6 +1,32 @@
 import escape from 'escape-html'
 import axios from 'axios'
 
+const xslTemplate = `
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:template match="/">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="v">
+    <xsl:variable name="t" select="@t"/>
+    <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
+    <xsl:variable name="double_quote">"</xsl:variable>
+    <xsl:variable name="apos">'</xsl:variable>
+    {
+    "id":  <xsl:value-of select="@id"/>,
+    "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
+    "name":"<xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/>",
+    "children":[<xsl:apply-templates select="$nodeSet[1]/v"/>]
+    }
+    <xsl:if test="position()!=last()">,</xsl:if>
+  </xsl:template>
+
+  <xsl:template match="text()"/>
+
+</xsl:stylesheet>
+`
+
 function loadDoc (filename) {
   console.log('loading file:', filename)
   var p = new Promise((resolve, reject) => {
@@ -97,6 +123,7 @@ function transformLeoXML (xmlString, startId) {
       }
       vnodes[i].setAttribute('id', '"' +pid + '"')
     }
+    /*
     var scripts = document.getElementsByTagName('script'),
         str     = '',
         i       = 0,
@@ -104,7 +131,8 @@ function transformLeoXML (xmlString, startId) {
     for (; i<il; i++) {
       if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
     }
-    const xsl = oParser.parseFromString(str, 'text/xml')
+    */
+    const xsl = oParser.parseFromString(xslTemplate, 'text/xml')
     const xsltProcessor = new XSLTProcessor()
     xsltProcessor.importStylesheet(xsl)
     const resultDocument = xsltProcessor.transformToFragment(xml, document)
