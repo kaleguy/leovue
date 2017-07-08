@@ -2,4 +2,6 @@ build/*.js
 config/*.js
 src/services/leo.js
 src/util.js
+src/lib/defiant.js
+src/lib/vue-grid-layout.js
 src/vue-grid-layout.js

@@ -12,6 +12,10 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+import './lib/vue-grid-layout'
+const Defiant = require('./lib/defiant')
+console.log(Defiant)
+
 // import './assets/global.css'
 // const purecss = require('css-loader!./assets/global.css')
 

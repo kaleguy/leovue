@@ -53,6 +53,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /defiant/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/vue-awesome')]
       },
