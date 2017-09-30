@@ -144,6 +144,10 @@ function getUrlFromTitle (title) {
   if (isRelative(url)) {
     // url = 'static/' + url
   }
+  // absolute urls require no further processing
+  if (/^http/.test(url)) {
+    return {url, label}
+  }
   let cname = window.lconfig.filename
   if (cname.indexOf('/') < 0) {
     cname = ''
@@ -160,7 +164,7 @@ function getUrlFromTitle (title) {
 
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title)
-  console.log(label)
+  console.log('LABEL:', label)
   if (!url) { return }
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))

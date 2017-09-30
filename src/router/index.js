@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Dashboard from '@/components/Dashboard'
 import TreeViewer from '@/components/TreeViewer'
 import D3Viewer from '@/components/D3Viewer'
-import DbViewer from '@/components/DbViewer'
+// import DbViewer from '@/components/DbViewer'
 import Settings from '@/components/Settings'
 import AccordionViewer from '@/components/AccordionViewer'
 import NestedViewer from '@/components/NestedViewer'
@@ -70,6 +70,7 @@ export default new Router({
         component: D3Viewer
       }]
     },
+/*
     {
       path: '/w/:id',
       component: Dashboard,
@@ -79,6 +80,7 @@ export default new Router({
         component: DbViewer
       }]
     },
+*/
     {
       path: '/settings',
       component: Settings
