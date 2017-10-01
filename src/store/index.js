@@ -87,7 +87,7 @@ function getRoots (acc, p, startIndex) {
  */
 function isRelative (url) {
   var ok = true
-  if (/^http/.test(url)) {
+  if (/^[xh]ttp/.test(url)) { // xhttp is to indicate xframe header should be ignored
     return false
   }
   if (/^\//.test(url)) {
@@ -145,7 +145,7 @@ function getUrlFromTitle (title) {
     // url = 'static/' + url
   }
   // absolute urls require no further processing
-  if (/^http/.test(url)) {
+  if (/^[xh]ttp/.test(url)) {
     return {url, label}
   }
   let cname = window.lconfig.filename
@@ -161,7 +161,6 @@ function getUrlFromTitle (title) {
   }
   return {url, label}
 }
-
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title)
   console.log('LABEL:', label)
