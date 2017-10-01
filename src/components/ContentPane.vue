@@ -59,7 +59,9 @@ window.loadURL = function (src) {
   document.body.appendChild(script)
 };
 function overrideXFrame() {
-  window.iframe = document.getElementsByTagName('iframe')[0];
+  var iframe = document.getElementsByTagName('iframe')[0];
+  if (!iframe){ return }
+  window.iframe = iframe
   var url = iframe.src;
   console.log('URL', url)
   if (!/^\s?xttp/.test(url)) { return }
