@@ -12,6 +12,9 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+import VueInstant from 'vue-instant/dist/vue-instant.common'
+Vue.use(VueInstant)
+
 // import './lib/vue-grid-layout'
 const Defiant = require('./lib/defiant')
 console.log(Defiant)

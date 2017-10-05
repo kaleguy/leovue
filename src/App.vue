@@ -72,6 +72,7 @@
 <style lang="sass">
 
 @import './assets/global.sass'
+@import './assets/vue-instant.css'
 
 $mycolor: #2c3e50
 

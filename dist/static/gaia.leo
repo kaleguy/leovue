@@ -14,7 +14,7 @@
 <v t="josephorr.20170930115737.1"><vh>New Swing</vh></v>
 <v t="josephorr.20170930115801.1"><vh>Popping</vh></v>
 </v>
-<v t="josephorr.20170624183423.1" a="E"><vh>Violin</vh>
+<v t="josephorr.20170624183423.1"><vh>Violin</vh>
 <v t="josephorr.20170930120304.1" a="E"><vh>Performances</vh>
 <v t="josephorr.20170930120450.1"><vh>Classical</vh></v>
 <v t="josephorr.20170930120455.1"><vh>Bluegrass</vh></v>
@@ -26,6 +26,9 @@
 </v>
 <v t="josephorr.20170930123137.1"><vh>Math</vh>
 <v t="josephorr.20170930123144.1"><vh>[Squares](https://kaleguy.github.com/squares)</vh></v>
+</v>
+<v t="josephorr.20171002192140.1" a="E"><vh>Sites</vh>
+<v t="josephorr.20171002192145.1"><vh>[PBS Kids](xttps://pbskids.org/games/)</vh></v>
 </v>
 </v>
 </vnodes>
@@ -61,5 +64,7 @@ Gaia's Web Library
 <t tx="josephorr.20170930122535.1"></t>
 <t tx="josephorr.20170930123137.1"></t>
 <t tx="josephorr.20170930123144.1"></t>
+<t tx="josephorr.20171002192140.1"></t>
+<t tx="josephorr.20171002192145.1"></t>
 </tnodes>
 </leo_file>

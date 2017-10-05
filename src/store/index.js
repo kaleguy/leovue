@@ -10,6 +10,19 @@ const md = require('markdown-it')({
   typographer: true
 })
 const hljs = require('highlight.js')
+const lunr = require('lunr')
+
+var idx = lunr(function () {
+  this.field('title')
+  this.field('body')
+  this.add({
+    title: 'Twelfth-Night',
+    body: 'If music be the food of love, play on: Give me excess of it…',
+    author: 'William Shakespeare',
+    id: '1'
+  })
+})
+console.log(idx)
 
 Vue.use(Vuex)
 
@@ -145,7 +158,7 @@ function getUrlFromTitle (title) {
     // url = 'static/' + url
   }
   // absolute urls require no further processing
-  if (/^[xh]ttp/.test(url)) {
+  if (/^[xh]ttp/.test(url)) { // xttp will result in http call via proxy
     return {url, label}
   }
   let cname = window.lconfig.filename

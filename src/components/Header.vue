@@ -21,6 +21,8 @@
                 :class="{disabled: noBack}"
                 name="arrow-left"></icon>
         </div>
+        <div class="hshim"></div>
+        <searchbar class="searchbar"></searchbar>
         <div class="vshim"></div>
       </div>
     </div>
@@ -44,8 +46,12 @@
 </template>
 
 <script>
+  import SearchBar from './SearchBar'
   export default {
     name: 'appheader',
+    components: {
+      searchbar: SearchBar
+    },
     data () {
       return {
         menu: false
@@ -174,10 +180,18 @@
   background: #eee
   font-weight: normal
   padding: 2px
+  padding-top: 6px
   padding-left: 6px
   color: #333
   border-bottom: 1px solid #ddd
-  height: 21px
+  height: 24px
+.search
+  float: right
+  font-family: Avenir
+  margin-right: 10px
+  font-size: 14px
+  margin-top: -1px
+  display: none
 .icon
   float: right
   padding: 0
@@ -211,4 +225,8 @@
   A
     color: #fff
     text-decoration: none
+.searchbar
+  position: absolute
+  right: 80px
+  top: 0
 </style>
