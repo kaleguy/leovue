@@ -1,0 +1,43 @@
+<html>
+<header>
+
+</header>
+<body>
+<div class='content'><pre>
+&lt;script&gt;
+  import Item from './Item'
+  import ContentPane from './ContentPane'
+  import SplitPane from './SplitPane'
+
+  let target = {el: true, v: null}
+  export default {
+    name: 'treeviewer',
+    components: {
+      item: Item,
+      contentpane: ContentPane,
+      splitpane: SplitPane
+    },
+    data: function () {
+      return {
+        target: target
+      }
+    },
+    computed: {
+
+      top () {
+        if (this.$store.state.leodata.length &gt; 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
+        return true
+      },
+      data () {
+        return this.$store.state.leodata
+      },
+      text () {
+        return this.$store.state.leotext
+      }
+    }
+
+  }
+&lt;/script&gt;
+</pre></div></body>
+</html>

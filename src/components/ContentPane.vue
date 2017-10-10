@@ -73,6 +73,7 @@ function overrideXFrame() {
   // iframe.src = window.url
   loadURL(window.url)
 }
+// end functions for dealing with x-frame headers
 
 export default {
   name: 'contentpane',

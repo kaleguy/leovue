@@ -1,0 +1,25 @@
+<html>
+<header>
+
+</header>
+<body>
+<div class='content'><pre><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"treeviewer"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">splitpane</span> <span class="hljs-attr">leftPaneStyle</span>=<span class="hljs-string">"width:360px"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"itemdata in data"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">item</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span>
+          <span class="hljs-attr">:model</span>=<span class="hljs-string">"itemdata"</span>
+          <span class="hljs-attr">:top</span>=<span class="hljs-string">"top"</span>
+          <span class="hljs-attr">:textItems</span>=<span class="hljs-string">"text"</span>
+          <span class="hljs-attr">:targetEl</span>=<span class="hljs-string">"target.el"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">item</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">contentpane</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">contentpane</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">splitpane</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</pre></div></body>
+</html>

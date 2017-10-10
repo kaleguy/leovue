@@ -1,3 +1,10 @@
+const hljs = require('highlight.js')
+const md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true
+})
+
 function replaceRelUrls (html, base) {
   const parser = new DOMParser()
   const doc = parser.parseFromString(html, 'text/html')
@@ -59,6 +66,45 @@ function parseQueryString (config, url) {
   }
   return urlParams
 }
+/**
+ * return formatted text, e.g. markdown or html
+ * @param text {string}
+ * @returns {string}
+ */
+function formatText (text) {
+  if (!text) { return '' }
+  let language = getLanguage(text)
+
+  text = text.replace(/<</g, '\u00AB')
+  text = text.replace(/>>/g, '\u00BB')
+
+  // just plain text
+  if (!language) {
+    language = 'plaintext'
+  }
+  // remove directives from first line
+  if (/^\s*?@/.test(text)) {
+    text = removeFirstLine(text)
+  }
+  switch (language) {
+    case 'plaintext':
+      text = `<div class="text">${text}</div>`
+      break
+    case 'md':
+      text = md.render(text)
+      break
+    case 'html':
+      break
+    default:
+      const mu = hljs.highlight(language, text)
+      text = mu.value
+      // text = `<pre><code class="${language}">${text}</code></pre>`
+      text = `<pre>${text}</pre>`
+  }
+  text = `<div class='content'>${text}</div>`
+  return text
+}
+
 // parseQueryString(window.location.href)
 
 module.exports = {
@@ -66,7 +112,8 @@ module.exports = {
   getFileExtension,
   getLanguage,
   removeFirstLine,
-  parseQueryString
+  parseQueryString,
+  formatText
 }
 
 /*

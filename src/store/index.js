@@ -9,7 +9,6 @@ const md = require('markdown-it')({
   linkify: true,
   typographer: true
 })
-const hljs = require('highlight.js')
 const lunr = require('lunr')
 
 var idx = lunr(function () {
@@ -26,45 +25,6 @@ console.log(idx)
 
 Vue.use(Vuex)
 
-/**
- * return formatted text, e.g. markdown or html
- * @param text {string}
- * @returns {string}
- */
-function formatText (text) {
-  if (!text) { return '' }
-  let language = util.getLanguage(text)
-
-  text = text.replace(/<</g, '\u00AB')
-  text = text.replace(/>>/g, '\u00BB')
-
-  // just plain text
-  if (!language) {
-    language = 'plaintext'
-  }
-  // remove directives from first line
-  if (/^\s*?@/.test(text)) {
-    text = util.removeFirstLine(text)
-  }
-  switch (language) {
-    case 'plaintext':
-      text = `<div class="text">${text}</div>`
-      break
-    case 'md':
-      text = md.render(text)
-      break
-    case 'html':
-      break
-    default:
-      const mu = hljs.highlight(language, text)
-      text = mu.value
-      // text = `<pre><code class="${language}">${text}</code></pre>`
-      text = `<pre>${text}</pre>`
-  }
-  text = `<div class='content'>${text}</div>`
-  return text
-}
-
 function showText (context, text, id) {
   context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
@@ -73,7 +33,7 @@ function showText (context, text, id) {
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
-  text = formatText(text)
+  text = util.formatText(text)
   // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
   // hash of all content items
@@ -187,7 +147,7 @@ function showSite (context, title, id) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        html = formatText(html)
+        html = util.formatText(html)
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
@@ -222,7 +182,7 @@ function setSiteItem (context, title, id) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        html = formatText(html)
+        html = util.formatText(html)
         const newItem = {
           id: id,
           t: html
@@ -445,7 +405,7 @@ export default new Vuex.Store({
             setSiteItem(context, item.name, item.id)
           } else {
             let text = context.state.leotext[item.t]
-            text = formatText(text)
+            text = util.formatText(text)
             const newItem = {
               t: text,
               id: id

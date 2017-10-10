@@ -1,4 +1,4 @@
-import escape from 'escape-html'
+// import escape from 'escape-html'
 import axios from 'axios'
 
 const xslTemplate = `
@@ -26,19 +26,20 @@ const xslTemplate = `
 
 </xsl:stylesheet>
 `
-function transform (xml, xslString, transformer) {
-
+function transform (xml, xslString, transformer, serializer) {
   function serverTransform(resolve, reject) {
+    const xmlString = new serializer().serializeToString(xml)
     const config = {
       xslt: xslString,
-      source: xml,
+      source: xmlString,
       result: String,
       props: {
         indent: 'yes'
       }
     }
-    xslt4node.transform(config, (err, result) => {
+    transformer.transform(config, (err, result) => {
       if (err) {
+        console.log('ERROR:', err)
         return reject()
       }
       resolve(result)
@@ -56,7 +57,7 @@ function transform (xml, xslString, transformer) {
 
   const p = new Promise((resolve, reject) => {
     if (transformer) {
-      return serverTranform(resolve, reject)
+      return serverTransform(resolve, reject)
     } else {
       return clientTransform(resolve, reject)
     }
@@ -130,58 +131,58 @@ function getLeoJSON (filename, id) {
   })
   return p
 }
-function transformLeoXML (xmlString, startId, parser, transformer) {
+function transformLeoXML2XML(xmlString, startId, parser) {
+  const p = new Promise((resolve, reject) => {
+
+    let oParser = null
+    if (parser) {
+      oParser = new parser()
+    } else {
+      oParser = new DOMParser()
+    }
+    const xml = oParser.parseFromString(xmlString, 'text/xml')
+    const tnodes = xml.getElementsByTagName('t')
+    let textItems = {}
+    for (let i = 0; i < tnodes.length; i++) {
+      let el = tnodes[i]
+      let elText = el.textContent
+      let a = el.getAttribute('tx')
+      a = a.replace(/\./g, '_')
+      a = a.replace(/^.*?_/, '')
+      if (startId) {
+        a = startId + '-' + a
+      }
+      if (
+        (/^@language /.test(elText)) &&
+        (!/^@language html/.test(elText)) &&
+        (!/^@language md/.test(elText))
+      ) {
+        // elText = escape(elText)
+      }
+      textItems[a] = elText
+      // h
+    }
+    const vnodes = xml.getElementsByTagName('v')
+    let pid
+    for (let i = 0; i < vnodes.length; i++) {
+      pid = i + 1
+      if (startId) {
+        pid = startId + '-' + pid
+      }
+      vnodes[i].setAttribute('id', '"' + pid + '"')
+    }
+    resolve({xml, textItems})
+
+  })
+  return p
+}
+function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
 
     const p = new Promise((resolve, reject) => {
-
-      let oParser = null
-      if (parser) {
-        oParser = new parser()
-      } else {
-        oParser = new DOMParser()
-      }
-      const xml = oParser.parseFromString(xmlString, 'text/xml')
-      const tnodes = xml.getElementsByTagName('t')
-      let textItems = {}
-      for (let i = 0; i < tnodes.length; i++) {
-        let el = tnodes[i]
-        let elText = el.textContent
-        let a = el.getAttribute('tx')
-        a = a.replace(/\./g, '_')
-        a = a.replace(/^.*?_/, '')
-        if (startId) {
-          a = startId + '-' + a
-        }
-        if (
-          (/^@language /.test(elText)) &&
-          (!/^@language html/.test(elText)) &&
-          (!/^@language md/.test(elText))
-        ) {
-          // elText = escape(elText)
-        }
-        textItems[a] = elText
-        // h
-      }
-      const vnodes = xml.getElementsByTagName('v')
-      let pid
-      for (let i = 0; i < vnodes.length; i++) {
-        pid = i + 1
-        if (startId) {
-          pid = startId + '-' + pid
-        }
-        vnodes[i].setAttribute('id', '"' + pid + '"')
-      }
-      /*
-      var scripts = document.getElementsByTagName('script'),
-          str     = '',
-          i       = 0,
-          il      = scripts.length;
-      for (; i<il; i++) {
-        if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
-      }
-      */
-
-      transform(xml, xslTemplate, transformer).then(data => {
+      const xml = data.xml
+      const textItems = data.textItems
+      transform(xml, xslTemplate, transformer, serializer).then(data => {
+        data = data.replace(/<\?xml version="1\.0" encoding="UTF-8"\?>/,'')
         data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
         data = '[' + data + ']'
         data = JSON.parse(data)
@@ -195,5 +196,9 @@ function transformLeoXML (xmlString, startId, parser, transformer) {
     })
     return p
 }
+function transformLeoXML(xmlString, startId, parser, transformer, serializer){
+  return transformLeoXML2XML(xmlString, startId, parser)
+    .then(xml => transformLeoXML2JSON(xml, startId, parser, transformer, serializer))
+}
 
-export {getLeoJSON, transformLeoXML}
+export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
