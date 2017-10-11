@@ -5,7 +5,7 @@
 
 Viewer for Leo Files.
 
-Use the Leo Editor to create tree-based websites.
+Use the [Leo Editor](http://leoeditor.com) to create tree-based websites.
 
 ![Leo Viewer Screencast](leoviewermovie.gif)
 
