@@ -19,7 +19,7 @@ const xslString = `
     <xsl:variable name="t" select="@t"/>
     <div>
       <xsl:attribute name="href">
-         <xsl:value-of select="$t"/>
+         <xsl:value-of select="translate(@t,'.','_')"/>
       </xsl:attribute>
       <xsl:value-of select="./vh"/>
     </div>
@@ -34,7 +34,7 @@ const xslString = `
 `
 
 leo.transformLeoXML2XML(xml, 'L1', DOMParser)
-  .then(xmlString => createMenu(xmlString, xslString))
+  .then(data => createMenu(data, xslString))
 
 function createMenu(data, xslString) {
   const xmlString = new XMLSerializer().serializeToString(data.xml)
@@ -50,6 +50,7 @@ function createMenu(data, xslString) {
     if (err) {
       console.log('ERROR:', err)
     }
+    // add cleantext logic
     writeMenuFile(result)
   })
 }
@@ -63,7 +64,6 @@ function writeFiles(data) {
   const textItems = data.textItems
   _.each(textItems, (v, k) => {
     v = util.formatText(v)
-    console.log(v)
     v = header + v + footer
     let filename = k + '.html'
     fs.writeFileSync('static/site/' + filename, v)

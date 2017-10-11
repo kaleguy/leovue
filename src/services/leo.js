@@ -63,9 +63,7 @@ function transform (xml, xslString, transformer, serializer) {
     }
   })
   return p
-
 }
-
 
 function loadDoc (filename) {
   console.log('loading file:', filename)
@@ -94,7 +92,7 @@ function cleanText(data, startId){
   for (let i = 0; i < children.length; i++){
     cleanText(children[i], startId)
   }
-  data.t = data.t.replace(/^.*?_/,'')
+  data.t = data.t.replace(/^.*?_/,'') // remove file uid
   if (startId) {
     data.t = startId + '-' + data.t + ''
   }
@@ -177,18 +175,20 @@ function transformLeoXML2XML(xmlString, startId, parser) {
   return p
 }
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
-
     const p = new Promise((resolve, reject) => {
       const xml = data.xml
+      // const xmlString = new serializer().serializeToString(xml)
+      // new serializer().serializeToString(xml)
+      const xmlString = new XMLSerializer().serializeToString(xml)
       const textItems = data.textItems
-      transform(xml, xslTemplate, transformer, serializer).then(data => {
-        data = data.replace(/<\?xml version="1\.0" encoding="UTF-8"\?>/,'')
-        data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
-        data = '[' + data + ']'
-        data = JSON.parse(data)
-        data.forEach(d => cleanText(d, startId))
+      transform(xml, xslTemplate, transformer, serializer).then(jsdata => {
+        jsdata = jsdata.replace(/<\?xml version="1\.0" encoding="UTF-8"\?>/,'')
+        jsdata = jsdata.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+        jsdata = '[' + jsdata + ']'
+        jsdata = JSON.parse(jsdata)
+        jsdata.forEach(d => cleanText(d, startId))
         const xdata = {}
-        xdata.data = data
+        xdata.data = jsdata
         xdata.textItems = textItems
         return (xdata)
       }).then(data => resolve(data))
@@ -198,7 +198,7 @@ function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
 }
 function transformLeoXML(xmlString, startId, parser, transformer, serializer){
   return transformLeoXML2XML(xmlString, startId, parser)
-    .then(xml => transformLeoXML2JSON(xml, startId, parser, transformer, serializer))
+    .then(data => transformLeoXML2JSON(data, startId, parser, transformer, serializer))
 }
 
 export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
