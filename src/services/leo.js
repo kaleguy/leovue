@@ -177,9 +177,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
     const p = new Promise((resolve, reject) => {
       const xml = data.xml
-      // const xmlString = new serializer().serializeToString(xml)
-      // new serializer().serializeToString(xml)
-      const xmlString = new XMLSerializer().serializeToString(xml)
       const textItems = data.textItems
       transform(xml, xslTemplate, transformer, serializer).then(jsdata => {
         jsdata = jsdata.replace(/<\?xml version="1\.0" encoding="UTF-8"\?>/,'')

@@ -7,6 +7,8 @@ const xslt4node = require('xslt4node')
 const _ = require('lodash')
 const xml = fs.readFileSync('static/docs.leo', 'utf8')
 const util = require('../src/util')
+const header = fs.readFileSync('./build/build-static-header.html')
+const footer = fs.readFileSync('./build/build-static-footer.html')
 
 const xslString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -17,11 +19,13 @@ const xslString = `
 
   <xsl:template match="v">
     <xsl:variable name="t" select="@t"/>
-    <div>
+    <div class="level{count(ancestor::*)}">
+      <a>
       <xsl:attribute name="href">
-         <xsl:value-of select="translate(@t,'.','_')"/>
+         <xsl:value-of select="@t"/>
       </xsl:attribute>
       <xsl:value-of select="./vh"/>
+      </a>
     </div>
     <xsl:text>
     </xsl:text>
@@ -32,11 +36,22 @@ const xslString = `
 
 </xsl:stylesheet>
 `
+const startId = 'L1'
 
-leo.transformLeoXML2XML(xml, 'L1', DOMParser)
+leo.transformLeoXML2XML(xml, startId, DOMParser)
   .then(data => createMenu(data, xslString))
 
 function createMenu(data, xslString) {
+  const xml = data.xml
+  const vnodes = xml.getElementsByTagName('v')
+  let a = null
+  for (let i = 0; i < vnodes.length; i++) {
+    a = vnodes[i].getAttribute("t")
+    a = a.replace(/\./g, '_')
+    a = a.replace(/^.*?_/, '')
+    a = startId + '-' + a + '.html'
+    vnodes[i].setAttribute('t', a)
+  }
   const xmlString = new XMLSerializer().serializeToString(data.xml)
   const config = {
     xslt: xslString,
@@ -50,17 +65,15 @@ function createMenu(data, xslString) {
     if (err) {
       console.log('ERROR:', err)
     }
-    // add cleantext logic
+    result = header + result + footer
     writeMenuFile(result)
   })
 }
 
-// leo.transformLeoXML(xml, 'L1', DOMParser, xslt4node, XMLSerializer)
-//  .then(data => writeFiles(data))
+leo.transformLeoXML(xml, 'L1', DOMParser, xslt4node, XMLSerializer)
+  .then(data => writeFiles(data))
 
 function writeFiles(data) {
-  const header = fs.readFileSync('./build/build-static-header.html')
-  const footer = fs.readFileSync('./build/build-static-footer.html')
   const textItems = data.textItems
   _.each(textItems, (v, k) => {
     v = util.formatText(v)
