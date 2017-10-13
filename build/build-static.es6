@@ -45,11 +45,25 @@ function createMenu(data, xslString) {
   const xml = data.xml
   const vnodes = xml.getElementsByTagName('v')
   let a = null
+  let t = null
   for (let i = 0; i < vnodes.length; i++) {
     a = vnodes[i].getAttribute("t")
     a = a.replace(/\./g, '_')
     a = a.replace(/^.*?_/, '')
     a = startId + '-' + a + '.html'
+    try {
+      let title = vnodes[i].getElementsByTagName('vh')[0].lastChild
+      let data = title.data
+      const re = /^\[(.*?)\]\((.*?)\)$/
+      const match = re.exec(data)
+      if (match) {
+        data = match[1]
+        a = match[2]
+      }
+      title.data = data
+    } catch (e) {
+
+    }
     vnodes[i].setAttribute('t', a)
   }
   const xmlString = new XMLSerializer().serializeToString(data.xml)
