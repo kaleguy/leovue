@@ -13,7 +13,8 @@
                    @key-right="keyRight"
                    @clear="clear"
                    @escape="escape"
-                   :show-autocomplete="true" :autofocus="false"
+                   :show-autocomplete="true"
+                   :autofocus="false"
                    :suggestions="suggestions"
                    name="customName"
                    placeholder=""
@@ -23,13 +24,14 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  // import axios from 'axios'
+  import VueInstant from './VueInstant'
   export default {
     name: 'searchbar',
     data () {
       return {
         value: '',
-        suggestionAttribute: 'original_title',
+        suggestionAttribute: 'title',
         suggestions: [],
         selectedEvent: ''
       }
@@ -64,17 +66,23 @@
       },
       changed: function () {
         var that = this
-        this.suggestions = []
+        var items = this.$store.state.idx.search('features')
+        items.forEach(item => {
+          that.suggestions.push({title: item.ref})
+        })
+        /*
         axios.get('https://api.themoviedb.org/3/search/movie?api_key=342d3061b70d2747a1e159ae9a7e9a36&query=' + this.value)
           .then(function (response) {
+            console.log('R', response.data.results)
             response.data.results.forEach(function (a) {
               that.suggestions.push(a)
             })
           })
+        */
       }
     },
     components: {
-      // 'vue-instant': VueInstant.VueInstant
+      'vue-instant': VueInstant
     }
   }
 </script>

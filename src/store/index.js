@@ -23,6 +23,35 @@ var idx = lunr(function () {
 })
 console.log(idx)
 
+function loadIndex (titles, text) {
+  const docs = loadIndexItems([], titles, text)
+  // return indexItems
+  var idx = lunr(function () {
+    this.ref('name')
+    this.field('text')
+
+    docs.forEach(function (doc) {
+      this.add(doc)
+    }, this)
+  })
+  return idx
+}
+function loadIndexItems (arr, titles, textItems) {
+  if (!titles) {
+    return arr
+  }
+  titles.forEach(item => {
+    arr.push(
+      {
+        name: item.name,
+        text: textItems[item.t]
+      }
+    )
+    loadIndexItems(arr, item.children, textItems)
+  })
+  return arr
+}
+
 Vue.use(Vuex)
 
 function showText (context, text, id) {
@@ -294,12 +323,14 @@ export default new Vuex.Store({
     history: [0],
     historyIndex: 0,
     iframeHTML: '',
-    contentItemsUpdateCount: 0
+    contentItemsUpdateCount: 0,
+    idx: null
   },
   mutations: {
     LEO (state, o) {
       state.leodata = o.data
       state.leotext = o.text
+      state.idx = loadIndex(o.data, o.text)
       state.filename = o.filename
     },
     ADDTEXT (state, o) {
