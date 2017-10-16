@@ -25,6 +25,7 @@
 
 <script>
   // import axios from 'axios'
+  import _ from 'lodash'
   import VueInstant from './VueInstant'
   export default {
     name: 'searchbar',
@@ -65,10 +66,19 @@
         this.selectedEvent = 'escape'
       },
       changed: function () {
+        this.suggestions = []
         var that = this
-        var items = this.$store.state.idx.search('features')
+        if (this.value.length < 2) { return }
+        const state = this.$store.state
+        const items = state.idx.search(this.value)
         items.forEach(item => {
-          that.suggestions.push({title: item.ref})
+          let doc = _.find(state.idxDocs, d => d.id === item.ref)
+          that.suggestions.push(
+            {
+              title: doc.name,
+              text: doc.text,
+              id: doc.id
+            })
         })
         /*
         axios.get('https://api.themoviedb.org/3/search/movie?api_key=342d3061b70d2747a1e159ae9a7e9a36&query=' + this.value)

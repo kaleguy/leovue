@@ -11,38 +11,24 @@ const md = require('markdown-it')({
 })
 const lunr = require('lunr')
 
-var idx = lunr(function () {
-  this.field('title')
-  this.field('body')
-  this.add({
-    title: 'Twelfth-Night',
-    body: 'If music be the food of love, play on: Give me excess of it…',
-    author: 'William Shakespeare',
-    id: '1'
-  })
-})
-console.log(idx)
-
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
   // return indexItems
   var idx = lunr(function () {
-    this.ref('name')
+    this.ref('id')
     this.field('text')
-
     docs.forEach(function (doc) {
       this.add(doc)
     }, this)
   })
-  return idx
+  return {idx, docs}
 }
 function loadIndexItems (arr, titles, textItems) {
-  if (!titles) {
-    return arr
-  }
+  if (!titles) { return arr }
   titles.forEach(item => {
     arr.push(
       {
+        id: item.id,
         name: item.name,
         text: textItems[item.t]
       }
@@ -330,7 +316,9 @@ export default new Vuex.Store({
     LEO (state, o) {
       state.leodata = o.data
       state.leotext = o.text
-      state.idx = loadIndex(o.data, o.text)
+      const c = loadIndex(o.data, o.text)
+      state.idx = c.idx
+      state.idxDocs = c.docs
       state.filename = o.filename
     },
     ADDTEXT (state, o) {
@@ -449,6 +437,20 @@ export default new Vuex.Store({
     },
     setCurrentItem (context, o) {
       const id = o.id
+
+      // open parent nodes
+      const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
+      if (!openItems) { return }
+      if (!openItems.length) { return }
+      const openItemIds = openItems.reduce((acc, o) => {
+        if (o.id) { acc.push(o.id + '') }
+        return acc
+      }, [])
+      openItemIds.push(id + '')
+      context.commit('OPEN_ITEMS', {openItemIds})
+      const ids = openItemIds
+      context.dispatch('setContentItems', {ids})
+
       context.commit('CURRENT_ITEM', {id})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
       if (item) {
@@ -463,7 +465,7 @@ export default new Vuex.Store({
             setSiteItem(context, item.name, id)
           }
         } else {
-          console.log(item.t)
+          // console.log(item.t)
           showText(context, context.state.leotext[item.t], id)
         }
       }

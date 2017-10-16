@@ -3,11 +3,17 @@
     <div class="main">
       <form novalidate="novalidate" onsubmit="return false;" :class="getFormClass">
         <div role="search" :class="getClassWrapper">
-          <input type="search" name="search" :placeholder="getPlaceholder"
+          <input type="search" name="search"
+                 :placeholder="getPlaceholder"
                  autocomplete="off" required="required"
                  :class="getClassInputPlaceholder" tabindex="-1">
-          <input :disabled="disabled" @click="emitClickInput" @keyup='changeText' v-model='textVal' type="search" :name="name" placeholder="" autocomplete="off" required="required" :class="getClassInput" :autofocus="autofocus">
-          <button @click="emitClickButton" type="submit" :class="getClassSubmit" tabindex="-1">
+          <input :disabled="disabled" @click="emitClickInput"
+                 @keyup='changeText' v-model='textVal'
+                 type="search"
+                 :name="name" placeholder="" autocomplete="off"
+                 required="required" :class="getClassInput" :autofocus="autofocus">
+          <button @click="emitClickButton" type="submit"
+                  :class="getClassSubmit" tabindex="-1">
             <svg role="img" aria-label="Search">
               <use xmlns:xlink="http://www.w3.org/1999/xlink"
                    :xlink:href="getSVGSearch"></use>
@@ -26,7 +32,16 @@
                  class="vue-instant__suggestions">
                  <li @click="selectedAction(index)"
                      v-for="(item, index) in similiarData"
-                     :class="getClassHighlighted(index)"{{item[suggestionAttribute]}}</li>
+                     :class="getClassHighlighted(index)">
+                   <div>
+                   {{item[suggestionAttribute]}}
+                   </div>
+                   <!--
+                   <div class="found-text">
+                   {{item.text}}
+                   </div>
+                   -->
+                 </li>
              </ul>
           </div>
         </div>
@@ -69,7 +84,7 @@
       },
       'minMatch': {
         type: Number,
-        default: 2
+        default: 1
       },
       'name': {
         type: String,
@@ -185,9 +200,12 @@
     },
     computed: {
       getPlaceholder () {
+        return ''
+/*
         if (this.inputChanged || this.textValIsEmpty()) {
           return this.placeholderVal
         }
+*/
       },
       modeIsFull () {
         return this.showAutocomplete
@@ -264,6 +282,8 @@
           this.incrementHighlightedIndex()
           this.setPlaceholderAndTextVal()
           this.emitKeyDown()
+          const s = this.selectedSuggest
+          this.$store.dispatch('setCurrentItem', {id: s.id})
         } else {
           this.clearHighlightedIndex()
         }
@@ -273,6 +293,8 @@
           this.decrementHighlightedIndex()
           this.setPlaceholderAndTextVal()
           this.emitKeyUp()
+          const s = this.selectedSuggest
+          this.$store.dispatch('setCurrentItem', {id: s.id})
         } else {
           this.clearHighlightedIndex()
         }
@@ -289,10 +311,12 @@
         this.clearPlaceholder()
         this.clearSimilarData()
         this.emitSelected()
+        const s = this.selectedSuggest
+        this.$store.dispatch('setCurrentItem', {id: s.id})
+        this.reset()
       },
       addRegister (o) {
         if (this.isSimilar(o) && this.textValIsNotEmpty()) {
-          console.log('x')
           this.addSuggestion(o)
         }
       },
@@ -394,14 +418,7 @@
             this.placeholderVal === '' && this.highlightedIndex !== 0
       },
       isSimilar (o) {
-        return true
-/*
-        if (o) {
-          return o[this.suggestionAttribute]
-                  .toLowerCase()
-                  .startsWith(this.textVal.toLowerCase())
-        }
-*/
+        if (o) { return true }
       },
       isSameType (o) {
         return o.name === this.type
@@ -499,7 +516,11 @@
         this.$emit('click-button', this.textVal)
       },
       emitEnter () {
+        const s = this.selectedSuggest
+        this.$store.dispatch('setCurrentItem', {id: s.id})
         this.$emit('enter')
+        this.reset()
+        this.setBlur()
       },
       emitKeyUp () {
         this.$emit('key-up')
@@ -517,7 +538,9 @@
         this.$emit('escape')
       },
       emitSelected () {
-        this.$emit('selected', this.selectedSuggest)
+        const s = this.selectedSuggest
+        if (!s) { return }
+        this.$emit('selected', s)
       }
     }
 }
@@ -1291,6 +1314,11 @@
   height: 11px;
 }
 
+.found-text {
+  background: #fff;
+  color: #000;
+}
+
 .sbx-twitter__input:valid ~ .sbx-twitter__reset {
   display: block;
   -webkit-animation-name: sbx-reset-in;
@@ -1526,19 +1554,18 @@
   }
 }
 
-
 .vue-instant__suggestions {
      position: absolute;
-     left: 0;
-     top: 110%;
+     left: -20px;
+     top: 99%;
      margin: 0;
      background-color: #fff;
      border: 1px solid #D3DCE6;
-     width: 100%;
+     width: 120%;
      padding: 6px 0;
      z-index: 10;
      border-radius: 2px;
-     max-height: 280px;
+     max-height: 1280px;
      box-sizing: border-box;
      overflow: auto;
      box-shadow: 0 0 6px 0 rgba(0,0,0,.04), 0 2px 4px 0 rgba(0,0,0,.12);

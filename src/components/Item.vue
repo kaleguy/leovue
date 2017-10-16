@@ -136,7 +136,7 @@ export default {
       const easing = 'linear'
       this.reset = false // TODO: remove
       // toggle the open/close state of the item
-      let openItemIds = this.$store.state.openItemIds.slice(0)
+      let openItemIds = this.$store.state.openItemIds.slice(0) // clone openid array
       if (!this.isOpen) {
         openItemIds.push(this.model.id)
       } else {
