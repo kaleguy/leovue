@@ -9,6 +9,13 @@ const xml = fs.readFileSync('static/docs.leo', 'utf8')
 const util = require('../src/util')
 const header = fs.readFileSync('./build/build-static-header.html')
 const footer = fs.readFileSync('./build/build-static-footer.html')
+const indexHTML = fs.readFileSync('./dist/index.html')
+
+const re = /window.config\s?=(.*?)<\//
+const match = re.exec(index.HTML)
+console.log(match[0])
+process.exit(0)
+
 
 const xslString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -93,11 +100,11 @@ function writeFiles(data) {
     v = util.formatText(v)
     v = header + v + footer
     let filename = k + '.html'
-    fs.writeFileSync('static/site/' + filename, v)
+    fs.writeFileSync('dist/static/site/' + filename, v)
   })
   process.exit(0)
 }
 
 function writeMenuFile(data) {
-  fs.writeFileSync('static/site/index.html', data)
+  fs.writeFileSync('dist/static/site/index.html', data)
 }
