@@ -1,0 +1,60 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><pre>
+Client = <span class="hljs-built_in">require</span> <span class="hljs-string">'ftp'</span>
+async = <span class="hljs-built_in">require</span> <span class="hljs-string">'async'</span>
+remote_path =<span class="hljs-string">'/public_html/targetfolder/'</span>
+local_path = <span class="hljs-string">'data/'</span>
+fs = <span class="hljs-built_in">require</span> <span class="hljs-string">'fs'</span>
+
+c = <span class="hljs-keyword">new</span> Client()
+c.<span class="hljs-literal">on</span> <span class="hljs-string">'ready'</span>, <span class="hljs-function"><span class="hljs-params">()</span>-&gt;</span>
+  c.list remote_path, <span class="hljs-function"><span class="hljs-params">(err, list)</span>-&gt;</span>
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">then</span> <span class="hljs-built_in">console</span>.error <span class="hljs-string">'list'</span>, err
+    file_funcs = (getFileFunc file.name <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> list)
+    async.series file_funcs, <span class="hljs-function"><span class="hljs-params">()</span>-&gt;</span> c.end()
+<span class="hljs-function">
+<span class="hljs-title">getFileFunc</span> = <span class="hljs-params">(name)</span> -&gt;</span>
+  (callback)-&gt;
+    <span class="hljs-keyword">if</span> <span class="hljs-regexp">/csv$/</span>.test name
+      c.get remote_path + name, <span class="hljs-function"><span class="hljs-params">(err, stream)</span>-&gt;</span>
+        <span class="hljs-built_in">console</span>.log <span class="hljs-string">'Getting '</span>, name
+        <span class="hljs-keyword">if</span> err <span class="hljs-keyword">then</span> <span class="hljs-built_in">console</span>.log <span class="hljs-string">'get'</span>, err
+        stream.once <span class="hljs-string">'close'</span>, callback
+        stream.pipe fs.createWriteStream local_path + name
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-built_in">console</span>.log <span class="hljs-string">"Skipping"</span>, name
+      callback()
+
+c.connect(
+  host : <span class="hljs-string">'ftp.targethost.com'</span>
+  user : <span class="hljs-string">'username@domain.com'</span>
+  password : <span class="hljs-string">'password'</span>
+)</pre></div>
+</body>
+</html>

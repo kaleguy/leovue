@@ -5,16 +5,23 @@ const DOMParser = require('xmldom').DOMParser;
 const XMLSerializer = require('xmldom').XMLSerializer;
 const xslt4node = require('xslt4node')
 const _ = require('lodash')
-const xml = fs.readFileSync('static/docs.leo', 'utf8')
 const util = require('../src/util')
 const header = fs.readFileSync('./build/build-static-header.html')
 const footer = fs.readFileSync('./build/build-static-footer.html')
-const indexHTML = fs.readFileSync('./dist/index.html')
+const indexHTML = fs.readFileSync('./index.html', 'utf8')
 
-const re = /window.config\s?=(.*?)<\//
-const match = re.exec(index.HTML)
-console.log(match[0])
-process.exit(0)
+const re = /window\.lconfig\s?=(.*?)<\/script>/
+const indexHTMLn = indexHTML.replace(/[\n\r]/g, '')
+const match = re.exec(indexHTMLn)
+const config = JSON.parse(match[1])
+
+const xml = fs.readFileSync(config.filename + '.leo', 'utf8')
+
+// create site folder
+const dir = './dist/static/site'
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir)
+}
 
 
 const xslString = `

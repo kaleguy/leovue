@@ -9,8 +9,8 @@ import circular from './circular-layout'
 import {compareString, anchorTodx, toPromise, findInParents} from './d3-utils'
 
 import * as d3 from 'd3'
-import * as d3Hierarchy from 'd3-hierarchy'
-Object.assign(d3, d3Hierarchy)
+// import * as d3Hierarchy from 'd3-hierarchy'
+// Object.assign(d3, d3Hierarchy)
 
 function mapMany (arr, mapper) {
   return arr.reduce(function (prev, curr) {

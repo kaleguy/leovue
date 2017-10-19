@@ -212,7 +212,7 @@ $contentBorderColor: #ccc
   margin-right: -10px
 .icon-bracket
   display:inline-block
-  height: 100%
+  height: 26px
   vertical-align: middle
   padding-bottom: 8px
   padding-left: 0

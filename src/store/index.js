@@ -438,7 +438,7 @@ export default new Vuex.Store({
     setCurrentItem (context, o) {
       const id = o.id
 
-      // open parent nodes
+      // open parent nodes, close others
       const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
       if (!openItems) { return }
       if (!openItems.length) { return }

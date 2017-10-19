@@ -1,16 +1,69 @@
-<!DOCTYPE html><html><head><base href=/ ><script>window.lconfig = {
-      showAppTitle: true,
-      showHeader: true,
-      docTitle: '',
-      filename: 'static/docs',
-      firstNodeAsTitle: true,
-      baseMode: 't',
-      viewTypes: [
-        {name: 'Outline', type: 't'},
-        {name: 'Inline', type: 'a'},
-        {name: 'Graphic Tree', type: 'd'},
-        {name: 'Dendrogram', type: 'z'},
-        {name: 'Nested Menu', type: 'n'} //,
-//        {name: 'Movable Panes', type: 'w'}
-      ]
-    }</script><meta charset=utf-8><title>leoviewer</title><link href=static/css/app.css?ec68f26c6e4cdfdaa144bd92f177730a rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.js?83176a8117d627c66301></script><script type=text/javascript src=static/js/vendor.js?8fd653ea8885c897010d></script><script type=text/javascript src=static/js/app.js?b960469d5184c5d7effc></script></body></html>
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <!DOC"type" html>
+  <html>
+  <head>
+    <base href="/">
+    <script>
+      window.lconfig = {
+        "showAppTitle": true,
+        "showHeader": true,
+        "docTitle": "",
+        "filename": "static/docs",
+        "firstNodeAsTitle": true,
+        "baseMode": "t",
+        "viewTypes": [
+          {"name": "Outline", "type": "t"},
+          {"name": "Inline", "type": "a"},
+          {"name": "Graphic Tree", "type": "d"},
+          {"name": "Dendrogram", "type": "z"},
+          {"name": "Nested Menu", "type": "n"}
+        ]
+      }
+    </script>
+    <meta charset="utf-8">
+    <title>leoviewer</title>
+  <link href="static/css/app.css?ec68f26c6e4cdfdaa144bd92f177730a" rel="stylesheet"></head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="static/js/manifest.js?83176a8117d627c66301"></script><script type="text/javascript" src="static/js/vendor.js?8fd653ea8885c897010d"></sc  ript><script type="text/javascript" src="static/js/app.js?b960469d5184c5d7effc"></script></body>
+  </html>
+  
+  - htmlparser.js:235 new HTMLParser
+    [leoviewer]/[html-minifier]/src/htmlparser.js:235:13
+  
+  - htmlminifier.js:955 minify
+    [leoviewer]/[html-minifier]/src/htmlminifier.js:955:3
+  
+  - htmlminifier.js:1308 exports.minify
+    [leoviewer]/[html-minifier]/src/htmlminifier.js:1308:10
+  
+  - index.js:297 
+    [leoviewer]/[html-webpack-plugin]/index.js:297:16
+  
+  - util.js:16 tryCatcher
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:512 Promise._settlePromiseFromHandler
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/promise.js:512:31
+  
+  - promise.js:569 Promise._settlePromise
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/promise.js:569:18
+  
+  - promise.js:614 Promise._settlePromise0
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/promise.js:614:10
+  
+  - promise.js:693 Promise._settlePromises
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/promise.js:693:18
+  
+  - async.js:133 Async._drainQueue
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/async.js:133:16
+  
+  - async.js:143 Async._drainQueues
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues
+    [leoviewer]/[html-webpack-plugin]/[bluebird]/js/release/async.js:17:14
+  
+</pre>
