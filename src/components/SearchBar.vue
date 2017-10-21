@@ -68,8 +68,14 @@
       changed: function () {
         this.suggestions = []
         var that = this
-        if (this.value.length < 2) { return }
+        if (this.value.length < 3) { return }
         const state = this.$store.state
+        /*
+        const terms = query.split(' ');
+        return index.search(this.value).filter(function(items) {
+          return Object.keys(items.matchData.metadata).length == terms.length;
+        });
+        */
         const items = state.idx.search(this.value)
         items.forEach(item => {
           let doc = _.find(state.idxDocs, d => d.id === item.ref)

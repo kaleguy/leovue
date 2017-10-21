@@ -275,7 +275,7 @@
       arrowDownAction () {
         if (this.arrowDownValidation()) {
           this.incrementHighlightedIndex()
-          this.setPlaceholderAndTextVal()
+          // this.setPlaceholderAndTextVal()
           this.emitKeyDown()
           const s = this.selectedSuggest
           this.$store.dispatch('setCurrentItem', {id: s.id})
@@ -288,7 +288,7 @@
       arrowUpAction () {
         if (this.highlightedIndex > 0) {
           this.decrementHighlightedIndex()
-          this.setPlaceholderAndTextVal()
+          // this.setPlaceholderAndTextVal()
           this.emitKeyUp()
           const s = this.selectedSuggest
           this.$store.dispatch('setCurrentItem', {id: s.id})
