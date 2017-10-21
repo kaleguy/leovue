@@ -6,7 +6,7 @@
       <div class="hshim"></div>
       <div><a href="https://github.com/kaleguy/leoviewer">Leo Viewer on Github</a></div>
       <div class="hshim"></div>
-      <div :if="staticSite">
+      <div v-if="staticSite">
         <div><a href="/static/site/index.html">HTML Site</a></div>
       </div>
       <div class="hshim"></div>

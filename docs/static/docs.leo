@@ -418,8 +418,7 @@ The second node in this section has the following title:
 
 [Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
 
-This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and 
-converts it to HTML before displaying it.</t>
+This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
 // import escape from 'escape-html'
 import axios from 'axios'
