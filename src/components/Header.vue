@@ -40,7 +40,18 @@
         <div class="menu-label">{{v.name}}</div>
       </div>
       <div class="menu-separator"></div>
-      <div class="menu-footer"><a href="http://kaleguy.github.io/leoviewer">Leoviewer</a></div>
+      <div class="hshim"></div>
+      <div @click="setAccordion()"
+           class="menu-item">
+        <div class="icon-box">
+          <icon
+            name="check"
+            v-show="accordion"
+            class="check"></icon>
+        </div>
+        <div class="menu-label">Accordion</div>
+      </div>
+      <div class="menu-footer"><a href="/#settings">Leoviewer</a></div>
     </div>
   </div>
 </template>
@@ -58,6 +69,9 @@
       }
     },
     methods: {
+      setAccordion () {
+        this.$store.commit('TOGGLEACCORDION')
+      },
       toggle () {
         const menuEl = document.getElementById('menu')
         if (this.menu) {
@@ -100,6 +114,9 @@
     computed: {
       viewType () {
         return this.$store.state.viewType
+      },
+      accordion () {
+        return this.$store.state.accordion
       },
       viewTypes () {
         let viewTypes = [
@@ -160,7 +177,7 @@
 .menu
   position: fixed
   z-index: 111
-  top: 27px
+  top: 33px
   overflow: hidden
   background: #ccc
   width: 0

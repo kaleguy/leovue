@@ -310,9 +310,29 @@ export default new Vuex.Store({
     historyIndex: 0,
     iframeHTML: '',
     contentItemsUpdateCount: 0,
-    idx: null
+    idx: null,
+    accordion: false,
+    accordionPrev: false,
+    searchFlag: false,
+    selecting: false  // e.g. in search dialog using arrow keys
   },
   mutations: {
+    TOGGLEACCORDION (state) {
+      state.accordion = !state.accordion
+    },
+    SETSEARCHFLAG (state) {
+      state.searchFlag = true
+    },
+    SELECTINGON (state) {
+      if (!state.searchFlag) {
+        state.accordionPrev = state.accordion
+      }
+      state.accordion = true
+    },
+    SELECTINGOFF (state) {
+      state.searchFlag = false
+      state.accordion = state.accordionPrev
+    },
     LEO (state, o) {
       state.leodata = o.data
       state.leotext = o.text
@@ -439,17 +459,19 @@ export default new Vuex.Store({
       const id = o.id
 
       // open parent nodes, close others
-      const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
-      if (!openItems) { return }
-      if (!openItems.length) { return }
-      const openItemIds = openItems.reduce((acc, o) => {
-        if (o.id) { acc.push(o.id + '') }
-        return acc
-      }, [])
-      openItemIds.push(id + '')
-      context.commit('OPEN_ITEMS', {openItemIds})
-      const ids = openItemIds
-      context.dispatch('setContentItems', {ids})
+      if (context.state.accordion) {
+        const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
+        const openItemIds = openItems.reduce((acc, o) => {
+          if (o.id) {
+            acc.push(o.id + '')
+          }
+          return acc
+        }, [])
+        openItemIds.push(id + '')
+        context.commit('OPEN_ITEMS', {openItemIds})
+        const ids = openItemIds
+        context.dispatch('setContentItems', {ids})
+      }
 
       context.commit('CURRENT_ITEM', {id})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')

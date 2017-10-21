@@ -5,7 +5,7 @@
 
 Viewer for Leo Files.
 
-Use the [Leo Editor](http://leoeditor.com) to create tree-based websites.
+Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-based websites.
 
 ![Leo Viewer Screencast](leoviewermovie.gif)
 
@@ -31,6 +31,10 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# build site with static pages for SEO, files will be generated into dist/static/site
+npm run build-static-site
+
 
 ```
 

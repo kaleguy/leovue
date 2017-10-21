@@ -80,15 +80,6 @@
               id: doc.id
             })
         })
-        /*
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=342d3061b70d2747a1e159ae9a7e9a36&query=' + this.value)
-          .then(function (response) {
-            console.log('R', response.data.results)
-            response.data.results.forEach(function (a) {
-              that.suggestions.push(a)
-            })
-          })
-        */
       }
     },
     components: {

@@ -36,11 +36,6 @@
                    <div>
                    {{item[suggestionAttribute]}}
                    </div>
-                   <!--
-                   <div class="found-text">
-                   {{item.text}}
-                   </div>
-                   -->
                  </li>
              </ul>
           </div>
@@ -284,6 +279,8 @@
           this.emitKeyDown()
           const s = this.selectedSuggest
           this.$store.dispatch('setCurrentItem', {id: s.id})
+          this.$store.commit('SELECTINGON')
+          this.$store.commit('SETSEARCHFLAG')
         } else {
           this.clearHighlightedIndex()
         }
@@ -295,6 +292,8 @@
           this.emitKeyUp()
           const s = this.selectedSuggest
           this.$store.dispatch('setCurrentItem', {id: s.id})
+          this.$store.commit('SELECTINGON')
+          this.$store.commit('SETSEARCHFLAG')
         } else {
           this.clearHighlightedIndex()
         }
@@ -521,6 +520,7 @@
         this.$emit('enter')
         this.reset()
         this.setBlur()
+        this.$store.commit('SELECTINGOFF')
       },
       emitKeyUp () {
         this.$emit('key-up')

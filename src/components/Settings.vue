@@ -1,8 +1,10 @@
 <template>
   <div class="settings">
     <div>
- <h1>Settings</h1>
-      <div>Version 0.9.4</div>
+      <h1 style="margin-left:0">Leo Viewer</h1>
+      <div>Version 1.0.0</div>
+      <div class="hshim"></div>
+      <div><a href="https://kaleguy.github.com/leoviewer">Leo Viewer on Github</a></div>
     </div>
   </div>
 </template>

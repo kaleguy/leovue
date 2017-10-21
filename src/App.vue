@@ -101,7 +101,7 @@ H1
   resize: none
   outline: none
   font-size: 16px
-  height: 100%
+  // height: 100%
   white-space: pre-line
   width: 100%
 
