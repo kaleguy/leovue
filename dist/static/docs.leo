@@ -306,7 +306,7 @@ For other environments, see the:
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
 &lt;style lang="sass"&gt;
 .treeviewer
-  margin-left: -10px
+  margin-left: 0
   height: 100%
   ul
     list-style-type: none;
@@ -421,8 +421,72 @@ The second node in this section has the following title:
 This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and 
 converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
-import escape from 'escape-html'
+// import escape from 'escape-html'
 import axios from 'axios'
+
+const xslTemplate = `
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="v"&gt;
+    &lt;xsl:variable name="t" select="@t"/&gt;
+    &lt;xsl:variable name="nodeSet" select="//v[@t=$t]"/&gt;
+    &lt;xsl:variable name="double_quote"&gt;"&lt;/xsl:variable&gt;
+    &lt;xsl:variable name="apos"&gt;'&lt;/xsl:variable&gt;
+    {
+    "id":  &lt;xsl:value-of select="@id"/&gt;,
+    "t":   "&lt;xsl:value-of select="translate(@t,'.','_')"/&gt;",
+    "name":"&lt;xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/&gt;",
+    "children":[&lt;xsl:apply-templates select="$nodeSet[1]/v"/&gt;]
+    }
+    &lt;xsl:if test="position()!=last()"&gt;,&lt;/xsl:if&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="text()"/&gt;
+
+&lt;/xsl:stylesheet&gt;
+`
+function transform (xml, xslString, transformer, serializer) {
+  function serverTransform(resolve, reject) {
+    const xmlString = new serializer().serializeToString(xml)
+    const config = {
+      xslt: xslString,
+      source: xmlString,
+      result: String,
+      props: {
+        indent: 'yes'
+      }
+    }
+    transformer.transform(config, (err, result) =&gt; {
+      if (err) {
+        console.log('ERROR:', err)
+        return reject()
+      }
+      resolve(result)
+    })
+  }
+
+  function clientTransform(resolve, reject) {
+    const oParser = new DOMParser()
+    const xsl = oParser.parseFromString(xslString, 'text/xml')
+    const xsltProcessor = new XSLTProcessor()
+    xsltProcessor.importStylesheet(xsl)
+    const resultDocument = xsltProcessor.transformToFragment(xml, document)
+    resolve(resultDocument.textContent)
+  }
+
+  const p = new Promise((resolve, reject) =&gt; {
+    if (transformer) {
+      return serverTransform(resolve, reject)
+    } else {
+      return clientTransform(resolve, reject)
+    }
+  })
+  return p
+}
 
 function loadDoc (filename) {
   console.log('loading file:', filename)
@@ -451,7 +515,7 @@ function cleanText(data, startId){
   for (let i = 0; i &lt; children.length; i++){
     cleanText(children[i], startId)
   }
-  data.t = data.t.replace(/^.*?_/,'')
+  data.t = data.t.replace(/^.*?_/,'') // remove file uid
   if (startId) {
     data.t = startId + '-' + data.t + ''
   }
@@ -475,37 +539,45 @@ function getLeoJSON (filename, id) {
   }
   var p = new Promise((resolve, reject) =&gt; {
     if (!filename.match(/static/) &amp;&amp; isRelative(filename)) {
-      filename = 'static/' + filename
+      // filename = 'static/' + filename
     }
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
     }
     loadDoc(filename, 'Text')
       .then(xmlString =&gt; {
-        resolve(transformLeoXML(xmlString, id))
+        return transformLeoXML(xmlString, id)
       })
+      .then(data =&gt; {resolve(data)})
   })
   return p
 }
-function transformLeoXML (xmlString, startId) {
-    const oParser = new DOMParser()
+function transformLeoXML2XML(xmlString, startId, parser) {
+  const p = new Promise((resolve, reject) =&gt; {
+
+    let oParser = null
+    if (parser) {
+      oParser = new parser()
+    } else {
+      oParser = new DOMParser()
+    }
     const xml = oParser.parseFromString(xmlString, 'text/xml')
     const tnodes = xml.getElementsByTagName('t')
     let textItems = {}
-    for (let i = 0; i &lt; tnodes.length; i++){
+    for (let i = 0; i &lt; tnodes.length; i++) {
       let el = tnodes[i]
       let elText = el.textContent
       let a = el.getAttribute('tx')
-      a = a.replace(/\./g,'_')
-      a = a.replace(/^.*?_/,'')
+      a = a.replace(/\./g, '_')
+      a = a.replace(/^.*?_/, '')
       if (startId) {
         a = startId + '-' + a
       }
       if (
-         (/^@language /.test(elText)) &amp;&amp;
-         (!/^@language html/.test(elText)) &amp;&amp;
-         (!/^@language md/.test(elText))
-      ){
+        (/^@language /.test(elText)) &amp;&amp;
+        (!/^@language html/.test(elText)) &amp;&amp;
+        (!/^@language md/.test(elText))
+      ) {
         // elText = escape(elText)
       }
       textItems[a] = elText
@@ -518,31 +590,38 @@ function transformLeoXML (xmlString, startId) {
       if (startId) {
         pid = startId + '-' + pid
       }
-      vnodes[i].setAttribute('id', '"' +pid + '"')
+      vnodes[i].setAttribute('id', '"' + pid + '"')
     }
-    var scripts = document.getElementsByTagName('script'),
-        str     = '',
-        i       = 0,
-        il      = scripts.length;
-    for (; i&lt;il; i++) {
-      if (scripts[i].type === 'leo/xsl-template') str += scripts[i].innerHTML;
-    }
-    const xsl = oParser.parseFromString(str, 'text/xml')
-    const xsltProcessor = new XSLTProcessor()
-    xsltProcessor.importStylesheet(xsl)
-    const resultDocument = xsltProcessor.transformToFragment(xml, document)
-    let data = resultDocument.textContent
-    data = data.replace(/,\s?$/, '') // kludge to get rid of trailing comma
-    data = '[' + data + ']'
-    data = JSON.parse(data)
-    data.forEach(d =&gt; cleanText(d, startId))
-    const xdata = {}
-    xdata.data = data
-    xdata.textItems = textItems
-    return xdata
+    resolve({xml, textItems})
+
+  })
+  return p
+}
+function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
+    const p = new Promise((resolve, reject) =&gt; {
+      const xml = data.xml
+      const textItems = data.textItems
+      transform(xml, xslTemplate, transformer, serializer).then(jsdata =&gt; {
+        jsdata = jsdata.replace(/&lt;\?xml version="1\.0" encoding="UTF-8"\?&gt;/,'')
+        jsdata = jsdata.replace(/,\s?$/, '') // kludge to get rid of trailing comma
+        jsdata = '[' + jsdata + ']'
+        jsdata = JSON.parse(jsdata)
+        jsdata.forEach(d =&gt; cleanText(d, startId))
+        const xdata = {}
+        xdata.data = jsdata
+        xdata.textItems = textItems
+        return (xdata)
+      }).then(data =&gt; resolve(data))
+
+    })
+    return p
+}
+function transformLeoXML(xmlString, startId, parser, transformer, serializer){
+  return transformLeoXML2XML(xmlString, startId, parser)
+    .then(data =&gt; transformLeoXML2JSON(data, startId, parser, transformer, serializer))
 }
 
-export {getLeoJSON, transformLeoXML}
+export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
 </t>
 <t tx="josephorr.20170421082838.1">@language md
 
@@ -555,14 +634,15 @@ To tell Leo Viewer to load a different file, either pass a 'filename' parameter 
 [Example of Leo File from URL parameter](/index.html?filename=examples/example)
 
 Currently Available Parameters:
-* filename: name of leo file to load (without .leo extension)
-* doctitle: Title for the Leo file (will show in top menubar)
-* showapptitle: Display 'Leoviewer' in upper left of app
+* **filename**: name of leo file to load (without .leo extension)
+* **doctitle**: Title for the Leo file (will show in top menubar)
+* **showapptitle**: Display 'Leoviewer' in upper left of app
 
 Using parameters on the URL:
 
 ```
-http://www.mysite.com/leoviewer?filename=example&amp;title=My Leo File&amp;showapptitle=false
+http://www.mysite.com/leoviewer?filename=foo&amp;title=MyFile&amp;showapptitle=false
+
 ```
 </t>
 <t tx="josephorr.20170511082833.1">@language md 
