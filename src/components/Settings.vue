@@ -4,7 +4,15 @@
       <h1 style="margin-left:0">Leo Viewer</h1>
       <div>Version 1.0.0</div>
       <div class="hshim"></div>
-      <div><a href="https://kaleguy.github.com/leoviewer">Leo Viewer on Github</a></div>
+      <div><a href="https://github.com/kaleguy/leoviewer">Leo Viewer on Github</a></div>
+      <div class="hshim"></div>
+      <div :if="staticSite">
+        <div><a href="/static/site/index.html">HTML Site</a></div>
+      </div>
+      <div class="hshim"></div>
+      <div>
+        <div class="link" @click="main">Return to Main</div>
+      </div>
     </div>
   </div>
 </template>
@@ -14,6 +22,11 @@
   export default {
     name: 'settings',
     components: {
+    },
+    methods: {
+      main () {
+        this.$router.replace({path: '/'})
+      }
     },
     data () {
       return {
@@ -26,6 +39,12 @@
         } else {
           return this.$route.params.id
         }
+      },
+      staticSite: function () {
+        if (window.lconfig.staticSite) {
+          return true
+        }
+        return false
       }
     },
     watch: {

@@ -8,11 +8,17 @@ const _ = require('lodash')
 const util = require('../src/util')
 const header = fs.readFileSync('./build/build-static-header.html')
 const footer = fs.readFileSync('./build/build-static-footer.html')
-const indexHTML = fs.readFileSync('./index.html', 'utf8')
+let indexHTML = fs.readFileSync('./dist/index.html', 'utf8')
 
-const re = /window\.lconfig\s?=(.*?)<\/script>/
+// mark index.html as having generated static pages
+if (!/"staticSite":/.test(indexHTML)) {
+  indexHTML = indexHTML.replace(/"showAppTitle"/,'"staticSite": "site",\n      "showAppTitle"')
+  fs.writeFileSync('./dist/index.html', indexHTML)
+}
+
+let re = /window\.lconfig\s?=(.*?)<\/script>/
 const indexHTMLn = indexHTML.replace(/[\n\r]/g, '')
-const match = re.exec(indexHTMLn)
+let match = re.exec(indexHTMLn)
 const config = JSON.parse(match[1])
 
 const xml = fs.readFileSync(config.filename + '.leo', 'utf8')

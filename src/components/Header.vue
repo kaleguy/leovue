@@ -51,7 +51,7 @@
         </div>
         <div class="menu-label">Accordion</div>
       </div>
-      <div class="menu-footer"><a href="/#settings">Leoviewer</a></div>
+      <div class="menu-footer" @click="settings"><a href="/#settings">Leoviewer</a></div>
     </div>
   </div>
 </template>
@@ -69,6 +69,9 @@
       }
     },
     methods: {
+      settings () {
+        this.$router.replace({path: '/settings'})
+      },
       setAccordion () {
         this.$store.commit('TOGGLEACCORDION')
       },

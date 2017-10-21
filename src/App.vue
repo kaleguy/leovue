@@ -123,7 +123,9 @@ H1
  -ms-user-select: none
  user-select: none
 
-a
+A, .link
   color: #42b983
+  cursor: pointer
+  text-decoration: underline
 
 </style>
