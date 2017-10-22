@@ -51,7 +51,7 @@
         </div>
         <div class="menu-label">Accordion</div>
       </div>
-      <div class="menu-footer" @click="settings" class="link">Leoviewer</div>
+      <div class="menu-footer" @click="settings">Leoviewer</div>
     </div>
   </div>
 </template>
@@ -242,9 +242,8 @@
   bottom: 60px
   width: 100%
   text-align: center
-  A
-    color: #fff
-    text-decoration: none
+  text-decoration: none
+  cursor: pointer
 .searchbar
   position: absolute
   right: 80px
