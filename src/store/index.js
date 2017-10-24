@@ -429,8 +429,9 @@ export default new Vuex.Store({
       })
     },
     loadLeoFromXML (context, o) {
-      const ldata = transformLeoXML(o.xml)
-      setData(context, ldata, 'dnd', o.route)
+      transformLeoXML(o.xml).then(ldata => {
+        setData(context, ldata, 'dnd', o.route)
+      })
     },
     // Given a list of ids, get the content. Needed for
     // inline mode and displaying content in a path.

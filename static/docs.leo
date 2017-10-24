@@ -360,7 +360,8 @@ then go to Settings - Github pages and choose 'master branch - docs folder'. The
 be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as described above). 
 
 The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can open this leo file using the Leo program and edit it,
-or replace it with your own file. Currently the name of this file is not configurable, this feature will be added in the next release.
+or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration 
+parameters in index.html.
 
 For a quick look at a Leo file, you can also drag and drop the file on to Leo Viewer.
 </t>
