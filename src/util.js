@@ -53,6 +53,9 @@ function parseQueryString (config, url) {
   )
   for (let k in urlParams) {
     let v = urlParams[k]
+    if (/#/.test(v)){
+      v = v.substring(0, v.indexOf('#'))
+    }
     if (typeof v !== 'undefined') {
       config[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'")
     }

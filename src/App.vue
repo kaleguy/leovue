@@ -61,6 +61,7 @@
       let filename = 'static/docs'
       if (window.lconfig.filename) {
         filename = window.lconfig.filename
+        debugger
       }
       if (!this.$store.initializedData) {
         this.$store.dispatch('loadLeo', {filename, route: this.$route})
