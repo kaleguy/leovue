@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
 import axios from 'axios'
+import _ from 'lodash'
 const util = require('../util.js')
 const md = require('markdown-it')({
   html: true,
@@ -96,6 +97,7 @@ function chop (s, c) {
   if (s.indexOf(c) < 0) { return s }
   return s.substring(0, s.lastIndexOf(c))
 }
+// load subtree - separate leo file loaded into node
 function loadLeoNode (context, item) {
   console.log('LOADING SUBTREE')
   const p = new Promise((resolve, reject) => {
@@ -297,7 +299,7 @@ export default new Vuex.Store({
     initialized: false,
     initializedData: false,
     contentPane: 'text',
-    viewType: 'tree',
+    viewType: 't',
     currentItem: {
       id: 0,
       next: 0,
@@ -337,6 +339,12 @@ export default new Vuex.Store({
       state.leodata = o.data
       state.leotext = o.text
       const c = loadIndex(o.data, o.text)
+      state.idx = c.idx
+      state.idxDocs = c.docs
+      state.filename = o.filename
+    },
+    RESETINDEX (state, o) {
+      const c = loadIndex(state.leodata, state.leotext)
       state.idx = c.idx
       state.idxDocs = c.docs
       state.filename = o.filename
@@ -460,20 +468,22 @@ export default new Vuex.Store({
       const id = o.id
 
       // open parent nodes, close others
+      const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
+      let openItemIds = openItems.reduce((acc, o) => {
+        if (o.id) { acc.push(o.id + '') }
+        return acc
+      }, [])
+      openItemIds.push(id + '')
       if (context.state.accordion) {
-        const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
-        const openItemIds = openItems.reduce((acc, o) => {
-          if (o.id) {
-            acc.push(o.id + '')
-          }
-          return acc
-        }, [])
-        openItemIds.push(id + '')
         context.commit('OPEN_ITEMS', {openItemIds})
         const ids = openItemIds
         context.dispatch('setContentItems', {ids})
+      } else {
+      // open parent nodes
+        const currentOpenItemIds = context.state.openItemIds
+        openItemIds = _.uniq(currentOpenItemIds.concat(openItemIds))
+        context.commit('OPEN_ITEMS', {openItemIds})
       }
-
       context.commit('CURRENT_ITEM', {id})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
       if (item) {
@@ -481,7 +491,9 @@ export default new Vuex.Store({
         if (/^\[/.test(item.name)) {
           if (/\.leo\)$/.test(item.name)) {
             console.log('load leo')
-            loadLeoNode(context, item, true).then(res => console.log('subtree loaded.'))
+            loadLeoNode(context, item, true).then(
+              res => context.commit('RESETINDEX')
+            )
           } else {
             console.log('load site')
             showSite(context, item.name, id)

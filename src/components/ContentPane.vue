@@ -186,7 +186,7 @@ export default {
     flex: auto;
     background: #fff;
     padding:0px;
-    padding-top: 10px;
+    padding-top: 20px;
     max-width: 600px;
     min-width: 500px;
     height: calc(100vh - 26px);
