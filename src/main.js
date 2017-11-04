@@ -25,7 +25,9 @@ console.log(Defiant)
 // const purecss = require('css-loader!./assets/global.css')
 
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import SectionLink from './components/SectionLink'
 Vue.use(VueYouTubeEmbed)
+Vue.component('sectionlink', SectionLink)
 
 sync(store, router)
 

@@ -78,8 +78,9 @@ function formatText (text) {
   if (!text) { return '' }
   let language = getLanguage(text)
 
-  text = text.replace(/<</g, '\u00AB')
-  text = text.replace(/>>/g, '\u00BB')
+  // text = text.replace(/<</g, '\u00AB')
+  // text = text.replace(/>>/g, '\u00BB')
+  text = text.replace(/<<(.*?)>>/g, '<sectionlink :title="\'$1\'"/>')
 
   // just plain text
   if (!language) {

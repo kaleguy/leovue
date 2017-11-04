@@ -84,6 +84,9 @@ export default {
     }
   },
   methods: {
+    goSection () {
+      console.log('HERE')
+    },
     goNext () {
       const next = this.$store.state.currentItem.next
       this.resetCurrentItem(next)

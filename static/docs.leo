@@ -19,7 +19,10 @@
 </v>
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Viewer</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing</vh></v>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Viewer</vh>
+<v t="josephorr.20171103103333.1"><vh>&lt;&lt; More about the base tag &gt;&gt;</vh></v>
+<v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
+</v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
@@ -330,9 +333,10 @@ For other environments, see the:
 
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
-The purpose of this document is to make a very brief introduction to creating tree based content with Leo and
-displaying it with Leo Viewer. Leo has features that make it particularly suitable for creating 
-documentation of code.
+The purpose of this document is to make a brief introduction to creating tree-based content with Leo and
+displaying it with Leo Viewer. 
+
+Leo has features that make it particularly suitable for creating documentation of code.
 
 More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of
 programming where documentation comes first, and code is generated from the documentation or
@@ -349,17 +353,11 @@ You will be able to open Leo Viewer by opening index.html in your browser. If yo
 serving Leo Viewer from the root of your domain, you'll need to first edit the "base" tag in
 index.html. 
 
-About setting the base, for example, the file you are reading is 
-hosted on Github Pages at https://kaleguy.github.io/leoviewer/.
-So the base tag for the index.html for this installation of Leo Viewer looks like this:
+&lt;&lt; More about the base tag &gt;&gt;
 
-`&lt;base href='/leoviewer/'&gt;`
+&lt;&lt; Running Leo Viewer from Github &gt;&gt;
 
-You can also run Leo Viewer from github pages. Fork the repository on Github, 
-then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
-be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as described above). 
-
-The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can open this leo file using the Leo program and edit it,
+The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration 
 parameters in index.html.
 
@@ -378,9 +376,9 @@ content as a web page.
 The content you are reading was created in Leo. If you're reading this on the Leo Viewer
 site, then this content is being displayed via the Leo Viewer.
 
-Leo Viewer is currently at version 0.9.7 
+Leo Viewer is currently at version 1.0.0 
 
-Leo Viewer 0.9.x only is tested in Chrome and may not display correctly in other browsers.
+Leo Viewer 1.0.x only is tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -393,10 +391,10 @@ Current features include:
 * Load Leo files into subtrees
 * Nested menu mode
 * Content nodes can have Vue.js components
-
-Features planned for version 1:
 * Search
 * SEO version (static html files)
+
+Features not yet supported:
 * Keyboard support
 
 Leo Viewer is licensed under the MIT license.</t>
@@ -631,12 +629,16 @@ Leo loads static content from the 'static' folder. By default it will load a fil
 
 To tell Leo Viewer to load a different file, either pass a 'filename' parameter on the url, or edit the configuration section of index.html.
 
-[Example of Leo File from URL parameter](/index.html?filename=examples/example)
+[Example of Leo File from URL parameter](/?filename=static/example#/t/1)
 
 Currently Available Parameters:
 * **filename**: name of leo file to load (without .leo extension)
 * **doctitle**: Title for the Leo file (will show in top menubar)
 * **showapptitle**: Display 'Leoviewer' in upper left of app
+* **viewTypes**: Array of viewTypes (e.g. Outline, Line, Graphic Tree) to be displayed in upper right menu.
+* **baseMode**: Default viewType
+
+Parameters can be passed in to the url or entered in index.html. See index.html for examples.
 
 Using parameters on the URL:
 
@@ -685,5 +687,17 @@ In your html content, add the Vue.js Youtube component like so:
 ```
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
 ```</t>
+<t tx="josephorr.20171103103333.1">@language md 
+
+About setting the base, for example, the file you are reading is 
+hosted on Github Pages at https://kaleguy.github.io/leoviewer/.
+So the base tag for the index.html for this installation of Leo Viewer looks like this:
+
+`&lt;base href='/leoviewer/'&gt;`</t>
+<t tx="josephorr.20171103103421.1">@language md
+
+You can also run Leo Viewer from github pages. Fork the repository on Github, 
+then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
+be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as described above).</t>
 </tnodes>
 </leo_file>
