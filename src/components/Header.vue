@@ -51,7 +51,7 @@
         </div>
         <div class="menu-label">Accordion</div>
       </div>
-      <div class="menu-footer" @click="settings">Leoviewer</div>
+      <div class="menu-footer" @click="settings">Leo Vue</div>
     </div>
   </div>
 </template>
