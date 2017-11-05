@@ -15,7 +15,7 @@
     "build-static": "node build/build-static.es6"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "chart.js": "^2.7.1",
     "d3": "^4.4.0",
     "highlight.js": "^9.12.0",
@@ -34,12 +34,12 @@
     "vue-instant": "^1.0.2",
     "vue-nav-tabs": "^0.5.4",
     "vue-resize-directive": "^1.0.0",
-    "vue-router": "^2.5.3",
+    "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
     "vue-youtube-embed": "^2.1.1",
     "vue2-leaflet": "0.0.55",
-    "vuex": "^2.3.1",
-    "vuex-router-sync": "^4.2.0"
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
