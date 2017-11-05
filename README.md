@@ -1,11 +1,13 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Dependency Status](https://david-dm.org/kaleguy/leoviewer.svg)](https://david-dm.org/kaleguy/leoviewer)
 
-# leoviewer
+# Leo Vue
 
-Viewer for Leo Files.
+Viewer for Leo Files, built with Vue.js.
 
 Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-based websites.
+
+Content items can be text, markdown, or html with Vue components.
 
 ![Leo Viewer Screencast](leoviewermovie.gif)
 
