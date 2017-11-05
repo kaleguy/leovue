@@ -11,11 +11,11 @@ Content items can be text, markdown, or html with Vue components.
 
 ![Leo Viewer Screencast](leoviewermovie.gif)
 
-[Live Site with Docs](https://kaleguy.github.io/leoviewer/)
+[Live Site with Docs](https://kaleguy.github.io/leovue/)
 
-[Plays of William Shakespeare](https://kaleguy.github.io/leoviewer/examples/shakespeare/)
+[Plays of William Shakespeare](https://kaleguy.github.io/leoview/examples/shakespeare/)
 
-[Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leoviewer/examples/shakespeare_n/)
+[Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
 
 [More Examples](https://kaleguy.github.io/leo-examples/)
 
