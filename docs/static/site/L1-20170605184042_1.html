@@ -26,14 +26,20 @@
 </head>
 <body>
 <div class='content'><p>Leoviewer is written in Vue.js, and Vue components can be added to content panes.</p>
-<p>At the moment only the Vue.js Youtube component is supported by default. However, you can
-easily add any other Vue.js component by declaring it in the main.js file like so:</p>
-<pre><code>import VueYouTubeEmbed from 'vue-youtube-embed'
-Vue.use(VueYouTubeEmbed)
-</code></pre>
+<p>By default the following components are added to LeoVue.</p>
+<ul>
+<li>YouTube Viewer</li>
+<li>Leaflet</li>
+<li>InfoCard</li>
+<li>Tabs</li>
+</ul>
 <p>In your html content, add the Vue.js Youtube component like so:</p>
-<pre><code>&lt;youtube :video-id=&quot;'pRnQFGskg9w'&quot; :player-width=&quot;320&quot; :player-height=&quot;195&quot;&gt;&lt;/youtube&gt;
+<pre><code>&lt;youtube :video-id=&quot;'pRnQFGskg9w'&quot; 
+         :player-width=&quot;320&quot; 
+         :player-height=&quot;195&quot;&gt;&lt;/youtube&gt;
+
 </code></pre>
+<p>To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes.</p>
 </div>
 </body>
 </html>

@@ -32,15 +32,11 @@ files on your local machine without a server, use a node utility like ‘http-se
 <p>You will be able to open Leo Viewer by opening index.html in your browser. If you are not
 serving Leo Viewer from the root of your domain, you’ll need to first edit the “base” tag in
 index.html.</p>
-<p>About setting the base, for example, the file you are reading is
-hosted on Github Pages at <a href="https://kaleguy.github.io/leoviewer/">https://kaleguy.github.io/leoviewer/</a>.
-So the base tag for the index.html for this installation of Leo Viewer looks like this:</p>
-<p><code>&lt;base href='/leoviewer/'&gt;</code></p>
-<p>You can also run Leo Viewer from github pages. Fork the repository on Github,
-then go to Settings - Github pages and choose ‘master branch - docs folder’. The file ‘docs.leo’ in the docs/static folder will
-be viewable at <a href="http://username.github.io/myforkname/">username.github.io/myforkname/</a>. (But be sure to edit the base tag as described above).</p>
-<p>The leo file that Leo Viewer displays is located at ‘static/docs.leo’. You can open this leo file using the Leo program and edit it,
-or replace it with your own file. Currently the name of this file is not configurable, this feature will be added in the next release.</p>
+<sectionlink :title="' More about the base tag '"/>
+<sectionlink :title="' Running Leo Viewer from Github '"/>
+<p>The leo file that Leo Viewer displays is located at ‘static/docs.leo’. You can edit this leo file using the Leo program
+or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
+parameters in index.html.</p>
 <p>For a quick look at a Leo file, you can also drag and drop the file on to Leo Viewer.</p>
 </div>
 </body>
