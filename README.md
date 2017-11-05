@@ -13,7 +13,7 @@ Content items can be text, markdown, or html with Vue components.
 
 [Live Site with Docs](https://kaleguy.github.io/leovue/)
 
-[Plays of William Shakespeare](https://kaleguy.github.io/leoview/examples/shakespeare/)
+[Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
 
 [Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
 
