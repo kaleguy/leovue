@@ -12,26 +12,26 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+
+// content components
 import Vue2Leaflet from 'vue2-leaflet'
 import InfoCard from 'vue-info-card'
 import VueTabs from 'vue-nav-tabs'
 import 'vue-nav-tabs/themes/vue-tabs.scss'
 import VTooltip from 'v-tooltip'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import SectionLink from './components/SectionLink'
 Vue.use(VTooltip)
 Vue.use(VueTabs)
+Vue.use(VueYouTubeEmbed)
+Vue.component('sectionlink', SectionLink)
 Vue.component('info-card', InfoCard)
 Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
 Vue.component('v-marker', Vue2Leaflet.Marker)
 
-// import './lib/vue-grid-layout'
 const Defiant = require('./lib/defiant')
 console.log(Defiant)
-
-import VueYouTubeEmbed from 'vue-youtube-embed'
-import SectionLink from './components/SectionLink'
-Vue.use(VueYouTubeEmbed)
-Vue.component('sectionlink', SectionLink)
 
 sync(store, router)
 

@@ -158,7 +158,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
         // elText = escape(elText)
       }
       textItems[a] = elText
-      // h
     }
     const vnodes = xml.getElementsByTagName('v')
     let pid

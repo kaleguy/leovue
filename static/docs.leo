@@ -48,7 +48,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -580,7 +580,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
         // elText = escape(elText)
       }
       textItems[a] = elText
-      // h
     }
     const vnodes = xml.getElementsByTagName('v')
     let pid
@@ -710,7 +709,9 @@ be viewable at username.github.io/myforkname/. (But be sure to edit the base tag
     &lt;v-marker :lat-lng="[40.6971494, -74.0277793]"&gt;&lt;/v-marker&gt;
   &lt;/v-map&gt;
 &lt;/div&gt;</t>
-<t tx="josephorr.20171104211357.1">Besides the Vue components included with Leo Vue, you can 
+<t tx="josephorr.20171104211357.1">@language md
+
+Besides the Vue components included with Leo Vue, you can 
 easily add any other Vue.js component by installing it in Leo VUe and then 
 declaring it in the main.js file.
 

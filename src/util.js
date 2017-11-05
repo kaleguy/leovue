@@ -99,10 +99,14 @@ function formatText (text) {
       break
     case 'html':
       break
+    case 'VueComponent':
+      const muv = hljs.highlight('javascript', text)
+      text = muv.value
+      text = `<pre>${text}</pre>`
+      break
     default:
       const mu = hljs.highlight(language, text)
       text = mu.value
-      // text = `<pre><code class="${language}">${text}</code></pre>`
       text = `<pre>${text}</pre>`
   }
   text = `<div class='content'>${text}</div>`
