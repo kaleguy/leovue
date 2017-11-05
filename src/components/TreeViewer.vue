@@ -38,7 +38,7 @@
     computed: {
 
       top () {
-        if (this.$store.state.leodata.length > 1) { return false }
+        // if (this.$store.state.leodata.length > 1) { return false }
         if (window.lconfig.firstNodeAsTitle === false) { return false }
         return true
       },
@@ -57,18 +57,19 @@
 .treeviewer
   margin-left: 0
   height: 100%
-  ul
-    list-style-type: none;
-    padding: 0;
-    padding-left: 10px;
-    line-height: 1.4em
-    list-style-type: none
-    margin-bottom: 8px
-  li
-    white-space: nowrap
-    min-width: 760px
-    margin-bottom: 4px
-    margin-top: 4px
-  li > div
-    padding-left: 4px
+  #left-pane
+    ul
+      list-style-type: none;
+      padding: 0;
+      padding-left: 10px;
+      line-height: 1.4em
+      list-style-type: none
+      margin-bottom: 8px
+    li
+      white-space: nowrap
+      min-width: 760px
+      margin-bottom: 4px
+      margin-top: 4px
+    li > div
+      padding-left: 4px
 </style>

@@ -73,6 +73,7 @@
 
 @import './assets/global.sass'
 @import './assets/vue-instant.css'
+@import "~leaflet/dist/leaflet.css"
 
 $mycolor: #2c3e50
 
@@ -127,5 +128,13 @@ A, .link
   color: #42b983
   cursor: pointer
   text-decoration: underline
+
+.flip-container
+  width: 80%
+  max-width: 600px
+  margin-left: 40px
+  margin-bottom: 60px
+  SVG
+    height: inherit !important
 
 </style>
