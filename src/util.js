@@ -1,3 +1,4 @@
+import _ from 'lodash'
 const hljs = require('highlight.js')
 const md = require('markdown-it')({
   html: true,
@@ -60,8 +61,8 @@ function parseQueryString (config, url) {
       config[k] = v.replace(/%2F/g, '/').replace(/%27/g, "'")
     }
   }
-  var hash = window.location.hash
-  var baseMode = 't'
+  const hash = window.location.hash
+  let baseMode = 't'
   if (window.lconfig.baseMode) { baseMode = window.lconfig.baseMode }
   if (!hash || hash.length < 3) {
     //window.location.hash = baseMode + '/1'

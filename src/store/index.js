@@ -245,6 +245,7 @@ function setData (context, ldata, filename, route) {
     text: ldata.textItems,
     filename: filename
   })
+  loadDataSets(context, ldata)
   let id = route.params.id
   if (!id) {
     id = '1'
@@ -290,6 +291,30 @@ function loadSubtrees (context, trees, data) {
   })
   return p
 }
+function loadDataSets (context, data) {
+  const textItems = data.textItems
+  data.data.forEach(d => {
+    loadDataSet(context, d, textItems)
+  })
+}
+function loadDataSet (context, item, textItems) {
+  const text = textItems[item.t]
+  const matches = item.name.match(/@data (.*)/)
+  if (matches) {
+    const k = _.trim(matches[1])
+    let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
+    try {
+      v = JSON.parse(v)
+    } catch (e) {
+      console.log('Unable to parse data for: ' + item.name + ' ' + e)
+    }
+    context.commit('ADDDATASET', {k, v})
+  }
+  item.children.forEach(child => {
+    loadDataSet(context, child, textItems)
+  })
+}
+
 // ========= The Store ===============
 export default new Vuex.Store({
   state: {
@@ -307,6 +332,7 @@ export default new Vuex.Store({
     },
     currentItemContent: '',
     contentItems: {},
+    dataSets: {},
     openItemIds: [],
     history: [0],
     historyIndex: 0,
@@ -319,6 +345,9 @@ export default new Vuex.Store({
     selecting: false  // e.g. in search dialog using arrow keys
   },
   mutations: {
+    ADDDATASET (state, o) {
+      state.dataSets[o.k] = o.v
+    },
     TOGGLEACCORDION (state) {
       state.accordion = !state.accordion
     },
@@ -449,6 +478,7 @@ export default new Vuex.Store({
         let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
         if (item) {
           item = item[0]
+          // if it starts with a bracked it is a link in markdown syntax
           if (/^\[/.test(item.name)) {
             setSiteItem(context, item.name, item.id)
           } else {

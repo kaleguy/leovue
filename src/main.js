@@ -21,6 +21,10 @@ import 'vue-nav-tabs/themes/vue-tabs.scss'
 import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import SectionLink from './components/SectionLink'
+
+import {charts} from './content-components/Charts.es6'
+charts(Vue)
+
 Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)

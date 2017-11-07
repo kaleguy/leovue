@@ -67,6 +67,14 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171107074208.1"><vh>Line Chart</vh></v>
+<v t="josephorr.20171107082534.1"><vh>Bar Chart</vh></v>
+<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+<v t="josephorr.20171105192448.1"><vh>@data set1</vh></v>
+<v t="josephorr.20171107081559.1"><vh>@data set2</vh></v>
+</v>
+</v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 </v>
@@ -771,5 +779,43 @@ See the main.js file in the Leo Vue source for how other components are included
 &lt;p&gt;
   &lt;button v-tooltip.top-center=" 'This is the hover message'  "&gt;Hover me&lt;/button&gt;
 &lt;/p&gt;</t>
+<t tx="josephorr.20171105173610.1">@language md
+
+The Vue-Chartjs component is included by default with Leo Vue.
+
+The Vue-Chartjs directives can refer to data in nodes in the Leo document.
+
+In this section, a number of example charts and data sets are displayed.</t>
+<t tx="josephorr.20171105192448.1">@language json
+{
+  "labels": ["January", "February", "March", "April", "May", "June", "July"],
+  "datasets": [
+    {
+      "label": "Data One",
+      "backgroundColor": "#f87979",
+      "data": [40, 39, 10, 40, 39, 80, 40]
+    },
+    {
+      "label": "Data Two",
+      "backgroundColor": "green",
+      "data": [60, 70, 18, 10, 22, 100, 110]
+    }
+  ]
+}
+</t>
+<t tx="josephorr.20171107074208.1">&lt;line-chart :dataSet="'set1'"/&gt;</t>
+<t tx="josephorr.20171107074219.1"></t>
+<t tx="josephorr.20171107081559.1">@language json
+{
+   "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "datasets": [
+        {
+          "label":"Data One",
+          "backgroundColor": "#f87979",
+          "data": [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+        }
+     ]
+}</t>
+<t tx="josephorr.20171107082534.1">&lt;bar-chart :dataSet="'set2'"/&gt;</t>
 </tnodes>
 </leo_file>
