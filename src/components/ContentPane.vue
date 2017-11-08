@@ -96,7 +96,7 @@ export default {
       this.resetCurrentItem(prev)
     },
     resetCurrentItem (id) {
-      router.replace('/t/' + id)
+      // router.replace('/t/' + id)
       // const currentItem = { id }
       // this.$store.commit('RESET')
       this.$store.dispatch('setCurrentItem', {id})
@@ -152,6 +152,7 @@ export default {
   },
   updated () {
     overrideXFrame()
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub])
   },
   watch: {
   }

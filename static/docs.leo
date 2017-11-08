@@ -29,6 +29,7 @@
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
+<v t="josephorr.20171107100246.1"><vh>Math</vh></v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
@@ -61,13 +62,13 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart</vh></v>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
@@ -793,12 +794,14 @@ In this section, a number of example charts and data sets are displayed.</t>
     {
       "label": "Data One",
       "backgroundColor": "#f87979",
-      "data": [40, 39, 10, 40, 39, 80, 40]
+      "data": [40, 39, 10, 40, 39, 80, 40],
+      "fill": false
     },
     {
       "label": "Data Two",
       "backgroundColor": "green",
-      "data": [60, 70, 18, 10, 22, 100, 110]
+      "data": [60, 70, 18, 10, 22, 100, 110],
+      "fill": false
     }
   ]
 }
@@ -817,5 +820,8 @@ In this section, a number of example charts and data sets are displayed.</t>
      ]
 }</t>
 <t tx="josephorr.20171107082534.1">&lt;bar-chart :dataSet="'set2'"/&gt;</t>
+<t tx="josephorr.20171107100246.1">$$
+\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
+$$</t>
 </tnodes>
 </leo_file>

@@ -3,6 +3,7 @@ config/*.js
 src/services/leo.js
 src/util.js
 src/lib/defiant.js
+src/lib/MathJax.js
 src/lib/vue-grid-layout.js
 src/vue-grid-layout.js
 src/components/ContentPane.vue

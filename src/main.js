@@ -34,8 +34,8 @@ Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
 Vue.component('v-marker', Vue2Leaflet.Marker)
 
-const Defiant = require('./lib/defiant')
-console.log(Defiant)
+const Defiant = require('./lib/defiant') // eslint-disable-line
+// const MathJax = require('./lib/MathJax') // eslint-disable-line
 
 sync(store, router)
 
