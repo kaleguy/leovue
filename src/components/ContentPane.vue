@@ -152,7 +152,7 @@ export default {
   },
   updated () {
     overrideXFrame()
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+    // MathJax.Hub.Queue(["Typeset", MathJax.Hub])
   },
   watch: {
   }

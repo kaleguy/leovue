@@ -30,6 +30,7 @@
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh></v>
+<v t="josephorr.20171108082557.1"><vh>Math2</vh></v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
@@ -823,5 +824,8 @@ In this section, a number of example charts and data sets are displayed.</t>
 <t tx="josephorr.20171107100246.1">$$
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
 $$</t>
+<t tx="josephorr.20171108082557.1">&lt;mj&gt;
+\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
+&lt;/mj&gt;</t>
 </tnodes>
 </leo_file>

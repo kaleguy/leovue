@@ -1,5 +1,8 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+const Defiant = require('./lib/defiant') // eslint-disable-line
+// const MathJax = require('./lib/MathJax') // eslint-disable-line
+
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -21,6 +24,7 @@ import 'vue-nav-tabs/themes/vue-tabs.scss'
 import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import SectionLink from './components/SectionLink'
+import MathJaxComponent from './components/MathJax'
 
 import {charts} from './content-components/Charts.es6'
 charts(Vue)
@@ -29,13 +33,11 @@ Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
 Vue.component('sectionlink', SectionLink)
+Vue.component('mj', MathJaxComponent)
 Vue.component('info-card', InfoCard)
 Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
 Vue.component('v-marker', Vue2Leaflet.Marker)
-
-const Defiant = require('./lib/defiant') // eslint-disable-line
-// const MathJax = require('./lib/MathJax') // eslint-disable-line
 
 sync(store, router)
 
