@@ -299,7 +299,7 @@ function loadDataSets (context, data) {
 }
 function loadDataSet (context, item, textItems) {
   const text = textItems[item.t]
-  const matches = item.name.match(/@data (.*)/)
+  const matches = item.name.match(/@data ([a-zA-Z0-9]*)/)
   if (matches) {
     const k = _.trim(matches[1])
     let v = text.replace(/^@language (\w+)/, '') // get rid of language directive

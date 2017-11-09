@@ -29,8 +29,6 @@
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20171107100246.1"><vh>Math</vh></v>
-<v t="josephorr.20171108082557.1"><vh>Math2</vh></v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
@@ -63,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -76,6 +74,9 @@
 <v t="josephorr.20171105192448.1"><vh>@data set1</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@data set2</vh></v>
 </v>
+</v>
+<v t="josephorr.20171107100246.1" a="E"><vh>Math</vh>
+<v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
@@ -821,10 +822,18 @@ In this section, a number of example charts and data sets are displayed.</t>
      ]
 }</t>
 <t tx="josephorr.20171107082534.1">&lt;bar-chart :dataSet="'set2'"/&gt;</t>
-<t tx="josephorr.20171107100246.1">$$
-\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
-$$</t>
-<t tx="josephorr.20171108082557.1">&lt;mj&gt;
+<t tx="josephorr.20171107100246.1">@language md
+
+Leo Vue has a component for the MathJax library that allows display of mathmetical symbols and formulas.
+
+In order for the component to work, the internet must be accessible, since the main library is not included with Leo Vue, because of file size.
+
+</t>
+<t tx="josephorr.20171108082557.1">@language html
+
+Example formula:
+
+&lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
 &lt;/mj&gt;</t>
 </tnodes>

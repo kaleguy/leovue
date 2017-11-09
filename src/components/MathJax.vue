@@ -1,5 +1,5 @@
 <template>
-  <div id="MathExample">
+  <div style="display:none">
     $$<slot></slot>$$
   </div>
 </template>
@@ -15,12 +15,12 @@
     },
     components: {},
     mounted () {
-      console.log(2)
-      MathJax.Hub.Queue(['Typeset', MathJax.Hub, this.$el])
+      if (MathJax) {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, this.$el])
+        MathJax.Hub.Queue(() => this.$el.style.display = 'block')
+      }
     },
     updated () {
-      console.log(1)
-      // MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'MathExample'])
     }
   }
 </script>
