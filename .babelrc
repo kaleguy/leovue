@@ -5,8 +5,7 @@
     "stage-2"
   ],
   "plugins": [
-    "transform-runtime",
-    "transform-remove-strict-mode"
+    "transform-runtime"
   ],
   "comments": false,
   "env": {

@@ -26,7 +26,7 @@ import VueYouTubeEmbed from 'vue-youtube-embed'
 import SectionLink from './components/SectionLink'
 import MathJaxComponent from './components/MathJax'
 
-import {charts} from './content-components/Charts.es6'
+import {charts} from './content-components/Charts'
 charts(Vue)
 
 Vue.use(VTooltip)
