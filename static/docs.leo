@@ -26,7 +26,7 @@
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
-<v t="josephorr.20170304174421.1"><vh>Text</vh>
+<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
@@ -67,16 +67,23 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
-<v t="josephorr.20171107074208.1"><vh>Line Chart</vh></v>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
+<v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart</vh></v>
-<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
-<v t="josephorr.20171105192448.1"><vh>@data set1</vh></v>
-<v t="josephorr.20171107081559.1"><vh>@data set2</vh></v>
 </v>
-</v>
-<v t="josephorr.20171107100246.1" a="E"><vh>Math</vh>
+<v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
+<v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
+</v>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+<v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
+<v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
+</v>
+<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
+<v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
+</v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
@@ -795,13 +802,15 @@ In this section, a number of example charts and data sets are displayed.</t>
   "datasets": [
     {
       "label": "Data One",
-      "backgroundColor": "#f87979",
+      "borderColor": "#f87979",
+      "backgroundColor": "red",
       "data": [40, 39, 10, 40, 39, 80, 40],
       "fill": false
     },
     {
       "label": "Data Two",
-      "backgroundColor": "green",
+      "borderColor": "green",
+      "backgroundColor": "orange",
       "data": [60, 70, 18, 10, 22, 100, 110],
       "fill": false
     }
@@ -818,6 +827,11 @@ In this section, a number of example charts and data sets are displayed.</t>
           "label":"Data One",
           "backgroundColor": "#f87979",
           "data": [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+        },
+        {
+          "label":"Data Two",
+          "backgroundColor": "green",
+          "data": [20, 30, 2, 9, 40, 40, 59, 90, 30, 25, 32, 21]
         }
      ]
 }</t>
@@ -836,5 +850,25 @@ Example formula:
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
 &lt;/mj&gt;</t>
+<t tx="josephorr.20171109060334.1">Multiple formulas with text.
+
+&lt;mj&gt;
+\sum_{n=1}^k \frac{1}{n} ≻ \int_1^{k+1} \frac{1}{x} dx = \ln(k+1)
+&lt;/mj&gt;
+
+Another formula:
+
+&lt;mj&gt;
+\sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
+&lt;/mj&gt;</t>
+<t tx="josephorr.20171109061104.1"></t>
+<t tx="josephorr.20171109061151.1"></t>
+<t tx="josephorr.20171109061229.1">Years,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   Color
+Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   red
+Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   green
+Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    blue
+Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    orange
+North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    yellow</t>
+<t tx="josephorr.20171111182810.1">&lt;line-chart :dataTable="'worldpop'"/&gt;</t>
 </tnodes>
 </leo_file>

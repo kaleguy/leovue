@@ -4,6 +4,7 @@ import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
 import axios from 'axios'
 import _ from 'lodash'
+import CSV from 'csv-string'
 const util = require('../util.js')
 const md = require('markdown-it')({
   html: true,
@@ -246,6 +247,7 @@ function setData (context, ldata, filename, route) {
     filename: filename
   })
   loadDataSets(context, ldata)
+  loadDataTables(context, ldata)
   let id = route.params.id
   if (!id) {
     id = '1'
@@ -299,7 +301,7 @@ function loadDataSets (context, data) {
 }
 function loadDataSet (context, item, textItems) {
   const text = textItems[item.t]
-  const matches = item.name.match(/@data ([a-zA-Z0-9]*)/)
+  const matches = item.name.match(/@dataSet ([a-zA-Z0-9]*)(.*)$/)
   if (matches) {
     const k = _.trim(matches[1])
     let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
@@ -312,6 +314,31 @@ function loadDataSet (context, item, textItems) {
   }
   item.children.forEach(child => {
     loadDataSet(context, child, textItems)
+  })
+}
+function loadDataTables (context, data) {
+  const textItems = data.textItems
+  data.data.forEach(d => {
+    loadDataTable(context, d, textItems)
+  })
+}
+function loadDataTable (context, item, textItems) {
+  const text = textItems[item.t]
+  const matches = item.name.match(/@dataTable ([a-zA-Z0-9]*)(.*)$/i)
+  if (matches) {
+    const k = _.trim(matches[1])
+    let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
+    let arr = null
+    try {
+      arr = CSV.parse(v)
+    } catch (e) {
+      arr = []
+      console.log('Unable to parse dataTable for: ' + item.name + ' ' + e)
+    }
+    context.commit('ADDDATATABLE', {k, v: arr})
+  }
+  item.children.forEach(child => {
+    loadDataTable(context, child, textItems)
   })
 }
 
@@ -333,6 +360,7 @@ export default new Vuex.Store({
     currentItemContent: '',
     contentItems: {},
     dataSets: {},
+    dataTables: {},
     openItemIds: [],
     history: [0],
     historyIndex: 0,
@@ -347,6 +375,9 @@ export default new Vuex.Store({
   mutations: {
     ADDDATASET (state, o) {
       state.dataSets[o.k] = o.v
+    },
+    ADDDATATABLE (state, o) {
+      state.dataTables[o.k] = o.v
     },
     TOGGLEACCORDION (state) {
       state.accordion = !state.accordion

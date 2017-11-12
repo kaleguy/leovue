@@ -8,3 +8,6 @@ src/lib/vue-grid-layout.js
 src/vue-grid-layout.js
 src/components/ContentPane.vue
 src/components/MathJax.vue
+src/lib/dataframe.js
+src/lib/dataframe-min.js
+src/lib/lib

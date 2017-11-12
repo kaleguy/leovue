@@ -67,16 +67,21 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart</vh></v>
-<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+</v>
+<v t="josephorr.20171107100246.1"><vh>Math</vh>
+<v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
+<v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
+</v>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@data set1</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@data set2</vh></v>
 </v>
-</v>
-<v t="josephorr.20171107100246.1" a="E"><vh>Math</vh>
-<v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
+<v t="josephorr.20171109061151.1"><vh>Data Frames</vh></v>
+<v t="josephorr.20171109061229.1"><vh>@dataFrame worldpop1 World historical and predicted populations (in millions)</vh></v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
@@ -836,5 +841,24 @@ Example formula:
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
 &lt;/mj&gt;</t>
+<t tx="josephorr.20171109060334.1">Multiple formulas with text.
+
+&lt;mj&gt;
+\sum_{n=1}^k \frac{1}{n} ≻ \int_1^{k+1} \frac{1}{x} dx = \ln(k+1)
+&lt;/mj&gt;
+
+Another formula:
+
+&lt;mj&gt;
+\sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
+&lt;/mj&gt;</t>
+<t tx="josephorr.20171109061104.1"></t>
+<t tx="josephorr.20171109061151.1"></t>
+<t tx="josephorr.20171109061229.1">Country,	            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,
+Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,
+Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,
+Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,
+Latin America,      40,	20,	10,	16,	24,	38,	74,	167,	508,	784 ,
+North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,</t>
 </tnodes>
 </leo_file>

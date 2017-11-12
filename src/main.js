@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 const Defiant = require('./lib/defiant') // eslint-disable-line
+
 // const MathJax = require('./lib/MathJax') // eslint-disable-line
 
 import Vue from 'vue'
@@ -15,7 +16,18 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+// import fs from 'fs' // eslint-disable-line
+// import DataFrame from 'dataframe-js' // eslint-disable-line
+// const DataFrame = require('./lib/lib/dataframe.js') // eslint-disable-line
+/*
+const DataFrame = dfjs.DataFrame // eslint-disable-line
 
+const df = new DataFrame([
+  {c1: 1, c2: 6}, // <------- A row
+  {c4: 1, c3: 2}
+], ['c1', 'c2', 'c3', 'c4'])
+console.log(df)
+*/
 // content components
 import Vue2Leaflet from 'vue2-leaflet'
 import InfoCard from 'vue-info-card'
