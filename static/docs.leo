@@ -70,7 +70,9 @@
 <v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
-<v t="josephorr.20171107082534.1"><vh>Bar Chart</vh></v>
+<v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
+<v t="josephorr.20171111235348.1"><vh>Bar Chart from dataTable</vh></v>
+<v t="josephorr.20171112004405.1"><vh>Pie Chart from dataTable</vh></v>
 </v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
@@ -825,12 +827,12 @@ In this section, a number of example charts and data sets are displayed.</t>
     "datasets": [
         {
           "label":"Data One",
-          "backgroundColor": "#f87979",
+          "borderColor": "#f87979",
           "data": [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
         },
         {
           "label":"Data Two",
-          "backgroundColor": "green",
+          "borderColor": "green",
           "data": [20, 30, 2, 9, 40, 40, 59, 90, 30, 25, 32, 21]
         }
      ]
@@ -863,12 +865,14 @@ Another formula:
 &lt;/mj&gt;</t>
 <t tx="josephorr.20171109061104.1"></t>
 <t tx="josephorr.20171109061151.1"></t>
-<t tx="josephorr.20171109061229.1">Years,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   Color
-Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   red
-Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   green
-Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    blue
-Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    orange
-North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    yellow</t>
-<t tx="josephorr.20171111182810.1">&lt;line-chart :dataTable="'worldpop'"/&gt;</t>
+<t tx="josephorr.20171109061229.1">Years,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   $color
+Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   #8e5ea2
+Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   #3cba9f
+Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    #3e95cd
+Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    #e8c3b9
+North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    #c45850</t>
+<t tx="josephorr.20171111182810.1">&lt;line-chart :dataTable="'worldpop'" /&gt;</t>
+<t tx="josephorr.20171111235348.1">&lt;bar-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171112004405.1">&lt;pie-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
 </tnodes>
 </leo_file>

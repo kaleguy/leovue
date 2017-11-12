@@ -327,6 +327,7 @@ function loadDataTable (context, item, textItems) {
   const matches = item.name.match(/@dataTable ([a-zA-Z0-9]*)(.*)$/i)
   if (matches) {
     const k = _.trim(matches[1])
+    const title = matches[2] || ''
     let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
     let arr = null
     try {
@@ -335,7 +336,13 @@ function loadDataTable (context, item, textItems) {
       arr = []
       console.log('Unable to parse dataTable for: ' + item.name + ' ' + e)
     }
-    context.commit('ADDDATATABLE', {k, v: arr})
+    arr.forEach(r => {
+      r.forEach((c, i) => {
+        r[i] = _.trim(c)
+      })
+    })
+    v = {title, arr}
+    context.commit('ADDDATATABLE', {k, v})
   }
   item.children.forEach(child => {
     loadDataTable(context, child, textItems)
