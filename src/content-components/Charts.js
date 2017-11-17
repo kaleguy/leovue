@@ -58,7 +58,7 @@ function dataTableToDataSet (dataTable) {
     set.fill = false
     datasets.push(set)
   })
-  return { datasets, labels, title }
+  return { datasets, labels, title, colors }
 }
 
 function charts (Vue) {
@@ -69,9 +69,28 @@ function charts (Vue) {
         dataSet: String,
         dataTable: String,
         title: String,
-        col: String
+        col: String,
+        gridLines: Boolean
       },
       mounted () {
+        const options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            xAxes: [ {
+              gridLines: { display: this.gridLines },
+              categoryPercentage: 0.9,
+              barPercentage: 0.8
+            }],
+            yAxes: [ {
+              gridLines: { display: this.gridLines }
+            }]
+          }
+        }
+        // kludge...
+        if (type === 'Pie') { delete options.scales }
+        if (type === 'Doughnut') { delete options.scales }
+        if (type === 'Polar') { delete options.scales }
         let data = null
         if (this.dataSet) {
           data = this.$store.state.dataSets[this.dataSet]
@@ -88,19 +107,21 @@ function charts (Vue) {
             data = dataTableToDataSet(d)
             data.labels = colNames
             data.datasets = [{
-              data: colData
+              data: colData,
+              backgroundColor: data.colors,
+              borderColor: data.colors
             }]
+            // kludge..
+            if (type === 'Bar') {
+              _.set(options, 'legend.display', false)
+            }
           } else {
             data = dataTableToDataSet(d)
           }
         }
-        const options = {
-          responsive: true,
-          maintainAspectRatio: false,
-          title: {
-            display: true,
-            text: this.title || data.title || ''
-          }
+        options.title = {
+          display: true,
+          text: this.title || data.title || ''
         }
         this.renderChart(data, options)
       }
@@ -110,6 +131,8 @@ function charts (Vue) {
   Vue.component('line-chart', getChartOptions('Line'))
   Vue.component('bar-chart', getChartOptions('Bar'))
   Vue.component('pie-chart', getChartOptions('Pie'))
+  Vue.component('doughnut-chart', getChartOptions('Doughnut'))
+  Vue.component('polar-chart', getChartOptions('PolarArea'))
 }
 
 export {charts}

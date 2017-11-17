@@ -35,8 +35,10 @@ import VueTabs from 'vue-nav-tabs'
 import 'vue-nav-tabs/themes/vue-tabs.scss'
 import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import VTable from './components/Table'
 import SectionLink from './components/SectionLink'
 import MathJaxComponent from './components/MathJax'
+import { TableComponent, TableColumn } from 'vue-table-component'
 
 import {charts} from './content-components/Charts'
 charts(Vue)
@@ -45,11 +47,14 @@ Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
 Vue.component('sectionlink', SectionLink)
+Vue.component('vtable', VTable)
 Vue.component('mj', MathJaxComponent)
 Vue.component('info-card', InfoCard)
 Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
 Vue.component('v-marker', Vue2Leaflet.Marker)
+Vue.component('table-component', TableComponent)
+Vue.component('table-column', TableColumn)
 
 sync(store, router)
 

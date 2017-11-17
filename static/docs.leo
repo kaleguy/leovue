@@ -17,8 +17,9 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
+<v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103333.1"><vh>&lt;&lt; More about the base tag &gt;&gt;</vh></v>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
@@ -67,18 +68,28 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
-<v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
-<v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
-<v t="josephorr.20171111235348.1"><vh>Bar Chart from dataTable</vh></v>
-<v t="josephorr.20171112004405.1"><vh>Pie Chart from dataTable</vh></v>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
+<v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 </v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
+<v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
+</v>
+<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
+<v t="josephorr.20171111235348.1"><vh>Bar Chart from dataTable</vh></v>
+<v t="josephorr.20171112004405.1"><vh>Pie Chart from dataTable</vh></v>
+<v t="josephorr.20171112201003.1"><vh>Doughnut Chart from dataTable</vh></v>
+<v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
+</v>
+</v>
+<v t="josephorr.20171109061104.1" a="E"><vh>&lt;&lt; Data &gt;&gt;</vh>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -374,7 +385,7 @@ serving Leo Viewer from the root of your domain, you'll need to first edit the "
 index.html. 
 
 &lt;&lt; More about the base tag &gt;&gt;
-
+&lt;br&gt;
 &lt;&lt; Running Leo Viewer from Github &gt;&gt;
 
 The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
@@ -390,33 +401,11 @@ For a quick look at a Leo file, you can also drag and drop the file on to Leo Vi
 Leo Vue is a web app that can display files created with 
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 
-Using Leo, you can create outlined content. Using Leo Viewer you can display this
+Using Leo, you can create outlined content. Using Leo Vue you can display this
 content as a web page.
 
-The content you are reading was created in Leo. If you're reading this on the Leo Viewer
-site, then this content is being displayed via the Leo Viewer.
-
-Leo Vue is currently at version 1.0.0 
-
-Leo Vue 1.0.x only is tested in Chrome and may not display correctly in other browsers.
-
-Current features include:
-* Display Leo content including markdown, html and code highlighting
-* Bookmarkable nodes
-* Node titles can be urls to markdown files
-* Node titles can be urls to html pages
-* Outline and Inline views
-* Drag and drop a Leo file to display
-* Graphic trees
-* Load Leo files into subtrees
-* Nested menu mode
-* Clickable section links inside content
-* Content nodes can have Vue.js components
-* Search
-* SEO version (static html files)
-
-Features not yet supported:
-* Keyboard support
+The content you are reading was created in Leo. If you're reading this on the Leo Vue
+site, then this content is being displayed via the Leo Vue.
 
 Leo Vue is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
@@ -805,21 +794,21 @@ In this section, a number of example charts and data sets are displayed.</t>
     {
       "label": "Data One",
       "borderColor": "#f87979",
-      "backgroundColor": "red",
+      "backgroundColor": "#f87979",
       "data": [40, 39, 10, 40, 39, 80, 40],
       "fill": false
     },
     {
       "label": "Data Two",
-      "borderColor": "green",
-      "backgroundColor": "orange",
+      "borderColor": "#8e5ea2",
+      "backgroundColor": "#8e5ea2",
       "data": [60, 70, 18, 10, 22, 100, 110],
       "fill": false
     }
   ]
 }
 </t>
-<t tx="josephorr.20171107074208.1">&lt;line-chart :dataSet="'set1'"/&gt;</t>
+<t tx="josephorr.20171107074208.1">&lt;line-chart :dataSet="'set1'" :gridLines="true" /&gt;</t>
 <t tx="josephorr.20171107074219.1"></t>
 <t tx="josephorr.20171107081559.1">@language json
 {
@@ -827,12 +816,14 @@ In this section, a number of example charts and data sets are displayed.</t>
     "datasets": [
         {
           "label":"Data One",
-          "borderColor": "#f87979",
+          "borderColor": "#8e5ea2",
+          "backgroundColor": "#8e5ea2",
           "data": [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
         },
         {
           "label":"Data Two",
-          "borderColor": "green",
+          "borderColor": "#f87979",
+          "backgroundColor": "#f87979",
           "data": [20, 30, 2, 9, 40, 40, 59, 90, 30, 25, 32, 21]
         }
      ]
@@ -863,7 +854,14 @@ Another formula:
 &lt;mj&gt;
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
-<t tx="josephorr.20171109061104.1"></t>
+<t tx="josephorr.20171109061104.1">@language md
+
+Nodes in Leo Vue can contain data, and this data can be used by Vue components.
+
+There are two types of data nodes:
+
+* **dataSets**: these contain JSON data. 
+* **dataTables**: these contain CSV data.</t>
 <t tx="josephorr.20171109061151.1"></t>
 <t tx="josephorr.20171109061229.1">Years,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   $color
 Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   #8e5ea2
@@ -871,8 +869,65 @@ Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   #3cba9f
 Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    #3e95cd
 Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    #e8c3b9
 North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    #c45850</t>
-<t tx="josephorr.20171111182810.1">&lt;line-chart :dataTable="'worldpop'" /&gt;</t>
+<t tx="josephorr.20171111182810.1">&lt;line-chart :dataTable="'worldpop'" :gridLines="true" /&gt;</t>
 <t tx="josephorr.20171111235348.1">&lt;bar-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
 <t tx="josephorr.20171112004405.1">&lt;pie-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171112201003.1">&lt;doughnut-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171113062955.1">&lt;polar-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171113063513.1"></t>
+<t tx="josephorr.20171113063533.1"></t>
+<t tx="josephorr.20171115100638.1">@language html
+
+&lt;p&gt;
+A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the &lt;&lt;Data&gt;&gt; node below).
+&lt;/p&gt;
+&lt;br&gt;
+&lt;vtable :dataTable="'worldpop'"&gt;&lt;/vtable&gt;</t>
+<t tx="josephorr.20171116064625.1">@language md
+
+Leo Vue is currently at version 1.0.2 
+
+Leo Vue 1.0.x only is tested in Chrome and may not display correctly in other browsers.
+
+Current features include:
+* Display Leo content including markdown, html and code highlighting
+* Bookmarkable nodes
+* Node titles can be urls to markdown files
+* Node titles can be urls to html pages
+* Outline and Inline views
+* Drag and drop a Leo file to display
+* Graphic trees
+* Load Leo files into subtrees
+* Nested menu mode
+* Clickable section links inside content
+* Content nodes can have Vue.js components
+* Search
+* SEO version (static html files)
+
+Planned features not yet supported:
+* Keyboard support
+* Form.io support
+</t>
+<t tx="josephorr.20171116140922.1">@language html
+
+The table component below is powered by [spatie/vue-table-component](https://github.com/spatie/vue-table-component)
+
+&lt;table-component
+     :data="[
+          { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
+          { firstName: 'Paul', lastName: 'McCartney', instrument: 'Bass', birthday: '18/06/1942', songs: 70 },
+          { firstName: 'George', lastName: 'Harrison', instrument: 'Guitar', birthday: '25/02/1943', songs: 22 },
+          { firstName: 'Ringo', lastName: 'Starr', instrument: 'Drums', birthday: '07/07/1940', songs: 2 },
+     ]"
+     sort-by="songs"
+     sort-order="asc"
+&gt;
+     &lt;table-column show="firstName" label="First name"&gt;&lt;/table-column&gt;
+     &lt;table-column show="lastName" label="Last name"&gt;&lt;/table-column&gt;
+     &lt;table-column show="instrument" label="Instrument"&gt;&lt;/table-column&gt;
+     &lt;table-column show="songs" label="Songs" data-type="numeric"&gt;&lt;/table-column&gt;
+     &lt;table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"&gt;&lt;/table-column&gt;
+ &lt;/table-component&gt;</t>
+<t tx="josephorr.20171116140935.1"></t>
 </tnodes>
 </leo_file>

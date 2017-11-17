@@ -35,4 +35,5 @@
   font-weight: bold
   cursor: pointer
   text-decoration: none
+  display: inline-block
 </style>
