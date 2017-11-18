@@ -68,19 +68,19 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
+<v t="josephorr.20171107100246.1"><vh>Math</vh>
+<v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
+<v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
+</v>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
+<v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
+<v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
+</v>
 <v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
-</v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
-<v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
-<v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
-<v t="josephorr.20171117082339.1"><vh>Vue-Table 2</vh></v>
-</v>
-<v t="josephorr.20171107100246.1"><vh>Math</vh>
-<v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
-<v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
 <v t="josephorr.20171105173610.1"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
@@ -916,7 +916,7 @@ Planned features not yet supported:
 </t>
 <t tx="josephorr.20171116140922.1">@language html
 
-The table component below is powered by [spatie/vue-table-component](https://github.com/spatie/vue-table-component)
+The table component below is powered by &lt;a href="https://github.com/spatie/vue-table-component"&gt;spatie/vue-table-component&lt;/a&gt;.
 
 &lt;table-component
      :data="[
@@ -937,7 +937,7 @@ The table component below is powered by [spatie/vue-table-component](https://git
 <t tx="josephorr.20171116140935.1"></t>
 <t tx="josephorr.20171117082339.1">@language html
 
-&lt;vctable&gt;&lt;/vctable&gt;</t>
+&lt;vctable :dataTable="'worldpop'"&gt;&lt;/vctable&gt;</t>
 <t tx="josephorr.20171118020637.1">@language html
 
  </t>
@@ -961,7 +961,18 @@ sequenceDiagram
 <t tx="josephorr.20171118025718.1">@language html
 
 &lt;h2&gt;Mermaid Diagram&lt;/h2&gt;
-&lt;mermaid :height="200"&gt;
+
+Simple diagram with Mermaid:
+
+&lt;pre&gt;
+graph TD;
+    Anything--&gt;B;
+    Everything--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+&lt;/pre&gt;    
+
+&lt;mermaid :height="300"&gt;
 
 graph TD;
     Anything--&gt;B;

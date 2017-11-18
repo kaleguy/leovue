@@ -10,7 +10,7 @@
     components: {
     },
     props: {
-      height: String
+      height: Number
     },
     methods: {
     },
