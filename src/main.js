@@ -20,6 +20,7 @@ import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import VTable from './components/Table'
 import VCTable from './content-components/VCTable'
+import Mermaid from './content-components/Mermaid'
 import SectionLink from './components/SectionLink'
 import MathJaxComponent from './components/MathJax'
 import { TableComponent, TableColumn } from './content-components/vctable-component'
@@ -35,6 +36,7 @@ Vue.use(VueYouTubeEmbed)
 Vue.component('sectionlink', SectionLink)
 Vue.component('vtable', VTable)
 Vue.component('vctable', VCTable)
+Vue.component('mermaid', Mermaid)
 Vue.component('mj', MathJaxComponent)
 Vue.component('info-card', InfoCard)
 Vue.component('v-map', Vue2Leaflet.Map)

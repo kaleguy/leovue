@@ -27,7 +27,7 @@
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
-<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
+<v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
@@ -49,7 +49,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -68,7 +68,12 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
+<v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
+<v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
+</v>
+<v t="josephorr.20171116140935.1"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table 2</vh></v>
@@ -77,7 +82,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
@@ -90,7 +95,7 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>&lt;&lt; Data &gt;&gt;</vh>
+<v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -933,5 +938,51 @@ The table component below is powered by [spatie/vue-table-component](https://git
 <t tx="josephorr.20171117082339.1">@language html
 
 &lt;vctable&gt;&lt;/vctable&gt;</t>
+<t tx="josephorr.20171118020637.1">@language html
+
+ </t>
+<t tx="josephorr.20171118025629.1">@language html
+
+&lt;mermaid height="500"&gt;
+
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts prevail...
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+
+&lt;/mermaid&gt;</t>
+<t tx="josephorr.20171118025718.1">@language html
+
+&lt;h2&gt;Mermaid Diagram&lt;/h2&gt;
+&lt;mermaid :height="200"&gt;
+
+graph TD;
+    Anything--&gt;B;
+    Everything--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+
+&lt;/mermaid&gt; </t>
+<t tx="josephorr.20171118030227.1">@language html
+
+&lt;mermaid :height="200"&gt;
+
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+
+&lt;/mermaid&gt;</t>
 </tnodes>
 </leo_file>
