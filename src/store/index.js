@@ -4,7 +4,8 @@ import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
 import axios from 'axios'
 import _ from 'lodash'
-import CSV from 'csv-string'
+// import CSV from 'csv-string'
+import Papa from 'papaparse'
 const util = require('../util.js')
 const md = require('markdown-it')({
   html: true,
@@ -331,7 +332,7 @@ function loadDataTable (context, item, textItems) {
     let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
     let arr = null
     try {
-      arr = CSV.parse(v)
+      arr = Papa.parse(v).data
     } catch (e) {
       arr = []
       console.log('Unable to parse dataTable for: ' + item.name + ' ' + e)
@@ -341,7 +342,21 @@ function loadDataTable (context, item, textItems) {
         r[i] = _.trim(c)
       })
     })
-    v = {title, arr}
+    const objArr = []
+    const cols = arr[0]
+    for (let r = 1; r < arr.length; r++) {
+      let row = arr[r]
+      let rowObj = {}
+      for (let c = 0; c < row.length; c++) {
+        let colName = cols[c]
+        if (colName.indexOf('$') === -1) {
+          rowObj[colName] = row[c]
+        }
+      }
+      // let obj = arr[r].reduce((acc, v, i) => { acc[cols[i]] = v; return acc }, {})
+      objArr.push(rowObj)
+    }
+    v = {title, arr, objArr}
     context.commit('ADDDATATABLE', {k, v})
   }
   item.children.forEach(child => {
@@ -377,7 +392,7 @@ export default new Vuex.Store({
     accordion: false,
     accordionPrev: false,
     searchFlag: false,
-    selecting: false  // e.g. in search dialog using arrow keys
+    selecting: false // e.g. in search dialog using arrow keys
   },
   mutations: {
     ADDDATASET (state, o) {

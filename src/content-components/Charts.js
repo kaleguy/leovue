@@ -136,4 +136,3 @@ function charts (Vue) {
 }
 
 export {charts}
-

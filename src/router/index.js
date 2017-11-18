@@ -70,7 +70,7 @@ export default new Router({
         component: D3Viewer
       }]
     },
-/*
+    /*
     {
       path: '/w/:id',
       component: Dashboard,
@@ -80,7 +80,7 @@ export default new Router({
         component: DbViewer
       }]
     },
-*/
+    */
     {
       path: '/settings',
       component: Settings

@@ -4,10 +4,10 @@ src/services/leo.js
 src/util.js
 src/lib/defiant.js
 src/lib/MathJax.js
-src/lib/vue-grid-layout.js
-src/vue-grid-layout.js
+src/lib/D3tree.vue
+src/lib/circular-layout.js
+src/lib/d3-utils.js
+src/components/VueInstant.vue
 src/components/ContentPane.vue
 src/components/MathJax.vue
-src/lib/dataframe.js
-src/lib/dataframe-min.js
-src/lib/lib
+src/content-components/vctable-component

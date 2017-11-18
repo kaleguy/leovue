@@ -71,6 +71,7 @@
 <v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
+<v t="josephorr.20171117082339.1"><vh>Vue-Table 2</vh></v>
 </v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
@@ -863,7 +864,7 @@ There are two types of data nodes:
 * **dataSets**: these contain JSON data. 
 * **dataTables**: these contain CSV data.</t>
 <t tx="josephorr.20171109061151.1"></t>
-<t tx="josephorr.20171109061229.1">Years,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   $color
+<t tx="josephorr.20171109061229.1">Country,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   $color
 Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   #8e5ea2
 Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   #3cba9f
 Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    #3e95cd
@@ -929,5 +930,8 @@ The table component below is powered by [spatie/vue-table-component](https://git
      &lt;table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"&gt;&lt;/table-column&gt;
  &lt;/table-component&gt;</t>
 <t tx="josephorr.20171116140935.1"></t>
+<t tx="josephorr.20171117082339.1">@language html
+
+&lt;vctable&gt;&lt;/vctable&gt;</t>
 </tnodes>
 </leo_file>
