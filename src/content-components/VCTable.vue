@@ -5,14 +5,13 @@
 </template>
 
 <script>
+  import numeral from 'numeral'
   export default {
     name: 'vctable',
     components: {
     },
     props: {
       dataTable: String
-    },
-    methods: {
     },
     data () {
       return {
@@ -49,9 +48,16 @@
         const d = this.data
         let cols = ''
         this.cols.forEach(c => {
-          cols = cols + `<table-column show="${c}" label="${c}"></table-column>`
+          if (c.indexOf('$') === -1) {
+            let cellClass = ''
+            if (c.match(/^\d+$/)) {
+              cellClass = 'cell-class="number" :formatter="formatNumber"'
+            } else {
+              console.log('X', c)
+            }
+            cols = cols + `<table-column ${cellClass} show="${c}" label="${c}"></table-column>`
+          }
         })
-        debugger
         const template = `
             <table-component
               :data="data"
@@ -62,6 +68,11 @@
         `
         return {
           template, // use content as template for this component
+          methods: {
+            formatNumber (n) {
+              return numeral(n).format('0,0')
+            }
+          },
           data () {
             return {
               data: d
@@ -74,5 +85,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass" scoped>
+<style lang="sass">
+TD.number
+  text-align: right
 </style>

@@ -232,16 +232,18 @@ BUTTON
 
 .table-component__table th,
 .table-component__table td
-  padding: .3em 1.25em
+  padding: .3em .3em
   vertical-align: top
   text-align: left
+  white-space: nowrap
 
 .table-component__table th
   background-color: #e0e0e0
   color: #999
   text-transform: uppercase
   white-space: nowrap
-  font-size: .85em
+  text-align: center
+  // font-size: .85em
 
 .table-component__table tbody tr:nth-child(even)
   background-color: #f0f0f0
@@ -265,7 +267,7 @@ BUTTON
 
 .table-component__th--sort-asc:after,
 .table-component__th--sort-desc:after
-  position: absolute
+  // position: absolute
   left: .25em
   display: inline-block
   color: #bbb
@@ -275,3 +277,7 @@ BUTTON
 
 .table-component__th--sort-desc:after
   content: '↓'
+
+// Hack
+.content
+  padding-right: 2px

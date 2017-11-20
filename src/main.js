@@ -23,7 +23,7 @@ import VCTable from './content-components/VCTable'
 import Mermaid from './content-components/Mermaid'
 import SectionLink from './components/SectionLink'
 import MathJaxComponent from './components/MathJax'
-import { TableComponent, TableColumn } from './content-components/vctable-component'
+import { TableComponent, TableColumn } from 'vue-table-component'
 
 import {charts} from './content-components/Charts'
 charts(Vue)

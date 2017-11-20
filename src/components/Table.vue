@@ -70,7 +70,7 @@ TABLE
   border: 1px solid #ccc
   padding: 4px
   width: 100%
-  box-shadow: 2px 2px 6px #ccc
+  box-shadow: 1px 1px 7px #ccc
   padding-right: 8px
 CAPTION
   font-weight: bold

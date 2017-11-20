@@ -188,7 +188,8 @@ export default {
     background: #fff;
     padding:0px;
     padding-top: 20px;
-    max-width: 600px;
+    max-width: 620px;
+    width: 620px;
     min-width: 500px;
     height: calc(100vh - 26px);
     overflow: auto;

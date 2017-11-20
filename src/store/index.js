@@ -426,6 +426,10 @@ export default new Vuex.Store({
       state.filename = o.filename
     },
     RESETINDEX (state, o) {
+      if (_.isUndefined) {
+        console.log('No state in RESETINDEX')
+        return
+      }
       const c = loadIndex(state.leodata, state.leotext)
       state.idx = c.idx
       state.idxDocs = c.docs
