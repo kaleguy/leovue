@@ -21,6 +21,7 @@ import VueYouTubeEmbed from 'vue-youtube-embed'
 import VTable from './components/Table'
 import VCTable from './content-components/VCTable'
 import Mermaid from './content-components/Mermaid'
+import VSVG from './content-components/VSVG'
 import SectionLink from './components/SectionLink'
 import MathJaxComponent from './components/MathJax'
 import { TableComponent, TableColumn } from 'vue-table-component'
@@ -34,8 +35,9 @@ Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
 Vue.component('sectionlink', SectionLink)
-Vue.component('vtable', VTable)
-Vue.component('vctable', VCTable)
+Vue.component('v-table', VTable)
+Vue.component('v-svg', VSVG)
+Vue.component('vc-table', VCTable)
 Vue.component('mermaid', Mermaid)
 Vue.component('mj', MathJaxComponent)
 Vue.component('info-card', InfoCard)

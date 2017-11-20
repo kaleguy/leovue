@@ -7,7 +7,7 @@
 <script>
   import numeral from 'numeral'
   export default {
-    name: 'vctable',
+    name: 'vc-table',
     components: {
     },
     props: {
