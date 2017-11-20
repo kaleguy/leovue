@@ -27,7 +27,18 @@
 <body>
 <div class='content'>
 <h2>Mermaid Diagram</h2>
-<mermaid :height="200">
+
+Simple diagram with Mermaid:
+
+<pre>
+graph TD;
+    Anything-->B;
+    Everything-->C;
+    B-->D;
+    C-->D;
+</pre>    
+
+<mermaid :height="300">
 
 graph TD;
     Anything-->B;
