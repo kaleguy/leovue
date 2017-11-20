@@ -1,0 +1,59 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'>
+<h2>Multiple Graphs in one Diagram</h2>
+
+<pre>
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+</pre> 
+
+<mermaid height="200">
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+</mermaid>    </div>
+</body>
+</html>
