@@ -1,6 +1,6 @@
 <template>
     <div class="reveal">
-      <div class="slides" v-html="slideContent">
+      <component :is="currentContent"/>
       </div>
     </div>
 </template>
@@ -11,7 +11,8 @@
     data: function () {
       return {
         slideContent: '',
-        initialized: false
+        initialized: false,
+        currentContent: null
       }
     },
     methods: {
@@ -25,14 +26,28 @@
       if (!this.$store.initializedData) {
         this.$store.dispatch('loadLeo', {filename, route: this.$route})
       }
-      const slideContent = document.getElementById('slideContent').innerHTML
-      this.slideContent = slideContent
+      // const slideContent = document.getElementById('slideContent').innerHTML
+      // this.slideContent = slideContent
+      this.currentContent = this.dynComponent
+      // Reveal.initialize({}) // eslint-disable-line
     },
     updated () {
       if (!this.initialized) {
-        Reveal.initialize({}) // eslint-disable-line
+        // Reveal.initialize({}) // eslint-disable-line
       }
       this.initialized = true
+    },
+    computed: {
+      dynComponent () {
+        const content = document.getElementById('slideContent').innerHTML
+        const template = `<div class="slides">${content}</div>`
+        return {
+          template, // use content as template for this component
+          mounted () {
+            Reveal.initialize({}) // eslint-disable-line
+          }
+        }
+      }
     }
 
   }

@@ -1,4 +1,4 @@
-function presentation(name, data, index, theme, codeTheme) {
+function presentation(name, content, index, theme, codeTheme) {
 
   if (!name) { name = 'default' }
   if (!index) { index = 0 }
@@ -18,7 +18,8 @@ function presentation(name, data, index, theme, codeTheme) {
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/${codeTheme}.css">
-
+    <style type="text/css">
+    </style>
   <script>
     window.lconfig = {
       "presentationName": '${name}',
@@ -42,33 +43,16 @@ function presentation(name, data, index, theme, codeTheme) {
   	</head>
 	<body>
 	  <script type="template" id="slideContent">
-	  
-        <section>
-          <h2>Marvelous List</h2>
-          <ul>
-            <li>No order here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Fantastic Ordered List</h2>
-          <ol>
-            <li>One is smaller than...</li>
-            <li>Two is smaller than...</li>
-            <li>Three!</li>
-          </ol>
-        </section>	  
-	  
+	  ${content}	  
     </script>
 	  <div id="app-base"></div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/manifest.js"></script>
 		<script src="js/vendor.js"></script>
 		<script src="js/app.js"></script>
+
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration

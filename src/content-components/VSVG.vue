@@ -3,8 +3,11 @@
     <svg xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          :viewBox="viewBox"
-         version="1.1">
-    <slot></slot>
+         version="1.1"
+         style="height: 100%"
+      >
+      <rect width="100%" height="100%" fill="white" />
+      <slot></slot>
     </svg>
   </div>
 </template>
@@ -22,6 +25,10 @@
       height: {
         type: String,
         default: '400'
+      },
+      width: {
+        type: String,
+        default: '800'
       }
     },
     data () {
@@ -34,8 +41,9 @@
       id: function () {
       },
       style: function () {
-        const height = this.height || '400'
-        return 'height:' + height + 'px'
+        const height = this.height
+        const width = this.width
+        return `height:${height}px; max-width:${width}px; background: #fff; margin-left:auto; margin-right: auto;`
       }
     }
   }

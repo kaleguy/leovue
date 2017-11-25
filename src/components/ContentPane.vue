@@ -63,13 +63,13 @@ window.loadURL = function (src) {
   script.src = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData'
   document.body.appendChild(script)
 };
-function overrideXFrame(data) {
+function overrideXFrame(item, textItems) {
   var iframe = document.getElementsByTagName('iframe')[0];
   if (!iframe){ return }
   window.iframe = iframe
   var url = iframe.src
   if (url === 'about:blank') {
-    return loadPresentation(data, iframe)
+    return loadPresentation(item, textItems, iframe)
   }
   console.log('URL', url)
   if (!/^\s?xttp/.test(url)) { return }
@@ -79,8 +79,14 @@ function overrideXFrame(data) {
 }
 // end functions for dealing with x-frame headers
 
-function loadPresentation(data, iframe) {
-  const html = presentation()
+function loadPresentation(item, textItems, iframe) {
+  let content = ''
+  item.children.forEach(page => {
+    let pageContent = textItems[page.t]
+    content = content + '<section>' +  pageContent + '</section>'
+    // debugger
+  })
+  const html = presentation(item.name, content)
   iframe.contentWindow.document.open()
   // iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'))
   iframe.contentWindow.document.write(html)
@@ -163,8 +169,9 @@ export default {
   mounted () {
   },
   updated () {
-    overrideXFrame(this.data)
-    // MathJax.Hub.Queue(["Typeset", MathJax.Hub])
+    const id = this.$store.state.currentItem.id
+    const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
+    overrideXFrame(item, this.$store.state.leotext)
   },
   watch: {
   }
