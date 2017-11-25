@@ -1396,4 +1396,7 @@ body {
 .reveal .table-component__filter {
   display: none;
 }
+.reveal TABLE {
+  font-size: 30px
+}
 

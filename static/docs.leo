@@ -1387,7 +1387,7 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 &lt;/div&gt;</t>
 <t tx="josephorr.20171125134539.1">&lt;h4&gt;Math&lt;/h4&gt;
 
-&lt;p&gt;&lt;small&gt;Display math symbols with the MathJax Library&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Display math symbols with the MathJax Library&lt;/p&gt;
 
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
@@ -1397,7 +1397,9 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
 <t tx="josephorr.20171125174856.1">
-&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;</t>
+&lt;div style="width:600px"&gt;
+&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;
+&lt;/div&gt;</t>
 <t tx="josephorr.20171125175250.1">&lt;table-component
      :data="[
           { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },

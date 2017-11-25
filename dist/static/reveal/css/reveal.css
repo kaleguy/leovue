@@ -1385,3 +1385,15 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * PRESENTATIONS
+ *********************************************/
+.reveal CANVAS {
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal .table-component__filter {
+  display: none;
+}
+

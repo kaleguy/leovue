@@ -72,7 +72,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -119,6 +119,8 @@
 <v t="josephorr.20171121003503.1"><vh>SVG</vh></v>
 <v t="josephorr.20171121003508.1"><vh>Youtube</vh></v>
 <v t="josephorr.20171125134128.1"><vh>Charts</vh></v>
+<v t="josephorr.20171125174856.1"><vh>Tables</vh></v>
+<v t="josephorr.20171125175250.1"><vh>Sortable Table</vh></v>
 <v t="josephorr.20171125134539.1"><vh>Math</vh></v>
 <v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
 <v t="josephorr.20171121003539.1"><vh>Fragments</vh></v>
@@ -1019,7 +1021,8 @@ Leo Vue includes three components for displaying tables:
 This example uses the &lt;b&gt;vc-table&lt;/b&gt; component to display the data from the &lt;b&gt;worldpop&lt;/b&gt; dataTable. 
 &lt;/p&gt;
 
-&lt;vc-table dataTable="worldpop"&gt;&lt;/vc-table&gt;</t>
+&lt;vc-table dataTable="worldpop"&gt;&lt;/vc-table&gt;
+</t>
 <t tx="josephorr.20171118020637.1">@language md
 
 Leo Vue includes a component for displaying diagrams written for the [Mermaid library](https://mermaidjs.github.io/).
@@ -1393,5 +1396,23 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 &lt;mj&gt;
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
+<t tx="josephorr.20171125174856.1">
+&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;</t>
+<t tx="josephorr.20171125175250.1">&lt;table-component
+     :data="[
+          { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
+          { firstName: 'Paul', lastName: 'McCartney', instrument: 'Bass', birthday: '18/06/1942', songs: 70 },
+          { firstName: 'George', lastName: 'Harrison', instrument: 'Guitar', birthday: '25/02/1943', songs: 22 },
+          { firstName: 'Ringo', lastName: 'Starr', instrument: 'Drums', birthday: '07/07/1940', songs: 2 },
+     ]"
+     sort-by="songs"
+     sort-order="asc"
+&gt;
+     &lt;table-column show="firstName" label="First name"&gt;&lt;/table-column&gt;
+     &lt;table-column show="lastName" label="Last name"&gt;&lt;/table-column&gt;
+     &lt;table-column show="instrument" label="Instrument"&gt;&lt;/table-column&gt;
+     &lt;table-column show="songs" label="Songs" data-type="numeric"&gt;&lt;/table-column&gt;
+     &lt;table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"&gt;&lt;/table-column&gt;
+ &lt;/table-component&gt;</t>
 </tnodes>
 </leo_file>
