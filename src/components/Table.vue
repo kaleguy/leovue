@@ -48,7 +48,10 @@ export default {
     }
   },
   mounted () {
-    const tableObj = this.$store.state.dataTables[this.dataTable]
+    let tableObj = this.$store.state.dataTables[this.dataTable]
+    if (!tableObj) {
+      tableObj = window.parent.lconfig.dataTables[this.dataTable]
+    }
     if (tableObj) {
       this.table = tableObj.arr
       if (!this.hideTitle) { this.caption = tableObj.title }

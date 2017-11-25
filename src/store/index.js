@@ -52,6 +52,7 @@ function showText (context, text, id) {
     return
   }
   text = util.formatText(text)
+  console.log('TXT', text)
   // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
   // hash of all content items
@@ -313,6 +314,7 @@ function loadDataSets (context, data) {
   data.data.forEach(d => {
     loadDataSet(context, d, textItems)
   })
+  window.lconfig.dataSets = context.state.dataSets
 }
 function loadDataSet (context, item, textItems) {
   const text = textItems[item.t]
@@ -336,6 +338,7 @@ function loadDataTables (context, data) {
   data.data.forEach(d => {
     loadDataTable(context, d, textItems)
   })
+  window.lconfig.dataTables = context.state.dataTables
 }
 function loadDataTable (context, item, textItems) {
   const text = textItems[item.t]

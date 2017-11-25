@@ -74,7 +74,7 @@ function charts (Vue) {
       },
       mounted () {
         const options = {
-          responsive: true,
+          responsive: false,
           maintainAspectRatio: false,
           scales: {
             xAxes: [ {
@@ -94,9 +94,15 @@ function charts (Vue) {
         let data = null
         if (this.dataSet) {
           data = this.$store.state.dataSets[this.dataSet]
+          if (!data) {
+            data = window.parent.lconfig.dataSets[this.dataSet]
+          }
         }
         if (this.dataTable) {
           let d = this.$store.state.dataTables[this.dataTable]
+          if (!d) {
+            d = window.parent.lconfig.dataTables[this.dataTable]
+          }
           const dataArray = d.arr
           if (this.col) {
             let colIndex = dataArray[0].findIndex(c => c === this.col)
