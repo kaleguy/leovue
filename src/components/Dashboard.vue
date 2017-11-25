@@ -56,6 +56,7 @@ li {
 }
 #main {
   height: 100%;
+  position: relative;
 }
 a {
   color: #42b983;
@@ -64,6 +65,6 @@ a {
   height: 100%;
 }
 .header-space {
-  padding-top: 26px;
+  // padding-top: 33px;
 }
 </style>

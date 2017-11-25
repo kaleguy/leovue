@@ -1,3 +1,4 @@
+
 <template>
   <div class="treeviewer">
     <splitpane leftPaneStyle="width:360px">
@@ -16,6 +17,7 @@
     </splitpane>
   </div>
 </template>
+<br/>
 
 <script>
   import Item from './Item'
@@ -52,6 +54,7 @@
 
   }
 </script>
+<br/>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
 .treeviewer

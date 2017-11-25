@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import AppBase from './AppBase.vue'
 import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
@@ -56,12 +57,19 @@ Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
 
+let template = '<App/>'
+let el = '#app'
+if (window.lconfig.appBase) {
+  template = '<AppBase />'
+  el = '#app-base'
+}
+
 /* eslint-disable no-new */
 require('./simpledrag.js')
 new Vue({
-  el: '#app',
+  el,
   store,
   router,
-  template: '<App/>',
-  components: { App }
+  template: template,
+  components: { App, AppBase }
 })

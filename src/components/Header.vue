@@ -2,7 +2,7 @@
   <div>
     <div class="holder">
       <div class="header" v-if="config.showHeader">
-        <span v-if="config.showAppTitle" class="app-title">Leo Viewer</span>
+        <span v-if="config.showAppTitle" class="app-title">Leo Vue</span>
         <span v-if="config.showAppTitle && config.docTitle">: </span>
         <span class="doc-title">{{ config.docTitle }}</span>
         <div @click="toggle" class="icon icon-button">

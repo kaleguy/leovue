@@ -11,3 +11,5 @@ src/components/VueInstant.vue
 src/components/ContentPane.vue
 src/components/MathJax.vue
 src/content-components/vctable-component
+static/
+src/lib/presentation.js

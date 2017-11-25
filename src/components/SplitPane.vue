@@ -8,10 +8,12 @@
       <div class="panes-separator"
            id="panes-separator">
            <div class="split-left"
-                @click="slide('left')"><icon name="angle-double-left"></icon></div>
+                @click="slide('left')"><icon name="angle-double-left"></icon>
+           </div>
            <div class="split-right"
                 v-show="showRightButton"
-                @click="slide('right')"><icon name="angle-double-right"></icon></div>
+                @click="slide('right')"><icon name="angle-double-right"></icon>
+           </div>
       </div>
       <div id="right-pane" class="right-pane">
         <slot name="right"></slot>
@@ -120,12 +122,14 @@
   }
   #left-pane {
     overflow-y: scroll;
+    padding-top: 33px;
   }
   .split-left, .split-right {
     margin-left: 0px;
     text-align: center;
-    color: #fff;
+    color: #999;
     cursor: pointer;
+    width: 11px;
   }
   .split-left {
     margin-top: calc(50vh - 116px);

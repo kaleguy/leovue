@@ -153,6 +153,20 @@ function getUrlFromTitle (title) {
   }
   return {url, label}
 }
+function showPresentation (context, title, id) {
+  const iframeHTML = `
+    <div style="width:100%">
+    <iframe
+       src="about:blank" height="100%" width="100%"
+       marginwidth="0" marginheight="0"
+       hspace="0" vspace="0"
+       frameBorder="0" />
+    </div>
+  `
+  context.commit('IFRAME_HTML', {iframeHTML})
+  context.commit('CONTENT_PANE', {type: 'site'})
+}
+
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title)
   console.log('LABEL:', label)
@@ -575,6 +589,9 @@ export default new Vuex.Store({
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
       if (item) {
         item = item[0]
+        if (/^@presentation /.test(item.name)) {
+          return showPresentation(context, item.name, id)
+        }
         if (/^\[/.test(item.name)) {
           if (/\.leo\)$/.test(item.name)) {
             console.log('load leo')

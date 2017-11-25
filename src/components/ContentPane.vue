@@ -34,6 +34,7 @@
 
 <script>
 import router from '../router'
+import {presentation} from '../lib/presentation'
 
 // functions for dealing with x-frame headers
 window.getData = function (data) {
@@ -62,11 +63,14 @@ window.loadURL = function (src) {
   script.src = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData'
   document.body.appendChild(script)
 };
-function overrideXFrame() {
+function overrideXFrame(data) {
   var iframe = document.getElementsByTagName('iframe')[0];
   if (!iframe){ return }
   window.iframe = iframe
-  var url = iframe.src;
+  var url = iframe.src
+  if (url === 'about:blank') {
+    return loadPresentation(data, iframe)
+  }
   console.log('URL', url)
   if (!/^\s?xttp/.test(url)) { return }
   window.url = url.replace(/^s?xttp/, 'http')
@@ -74,6 +78,14 @@ function overrideXFrame() {
   loadURL(window.url)
 }
 // end functions for dealing with x-frame headers
+
+function loadPresentation(data, iframe) {
+  const html = presentation()
+  iframe.contentWindow.document.open()
+  // iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'))
+  iframe.contentWindow.document.write(html)
+  iframe.contentWindow.document.close()
+}
 
 export default {
   name: 'contentpane',
@@ -151,7 +163,7 @@ export default {
   mounted () {
   },
   updated () {
-    overrideXFrame()
+    overrideXFrame(this.data)
     // MathJax.Hub.Queue(["Typeset", MathJax.Hub])
   },
   watch: {
@@ -187,11 +199,11 @@ export default {
     flex: auto;
     background: #fff;
     padding:0px;
-    padding-top: 20px;
+    padding-top: 33px;
     max-width: 620px;
     width: 620px;
     min-width: 500px;
-    height: calc(100vh - 26px);
+    height: calc(100vh - 33px);
     overflow: auto;
   }
   p {
