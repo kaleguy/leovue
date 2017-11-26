@@ -102,9 +102,6 @@ export default {
     }
   },
   methods: {
-    goSection () {
-      console.log('HERE')
-    },
     goNext () {
       const next = this.$store.state.currentItem.next
       this.resetCurrentItem(next)
@@ -142,7 +139,6 @@ export default {
       }
     },
     currentItemContent () {
-      // console.log('xxxx', this.$store.state.currentItemContent)
       return this.$store.state.currentItemContent
     },
     iframeHTML () {

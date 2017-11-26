@@ -47,12 +47,10 @@ function showText (context, text, id) {
   context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
     text = ''
-    // console.log('NO TEXT', id, context.state.leotext)
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
   text = util.formatText(text)
-  console.log('TXT', text)
   // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
   // hash of all content items
