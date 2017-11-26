@@ -1,6 +1,6 @@
 <template>
-  <div style="margin-right:8px">
-   <table>
+  <div>
+   <table :style="style">
      <caption>{{caption}}</caption>
      <thead>
        <th v-for="(cell, c) in firstRow" v-if="dataCol(c)">{{ cell }}</th>
@@ -19,7 +19,15 @@ export default {
   name: 'vtable',
   props: {
     dataTable: String,
-    hideTitle: Boolean
+    hideTitle: Boolean,
+    shadow: {
+      type: Boolean,
+      default: true
+    },
+    fontSize: {
+      type: String,
+      default: '20'
+    }
   },
   components: {
   },
@@ -45,6 +53,13 @@ export default {
     },
     firstRow: function () {
       return this.table[0]
+    },
+    style: function () {
+      let shadowStyle = 'box-shadow: 1px 1px 7px #ccc'
+      if (!this.shadowStyle) {
+        shadowStyle = ''
+      }
+      return `${shadowStyle}; font-size:${this.fontSize}px;`
     }
   },
   mounted () {
@@ -73,16 +88,13 @@ TABLE
   border: 1px solid #ccc
   padding: 4px
   width: 100%
-  box-shadow: 1px 1px 7px #ccc
   padding-right: 8px
 CAPTION
   font-weight: bold
 TH
-  font-size: 13px
   text-align: right
   padding-left: 8px
 TD
-  font-size: 13px
   text-align: right
   padding: 0
   padding-left: 4px

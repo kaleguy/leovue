@@ -18,13 +18,13 @@
     methods: {
     },
     mounted () {
-      let filename = 'static/docs'
+      // let filename = 'static/docs'
       if (window.lconfig.filename) {
-        filename = window.lconfig.filename
+      //  filename = window.lconfig.filename
       }
-      console.log('LOADING APP BASE')
+      // console.log('LOADING APP BASE')
       if (!this.$store.initializedData) {
-        this.$store.dispatch('loadLeo', {filename, route: this.$route})
+      //  this.$store.dispatch('loadLeo', {filename, route: this.$route})
       }
       // const slideContent = document.getElementById('slideContent').innerHTML
       // this.slideContent = slideContent

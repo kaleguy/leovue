@@ -109,7 +109,6 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171125091516.1"><vh>temp</vh></v>
 <v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -957,7 +956,7 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the &lt;&lt;Data&gt;&gt; node below).
 &lt;/p&gt;
 &lt;br&gt;
-&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;</t>
+&lt;v-table :dataTable="'worldpop'" &gt;&lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
 Leo Vue is currently at version 1.0.2 
@@ -1163,13 +1162,16 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
 
 &lt;p&gt;Display it with Leo Vue.&lt;/p&gt;</t>
 <t tx="josephorr.20171121003459.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
-&lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
 &lt;p&gt;
   &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; / &lt;a href="http://twitter.com/hakimel"&gt;@hakimel&lt;/a&gt;&lt;/small&gt;
 &lt;/p&gt;
-&lt;p&gt;
-reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create intereactive slide desks using HTML&lt;/li&gt;
+  &lt;li&gt;Create decks in Leo&lt;/li&gt;
+  &lt;li&gt;Display with Leo Vue&lt;/li&gt;
+  &lt;li&gt;Content can include Vue.js components&lt;/li&gt;
+&lt;/ul&gt;
+
 
 
 </t>
@@ -1225,169 +1227,45 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 &lt;p&gt;Highlight &lt;span class="fragment highlight-red"&gt;red&lt;/span&gt; &lt;span class="fragment highlight-blue"&gt;blue&lt;/span&gt; &lt;span class="fragment highlight-green"&gt;green&lt;/span&gt;&lt;/p&gt;
 &lt;/section&gt;
 </t>
-<t tx="josephorr.20171125091516.1">        &lt;section id="transitions"&gt;
-          &lt;h2&gt;Transition Styles&lt;/h2&gt;
-          &lt;p&gt;
-            You can select from different transitions, like: &lt;br&gt;
-            &lt;a href="?transition=none#/transitions"&gt;None&lt;/a&gt; -
-            &lt;a href="?transition=fade#/transitions"&gt;Fade&lt;/a&gt; -
-            &lt;a href="?transition=slide#/transitions"&gt;Slide&lt;/a&gt; -
-            &lt;a href="?transition=convex#/transitions"&gt;Convex&lt;/a&gt; -
-            &lt;a href="?transition=concave#/transitions"&gt;Concave&lt;/a&gt; -
-            &lt;a href="?transition=zoom#/transitions"&gt;Zoom&lt;/a&gt;
-          &lt;/p&gt;
-        &lt;/section&gt;
-
- 
-        &lt;section&gt;
-          &lt;section data-background="#dddddd"&gt;
-            &lt;h2&gt;Slide Backgrounds&lt;/h2&gt;
-            &lt;p&gt;
-              Set &lt;code&gt;data-background="#dddddd"&lt;/code&gt; on a slide to change the background color. All CSS color formats are supported.
-            &lt;/p&gt;
-            &lt;a href="#" class="navigate-down"&gt;
-              &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
-            &lt;/a&gt;
-          &lt;/section&gt;
-          &lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"&gt;
-            &lt;h2&gt;Image Backgrounds&lt;/h2&gt;
-            &lt;pre&gt;&lt;code class="hljs"&gt;&amp;lt;section data-background="image.png"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-          &lt;/section&gt;
-          &lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px"&gt;
-            &lt;h2&gt;Tiled Backgrounds&lt;/h2&gt;
-            &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-          &lt;/section&gt;
-          &lt;section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000"&gt;
-            &lt;div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;"&gt;
-              &lt;h2&gt;Video Backgrounds&lt;/h2&gt;
-              &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-video="video.mp4,video.webm"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-            &lt;/div&gt;
-          &lt;/section&gt;
-          &lt;section data-background="http://i.giphy.com/90F8aUepslB84.gif"&gt;
-            &lt;h2&gt;... and GIFs!&lt;/h2&gt;
-          &lt;/section&gt;
-        &lt;/section&gt;
-
-        &lt;section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom"&gt;
-          &lt;h2&gt;Background Transitions&lt;/h2&gt;
-          &lt;p&gt;
-            Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-          &lt;/p&gt;
-          &lt;pre&gt;&lt;code class="hljs"&gt;Reveal.configure({ backgroundTransition: 'zoom' })&lt;/code&gt;&lt;/pre&gt;
-        &lt;/section&gt;
-
-        &lt;section data-transition="slide" data-background="#b5533c" data-background-transition="zoom"&gt;
-          &lt;h2&gt;Background Transitions&lt;/h2&gt;
-          &lt;p&gt;
-            You can override background transitions per-slide.
-          &lt;/p&gt;
-          &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-transition="zoom"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Marvelous List&lt;/h2&gt;
-          &lt;ul&gt;
-            &lt;li&gt;No order here&lt;/li&gt;
-            &lt;li&gt;Or here&lt;/li&gt;
-            &lt;li&gt;Or here&lt;/li&gt;
-            &lt;li&gt;Or here&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Fantastic Ordered List&lt;/h2&gt;
-          &lt;ol&gt;
-            &lt;li&gt;One is smaller than...&lt;/li&gt;
-            &lt;li&gt;Two is smaller than...&lt;/li&gt;
-            &lt;li&gt;Three!&lt;/li&gt;
-          &lt;/ol&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Tabular Tables&lt;/h2&gt;
-          &lt;table&gt;
-            &lt;thead&gt;
-            &lt;tr&gt;
-              &lt;th&gt;Item&lt;/th&gt;
-              &lt;th&gt;Value&lt;/th&gt;
-              &lt;th&gt;Quantity&lt;/th&gt;
-            &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Apples&lt;/td&gt;
-              &lt;td&gt;$1&lt;/td&gt;
-              &lt;td&gt;7&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Lemonade&lt;/td&gt;
-              &lt;td&gt;$2&lt;/td&gt;
-              &lt;td&gt;18&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-              &lt;td&gt;Bread&lt;/td&gt;
-              &lt;td&gt;$3&lt;/td&gt;
-              &lt;td&gt;2&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;/tbody&gt;
-          &lt;/table&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Clever Quotes&lt;/h2&gt;
-          &lt;p&gt;
-            These guys come in two forms, inline: &lt;q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"&gt;
-            &amp;ldquo;The nice thing about standards is that there are so many to choose from&amp;rdquo;&lt;/q&gt; and block:
-          &lt;/p&gt;
-          &lt;blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"&gt;
-            &amp;ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&amp;rdquo;
-          &lt;/blockquote&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Intergalactic Interconnections&lt;/h2&gt;
-          &lt;p&gt;
-            You can link between slides internally,
-            &lt;a href="#/2/3"&gt;like this&lt;/a&gt;.
-          &lt;/p&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-          &lt;h2&gt;Speaker View&lt;/h2&gt;
-          &lt;p&gt;There's a &lt;a href="https://github.com/hakimel/reveal.js#speaker-notes"&gt;speaker view&lt;/a&gt;. It includes a timer, preview of the upcoming slide as well as your speaker notes.&lt;/p&gt;
-          &lt;p&gt;Press the &lt;em&gt;S&lt;/em&gt; key to try it out.&lt;/p&gt;
-
-          &lt;aside class="notes"&gt;
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-          &lt;/aside&gt;
-        &lt;/section&gt;
-
-
-        &lt;section style="text-align: left;"&gt;
-          &lt;h1&gt;THE END&lt;/h1&gt;
-          &lt;p&gt;
-            - &lt;a href="http://slides.com"&gt;Try the online editor&lt;/a&gt; &lt;br&gt;
-            - &lt;a href="https://github.com/hakimel/reveal.js"&gt;Source code &amp;amp; documentation&lt;/a&gt;
-          &lt;/p&gt;
-        &lt;/section&gt;
-</t>
-<t tx="josephorr.20171125133856.1">&lt;ul&gt;
-  &lt;li&gt;Leo: Outlining Editor&lt;/li&gt;
-  &lt;li&gt;Vue: Component Framework&lt;/li&gt;
-  &lt;li&gt;Reveal.js: HTML Presentations&lt;/li&gt;
+<t tx="josephorr.20171125133856.1">&lt;h1&gt;Leo&lt;/h1&gt;
+&lt;p&gt;
+  &lt;small&gt;Created by &lt;a href="http://leoeditor.com"&gt;Edward K Ream&lt;/a&gt; &lt;/small&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Outlining Editor&lt;/li&gt;
+  &lt;li&gt;A single element can be on multiple nodes
+  &lt;li&gt;Scriptable IDE&lt;/li&gt;
+  &lt;li&gt;Metatext Editor&lt;/li&gt;
 &lt;/ul&gt;</t>
-<t tx="josephorr.20171125133910.1">&lt;h1&gt;Vue&lt;/h1&gt;</t>
-<t tx="josephorr.20171125133949.1">&lt;p&gt;Add Vue components to your slides&lt;/p&gt;
+<t tx="josephorr.20171125133910.1">&lt;h1&gt;Vue.js&lt;/h1&gt;'
+&lt;ul&gt;
+  &lt;li&gt;App/Component Framework&lt;/li&gt;
+  &lt;li&gt;Small and Fast&lt;/li&gt;
+  &lt;li&gt;Many Components Available&lt;/li&gt;
+  &lt;li&gt;74k+ Stars on Github&lt;/li&gt;
+&lt;/ul&gt;</t>
+<t tx="josephorr.20171125133949.1">&lt;h4&gt;
+Vue.js components in Leo Vue
+&lt;/h4&gt;
 
-</t>
+&lt;ul&gt;
+  &lt;li&gt;Charts&lt;/li&gt;
+  &lt;li&gt;Tables from Data Nodes&lt;/li&gt;
+  &lt;li&gt;SVG&lt;/li&gt;
+  &lt;li&gt;YouTube Videos&lt;/li&gt;
+  &lt;li&gt;More components included, or add your own&lt;/li&gt;
+&lt;/ul&gt;</t>
 <t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
-&lt;div style="height:400px;width:800px;margin-left:auto;margin-right:auto;position:relative"&gt;
-&lt;line-chart :dataTable="'worldpop'" :gridLines="true" /&gt;
-&lt;/div&gt;</t>
+&lt;line-chart 
+  :dataTable="'worldpop'" 
+  :gridLines="true" 
+  width="700"
+  height="500"
+/&gt;
+</t>
 <t tx="josephorr.20171125134539.1">&lt;h4&gt;Math&lt;/h4&gt;
 
-&lt;p&gt;Display math symbols with the MathJax Library&lt;/p&gt;
+&lt;p&gt;Math symbols via the MathJax Library&lt;/p&gt;
 
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
@@ -1396,11 +1274,13 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 &lt;mj&gt;
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
-<t tx="josephorr.20171125174856.1">
-&lt;div style="width:600px"&gt;
-&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;
-&lt;/div&gt;</t>
-<t tx="josephorr.20171125175250.1">&lt;table-component
+<t tx="josephorr.20171125174856.1">&lt;h4&gt;Tables&lt;/h4&gt;
+&lt;p&gt;Display tables from CSV data&lt;/p&gt;
+
+&lt;v-table :dataTable="'worldpop'" fontSize="20"&gt;&lt;/v-table&gt;
+</t>
+<t tx="josephorr.20171125175250.1">&lt;h4&gt;Tables with Sort / Format&lt;/h4&gt;
+&lt;table-component
      :data="[
           { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
           { firstName: 'Paul', lastName: 'McCartney', instrument: 'Bass', birthday: '18/06/1942', songs: 70 },

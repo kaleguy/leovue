@@ -957,7 +957,7 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the &lt;&lt;Data&gt;&gt; node below).
 &lt;/p&gt;
 &lt;br&gt;
-&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;</t>
+&lt;v-table :dataTable="'worldpop'" &gt;&lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
 Leo Vue is currently at version 1.0.2 
@@ -1381,13 +1381,18 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 <t tx="josephorr.20171125133949.1">&lt;p&gt;Add Vue components to your slides&lt;/p&gt;
 
 </t>
-<t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
-&lt;div style="height:400px;width:800px;margin-left:auto;margin-right:auto;position:relative"&gt;
-&lt;line-chart :dataTable="'worldpop'" :gridLines="true" /&gt;
-&lt;/div&gt;</t>
+<t tx="josephorr.20171125134128.1">&lt;p&gt;Add Charts with Vue-Chartjs&lt;/p&gt;
+
+&lt;line-chart 
+  :dataTable="'worldpop'" 
+  :gridLines="true" 
+  width="700"
+  height="500"
+/&gt;
+</t>
 <t tx="josephorr.20171125134539.1">&lt;h4&gt;Math&lt;/h4&gt;
 
-&lt;p&gt;&lt;small&gt;Display math symbols with the MathJax Library&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Display math symbols with the MathJax Library&lt;/p&gt;
 
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
@@ -1397,7 +1402,9 @@ reveal.js enables you to create beautiful interactive slide decks using HTML. Th
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
 <t tx="josephorr.20171125174856.1">
-&lt;v-table :dataTable="'worldpop'"&gt;&lt;/v-table&gt;</t>
+&lt;div style="width:600px"&gt;
+&lt;v-table :dataTable="'worldpop'" fontSize="25"&gt;&lt;/v-table&gt;
+&lt;/div&gt;</t>
 <t tx="josephorr.20171125175250.1">&lt;table-component
      :data="[
           { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
