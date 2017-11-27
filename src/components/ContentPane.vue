@@ -35,6 +35,7 @@
 <script>
 import router from '../router'
 import {presentation} from '../lib/presentation'
+const util = require('../util.js')
 
 // functions for dealing with x-frame headers
 window.getData = function (data) {
@@ -83,7 +84,7 @@ function loadPresentation(item, textItems, iframe) {
   let content = ''
   item.children.forEach(page => {
     let pageContent = textItems[page.t]
-    content = content + '<section>' +  pageContent + '</section>'
+    content = content + '<section>' +  util.formatText(pageContent, true) + '</section>'
     // debugger
   })
   const html = presentation(item.name, content)

@@ -70,11 +70,15 @@ function charts (Vue) {
         dataTable: String,
         title: String,
         col: String,
-        gridLines: Boolean
+        gridLines: Boolean,
+        responsive: {
+          type: Boolean,
+          default: true
+        }
       },
       mounted () {
         const options = {
-          responsive: false,
+          responsive: this.responsive,
           maintainAspectRatio: false,
           scales: {
             xAxes: [ {

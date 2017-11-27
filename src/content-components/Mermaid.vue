@@ -10,7 +10,14 @@
     components: {
     },
     props: {
-      height: Number
+      height: {
+        type: String,
+        default: '300'
+      },
+      width: {
+        type: String,
+        default: '400'
+      }
     },
     methods: {
     },
@@ -23,6 +30,7 @@
     mounted () {
       const mermaidEl = document.getElementsByClassName('mermaid')[0]
       mermaidEl.style.height = this.height + 'px'
+      mermaidEl.style.width = this.width + 'px'
       mermaid.init(undefined, mermaidEl) // eslint-disable-line
     },
     computed: {
@@ -34,4 +42,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+.mermaid
+  margin-left: auto
+  margin-right: auto
 </style>

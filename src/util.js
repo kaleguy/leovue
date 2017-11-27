@@ -75,7 +75,7 @@ function parseQueryString (config, url) {
  * @param text {string}
  * @returns {string}
  */
-function formatText (text) {
+function formatText (text, noWrapper) {
   if (!text) { return '' }
   let language = getLanguage(text)
 
@@ -109,6 +109,9 @@ function formatText (text) {
       const mu = hljs.highlight(language, text)
       text = mu.value
       text = `<pre>${text}</pre>`
+  }
+  if (noWrapper) {
+    return text
   }
   text = `<div class='content'>${text}</div>`
   return text

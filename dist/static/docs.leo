@@ -68,11 +68,11 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20171107100246.1" a="E"><vh>Math</vh>
+<v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -89,7 +89,7 @@
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
 <v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>Pie Chart from dataTable</vh></v>
@@ -121,8 +121,9 @@
 <v t="josephorr.20171125174856.1"><vh>Tables</vh></v>
 <v t="josephorr.20171125175250.1"><vh>Sortable Table</vh></v>
 <v t="josephorr.20171125134539.1"><vh>Math</vh></v>
+<v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
+<v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
 <v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
-<v t="josephorr.20171121003539.1"><vh>Fragments</vh></v>
 </v>
 </v>
 </v>
@@ -1039,7 +1040,7 @@ Leo Vue can also display any content supported by modern browsers, including SVG
 
 See the Leo file for the source for this diagram.
 
-&lt;mermaid height="500"&gt;
+&lt;mermaid height="500" width="600"&gt;
 
 sequenceDiagram
     participant Alice
@@ -1068,7 +1069,7 @@ graph TD;
     C--&gt;D;
 &lt;/pre&gt;    
 
-&lt;mermaid :height="300"&gt;
+&lt;mermaid height="300" width="250"&gt;
 
 graph TD;
     Anything--&gt;B;
@@ -1148,7 +1149,7 @@ A simple SVG wrapper component is included to make SVG sizing for the Leo Vue co
 Below is an example of an SVG chart created on Sketch.io, exported to SVG and displayed with v-svg.
 &lt;/p&gt;
 
-&lt;v-svg height="400"&gt;
+&lt;v-svg height="600" width="600"&gt;
 &lt;defs&gt;&lt;filter id="dropShadow"&gt;&lt;feGaussianBlur in="SourceAlpha" stdDeviation="1.7" result="blur"/&gt;&lt;feOffset in="blur" dx="3" dy="3" result="offsetBlur"/&gt;&lt;feFlood flood-color="#3D4574" flood-opacity="0.4" result="offsetColor"/&gt;&lt;feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/&gt;&lt;feBlend in="SourceGraphic" in2="offsetBlur"/&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;g transform="translate(0.5,0.5)" filter="url(#dropShadow)"&gt;&lt;rect x="202" y="177" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(203.5,178.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;Process 1&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;System Study&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Preparation&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="212" y="67" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(221.5,90.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="70" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 70px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Engineering&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="35" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Engineering&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="6" y="192" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(23.5,215.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="54" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 54px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Investors&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="27" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Investors&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="167" y="332" width="400" height="50" fill="#ffcccc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;path d="M 186 332 L 186 382 M 548 332 L 548 382" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g transform="translate(255.5,350.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="222" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 224px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;ON-DEMAND SYSTEM DEVELOPMENT&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="111" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;ON-DEMAND SYSTEM DEVELOPMENT&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="356" y="87" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(357.5,88.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;Process 2&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;System Analysis&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="647" y="312" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(648.5,313.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;&lt;strong&gt;Process&lt;/strong&gt; 3&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;List Possible&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;System Solutions&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="526" y="182" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(527.5,183.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;&lt;strong&gt;Process&lt;/strong&gt; 4&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Detail Chosen&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Solution&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="506" y="451" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(507.5,452.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;&lt;strong&gt;Process&lt;/strong&gt; 5&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;New System&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Design&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="154.5" y="451" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(156.5,452.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;&lt;strong&gt;Process&lt;/strong&gt; 6&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;New&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;System&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Construction&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="657" y="1" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(664.5,24.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="74" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 74px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Management&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="37" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Management&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="319.5" y="591" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(327.5,614.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="74" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 74px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Management&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="37" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Management&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="1" y="466" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(10.5,489.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="70" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 70px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Engineering&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="35" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Engineering&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;rect x="516" y="591" width="90" height="60" fill="#ffffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(536.5,614.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="48" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 48px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"&gt;Vendors&lt;/div&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="24" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;Vendors&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;path d="M 257 127 L 257 168.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 257 174.76 L 253 166.76 L 257 168.76 L 261 166.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 96 222 L 193.76 222" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 199.76 222 L 191.76 226 L 193.76 222 L 191.76 218 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;rect x="309.5" y="451" width="110" height="90" rx="13.5" ry="13.5" fill="#e6ffcc" stroke="#000000" stroke-width="3" pointer-events="none"/&gt;&lt;g transform="translate(311.5,452.5)"&gt;&lt;switch&gt;&lt;foreignObject style="overflow:visible;" pointer-events="all" width="106" height="86" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"&gt;&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 107px; height: 87px; overflow: hidden; white-space: nowrap; font-weight: bold; text-align: center;"&gt;&lt;p style="margin: 0px ; margin-top: 4px ; text-align: center ; text-decoration: underline"&gt;&lt;strong&gt;&lt;strong&gt;Process&lt;/strong&gt; 7&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr /&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;New System&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Startup and&lt;/p&gt;&lt;p style="margin: 0px ; margin-left: 8px"&gt;Testing&lt;/p&gt;&lt;/div&gt;&lt;/foreignObject&gt;&lt;text x="53" y="49" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold"&gt;[Not supported by viewer]&lt;/text&gt;&lt;/switch&gt;&lt;/g&gt;&lt;path d="M 506 496 L 419.5 496" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="145.5" y="204.5"&gt;Desired &lt;/text&gt;&lt;text x="145.5" y="218.5"&gt;functionality&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="221.5" y="149.5"&gt;Desired &lt;/text&gt;&lt;text x="221.5" y="163.5"&gt;functionality&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="166.5" y="294.5"&gt;Documentation&lt;/text&gt;&lt;text x="166.5" y="308.5"&gt;from similar projects&lt;/text&gt;&lt;/g&gt;&lt;path d="M 226 332 L 226 321 Q 226 311 226 301 L 226 275.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 226 269.24 L 230 277.24 L 226 275.24 L 222 277.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 246 267 L 246 291 Q 246 301 246 311 L 246 323.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 246 329.76 L 242 321.76 L 246 323.76 L 250 321.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="286.5" y="294.5"&gt;Elaborate&lt;/text&gt;&lt;text x="286.5" y="308.5"&gt;cost/benefit&lt;/text&gt;&lt;text x="286.5" y="322.5"&gt;ratio&lt;/text&gt;&lt;/g&gt;&lt;path d="M 406 332 L 406 261 Q 406 251 406 241 L 406 185.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 406 179.24 L 410 187.24 L 406 185.24 L 402 187.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 426 177 L 426 251 Q 426 261 426 271 L 426 323.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 426 329.76 L 422 321.76 L 426 323.76 L 430 321.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="360.5" y="234.5"&gt;Existing&lt;/text&gt;&lt;text x="360.5" y="248.5"&gt;documentation&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="461.5" y="204.5"&gt;Necessary&lt;/text&gt;&lt;text x="461.5" y="218.5"&gt;resources&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="525.5" y="53.5"&gt;Progress&lt;/text&gt;&lt;text x="525.5" y="67.5"&gt;reports&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="620.5" y="99.5"&gt;Progress&lt;/text&gt;&lt;text x="620.5" y="113.5"&gt;reports&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="731.5" y="214.5"&gt;Progress&lt;/text&gt;&lt;text x="731.5" y="228.5"&gt;reports&lt;/text&gt;&lt;/g&gt;&lt;path d="M 411 87 L 411 41 Q 411 31 421 31 L 648.76 31" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 654.76 31 L 646.76 35 L 648.76 31 L 646.76 27 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 581 182 L 581 132 Q 581 122 591 122 L 670 122 Q 680 122 680 112 L 680 69.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 680 63.24 L 684 71.24 L 680 69.24 L 676 71.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 702 312 L 702 196.5 Q 702 186.5 702 176.5 L 702 69.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 702 63.24 L 706 71.24 L 702 69.24 L 698 71.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 536 272 L 536 291 Q 536 301 536 311 L 536 323.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 536 329.76 L 532 321.76 L 536 323.76 L 540 321.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 486 332 L 486 237 Q 486 227 496 227 L 517.76 227" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 523.76 227 L 515.76 231 L 517.76 227 L 515.76 223 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="510.5" y="294.5"&gt;Existing&lt;/text&gt;&lt;text x="510.5" y="308.5"&gt;Models&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="595.5" y="294.5"&gt;Equipment&lt;/text&gt;&lt;text x="595.5" y="308.5"&gt;specification&lt;/text&gt;&lt;/g&gt;&lt;path d="M 567 351 L 606 351 Q 616 351 626 351 L 638.76 351" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 644.76 351 L 636.76 355 L 638.76 351 L 636.76 347 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 647 371 L 626 371 Q 616 371 606 371 L 575.24 371" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 569.24 371 L 577.24 367 L 575.24 371 L 577.24 375 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="601.5" y="344.5"&gt;Resources&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="610.5" y="384.5"&gt;System &lt;/text&gt;&lt;text x="610.5" y="398.5"&gt;Advantages &lt;/text&gt;&lt;text x="610.5" y="412.5"&gt;and Limitations&lt;/text&gt;&lt;/g&gt;&lt;path d="M 536 451 L 536 421 Q 536 411 536 401 L 536 390.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 536 384.24 L 540 392.24 L 536 390.24 L 532 392.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 526 382 L 526 411 Q 526 421 526 431 L 526 442.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 526 448.76 L 522 440.76 L 526 442.76 L 530 440.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 561 591 L 561 576 Q 561 566 561 557.62 L 561 549.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 561 543.24 L 565 551.24 L 561 549.24 L 557 551.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="605.5" y="563.5"&gt;Hardware and&lt;/text&gt;&lt;text x="605.5" y="577.5"&gt;Software specs&lt;/text&gt;&lt;/g&gt;&lt;path d="M 506 519 L 446 519 Q 436 519 436 529 L 436 611 Q 436 621 426.87 621 L 417.74 621" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 411.74 621 L 419.74 617 L 417.74 621 L 419.74 625 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="461.5" y="563.5"&gt;Progress&lt;/text&gt;&lt;text x="461.5" y="577.5"&gt;Reports&lt;/text&gt;&lt;/g&gt;&lt;path d="M 365 541 L 365 556 Q 365 566 365 574.38 L 365 582.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 365 588.76 L 361 580.76 L 365 582.76 L 369 580.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="390.5" y="563.5"&gt;Progress&lt;/text&gt;&lt;text x="390.5" y="577.5"&gt;Reports&lt;/text&gt;&lt;/g&gt;&lt;path d="M 210 541 L 210 611 Q 210 621 220 621 L 311.26 621" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 317.26 621 L 309.26 625 L 311.26 621 L 309.26 617 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="236.5" y="603.5"&gt;Progress&lt;/text&gt;&lt;text x="236.5" y="617.5"&gt;Reports&lt;/text&gt;&lt;/g&gt;&lt;path d="M 154.5 496 L 132.75 496 Q 122.75 496 112.75 496 L 99.24 496" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 93.24 496 L 101.24 492 L 99.24 496 L 101.24 500 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 356 382 L 356 401 Q 356 411 356 421 L 356 442.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 356 448.76 L 352 440.76 L 356 442.76 L 360 440.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 376 451 L 376 421 Q 376 411 376 401 L 376 390.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 376 384.24 L 380 392.24 L 376 390.24 L 372 392.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="241.5" y="414.5"&gt;Version&lt;/text&gt;&lt;text x="241.5" y="428.5"&gt;specs&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="160.5" y="414.5"&gt;Certificates,&lt;/text&gt;&lt;text x="160.5" y="428.5"&gt;system&lt;/text&gt;&lt;text x="160.5" y="442.5"&gt;libraries&lt;/text&gt;&lt;/g&gt;&lt;path d="M 216 382 L 216 401 Q 216 411 216 421 L 216 442.76" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 216 448.76 L 212 440.76 L 216 442.76 L 220 440.76 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 196 451 L 196 421 Q 196 411 196 401 L 196 390.24" fill="none" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;path d="M 196 384.24 L 200 392.24 L 196 390.24 L 192 392.24 Z" fill="#990000" stroke="#990000" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="120.5" y="518.5"&gt;System&lt;/text&gt;&lt;text x="120.5" y="532.5"&gt;specs&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="404" y="414.5"&gt;Design&lt;/text&gt;&lt;text x="404" y="428.5"&gt;specs&lt;/text&gt;&lt;/g&gt;&lt;g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"&gt;&lt;text x="331.5" y="414.5"&gt;System&lt;/text&gt;&lt;text x="331.5" y="428.5"&gt;version&lt;/text&gt;&lt;/g&gt;&lt;/g&gt;
 &lt;/v-svg&gt;</t>
 <t tx="josephorr.20171120183447.1"></t>
@@ -1184,47 +1185,28 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
 <t tx="josephorr.20171121003508.1">&lt;h4&gt;Videos&lt;/h4&gt;
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="420" :player-height="295"&gt;&lt;/youtube&gt;
 </t>
-<t tx="josephorr.20171121003518.1">&lt;!-- Example of nested vertical slides --&gt;
+<t tx="josephorr.20171121003518.1">@language html
+
 &lt;section&gt;
-&lt;h2&gt;Vertical Slides&lt;/h2&gt;
-&lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
-&lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
-&lt;br&gt;
-&lt;a href="#" class="navigate-down"&gt;
-  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
-&lt;/a&gt;
+    &lt;h2&gt;Vertical Slides&lt;/h2&gt;
+    &lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
+    &lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
+    &lt;br&gt;
+    &lt;a href="#" class="navigate-down"&gt;
+      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
+    &lt;/a&gt;
 &lt;/section&gt;
 &lt;section&gt;
-&lt;h2&gt;Basement Level 1&lt;/h2&gt;
-&lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
+    &lt;h2&gt;Basement Level 1&lt;/h2&gt;
+    &lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section&gt;
-&lt;h2&gt;Basement Level 2&lt;/h2&gt;
-&lt;p&gt;That's it, time to go back up.&lt;/p&gt;
-&lt;br&gt;
-&lt;a href="#/2"&gt;
-  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
-&lt;/a&gt;
-&lt;/section&gt;
-</t>
-<t tx="josephorr.20171121003539.1">&lt;section id="fragments"&gt;
-&lt;h2&gt;Fragments&lt;/h2&gt;
-&lt;p&gt;Hit the next arrow...&lt;/p&gt;
-&lt;p class="fragment"&gt;... to step through ...&lt;/p&gt;
-&lt;p&gt;&lt;span class="fragment"&gt;... a&lt;/span&gt; &lt;span class="fragment"&gt;fragmented&lt;/span&gt; &lt;span class="fragment"&gt;slide.&lt;/span&gt;&lt;/p&gt;
-&lt;aside class="notes"&gt;
-  This slide has fragments which are also stepped through in the notes window.
-&lt;/aside&gt;
-&lt;/section&gt;
-&lt;section&gt;
-&lt;h2&gt;Fragment Styles&lt;/h2&gt;
-&lt;p&gt;There's different types of fragments, like:&lt;/p&gt;
-&lt;p class="fragment grow"&gt;grow&lt;/p&gt;
-&lt;p class="fragment shrink"&gt;shrink&lt;/p&gt;
-&lt;p class="fragment fade-out"&gt;fade-out&lt;/p&gt;
-&lt;p class="fragment fade-up"&gt;fade-up (also down, left and right!)&lt;/p&gt;
-&lt;p class="fragment current-visible"&gt;current-visible&lt;/p&gt;
-&lt;p&gt;Highlight &lt;span class="fragment highlight-red"&gt;red&lt;/span&gt; &lt;span class="fragment highlight-blue"&gt;blue&lt;/span&gt; &lt;span class="fragment highlight-green"&gt;green&lt;/span&gt;&lt;/p&gt;
+    &lt;h2&gt;Basement Level 2&lt;/h2&gt;
+    &lt;p&gt;That's it, time to go back up.&lt;/p&gt;
+    &lt;br&gt;
+    &lt;a href="#/2"&gt;
+      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
+    &lt;/a&gt;
 &lt;/section&gt;
 </t>
 <t tx="josephorr.20171125133856.1">&lt;h1&gt;Leo&lt;/h1&gt;
@@ -1237,12 +1219,19 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
   &lt;li&gt;Scriptable IDE&lt;/li&gt;
   &lt;li&gt;Metatext Editor&lt;/li&gt;
 &lt;/ul&gt;</t>
-<t tx="josephorr.20171125133910.1">&lt;h1&gt;Vue.js&lt;/h1&gt;'
+<t tx="josephorr.20171125133910.1">@language html
+
+&lt;h1&gt;Vue.js&lt;/h1&gt;
+&lt;p&gt;
+  &lt;small&gt;Created by &lt;a href="http://vuejs.org"&gt;Evan You&lt;/a&gt; / &lt;a href="https://twitter.com/youyuxi"&gt;@youyuxi&lt;/a&gt;&lt;/small&gt;
+&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;App/Component Framework&lt;/li&gt;
-  &lt;li&gt;Small and Fast&lt;/li&gt;
+  &lt;li&gt;Small and Fast, Easy to Learn&lt;/li&gt;
   &lt;li&gt;Many Components Available&lt;/li&gt;
   &lt;li&gt;74k+ Stars on Github&lt;/li&gt;
+  &lt;li&gt;No Corporate Agenda&lt;/li&gt;
 &lt;/ul&gt;</t>
 <t tx="josephorr.20171125133949.1">&lt;h4&gt;
 Vue.js components in Leo Vue
@@ -1261,6 +1250,7 @@ Vue.js components in Leo Vue
   :gridLines="true" 
   width="700"
   height="500"
+  responsive="false"
 /&gt;
 </t>
 <t tx="josephorr.20171125134539.1">&lt;h4&gt;Math&lt;/h4&gt;
@@ -1296,5 +1286,29 @@ Vue.js components in Leo Vue
      &lt;table-column show="songs" label="Songs" data-type="numeric"&gt;&lt;/table-column&gt;
      &lt;table-column show="birthday" label="Birthday" data-type="date:DD/MM/YYYY"&gt;&lt;/table-column&gt;
  &lt;/table-component&gt;</t>
+<t tx="josephorr.20171126181736.1">@language md
+
+## Markdown
+
+Leo Vue supports Markdown
+
+* use the @language md directive
+* node text will be converted to html
+* this slide was created with Markdown
+</t>
+<t tx="josephorr.20171126192228.1">@language javascript
+
+// syntax highlighting with highlight.js
+
+function getLanguage(text){
+   var language = '';
+   var re = /^@language (\w+)/;
+   var languageTokens = re.exec(text);
+   if (languageTokens){
+       language = languageTokens[1];
+       console.log(language);
+   }
+   return language;
+}</t>
 </tnodes>
 </leo_file>
