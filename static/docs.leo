@@ -17,16 +17,15 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
-<v t="josephorr.20171103103333.1"><vh>&lt;&lt; More about the base tag &gt;&gt;</vh></v>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -62,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
+<v t="josephorr.20170605184042.1"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -84,8 +83,8 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
@@ -98,18 +97,18 @@
 </v>
 </v>
 <v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
-<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
-<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
+<v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
+<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -408,12 +407,6 @@ To use Leo Viewer, copy the files in the [dist folder at github](https://github.
 required, you can't simply open Leo Viewer from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
-You will be able to open Leo Viewer by opening index.html in your browser. If you are not 
-serving Leo Viewer from the root of your domain, you'll need to first edit the "base" tag in
-index.html. 
-
-&lt;&lt; More about the base tag &gt;&gt;
-&lt;br&gt;
 &lt;&lt; Running Leo Viewer from Github &gt;&gt;
 
 The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
@@ -733,13 +726,6 @@ In your html content, add the Vue.js Youtube component like so:
 ```
 To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes. 
 </t>
-<t tx="josephorr.20171103103333.1">@language md 
-
-About setting the base, for example, the file you are reading is 
-hosted on Github Pages at https://kaleguy.github.io/leoviewer/.
-So the base tag for the index.html for this installation of Leo Viewer looks like this:
-
-`&lt;base href='/leoviewer/'&gt;`</t>
 <t tx="josephorr.20171103103421.1">@language md
 
 You can also run Leo Viewer from github pages. Fork the repository on Github, 
