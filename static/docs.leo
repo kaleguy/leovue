@@ -715,9 +715,14 @@ Leoviewer is written in Vue.js, and Vue components can be added to content panes
 By default the following components are added to LeoVue. 
 
 * YouTube Viewer
-* Leaflet
+* Leaflet Maps
 * InfoCard
 * Tabs
+* Tables
+* Charts
+* SVG
+* Mermaid (diagrams)
+* MathJax
 
 In your html content, add the Vue.js Youtube component like so:
 ```
