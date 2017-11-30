@@ -167,6 +167,11 @@ export default {
       if (this.model.presentation) {
         let presentation = this.model.presentation
         const iframe = document.getElementsByTagName('iframe')[0]
+        if (!iframe) {
+          let id = this.model.presentation.id
+          this.$store.dispatch('setCurrentItem', {id})
+          return
+        }
         iframe.contentWindow.Reveal.slide(presentation.index, 0)
         // this.$store.dispatch('setCurrentPage', {id})
         return
