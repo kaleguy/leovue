@@ -262,6 +262,7 @@ function setData (context, ldata, filename, route) {
   })
   loadDataSets(context, ldata)
   loadDataTables(context, ldata)
+  loadPresentations(ldata.data[0])
   let id = route.params.id
   if (!id) {
     id = '1'
@@ -298,6 +299,21 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setCurrentItem', {id})
   })
 }
+function loadPresentations (data) {
+  const matches = data.name.match(/@presentation ([a-zA-Z0-9]*)(.*)$/)
+  if (matches) {
+    loadPresentation(data.id, data.children)
+  }
+  data.children.forEach(child => {
+    loadPresentations(child)
+  })
+}
+function loadPresentation (id, pages) {
+  pages.forEach((page, index) => {
+    page.presentation = {id: id, index}
+  })
+}
+
 function loadSubtrees (context, trees, data) {
   if (!trees.length) { return Promise.resolve() }
   const p = new Promise((resolve, reject) => {
@@ -392,10 +408,14 @@ export default new Vuex.Store({
     currentItem: {
       id: 0,
       next: 0,
-      prev: 0
+      prev: 0,
+      type: 'item'
     },
     currentItemContent: '',
     contentItems: {},
+    currentPage: {
+      id: 0
+    },
     dataSets: {},
     dataTables: {},
     openItemIds: [],
@@ -477,6 +497,10 @@ export default new Vuex.Store({
     CURRENT_ITEM_CONTENT (state, o) {
       state.currentItemContent = o.text
     },
+    CURRENT_PAGE (state, o) {
+      const id = o.id
+      state.currentPage.id = id
+    },
     // for inline content, keep hash of content items
     CONTENT_ITEM (state, o) {
       const item = o.item
@@ -532,6 +556,25 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    setMessages (context) {
+      window.addEventListener('message', function (event) {
+        if (!event.data) { return }
+        if (!Object.keys(event.data).length) { return }
+        let data = {}
+        try {
+          data = JSON.parse(event.data)
+        } catch (e) {
+          console.log('Bad message:', data)
+        }
+        if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
+          console.log(data)
+          const id = data.state.indexh
+          console.log('PAGE:', id)
+          context.dispatch('setCurrentPage', {id})
+          // Slide changed, see data.state for slide number
+        }
+      })
+    },
     loadLeo (context, o) {
       getLeoJSON(o.filename, o.id).then(ldata => {
         setData(context, ldata, o.filename, o.route)
@@ -550,7 +593,7 @@ export default new Vuex.Store({
         let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
         if (item) {
           item = item[0]
-          // if it starts with a bracked it is a link in markdown syntax
+          // if it starts with a bracket it is a link in markdown syntax
           if (/^\[/.test(item.name)) {
             setSiteItem(context, item.name, item.id)
           } else {
@@ -565,6 +608,14 @@ export default new Vuex.Store({
           }
         }
       })
+    },
+    setCurrentPage (context, o) {
+      let page = o.id
+      let id = context.state.currentItem.id / 1
+      id = id + page + 1
+      console.log('CURRENT', id)
+      id = id + ''
+      context.commit('CURRENT_PAGE', {id})
     },
     setCurrentItem (context, o) {
       const id = o.id
@@ -587,6 +638,7 @@ export default new Vuex.Store({
         context.commit('OPEN_ITEMS', {openItemIds})
       }
       context.commit('CURRENT_ITEM', {id})
+      context.commit('CURRENT_PAGE', {id: 0})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
       if (item) {
         item = item[0]

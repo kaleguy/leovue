@@ -1,5 +1,6 @@
 import _ from 'lodash'
 const hljs = require('highlight.js')
+// const pug = require('pug')
 const md = require('markdown-it')({
   html: true,
   linkify: true,
@@ -98,6 +99,8 @@ function formatText (text, noWrapper) {
     case 'md':
       text = md.render(text)
       break
+    case 'pug': // eslint-disable-line
+      text = window.pug.render(text) //
     case 'html':
       break
     case 'VueComponent':

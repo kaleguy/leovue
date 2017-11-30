@@ -110,6 +110,9 @@ export default {
     active: function () {
       // TODO: change ids to strings
       if (!this.model) { return }
+      if (this.$store.state.currentPage.id) {
+        return this.$store.state.currentPage.id === this.model.id
+      }
       return this.$store.state.currentItem.id === this.model.id
     },
     vtitle: function () {
@@ -161,6 +164,14 @@ export default {
         })
       }
       const id = this.model.id
+      if (this.model.presentation) {
+        let presentation = this.model.presentation
+        const iframe = document.getElementsByTagName('iframe')[0]
+        iframe.contentWindow.Reveal.slide(presentation.index, 0)
+        // this.$store.dispatch('setCurrentPage', {id})
+        return
+        // eslint-disable-line
+      }
       this.$store.dispatch('setCurrentItem', {id})
       // close siblings if in accordion mode
     },
@@ -211,13 +222,13 @@ $contentBorderColor: #ccc
   padding-left: 20px
   margin-right: -10px
 .icon-bracket
-  display:inline-block
+  display: inline-block
   height: 26px
   vertical-align: middle
   padding-bottom: 8px
   padding-left: 0
   .arrow
-    display:inline-block
+    display: inline-block
     height: 100%
     vertical-align: middle
     padding-bottom: 2px

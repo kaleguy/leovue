@@ -65,10 +65,10 @@ window.loadURL = function (src) {
   document.body.appendChild(script)
 };
 function overrideXFrame(item, textItems) {
-  var iframe = document.getElementsByTagName('iframe')[0];
+  const iframe = document.getElementsByTagName('iframe')[0];
   if (!iframe){ return }
   window.iframe = iframe
-  var url = iframe.src
+  const url = iframe.src
   if (url === 'about:blank') {
     return loadPresentation(item, textItems, iframe)
   }
@@ -82,10 +82,10 @@ function overrideXFrame(item, textItems) {
 
 function loadPresentation(item, textItems, iframe) {
   let content = ''
-  item.children.forEach(page => {
+  item.children.forEach((page, index) => {
     let pageContent = textItems[page.t]
+    // page.presentation = {id: item.id, index}
     content = content + '<section>' +  util.formatText(pageContent, true) + '</section>'
-    // debugger
   })
   const html = presentation(item.name, content)
   iframe.contentWindow.document.open()
@@ -156,12 +156,25 @@ export default {
       return this.$store.state.currentItem.prev
     },
     dynComponent () {
-      const template = this.currentItemContent ? this.currentItemContent : '<div> </div>'
+      const id = this.$store.state.currentItem.id
+/*
+      if (id) {
+        console.log(this.data)
+        const item = JSON.search(this.data, '//!*[id="' + id + '"]')[0]
+        if (item.presentation && item.presentation.index > 0) {
+          console.log('I', item.presentation.index)
+          return
+        }
+      }
+*/
+      const template = this.currentItemContent ? this.currentItemContent : '<div></div>'
       return {
         template, // use content as template for this component
         props: this.$options.props // re-use current props definitions
       }
     }
+  },
+  beforeUpdate () {
   },
   mounted () {
   },

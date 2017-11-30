@@ -20,7 +20,7 @@
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -76,7 +76,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171118141254.1"><vh>Subgraphs</vh></v>
@@ -96,19 +96,19 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
+<v t="josephorr.20171109061104.1" a="E"><vh>&lt;&lt; Data &gt;&gt;</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
-<v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
+<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -1139,7 +1139,7 @@ Since Leo Vue is a web viewer, it supports any content supported by modern brows
 A simple SVG wrapper component is included to make SVG sizing for the Leo Vue content pane easier.
 &lt;/p&gt;
 &lt;p&gt;
-Below is an example of an SVG chart created on Sketch.io, exported to SVG and displayed with v-svg.
+Below is an example of an SVG chart created on draw.io, exported to SVG and displayed with v-svg.
 &lt;/p&gt;
 
 &lt;v-svg height="600" width="600"&gt;

@@ -65,6 +65,7 @@
       if (!this.$store.initializedData) {
         this.$store.dispatch('loadLeo', {filename, route: this.$route})
       }
+      this.$store.dispatch('setMessages')
     }
   }
 </script>

@@ -1,7 +1,6 @@
 <template>
     <div class="reveal">
       <component :is="currentContent"/>
-      </div>
     </div>
 </template>
 
@@ -45,6 +44,7 @@
           template, // use content as template for this component
           mounted () {
             Reveal.initialize({ // eslint-disable-line
+              postMessageEvents: true,
               controls: true,
               progress: true,
               center: true,
