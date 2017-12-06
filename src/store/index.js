@@ -17,7 +17,7 @@ const lunr = require('lunr')
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
   // return indexItems
-  var idx = lunr(function () {
+  let idx = lunr(function () {
     this.ref('id')
     this.field('text')
     docs.forEach(function (doc) {
@@ -76,7 +76,7 @@ function getRoots (acc, p, startIndex) {
  * @returns {boolean} - if is relative
  */
 function isRelative (url) {
-  var ok = true
+  let ok = true
   if (/^[xh]ttp/.test(url)) { // xhttp is to indicate xframe header should be ignored
     return false
   }
@@ -153,6 +153,7 @@ function getUrlFromTitle (title) {
   return {url, label}
 }
 function showPresentation (context, title, id) {
+  console.log(title, id)
   const iframeHTML = `
     <div style="width:100%">
     <iframe
@@ -300,17 +301,18 @@ function setData (context, ldata, filename, route) {
   })
 }
 function loadPresentations (data) {
-  const matches = data.name.match(/@presentation ([a-zA-Z0-9]*)(.*)$/)
-  if (matches) {
+  let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
+  let a = /^« /.test(data.name)
+  // const matches = true
+  if (p || a) {
     loadPresentation(data.id, data.children)
   }
-  data.children.forEach(child => {
-    loadPresentations(child)
-  })
+  data.children.forEach(loadPresentations)
 }
 function loadPresentation (id, pages) {
+  if (!pages) { return }
   pages.forEach((page, index) => {
-    page.presentation = {id: id, index}
+    page.presentation = {pid: id, index}
   })
 }
 
@@ -459,6 +461,8 @@ export default new Vuex.Store({
       state.idx = c.idx
       state.idxDocs = c.docs
       state.filename = o.filename
+      window.lconfig.leodata = o.data
+      window.lconfig.leotext = o.text
     },
     RESETINDEX (state, o) {
       if (_.isUndefined) {
@@ -500,6 +504,12 @@ export default new Vuex.Store({
     CURRENT_PAGE (state, o) {
       const id = o.id
       state.currentPage.id = id
+      if (+id === 0) { return }
+      let routeName = state.route.name
+      if (routeName === 'Top') {
+        routeName = 'Node'
+      }
+      router.replace({name: routeName, params: { id }})
     },
     // for inline content, keep hash of content items
     CONTENT_ITEM (state, o) {
@@ -535,7 +545,7 @@ export default new Vuex.Store({
       state.currentItem.id = id
       state.currentItem.prev = prev
       state.currentItem.next = next
-      var routeName = state.route.name
+      let routeName = state.route.name
       if (routeName === 'Top') {
         routeName = 'Node'
       }
@@ -561,15 +571,19 @@ export default new Vuex.Store({
         if (!event.data) { return }
         if (!Object.keys(event.data).length) { return }
         let data = {}
-        try {
+        if (_.isObject(event.data)) {
+          data = event.data
+        } else {
           data = JSON.parse(event.data)
-        } catch (e) {
-          console.log('Bad message:', data)
+        }
+        console.log('MDATA', data)
+        if (data.namespace === 'leovue' && data.eventName === 'setcurrentitem') {
+          const id = data.state.id
+          context.dispatch('setCurrentItem', {id})
+          console.log('setcurrentitem', id)
         }
         if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
-          console.log(data)
           const id = data.state.indexh
-          console.log('PAGE:', id)
           context.dispatch('setCurrentPage', {id})
           // Slide changed, see data.state for slide number
         }
@@ -590,8 +604,11 @@ export default new Vuex.Store({
     setContentItems (context, o) {
       const ids = o.ids
       ids.forEach(id => {
-        let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
-        if (item) {
+        let item = JSON.search(context.state.leodata, '//children[id="' + id + '"]')
+        if (!item[0]) {
+          console.log(item, id, context.state.leodata)
+        }
+        if (item && item[0]) {
           item = item[0]
           // if it starts with a bracket it is a link in markdown syntax
           if (/^\[/.test(item.name)) {
@@ -610,16 +627,33 @@ export default new Vuex.Store({
       })
     },
     setCurrentPage (context, o) {
-      let page = o.id
-      let id = context.state.currentItem.id / 1
-      id = id + page + 1
-      console.log('CURRENT', id)
-      id = id + ''
+      let page = +o.id
+      let id = context.state.currentItem.id
+      // id = id + page + 1
+      // get sibling of id which is +pages away
+      const presentationNode = JSON.search(context.state.leodata, '//*[id="' + id + '"]')[0]
+      const pageNode = presentationNode.children[page]
+      // const pageNode = 0
+      console.log('PN', presentationNode, pageNode, page)
+      // console.log('PAGENODE', pageNode, pageNode.id, id, page)
+      if (!pageNode) {
+        id = 0
+      } else {
+        id = pageNode.id
+      }
       context.commit('CURRENT_PAGE', {id})
     },
     setCurrentItem (context, o) {
       const id = o.id
-
+      // if in iframe, just raise event and leave
+      if (window.parent !== window.self) {
+        // console.log('sending event')
+        // let type = 'leovue'
+        // let event = new CustomEvent('message', { data: {id, type} })
+        // window.dispatchEvent(event)
+        // window.parent.postMessage(JSON.stringify({ namespace: 'leovue', eventName: 'setcurrentitem', state: {id} }), '*')
+        return
+      }
       // open parent nodes, close others
       const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
       let openItemIds = openItems.reduce((acc, o) => {
@@ -643,6 +677,9 @@ export default new Vuex.Store({
       if (item) {
         item = item[0]
         if (/^@presentation /.test(item.name)) {
+          return showPresentation(context, item.name, id)
+        }
+        if (/^« /.test(item.name) && _.exists(item.presentation)) {
           return showPresentation(context, item.name, id)
         }
         if (/^\[/.test(item.name)) {

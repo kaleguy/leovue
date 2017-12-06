@@ -168,14 +168,14 @@ export default {
         let presentation = this.model.presentation
         const iframe = document.getElementsByTagName('iframe')[0]
         if (!iframe) {
-          let id = this.model.presentation.id
+          let id = this.model.presentation.pid
           this.$store.dispatch('setCurrentItem', {id})
           return
         }
-        iframe.contentWindow.Reveal.slide(presentation.index, 0)
-        // this.$store.dispatch('setCurrentPage', {id})
+        if (iframe.contentWindow.Reveal) {
+          iframe.contentWindow.Reveal.slide(presentation.index, 0)
+        }
         return
-        // eslint-disable-line
       }
       this.$store.dispatch('setCurrentItem', {id})
       // close siblings if in accordion mode

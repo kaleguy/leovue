@@ -107,12 +107,22 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
-<v t="josephorr.20171121003459.1"><vh>Reveal</vh></v>
+<v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
+<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171130193243.1"><vh>Slide 1</vh></v>
+<v t="josephorr.20171130193424.1"><vh>Slide 2</vh></v>
+<v t="josephorr.20171130193455.1"><vh>Slide 3</vh></v>
+<v t="josephorr.20171130193533.1"><vh>Slide 4</vh></v>
+<v t="josephorr.20171130193634.1"><vh>Slide 5</vh></v>
+<v t="josephorr.20171130193755.1"><vh>Slide 6</vh></v>
+<v t="josephorr.20171130193909.1"><vh>Themes</vh></v>
+</v>
+</v>
 <v t="josephorr.20171125133949.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171121003503.1"><vh>SVG</vh></v>
 <v t="josephorr.20171121003508.1"><vh>Youtube</vh></v>
@@ -734,7 +744,6 @@ be viewable at username.github.io/myforkname/. (But be sure to edit the base tag
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
   &lt;v-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
     &lt;v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/v-tilelayer&gt;
-    &lt;v-marker :lat-lng="[40.6971494, -74.0277793]"&gt;&lt;/v-marker&gt;
   &lt;/v-map&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20171104211357.1">@language md
@@ -1165,7 +1174,9 @@ Below is an example of an SVG chart created on draw.io, exported to SVG and disp
   &lt;li&gt;Display with Leo Vue&lt;/li&gt;
   &lt;li&gt;Content can include Vue.js components&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;p&gt;
+&lt;&lt; Reveal.js &gt;&gt;
+&lt;/p&gt;
 
 
 </t>
@@ -1303,5 +1314,91 @@ function getLanguage(text){
    }
    return language;
 }</t>
+<t tx="josephorr.20171130193113.1"></t>
+<t tx="josephorr.20171130193243.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
+&lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
+&lt;p&gt;
+&lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; / &lt;a href="http://twitter.com/hakimel"&gt;@hakimel&lt;/a&gt;&lt;/small&gt;
+&lt;/p&gt;</t>
+<t tx="josephorr.20171130193424.1">&lt;h2&gt;Hello There&lt;/h2&gt;
+&lt;p&gt;
+reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+&lt;/p&gt;</t>
+<t tx="josephorr.20171130193455.1">&lt;section&gt;
+&lt;h2&gt;Vertical Slides&lt;/h2&gt;
+&lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
+&lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
+&lt;br&gt;
+&lt;a href="#" class="navigate-down"&gt;
+  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
+&lt;/a&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Basement Level 1&lt;/h2&gt;
+&lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Basement Level 2&lt;/h2&gt;
+&lt;p&gt;That's it, time to go back up.&lt;/p&gt;
+&lt;br&gt;
+&lt;a href="#/2"&gt;
+  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
+&lt;/a&gt;
+&lt;/section&gt;</t>
+<t tx="josephorr.20171130193533.1">&lt;h2&gt;Point of View&lt;/h2&gt;
+&lt;p&gt;
+Press &lt;strong&gt;ESC&lt;/strong&gt; to enter the slide overview.
+&lt;/p&gt;
+&lt;p&gt;
+Hold down alt and click on any element to zoom in on it using &lt;a href="http://lab.hakim.se/zoom-js"&gt;zoom.js&lt;/a&gt;. Alt + click anywhere to zoom back out.
+&lt;/p&gt;
+</t>
+<t tx="josephorr.20171130193634.1">&lt;section id="fragments"&gt;
+&lt;h2&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Hit the next arrow...&lt;/p&gt;
+&lt;p class="fragment"&gt;... to step through ...&lt;/p&gt;
+&lt;p&gt;&lt;span class="fragment"&gt;... a&lt;/span&gt; &lt;span class="fragment"&gt;fragmented&lt;/span&gt; &lt;span class="fragment"&gt;slide.&lt;/span&gt;&lt;/p&gt;
+
+&lt;aside class="notes"&gt;
+  This slide has fragments which are also stepped through in the notes window.
+&lt;/aside&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Fragment Styles&lt;/h2&gt;
+&lt;p&gt;There's different types of fragments, like:&lt;/p&gt;
+&lt;p class="fragment grow"&gt;grow&lt;/p&gt;
+&lt;p class="fragment shrink"&gt;shrink&lt;/p&gt;
+&lt;p class="fragment fade-out"&gt;fade-out&lt;/p&gt;
+&lt;p class="fragment fade-up"&gt;fade-up (also down, left and right!)&lt;/p&gt;
+&lt;p class="fragment current-visible"&gt;current-visible&lt;/p&gt;
+&lt;p&gt;Highlight &lt;span class="fragment highlight-red"&gt;red&lt;/span&gt; &lt;span class="fragment highlight-blue"&gt;blue&lt;/span&gt; &lt;span class="fragment highlight-green"&gt;green&lt;/span&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="josephorr.20171130193755.1">&lt;h2&gt;Transition Styles&lt;/h2&gt;
+&lt;p&gt;
+You can select from different transitions, like: &lt;br&gt;
+&lt;a href="?transition=none#/transitions"&gt;None&lt;/a&gt; -
+&lt;a href="?transition=fade#/transitions"&gt;Fade&lt;/a&gt; -
+&lt;a href="?transition=slide#/transitions"&gt;Slide&lt;/a&gt; -
+&lt;a href="?transition=convex#/transitions"&gt;Convex&lt;/a&gt; -
+&lt;a href="?transition=concave#/transitions"&gt;Concave&lt;/a&gt; -
+&lt;a href="?transition=zoom#/transitions"&gt;Zoom&lt;/a&gt;
+&lt;/p&gt;
+</t>
+<t tx="josephorr.20171130193909.1">&lt;h2&gt;Themes&lt;/h2&gt;
+&lt;p&gt;
+reveal.js comes with a few themes built in: &lt;br&gt;
+&lt;!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. --&gt;
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;"&gt;Black (default)&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;"&gt;White&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;"&gt;League&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;"&gt;Sky&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;"&gt;Beige&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;"&gt;Simple&lt;/a&gt; &lt;br&gt;
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;"&gt;Serif&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;"&gt;Blood&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;"&gt;Night&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;"&gt;Moon&lt;/a&gt; -
+&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;"&gt;Solarized&lt;/a&gt;
+&lt;/p&gt;</t>
 </tnodes>
 </leo_file>

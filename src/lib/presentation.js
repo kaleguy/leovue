@@ -14,7 +14,7 @@ function presentation(name, content, index, theme, codeTheme) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>${name}</title>
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/${theme}.css">
+		<link id="theme" rel="stylesheet" href="css/theme/${theme}.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/${codeTheme}.css">

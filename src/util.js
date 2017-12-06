@@ -120,6 +120,17 @@ function formatText (text, noWrapper) {
   return text
 }
 
+function getObjectByKeyFromTree (d, k, v) {
+  if (d[k].indexOf(v) > -1) {
+    return d
+  }
+  if (!d.children) { return '' }
+  for (let i = 0; i < d.children.length; i++) {
+    let o = getObjectByKeyFromTree(d.children[i], k, v)
+    if (o) { return o }
+  }
+}
+
 // parseQueryString(window.location.href)
 
 module.exports = {
@@ -128,7 +139,8 @@ module.exports = {
   getLanguage,
   removeFirstLine,
   parseQueryString,
-  formatText
+  formatText,
+  getObjectByKeyFromTree
 }
 
 /*
