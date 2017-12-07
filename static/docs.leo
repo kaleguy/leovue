@@ -25,11 +25,11 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20170304173237.1"><vh>HTML</vh>
+<v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
@@ -113,7 +113,7 @@
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
 <v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
-<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
 <v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
 <v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
@@ -134,6 +134,7 @@
 <v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
 <v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
+<v t="josephorr.20171207180149.1"><vh>Layout Components</vh></v>
 </v>
 </v>
 </v>
@@ -1437,5 +1438,15 @@ reveal.js comes with a few themes built in: &lt;br&gt;
   &lt;h2&gt;... and GIFs!&lt;/h2&gt;
 &lt;/section&gt;
 </t>
+<t tx="josephorr.20171207180149.1">&lt;img-left src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
+   &lt;div slot="txt"&gt;
+   &lt;h2&gt;Title&lt;/h2&gt;
+   &lt;ul&gt;
+     &lt;li&gt;item&lt;/li&gt;
+     &lt;li&gt;another&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div slot="foot"&gt;this is the footer&lt;/div&gt;
+&lt;/img-left&gt;</t>
 </tnodes>
 </leo_file>

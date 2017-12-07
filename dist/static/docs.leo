@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
@@ -25,11 +25,11 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20170304173237.1"><vh>HTML</vh>
+<v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -71,7 +71,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -83,7 +83,7 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
@@ -96,12 +96,12 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
+<v t="josephorr.20171109061104.1"><vh>Data</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
-<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
+<v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
 </v>
@@ -113,7 +113,7 @@
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
 <v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
-<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
 <v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
 <v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
@@ -121,6 +121,7 @@
 <v t="josephorr.20171130193634.1"><vh>Fragments</vh></v>
 <v t="josephorr.20171130193755.1"><vh>Transitions</vh></v>
 <v t="josephorr.20171130193909.1"><vh>Themes</vh></v>
+<v t="josephorr.20171206184322.1"><vh>Backgrounds</vh></v>
 </v>
 </v>
 <v t="josephorr.20171125133949.1"><vh>Leo Vue</vh></v>
@@ -133,6 +134,7 @@
 <v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
 <v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
+<v t="josephorr.20171207180149.1"><vh>Layout Components</vh></v>
 </v>
 </v>
 </v>
@@ -851,7 +853,9 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
   ]
 }
 </t>
-<t tx="josephorr.20171107074208.1">A line chart with some random data contained in the **set1** @dataTable node.
+<t tx="josephorr.20171107074208.1">@language md
+
+A line chart with some random data contained in the **set1** @dataTable node.
 
 &lt;line-chart :dataSet="'set1'" :gridLines="true" /&gt;</t>
 <t tx="josephorr.20171107074219.1"></t>
@@ -875,7 +879,7 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 }</t>
 <t tx="josephorr.20171107082534.1">@language md
 
-A bar chart with some random data contained in the **set1** @dataTable node.
+A bar chart with some random data contained in the [[set1]] @dataTable node.
 
 &lt;bar-chart :dataSet="'set2'"/&gt;</t>
 <t tx="josephorr.20171107100246.1">@language md
@@ -956,7 +960,7 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 <t tx="josephorr.20171115100638.1">@language html
 
 &lt;p&gt;
-A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the &lt;&lt;Data&gt;&gt; node below).
+A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the [[Data]] node).
 &lt;/p&gt;
 &lt;br&gt;
 &lt;v-table :dataTable="'worldpop'" &gt;&lt;/v-table&gt;</t>
@@ -977,7 +981,7 @@ Current features include:
 * Load Leo files into subtrees
 * Nested menu mode
 * Clickable section links inside content
-* Content nodes can have &lt;&lt; Vue.js Components &gt;&gt;
+* Content nodes can have [[ Vue.js Components ]]
 * Search
 * SEO version (static html files)
 
@@ -1314,7 +1318,7 @@ function getLanguage(text){
    }
    return language;
 }</t>
-<t tx="josephorr.20171130193113.1"></t>
+<t tx="josephorr.20171130193113.1">The Reveal.js Demo Presentation</t>
 <t tx="josephorr.20171130193243.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
 &lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
 &lt;p&gt;
@@ -1354,7 +1358,9 @@ Press &lt;strong&gt;ESC&lt;/strong&gt; to enter the slide overview.
 Hold down alt and click on any element to zoom in on it using &lt;a href="http://lab.hakim.se/zoom-js"&gt;zoom.js&lt;/a&gt;. Alt + click anywhere to zoom back out.
 &lt;/p&gt;
 </t>
-<t tx="josephorr.20171130193634.1">&lt;section id="fragments"&gt;
+<t tx="josephorr.20171130193634.1">@language html
+
+&lt;section id="fragments"&gt;
 &lt;h2&gt;Fragments&lt;/h2&gt;
 &lt;p&gt;Hit the next arrow...&lt;/p&gt;
 &lt;p class="fragment"&gt;... to step through ...&lt;/p&gt;
@@ -1389,17 +1395,58 @@ You can select from different transitions, like: &lt;br&gt;
 &lt;p&gt;
 reveal.js comes with a few themes built in: &lt;br&gt;
 &lt;!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. --&gt;
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;"&gt;Black (default)&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;"&gt;White&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;"&gt;League&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;"&gt;Sky&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;"&gt;Beige&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;"&gt;Simple&lt;/a&gt; &lt;br&gt;
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;"&gt;Serif&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;"&gt;Blood&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;"&gt;Night&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;"&gt;Moon&lt;/a&gt; -
+&lt;span style="cursor:pointer"&gt;
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;"&gt;Black (default)&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;"&gt;White&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;"&gt;League&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;"&gt;Sky&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;"&gt;Beige&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;"&gt;Simple&lt;/span&gt; &lt;br&gt;
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;"&gt;Serif&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;"&gt;Blood&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;"&gt;Night&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;"&gt;Moon&lt;/span&gt; -
 &lt;span  onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;"&gt;Solarized&lt;/span&gt;
+&lt;/span&gt;
 &lt;/p&gt;</t>
+<t tx="josephorr.20171206184322.1">@language html
+
+&lt;section data-background="#dddddd"&gt;
+  &lt;h2&gt;Slide Backgrounds&lt;/h2&gt;
+  &lt;p&gt;
+    Set &lt;code&gt;data-background="#dddddd"&lt;/code&gt; on a slide to change the background color. All CSS color formats are supported.
+  &lt;/p&gt;
+  &lt;a href="#" class="navigate-down"&gt;
+    &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
+  &lt;/a&gt;
+&lt;/section&gt;
+&lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"&gt;
+  &lt;h2&gt;Image Backgrounds&lt;/h2&gt;
+  &lt;pre&gt;&lt;code class="hljs"&gt;&amp;lt;section data-background="image.png"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px"&gt;
+  &lt;h2&gt;Tiled Backgrounds&lt;/h2&gt;
+  &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000"&gt;
+  &lt;div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;"&gt;
+    &lt;h2&gt;Video Backgrounds&lt;/h2&gt;
+    &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-video="video.mp4,video.webm"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section data-background="http://i.giphy.com/90F8aUepslB84.gif"&gt;
+  &lt;h2&gt;... and GIFs!&lt;/h2&gt;
+&lt;/section&gt;
+</t>
+<t tx="josephorr.20171207180149.1">&lt;img-left src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
+   &lt;div slot="txt"&gt;
+   &lt;h2&gt;Title&lt;/h2&gt;
+   &lt;ul&gt;
+     &lt;li&gt;item&lt;/li&gt;
+     &lt;li&gt;another&lt;/li&gt;
+   &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div slot="foot"&gt;this is the footer&lt;/div&gt;
+&lt;/img-left&gt;</t>
 </tnodes>
 </leo_file>

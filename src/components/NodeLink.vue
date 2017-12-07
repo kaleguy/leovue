@@ -24,8 +24,6 @@
         let titleObj = JSON.search(leodata, '//*[name="' + title + '"]')[0]
         if (!titleObj) {
           titleObj = JSON.search(leodata, '//*[contains(name, "' + title + '")]')[0]
-          console.log('ffoo', titleObj)
-          // console.log('foo', '//*[contains(name, "' + title + '")]', titleObj, titleObj.name)
         }
         if (!titleObj) { return }
         let id = null

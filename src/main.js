@@ -26,6 +26,7 @@ import VSVG from './content-components/VSVG'
 import SectionLink from './components/SectionLink'
 import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
+import ImageLeft from './components/layout/ImageLeft'
 import { TableComponent, TableColumn } from 'vue-table-component'
 
 import {charts} from './content-components/Charts'
@@ -36,6 +37,7 @@ const Defiant = require('./lib/defiant') // eslint-disable-line
 Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
+Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)
 Vue.component('Nodelink', NodeLink)
 Vue.component('v-table', VTable)
