@@ -24,6 +24,7 @@ import VCTable from './content-components/VCTable'
 import Mermaid from './content-components/Mermaid'
 import VSVG from './content-components/VSVG'
 import SectionLink from './components/SectionLink'
+import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
 import { TableComponent, TableColumn } from 'vue-table-component'
 
@@ -36,6 +37,7 @@ Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
 Vue.component('sectionlink', SectionLink)
+Vue.component('Nodelink', NodeLink)
 Vue.component('v-table', VTable)
 Vue.component('v-svg', VSVG)
 Vue.component('vc-table', VCTable)

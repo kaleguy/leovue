@@ -76,7 +76,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171118141254.1"><vh>Subgraphs</vh></v>
@@ -96,7 +96,7 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>&lt;&lt; Data &gt;&gt;</vh>
+<v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -114,12 +114,12 @@
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
 <v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
 <v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
-<v t="josephorr.20171130193243.1"><vh>Slide 1</vh></v>
-<v t="josephorr.20171130193424.1"><vh>Slide 2</vh></v>
-<v t="josephorr.20171130193455.1"><vh>Slide 3</vh></v>
-<v t="josephorr.20171130193533.1"><vh>Slide 4</vh></v>
-<v t="josephorr.20171130193634.1"><vh>Slide 5</vh></v>
-<v t="josephorr.20171130193755.1"><vh>Slide 6</vh></v>
+<v t="josephorr.20171130193243.1"><vh>Title</vh></v>
+<v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
+<v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
+<v t="josephorr.20171130193533.1"><vh>Zoom.js</vh></v>
+<v t="josephorr.20171130193634.1"><vh>Fragments</vh></v>
+<v t="josephorr.20171130193755.1"><vh>Transitions</vh></v>
 <v t="josephorr.20171130193909.1"><vh>Themes</vh></v>
 </v>
 </v>
@@ -1324,7 +1324,8 @@ function getLanguage(text){
 &lt;p&gt;
 reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 &lt;/p&gt;</t>
-<t tx="josephorr.20171130193455.1">&lt;section&gt;
+<t tx="josephorr.20171130193455.1">@language html
+&lt;section&gt;
 &lt;h2&gt;Vertical Slides&lt;/h2&gt;
 &lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
 &lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
@@ -1398,7 +1399,7 @@ reveal.js comes with a few themes built in: &lt;br&gt;
 &lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;"&gt;Blood&lt;/a&gt; -
 &lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;"&gt;Night&lt;/a&gt; -
 &lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;"&gt;Moon&lt;/a&gt; -
-&lt;a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;"&gt;Solarized&lt;/a&gt;
+&lt;span  onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;"&gt;Solarized&lt;/span&gt;
 &lt;/p&gt;</t>
 </tnodes>
 </leo_file>

@@ -83,6 +83,7 @@ function formatText (text, noWrapper) {
   // text = text.replace(/<</g, '\u00AB')
   // text = text.replace(/>>/g, '\u00BB')
   text = text.replace(/<<(.*?)>>/g, '<sectionlink :title="\'$1\'"/>')
+  text = text.replace(/\[\[(.*?)\]\]/g, '<nodelink :title="\'$1\'"/>')
 
   // just plain text
   if (!language) {

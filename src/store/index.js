@@ -679,7 +679,7 @@ export default new Vuex.Store({
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)
         }
-        if (/^« /.test(item.name) && _.exists(item.presentation)) {
+        if (/^« /.test(item.name) && _.has(item, 'presentation')) {
           return showPresentation(context, item.name, id)
         }
         if (/^\[/.test(item.name)) {
