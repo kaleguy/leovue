@@ -17,19 +17,19 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
-<v t="josephorr.20170304173237.1"><vh>HTML</vh>
+<v t="josephorr.20170304173237.1" a="E"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>&lt;&lt; Vue.js Components &gt;&gt;</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -71,7 +71,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -83,7 +83,7 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
@@ -96,7 +96,7 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>&lt;&lt; Data &gt;&gt;</vh>
+<v t="josephorr.20171109061104.1"><vh>Data</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -107,13 +107,30 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
-<v t="josephorr.20171121003459.1"><vh>Reveal</vh></v>
-<v t="josephorr.20171125133949.1"><vh>Leo Vue</vh></v>
+<v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
+<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171130193243.1"><vh>Title</vh></v>
+<v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
+<v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
+<v t="josephorr.20171130193533.1"><vh>Zoom.js</vh></v>
+<v t="josephorr.20171130193634.1"><vh>Fragments</vh></v>
+<v t="josephorr.20171130193755.1"><vh>Transitions</vh></v>
+<v t="josephorr.20171130193909.1"><vh>Themes</vh></v>
+<v t="josephorr.20171206184322.1"><vh>Backgrounds</vh></v>
+<v t="josephorr.20171208074617.1"><vh>Transitions</vh></v>
+<v t="josephorr.20171208074735.1"><vh>Override Transitions</vh></v>
+<v t="josephorr.20171208074819.1"><vh>Speaker View</vh></v>
+<v t="josephorr.20171208074939.1"><vh>Pause</vh></v>
+<v t="josephorr.20171208075016.1"><vh>And More</vh></v>
+<v t="josephorr.20171208075048.1"><vh>End</vh></v>
+</v>
+</v>
+<v t="josephorr.20171125133949.1"><vh>Vue in Presentations</vh></v>
 <v t="josephorr.20171121003503.1"><vh>SVG</vh></v>
 <v t="josephorr.20171121003508.1"><vh>Youtube</vh></v>
 <v t="josephorr.20171125134128.1"><vh>Charts</vh></v>
@@ -122,7 +139,7 @@
 <v t="josephorr.20171125134539.1"><vh>Math</vh></v>
 <v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
-<v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
+<v t="josephorr.20171207180149.1"><vh>Layout Components</vh></v>
 </v>
 </v>
 </v>
@@ -734,7 +751,6 @@ be viewable at username.github.io/myforkname/. (But be sure to edit the base tag
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
   &lt;v-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
     &lt;v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/v-tilelayer&gt;
-    &lt;v-marker :lat-lng="[40.6971494, -74.0277793]"&gt;&lt;/v-marker&gt;
   &lt;/v-map&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20171104211357.1">@language md
@@ -842,7 +858,9 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
   ]
 }
 </t>
-<t tx="josephorr.20171107074208.1">A line chart with some random data contained in the **set1** @dataTable node.
+<t tx="josephorr.20171107074208.1">@language md
+
+A line chart with some random data contained in the **set1** @dataTable node.
 
 &lt;line-chart :dataSet="'set1'" :gridLines="true" /&gt;</t>
 <t tx="josephorr.20171107074219.1"></t>
@@ -866,7 +884,7 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 }</t>
 <t tx="josephorr.20171107082534.1">@language md
 
-A bar chart with some random data contained in the **set1** @dataTable node.
+A bar chart with some random data contained in the [[set1]] @dataTable node.
 
 &lt;bar-chart :dataSet="'set2'"/&gt;</t>
 <t tx="josephorr.20171107100246.1">@language md
@@ -947,7 +965,7 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 <t tx="josephorr.20171115100638.1">@language html
 
 &lt;p&gt;
-A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the &lt;&lt;Data&gt;&gt; node below).
+A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the [[Data]] node).
 &lt;/p&gt;
 &lt;br&gt;
 &lt;v-table :dataTable="'worldpop'" &gt;&lt;/v-table&gt;</t>
@@ -968,7 +986,7 @@ Current features include:
 * Load Leo files into subtrees
 * Nested menu mode
 * Clickable section links inside content
-* Content nodes can have &lt;&lt; Vue.js Components &gt;&gt;
+* Content nodes can have [[ Vue.js Components ]]
 * Search
 * SEO version (static html files)
 
@@ -1139,7 +1157,7 @@ Since Leo Vue is a web viewer, it supports any content supported by modern brows
 A simple SVG wrapper component is included to make SVG sizing for the Leo Vue content pane easier.
 &lt;/p&gt;
 &lt;p&gt;
-Below is an example of an SVG chart created on Sketch.io, exported to SVG and displayed with v-svg.
+Below is an example of an SVG chart created on draw.io, exported to SVG and displayed with v-svg.
 &lt;/p&gt;
 
 &lt;v-svg height="600" width="600"&gt;
@@ -1155,17 +1173,18 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
 &lt;p&gt;Create content with the Leo Outlining Editor.&lt;/p&gt;
 
 &lt;p&gt;Display it with Leo Vue.&lt;/p&gt;</t>
-<t tx="josephorr.20171121003459.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
-&lt;p&gt;
-  &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; / &lt;a href="http://twitter.com/hakimel"&gt;@hakimel&lt;/a&gt;&lt;/small&gt;
-&lt;/p&gt;
+<t tx="josephorr.20171121003459.1">&lt;em&gt;Leo Vue uses the Reveal.js Library to display presentations.&lt;/em&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;Create intereactive slide desks using HTML&lt;/li&gt;
   &lt;li&gt;Create decks in Leo&lt;/li&gt;
   &lt;li&gt;Display with Leo Vue&lt;/li&gt;
   &lt;li&gt;Content can include Vue.js components&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;p&gt;
+&lt;&lt; Reveal.js &gt;&gt;
+&lt;/p&gt;
 
 
 </t>
@@ -1177,30 +1196,6 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
             </t>
 <t tx="josephorr.20171121003508.1">&lt;h4&gt;Videos&lt;/h4&gt;
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="420" :player-height="295"&gt;&lt;/youtube&gt;
-</t>
-<t tx="josephorr.20171121003518.1">@language html
-
-&lt;section&gt;
-    &lt;h2&gt;Vertical Slides&lt;/h2&gt;
-    &lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
-    &lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
-    &lt;br&gt;
-    &lt;a href="#" class="navigate-down"&gt;
-      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
-    &lt;/a&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h2&gt;Basement Level 1&lt;/h2&gt;
-    &lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h2&gt;Basement Level 2&lt;/h2&gt;
-    &lt;p&gt;That's it, time to go back up.&lt;/p&gt;
-    &lt;br&gt;
-    &lt;a href="#/2"&gt;
-      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
-    &lt;/a&gt;
-&lt;/section&gt;
 </t>
 <t tx="josephorr.20171125133856.1">&lt;h1&gt;Leo&lt;/h1&gt;
 &lt;p&gt;
@@ -1226,15 +1221,17 @@ Below is an example of an SVG chart created on Sketch.io, exported to SVG and di
   &lt;li&gt;74k+ Stars on Github&lt;/li&gt;
   &lt;li&gt;No Corporate Agenda&lt;/li&gt;
 &lt;/ul&gt;</t>
-<t tx="josephorr.20171125133949.1">&lt;h4&gt;
-Vue.js components in Leo Vue
-&lt;/h4&gt;
-
+<t tx="josephorr.20171125133949.1">&lt;em&gt;
+Vue.js components in Presentations
+&lt;/em&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;Charts&lt;/li&gt;
   &lt;li&gt;Tables from Data Nodes&lt;/li&gt;
   &lt;li&gt;SVG&lt;/li&gt;
   &lt;li&gt;YouTube Videos&lt;/li&gt;
+  &lt;li&gt;Custom Layouts&lt;/li&gt;
   &lt;li&gt;More components included, or add your own&lt;/li&gt;
 &lt;/ul&gt;</t>
 <t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
@@ -1303,5 +1300,178 @@ function getLanguage(text){
    }
    return language;
 }</t>
+<t tx="josephorr.20171130193113.1">The Reveal.js Demo Presentation</t>
+<t tx="josephorr.20171130193243.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
+&lt;h3&gt;The HTML Presentation Framework&lt;/h3&gt;
+&lt;p&gt;
+&lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; / &lt;a href="http://twitter.com/hakimel"&gt;@hakimel&lt;/a&gt;&lt;/small&gt;
+&lt;/p&gt;</t>
+<t tx="josephorr.20171130193424.1">&lt;h2&gt;Hello There&lt;/h2&gt;
+&lt;p&gt;
+reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+&lt;/p&gt;</t>
+<t tx="josephorr.20171130193455.1">@language html
+&lt;section&gt;
+&lt;h2&gt;Vertical Slides&lt;/h2&gt;
+&lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
+&lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
+&lt;br&gt;
+&lt;a href="#" class="navigate-down"&gt;
+  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
+&lt;/a&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Basement Level 1&lt;/h2&gt;
+&lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Basement Level 2&lt;/h2&gt;
+&lt;p&gt;That's it, time to go back up.&lt;/p&gt;
+&lt;br&gt;
+&lt;a href="#/2"&gt;
+  &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
+&lt;/a&gt;
+&lt;/section&gt;</t>
+<t tx="josephorr.20171130193533.1">&lt;h2&gt;Point of View&lt;/h2&gt;
+&lt;p&gt;
+Press &lt;strong&gt;ESC&lt;/strong&gt; to enter the slide overview.
+&lt;/p&gt;
+&lt;p&gt;
+Hold down alt and click on any element to zoom in on it using &lt;a href="http://lab.hakim.se/zoom-js"&gt;zoom.js&lt;/a&gt;. Alt + click anywhere to zoom back out.
+&lt;/p&gt;
+</t>
+<t tx="josephorr.20171130193634.1">@language html
+
+&lt;section id="fragments"&gt;
+&lt;h2&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Hit the next arrow...&lt;/p&gt;
+&lt;p class="fragment"&gt;... to step through ...&lt;/p&gt;
+&lt;p&gt;&lt;span class="fragment"&gt;... a&lt;/span&gt; &lt;span class="fragment"&gt;fragmented&lt;/span&gt; &lt;span class="fragment"&gt;slide.&lt;/span&gt;&lt;/p&gt;
+
+&lt;aside class="notes"&gt;
+  This slide has fragments which are also stepped through in the notes window.
+&lt;/aside&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&lt;h2&gt;Fragment Styles&lt;/h2&gt;
+&lt;p&gt;There's different types of fragments, like:&lt;/p&gt;
+&lt;p class="fragment grow"&gt;grow&lt;/p&gt;
+&lt;p class="fragment shrink"&gt;shrink&lt;/p&gt;
+&lt;p class="fragment fade-out"&gt;fade-out&lt;/p&gt;
+&lt;p class="fragment fade-up"&gt;fade-up (also down, left and right!)&lt;/p&gt;
+&lt;p class="fragment current-visible"&gt;current-visible&lt;/p&gt;
+&lt;p&gt;Highlight &lt;span class="fragment highlight-red"&gt;red&lt;/span&gt; &lt;span class="fragment highlight-blue"&gt;blue&lt;/span&gt; &lt;span class="fragment highlight-green"&gt;green&lt;/span&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="josephorr.20171130193755.1">&lt;h2&gt;Transition Styles&lt;/h2&gt;
+&lt;p&gt;
+You can select from different transitions, like: &lt;br&gt;
+&lt;a href="?transition=none#/transitions"&gt;None&lt;/a&gt; -
+&lt;a href="?transition=fade#/transitions"&gt;Fade&lt;/a&gt; -
+&lt;a href="?transition=slide#/transitions"&gt;Slide&lt;/a&gt; -
+&lt;a href="?transition=convex#/transitions"&gt;Convex&lt;/a&gt; -
+&lt;a href="?transition=concave#/transitions"&gt;Concave&lt;/a&gt; -
+&lt;a href="?transition=zoom#/transitions"&gt;Zoom&lt;/a&gt;
+&lt;/p&gt;
+</t>
+<t tx="josephorr.20171130193909.1">&lt;h2&gt;Themes&lt;/h2&gt;
+&lt;p&gt;
+reveal.js comes with a few themes built in: &lt;br&gt;
+&lt;!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. --&gt;
+&lt;span style="cursor:pointer"&gt;
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;"&gt;Black (default)&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;"&gt;White&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;"&gt;League&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;"&gt;Sky&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;"&gt;Beige&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;"&gt;Simple&lt;/span&gt; &lt;br&gt;
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;"&gt;Serif&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;"&gt;Blood&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;"&gt;Night&lt;/span&gt; -
+&lt;span onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;"&gt;Moon&lt;/span&gt; -
+&lt;span  onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;"&gt;Solarized&lt;/span&gt;
+&lt;/span&gt;
+&lt;/p&gt;</t>
+<t tx="josephorr.20171206184322.1">@language html
+
+&lt;section data-background="#dddddd"&gt;
+  &lt;h2&gt;Slide Backgrounds&lt;/h2&gt;
+  &lt;p&gt;
+    Set &lt;code&gt;data-background="#dddddd"&lt;/code&gt; on a slide to change the background color. All CSS color formats are supported.
+  &lt;/p&gt;
+  &lt;a href="#" class="navigate-down"&gt;
+    &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
+  &lt;/a&gt;
+&lt;/section&gt;
+&lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"&gt;
+  &lt;h2&gt;Image Backgrounds&lt;/h2&gt;
+  &lt;pre&gt;&lt;code class="hljs"&gt;&amp;lt;section data-background="image.png"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px"&gt;
+  &lt;h2&gt;Tiled Backgrounds&lt;/h2&gt;
+  &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000"&gt;
+  &lt;div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;"&gt;
+    &lt;h2&gt;Video Backgrounds&lt;/h2&gt;
+    &lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-video="video.mp4,video.webm"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section data-background="http://i.giphy.com/90F8aUepslB84.gif"&gt;
+  &lt;h2&gt;... and GIFs!&lt;/h2&gt;
+&lt;/section&gt;
+</t>
+<t tx="josephorr.20171207180149.1">&lt;img-left 
+  height="300"
+  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
+   &lt;div slot="txt"&gt;
+       &lt;h2&gt;img-left&lt;/h2&gt;
+       &lt;ul&gt;
+         &lt;li&gt;custom component&lt;/li&gt;
+         &lt;li&gt;use Vue templates&lt;/li&gt;
+         &lt;li&gt;create page layouts&lt;/li&gt;
+       &lt;/ul&gt;
+       &lt;/div&gt;
+   &lt;div slot="foot"&gt;this is the footer&lt;/div&gt;
+&lt;/img-left&gt;</t>
+<t tx="josephorr.20171208074617.1">@props data-transition="slide" data-background="#4d7e65" data-background-transition="zoom"
+
+&lt;h2&gt;Background Transitions&lt;/h2&gt;
+&lt;p&gt;
+  Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs"&gt;Reveal.configure({ backgroundTransition: 'zoom' })&lt;/code&gt;&lt;/pre&gt;
+</t>
+<t tx="josephorr.20171208074735.1">@props data-transition="slide" data-background="#b5533c" data-background-transition="zoom"
+
+&lt;h2&gt;Background Transitions&lt;/h2&gt;
+&lt;p&gt;
+  You can override background transitions per-slide.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-transition="zoom"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+</t>
+<t tx="josephorr.20171208074819.1">&lt;h2&gt;Speaker View&lt;/h2&gt;
+&lt;p&gt;There's a &lt;a href="https://github.com/hakimel/reveal.js#speaker-notes"&gt;speaker view&lt;/a&gt;. It includes a timer, preview of the upcoming slide as well as your speaker notes.&lt;/p&gt;
+&lt;p&gt;Press the &lt;em&gt;S&lt;/em&gt; key to try it out.&lt;/p&gt;
+
+&lt;aside class="notes"&gt;
+  Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+&lt;/aside&gt;</t>
+<t tx="josephorr.20171208074939.1">&lt;h2&gt;Take a Moment&lt;/h2&gt;
+&lt;p&gt;
+    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+&lt;/p&gt;</t>
+<t tx="josephorr.20171208075016.1">&lt;h2&gt;Much more&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Right-to-left support&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#api"&gt;Extensive JavaScript API&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#auto-sliding"&gt;Auto-progression&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#parallax-background"&gt;Parallax backgrounds&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#keyboard-bindings"&gt;Custom keyboard bindings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</t>
+<t tx="josephorr.20171208075048.1">&lt;h1&gt;THE END&lt;/h1&gt;
+&lt;p&gt;
+    - &lt;a href="http://slides.com"&gt;Try the online editor&lt;/a&gt; &lt;br&gt;
+    - &lt;a href="https://github.com/hakimel/reveal.js"&gt;Source code &amp;amp; documentation&lt;/a&gt;
+&lt;/p&gt;</t>
 </tnodes>
 </leo_file>

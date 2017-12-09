@@ -122,9 +122,15 @@
 <v t="josephorr.20171130193755.1"><vh>Transitions</vh></v>
 <v t="josephorr.20171130193909.1"><vh>Themes</vh></v>
 <v t="josephorr.20171206184322.1"><vh>Backgrounds</vh></v>
+<v t="josephorr.20171208074617.1"><vh>Transitions</vh></v>
+<v t="josephorr.20171208074735.1"><vh>Override Transitions</vh></v>
+<v t="josephorr.20171208074819.1"><vh>Speaker View</vh></v>
+<v t="josephorr.20171208074939.1"><vh>Pause</vh></v>
+<v t="josephorr.20171208075016.1"><vh>And More</vh></v>
+<v t="josephorr.20171208075048.1"><vh>End</vh></v>
 </v>
 </v>
-<v t="josephorr.20171125133949.1"><vh>Leo Vue</vh></v>
+<v t="josephorr.20171125133949.1"><vh>Vue in Presentations</vh></v>
 <v t="josephorr.20171121003503.1"><vh>SVG</vh></v>
 <v t="josephorr.20171121003508.1"><vh>Youtube</vh></v>
 <v t="josephorr.20171125134128.1"><vh>Charts</vh></v>
@@ -133,7 +139,6 @@
 <v t="josephorr.20171125134539.1"><vh>Math</vh></v>
 <v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
-<v t="josephorr.20171121003518.1"><vh>Vertical Slides</vh></v>
 <v t="josephorr.20171207180149.1"><vh>Layout Components</vh></v>
 </v>
 </v>
@@ -1168,10 +1173,9 @@ Below is an example of an SVG chart created on draw.io, exported to SVG and disp
 &lt;p&gt;Create content with the Leo Outlining Editor.&lt;/p&gt;
 
 &lt;p&gt;Display it with Leo Vue.&lt;/p&gt;</t>
-<t tx="josephorr.20171121003459.1">&lt;h1&gt;Reveal.js&lt;/h1&gt;
-&lt;p&gt;
-  &lt;small&gt;Created by &lt;a href="http://hakim.se"&gt;Hakim El Hattab&lt;/a&gt; / &lt;a href="http://twitter.com/hakimel"&gt;@hakimel&lt;/a&gt;&lt;/small&gt;
-&lt;/p&gt;
+<t tx="josephorr.20171121003459.1">&lt;em&gt;Leo Vue uses the Reveal.js Library to display presentations.&lt;/em&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;Create intereactive slide desks using HTML&lt;/li&gt;
   &lt;li&gt;Create decks in Leo&lt;/li&gt;
@@ -1192,30 +1196,6 @@ Below is an example of an SVG chart created on draw.io, exported to SVG and disp
             </t>
 <t tx="josephorr.20171121003508.1">&lt;h4&gt;Videos&lt;/h4&gt;
 &lt;youtube :video-id="'pRnQFGskg9w'" :player-width="420" :player-height="295"&gt;&lt;/youtube&gt;
-</t>
-<t tx="josephorr.20171121003518.1">@language html
-
-&lt;section&gt;
-    &lt;h2&gt;Vertical Slides&lt;/h2&gt;
-    &lt;p&gt;Slides can be nested inside of each other.&lt;/p&gt;
-    &lt;p&gt;Use the &lt;em&gt;Space&lt;/em&gt; key to navigate through all slides.&lt;/p&gt;
-    &lt;br&gt;
-    &lt;a href="#" class="navigate-down"&gt;
-      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"&gt;
-    &lt;/a&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h2&gt;Basement Level 1&lt;/h2&gt;
-    &lt;p&gt;Nested slides are useful for adding additional detail underneath a high level horizontal slide.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;h2&gt;Basement Level 2&lt;/h2&gt;
-    &lt;p&gt;That's it, time to go back up.&lt;/p&gt;
-    &lt;br&gt;
-    &lt;a href="#/2"&gt;
-      &lt;img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);"&gt;
-    &lt;/a&gt;
-&lt;/section&gt;
 </t>
 <t tx="josephorr.20171125133856.1">&lt;h1&gt;Leo&lt;/h1&gt;
 &lt;p&gt;
@@ -1241,15 +1221,17 @@ Below is an example of an SVG chart created on draw.io, exported to SVG and disp
   &lt;li&gt;74k+ Stars on Github&lt;/li&gt;
   &lt;li&gt;No Corporate Agenda&lt;/li&gt;
 &lt;/ul&gt;</t>
-<t tx="josephorr.20171125133949.1">&lt;h4&gt;
-Vue.js components in Leo Vue
-&lt;/h4&gt;
-
+<t tx="josephorr.20171125133949.1">&lt;em&gt;
+Vue.js components in Presentations
+&lt;/em&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;Charts&lt;/li&gt;
   &lt;li&gt;Tables from Data Nodes&lt;/li&gt;
   &lt;li&gt;SVG&lt;/li&gt;
   &lt;li&gt;YouTube Videos&lt;/li&gt;
+  &lt;li&gt;Custom Layouts&lt;/li&gt;
   &lt;li&gt;More components included, or add your own&lt;/li&gt;
 &lt;/ul&gt;</t>
 <t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
@@ -1442,13 +1424,54 @@ reveal.js comes with a few themes built in: &lt;br&gt;
   height="300"
   src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
    &lt;div slot="txt"&gt;
-   &lt;h2&gt;Title&lt;/h2&gt;
-   &lt;ul&gt;
-     &lt;li&gt;item&lt;/li&gt;
-     &lt;li&gt;another&lt;/li&gt;
-   &lt;/ul&gt;
-   &lt;/div&gt;
+       &lt;h2&gt;img-left&lt;/h2&gt;
+       &lt;ul&gt;
+         &lt;li&gt;custom component&lt;/li&gt;
+         &lt;li&gt;use Vue templates&lt;/li&gt;
+         &lt;li&gt;create page layouts&lt;/li&gt;
+       &lt;/ul&gt;
+       &lt;/div&gt;
    &lt;div slot="foot"&gt;this is the footer&lt;/div&gt;
 &lt;/img-left&gt;</t>
+<t tx="josephorr.20171208074617.1">@props data-transition="slide" data-background="#4d7e65" data-background-transition="zoom"
+
+&lt;h2&gt;Background Transitions&lt;/h2&gt;
+&lt;p&gt;
+  Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs"&gt;Reveal.configure({ backgroundTransition: 'zoom' })&lt;/code&gt;&lt;/pre&gt;
+</t>
+<t tx="josephorr.20171208074735.1">@props data-transition="slide" data-background="#b5533c" data-background-transition="zoom"
+
+&lt;h2&gt;Background Transitions&lt;/h2&gt;
+&lt;p&gt;
+  You can override background transitions per-slide.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs" style="word-wrap: break-word;"&gt;&amp;lt;section data-background-transition="zoom"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+</t>
+<t tx="josephorr.20171208074819.1">&lt;h2&gt;Speaker View&lt;/h2&gt;
+&lt;p&gt;There's a &lt;a href="https://github.com/hakimel/reveal.js#speaker-notes"&gt;speaker view&lt;/a&gt;. It includes a timer, preview of the upcoming slide as well as your speaker notes.&lt;/p&gt;
+&lt;p&gt;Press the &lt;em&gt;S&lt;/em&gt; key to try it out.&lt;/p&gt;
+
+&lt;aside class="notes"&gt;
+  Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+&lt;/aside&gt;</t>
+<t tx="josephorr.20171208074939.1">&lt;h2&gt;Take a Moment&lt;/h2&gt;
+&lt;p&gt;
+    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+&lt;/p&gt;</t>
+<t tx="josephorr.20171208075016.1">&lt;h2&gt;Much more&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Right-to-left support&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#api"&gt;Extensive JavaScript API&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#auto-sliding"&gt;Auto-progression&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#parallax-background"&gt;Parallax backgrounds&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://github.com/hakimel/reveal.js#keyboard-bindings"&gt;Custom keyboard bindings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</t>
+<t tx="josephorr.20171208075048.1">&lt;h1&gt;THE END&lt;/h1&gt;
+&lt;p&gt;
+    - &lt;a href="http://slides.com"&gt;Try the online editor&lt;/a&gt; &lt;br&gt;
+    - &lt;a href="https://github.com/hakimel/reveal.js"&gt;Source code &amp;amp; documentation&lt;/a&gt;
+&lt;/p&gt;</t>
 </tnodes>
 </leo_file>
