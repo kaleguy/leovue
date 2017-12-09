@@ -1438,7 +1438,9 @@ reveal.js comes with a few themes built in: &lt;br&gt;
   &lt;h2&gt;... and GIFs!&lt;/h2&gt;
 &lt;/section&gt;
 </t>
-<t tx="josephorr.20171207180149.1">&lt;img-left src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
+<t tx="josephorr.20171207180149.1">&lt;img-left 
+  height="300"
+  src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
    &lt;div slot="txt"&gt;
    &lt;h2&gt;Title&lt;/h2&gt;
    &lt;ul&gt;

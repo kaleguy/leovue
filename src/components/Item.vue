@@ -167,11 +167,11 @@ export default {
       if (this.model.presentation) {
         let presentation = this.model.presentation
         const iframe = document.getElementsByTagName('iframe')[0]
-        if (!iframe) {
-          let id = this.model.presentation.pid
-          this.$store.dispatch('setCurrentItem', {id})
-          return
-        }
+        // if (!iframe) {
+        let id = this.model.presentation.pid
+        this.$store.dispatch('setCurrentItem', {id})
+        // return
+        // }
         if (iframe.contentWindow.Reveal) {
           iframe.contentWindow.Reveal.slide(presentation.index, 0)
         }

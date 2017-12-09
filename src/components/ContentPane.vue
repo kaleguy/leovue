@@ -82,14 +82,19 @@ function overrideXFrame(item, textItems) {
 
 function loadPresentation(item, textItems, iframe) {
   let content = ''
+  let re = /^@props (.*)/
   item.children.forEach((page, index) => {
     let pageContent = textItems[page.t]
-    // page.presentation = {id: item.id, index}
-    content = content + '<section>' +  util.formatText(pageContent, true) + '</section>'
+    let props = re.exec(pageContent)
+    if (props) {
+      props = props[1]
+    } else {
+      props = ''
+    }
+    content = content + '<section ' + props + '>' +  util.formatText(pageContent, true) + '</section>'
   })
   const html = presentation(item.name, content)
   iframe.contentWindow.document.open()
-  // iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'))
   iframe.contentWindow.document.write(html)
   iframe.contentWindow.document.close()
 }
