@@ -35,7 +35,7 @@ npm run build
 npm run build --report
 
 # build site with static pages for SEO, files will be generated into dist/static/site
-npm run build-static-site
+npm run build-static
 
 
 ```

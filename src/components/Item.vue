@@ -172,9 +172,16 @@ export default {
         this.$store.dispatch('setCurrentItem', {id})
         // return
         // }
-        if (iframe.contentWindow.Reveal) {
-          iframe.contentWindow.Reveal.slide(presentation.index, 0)
-        }
+        // hack
+        let _toPageF = (function (iframe) {
+          return () => {
+            if (iframe.contentWindow.Reveal) {
+              console.log('going to page:', presentation.index)
+              iframe.contentWindow.Reveal.slide(presentation.index, 0)
+            }
+          }
+        })(iframe)
+        window.setTimeout(_toPageF, 1)
         return
       }
       this.$store.dispatch('setCurrentItem', {id})

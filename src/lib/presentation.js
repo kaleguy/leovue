@@ -47,6 +47,7 @@ function presentation(name, content, index, theme, codeTheme) {
     </script>
 	  <div id="app-base"></div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src='https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js'></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/manifest.js"></script>

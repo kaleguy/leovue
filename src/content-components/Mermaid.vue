@@ -1,12 +1,10 @@
 <template>
-  <div>
     <div class="mermaid"><slot></slot></div>
-  </div>
 </template>
 
 <script>
   export default {
-    name: 'vctable',
+    name: 'mermaid',
     components: {
     },
     props: {
@@ -28,7 +26,7 @@
     beforeCreate () {
     },
     mounted () {
-      const mermaidEl = document.getElementsByClassName('mermaid')[0]
+      const mermaidEl = this.$el
       mermaidEl.style.height = this.height + 'px'
       mermaidEl.style.width = this.width + 'px'
       mermaid.init(undefined, mermaidEl) // eslint-disable-line
