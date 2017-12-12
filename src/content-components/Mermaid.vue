@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  /* global mermaid */
   export default {
     name: 'mermaid',
     components: {
@@ -29,6 +30,15 @@
       const mermaidEl = this.$el
       mermaidEl.style.height = this.height + 'px'
       mermaidEl.style.width = this.width + 'px'
+      const config = {
+        startOnLoad: true,
+        flowchart: {
+          useMaxWidth: false,
+          htmlLabels: true
+        },
+        theme: 'forest'
+      }
+      mermaid.initialize(config)
       mermaid.init(undefined, mermaidEl) // eslint-disable-line
     },
     computed: {

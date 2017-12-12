@@ -19,6 +19,13 @@ function presentation(name, content, index, theme, codeTheme) {
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/${codeTheme}.css">
     <style type="text/css">
+    .section-link {
+      color: #4cb986;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
     </style>
   <script>
     window.lconfig = {

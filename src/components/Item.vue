@@ -166,15 +166,12 @@ export default {
       const id = this.model.id
       if (this.model.presentation) {
         let presentation = this.model.presentation
-        const iframe = document.getElementsByTagName('iframe')[0]
-        // if (!iframe) {
         let id = this.model.presentation.pid
         this.$store.dispatch('setCurrentItem', {id})
-        // return
-        // }
-        // hack
+        const iframe = document.getElementsByTagName('iframe')[0]
         let _toPageF = (function (iframe) {
           return () => {
+            if (!presentation.index) { return }
             if (iframe.contentWindow.Reveal) {
               console.log('going to page:', presentation.index)
               iframe.contentWindow.Reveal.slide(presentation.index, 0)

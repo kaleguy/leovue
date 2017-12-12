@@ -464,6 +464,7 @@ export default new Vuex.Store({
       window.lconfig.leodata = o.data
       window.lconfig.leotext = o.text
     },
+    // lunr search index
     RESETINDEX (state, o) {
       if (_.isUndefined) {
         console.log('No state in RESETINDEX')
@@ -641,6 +642,7 @@ export default new Vuex.Store({
       } else {
         id = pageNode.id
       }
+      console.log('CP', id)
       context.commit('CURRENT_PAGE', {id})
     },
     setCurrentItem (context, o) {
@@ -674,6 +676,7 @@ export default new Vuex.Store({
       context.commit('CURRENT_ITEM', {id})
       context.commit('CURRENT_PAGE', {id: 0})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
+      // debugger
       if (item) {
         item = item[0]
         if (/^@presentation /.test(item.name)) {
