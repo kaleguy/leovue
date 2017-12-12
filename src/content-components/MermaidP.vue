@@ -28,17 +28,15 @@
     beforeCreate () {
     },
     mounted () {
-      /**
       const config = {
         startOnLoad: true,
         flowchart: {
-          useMaxWidth: false,
+          useMaxWidth: true,
           htmlLabels: true
         },
         theme: 'forest'
       }
-      */
-      // mermaid.initialize(config)
+      mermaid.initialize(config)
       const mermaidEl = this.$el // document.getElementsByClassName('mermaid')[0]
       if (this.width) {
         mermaidEl.style.width = this.width + 'px'

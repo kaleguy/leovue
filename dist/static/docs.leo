@@ -1515,7 +1515,7 @@ graph TB
 <t tx="josephorr.20171209190744.1">&lt;h4&gt;Mermaid Diagrams&lt;/h4&gt;
 &lt;p&gt;&lt;small&gt;Create diagragms with the Mermaid markup language.&lt;/small&gt;&lt;/p&gt;
 
-&lt;mermaidp height="200" &gt;
+&lt;mermaidp height="320" &gt;
 graph TB
     sq[Square shape] --&gt; ci((Circle shape))
 
