@@ -312,7 +312,7 @@ function loadPresentations (data) {
 function loadPresentation (id, pages) {
   if (!pages) { return }
   pages.forEach((page, index) => {
-    page.presentation = {pid: id, index}
+    page.presentation = { pid: id, index }
   })
 }
 
@@ -630,19 +630,16 @@ export default new Vuex.Store({
     setCurrentPage (context, o) {
       let page = +o.id
       let id = context.state.currentItem.id
-      // id = id + page + 1
-      // get sibling of id which is +pages away
+      // if we're setting a page, we're displaying a presentation
       const presentationNode = JSON.search(context.state.leodata, '//*[id="' + id + '"]')[0]
       const pageNode = presentationNode.children[page]
       // const pageNode = 0
-      console.log('PN', presentationNode, pageNode, page)
-      // console.log('PAGENODE', pageNode, pageNode.id, id, page)
+      // console.log('PN', presentationNode, pageNode, page)
       if (!pageNode) {
         id = 0
       } else {
         id = pageNode.id
       }
-      console.log('CP', id)
       context.commit('CURRENT_PAGE', {id})
     },
     setCurrentItem (context, o) {
@@ -673,10 +670,11 @@ export default new Vuex.Store({
         openItemIds = _.uniq(currentOpenItemIds.concat(openItemIds))
         context.commit('OPEN_ITEMS', {openItemIds})
       }
-      context.commit('CURRENT_ITEM', {id})
-      context.commit('CURRENT_PAGE', {id: 0})
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
-      // debugger
+      context.commit('CURRENT_ITEM', {id})
+      if (_.get(item, '[0].presentation')) {
+        context.commit('CURRENT_PAGE', {id: 0})
+      }
       if (item) {
         item = item[0]
         if (/^@presentation /.test(item.name)) {
@@ -685,7 +683,9 @@ export default new Vuex.Store({
         if (/^« /.test(item.name) && _.has(item.children[0], 'presentation')) {
           return showPresentation(context, item.name, id)
         }
+        // bracket means load file/site
         if (/^\[/.test(item.name)) {
+          // load leo file from item title
           if (/\.leo\)$/.test(item.name)) {
             console.log('load leo')
             loadLeoNode(context, item, true).then(
@@ -699,6 +699,11 @@ export default new Vuex.Store({
         } else {
           // console.log(item.t)
           showText(context, context.state.leotext[item.t], id)
+        }
+        if (item.presentation) {
+          context.commit('CURRENT_ITEM', {id: item.presentation.pid})
+          context.commit('CURRENT_PAGE', {id})
+          return showPresentation(context, item.name, id)
         }
       }
     }

@@ -168,10 +168,11 @@ export default {
         let presentation = this.model.presentation
         let id = this.model.presentation.pid
         this.$store.dispatch('setCurrentItem', {id})
+
         const iframe = document.getElementsByTagName('iframe')[0]
         let _toPageF = (function (iframe) {
           return () => {
-            if (!presentation.index) { return }
+            if (!presentation.hasOwnProperty('index')) { return }
             if (iframe.contentWindow.Reveal) {
               console.log('going to page:', presentation.index)
               iframe.contentWindow.Reveal.slide(presentation.index, 0)
@@ -179,6 +180,7 @@ export default {
           }
         })(iframe)
         window.setTimeout(_toPageF, 1)
+
         return
       }
       this.$store.dispatch('setCurrentItem', {id})

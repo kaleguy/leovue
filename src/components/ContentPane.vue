@@ -83,6 +83,10 @@ function overrideXFrame(item, textItems) {
 function loadPresentation(item, textItems, iframe) {
   let content = ''
   let re = /^@props (.*)/
+  if (!item.children.length) {
+    console.log('pid', item.presentation.pid)
+    return
+  }
   item.children.forEach((page, index) => {
     let pageContent = textItems[page.t]
     let props = re.exec(pageContent)
@@ -97,6 +101,20 @@ function loadPresentation(item, textItems, iframe) {
   iframe.contentWindow.document.open()
   iframe.contentWindow.document.write(html)
   iframe.contentWindow.document.close()
+  /*
+  if (!item.presentation) { return }
+  let _toPageF = (function (iframe) {
+    return () => {
+      if (!item.presentation.index) { return }
+      console.log('!!!!!!!!', iframe.contentWindow.Reveal)
+      if (iframe.contentWindow.Reveal) {
+        console.log('going to page:', item.presentation.index)
+        iframe.contentWindow.Reveal.slide(item.presentation.index, 0)
+      }
+    }
+  })(iframe)
+  */
+  // window.setTimeout(_toPageF, 1000)
 }
 
 export default {
