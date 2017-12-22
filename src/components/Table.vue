@@ -26,7 +26,7 @@ export default {
     },
     fontSize: {
       type: String,
-      default: '20'
+      default: '14'
     }
   },
   components: {

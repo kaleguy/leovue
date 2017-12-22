@@ -71,12 +71,12 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -85,7 +85,7 @@
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
 <v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
@@ -109,10 +109,12 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
+<v t="josephorr.20171221182256.1"><vh>Infocard</vh></v>
+<v t="josephorr.20171221182359.1"><vh>Infocard with Graph</vh></v>
 <v t="josephorr.20171121003459.1"><vh>Reveal</vh>
 <v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
@@ -777,17 +779,17 @@ Vue.use(VueYouTubeEmbed)
 See the main.js file in the Leo Vue source for how other components are included with Leo Vue.
 </t>
 <t tx="josephorr.20171104212406.1">&lt;info-card
-  :frontTitle=" 'Info Card' "
-  :frontData=" 'The Vue Info Card component makes it easy to create simple flashcards.' "
-  :backTitle=" 'Back Title' "
-  :backData=" 'This is the back of the card.' "/&gt;
+  frontTitle=" Info Card "
+  frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
+  backTitle=" Back Title "
+  backData=" This is the back of the card. "/&gt;
   
 &lt;info-card
-  :frontType="'graph'"
-  :frontTitle=" 'Graph Card' "
+  frontType="graph"
+  frontTitle=" Graph Card "
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
-  :backTitle=" 'Create a Graph Card' "
-  :backData=" 'You can easily create graph cards like this one using the Vue Info Card component. Open the docs.leo file in the Leo Editor to see the source for this card.' "/&gt;  
+  backTitle=" Create a Graph Card "
+  backData=" You can easily create graph cards like this one using the Vue Info Card component. Open the docs.leo file in the Leo Editor to see the source for this card. "/&gt;  
   
   </t>
 <t tx="josephorr.20171105105136.1">@language html
@@ -867,7 +869,7 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 
 A line chart with some random data contained in the **set1** @dataTable node.
 
-&lt;line-chart :dataSet="'set1'" :gridLines="true" /&gt;</t>
+&lt;line-chart dataSet="set1" :gridLines="true" /&gt;</t>
 <t tx="josephorr.20171107074219.1"></t>
 <t tx="josephorr.20171107081559.1">@language json
 {
@@ -973,7 +975,10 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the [[Data]] node).
 &lt;/p&gt;
 &lt;br&gt;
-&lt;v-table :dataTable="'worldpop'" &gt;&lt;/v-table&gt;</t>
+&lt;v-table 
+  fontSize="12"
+  dataTable="worldpop"&gt;
+&lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
 Leo Vue is currently at version 1.0.2 
@@ -1212,7 +1217,11 @@ Presentations can be nested.</t>
             &lt;/v-svg&gt;
             </t>
 <t tx="josephorr.20171121003508.1">&lt;h4&gt;Videos&lt;/h4&gt;
-&lt;youtube :video-id="'pRnQFGskg9w'" :player-width="420" :player-height="295"&gt;&lt;/youtube&gt;
+&lt;youtube 
+  :video-id="'pRnQFGskg9w'" 
+  :player-width="420" 
+  :player-height="295"&gt;
+&lt;/youtube&gt;
 </t>
 <t tx="josephorr.20171125133856.1">&lt;h1&gt;Leo&lt;/h1&gt;
 &lt;p&gt;
@@ -1554,5 +1563,16 @@ Because of Leo's cloned nodes,
 slides can be shared among multiple presentations.
 
 The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
+<t tx="josephorr.20171221182256.1">&lt;info-card
+  frontTitle=" Info Card "
+  :frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
+  backTitle=" Back Title "
+  backData=" This is the back of the card. "/&gt;</t>
+<t tx="josephorr.20171221182359.1">&lt;info-card
+  frontType="graph"
+  frontTitle=" Infocard with Graph "
+  :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
+  backTitle=" Create a Graph Card "
+  backData=" Infocards can also have simple graphs."/&gt; </t>
 </tnodes>
 </leo_file>
