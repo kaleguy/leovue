@@ -26,7 +26,6 @@
         let titleObj = JSON.search(leodata, '//*[name="' + searchTitle + '"]')[0]
         if (!titleObj) {
           titleObj = util.getObjectByKeyFromTree(leodata[0], 'name', plainTitle)
-          console.log(titleObj)
         }
         let id = null
         let index = null

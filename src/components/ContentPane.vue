@@ -75,12 +75,12 @@ function overrideXFrame(item, textItems) {
   console.log('URL', url)
   if (!/^\s?xttp/.test(url)) { return }
   window.url = url.replace(/^s?xttp/, 'http')
-  // iframe.src = window.url
   loadURL(window.url)
 }
 // end functions for dealing with x-frame headers
 
 function loadPresentation(item, textItems, iframe) {
+  console.log('loading presentation', item)
   let content = ''
   let re = /^@props (.*)/
   if (!item.children.length) {
@@ -101,20 +101,6 @@ function loadPresentation(item, textItems, iframe) {
   iframe.contentWindow.document.open()
   iframe.contentWindow.document.write(html)
   iframe.contentWindow.document.close()
-  /*
-  if (!item.presentation) { return }
-  let _toPageF = (function (iframe) {
-    return () => {
-      if (!item.presentation.index) { return }
-      console.log('!!!!!!!!', iframe.contentWindow.Reveal)
-      if (iframe.contentWindow.Reveal) {
-        console.log('going to page:', item.presentation.index)
-        iframe.contentWindow.Reveal.slide(item.presentation.index, 0)
-      }
-    }
-  })(iframe)
-  */
-  // window.setTimeout(_toPageF, 1000)
 }
 
 export default {
@@ -180,16 +166,6 @@ export default {
     },
     dynComponent () {
       const id = this.$store.state.currentItem.id
-/*
-      if (id) {
-        console.log(this.data)
-        const item = JSON.search(this.data, '//!*[id="' + id + '"]')[0]
-        if (item.presentation && item.presentation.index > 0) {
-          console.log('I', item.presentation.index)
-          return
-        }
-      }
-*/
       const template = this.currentItemContent ? this.currentItemContent : '<div></div>'
       return {
         template, // use content as template for this component
