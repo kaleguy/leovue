@@ -113,8 +113,6 @@
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
-<v t="josephorr.20171221182256.1"><vh>Infocard</vh></v>
-<v t="josephorr.20171221182359.1"><vh>Infocard with Graph</vh></v>
 <v t="josephorr.20171121003459.1"><vh>Reveal</vh>
 <v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
@@ -136,6 +134,8 @@
 <v t="josephorr.20171125133949.1"><vh>Vue in Presentations</vh></v>
 <v t="josephorr.20171125134128.1"><vh>Charts</vh></v>
 <v t="josephorr.20171125174856.1"><vh>Tables</vh></v>
+<v t="josephorr.20171221182256.1"><vh>Infocard</vh></v>
+<v t="josephorr.20171221182359.1"><vh>Infocard with Graph</vh></v>
 <v t="josephorr.20171125175250.1"><vh>Sortable Table</vh></v>
 <v t="josephorr.20171121003503.1"><vh>SVG Diagrams</vh></v>
 <v t="josephorr.20171209190744.1"><vh>Mermaid Diagrams</vh></v>
@@ -1255,6 +1255,7 @@ Vue.js components in Presentations
 &lt;ul&gt;
   &lt;li&gt;Charts (Chartjs)&lt;/li&gt;
   &lt;li&gt;Tables from Data Nodes&lt;/li&gt;
+  &lt;li&gt;Infocards&lt;/li&gt;
   &lt;li&gt;SVG and Mermaid Diagrams&lt;/li&gt;
   &lt;li&gt;YouTube Videos&lt;/li&gt;
   &lt;li&gt;Custom Layouts&lt;/li&gt;
