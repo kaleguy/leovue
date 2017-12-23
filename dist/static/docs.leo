@@ -109,7 +109,7 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -1565,7 +1565,7 @@ slides can be shared among multiple presentations.
 The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
 <t tx="josephorr.20171221182256.1">&lt;info-card
   frontTitle=" Info Card "
-  :frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
+  frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
   backTitle=" Back Title "
   backData=" This is the back of the card. "/&gt;</t>
 <t tx="josephorr.20171221182359.1">&lt;info-card
