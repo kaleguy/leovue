@@ -7,4 +7,4 @@ test/e2e/reports
 selenium-debug.log
 .idea/
 /dist/static/js/manifest.js.map
-!/dist/static/js/app.js.map
+/dist/static/js/app.js.map
