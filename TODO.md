@@ -7,6 +7,7 @@
 * escape key
 * other keyboard support
 * http://quasar-framework.org/
+* tree to mermaid
 
 # Feature TODO
 

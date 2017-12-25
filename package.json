@@ -1,9 +1,9 @@
 {
-  "name": "leovue",
+  "name": "leo-vue",
   "version": "1.0.2",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr <joe.orr@gmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -33,7 +33,6 @@
     "vue-awesome": "^2.3.1",
     "vue-chartjs": "^3.0.0",
     "vue-clickaway": "^2.1.0",
-    "vue-grid-layout": "^2.1.6",
     "vue-info-card": "^0.1.1",
     "vue-instant": "^1.0.2",
     "vue-markdown": "^2.2.4",
