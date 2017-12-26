@@ -51,8 +51,8 @@
               transition: 'slide', // none/fade/slide/convex/concave/zoom
               // More info https://github.com/hakimel/reveal.js#dependencies
               dependencies: [
-                { src: 'plugin/zoom-js/zoom.js', async: true },
-                { src: 'plugin/notes/notes.js', async: true }
+                { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/zoom-js/zoom.js', async: true },
+                { src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/notes/notes.js', async: true }
               ]
             })
           }

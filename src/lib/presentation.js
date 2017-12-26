@@ -84,11 +84,11 @@ function presentation(name, content, index, theme, codeTheme) {
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		-->
-		<!--
-		<script src="static/reveal/js/manifest.js"></script>
-		<script src="static/reveal/js/vendor.js"></script>
-		<script src="static/reveal/js/app.js"></script>
-    -->
+		
+		<script src="http://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/manifest.js"></script>
+		<script src="http://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/vendor.js"></script>
+		<script src="http://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/app.js"></script>
+    
 	</body>
 </html>
 
