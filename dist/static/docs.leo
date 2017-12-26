@@ -148,10 +148,6 @@
 <v t="josephorr.20171211070817.1"><vh>Shared Slides</vh></v>
 <v t="josephorr.20171130193909.1"></v>
 </v>
-<v t="josephorr.20171225085021.1" a="E"><vh>@presentation test</vh>
-<v t="josephorr.20171225085040.1"><vh>test 1</vh></v>
-<v t="josephorr.20171225085050.1"><vh>test 2</vh></v>
-</v>
 </v>
 </v>
 </vnodes>
@@ -1579,8 +1575,5 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
-<t tx="josephorr.20171225085021.1"></t>
-<t tx="josephorr.20171225085040.1">foobar</t>
-<t tx="josephorr.20171225085050.1">test2</t>
 </tnodes>
 </leo_file>
