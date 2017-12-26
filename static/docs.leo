@@ -1262,10 +1262,10 @@ Vue.js components in Presentations
  &lt;/ul&gt;</t>
 <t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
 &lt;line-chart 
-  :dataTable="'worldpop'" 
+  dataTable="worldpop" 
   :gridLines="true" 
-  width="700"
-  height="500"
+  :width="700"
+  :height="500"
   :responsive="false"
 /&gt;
 </t>
@@ -1273,10 +1273,6 @@ Vue.js components in Presentations
 
 &lt;p&gt;Math symbols via the MathJax Library&lt;/p&gt;
 
-&lt;mj&gt;
-\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
-&lt;/mj&gt;
-&lt;br&gt;
 &lt;mj&gt;
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>

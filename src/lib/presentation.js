@@ -1582,6 +1582,23 @@ function presentation(name, content, index, theme, codeTheme) {
 
 
   </style>
+    <style>
+     .table-component INPUT {
+       display:none;
+     }
+     .table-component TD, .table-component TH {
+       font-size: 90%;
+     }
+     .reveal CANVAS {
+       margin-left: auto;
+       margin-right: auto;
+     }
+     .reveal .flip-container {
+       margin-left: auto;
+       margin-right: auto;
+       width: 80%;
+     }
+    </style>
 		<link id="theme" rel="stylesheet" href="css/theme/${theme}.css">
     
 		<!-- Theme used for syntax highlighting of code -->
@@ -1619,6 +1636,7 @@ function presentation(name, content, index, theme, codeTheme) {
       ]
     }
   </script>
+
   	</head>
 	<body>
 	  <script type="template" id="slideContent">
@@ -1646,7 +1664,7 @@ function presentation(name, content, index, theme, codeTheme) {
 		<script src="https://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/app.js"></script>
 		<script>
 		  Reveal.addEventListener( 'slidechanged', function( event ) {
-       // MathJax.Hub.Rerender(event.currentSlide);
+        MathJax.Hub.Rerender(event.currentSlide);
       });
     </script>
     
