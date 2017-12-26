@@ -109,7 +109,7 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -1276,7 +1276,7 @@ Vue.js components in Presentations
 &lt;mj&gt;
 \Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
 &lt;/mj&gt;
-
+&lt;br&gt;
 &lt;mj&gt;
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
