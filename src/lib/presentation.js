@@ -62,12 +62,6 @@ function presentation(name, content, index, theme, codeTheme) {
 	  <script type="template" id="slideContent">
 	  ${content}	  
     </script>
-    <div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
 	  <div id="app-base"></div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     <script src='https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js'></script>
