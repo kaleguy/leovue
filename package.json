@@ -94,6 +94,7 @@
     "lolex": "^2.3.0",
     "markdown-it": "^8.3.1",
     "markdown-it-imsize": "^2.0.1",
+    "marked": "^0.3.9",
     "mocha": "^4.0.1",
     "nightwatch": "^0.9.15",
     "node-sass": "^4.5.3",
