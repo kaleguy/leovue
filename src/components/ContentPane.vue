@@ -165,7 +165,7 @@ export default {
       return this.$store.state.currentItem.prev
     },
     dynComponent () {
-      const id = this.$store.state.currentItem.id
+      // const id = this.$store.state.currentItem.id
       const template = this.currentItemContent ? this.currentItemContent : '<div></div>'
       return {
         template, // use content as template for this component

@@ -112,7 +112,7 @@ function formatText (text, noWrapper) {
     default:
       const mu = hljs.highlight(language, text)
       text = mu.value
-      text = `<pre>${text}</pre>`
+      text = `<pre v-pre>${text}</pre>`
   }
   if (noWrapper) {
     return text

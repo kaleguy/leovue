@@ -153,7 +153,6 @@ function getUrlFromTitle (title) {
   return {url, label}
 }
 function showPresentation (context, title, id) {
-  console.log(title, id)
   const iframeHTML = `
     <div style="width:100%">
     <iframe
@@ -168,8 +167,7 @@ function showPresentation (context, title, id) {
 }
 
 function showSite (context, title, id) {
-  let {url, label} = getUrlFromTitle(title)
-  console.log('LABEL:', label)
+  let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
@@ -264,6 +262,7 @@ function setData (context, ldata, filename, route) {
   loadDataSets(context, ldata)
   loadDataTables(context, ldata)
   loadPresentations(ldata.data[0])
+  setLanguageNodes(context, ldata)
   let id = route.params.id
   if (!id) {
     id = '1'
@@ -324,6 +323,55 @@ function loadSubtrees (context, trees, data) {
     loadLeoNode(context, item).then(res => resolve(res))
   })
   return p
+}
+// for @clean nodes, set children with @language of extension
+function setLanguageNodes (context, data) {
+  const textItems = data.textItems
+  data.data.forEach(d => {
+    setLanguageNode(context, d, textItems)
+  })
+  // window.lconfig.dataSets = context.state.dataSets
+}
+function setLanguageNode (context, d, textItems) {
+  const title = d.name
+  let language = ''
+  if (/^\s*@clean/.test(title)) {
+    var re = /(?:\.([^.]+))?$/
+    var ext = re.exec(title)[1]
+    var ng = ['txt', 'md', 'html']
+    if (ng.indexOf(ext) === -1) {
+      language = ext
+    }
+    const langs = {
+      js: 'javascript',
+      ts: 'typescript'
+    }
+    if (langs[ext]) {
+      language = langs[ext]
+    }
+  }
+  if (language) {
+    return addDirectiveToSubTree(d, '@language ' + language, textItems)
+  }
+  d.children.forEach(child => {
+    setLanguageNode(context, child, textItems)
+  })
+}
+
+/**
+ * e.g. add '@language javascript' to this item and all below
+ * @param subtree
+ * @param directive
+ * @param textItems
+ */
+function addDirectiveToSubTree (subtree, directive, textItems) {
+  const text = textItems[subtree.t]
+  if (!/^@/.test(text)) {
+    textItems[subtree.t] = directive + '\n' + text
+  }
+  subtree.children.forEach(child => {
+    addDirectiveToSubTree(child, directive, textItems)
+  })
 }
 function loadDataSets (context, data) {
   const textItems = data.textItems

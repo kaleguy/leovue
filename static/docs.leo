@@ -16,6 +16,7 @@
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
+<v t="josephorr.20171226212539.1"><vh>foo</vh></v>
 </v>
 <v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
@@ -61,7 +62,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -108,7 +109,7 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -723,7 +724,7 @@ An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js
 &lt;/p&gt;
 
 &lt;div&gt;
-&lt;youtube :video-id="'pRnQFGskg9w'" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
+&lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
 &lt;/div&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
 
@@ -1571,5 +1572,8 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
+<t tx="josephorr.20171226212539.1">This is {{apen}}
+
+&lt;component&gt;urk&lt;/component&gt;</t>
 </tnodes>
 </leo_file>
