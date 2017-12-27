@@ -183,21 +183,4 @@ module.exports = {
  }
  */
 
-// get language from extension
-/*
- if (/^\s*@clean/.test(title)) {
- var re = /(?:\.([^.]+))?$/
- var ext = re.exec(title)[1]
- var ng = ['txt', 'md', 'html']
- if (ng.indexOf(ext) === -1) {
- language = ext
- }
- const langs = {
- js: 'javascript',
- ts: 'typescript'
- }
- if (langs[ext]) {
- language = langs[ext]
- }
- }
- */
+

@@ -344,7 +344,10 @@ function setLanguageNode (context, d, textItems) {
     }
     const langs = {
       js: 'javascript',
-      ts: 'typescript'
+      ts: 'typescript',
+      py: 'python',
+      java: 'java',
+      c: 'c'
     }
     if (langs[ext]) {
       language = langs[ext]
