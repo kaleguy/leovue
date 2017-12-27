@@ -1,0 +1,467 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><pre v-pre>
+<span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">'unQork'</span>);
+
+app.config([
+  <span class="hljs-string">'formioComponentsProvider'</span>,
+  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">formioComponentsProvider</span>) </span>{
+    formioComponentsProvider.register(<span class="hljs-string">'datamapper'</span>, {
+      <span class="hljs-attr">fbtemplate</span>: <span class="hljs-string">'formio/formbuilder/datamappers.html'</span>,
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'DataMapper'</span>,
+      <span class="hljs-attr">template</span>: <span class="hljs-string">'formio/components/datamappers.html'</span>,
+      <span class="hljs-attr">group</span>: <span class="hljs-string">'data'</span>,
+      <span class="hljs-attr">controller</span>: [
+        <span class="hljs-string">'$scope'</span>,
+        <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">
+          $scope
+        </span>) </span>{
+
+          <span class="hljs-comment">// Don't do calculations in form builder.</span>
+          <span class="hljs-keyword">if</span> ($scope.builder) { <span class="hljs-keyword">return</span>; }
+
+        $scope.execute = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-comment">//console.log('begin ' + $scope.component.key + ' ' + new Date());</span>
+            <span class="hljs-keyword">if</span> ($scope.component.disabled === <span class="hljs-literal">true</span> || (!LOADING_COMPLETE &amp;&amp; $scope.component.preventExecuteOnLoad === <span class="hljs-literal">true</span>)) {
+                <span class="hljs-keyword">return</span>;
+            }
+            <span class="hljs-keyword">var</span> data = $scope.submission ? $scope.submission.data : {};
+            <span class="hljs-comment">// current row is in $scope.data</span>
+
+            <span class="hljs-keyword">var</span> datamapperData = $scope.component.datamapperData;
+
+            <span class="hljs-keyword">var</span> watchField = $scope.component.datamapperData.watchField;
+            <span class="hljs-keyword">var</span> watchData;
+            <span class="hljs-keyword">var</span> dataInstance = _.cloneDeep(data);
+            <span class="hljs-keyword">if</span> (watchField &amp;&amp; watchField !== <span class="hljs-string">''</span>) {
+                <span class="hljs-comment">// is it a array</span>
+                <span class="hljs-keyword">if</span> (_.has(data,watchField)) {
+                    watchData = _.get(dataInstance, watchField);
+                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($scope.component.triggerType !== <span class="hljs-string">'manual'</span>) {
+                    <span class="hljs-keyword">return</span>;
+                }
+            }
+            <span class="hljs-comment">// set each variable in data as a variable in the parser</span>
+
+            <span class="hljs-keyword">var</span> parser = <span class="hljs-keyword">new</span> formulaParser.Parser();
+            _.each ( data, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, key</span>) </span>{
+                parser.setVariable (key, value);
+            });
+
+            <span class="hljs-comment">// needed to switch to a map to maintain insertion order which is very important</span>
+            <span class="hljs-keyword">var</span> newObject = [];
+
+            <span class="hljs-comment">// cannot use _.each here, it does not maintain the same order which is important for us</span>
+            <span class="hljs-keyword">var</span> heading = datamapperData.dataObject[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">var</span> keys = <span class="hljs-built_in">Object</span>.keys(heading);
+            <span class="hljs-comment">// start at 1 to bypass the first column</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i&lt; keys.length; i++) {
+              <span class="hljs-keyword">var</span> obj = heading[<span class="hljs-string">'col'</span> + i];
+              <span class="hljs-keyword">if</span> (!_.isUndefined(obj) &amp;&amp; obj !== <span class="hljs-string">''</span>) {
+                  newObject.push({<span class="hljs-string">'key'</span>: obj,<span class="hljs-string">'value'</span>: <span class="hljs-string">'col'</span> + i});
+              }
+            }
+
+            <span class="hljs-keyword">var</span> resultRows = [];
+
+            <span class="hljs-keyword">if</span> (watchData) {
+              <span class="hljs-comment">// is it a array</span>
+                <span class="hljs-keyword">if</span> (_.isArray(watchData)) {
+                    <span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>;
+                    parser.setVariable(<span class="hljs-string">'last'</span>, watchData.length);
+                    <span class="hljs-keyword">var</span> iterate = ($scope.component.bottomsUp === <span class="hljs-literal">true</span>) ? _.eachRight : _.each;
+                    iterate (watchData, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">row</span>) </span>{
+                      parser.setVariable(<span class="hljs-string">'position'</span>, i);
+                      _.each (row, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, key</span>) </span>{
+                        _.set(dataInstance, key, value);
+                        parser.setVariable(key,value);
+                      });
+                      <span class="hljs-comment">// add so you can reference itself</span>
+                      makePass (datamapperData.dataObject, parser, dataInstance, resultRows, newObject, i<span class="hljs-number">-1</span>);
+                      _.set(dataInstance, $scope.component.key, resultRows);
+                      _.each (row, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, key</span>) </span>{
+                          _.set(dataInstance, key, <span class="hljs-string">''</span>);
+                          parser.setVariable(key,<span class="hljs-string">''</span>);
+                      });
+                      i = i + <span class="hljs-number">1</span>;
+                  });
+                } <span class="hljs-keyword">else</span> {
+                    makePass (datamapperData.dataObject, parser, dataInstance, resultRows, newObject, <span class="hljs-number">0</span>);
+                }
+            } <span class="hljs-keyword">else</span> {
+                makePass (datamapperData.dataObject, parser, dataInstance, resultRows, newObject,<span class="hljs-number">0</span>);
+            }
+
+            <span class="hljs-keyword">if</span> ($scope.component.wrapInTable) {
+              <span class="hljs-keyword">var</span> htmlTable = createTableForObject(resultRows);
+              data[$scope.component.key] = htmlTable;
+            } <span class="hljs-keyword">else</span> {
+              data[$scope.component.key] = resultRows;
+            }
+
+              <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'end '</span> + $scope.component.key + <span class="hljs-string">' '</span> + <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+        };
+
+        <span class="hljs-keyword">var</span> createTableForObject = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resultRows</span>) </span>{
+          <span class="hljs-keyword">var</span> htmlTable =<span class="hljs-string">'&lt;table class="table table-hover table-bordered" id="{{ componentId }"&gt;'</span>+
+              <span class="hljs-string">'&lt;thead&gt;'</span>+
+              <span class="hljs-string">'&lt;tr&gt;'</span>+
+              <span class="hljs-string">'&lt;th&gt;Data Element&lt;/th&gt;'</span>+
+              <span class="hljs-string">'&lt;th&gt;Value&lt;/th&gt;'</span>+
+              <span class="hljs-string">'&lt;/tr&gt;'</span>+
+              <span class="hljs-string">'&lt;/thead&gt;'</span>+
+              <span class="hljs-string">'&lt;tbody&gt;'</span>;
+            _.each (resultRows, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">row</span>) </span>{
+              <span class="hljs-keyword">if</span> (_.isArray(row) || _.isObject(row)) {
+                  _.each(row, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, key</span>) </span>{
+                      htmlTable = htmlTable + <span class="hljs-string">'&lt;tr&gt;&lt;td&gt;'</span>;
+                      htmlTable = htmlTable + key;
+                      htmlTable = htmlTable + <span class="hljs-string">'&lt;/td&gt;&lt;td&gt;'</span>;
+                      <span class="hljs-keyword">if</span> (_.isObject(value)) {
+                          htmlTable = htmlTable + createTableForObject(value);
+                      } <span class="hljs-keyword">else</span> {
+                          htmlTable = htmlTable + value;
+                      }
+                      htmlTable = htmlTable + <span class="hljs-string">'&lt;/td&gt;&lt;/tr&gt;'</span>;
+                  });
+              } <span class="hljs-keyword">else</span> {
+                  htmlTable = htmlTable + <span class="hljs-string">'&lt;tr&gt;&lt;td&gt;'</span>;
+                  htmlTable = htmlTable + <span class="hljs-string">''</span>;
+                  htmlTable = htmlTable + <span class="hljs-string">'&lt;/td&gt;&lt;td&gt;'</span>;
+                  htmlTable = htmlTable + row;
+                  htmlTable = htmlTable + <span class="hljs-string">'&lt;/td&gt;&lt;/tr&gt;'</span>;
+              }
+            });
+            htmlTable = htmlTable + <span class="hljs-string">'&lt;/tbody&gt;&lt;/table&gt;'</span>;
+            <span class="hljs-keyword">return</span> htmlTable;
+        }
+
+          <span class="hljs-keyword">var</span> makePass = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">dataObject, parser, dataInstance, resultRows, newObject,position</span>) </span>{
+              <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; dataObject.length; i++) {
+                  <span class="hljs-keyword">var</span> row = _.cloneDeep( dataObject[i]);
+                  <span class="hljs-keyword">var</span> checkCondition = row.col0;
+                  <span class="hljs-keyword">if</span> (!checkCondition || checkCondition === <span class="hljs-string">''</span>) {
+                      <span class="hljs-keyword">break</span>;
+                  }
+                  checkCondition = checkCondition.replace(<span class="hljs-string">'true'</span>,<span class="hljs-string">'TRUE'</span>);
+                  checkCondition = checkCondition.replace(<span class="hljs-string">'false'</span>,<span class="hljs-string">'FALSE'</span>);
+                  <span class="hljs-keyword">var</span> newObjectRow = {};
+                  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; newObject.length; j++) {
+                      <span class="hljs-keyword">var</span> key = newObject[j].key
+                      <span class="hljs-keyword">var</span> value = newObject[j].value;
+                      <span class="hljs-keyword">var</span> rowValue = row[value];
+                      <span class="hljs-keyword">if</span> (rowValue &amp;&amp; rowValue !== <span class="hljs-string">''</span>) {
+                          <span class="hljs-keyword">var</span> result;
+                          <span class="hljs-keyword">if</span> (rowValue.indexOf(<span class="hljs-string">'[position'</span>) &gt; <span class="hljs-number">-1</span>) {
+                              rowValue=rowValue.replace(<span class="hljs-string">'positionNext'</span>, position+<span class="hljs-number">1</span>);
+                              rowValue=rowValue.replace(<span class="hljs-string">'positionPrevious'</span>, position<span class="hljs-number">-1</span>);
+                              rowValue=rowValue.replace(<span class="hljs-string">'position'</span>, position);
+                          }
+                          <span class="hljs-keyword">if</span> (rowValue.startsWith(<span class="hljs-string">'='</span>)) {
+                              result = parser.parse(rowValue.substring(<span class="hljs-number">1</span>)).result;
+                          } <span class="hljs-keyword">else</span> {
+                              <span class="hljs-keyword">if</span> (rowValue.indexOf(<span class="hljs-string">'[x].'</span>) &gt; <span class="hljs-number">-1</span>) {
+                                  result = explodeArrays(rowValue, dataInstance);
+                              } <span class="hljs-keyword">else</span> {
+                                  result = _.get(newObjectRow, rowValue, _.get(dataInstance, rowValue, <span class="hljs-string">''</span>));
+                              }
+                          }
+                         <span class="hljs-comment">// _.set(dataInstance, key, result);</span>
+                          _.set(newObjectRow, key, result);
+                          parser.setVariable(key, result);
+                      } <span class="hljs-keyword">else</span> {
+                          _.set(newObjectRow, key, <span class="hljs-string">''</span>);
+                          parser.setVariable(key, <span class="hljs-string">''</span>);
+                      }
+                  }
+
+                  <span class="hljs-keyword">if</span> (parser.parse(checkCondition.substring(<span class="hljs-number">1</span>)).result) {
+                      resultRows.push(newObjectRow);
+                  }
+              }
+          }
+
+          <span class="hljs-comment">// clean up empty rows... should remove prior</span>
+          cleanEmptyValues ($scope.component.datamapperData, $scope.$parent.form);
+
+          <span class="hljs-keyword">if</span> ($scope.component.includeAllFields) {
+            $scope.component.datamapperData = {<span class="hljs-attr">dataObject</span>: []};
+            <span class="hljs-keyword">var</span> dataObject = $scope.component.datamapperData.dataObject;
+            <span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">var</span> datamapperRow = {
+              <span class="hljs-attr">col0</span>: <span class="hljs-string">'=TRUE'</span>
+            };
+            _.each ($scope.$parent.form.flattenedComponents, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">component</span>) </span>{
+                <span class="hljs-keyword">if</span> ((component.type !== <span class="hljs-string">'column'</span>) &amp;&amp; (component.type !== <span class="hljs-string">'panel'</span>)) {
+                    <span class="hljs-keyword">if</span> (component.key !== $scope.component.key) {
+                        _.set(datamapperRow, <span class="hljs-string">'col'</span> + i, component.key);
+                        i = i + <span class="hljs-number">1</span>;
+                    }
+                }
+            });
+            dataObject.push (datamapperRow);
+            <span class="hljs-comment">// need two rows</span>
+            dataObject.push (datamapperRow);
+          }
+
+          <span class="hljs-comment">// Listen for each input component.</span>
+            <span class="hljs-keyword">if</span> ($scope.component.triggerType !== <span class="hljs-string">'manual'</span>) {
+                <span class="hljs-keyword">var</span> watchField = $scope.component.datamapperData.watchField;
+                <span class="hljs-keyword">if</span> (watchField &amp;&amp; watchField != <span class="hljs-string">''</span>) {
+                    watchField = <span class="hljs-string">'submission.data.'</span> + watchField;
+                } <span class="hljs-keyword">else</span> {
+                    watchField = <span class="hljs-string">'submission.data'</span>;
+                }
+                <span class="hljs-keyword">var</span> filterDelayed = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">$scope</span>) </span>{
+                    $scope.$apply($scope.execute);
+                };
+                <span class="hljs-keyword">var</span> filterThrottled = _.debounce(filterDelayed, <span class="hljs-number">500</span>);
+                $scope.$watch(watchField, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                    filterThrottled($scope);
+                }, <span class="hljs-literal">true</span>);
+            }
+        }
+      ],
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'fa fa-random'</span>,
+      <span class="hljs-attr">settings</span>: {
+        <span class="hljs-attr">multiple</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">input</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">tableView</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">key</span>: <span class="hljs-string">'datamapperField'</span>,
+        <span class="hljs-attr">label</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">protected</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">unique</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">datamapperData</span>: {
+          <span class="hljs-attr">dataObject</span>: [],
+          <span class="hljs-attr">dataInputObject</span>: [],
+          <span class="hljs-attr">dataOutputObject</span>: []
+        },
+        <span class="hljs-attr">triggerType</span>: <span class="hljs-string">'watch'</span>
+      },
+      <span class="hljs-attr">views</span>: [
+        {
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'DataMapper'</span>,
+          <span class="hljs-attr">template</span>: <span class="hljs-string">'formio/components/common/datamapper.html'</span>
+        }
+      ],
+       <span class="hljs-attr">onEdit</span>: [<span class="hljs-string">'$scope'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$scope</span>) </span>{
+            $scope.triggerTypes = [
+                {
+                    <span class="hljs-string">'name'</span>: <span class="hljs-string">'watch'</span>,
+                    <span class="hljs-string">'title'</span>: <span class="hljs-string">'Watch'</span>
+                },
+                {
+                    <span class="hljs-string">'name'</span>: <span class="hljs-string">'manual'</span>,
+                    <span class="hljs-string">'title'</span>: <span class="hljs-string">'Manual'</span>
+                }]
+       }]
+    });
+  }
+]);
+
+app.directive(<span class="hljs-string">'datamapperBuilder'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$parse, FormioUtils</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">restrict</span>: <span class="hljs-string">'E'</span>,
+    <span class="hljs-attr">scope</span>: {
+      <span class="hljs-attr">datamapperData</span>: <span class="hljs-string">'='</span>
+    },
+    <span class="hljs-attr">template</span>: <span class="hljs-string">''</span> +
+    <span class="hljs-string">'&lt;div&gt;'</span> +
+    <span class="hljs-string">'  &lt;div class="row"&gt;'</span> +
+    <span class="hljs-string">'    &lt;div class="col-md-12"&gt;'</span> +
+    <span class="hljs-string">'      &lt;h5&gt;Data Mapper&lt;/h5&gt;'</span> +
+    <span class="hljs-string">'      &lt;div class="hot"/&gt;'</span> +
+    <span class="hljs-string">'    &lt;/div&gt;'</span> +
+    <span class="hljs-string">'  &lt;/div&gt;'</span> +
+    <span class="hljs-string">'&lt;/div&gt;'</span>,
+    <span class="hljs-attr">link</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">scope, element, attrs</span>) </span>{ <span class="hljs-comment">// jshint ignore:line</span>
+
+      <span class="hljs-keyword">var</span> datamapperData = scope.datamapperData;
+      <span class="hljs-keyword">if</span> (datamapperData.dataObject.length === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) {
+          <span class="hljs-keyword">var</span> obj = {};
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = <span class="hljs-number">0</span>; k &lt; <span class="hljs-number">50</span>; k++ ) {
+              _.set(obj, <span class="hljs-string">'col'</span> + k, <span class="hljs-string">''</span>);
+          }
+          datamapperData.dataObject.push(obj);
+        }
+      }
+
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">customRenderer</span>(<span class="hljs-params">instance, td</span>) </span>{
+        Handsontable.renderers.TextRenderer.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+        td.style.backgroundColor = <span class="hljs-string">'#f8f8ff'</span>;
+        <span class="hljs-keyword">return</span> td;
+      }
+
+
+      <span class="hljs-keyword">var</span> columns = [];
+    columns.push({<span class="hljs-attr">data</span>: <span class="hljs-string">'col0'</span>, <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>, <span class="hljs-attr">renderer</span>: customRenderer});
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">50</span>; i++) {
+          columns.push({<span class="hljs-attr">data</span>: <span class="hljs-string">'col'</span> + i, <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>});
+      }
+      <span class="hljs-keyword">var</span> components = [];
+      <span class="hljs-keyword">var</span> fields = [];
+      FormioUtils.eachComponent(scope.$parent.form.components, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component</span>) </span>{
+        <span class="hljs-comment">// Only add input elements.</span>
+          components.push(component);
+          fields.push(component.key);
+        <span class="hljs-comment">//}</span>
+      }, <span class="hljs-literal">true</span>);
+
+      scope.saveData = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (!hot) { <span class="hljs-keyword">return</span>; }
+        datamapperData.dataObject = getTableData(hot);
+        scope.datamapperData = datamapperData;
+
+      };
+
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTableData</span>(<span class="hljs-params">hotTable</span>) </span>{
+        <span class="hljs-keyword">var</span> cellData = hotTable.getData();
+        <span class="hljs-keyword">var</span> headerData = hotTable.getColHeader();
+        <span class="hljs-keyword">var</span> dataTable = [];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k=<span class="hljs-number">0</span>; k &lt; cellData.length; k++) {
+          <span class="hljs-keyword">var</span> dataRow = {};
+          <span class="hljs-keyword">if</span> (!hotTable.isEmptyRow(k)) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i =<span class="hljs-number">0</span>; i &lt; cellData[k].length; i++) {
+              <span class="hljs-keyword">var</span> key = headerData[i];
+              <span class="hljs-keyword">var</span> cellValue = cellData[k][i];
+
+              <span class="hljs-keyword">if</span> (cellValue === <span class="hljs-literal">null</span> ) {
+                cellValue = <span class="hljs-string">''</span>;
+              }
+
+              dataRow[key] = cellValue;
+            }
+            dataTable.push(dataRow);
+          }
+        }
+        <span class="hljs-keyword">return</span> dataTable;
+      }
+
+      scope.loadData = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">datamapperData</span>) </span>{
+        hot.updateSettings({
+          <span class="hljs-attr">data</span>: datamapperData.dataObject
+        });
+
+      };
+
+      <span class="hljs-keyword">var</span> hotElement = element[<span class="hljs-number">0</span>].querySelector(<span class="hljs-string">'.hot'</span>);
+      <span class="hljs-keyword">var</span> hotSettings = {
+        <span class="hljs-attr">data</span>: scope.datamapperData.dataObject,
+        <span class="hljs-attr">columns</span>: columns,
+        <span class="hljs-attr">height</span>: <span class="hljs-number">300</span>,
+        <span class="hljs-attr">width</span>: <span class="hljs-number">700</span>,
+        <span class="hljs-attr">colWidths</span>: [<span class="hljs-number">150</span>, <span class="hljs-number">150</span>,<span class="hljs-number">150</span>,<span class="hljs-number">150</span>],
+        <span class="hljs-attr">rowHeights</span>: <span class="hljs-number">23</span>,
+        <span class="hljs-attr">rowHeaders</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">colHeaders</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">contextMenu</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">manualColumnResize</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">dropdownMenu</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">minSpareRows</span>: <span class="hljs-number">4</span>
+      };
+
+      <span class="hljs-keyword">var</span> hot = <span class="hljs-keyword">new</span> Handsontable(hotElement, hotSettings);
+
+      angular.element(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        hot.render();
+      });
+    },
+    <span class="hljs-attr">controller</span>: [
+      <span class="hljs-string">'$scope'</span>,
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">
+        $scope
+      </span>) </span>{
+        $scope.$watch(<span class="hljs-string">'datamapperData'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newData</span>) </span>{
+          $scope.loadData(newData);
+        });
+      }
+    ]
+  };
+});
+
+app.run([
+  <span class="hljs-string">'$templateCache'</span>,
+  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$templateCache</span>) </span>{
+    $templateCache.put(<span class="hljs-string">'formio/components/datamappers.html'</span>, <span class="hljs-string">'&lt;span /&gt;'</span>);
+
+    $templateCache.put(<span class="hljs-string">'formio/formbuilder/datamappers.html'</span>, <span class="hljs-string">'&lt;span class="hidden-element-text"&gt;{{ component.label }}&lt;/span&gt;'</span>);
+    <span class="hljs-comment">// Create the common Data Mapper tab markup.</span>
+    $templateCache.put(<span class="hljs-string">'formio/components/common/datamapper.html'</span>,
+      <span class="hljs-string">'&lt;div class="row"&gt;'</span> +
+         <span class="hljs-string">'&lt;div class="col-md-6"&gt;'</span> +
+           <span class="hljs-string">'&lt;form-builder-option property="label" placeholder="Mapper Name"&gt;&lt;/form-builder-option&gt;'</span> +
+         <span class="hljs-string">'&lt;/div&gt;'</span> +
+         <span class="hljs-string">'&lt;div class="col-md-6"&gt;'</span> +
+           <span class="hljs-string">'&lt;form-builder-option-key&gt;&lt;/form-builder-option-key&gt;'</span> +
+         <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="row"&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="col-md-6"&gt;'</span> +
+        <span class="hljs-string">'  &lt;form-builder-option property="datamapperData.watchField" label="Watch Field" placeholder="empty watches all fields" title="Which data field to watch to refresh the map"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="col-md-6"&gt;'</span> +
+          <span class="hljs-string">'&lt;form-builder-option property="disabled"&gt;&lt;/form-builder-option&gt;'</span> +
+          <span class="hljs-string">'&lt;form-builder-option property="persistent"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'  &lt;form-builder-option type="checkbox" property="includeAllFields" label="Include all fields" title="All fields are automatically added to table"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'  &lt;form-builder-option type="checkbox" property="wrapInTable" label="Wrap in table" title="Wrap in HTML table"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'  &lt;form-builder-option type="checkbox" property="bottomsUp" label="Traverse array bottom to top" title="Traverse array bottom to top"&gt;&lt;/form-builder-option&gt;'</span> +
+
+        <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="row"&gt;'</span> +
+          <span class="hljs-string">' &lt;div class="col-md-6"&gt;'</span> +
+          <span class="hljs-string">'       &lt;div class="form-group"&gt;'</span> +
+          <span class="hljs-string">'       &lt;label for="triggerType" form-builder-tooltip="Trigger Type "&gt;Trigger Type&lt;/label&gt;'</span> +
+          <span class="hljs-string">'       &lt;select class="form-control" id="triggerType" name="triggerType" ng-options="triggerType.name as triggerType.title for triggerType in triggerTypes" ng-model="component.triggerType"&gt;&lt;/select&gt;'</span> +
+          <span class="hljs-string">'       &lt;/div&gt;'</span> +
+          <span class="hljs-string">'   &lt;/div&gt;'</span> +
+        <span class="hljs-string">'   &lt;/div&gt;'</span> +
+        <span class="hljs-string">'  &lt;datamapper-builder datamapper-data="component.datamapperData" /&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="row"&gt;'</span> +
+        <span class="hljs-string">'   &lt;div class="col-md-6"&gt;'</span> +
+        <span class="hljs-string">'&lt;form-builder-option property="disabled"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'   &lt;/div&gt;'</span> +
+        <span class="hljs-string">'   &lt;div class="col-md-6"&gt;'</span> +
+        <span class="hljs-string">'&lt;form-builder-option type="checkbox" property="preventExecuteOnLoad" label="Prevent execution while loading data" title="Should this component be able to execute while data is loading"&gt;&lt;/form-builder-option&gt;'</span> +
+        <span class="hljs-string">'   &lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;div class="row"&gt;'</span> +
+        <span class="hljs-string">'  &lt;div class="col-md-12"&gt;'</span> +
+        <span class="hljs-string">'    &lt;form-builder-option-tags&gt;&lt;/form-builder-option-tags&gt;'</span> +
+        <span class="hljs-string">'  &lt;/div&gt;'</span> +
+        <span class="hljs-string">'&lt;/div&gt;'</span>
+
+    );
+  }
+]);
+
+</pre></div>
+</body>
+</html>

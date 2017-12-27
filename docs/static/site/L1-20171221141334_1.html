@@ -1,0 +1,47 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text">var setCurrentRow = function (item, index) {
+    // change for demo
+    var outputList = $scope.component.viewgridData.dataOutputObject;
+    if (outputList.length > 0) {
+      for (var j = 0; j < outputList.length; j++) {
+          var output = outputList[j];
+          var mapping = output.mapping;
+          var dataValue = item[mapping];
+          output.type = 'value';
+          if (dataValue === undefined) {
+              dataValue = ''; // reset the value if not found
+          }
+          setOutputValues(output, dataValue, data,  $scope.$parent.form);
+      }
+    }
+};
+
+</div></div>
+</body>
+</html>

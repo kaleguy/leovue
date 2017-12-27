@@ -1,0 +1,59 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text">var executeViewgrid = function(fields) {
+  if ($scope.builder) { return; }
+
+  if (! viewgridData.dataDisplayObject){
+    viewgridData.dataDisplayObject = [];
+    viewgridData.dataInputObject = [];
+    viewgridData.dataOutputObject = [];
+  } // object not saved correctly
+  var data = $scope.submission ? $scope.submission.data : {};
+  var hasFormula = setDataValues(viewgridData.dataInputObject, data, false);
+  if (hasFormula === undefined ) {
+      //console.log('required fields not supplied, hasFormula/setDataValues returns undefined');
+      return;
+  }
+  var buttonField = {
+    type: 'control',
+    width: 100,
+    itemTemplate: function (value, item) {
+      var commandButton = '<button type="button"  class="btn btn-secondary-3 pull-right"\> ' + action + ' </button>';
+      return commandButton;
+    }
+  };
+  if (action !== 'null') {
+    fields.push(buttonField);
+  }
+  <sectionlink :title="' jsgrid '"/>
+  <sectionlink :title="' execute table filters on keydown '"/>
+};
+
+</div></div>
+</body>
+</html>

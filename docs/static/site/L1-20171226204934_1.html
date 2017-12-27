@@ -1,0 +1,71 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text">// Listen for each input component.
+var firstKey = _.get($scope.component.initializerData.dataInputObject[0], 'id', '');
+if (firstKey === $scope.component.key) {
+  if (!$scope.loadLoopInitial) {
+    $scope.loadLoopInitial = $interval(function () {
+      if (SUBMISSION_LOADED && FORM_LOADED && LOADING_COMPLETE) {
+        console.log('Loading Complete, id:', $scope.submission._id);
+        $interval.cancel($scope.loadLoopInitial);
+        if (!$scope.submission._id) {
+          // angular.element(function () {
+            $scope.data[$scope.component.key] = 'loaded';
+            $scope.execute();
+          // });
+        }
+      }
+    }, 100);
+  }
+} else if ($scope.component.triggerType !== 'manual') {
+  var debounceSetting = 100;
+  if ($scope.component.debounceSetting && !_.isNaN(parseInt($scope.component.debounceSetting))) {
+    debounceSetting = parseInt($scope.component.debounceSetting);
+  }
+  var watchers = {};
+  var filterDelayed = function ($scope) {
+    $scope.$apply($scope.execute);
+  };
+  var filterThrottled = _.debounce(filterDelayed, debounceSetting);
+  $scope.component.initializerData.dataInputObject.forEach(function (key) {
+    var keyId = key.id + '';
+
+    if (keyId.indexOf('.') > 0) {
+      var res = keyId.split('.');
+      keyId = res[0];
+    }
+    if (keyId && !_.has(watchers, keyId) && !key.silent) {
+      _.set(watchers, keyId, '');
+      $scope.$watch('submission.data.' + keyId, function () {
+        filterThrottled($scope);
+      }, true);
+    }
+  });
+}</div></div>
+</body>
+</html>

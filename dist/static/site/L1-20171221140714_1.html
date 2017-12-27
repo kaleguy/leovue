@@ -1,0 +1,70 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text">/**
+ * viewGrid component, requires API with array of data or object with 'records' array of data.
+ */
+app.config([
+  'formioComponentsProvider',
+  function(formioComponentsProvider) {
+    formioComponentsProvider.register('viewgrid', {
+      fbtemplate: 'formio/formbuilder/viewgrids.html',
+      title: 'ViewGrid',
+      template: 'formio/components/viewgrids.html',
+      group: 'advanced',
+      <sectionlink :title="' controller '"/>
+      icon: 'fa fa-table',
+      settings: {
+        multiple: true,
+        input: false,
+        key: 'viewgridField',
+        label: '',
+        protected: false,
+        unique: false,
+        persistent: true,
+        showTitle: false,
+        viewgridData: {
+          dataDisplayObject: [],
+          dataInputObject: [],
+          dataOutputObject: []
+        }
+      },
+      views: [
+        {
+          name: 'ViewGrid',
+          template: 'formio/components/common/viewgrid.html'
+        }
+      ],
+      documentation: ''
+    });
+  }
+
+]);
+
+</div></div>
+</body>
+</html>

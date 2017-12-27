@@ -1,0 +1,227 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text">// property panel (lower part)
+app.directive('viewgridBuilder', function($parse, FormioUtils) {
+  return {
+    restrict: 'E',
+    scope: {
+      viewgridData: '='
+    },
+    template: '' +
+        '<div>' +
+        '  <div class="row">' +
+        '    <div class="col-xs-6">' +
+        '      <h5>Inputs</h5>' +
+        '      <div class="hotInputs" />' +
+        '    </div>' +
+        '    <div class="col-xs-6">' +
+        '      <h5>Outputs</h5>' +
+        '      <div class="hotOutputs" />' +
+        '    </div>' +
+        '  </div>' +
+        '  <div class="row">' +
+        '    <div class="col-xs-12">' +
+        '      <h5>Display</h5>' +
+        '      <div class="hotDisplay" />' +
+        '    </div>' +
+        '  </div>' +
+        '</div>',
+    link: function(scope, element, attrs) { // jshint ignore:line
+      var viewgridData = scope.viewgridData;
+      var components = [];
+      var fields = [];
+      FormioUtils.eachComponent(scope.$parent.form.components, function(component) {
+        // Only add input elements.
+        if (['button', 'viewgrid'].indexOf(component.type) === -1 && component.key.indexOf('panel') !== 0) {
+          components.push(component);
+          fields.push(component.key);
+        }
+      }, true);
+      scope.saveData = function() {
+        if (viewgridData.dataInputObject == undefined) { return; } // jshint ignore:line
+        viewgridData.dataOutputObject = getTableData(hotOutputs);
+        viewgridData.dataInputObject = getTableData(hotInputs);
+        viewgridData.dataDisplayObject = getTableData(hotDisplay);
+        scope.viewgridData = viewgridData;
+      };
+      function getTableData(hotTable) {
+        var cellData = hotTable.getData();
+        var headerData = hotTable.getColHeader();
+        var dataTable = [];
+        for (var k=0; k < cellData.length; k++) {
+          var dataRow = {};
+          if (!hotTable.isEmptyRow(k)) {
+            for (var i =0; i < cellData[k].length; i++) {
+              var key = headerData[i];
+              var cellValue = cellData[k][i];
+              if (cellValue === null ) {
+                cellValue = '';
+              }
+              dataRow[key] = cellValue;
+            }
+            dataTable.push(dataRow);
+          }
+        }
+        return dataTable;
+      }
+      scope.loadData = function(viewgridData) {
+        if (viewgridData.dataInputObject == undefined) { // jshint ignore:line
+          return;
+        }
+        hotInputs.updateSettings({
+          data: viewgridData.dataInputObject
+        });
+        hotOutputs.updateSettings({
+          data: viewgridData.dataOutputObject
+        });
+        hotDisplay.updateSettings({
+          data: viewgridData.dataDisplayObject
+        });
+
+      };
+      var hotInputElement = element[0].querySelector('.hotInputs');
+      var hotInputSettings = {
+        data: viewgridData.dataInputObject,
+        columns: [
+          {
+            data: 'id',
+            type: 'autocomplete',
+            source: fields.sort(),
+            strict: false
+          },
+          {
+            data: 'required',
+            type: 'checkbox'
+          }
+        ],
+        colWidths: [175,160],
+        rowHeights: 23,
+        // performance tip: turn off calculations
+        autoWrapRow: true,
+        height: 117,
+        rowHeaders: false,
+        colHeaders: [
+          'id',
+          'required'
+        ],
+        manualColumnResize: true,
+        minSpareRows: 4,
+        stretchH: 'all'
+      };
+
+      var hotInputs = new Handsontable(hotInputElement, hotInputSettings);
+
+      var hotOutputElement = element[0].querySelector('.hotOutputs');
+      var hotOutputSettings = {
+        data: viewgridData.dataOutputObject,
+        columns: [
+          {
+            data: 'id',
+            type: 'autocomplete',
+            source: fields.sort(),
+            strict: false
+          },
+          {
+            data: 'mapping',
+            type: 'text'
+          }
+        ],
+        colWidths: [175, 175],
+        rowHeights: 23,
+        // performance tip: turn off calculations
+        autoWrapRow: true,
+        height: 117,
+        rowHeaders: false,
+        colHeaders: [
+          'id',
+          'mapping'
+        ],
+        manualColumnResize: true,
+        minSpareRows: 4,
+        stretchH: 'all'
+      };
+      var hotOutputs = new Handsontable(hotOutputElement, hotOutputSettings);
+      var hotDisplayElement = element[0].querySelector('.hotDisplay');
+      var hotDisplaySettings = {
+        data: viewgridData.dataDisplayObject,
+        columns: [
+          {
+            data: 'id',
+            type: 'autocomplete',
+            source: fields.sort(),
+            strict: false
+          },
+          {
+            data: 'formula',
+            type: 'text'
+          },
+          {
+            data: 'heading',
+            type: 'text'
+          }
+        ],
+        colWidths: [175, 175],
+        rowHeights: 23,
+        // performance tip: turn off calculations
+        autoWrapRow: true,
+        height: 117,
+        rowHeaders: false,
+        colHeaders: [
+          'id',
+          'formula',
+          'heading'
+        ],
+        manualColumnResize: true,
+        minSpareRows: 4,
+        stretchH: 'all'
+      };
+
+      var hotDisplay = new Handsontable(hotDisplayElement, hotDisplaySettings);
+
+      angular.element(function () {
+        hotInputs.render();
+        hotOutputs.render();
+        hotDisplay.render();
+      });
+    },
+
+    controller: [
+      '$scope',
+      function($scope) {
+        $scope.$watch('viewgridData', function(newData) {
+          $scope.loadData(newData);
+        }, true);
+      }
+    ]
+
+  };
+});
+
+</div></div>
+</body>
+</html>
