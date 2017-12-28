@@ -1,0 +1,57 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'>
+<h3>A simple GANNT diagram with Mermaid.</h3>
+
+<pre>
+
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
+
+</pre>
+
+<mermaid :height="200">
+
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+
+</mermaid></div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><pre v-pre><span class="hljs-comment">// import escape from 'escape-html'</span>
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span>
+
+<span class="hljs-keyword">const</span> xslTemplate = <span class="hljs-string">`
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="v"&gt;
+    &lt;xsl:variable name="t" select="@t"/&gt;
+    &lt;xsl:variable name="nodeSet" select="//v[@t=$t]"/&gt;
+    &lt;xsl:variable name="double_quote"&gt;"&lt;/xsl:variable&gt;
+    &lt;xsl:variable name="apos"&gt;'&lt;/xsl:variable&gt;
+    {
+    "id":  &lt;xsl:value-of select="@id"/&gt;,
+    "t":   "&lt;xsl:value-of select="translate(@t,'.','_')"/&gt;",
+    "name":"&lt;xsl:value-of select="translate($nodeSet[1]/vh,concat('\',$double_quote),concat('|',$apos))"/&gt;",
+    "children":[&lt;xsl:apply-templates select="$nodeSet[1]/v"/&gt;]
+    }
+    &lt;xsl:if test="position()!=last()"&gt;,&lt;/xsl:if&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="text()"/&gt;
+
+&lt;/xsl:stylesheet&gt;
+`</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transform</span> (<span class="hljs-params">xml, xslString, transformer, serializer</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serverTransform</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+    <span class="hljs-keyword">const</span> xmlString = <span class="hljs-keyword">new</span> serializer().serializeToString(xml)
+    <span class="hljs-keyword">const</span> config = {
+      <span class="hljs-attr">xslt</span>: xslString,
+      <span class="hljs-attr">source</span>: xmlString,
+      <span class="hljs-attr">result</span>: <span class="hljs-built_in">String</span>,
+      <span class="hljs-attr">props</span>: {
+        <span class="hljs-attr">indent</span>: <span class="hljs-string">'yes'</span>
+      }
+    }
+    transformer.transform(config, (err, result) =&gt; {
+      <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ERROR:'</span>, err)
+        <span class="hljs-keyword">return</span> reject()
+      }
+      resolve(result)
+    })
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clientTransform</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+    <span class="hljs-keyword">const</span> oParser = <span class="hljs-keyword">new</span> DOMParser()
+    <span class="hljs-keyword">const</span> xsl = oParser.parseFromString(xslString, <span class="hljs-string">'text/xml'</span>)
+    <span class="hljs-keyword">const</span> xsltProcessor = <span class="hljs-keyword">new</span> XSLTProcessor()
+    xsltProcessor.importStylesheet(xsl)
+    <span class="hljs-keyword">const</span> resultDocument = xsltProcessor.transformToFragment(xml, <span class="hljs-built_in">document</span>)
+    resolve(resultDocument.textContent)
+  }
+
+  <span class="hljs-keyword">const</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (transformer) {
+      <span class="hljs-keyword">return</span> serverTransform(resolve, reject)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> clientTransform(resolve, reject)
+    }
+  })
+  <span class="hljs-keyword">return</span> p
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadDoc</span> (<span class="hljs-params">filename</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'loading file:'</span>, filename)
+  <span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    axios.get(filename)
+      .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+        resolve(response.data)
+      })
+      .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(error)
+        reject()
+      })
+  })
+  <span class="hljs-keyword">return</span> p
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cleanText</span>(<span class="hljs-params">data, startId</span>)</span>{
+  data.name = data.name.replace(<span class="hljs-regexp">/&lt;&lt;/g</span>, <span class="hljs-string">'\u00AB'</span>)
+  data.name = data.name.replace(<span class="hljs-regexp">/&gt;&gt;/g</span>, <span class="hljs-string">'\u00BB'</span>)
+  data.name = data.name.replace(<span class="hljs-regexp">/'/g</span>, <span class="hljs-string">'\x27'</span>)
+  data.name = data.name.replace(<span class="hljs-regexp">/"/g</span>, <span class="hljs-string">'\x22'</span>)
+  <span class="hljs-comment">//data.name = escape(data.name)</span>
+  data.name = data.name.replace(<span class="hljs-regexp">/&amp;#39;/g</span>,<span class="hljs-string">'\x27'</span>)
+  data.id = data.id + <span class="hljs-string">''</span>; <span class="hljs-comment">// probably unneeded now</span>
+  <span class="hljs-keyword">let</span> children = data.children;
+  <span class="hljs-keyword">if</span> (!children) { <span class="hljs-keyword">return</span> }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; children.length; i++){
+    cleanText(children[i], startId)
+  }
+  data.t = data.t.replace(<span class="hljs-regexp">/^.*?_/</span>,<span class="hljs-string">''</span>) <span class="hljs-comment">// remove file uid</span>
+  <span class="hljs-keyword">if</span> (startId) {
+    data.t = startId + <span class="hljs-string">'-'</span> + data.t + <span class="hljs-string">''</span>
+  }
+}
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">TODO:</span> move to util, also is in store/index, review logic for relative / subtrees
+ * Is url relative
+ * @param url {string}
+ * @returns {boolean} - if is relative
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isRelative</span> (<span class="hljs-params">url</span>) </span>{
+  <span class="hljs-keyword">var</span> ok = <span class="hljs-literal">true</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/^http/</span>.test(url)) {
+    ok = <span class="hljs-literal">false</span>
+  }
+  <span class="hljs-keyword">return</span> ok
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLeoJSON</span> (<span class="hljs-params">filename, id</span>) </span>{
+  <span class="hljs-keyword">if</span> (filename.indexOf(<span class="hljs-string">'#'</span>) &gt; <span class="hljs-number">0</span>) {
+    filename = filename.substring(<span class="hljs-number">0</span>, filename.indexOf(<span class="hljs-string">'#'</span>))
+  }
+  <span class="hljs-keyword">var</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (!filename.match(<span class="hljs-regexp">/static/</span>) &amp;&amp; isRelative(filename)) {
+      <span class="hljs-comment">// filename = 'static/' + filename</span>
+    }
+    <span class="hljs-keyword">if</span> (!filename.match(<span class="hljs-regexp">/\.leo$/</span>)) {
+      filename = filename + <span class="hljs-string">'.leo'</span>
+    }
+    loadDoc(filename, <span class="hljs-string">'Text'</span>)
+      .then(<span class="hljs-function"><span class="hljs-params">xmlString</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> transformLeoXML(xmlString, id)
+      })
+      .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {resolve(data)})
+  })
+  <span class="hljs-keyword">return</span> p
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transformLeoXML2XML</span>(<span class="hljs-params">xmlString, startId, parser</span>) </span>{
+  <span class="hljs-keyword">const</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+
+    <span class="hljs-keyword">let</span> oParser = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">if</span> (parser) {
+      oParser = <span class="hljs-keyword">new</span> parser()
+    } <span class="hljs-keyword">else</span> {
+      oParser = <span class="hljs-keyword">new</span> DOMParser()
+    }
+    <span class="hljs-keyword">const</span> xml = oParser.parseFromString(xmlString, <span class="hljs-string">'text/xml'</span>)
+    <span class="hljs-keyword">const</span> tnodes = xml.getElementsByTagName(<span class="hljs-string">'t'</span>)
+    <span class="hljs-keyword">let</span> textItems = {}
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; tnodes.length; i++) {
+      <span class="hljs-keyword">let</span> el = tnodes[i]
+      <span class="hljs-keyword">let</span> elText = el.textContent
+      <span class="hljs-keyword">let</span> a = el.getAttribute(<span class="hljs-string">'tx'</span>)
+      a = a.replace(<span class="hljs-regexp">/\./g</span>, <span class="hljs-string">'_'</span>)
+      a = a.replace(<span class="hljs-regexp">/^.*?_/</span>, <span class="hljs-string">''</span>)
+      <span class="hljs-keyword">if</span> (startId) {
+        a = startId + <span class="hljs-string">'-'</span> + a
+      }
+      <span class="hljs-keyword">if</span> (
+        (<span class="hljs-regexp">/^@language /</span>.test(elText)) &amp;&amp;
+        (!<span class="hljs-regexp">/^@language html/</span>.test(elText)) &amp;&amp;
+        (!<span class="hljs-regexp">/^@language md/</span>.test(elText))
+      ) {
+        <span class="hljs-comment">// elText = escape(elText)</span>
+      }
+      textItems[a] = elText
+    }
+    <span class="hljs-keyword">const</span> vnodes = xml.getElementsByTagName(<span class="hljs-string">'v'</span>)
+    <span class="hljs-keyword">let</span> pid
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; vnodes.length; i++) {
+      pid = i + <span class="hljs-number">1</span>
+      <span class="hljs-keyword">if</span> (startId) {
+        pid = startId + <span class="hljs-string">'-'</span> + pid
+      }
+      vnodes[i].setAttribute(<span class="hljs-string">'id'</span>, <span class="hljs-string">'"'</span> + pid + <span class="hljs-string">'"'</span>)
+    }
+    resolve({xml, textItems})
+
+  })
+  <span class="hljs-keyword">return</span> p
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transformLeoXML2JSON</span> (<span class="hljs-params">data, startId, parser, transformer, serializer</span>) </span>{
+    <span class="hljs-keyword">const</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> xml = data.xml
+      <span class="hljs-keyword">const</span> textItems = data.textItems
+      transform(xml, xslTemplate, transformer, serializer).then(<span class="hljs-function"><span class="hljs-params">jsdata</span> =&gt;</span> {
+        jsdata = jsdata.replace(<span class="hljs-regexp">/&lt;\?xml version="1\.0" encoding="UTF-8"\?&gt;/</span>,<span class="hljs-string">''</span>)
+        jsdata = jsdata.replace(<span class="hljs-regexp">/,\s?$/</span>, <span class="hljs-string">''</span>) <span class="hljs-comment">// kludge to get rid of trailing comma</span>
+        jsdata = <span class="hljs-string">'['</span> + jsdata + <span class="hljs-string">']'</span>
+        jsdata = <span class="hljs-built_in">JSON</span>.parse(jsdata)
+        jsdata.forEach(<span class="hljs-function"><span class="hljs-params">d</span> =&gt;</span> cleanText(d, startId))
+        <span class="hljs-keyword">const</span> xdata = {}
+        xdata.data = jsdata
+        xdata.textItems = textItems
+        <span class="hljs-keyword">return</span> (xdata)
+      }).then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> resolve(data))
+
+    })
+    <span class="hljs-keyword">return</span> p
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transformLeoXML</span>(<span class="hljs-params">xmlString, startId, parser, transformer, serializer</span>)</span>{
+  <span class="hljs-keyword">return</span> transformLeoXML2XML(xmlString, startId, parser)
+    .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> transformLeoXML2JSON(data, startId, parser, transformer, serializer))
+}
+
+<span class="hljs-keyword">export</span> {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
+</pre></div>
+</body>
+</html>
