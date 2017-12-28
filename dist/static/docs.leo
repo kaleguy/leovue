@@ -16,7 +16,6 @@
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
-<v t="josephorr.20171226212539.1"><vh>foo</vh></v>
 </v>
 <v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
@@ -1572,8 +1571,5 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
-<t tx="josephorr.20171226212539.1">This is {{apen}}
-
-&lt;component&gt;urk&lt;/component&gt;</t>
 </tnodes>
 </leo_file>
