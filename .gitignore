@@ -9,3 +9,4 @@ selenium-debug.log
 /dist/static/js/manifest.js.map
 /dist/static/js/app.js.map
 /dist/static/js/vendor.js.map
+/static/components.leo

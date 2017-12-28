@@ -83,6 +83,7 @@ function formatText (text, noWrapper) {
   // text = text.replace(/<</g, '\u00AB')
   // text = text.replace(/>>/g, '\u00BB')
   text = text.replace(/<<(.*?)>>/g, '<sectionlink :title="\'$1\'"/>')
+  // text = text.replace(/<<(.*?)>>/g, '<div class=section-link">«$1»</div>')
   text = text.replace(/\[\[(.*?)\]\]/g, '<nodelink :title="\'$1\'"/>')
 
   // just plain text
@@ -110,10 +111,17 @@ function formatText (text, noWrapper) {
       text = `<pre>${text}</pre>`
       break
     default:
+      text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
+      text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
       const mu = hljs.highlight(language, text)
       text = mu.value
       text = `<pre v-pre>${text}</pre>`
+      //debugger
+      text = text.replace(/«(.*?)»/, '<span class="section-link">«$1»</span>')
+      //  &lt;div class=section-link"&gt;« templates »&lt;/div&gt
+      // text = text.replace(/&lt;div class=section-link"&gt;«(.*?)»&lt;\/div&gt;/g, '<div class="section-link">«$1»</div>')
   }
+
   if (noWrapper) {
     return text
   }
