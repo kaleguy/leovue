@@ -178,7 +178,7 @@ function showSite (context, title, id) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        html = util.formatText(html)
+        // html = util.formatText(html)
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
