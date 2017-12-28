@@ -117,7 +117,7 @@ function formatText (text, noWrapper) {
       text = mu.value
       text = `<pre v-pre>${text}</pre>`
       //debugger
-      text = text.replace(/«(.*?)»/, '<span class="section-link">«$1»</span>')
+      text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
       //  &lt;div class=section-link"&gt;« templates »&lt;/div&gt
       // text = text.replace(/&lt;div class=section-link"&gt;«(.*?)»&lt;\/div&gt;/g, '<div class="section-link">«$1»</div>')
   }

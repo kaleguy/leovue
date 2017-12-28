@@ -181,6 +181,28 @@ export default {
     const id = this.$store.state.currentItem.id
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
     overrideXFrame(item, this.$store.state.leotext)
+    const clinks = document.getElementsByClassName('csection-link')
+    let leodata = this.$store.state.leodata
+    let me = this
+    // section links in code require explicit processing bc vue components
+    // are turned off in code (with v-pre)
+    function gotoSectionFunc (leodata) {
+       function func (e) {
+         try {
+           let item = JSON.search(leodata, '//*[name="' + e.srcElement.innerHTML + '"]')[0]
+           console.log('ITEM', item)
+           let id = item.id
+           me.$store.dispatch('setCurrentItem', {id})
+         } catch (e) {
+           console.log('goto section error:', e)
+         }
+       }
+       return func
+    }
+    for (let i = 0; i < clinks.length; i++) {
+      let clink = clinks[i]
+      clink.onclick = gotoSectionFunc(leodata)
+    }
   },
   watch: {
   }
