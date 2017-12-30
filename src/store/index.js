@@ -299,14 +299,14 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setCurrentItem', {id})
   })
 }
-function loadPresentations (data) {
+function loadPresentations (data, loadSections) {
   let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
+  if (loadSections) { p = true }
   let a = /^« /.test(data.name)
-  // const matches = true
-  if (p || a) {
+  if (p || (a && loadSections)) {
     loadPresentation(data.id, data.children)
   }
-  data.children.forEach(loadPresentations)
+  data.children.forEach(d => loadPresentations(d, p))
 }
 function loadPresentation (id, pages) {
   if (!pages) { return }
