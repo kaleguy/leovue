@@ -11,6 +11,7 @@ Content items can be text, markdown, or html with Vue components.
 
 ### Leo
 Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
+
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 
 ### Leo Vue
