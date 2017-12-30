@@ -9,9 +9,24 @@ Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-
 
 Content items can be text, markdown, or html with Vue components.
 
-![Leo Viewer Screencast](leoviewermovie.gif)
+### Leo
+Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
+![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 
-[Live Site with Docs](https://kaleguy.github.io/leovue/)
+### Leo Vue
+You can use Leo Vue to make view Leo files with a browser. Leo Vue also allows you to add urls in node titles, with the content pane showing the url content.
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue.gif)
+
+### Outline Formats
+Leo Vue allows you to view outlines in various formats, including inline.
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-trees.gif)
+
+### Vue Components in Content
+Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue components.
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
+
+
+## More Examples
 
 [Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
 
