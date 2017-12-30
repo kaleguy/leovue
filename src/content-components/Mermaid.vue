@@ -33,8 +33,9 @@
       const config = {
         startOnLoad: true,
         flowchart: {
-          useMaxWidth: false,
+          useMaxWidth: true,
           htmlLabels: true
+          // width: '200%'
         },
         theme: 'forest'
       }
@@ -51,6 +52,6 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 .mermaid
-  margin-left: auto
-  margin-right: auto
+  // margin-left: auto
+  // margin-right: auto
 </style>
