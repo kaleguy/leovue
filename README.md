@@ -26,13 +26,6 @@ Leo Vue allows you to view outlines in various formats, including inline.
 Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue components.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
 
-### Presentations
-Leo Vue uses the Reveal.js library to create presentations. The same features available in
-regular content in Leo Vue can be used with presentations, including clickable section links
-for nested presentations, Vue components and cloned nodes.
-
-![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
-
 
 ## More Examples
 
@@ -40,7 +33,18 @@ for nested presentations, Vue components and cloned nodes.
 
 [Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
 
-[More Examples](https://kaleguy.github.io/leo-examples/)
+[More](https://kaleguy.github.io/leo-examples/)
+
+## Quick Start
+
+Leo Vue requires a webserver to run. Either install it on your server or run it locally with http-server:
+
+```
+# install node.js, then:
+npm install -g http-server
+```
+
+For a quick start using Leo Vue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
 
 ## Build Setup
 
