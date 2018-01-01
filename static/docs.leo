@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -76,7 +76,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -84,7 +84,7 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
@@ -743,7 +743,7 @@ By default the following components are added to LeoVue.
 
 In your html content, add the Vue.js Youtube component like so:
 ```
-&lt;youtube :video-id="'pRnQFGskg9w'" 
+&lt;youtube video-id="pRnQFGskg9w" 
          :player-width="320" 
          :player-height="195"&gt;&lt;/youtube&gt;
 

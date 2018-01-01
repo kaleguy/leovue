@@ -65,6 +65,7 @@ window.loadURL = function (src) {
   document.body.appendChild(script)
 };
 function overrideXFrame(item, textItems) {
+  console.log('override xframe')
   const iframe = document.getElementsByTagName('iframe')[0];
   if (!iframe){ return }
   window.iframe = iframe
@@ -81,6 +82,7 @@ function overrideXFrame(item, textItems) {
 
 function loadPresentation(item, textItems, iframe) {
   console.log('loading presentation', item)
+  // debugger
   let content = ''
   let re = /^@props (.*)/
   if (!item.children.length) {
@@ -178,6 +180,7 @@ export default {
   mounted () {
   },
   updated () {
+    console.log('Content Pane Updated.')
     const id = this.$store.state.currentItem.id
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
     overrideXFrame(item, this.$store.state.leotext)

@@ -15,7 +15,7 @@ Leo is a cross platform desktop program that allows you to create outlined conte
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 
 ### Leo Vue
-You can use Leo Vue to make view Leo files with a browser. Leo Vue also allows you to add urls in node titles, with the content pane showing the url content.
+You can use Leo Vue to view Leo files with a browser. Leo Vue also allows you to put urls in node titles, with the content pane showing the url content.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue.gif)
 
 ### Outline Formats

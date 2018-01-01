@@ -153,17 +153,19 @@ function getUrlFromTitle (title) {
   return {url, label}
 }
 function showPresentation (context, title, id) {
+  const dummy = Math.random()
   const iframeHTML = `
     <div style="width:100%">
     <iframe
        src="about:blank" height="100%" width="100%"
        marginwidth="0" marginheight="0"
        hspace="0" vspace="0"
+       dummy="${dummy}"
        frameBorder="0" />
     </div>
   `
-  context.commit('IFRAME_HTML', {iframeHTML})
-  context.commit('CONTENT_PANE', {type: 'site'})
+  context.commit('IFRAME_HTML', { iframeHTML })
+  context.commit('CONTENT_PANE', { type: 'site' })
 }
 
 function showSite (context, title, id) {
@@ -301,12 +303,14 @@ function setData (context, ldata, filename, route) {
 }
 function loadPresentations (data, loadSections) {
   let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
-  if (loadSections) { p = true }
+  if (p) { loadSections = true }
   let a = /^« /.test(data.name)
   if (p || (a && loadSections)) {
+  // if (p) {
+    console.log('loading', data.name)
     loadPresentation(data.id, data.children)
   }
-  data.children.forEach(d => loadPresentations(d, p))
+  data.children.forEach(d => loadPresentations(d, loadSections))
 }
 function loadPresentation (id, pages) {
   if (!pages) { return }
@@ -572,6 +576,7 @@ export default new Vuex.Store({
       state.contentItemsUpdateCount = state.contentItemsUpdateCount + 1
     },
     CURRENT_ITEM (state, o) {
+      console.log('COMMIT CURRENT ITEM')
       const id = o.id
       // check current for identical
       if (o.id === state.currentItem.id) {
@@ -695,15 +700,9 @@ export default new Vuex.Store({
     },
     setCurrentItem (context, o) {
       const id = o.id
+      if (o.id === context.state.currentItem.id) { return }
       // if in iframe, just raise event and leave
-      if (window.parent !== window.self) {
-        // console.log('sending event')
-        // let type = 'leovue'
-        // let event = new CustomEvent('message', { data: {id, type} })
-        // window.dispatchEvent(event)
-        // window.parent.postMessage(JSON.stringify({ namespace: 'leovue', eventName: 'setcurrentitem', state: {id} }), '*')
-        return
-      }
+      if (window.parent !== window.self) { return }
       // open parent nodes, close others
       const openItems = JSON.search(context.state.leodata, '//*[id="' + id + '"]/ancestor::*')
       let openItemIds = openItems.reduce((acc, o) => {
@@ -716,12 +715,13 @@ export default new Vuex.Store({
         const ids = openItemIds
         context.dispatch('setContentItems', {ids})
       } else {
-      // open parent nodes
+        // open parent nodes
         const currentOpenItemIds = context.state.openItemIds
         openItemIds = _.uniq(currentOpenItemIds.concat(openItemIds))
         context.commit('OPEN_ITEMS', {openItemIds})
       }
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
+      console.log('Current Item:', item)
       context.commit('CURRENT_ITEM', {id})
       if (_.get(item, '[0].presentation')) {
         context.commit('CURRENT_PAGE', {id: 0})
@@ -732,6 +732,10 @@ export default new Vuex.Store({
           return showPresentation(context, item.name, id)
         }
         if (/^« /.test(item.name) && _.has(item.children[0], 'presentation')) {
+          // context.commit('CURRENT_ITEM', {id: item.children[0].presentation.pid})
+          // context.commit('CURRENT_PAGE', {id})
+          // context.commit('CURRENT_PAGE', {id: 0})
+          // console.log('Showing Section presentation.', item.name, context.state.currentItem.id)
           return showPresentation(context, item.name, id)
         }
         // bracket means load file/site
@@ -751,10 +755,13 @@ export default new Vuex.Store({
           // console.log(item.t)
           showText(context, context.state.leotext[item.t], id)
         }
+        // if it is a page in a presentation
         if (item.presentation) {
           context.commit('CURRENT_ITEM', {id: item.presentation.pid})
           context.commit('CURRENT_PAGE', {id})
           return showPresentation(context, item.name, id)
+        } else {
+          context.commit('CURRENT_PAGE', {id: 0})
         }
       }
     }

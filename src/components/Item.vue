@@ -169,16 +169,20 @@ export default {
         let id = this.model.presentation.pid
         this.$store.dispatch('setCurrentItem', {id})
 
-        const iframe = document.getElementsByTagName('iframe')[0]
-        let _toPageF = (function (iframe) {
-          return () => {
-            if (!presentation.hasOwnProperty('index')) { return }
-            if (iframe.contentWindow.Reveal) {
-              console.log('going to page:', presentation.index)
-              iframe.contentWindow.Reveal.slide(presentation.index, 0)
-            }
+        let _toPageF = () => {
+          const iframe = document.getElementsByTagName('iframe')[0]
+          if (!presentation.hasOwnProperty('index')) { return }
+          if (!iframe.contentWindow) {
+            console.log('NO IFRAME CONTENT WINDOW')
           }
-        })(iframe)
+          if (iframe.contentWindow.Reveal) {
+            console.log('going to page:', presentation.index)
+            iframe.contentWindow.Reveal.slide(presentation.index, 0)
+          } else {
+            console.log(iframe.contentWindow.document)
+            console.log('no reveal')
+          }
+        }
         window.setTimeout(_toPageF, 1)
 
         return
