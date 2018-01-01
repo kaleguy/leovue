@@ -26,6 +26,12 @@ Leo Vue allows you to view outlines in various formats, including inline.
 Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue components.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
 
+### Presentations
+Leo Vue uses the Reveal.js library to create presentations. The same features available in
+regular content in Leo Vue can be used with presentations, including clickable section links
+for nested presentations, Vue components and cloned nodes.
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
+
 
 ## More Examples
 
