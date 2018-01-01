@@ -32,7 +32,7 @@
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
-<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
+<v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -84,8 +84,8 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
@@ -743,7 +743,7 @@ By default the following components are added to LeoVue.
 
 In your html content, add the Vue.js Youtube component like so:
 ```
-&lt;youtube :video-id="'pRnQFGskg9w'" 
+&lt;youtube video-id="pRnQFGskg9w" 
          :player-width="320" 
          :player-height="195"&gt;&lt;/youtube&gt;
 
@@ -944,11 +944,11 @@ Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    #e8c3b9
 North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    #c45850</t>
 <t tx="josephorr.20171111182810.1">@language html
 
-&lt;line-chart :dataTable="'worldpop'" :gridLines="true" /&gt;</t>
-<t tx="josephorr.20171111235348.1">&lt;bar-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171112004405.1">&lt;pie-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171112201003.1">&lt;doughnut-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171113062955.1">&lt;polar-chart :dataTable="'worldpop'" :col="'2050'" title="Predicted Population (millions) in 2050" /&gt;</t>
+&lt;line-chart dataTable="worldpop" :gridLines="true" /&gt;</t>
+<t tx="josephorr.20171111235348.1">&lt;bar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171112004405.1">&lt;pie-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171112201003.1">&lt;doughnut-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
+<t tx="josephorr.20171113062955.1">&lt;polar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
 <t tx="josephorr.20171113063513.1">@language md
 
 A dataSet is a Leo node with a @dataSet directive. It contains JSON data.
@@ -1116,7 +1116,7 @@ Future task2              :         des4, after des3, 5d
 
 &lt;/pre&gt;
 
-&lt;mermaid :height="200"&gt;
+&lt;mermaid height="200"&gt;
 
 gantt
 dateFormat  YYYY-MM-DD
@@ -1495,7 +1495,9 @@ reveal.js comes with a few themes built in: &lt;br&gt;
     - &lt;a href="http://slides.com"&gt;Try the online editor&lt;/a&gt; &lt;br&gt;
     - &lt;a href="https://github.com/hakimel/reveal.js"&gt;Source code &amp;amp; documentation&lt;/a&gt;
 &lt;/p&gt;</t>
-<t tx="josephorr.20171209143344.1">&lt;mermaidp height="300" width="250"&gt;
+<t tx="josephorr.20171209143344.1">@language html
+
+&lt;mermaid height="300" &gt;
 graph TB
     sq[Square shape] --&gt; ci((Circle shape))
 
@@ -1517,7 +1519,7 @@ graph TB
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
      class sq,e green
      class di orange
-&lt;/mermaidp&gt; </t>
+&lt;/mermaid&gt; </t>
 <t tx="josephorr.20171209190744.1">&lt;h4&gt;Mermaid Diagrams&lt;/h4&gt;
 &lt;p&gt;&lt;small&gt;Create diagragms with the Mermaid markup language.&lt;/small&gt;&lt;/p&gt;
 
