@@ -2,7 +2,7 @@
   <div class="settings">
     <div>
       <h1 style="margin-left:0">Leo Viewer</h1>
-      <div>Version 1.3.1</div>
+      <div>Version 1.4.0</div>
       <div class="hshim"></div>
       <div><a href="https://github.com/kaleguy/leoviewer">Leo Viewer on Github</a></div>
       <div class="hshim"></div>

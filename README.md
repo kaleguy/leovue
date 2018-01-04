@@ -39,9 +39,10 @@ Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue
 
 Leo Vue requires a webserver to run. Either install it on your server or run it locally with http-server:
 
-```
+``` bash
 # install node.js, then:
 npm install -g http-server
+
 ```
 
 For a quick start using Leo Vue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
