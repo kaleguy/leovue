@@ -1,5 +1,6 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Dependency Status](https://david-dm.org/kaleguy/leovue.svg)](https://david-dm.org/kaleguy/leovue)
+[![devDependencies Status](https://david-dm.org/kaleguy/leovue/dev-status.svg)](https://david-dm.org/kaleguy/leovue?type=dev)
 
 # Leo Vue
 
@@ -46,6 +47,8 @@ npm install -g http-server
 ```
 
 For a quick start using Leo Vue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
+
+[Leo Vue CDN](https://www.jsdelivr.com/package/npm/leo-vue)
 
 ## Build Setup
 
@@ -114,7 +117,7 @@ The following components are accessed via CDN, so if you want to run offline you
 
 * MathJax
 * Revealjs
-* 
+* Mermaid
 
 ## Versioning
 
@@ -122,7 +125,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **kaleguy**  
+* **kaleguy**
 
 ## More Vue development info
 
