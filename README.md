@@ -62,10 +62,74 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
-# build site with static pages for SEO, files will be generated into dist/static/site
-npm run build-static
+```
 
+## Static Site Builder
+
+This project includes a utility to generate a static site. The outline tree becomes a standalone page, as do each of the content items. These are simple HTML pages with no javascript, so Vue components in content don't work. This feature is generating a site that is easily crawlable, for example for SEO. The pages are very basic at the moment because they aren't really intended for viewing, but styles could be added to make them more presentable.
+
+To generate the static site:
+
+```
+# build site with static pages for SEO, files will be generated into dist/static/site
+
+npm install xmldmom
+npm install xslt4node
+npm run build-static
 
 ```
 
+## Deploying to Github-Pages
+
+If you set up your Github repo to serve pages from the docs folder (in repo settings), you can use the following script to make a clean distribution into that folder:
+
+```
+npm run build-deploy
+
+```
+
+## Built With
+
+Main feature components:
+
+* [Vue.js](https://vuejs.org/) - The web framework used
+* [Vue.D3.Tree](https://github.com/David-Desmaisons/Vue.D3.tree)
+* [Lunr](https://lunrjs.com/) and [Vue-Instant](https://github.com/santiblanko/vue-instant) - Search
+* [Highlight.js](https://highlightjs.org/) - Code highlighting
+* [Velocity-Animate](https://www.npmjs.com/package/velocity-animate) - Animation
+
+Major Content Components:
+
+* [Vue-Chartjs](https://github.com/apertureless/vue-chartjs) - Charts
+* [Vue-Table-Component](https://github.com/spatie/vue-table-component) - Tables
+* [Mermaid](https://mermaidjs.github.io/) - Diagrams
+* [MathJax](https://www.mathjax.org/) - Math Notation
+* [Reveal.js](https://revealjs.com/#/) - presentations
+* [Vue2-Leaflet](https://github.com/KoRiGaN/Vue2Leaflet) - maps
+
+
+## Running Offline
+
+The following components are accessed via CDN, so if you want to run offline you'll need to download them and change the links in the relevant files (e.g. index.html).
+
+* MathJax
+* Revealjs
+* 
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaleguy/leovue/tags).
+
+## Authors
+
+* **kaleguy**  
+
+## More Vue development info
+
 For detailed explanation on how Vue works with this project, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Acknowledgments
+
+Many thanks to **Edward K. Ream** for the uniquely useful Leo program.
+
+Many thanks to **Evan You** and the many contributors to the Vue project and Vue ecosystem.
