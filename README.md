@@ -121,6 +121,13 @@ The following components are accessed via CDN, so if you want to run offline you
 * Revealjs
 * Mermaid
 
+## Run with Docker
+
+```
+docker build -t leovue .
+docker run -p 8080:8080 leovue
+```
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaleguy/leovue/tags).
