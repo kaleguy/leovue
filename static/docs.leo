@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
@@ -20,7 +20,7 @@
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
@@ -109,7 +109,7 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -433,7 +433,7 @@ files on your local machine without a server, use a node utility like 'http-serv
 
 &lt;&lt; Running Leo Vue from Github &gt;&gt;
 
-The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
+The leo file that Leo Vue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration 
 parameters in index.html.
 
@@ -684,7 +684,7 @@ Leo Vue loads static content from the 'static' folder. By default it will load a
 Currently Available Parameters:
 * **fileName**: name of leo file to load (without .leo extension)
 * **docTitle**: Title for the Leo file (will show in top menubar)
-* **showAppTitle**: Display 'Leoviewer' in upper left of app
+* **showAppTitle**: Display 'Leo Vue' in upper left of app
 * **viewTypes**: Array of viewTypes (e.g. Outline, Line, Graphic Tree) to be displayed in upper right menu.
 * **baseMode**: Default viewType
 
@@ -693,7 +693,7 @@ Parameters can be passed in to the url or entered in index.html. See index.html 
 Using parameters on the URL:
 
 ```
-http://www.mysite.com/leoviewer?title=MyFile&amp;showapptitle=false
+http://www.mysite.com/leovue?title=MyFile&amp;showapptitle=false
 
 ```
 </t>
