@@ -2,12 +2,9 @@
 node_modules
 examples
 alt
-build
-config
 dist
 docs
 resources
 screencasts
 test
 package-lock.json
-
