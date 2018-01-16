@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
@@ -321,7 +321,9 @@ To install on Windows, unzip the following file and run leoApp.exe from the unzi
 
 For other environments, see the:
 
-[Installation page on the Leo Site](http://leoeditor.com/installing.html)</t>
+[Installation page on the Leo Site](http://leoeditor.com/installing.html)
+
+For Mac and Linux users: you may need to install the Droid Sans Mono font (the default Leo font).</t>
 <t tx="josephorr.20170328225527.1">@language html
 
 &lt;&lt; template &gt;&gt;&lt;br/&gt;
@@ -443,10 +445,10 @@ For a quick look at a Leo file, you can also drag and drop the file on to Leo Vu
 
 # Leo Vue
 
-Leo Vue is a web app that can display files created with 
+**Leo Vue** is a web app that can display files created with 
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 
-Using Leo, you can create outlined content. Using Leo Vue you can display this
+Using **Leo**, you can create outlined content. Using **Leo Vue** you can display this
 content as a web page.
 
 The content you are reading was created in Leo. If you're reading this on the Leo Vue
