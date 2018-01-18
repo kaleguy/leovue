@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height:33px">
     <div class="holder">
       <div class="header" v-if="config.showHeader">
         <span v-if="config.showAppTitle" class="app-title">Leo Vue</span>

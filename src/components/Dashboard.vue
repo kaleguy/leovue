@@ -55,7 +55,7 @@ li {
   margin: 0 10px;
 }
 #main {
-  height: 100%;
+  height: calc(100vh - 33px);
   position: relative;
 }
 a {

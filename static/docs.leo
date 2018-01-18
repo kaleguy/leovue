@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
@@ -25,7 +25,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -108,7 +108,7 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -148,6 +148,23 @@
 <v t="josephorr.20171211070817.1"><vh>Shared Slides</vh></v>
 <v t="josephorr.20171130193909.1"></v>
 </v>
+</v>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh></v>
+<v t="josephorr.20180116093114.1"><vh>To Do</vh>
+<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
+</v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093153.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093253.1"><vh>To Do</vh>
+<v t="josephorr.20180116093403.1"><vh>Find Kanban package</vh></v>
+</v>
+<v t="josephorr.20180116093300.1"><vh>Doing</vh></v>
+<v t="josephorr.20180116093302.1"><vh>Done</vh></v>
+</v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1"><vh>Done</vh></v>
 </v>
 </v>
 </vnodes>
@@ -1574,5 +1591,17 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
+<t tx="josephorr.20180116093044.1"></t>
+<t tx="josephorr.20180116093050.1"></t>
+<t tx="josephorr.20180116093114.1"></t>
+<t tx="josephorr.20180116093121.1"></t>
+<t tx="josephorr.20180116093125.1"></t>
+<t tx="josephorr.20180116093131.1"></t>
+<t tx="josephorr.20180116093153.1"></t>
+<t tx="josephorr.20180116093218.1"></t>
+<t tx="josephorr.20180116093253.1"></t>
+<t tx="josephorr.20180116093300.1"></t>
+<t tx="josephorr.20180116093302.1"></t>
+<t tx="josephorr.20180116093403.1"></t>
 </tnodes>
 </leo_file>

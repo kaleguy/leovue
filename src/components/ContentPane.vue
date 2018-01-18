@@ -25,7 +25,7 @@
       </div>
     </div>
     <div v-show="iframeContent"
-         style="min-height:100%; display:flex; background:#fff; width: 100%"
+         style="display:flex; background:#fff; width: 100%"
          v-html="iframeHTML"
          id="vpane">
     </div>
@@ -239,8 +239,8 @@ export default {
   .right-cpane {
     flex: auto;
     background: #fff;
-    padding:0px;
-    padding-top: 33px;
+    padding: 0px;
+    // padding-top: 33px;
     max-width: 620px;
     width: 620px;
     min-width: 500px;
@@ -253,7 +253,8 @@ export default {
   #vpane {
     width: 100%;
     background: #fff;
-    height: 100%;
+    //height: 400px;
+    height: calc(100vh - 33px);
   }
   #tlayout {
     background: #fff;
@@ -264,7 +265,7 @@ export default {
     flex-wrap: nowrap;
   }
   .pane {
-    height: 100%;
+    // height: 100%;
     background: #fff;
     width: 100%;
     position: relative;

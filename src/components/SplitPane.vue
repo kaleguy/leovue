@@ -122,7 +122,7 @@
   }
   #left-pane {
     overflow-y: scroll;
-    padding-top: 33px;
+    // padding-top: 33px;
   }
   .split-left, .split-right {
     margin-left: 0px;
