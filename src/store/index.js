@@ -167,7 +167,11 @@ function showPresentation (context, title, id) {
   context.commit('IFRAME_HTML', { iframeHTML })
   context.commit('CONTENT_PANE', { type: 'site' })
 }
-
+function showKanban (context, title, id) {
+  const html = `<kanban/>`
+  showText(context, html, id)
+  // context.commit('CONTENT_PANE', {type: 'text'})
+}
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
@@ -730,6 +734,9 @@ export default new Vuex.Store({
         item = item[0]
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)
+        }
+        if (/^@kanban /.test(item.name)) {
+          return showKanban(context, item.name, id)
         }
         if (/^« /.test(item.name) && _.has(item.children[0], 'presentation')) {
           // context.commit('CURRENT_ITEM', {id: item.children[0].presentation.pid})

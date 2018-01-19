@@ -150,11 +150,11 @@
 </v>
 </v>
 <v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh></v>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180116093114.1"><vh>To Do</vh>
 <v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
 </v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093121.1"><vh>Doing</vh>
 <v t="josephorr.20180116093153.1" a="E"><vh>Kanban</vh>
 <v t="josephorr.20180116093253.1"><vh>To Do</vh>
 <v t="josephorr.20180116093403.1"><vh>Find Kanban package</vh></v>
@@ -165,6 +165,7 @@
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
 <v t="josephorr.20180116093125.1"><vh>Done</vh></v>
+</v>
 </v>
 </v>
 </vnodes>
