@@ -10,18 +10,18 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
-<v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Viewer from Github &gt;&gt;</vh></v>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
+<v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
@@ -109,7 +109,7 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1" a="E"><vh>@presentation Leo Vue</vh>
+<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
@@ -147,6 +147,24 @@
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
 <v t="josephorr.20171211070817.1"><vh>Shared Slides</vh></v>
 <v t="josephorr.20171130193909.1"></v>
+</v>
+</v>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
+<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
+</v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093153.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093253.1"><vh>To Do</vh>
+<v t="josephorr.20180116093403.1"><vh>Find Kanban package</vh></v>
+</v>
+<v t="josephorr.20180116093300.1"><vh>Doing</vh></v>
+<v t="josephorr.20180116093302.1"><vh>Done</vh></v>
+</v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1"><vh>Done</vh></v>
 </v>
 </v>
 </v>
@@ -285,7 +303,7 @@ Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby 
 This node was writen with Markdown.
 
 Use the @language md directive to set the node to markdown.</t>
-<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that they share the same content. 
+<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content. 
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
@@ -294,8 +312,8 @@ The nodes in this branch are clones of nodes appearing elsewhere in this documen
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
-Using Leo, you can create an outline tree with various types of content. This subsection contains some examples of different content created in a Leo file and displayed with Leo Vue.</t>
-<t tx="josephorr.20170327233126.1">This section contains a guide to using the Leo Viewer program to view files created in Leo.</t>
+Using Leo, you can create an outline tree with various types of content. This subsection contains some simple examples of different types of content created in a Leo file and displayed with Leo Vue.</t>
+<t tx="josephorr.20170327233126.1">This section contains a guide to using the Leo Vue program to view files created in Leo.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1">@language md
@@ -321,7 +339,9 @@ To install on Windows, unzip the following file and run leoApp.exe from the unzi
 
 For other environments, see the:
 
-[Installation page on the Leo Site](http://leoeditor.com/installing.html)</t>
+[Installation page on the Leo Site](http://leoeditor.com/installing.html)
+
+For Mac and Linux users: you may need to install the Droid Sans Mono font (the default Leo font).</t>
 <t tx="josephorr.20170328225527.1">@language html
 
 &lt;&lt; template &gt;&gt;&lt;br/&gt;
@@ -425,28 +445,28 @@ programming where documentation comes first, and code is generated from the docu
 is developed in tandem with it.</t>
 <t tx="josephorr.20170331200411.1">@language md
 
-# Installing and Using Leo Viewer
+# Installing and Using Leo Vue
 
-To use Leo Viewer, copy the files in the [dist folder at github](https://github.com/kaleguy/leoviewer) to your server. A web server is
-required, you can't simply open Leo Viewer from your local file system. If you want to view
+To use Leo Vue, copy the files in the [dist folder at github](https://github.com/kaleguy/leovue) to your server. A web server is
+required, you can't simply open Leo Vue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
-&lt;&lt; Running Leo Viewer from Github &gt;&gt;
+&lt;&lt; Running Leo Vue from Github &gt;&gt;
 
-The leo file that Leo Viewer displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
+The leo file that Leo Vue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration 
 parameters in index.html.
 
-For a quick look at a Leo file, you can also drag and drop the file on to Leo Viewer.
+For a quick look at a Leo file, you can also drag and drop the file on to Leo Vue.
 </t>
 <t tx="josephorr.20170331200439.1">@language md
 
 # Leo Vue
 
-Leo Vue is a web app that can display files created with 
+**Leo Vue** is a web app that can display files created with 
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 
-Using Leo, you can create outlined content. Using Leo Vue you can display this
+Using **Leo**, you can create outlined content. Using **Leo Vue** you can display this
 content as a web page.
 
 The content you are reading was created in Leo. If you're reading this on the Leo Vue
@@ -460,19 +480,19 @@ To do this, create a node with a Markdown link in the title, for example:
 
 [This is a link](http://www.example.com)
 
-Leo Viewer will show the external site in the content pane.
+Leo Vue will show the external site in the content pane.
 
 The next node has the following title:
 
 [A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
 
-Note that if Leo Viewer is served via https (e.g. Github Pages) only https links will work here.
+Note that if Leo Vue is served via https (e.g. Github Pages) only https links will work here.
 
 The second node in this section has the following title:
 
 [Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
 
-This is a clone of one of the earlier nodes in this outline. In this case Leo Viewer fetches the document and converts it to HTML before displaying it.</t>
+This is a clone of one of the earlier nodes in this outline. In this case Leo Vue fetches the document and converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
 // import escape from 'escape-html'
 import axios from 'axios'
@@ -679,16 +699,12 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
 
 # Basic Configuration Options
 
-Leo loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
-
-To tell Leo Viewer to load a different file, either pass a 'filename' parameter on the url, or edit the configuration section of index.html.
-
-[Example of Leo File from URL parameter](/?filename=static/example#/t/1)
+Leo Vue loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
 
 Currently Available Parameters:
 * **fileName**: name of leo file to load (without .leo extension)
 * **docTitle**: Title for the Leo file (will show in top menubar)
-* **showAppTitle**: Display 'Leoviewer' in upper left of app
+* **showAppTitle**: Display 'Leo Vue' in upper left of app
 * **viewTypes**: Array of viewTypes (e.g. Outline, Line, Graphic Tree) to be displayed in upper right menu.
 * **baseMode**: Default viewType
 
@@ -697,13 +713,13 @@ Parameters can be passed in to the url or entered in index.html. See index.html 
 Using parameters on the URL:
 
 ```
-http://www.mysite.com/leoviewer?filename=foo&amp;title=MyFile&amp;showapptitle=false
+http://www.mysite.com/leovue?title=MyFile&amp;showapptitle=false
 
 ```
 </t>
 <t tx="josephorr.20170511082833.1">@language md 
 
-Leo Viewer can load .leo files into nodes in a parent .leo file.
+Leo Vue can load .leo files into nodes in a parent .leo file.
 
 The child node of this node has the following title:
 
@@ -713,6 +729,8 @@ The child node of this node has the following title:
 Since the title points to a .leo file, the leo file is loaded into the node when the node is clicked.
 
 The subtree isn't loaded until you click on the node, so outlines can contain many child outlines and still have fast page load.
+
+Note that search will not work on nodes that have not been loaded yet.
 </t>
 <t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
 <t tx="josephorr.20170511084727.1"></t>
@@ -727,7 +745,7 @@ An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js
 &lt;/div&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
 
-Leoviewer is written in Vue.js, and Vue components can be added to content panes.
+Leo Vue is written in Vue.js, and Vue components can be added to content panes.
 
 By default the following components are added to LeoVue. 
 
@@ -752,9 +770,9 @@ To see how to add other components, view the docs.leo file using Leo, and check 
 </t>
 <t tx="josephorr.20171103103421.1">@language md
 
-You can also run Leo Viewer from github pages. Fork the repository on Github, 
+You can also run Leo Vue from github pages. Fork the repository on Github, 
 then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
-be viewable at username.github.io/myforkname/. (But be sure to edit the base tag as described above).</t>
+be viewable at username.github.io/myforkname/.</t>
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
   &lt;v-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
     &lt;v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/v-tilelayer&gt;
@@ -981,9 +999,9 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.0.2 
+Leo Vue is currently at version 1.5.0
 
-Leo Vue 1.0.x only is tested in Chrome and may not display correctly in other browsers.
+Leo Vue 1.5.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -999,6 +1017,7 @@ Current features include:
 * Content nodes can have [[ Vue.js Components ]]
 * Search
 * SEO version (static html files)
+* Nested presentations with Reveal.js
 
 Planned features not yet supported:
 * Keyboard support
@@ -1573,5 +1592,17 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
+<t tx="josephorr.20180116093044.1"></t>
+<t tx="josephorr.20180116093050.1"></t>
+<t tx="josephorr.20180116093114.1"></t>
+<t tx="josephorr.20180116093121.1"></t>
+<t tx="josephorr.20180116093125.1"></t>
+<t tx="josephorr.20180116093131.1"></t>
+<t tx="josephorr.20180116093153.1"></t>
+<t tx="josephorr.20180116093218.1"></t>
+<t tx="josephorr.20180116093253.1"></t>
+<t tx="josephorr.20180116093300.1"></t>
+<t tx="josephorr.20180116093302.1"></t>
+<t tx="josephorr.20180116093403.1"></t>
 </tnodes>
 </leo_file>
