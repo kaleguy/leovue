@@ -1,5 +1,7 @@
 <template>
-  <li :id="model.id" v-bind:class="{'unselected-sibling': hasOpenSibling}">
+  <li :id="model.id"
+      :nid="nid"
+      v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
          :class="{bold: isFolder, active: active, topItem: top}">
       <div
@@ -26,6 +28,7 @@
           class="item"
           v-for="model in model.children"
           :model="model"
+          :prefix="prefix"
           :key="model.id"
           :textItems="textItems"
           :accordion="accordion"
@@ -48,7 +51,11 @@ export default {
     targetEl: Boolean,
     textItems: Object,
     top: Boolean,
-    accordion: Boolean
+    accordion: Boolean,
+    prefix: {
+      type: String,
+      default: ''
+    }
   },
   data: function () {
     return {
@@ -102,6 +109,10 @@ export default {
       // if yes then return true
       // else return false
     },
+    // id with prefix
+    nid: function () {
+      return this.prefix + '_' + this.model.id
+    },
     isOpen: function () {
       const ids = this.$store.state.openItemIds
       let open = true
@@ -114,9 +125,9 @@ export default {
       // return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
-      console.log('HEY', this.closearrow)
+      // console.log('HEY', this.closearrow)
       if (_.has(this.model, 'o')) {
-        console.log('123456')
+        // console.log('123456')
         return this.closearrow
       }
       // let foo = this.isOpen && !this.closearrow
@@ -236,7 +247,7 @@ export default {
           this.model.o = !this.model.o
           this.closearrow = this.model.o
           if (this.accordion) {
-            // this.closeSiblings(easing, 'Up')
+            this.closeSiblingsN(easing, 'Up')
           }
         })
       } else {
@@ -245,7 +256,7 @@ export default {
           this.model.o = !this.model.o
           this.closearrow = this.model.o
           if (this.accordion) {
-            // this.closeSiblings(easing, 'Down')
+            this.closeSiblingsN(easing, 'Down')
           }
         })
       }
@@ -257,14 +268,27 @@ export default {
       const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
       const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
       let siblings = nextSiblings.concat(prevSiblings)
-      if (this.model.parent) {
-        siblings = this.model.parent.children
-      }
       siblings = siblings.map(s => s.id)
+      // const id = this.model.id
+      siblings.forEach(sid => {
+        // if (sid === id) { return }
+        let el = document.getElementById(sid)
+        Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
+        })
+      })
+    },
+    closeSiblingsN: function (easing, direction) {
+      const duration = 500
+      let siblings = _.clone(this.model.parent.children)
+      siblings.push(this.model)
+      // siblings = _.uniq(siblings)
+      siblings = siblings.map(s => s.id)
+      console.log('SIB', siblings)
       const id = this.model.id
       siblings.forEach(sid => {
         if (sid === id) { return }
-        let el = document.getElementById(sid)
+        let nid = this.prefix + '_' + sid
+        let el = document.querySelectorAll('li[nid = ' + nid + ']')[0]
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         })
       })

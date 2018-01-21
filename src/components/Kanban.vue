@@ -4,13 +4,14 @@
     <div class="flex-grid">
       <div
         class="col"
-        v-for="col in itemSet.children">
+        v-for="col, c in itemSet.children">
         <div class="col-title">{{col.name}}</div>
 
         <ul slot="left">
           <div v-for="itemdata in col.children">
             <item
               class="item"
+              :prefix="'nid' + c"
               :model="itemdata"
               :top="false"
               :textItems="text"
