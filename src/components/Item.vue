@@ -1,5 +1,5 @@
 <template>
-  <li :id="model.id"
+  <li :id="prefix + model.id"
       :nid="nid"
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
@@ -227,21 +227,7 @@ export default {
       let duration = 300
       const easing = 'linear'
       this.reset = false // TODO: remove
-      // toggle the open/close state of the item
-
-      // this.model.o = !this.model.o
-      // this.closearrow = this.model.o
-
-      /*
-      if (!_.has(this.model, 'o')) {
-        this.model.o = false
-      } else {
-        this.model.o = false
-        this.closearrow = true
-      }
-*/
       const ul = this.$el.getElementsByClassName('child-items')[0]
-      console.log('AA', this.closearrow)
       if (!this.model.o) {
         Velocity(ul, 'slideDown', {duration, easing}).then(els => {
           this.model.o = !this.model.o
@@ -273,6 +259,9 @@ export default {
       siblings.forEach(sid => {
         // if (sid === id) { return }
         let el = document.getElementById(sid)
+        console.log(sid, direction, el)
+        el.style.display = 'none'
+        el.innerHTML = '<h1>WTF</h1>'
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         })
       })
@@ -280,17 +269,17 @@ export default {
     closeSiblingsN: function (easing, direction) {
       const duration = 500
       let siblings = _.clone(this.model.parent.children)
-      siblings.push(this.model)
-      // siblings = _.uniq(siblings)
       siblings = siblings.map(s => s.id)
       console.log('SIB', siblings)
       const id = this.model.id
       siblings.forEach(sid => {
         if (sid === id) { return }
-        let nid = this.prefix + '_' + sid
-        let el = document.querySelectorAll('li[nid = ' + nid + ']')[0]
+        let nid = this.prefix + '' + sid
+        // let el = document.querySelectorAll('li[nid = ' + nid + ']')[0]
+        let el = document.getElementById(nid)
+        console.log('Y', nid, sid, direction, el)
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
-        })
+        }).catch(e => console.log(e))
       })
     }
   },

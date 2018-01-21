@@ -43,14 +43,14 @@ function loadIndexItems (arr, titles, textItems) {
 
 Vue.use(Vuex)
 
-function showText (context, text, id) {
+function showText (context, text, id, nowrapper) {
   context.commit('CONTENT_PANE', {type: 'text'})
   if (!text) {
     text = ''
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
-  text = util.formatText(text)
+  text = util.formatText(text, nowrapper)
   // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
   // hash of all content items
@@ -168,9 +168,17 @@ function showPresentation (context, title, id) {
   context.commit('CONTENT_PANE', { type: 'site' })
 }
 function showKanban (context, title, id) {
-  const html = `<kanban/>`
-  showText(context, html, id)
-  // context.commit('CONTENT_PANE', {type: 'text'})
+  let text = `@language html\n<kanban/>`
+  if (!text) {
+    text = ''
+    context.commit('CURRENT_ITEM_CONTENT', { text })
+    return
+  }
+  context.commit('CURRENT_ITEM_CONTENT', { text })
+  const newItem = { id, t: text }
+  context.commit('CONTENT_ITEM', {item: newItem})
+  context.commit('CONTENT_ITEM_UPDATE')
+  context.commit('CONTENT_PANE', { type: 'board' })
 }
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title) // eslint-disable-line

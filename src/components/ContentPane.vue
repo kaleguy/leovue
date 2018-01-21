@@ -1,6 +1,6 @@
 <template>
   <div class="pane">
-    <div v-show="textContent"
+    <div v-if="textContent"
          id="tlayout">
       <div id="lhandle"
            class="handle">
@@ -24,7 +24,14 @@
         </div>
       </div>
     </div>
-    <div v-show="iframeContent"
+    <div v-if="boardContent"
+         style="display:flex; background:#fff; width: 100%"
+         id="bpane">
+      <div style="width:100%">
+        <component :is="dynComponent" v-bind="$props"/>
+      </div>
+    </div>
+    <div v-if="iframeContent"
          style="display:flex; background:#fff; width: 100%"
          v-html="iframeHTML"
          id="vpane">
@@ -143,6 +150,13 @@ export default {
         return false
       }
     },
+    boardContent () {
+      if (this.$store.state.contentPane === 'board') {
+        return true
+      } else {
+        return false
+      }
+    },
     textContent () {
       if (this.$store.state.contentPane === 'text') {
         return true
@@ -254,6 +268,11 @@ export default {
     width: 100%;
     background: #fff;
     //height: 400px;
+    height: calc(100vh - 33px);
+  }
+  #bpane {
+    width: 100%;
+    background: #fff;
     height: calc(100vh - 33px);
   }
   #tlayout {

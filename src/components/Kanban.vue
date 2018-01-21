@@ -1,5 +1,5 @@
 <template>
-  <div class="nestedviewer">
+  <div class="nestedviewer" style="color:#fff">
     <h1>{{title}}</h1>
     <div class="flex-grid">
       <div
@@ -74,7 +74,6 @@
         if (!itemSet) {
           itemSet = _.cloneDeep(this.item)
           addParentPointers(itemSet)
-          console.log('IIIIII', itemSet)
         }
         return itemSet
       }
@@ -90,33 +89,42 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="sass" scoped>
+  H1
+    margin: 0
+    margin-left: 10px
+</style>
 <style lang="sass">
 .flex-grid
   display: flex
   background: #117ABD
-  height: 80%
+  height: 90%
   position: relative
   padding-right: 10px
 .col
   flex: 1
   background: #fff
-  border-radius: 10px
+  border-radius: 6px
   margin-left: 10px
-  margin-top: 10px
+  // margin-top: 10px
   margin-bottom: 10px
   padding: 10px
+  background: #eee
+  color: #000
 .col-title
   font-weight: bold
-
+  font-size: 18px
 .nestedviewer
   height: 100%
-  margin-left: 6px
+  // margin-left: 6px
+  background: #117ABD
   .item-box
     border: 2px solid #ccc
     margin-right: 3px
     padding-left: 6px
-    padding-right: 6px;
+    padding-right: 6px
     overflow: hidden
+    background: #fff
   ul
     list-style-type: none
     padding: 0
