@@ -40,6 +40,7 @@
 <script>
 
 import Velocity from 'velocity-animate'
+import _ from 'lodash'
 export default {
   name: 'item',
   props: {
@@ -75,6 +76,8 @@ export default {
     },
     hasOpenSibling: function () {
       if (!this.accordion) { return false }
+      // don't need this for standalone component e.g. kanban
+      if (this.model.parent) { return false }
       // TODO: this is slow, need to refactor, possibly replace defiant wth parent pointer on item
       // if (this.isOpen) { return ' open' }
       if (!this.isOpen) { return }
@@ -88,6 +91,12 @@ export default {
         if (ids.indexOf(sid + '') > -1) { hasOpen = true }
       })
       hasOpen = false
+      // if parent prop has been set, get siblings from there. This will be case when
+      // item is working off of cloned subset of the leo file, not the full tree
+      if (this.model.parent) {
+        let siblings = this.model.parent.children
+        if (siblings.length > 1) { hasOpen = true }
+      }
       return hasOpen
       // check if any siblings are open
       // if yes then return true
@@ -105,6 +114,13 @@ export default {
       // return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
+      console.log('HEY', this.closearrow)
+      if (_.has(this.model, 'o')) {
+        console.log('123456')
+        return this.closearrow
+      }
+      // let foo = this.isOpen && !this.closearrow
+      // console.log(foo, this.closearrow, !this.closearrow)
       return this.isOpen && !this.closearrow
     },
     active: function () {
@@ -138,6 +154,10 @@ export default {
       let duration = 300
       const easing = 'linear'
       this.reset = false // TODO: remove
+
+      if (this.model.parent) {
+        return this.toggleN()
+      }
       // toggle the open/close state of the item
       let openItemIds = this.$store.state.openItemIds.slice(0) // clone openid array
       if (!this.isOpen) {
@@ -146,6 +166,7 @@ export default {
         openItemIds = openItemIds.filter(id => id !== this.model.id)
         this.closearrow = true
       }
+
       const ul = this.$el.getElementsByClassName('child-items')[0]
       if (!this.isOpen) {
         this.$store.commit('OPEN_ITEMS', {openItemIds})
@@ -187,16 +208,62 @@ export default {
 
         return
       }
+      if (!this.targetEl) { return }
       this.$store.dispatch('setCurrentItem', {id})
-      // close siblings if in accordion mode
     },
+    toggleN: function () {
+      // toggle the tree node
+      let duration = 300
+      const easing = 'linear'
+      this.reset = false // TODO: remove
+      // toggle the open/close state of the item
+
+      // this.model.o = !this.model.o
+      // this.closearrow = this.model.o
+
+      /*
+      if (!_.has(this.model, 'o')) {
+        this.model.o = false
+      } else {
+        this.model.o = false
+        this.closearrow = true
+      }
+*/
+      const ul = this.$el.getElementsByClassName('child-items')[0]
+      console.log('AA', this.closearrow)
+      if (!this.model.o) {
+        Velocity(ul, 'slideDown', {duration, easing}).then(els => {
+          this.model.o = !this.model.o
+          this.closearrow = this.model.o
+          if (this.accordion) {
+            // this.closeSiblings(easing, 'Up')
+          }
+        })
+      } else {
+        Velocity(ul, 'slideUp', {duration, easing}).then(els => {
+          console.log('slideup')
+          this.model.o = !this.model.o
+          this.closearrow = this.model.o
+          if (this.accordion) {
+            // this.closeSiblings(easing, 'Down')
+          }
+        })
+      }
+      // if (!this.targetEl) { return }
+    },
+    // close siblings if in accordion mode
     closeSiblings: function (easing, direction) {
       const duration = 500
       const nextSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/following-sibling::*')
       const prevSiblings = JSON.search(this.$store.state.leodata, '//*[id="' + this.model.id + '"]/preceding-sibling::children')
       let siblings = nextSiblings.concat(prevSiblings)
+      if (this.model.parent) {
+        siblings = this.model.parent.children
+      }
       siblings = siblings.map(s => s.id)
+      const id = this.model.id
       siblings.forEach(sid => {
+        if (sid === id) { return }
         let el = document.getElementById(sid)
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         })
