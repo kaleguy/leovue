@@ -64,7 +64,4 @@ a {
 .dashboard{
   height: 100%;
 }
-.header-space {
-  // padding-top: 33px;
-}
 </style>
