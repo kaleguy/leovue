@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
@@ -108,7 +108,7 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -149,22 +149,33 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
+<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
+<v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
+</v>
 <v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
 <v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
+<v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
+<v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
+<v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
+<v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
+</v>
+<v t="josephorr.20180122081704.1"><vh>Content</vh>
+<v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
+<v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
+</v>
+<v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
 </v>
 <v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180116093153.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093253.1"><vh>To Do</vh>
-<v t="josephorr.20180116093403.1"><vh>Find Kanban package</vh></v>
-</v>
-<v t="josephorr.20180116093300.1"><vh>Doing</vh></v>
-<v t="josephorr.20180116093302.1"><vh>Done</vh></v>
-</v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
-<v t="josephorr.20180116093125.1"><vh>Done</vh></v>
+</v>
+<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -1592,7 +1603,15 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
-<t tx="josephorr.20180116093044.1"></t>
+<t tx="josephorr.20180116093044.1">Some people find Leo outlines to be a good way to organize to do lists and projects.
+
+However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
+
+Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
+
+The nested viewer component makes it possible to display just the selected parts of a tree, so a large subtree can be viewable in a single kanban column. 
+
+The @kanban directive is an example of a summary directive. It summarizes content found in other nodes. You can write you own summary component by adapting the code of the Kanban component. This component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
 <t tx="josephorr.20180116093050.1"></t>
 <t tx="josephorr.20180116093114.1"></t>
 <t tx="josephorr.20180116093121.1"></t>
@@ -1600,9 +1619,17 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
 <t tx="josephorr.20180116093131.1"></t>
 <t tx="josephorr.20180116093153.1"></t>
 <t tx="josephorr.20180116093218.1"></t>
-<t tx="josephorr.20180116093253.1"></t>
-<t tx="josephorr.20180116093300.1"></t>
-<t tx="josephorr.20180116093302.1"></t>
-<t tx="josephorr.20180116093403.1"></t>
+<t tx="josephorr.20180122081417.1"></t>
+<t tx="josephorr.20180122081434.1"></t>
+<t tx="josephorr.20180122081528.1"></t>
+<t tx="josephorr.20180122081638.1"></t>
+<t tx="josephorr.20180122081646.1"></t>
+<t tx="josephorr.20180122081704.1"></t>
+<t tx="josephorr.20180122081707.1"></t>
+<t tx="josephorr.20180122081714.1"></t>
+<t tx="josephorr.20180122081825.1"></t>
+<t tx="josephorr.20180122081835.1"></t>
+<t tx="josephorr.20180122081848.1"></t>
+<t tx="josephorr.20180122082124.1"></t>
 </tnodes>
 </leo_file>
