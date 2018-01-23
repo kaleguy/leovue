@@ -52,6 +52,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 .mermaid
+  text-align: center
   // margin-left: auto
   // margin-right: auto
 </style>

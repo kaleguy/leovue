@@ -149,6 +149,37 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20180123094605.1"><vh>@mermaid SimpleExample</vh>
+<v t="josephorr.20180123100140.1"><vh>A</vh>
+<v t="josephorr.20180123100157.1"><vh>G</vh></v>
+<v t="josephorr.20180123100145.1" a="E"><vh>B</vh>
+<v t="josephorr.20180123100150.1"><vh>C</vh></v>
+<v t="josephorr.20180123100152.1" a="E"><vh>D</vh>
+<v t="josephorr.20180123100154.1"><vh>E</vh></v>
+<v t="josephorr.20180123100155.1"><vh>F</vh></v>
+<v t="josephorr.20180123100157.1"></v>
+</v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180123102749.1" a="E"><vh>@mermaid People Chart</vh>
+<v t="josephorr.20180123102805.1"><vh>Friends</vh>
+<v t="josephorr.20180123102842.1"><vh>Ted</vh></v>
+<v t="josephorr.20180123102839.1"><vh>Alice</vh></v>
+<v t="josephorr.20180123102823.1"><vh>Bob</vh></v>
+</v>
+<v t="josephorr.20180123102809.1"><vh>Enemies</vh>
+<v t="josephorr.20180123102846.1"><vh>Jane</vh></v>
+<v t="josephorr.20180123102850.1"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180123102814.1"><vh>Neutral</vh>
+<v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180123102923.1"><vh>Bubba</vh></v>
+</v>
+</v>
+</v>
 <v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
@@ -176,6 +207,7 @@
 </v>
 <v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -1633,5 +1665,26 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180122081848.1"></t>
 <t tx="josephorr.20180122082124.1"></t>
 <t tx="josephorr.20180122175250.1"></t>
+<t tx="josephorr.20180123094605.1"></t>
+<t tx="josephorr.20180123100140.1"></t>
+<t tx="josephorr.20180123100145.1"></t>
+<t tx="josephorr.20180123100150.1"></t>
+<t tx="josephorr.20180123100152.1"></t>
+<t tx="josephorr.20180123100154.1"></t>
+<t tx="josephorr.20180123100155.1"></t>
+<t tx="josephorr.20180123100157.1"></t>
+<t tx="josephorr.20180123102417.1"></t>
+<t tx="josephorr.20180123102440.1">Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be arbitrarilty complex.</t>
+<t tx="josephorr.20180123102749.1"></t>
+<t tx="josephorr.20180123102805.1"></t>
+<t tx="josephorr.20180123102809.1"></t>
+<t tx="josephorr.20180123102814.1"></t>
+<t tx="josephorr.20180123102823.1"></t>
+<t tx="josephorr.20180123102839.1"></t>
+<t tx="josephorr.20180123102842.1"></t>
+<t tx="josephorr.20180123102846.1"></t>
+<t tx="josephorr.20180123102850.1"></t>
+<t tx="josephorr.20180123102901.1"></t>
+<t tx="josephorr.20180123102923.1"></t>
 </tnodes>
 </leo_file>
