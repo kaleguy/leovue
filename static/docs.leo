@@ -164,7 +164,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180123102749.1" a="E"><vh>@mermaid People Chart</vh>
+<v t="josephorr.20180123102749.1"><vh>@mermaid People Chart</vh>
 <v t="josephorr.20180123102805.1"><vh>Friends</vh>
 <v t="josephorr.20180123102842.1"><vh>Ted</vh></v>
 <v t="josephorr.20180123102839.1"><vh>Alice</vh></v>
@@ -177,6 +177,24 @@
 <v t="josephorr.20180123102814.1"><vh>Neutral</vh>
 <v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
 <v t="josephorr.20180123102923.1"><vh>Bubba</vh></v>
+</v>
+</v>
+<v t="josephorr.20180123112052.1" a="E"><vh>@mermaid Instruments</vh>
+<v t="josephorr.20180123112108.1" a="E"><vh>Type</vh>
+<v t="josephorr.20180123112119.1" a="E"><vh>Keyboard</vh>
+<v t="josephorr.20180123112126.1"><vh>Piano</vh></v>
+<v t="josephorr.20180123112130.1"><vh>Harpsichord</vh></v>
+</v>
+<v t="josephorr.20180123112138.1"><vh>Brass</vh>
+<v t="josephorr.20180123112140.1"><vh>Trumpet</vh></v>
+<v t="josephorr.20180123112148.1"><vh>French Horn</vh></v>
+</v>
+</v>
+<v t="josephorr.20180123112200.1" a="E"><vh>Players</vh>
+<v t="josephorr.20180123112206.1"><vh>Bob</vh></v>
+<v t="josephorr.20180123112213.1" a="E"><vh>Alice</vh>
+<v t="josephorr.20180123112126.1"></v>
+</v>
 </v>
 </v>
 </v>
@@ -1686,5 +1704,16 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180123102850.1"></t>
 <t tx="josephorr.20180123102901.1"></t>
 <t tx="josephorr.20180123102923.1"></t>
+<t tx="josephorr.20180123112052.1"></t>
+<t tx="josephorr.20180123112108.1"></t>
+<t tx="josephorr.20180123112119.1"></t>
+<t tx="josephorr.20180123112126.1"></t>
+<t tx="josephorr.20180123112130.1"></t>
+<t tx="josephorr.20180123112138.1"></t>
+<t tx="josephorr.20180123112140.1"></t>
+<t tx="josephorr.20180123112148.1"></t>
+<t tx="josephorr.20180123112200.1"></t>
+<t tx="josephorr.20180123112206.1"></t>
+<t tx="josephorr.20180123112213.1"></t>
 </tnodes>
 </leo_file>

@@ -21,7 +21,7 @@
   }
   function getMm (item, links) {
     item.children.forEach(i => {
-      links.push(`${item.id}[${item.name}] --> ${i.id}[${i.name}]`)
+      links.push(`${item.t}[${item.name}] --> ${i.t}[${i.name}]`)
       getMm(i, links)
     })
   }
