@@ -33,7 +33,16 @@ Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue
 Leo Vue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
 
+### Kanban and Summary Nodes
+Some people find Leo outlines to be a good way to organize to do lists and projects.
 
+However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
+
+Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
+
+The @kanban directive is an example of a summary directive. It summarizes content found in other nodes. You can write you own summary component by adapting the code of the Kanban component.
+
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-kanban.gif)
 
 ## More Examples
 

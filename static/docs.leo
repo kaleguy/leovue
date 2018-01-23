@@ -108,7 +108,7 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -149,8 +149,8 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 </v>
@@ -162,6 +162,7 @@
 <v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
 </v>
 <v t="josephorr.20180122081704.1"><vh>Content</vh>
+<v t="josephorr.20180122175250.1"><vh>Tree of Life</vh></v>
 <v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
 <v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
 </v>
@@ -169,7 +170,7 @@
 </v>
 <v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081434.1" a="E"><vh>Kanban v2</vh>
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
@@ -1631,5 +1632,6 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180122081835.1"></t>
 <t tx="josephorr.20180122081848.1"></t>
 <t tx="josephorr.20180122082124.1"></t>
+<t tx="josephorr.20180122175250.1"></t>
 </tnodes>
 </leo_file>

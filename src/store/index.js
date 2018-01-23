@@ -168,12 +168,15 @@ function showPresentation (context, title, id) {
   context.commit('CONTENT_PANE', { type: 'site' })
 }
 function showKanban (context, title, id) {
-  let text = `@language html\n<kanban/>`
-  if (!text) {
-    text = ''
-    context.commit('CURRENT_ITEM_CONTENT', { text })
-    return
-  }
+  let text = `<kanban/>`
+  context.commit('CURRENT_ITEM_CONTENT', { text })
+  const newItem = { id, t: text }
+  context.commit('CONTENT_ITEM', {item: newItem})
+  context.commit('CONTENT_ITEM_UPDATE')
+  context.commit('CONTENT_PANE', { type: 'board' })
+}
+function showMermaid (context, title, id) {
+  let text = `<mermaid-board/>`
   context.commit('CURRENT_ITEM_CONTENT', { text })
   const newItem = { id, t: text }
   context.commit('CONTENT_ITEM', {item: newItem})
@@ -745,6 +748,9 @@ export default new Vuex.Store({
         }
         if (/^@kanban /.test(item.name)) {
           return showKanban(context, item.name, id)
+        }
+        if (/^@mermaid/.test(item.name)) {
+          return showMermaid(context, item.name, id)
         }
         if (/^« /.test(item.name) && _.has(item.children[0], 'presentation')) {
           // context.commit('CURRENT_ITEM', {id: item.children[0].presentation.pid})

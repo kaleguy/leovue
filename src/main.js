@@ -29,6 +29,7 @@ import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
 import ImageLeft from './components/layout/ImageLeft'
 import Kanban from './components/Kanban'
+import MermaidBoard from './components/MermaidBoard'
 import { TableComponent, TableColumn } from 'vue-table-component'
 
 import {charts} from './content-components/Charts'
@@ -55,6 +56,7 @@ Vue.component('v-marker', Vue2Leaflet.Marker)
 Vue.component('table-component', TableComponent)
 Vue.component('table-column', TableColumn)
 Vue.component('kanban', Kanban)
+Vue.component('mermaid-board', MermaidBoard)
 
 sync(store, router)
 
