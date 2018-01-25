@@ -1,5 +1,6 @@
 <template>
-    <div class="mermaid"><slot></slot></div>
+    <div :name="name" class="mermaid"><slot></slot>
+    </div>
 </template>
 
 <script>
@@ -9,6 +10,10 @@
     components: {
     },
     props: {
+      name: {
+        type: String,
+        default: 'mm'
+      },
       height: {
         type: String,
         default: '300'
@@ -16,6 +21,10 @@
       width: {
         type: String,
         default: '400'
+      },
+      mm: {
+        type: String,
+        default: ''
       }
     },
     methods: {
@@ -26,10 +35,19 @@
     },
     beforeCreate () {
     },
+    updated () {
+      const mermaidEl = this.$el
+      if (this.mm) {
+        mermaidEl.innerHTML = this.mm
+      }
+      mermaidEl.removeAttribute('data-processed')
+      mermaid.init(undefined, mermaidEl) // eslint-disable-line
+    },
     mounted () {
       const mermaidEl = this.$el
       mermaidEl.style.height = this.height + 'px'
       mermaidEl.style.width = this.width + 'px'
+      mermaidEl.name = this.name
       const config = {
         startOnLoad: true,
         flowchart: {
@@ -40,6 +58,7 @@
         theme: 'forest'
       }
       mermaid.initialize(config)
+      mermaidEl.removeAttribute('data-processed')
       mermaid.init(undefined, mermaidEl) // eslint-disable-line
     },
     computed: {

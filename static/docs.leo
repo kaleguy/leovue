@@ -151,35 +151,59 @@
 </v>
 <v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
-<v t="josephorr.20180123094605.1"><vh>@mermaid SimpleExample</vh>
-<v t="josephorr.20180123100140.1"><vh>A</vh>
-<v t="josephorr.20180123100157.1"><vh>G</vh></v>
-<v t="josephorr.20180123100145.1" a="E"><vh>B</vh>
-<v t="josephorr.20180123100150.1"><vh>C</vh></v>
+<v t="josephorr.20180123094605.1"><vh>@mermaidtd Simple Example Top Down</vh>
+<v t="josephorr.20180123100140.1"><vh>{A}</vh>
+<v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
+<v t="josephorr.20180123100145.1" a="E"><vh>((B))</vh>
+<v t="josephorr.20180123100150.1" a="E"><vh>C</vh>
 <v t="josephorr.20180123100152.1" a="E"><vh>D</vh>
 <v t="josephorr.20180123100154.1"><vh>E</vh></v>
 <v t="josephorr.20180123100155.1"><vh>F</vh></v>
 <v t="josephorr.20180123100157.1"></v>
 </v>
 </v>
+<v t="josephorr.20180123100152.1" a="E"></v>
 </v>
 </v>
-<v t="josephorr.20180123102749.1"><vh>@mermaid People Chart</vh>
-<v t="josephorr.20180123102805.1"><vh>Friends</vh>
-<v t="josephorr.20180123102842.1"><vh>Ted</vh></v>
-<v t="josephorr.20180123102839.1"><vh>Alice</vh></v>
-<v t="josephorr.20180123102823.1"><vh>Bob</vh></v>
 </v>
-<v t="josephorr.20180123102809.1"><vh>Enemies</vh>
-<v t="josephorr.20180123102846.1"><vh>Jane</vh></v>
-<v t="josephorr.20180123102850.1"><vh>The Guy with the Mirror Shades</vh></v>
-</v>
-<v t="josephorr.20180123102814.1"><vh>Neutral</vh>
-<v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180123102749.1" a="E"><vh>@mermaidlr People Chart</vh>
+<v t="josephorr.20180123102805.1" a="E"><vh>Friends</vh>
+<v t="josephorr.20180123102842.1" a="E"><vh>Ted</vh>
+<v t="josephorr.20180124190020.1" a="E"><vh>Friends</vh>
+<v t="josephorr.20180124190030.1"><vh>Mr Z</vh></v>
+<v t="josephorr.20180124190042.1"><vh>Barb</vh></v>
 <v t="josephorr.20180123102923.1"><vh>Bubba</vh></v>
 </v>
 </v>
-<v t="josephorr.20180123112052.1" a="E"><vh>@mermaid Instruments</vh>
+<v t="josephorr.20180123102839.1"><vh>Alice</vh></v>
+<v t="josephorr.20180123102823.1"><vh>Bob</vh></v>
+<v t="josephorr.20180123102846.1"><vh>Jane</vh></v>
+</v>
+<v t="josephorr.20180123102809.1" a="E"><vh>Enemies</vh>
+<v t="josephorr.20180123102846.1"></v>
+<v t="josephorr.20180123102850.1"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180123102814.1" a="E"><vh>Neutral</vh>
+<v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180123102923.1"></v>
+</v>
+</v>
+<v t="josephorr.20180124174508.1"><vh>@mermaidrl People Chart</vh>
+<v t="josephorr.20180124174508.2"><vh>Friends</vh>
+<v t="josephorr.20180124174508.3"><vh>Ted</vh></v>
+<v t="josephorr.20180124174508.4"><vh>Alice</vh></v>
+<v t="josephorr.20180124174508.5"><vh>Bob</vh></v>
+</v>
+<v t="josephorr.20180124174508.6"><vh>Enemies</vh>
+<v t="josephorr.20180124174508.7"><vh>Jane</vh></v>
+<v t="josephorr.20180124174508.8"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180124174508.9"><vh>Neutral</vh>
+<v t="josephorr.20180124174508.10"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180124174508.11"><vh>Bubba</vh></v>
+</v>
+</v>
+<v t="josephorr.20180123112052.1"><vh>@mermaid Instruments</vh>
 <v t="josephorr.20180123112108.1" a="E"><vh>Type</vh>
 <v t="josephorr.20180123112119.1" a="E"><vh>Keyboard</vh>
 <v t="josephorr.20180123112126.1"><vh>Piano</vh></v>
@@ -198,7 +222,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
@@ -1654,15 +1678,18 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
-<t tx="josephorr.20180116093044.1">Some people find Leo outlines to be a good way to organize to do lists and projects.
+<t tx="josephorr.20180116093044.1">@language md
+
+# Kanban
+
+Some people find Leo outlines to be a good way to organize to do lists and projects.
 
 However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
 
 Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
 
 The nested viewer component makes it possible to display just the selected parts of a tree, so a large subtree can be viewable in a single kanban column. 
-
-The @kanban directive is an example of a summary directive. It summarizes content found in other nodes. You can write you own summary component by adapting the code of the Kanban component. This component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
+</t>
 <t tx="josephorr.20180116093050.1"></t>
 <t tx="josephorr.20180116093114.1"></t>
 <t tx="josephorr.20180116093121.1"></t>
@@ -1690,9 +1717,29 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180123100152.1"></t>
 <t tx="josephorr.20180123100154.1"></t>
 <t tx="josephorr.20180123100155.1"></t>
-<t tx="josephorr.20180123100157.1"></t>
-<t tx="josephorr.20180123102417.1"></t>
-<t tx="josephorr.20180123102440.1">Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be arbitrarilty complex.</t>
+<t tx="josephorr.20180123100157.1">style: fill:#f9f,stroke:#333,stroke-width:4px
+text: yes
+</t>
+<t tx="josephorr.20180123102417.1">@language md
+
+# Summary Nodes
+
+Leo Vue can summarize the contents of a subtree. Currently there are two directives that do this:
+
+**@kanban**: Create a Kanban board from the subtree.
+
+**@mermaid** Create a Mermaid diagram from the subtree. To specifiy the digram type, use:
+
+* @mermaidlr: left - right
+* @mermaidrl: right - left
+* @mermaidtd: top - down
+
+You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
+<t tx="josephorr.20180123102440.1">@language md
+
+# Mermaid
+
+Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.</t>
 <t tx="josephorr.20180123102749.1"></t>
 <t tx="josephorr.20180123102805.1"></t>
 <t tx="josephorr.20180123102809.1"></t>
@@ -1715,5 +1762,19 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180123112200.1"></t>
 <t tx="josephorr.20180123112206.1"></t>
 <t tx="josephorr.20180123112213.1"></t>
+<t tx="josephorr.20180124174508.1"></t>
+<t tx="josephorr.20180124174508.10"></t>
+<t tx="josephorr.20180124174508.11"></t>
+<t tx="josephorr.20180124174508.2"></t>
+<t tx="josephorr.20180124174508.3"></t>
+<t tx="josephorr.20180124174508.4"></t>
+<t tx="josephorr.20180124174508.5"></t>
+<t tx="josephorr.20180124174508.6"></t>
+<t tx="josephorr.20180124174508.7"></t>
+<t tx="josephorr.20180124174508.8"></t>
+<t tx="josephorr.20180124174508.9"></t>
+<t tx="josephorr.20180124190020.1"></t>
+<t tx="josephorr.20180124190030.1"></t>
+<t tx="josephorr.20180124190042.1"></t>
 </tnodes>
 </leo_file>
