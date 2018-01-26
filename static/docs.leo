@@ -151,8 +151,8 @@
 </v>
 <v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
-<v t="josephorr.20180123094605.1"><vh>@mermaidtd Simple Example Top Down</vh>
-<v t="josephorr.20180123100140.1"><vh>{A}</vh>
+<v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
+<v t="josephorr.20180123100140.1" a="E"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
 <v t="josephorr.20180123100145.1" a="E"><vh>((B))</vh>
 <v t="josephorr.20180123100150.1" a="E"><vh>C</vh>
@@ -166,8 +166,8 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180123102749.1" a="E"><vh>@mermaidlr People Chart</vh>
-<v t="josephorr.20180123102805.1" a="E"><vh>Friends</vh>
+<v t="josephorr.20180123102749.1"><vh>@mermaidlr People Chart</vh>
+<v t="josephorr.20180123102805.1"><vh>Friends</vh>
 <v t="josephorr.20180123102842.1" a="E"><vh>Ted</vh>
 <v t="josephorr.20180124190020.1" a="E"><vh>Friends</vh>
 <v t="josephorr.20180124190030.1"><vh>Mr Z</vh></v>
@@ -179,45 +179,59 @@
 <v t="josephorr.20180123102823.1"><vh>Bob</vh></v>
 <v t="josephorr.20180123102846.1"><vh>Jane</vh></v>
 </v>
-<v t="josephorr.20180123102809.1" a="E"><vh>Enemies</vh>
+<v t="josephorr.20180123102809.1"><vh>Enemies</vh>
 <v t="josephorr.20180123102846.1"></v>
 <v t="josephorr.20180123102850.1"><vh>The Guy with the Mirror Shades</vh></v>
 </v>
-<v t="josephorr.20180123102814.1" a="E"><vh>Neutral</vh>
+<v t="josephorr.20180123102814.1"><vh>Neutral</vh>
 <v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
 <v t="josephorr.20180123102923.1"></v>
 </v>
 </v>
-<v t="josephorr.20180124174508.1"><vh>@mermaidrl People Chart</vh>
-<v t="josephorr.20180124174508.2"><vh>Friends</vh>
-<v t="josephorr.20180124174508.3"><vh>Ted</vh></v>
-<v t="josephorr.20180124174508.4"><vh>Alice</vh></v>
-<v t="josephorr.20180124174508.5"><vh>Bob</vh></v>
-</v>
-<v t="josephorr.20180124174508.6"><vh>Enemies</vh>
-<v t="josephorr.20180124174508.7"><vh>Jane</vh></v>
-<v t="josephorr.20180124174508.8"><vh>The Guy with the Mirror Shades</vh></v>
-</v>
-<v t="josephorr.20180124174508.9"><vh>Neutral</vh>
-<v t="josephorr.20180124174508.10"><vh>The Flower Lady</vh></v>
-<v t="josephorr.20180124174508.11"><vh>Bubba</vh></v>
+<v t="josephorr.20180125092033.1"><vh>@mermaidrl People Chart</vh>
+<v t="josephorr.20180125092033.2"><vh>Friends</vh>
+<v t="josephorr.20180125092033.3" a="E"><vh>Ted</vh>
+<v t="josephorr.20180125092033.4" a="E"><vh>Friends</vh>
+<v t="josephorr.20180125092033.5"><vh>Mr Z</vh></v>
+<v t="josephorr.20180125092033.6"><vh>Barb</vh></v>
+<v t="josephorr.20180125092033.16"><vh>Bubba</vh></v>
 </v>
 </v>
-<v t="josephorr.20180123112052.1"><vh>@mermaid Instruments</vh>
-<v t="josephorr.20180123112108.1" a="E"><vh>Type</vh>
-<v t="josephorr.20180123112119.1" a="E"><vh>Keyboard</vh>
-<v t="josephorr.20180123112126.1"><vh>Piano</vh></v>
-<v t="josephorr.20180123112130.1"><vh>Harpsichord</vh></v>
+<v t="josephorr.20180125092033.8"><vh>Alice</vh></v>
+<v t="josephorr.20180125092033.9"><vh>Bob</vh></v>
+<v t="josephorr.20180125092033.12"><vh>Jane</vh></v>
 </v>
-<v t="josephorr.20180123112138.1"><vh>Brass</vh>
-<v t="josephorr.20180123112140.1"><vh>Trumpet</vh></v>
-<v t="josephorr.20180123112148.1"><vh>French Horn</vh></v>
+<v t="josephorr.20180125092033.11"><vh>Enemies</vh>
+<v t="josephorr.20180125092033.12"></v>
+<v t="josephorr.20180125092033.13"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180125092033.14"><vh>Neutral</vh>
+<v t="josephorr.20180125092033.15"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180125092033.16"></v>
 </v>
 </v>
-<v t="josephorr.20180123112200.1" a="E"><vh>Players</vh>
-<v t="josephorr.20180123112206.1"><vh>Bob</vh></v>
-<v t="josephorr.20180123112213.1" a="E"><vh>Alice</vh>
-<v t="josephorr.20180123112126.1"></v>
+<v t="josephorr.20180125092052.1" a="E"><vh>@mermaidlr App Planning</vh>
+<v t="josephorr.20180125092129.1"><vh>Server</vh>
+<v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180125092343.1"><vh>((Brent))</vh></v>
+</v>
+</v>
+<v t="josephorr.20180125092134.1" a="E"><vh>Devops</vh>
+<v t="josephorr.20180125092159.1"><vh>AWS</vh></v>
+<v t="josephorr.20180125092210.1" a="E"><vh>Ansible</vh>
+<v t="josephorr.20180125092343.1"></v>
+</v>
+<v t="josephorr.20180125092213.1"><vh>Atlas</vh></v>
+</v>
+<v t="josephorr.20180125092142.1" a="E"><vh>Client</vh>
+<v t="josephorr.20180125092224.1" a="E"><vh>Framework</vh>
+<v t="josephorr.20180125092343.1"></v>
+<v t="josephorr.20180125092353.1"><vh>((Alice))</vh></v>
+</v>
+<v t="josephorr.20180125092240.1" a="E"><vh>Components</vh>
+<v t="josephorr.20180125092259.1"><vh>Form.io</vh></v>
+<v t="josephorr.20180125092318.1"><vh>Charts</vh></v>
+<v t="josephorr.20180125093540.1"><vh>A fa:fa-camera-retro perhaps?</vh></v>
 </v>
 </v>
 </v>
@@ -228,7 +242,6 @@
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 </v>
 <v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
-<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -240,12 +253,26 @@
 <v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
 </v>
 <v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
-</v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-<v t="josephorr.20180122081434.1" a="E"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
+</v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093131.1" a="E"><vh>Mermaid from subtree</vh>
+<v t="josephorr.20180125105051.1"><vh>Doing</vh>
+<v t="josephorr.20180125105403.1"><vh>center</vh></v>
+<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
+<v t="josephorr.20180125105145.1"><vh>properties</vh>
+<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
+<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
+<v t="josephorr.20180125105355.1"><vh>height</vh></v>
+</v>
+</v>
+<v t="josephorr.20180125105055.1"><vh>Done</vh>
+<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
 <v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
@@ -1710,7 +1737,7 @@ The nested viewer component makes it possible to display just the selected parts
 <t tx="josephorr.20180122081848.1"></t>
 <t tx="josephorr.20180122082124.1"></t>
 <t tx="josephorr.20180122175250.1"></t>
-<t tx="josephorr.20180123094605.1"></t>
+<t tx="josephorr.20180123094605.1">height: 600</t>
 <t tx="josephorr.20180123100140.1"></t>
 <t tx="josephorr.20180123100145.1"></t>
 <t tx="josephorr.20180123100150.1"></t>
@@ -1740,7 +1767,7 @@ You can write your own summary component by adapting the code of an existing sum
 # Mermaid
 
 Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.</t>
-<t tx="josephorr.20180123102749.1"></t>
+<t tx="josephorr.20180123102749.1">height: 350</t>
 <t tx="josephorr.20180123102805.1"></t>
 <t tx="josephorr.20180123102809.1"></t>
 <t tx="josephorr.20180123102814.1"></t>
@@ -1751,30 +1778,51 @@ Mermaid is a javascript library for creating diagrams. Leo Vue can create (and t
 <t tx="josephorr.20180123102850.1"></t>
 <t tx="josephorr.20180123102901.1"></t>
 <t tx="josephorr.20180123102923.1"></t>
-<t tx="josephorr.20180123112052.1"></t>
-<t tx="josephorr.20180123112108.1"></t>
-<t tx="josephorr.20180123112119.1"></t>
-<t tx="josephorr.20180123112126.1"></t>
-<t tx="josephorr.20180123112130.1"></t>
-<t tx="josephorr.20180123112138.1"></t>
-<t tx="josephorr.20180123112140.1"></t>
-<t tx="josephorr.20180123112148.1"></t>
-<t tx="josephorr.20180123112200.1"></t>
-<t tx="josephorr.20180123112206.1"></t>
-<t tx="josephorr.20180123112213.1"></t>
-<t tx="josephorr.20180124174508.1"></t>
-<t tx="josephorr.20180124174508.10"></t>
-<t tx="josephorr.20180124174508.11"></t>
-<t tx="josephorr.20180124174508.2"></t>
-<t tx="josephorr.20180124174508.3"></t>
-<t tx="josephorr.20180124174508.4"></t>
-<t tx="josephorr.20180124174508.5"></t>
-<t tx="josephorr.20180124174508.6"></t>
-<t tx="josephorr.20180124174508.7"></t>
-<t tx="josephorr.20180124174508.8"></t>
-<t tx="josephorr.20180124174508.9"></t>
 <t tx="josephorr.20180124190020.1"></t>
 <t tx="josephorr.20180124190030.1"></t>
 <t tx="josephorr.20180124190042.1"></t>
+<t tx="josephorr.20180125092033.1">height: 350</t>
+<t tx="josephorr.20180125092033.11"></t>
+<t tx="josephorr.20180125092033.12"></t>
+<t tx="josephorr.20180125092033.13"></t>
+<t tx="josephorr.20180125092033.14"></t>
+<t tx="josephorr.20180125092033.15"></t>
+<t tx="josephorr.20180125092033.16"></t>
+<t tx="josephorr.20180125092033.2"></t>
+<t tx="josephorr.20180125092033.3"></t>
+<t tx="josephorr.20180125092033.4"></t>
+<t tx="josephorr.20180125092033.5"></t>
+<t tx="josephorr.20180125092033.6"></t>
+<t tx="josephorr.20180125092033.8"></t>
+<t tx="josephorr.20180125092033.9"></t>
+<t tx="josephorr.20180125092052.1">type: lr
+height: 600
+circle: 
+  fill: #f9f,stroke:#333,stroke-width:4px
+  fa: user
+</t>
+<t tx="josephorr.20180125092129.1"></t>
+<t tx="josephorr.20180125092134.1"></t>
+<t tx="josephorr.20180125092142.1"></t>
+<t tx="josephorr.20180125092159.1"></t>
+<t tx="josephorr.20180125092210.1"></t>
+<t tx="josephorr.20180125092213.1"></t>
+<t tx="josephorr.20180125092224.1"></t>
+<t tx="josephorr.20180125092240.1"></t>
+<t tx="josephorr.20180125092259.1"></t>
+<t tx="josephorr.20180125092318.1"></t>
+<t tx="josephorr.20180125092331.1"></t>
+<t tx="josephorr.20180125092343.1"></t>
+<t tx="josephorr.20180125092353.1"></t>
+<t tx="josephorr.20180125093540.1"></t>
+<t tx="josephorr.20180125105051.1"></t>
+<t tx="josephorr.20180125105055.1"></t>
+<t tx="josephorr.20180125105145.1"></t>
+<t tx="josephorr.20180125105157.1"></t>
+<t tx="josephorr.20180125105208.1"></t>
+<t tx="josephorr.20180125105322.1"></t>
+<t tx="josephorr.20180125105332.1"></t>
+<t tx="josephorr.20180125105355.1"></t>
+<t tx="josephorr.20180125105403.1"></t>
 </tnodes>
 </leo_file>

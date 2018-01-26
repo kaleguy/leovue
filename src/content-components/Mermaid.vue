@@ -37,6 +37,9 @@
     },
     updated () {
       const mermaidEl = this.$el
+      mermaidEl.style.height = this.height + 'px'
+      mermaidEl.style.width = this.width + 'px'
+      mermaidEl.name = this.name
       if (this.mm) {
         mermaidEl.innerHTML = this.mm
       }
@@ -53,7 +56,6 @@
         flowchart: {
           useMaxWidth: true,
           htmlLabels: true
-          // width: '200%'
         },
         theme: 'forest'
       }
