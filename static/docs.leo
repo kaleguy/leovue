@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -1812,8 +1812,10 @@ circle:
 <t tx="josephorr.20180125092259.1"></t>
 <t tx="josephorr.20180125092318.1"></t>
 <t tx="josephorr.20180125092331.1"></t>
-<t tx="josephorr.20180125092343.1"></t>
-<t tx="josephorr.20180125092353.1"></t>
+<t tx="josephorr.20180125092343.1">### Brent is a problem
+
+Brent is used in a lot of projects. He has made himself indispensable, slowing the entire system down.</t>
+<t tx="josephorr.20180125092353.1">Alice is famous in computer circles, but little is known about her.</t>
 <t tx="josephorr.20180125093540.1"></t>
 <t tx="josephorr.20180125105051.1"></t>
 <t tx="josephorr.20180125105055.1"></t>

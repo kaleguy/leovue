@@ -83,3 +83,5 @@ new Vue({
   template: template,
   components: { App, AppBase }
 })
+
+window.noop = () => {}

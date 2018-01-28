@@ -1,11 +1,14 @@
 /* global YAML */
 <template>
-  <div class="mm-board">
+  <div
+    class="mm-board"
+    @click="click"
+  >
     <h1>{{title}}</h1>
     <mermaid
       :name=mmName
       :mm="mm"
-      :height="mprops.height">
+      :height="mprops.height + ''">
       {{mm}}
     </mermaid>
   </div>
@@ -15,6 +18,12 @@
   import Item from './Item'
   import _ from 'lodash'
   import yaml from 'js-yaml'
+  const md = require('markdown-it')({
+    html: true,
+    linkify: true,
+    typographer: true
+  })
+
   // let itemSet = null
   function addParentPointers (item) {
     item.name = item.name.replace(/@mermaid\w\w /, '')
@@ -23,6 +32,14 @@
       c.o = false
       addParentPointers(c)
     })
+  }
+  function getParentG (n) {
+    if (!n) { return n }
+    if (n.tagName === 'g' && n.id) {
+      return n
+    } else {
+      return getParentG(n.parentElement)
+    }
   }
 
   /**
@@ -68,17 +85,42 @@
     item.children.forEach(i => {
       let pname = cleanTitle(item.name, props)
       let cname = cleanTitle(i.name, props)
-      links.push(`${item.t}${pname} ${arrow} ${i.t}${cname}`)
+      links.push(`mm${item.t}${pname} ${arrow} mm${i.t}${cname};`)
       getMm(i, links, type, props)
     })
   }
+/*
+  function getClickHandlers (item, links, type, props, textItems) {
+    item.children.forEach(i => {
+      let text = textItems[i.t]
+      links.push(`click ${i.t} noop "${text}"`)
+      getClickHandlers(i, links, type, props, textItems)
+    })
+  }
+*/
   export default {
     name: 'mermaid-board',
     components: {
       item: Item
     },
     methods: {
-      main () {}
+      main () {},
+      click (e) {
+        if (!e) { return null }
+        const g = getParentG(e.target)
+        console.log(g)
+        // debugger
+        // function show(id) {
+        let text = this.$store.state.leotext[g.id.replace(/mm/, '')]
+        text = md.render(text)
+        if (!text) {
+          text = '<div class="pop-small-text">No description for this node.</div>'
+        }
+        text = '<div class="pop-content">' + text + '</div>'
+        document.getElementById('popover.content.html').innerHTML = text
+        setTimeout(() => this.popover.show('#' + g.id), 10)
+        // }
+      }
     },
     data () {
       return {
@@ -148,12 +190,15 @@
         }
         let links = []
         getMm(this.itemSet, links, graphType, this.mprops)
+        // let clickLinks = []
+        // getClickHandlers(this.itemSet, clickLinks, graphType, this.mprops, this.$store.state.leotext)
+        // links = links.concat(clickLinks)
+        // links = links.concat(clickLinks)
         links = _.uniq(links)
         links[0] = links[0].replace(/@mermaid\w? /, '')
         links.unshift('graph ' + graphType + ';')
-        console.log('LINKs:', links)
+        console.log('LINKs:', links.join('\n'))
         return links.join('\n')
-
         /*        `
               graph TD;
               Anything-->B;
@@ -164,7 +209,11 @@
       }
     },
     mounted () {
-
+      // thispopover = null // eslint-disable-line
+      const me = this
+      ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
+        me.popover = element
+      })
     },
     watch: {
       '$route' (to, from) {
