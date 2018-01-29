@@ -1,8 +1,7 @@
 /* global YAML */
 <template>
   <div
-    class="mm-board"
-  >
+    class="mm-board">
     <div class="mbutton"
          @click="clickb"
          id="mbutton">
@@ -120,7 +119,6 @@
     if (!/[\[{(]/.test(title)) { // eslint-disable-line
       title = '[' + title + ']'
     }
-    console.log('title', title)
     const firstChar = title[0]
     let fill = ''
     switch (firstChar) {
@@ -165,11 +163,9 @@
       click (e) {
         if (!e) { return null }
         if (e.target.id === 'mbutton') {
-          console.log('MB')
           return
         }
         const g = getParentG(e.target)
-        console.log(g)
         if (!g) { return }
         // debugger
         // function show(id) {
@@ -197,6 +193,9 @@
         } else {
           return this.$route.params.id
         }
+      },
+      mPretty: function () {
+        return Math.random()
       },
       mprops: function () {
         const props = {
@@ -255,7 +254,6 @@
         getMm(this.itemSet, links, graphType, this.mprops)
         let styles = []
         getStyles(this.itemSet, styles, graphType, this.mprops)
-        console.log('STYLES', styles)
         links = links.concat(styles)
         links = _.uniq(links)
         links[0] = links[0].replace(/@mermaid\w? /, '')
@@ -265,7 +263,12 @@
         return links.join('\n')
       }
     },
+    updated () {
+      // hack to make Vue update mmPretty
+      const foo = this.mm // eslint-disable-line
+    },
     mounted () {
+      console.log('mount')
       // thispopover = null // eslint-disable-line
       const me = this
       ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
