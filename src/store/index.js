@@ -646,7 +646,11 @@ export default new Vuex.Store({
         if (_.isObject(event.data)) {
           data = event.data
         } else {
-          data = JSON.parse(event.data)
+          try {
+            data = JSON.parse(event.data)
+          } catch (e) {
+            console.log('msg:', event.data)
+          }
         }
         console.log('MDATA', data)
         if (data.namespace === 'leovue' && data.eventName === 'setcurrentitem') {

@@ -261,7 +261,6 @@ export default {
         let el = document.getElementById(sid)
         console.log(sid, direction, el)
         el.style.display = 'none'
-        el.innerHTML = '<h1>WTF</h1>'
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         })
       })
