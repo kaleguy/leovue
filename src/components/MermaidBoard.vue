@@ -24,7 +24,7 @@
         {{mm}}
       </mermaid>
     </div>
-    <div v-if="viewSource" v-html="mmPretty"></div>
+    <div class="content" v-if="viewSource" v-html="mmPretty"></div>
   </div>
 </template>
 
@@ -62,6 +62,13 @@
    * @returns {*}
    */
   function cleanTitle (title, props) {
+    let label = ''
+    let m = title.match(/^(\|\w+?\|)/)
+    if (m && m[1]) {
+      label = m[1]
+      title = title.replace(label, '')
+    } else {
+    }
     if (!/[\[{(]/.test(title)) { // eslint-disable-line
       title = '[' + title + ']'
     }
@@ -82,7 +89,7 @@
         break
       default:
     }
-    return title
+    return { title, label }
     function setFa (title, shape, count) {
       if (!props[shape].fa) {
         return title
@@ -99,7 +106,7 @@
     item.children.forEach(i => {
       let pname = cleanTitle(item.name, props)
       let cname = cleanTitle(i.name, props)
-      links.push(`mm${item.t}${pname} ${arrow} mm${i.t}${cname};`)
+      links.push(`mm${item.t}${pname.title} ${arrow} ${cname.label} mm${i.t}${cname.title};`)
       getMm(i, links, type, props)
     })
   }
@@ -127,7 +134,7 @@
           fill = props.rounded.fill
         }
         break
-      case '<':
+      case '{':
         fill = props.rhombus.fill
         break
       default:
@@ -251,9 +258,10 @@
         console.log('STYLES', styles)
         links = links.concat(styles)
         links = _.uniq(links)
-        this.mmPretty = links.join('<br>')
         links[0] = links[0].replace(/@mermaid\w? /, '')
+        links = links.reverse()
         links.unshift('graph ' + graphType + ';')
+        this.mmPretty = links.join('<br>')
         return links.join('\n')
       }
     },

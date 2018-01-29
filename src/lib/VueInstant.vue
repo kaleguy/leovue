@@ -514,10 +514,9 @@
       }
     }
 }
-
 </script>
 
-<style>
+<style scoped>
   .sbx-facebook {
   display: inline-block;
   position: relative;
