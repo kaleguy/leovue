@@ -2,15 +2,29 @@
 <template>
   <div
     class="mm-board"
-    @click="click"
   >
+    <div class="mbutton"
+         @click="clickb"
+         id="mbutton">
+      <icon class="icon"
+            v-if="!viewSource"
+            name="code"></icon>
+      <icon class="icon"
+            v-if="viewSource"
+            name="picture-o"></icon>
+    </div>
     <h1>{{title}}</h1>
-    <mermaid
-      :name=mmName
-      :mm="mm"
-      :height="mprops.height + ''">
-      {{mm}}
-    </mermaid>
+    <div
+      v-if="!viewSource"
+      @click="click">
+      <mermaid
+        :name=mmName
+        :mm="mm"
+        :height="mprops.height + ''">
+        {{mm}}
+      </mermaid>
+    </div>
+    <div v-if="viewSource" v-html="mmPretty"></div>
   </div>
 </template>
 
@@ -89,6 +103,39 @@
       getMm(i, links, type, props)
     })
   }
+  function getStyles (items, links, type, props) {
+    getStyle(items.name, links, type, props, items.t)
+    items.children.forEach(i => {
+      getStyles(i, links, type, props)
+    })
+  }
+  function getStyle (title, links, type, props, id) {
+    if (!/[\[{(]/.test(title)) { // eslint-disable-line
+      title = '[' + title + ']'
+    }
+    console.log('title', title)
+    const firstChar = title[0]
+    let fill = ''
+    switch (firstChar) {
+      case '[':
+        fill = props.square.fill
+        break
+      case '(':
+        if (title.slice(0, 2) === '((') {
+          fill = props.circle.fill
+        } else {
+          fill = props.rounded.fill
+        }
+        break
+      case '<':
+        fill = props.rhombus.fill
+        break
+      default:
+    }
+    if (fill) {
+      links.push(`style mm${id} fill:${fill}`)
+    }
+  }
 /*
   function getClickHandlers (item, links, type, props, textItems) {
     item.children.forEach(i => {
@@ -105,10 +152,18 @@
     },
     methods: {
       main () {},
+      clickb () {
+        this.viewSource = !this.viewSource
+      },
       click (e) {
         if (!e) { return null }
+        if (e.target.id === 'mbutton') {
+          console.log('MB')
+          return
+        }
         const g = getParentG(e.target)
         console.log(g)
+        if (!g) { return }
         // debugger
         // function show(id) {
         let text = this.$store.state.leotext[g.id.replace(/mm/, '')]
@@ -124,7 +179,8 @@
     },
     data () {
       return {
-      //  links: []
+        viewSource: false,
+        mmPretty: ''
       }
     },
     computed: {
@@ -190,22 +246,15 @@
         }
         let links = []
         getMm(this.itemSet, links, graphType, this.mprops)
-        // let clickLinks = []
-        // getClickHandlers(this.itemSet, clickLinks, graphType, this.mprops, this.$store.state.leotext)
-        // links = links.concat(clickLinks)
-        // links = links.concat(clickLinks)
+        let styles = []
+        getStyles(this.itemSet, styles, graphType, this.mprops)
+        console.log('STYLES', styles)
+        links = links.concat(styles)
         links = _.uniq(links)
+        this.mmPretty = links.join('<br>')
         links[0] = links[0].replace(/@mermaid\w? /, '')
         links.unshift('graph ' + graphType + ';')
-        console.log('LINKs:', links.join('\n'))
         return links.join('\n')
-        /*        `
-              graph TD;
-              Anything-->B;
-              Everything-->C;
-              B-->D;
-              C-->D;
-        ` */
       }
     },
     mounted () {
@@ -231,4 +280,15 @@
   text-align: center
   // margin-left: auto
   // margin-right: auto
+.mbutton
+  border: 1px solid #ccc
+  border-radius: 2px
+  width: 16px
+  height: 18px
+  position: absolute
+  right: 6px
+  top: 6px
+  cursor: pointer
+  padding-left: 2px
+  padding-right: 2px
 </style>

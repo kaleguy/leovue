@@ -213,7 +213,7 @@
 <v t="josephorr.20180125092052.1" a="E"><vh>@mermaidlr App Planning</vh>
 <v t="josephorr.20180125092129.1"><vh>Server</vh>
 <v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
-<v t="josephorr.20180125092343.1"><vh>((Brent))</vh></v>
+<v t="josephorr.20180125092343.1"><vh>((Brent  ))</vh></v>
 </v>
 </v>
 <v t="josephorr.20180125092134.1" a="E"><vh>Devops</vh>
@@ -224,20 +224,26 @@
 <v t="josephorr.20180125092213.1"><vh>Atlas</vh></v>
 </v>
 <v t="josephorr.20180125092142.1" a="E"><vh>Client</vh>
-<v t="josephorr.20180125092224.1" a="E"><vh>Framework</vh>
+<v t="josephorr.20180125092224.1" a="E"><vh>(Vue.js)</vh>
 <v t="josephorr.20180125092343.1"></v>
 <v t="josephorr.20180125092353.1"><vh>((Alice))</vh></v>
 </v>
 <v t="josephorr.20180125092240.1" a="E"><vh>Components</vh>
-<v t="josephorr.20180125092259.1"><vh>Form.io</vh></v>
-<v t="josephorr.20180125092318.1"><vh>Charts</vh></v>
-<v t="josephorr.20180125093540.1"><vh>A fa:fa-camera-retro perhaps?</vh></v>
+<v t="josephorr.20180125092259.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180128202836.1"><vh>((Edward))</vh></v>
+</v>
+<v t="josephorr.20180125092318.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20180128202836.1"></v>
+</v>
+<v t="josephorr.20180125093540.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20180128202836.1"></v>
 </v>
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
+</v>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 </v>
@@ -257,10 +263,10 @@
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093121.1"><vh>Doing</vh>
 <v t="josephorr.20180116093131.1" a="E"><vh>Mermaid from subtree</vh>
-<v t="josephorr.20180125105051.1"><vh>Doing</vh>
-<v t="josephorr.20180125105403.1"><vh>center</vh></v>
+<v t="josephorr.20180125105051.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
 <v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
 <v t="josephorr.20180125105145.1"><vh>properties</vh>
 <v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
@@ -268,8 +274,10 @@
 <v t="josephorr.20180125105355.1"><vh>height</vh></v>
 </v>
 </v>
-<v t="josephorr.20180125105055.1"><vh>Done</vh>
+<v t="josephorr.20180125105055.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
 <v t="josephorr.20180125105208.1"><vh>directive</vh></v>
+<v t="josephorr.20180125105403.1"><vh>center</vh></v>
 </v>
 </v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
@@ -1798,8 +1806,11 @@ Mermaid is a javascript library for creating diagrams. Leo Vue can create (and t
 <t tx="josephorr.20180125092052.1">type: lr
 height: 600
 circle: 
-  fill: #f9f,stroke:#333,stroke-width:4px
+  fill: "#f9f,stroke:#333,stroke-width:4px;width:100px"
   fa: user
+rounded: 
+  fill: "#ccf,stroke:#33f,stroke-width:1px"
+  fa: star
 </t>
 <t tx="josephorr.20180125092129.1"></t>
 <t tx="josephorr.20180125092134.1"></t>
@@ -1826,5 +1837,8 @@ Brent is used in a lot of projects. He has made himself indispensable, slowing t
 <t tx="josephorr.20180125105332.1"></t>
 <t tx="josephorr.20180125105355.1"></t>
 <t tx="josephorr.20180125105403.1"></t>
+<t tx="josephorr.20180128123133.1"></t>
+<t tx="josephorr.20180128123139.1"></t>
+<t tx="josephorr.20180128202836.1"></t>
 </tnodes>
 </leo_file>
