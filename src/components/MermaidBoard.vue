@@ -167,8 +167,11 @@
         }
         const g = getParentG(e.target)
         if (!g) { return }
-        // debugger
-        // function show(id) {
+        const action = _.get(this.mprops, 'click', '')
+        if (action === 'goto') {
+          let id = JSON.search(this.$store.state.leodata, '//children[t="' + g.id.replace(/mm/, '') + '"]')[0].id
+          return this.$store.dispatch('setCurrentItem', {id})
+        }
         let text = this.$store.state.leotext[g.id.replace(/mm/, '')]
         text = md.render(text)
         if (!text) {
@@ -268,8 +271,6 @@
       const foo = this.mm // eslint-disable-line
     },
     mounted () {
-      console.log('mount')
-      // thispopover = null // eslint-disable-line
       const me = this
       ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
         me.popover = element

@@ -76,7 +76,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20180129115223.1"><vh>test</vh></v>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
@@ -151,7 +151,7 @@
 </v>
 </v>
 <v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -253,14 +253,14 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180129183227.1"><vh>@d3board test</vh></v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
+<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180116093114.1"><vh>To Do</vh>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -295,7 +295,7 @@
 </v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
-<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180116093125.1"><vh>Done</vh>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
 </v>
 </v>
@@ -1730,7 +1730,7 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
 
 # Kanban
 
-Some people find Leo outlines to be a good way to organize to do lists and projects.
+Some people find Leo outlines to be a good way to organize to-do lists and projects.
 
 However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
 
@@ -1758,8 +1758,9 @@ The nested viewer component makes it possible to display just the selected parts
 <t tx="josephorr.20180122081848.1"></t>
 <t tx="josephorr.20180122082124.1"></t>
 <t tx="josephorr.20180122175250.1"></t>
-<t tx="josephorr.20180123094605.1">height: 600</t>
-<t tx="josephorr.20180123100140.1"></t>
+<t tx="josephorr.20180123094605.1">height: 600
+click: goto</t>
+<t tx="josephorr.20180123100140.1">This is the A node.</t>
 <t tx="josephorr.20180123100145.1"></t>
 <t tx="josephorr.20180123100150.1"></t>
 <t tx="josephorr.20180123100152.1"></t>
@@ -1787,7 +1788,15 @@ You can write your own summary component by adapting the code of an existing sum
 
 # Mermaid
 
-Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.</t>
+Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
+
+Mermaid directives:
+
+* @mermaidtd: create a top down diagram
+* @mermaidlr: create a left right diagram
+* @mermaidrl: create a right left diagram
+
+Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.</t>
 <t tx="josephorr.20180123102749.1">height: 350</t>
 <t tx="josephorr.20180123102805.1"></t>
 <t tx="josephorr.20180123102809.1"></t>
@@ -1869,6 +1878,6 @@ mm20180129091009_1{B} --&gt; |no| mm20180129091024_1[D];
 mm20180129091024_1[D] --&gt; mm20180129095035_1[E];
 &lt;/mermaid&gt;
 </t>
-<t tx="josephorr.20180129183227.1"></t>
+<t tx="josephorr.20180130120957.1"></t>
 </tnodes>
 </leo_file>
