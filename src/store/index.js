@@ -183,6 +183,14 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
+function showD3Board (context, title, id) {
+  let text = `<d3-board/>`
+  context.commit('CURRENT_ITEM_CONTENT', { text })
+  const newItem = { id, t: text }
+  context.commit('CONTENT_ITEM', {item: newItem})
+  context.commit('CONTENT_ITEM_UPDATE')
+  context.commit('CONTENT_PANE', { type: 'board' })
+}
 function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
@@ -755,6 +763,9 @@ export default new Vuex.Store({
         }
         if (/^@mermaid/.test(item.name)) {
           return showMermaid(context, item.name, id)
+        }
+        if (/^@d3board /.test(item.name)) {
+          return showD3Board(context, item.name, id)
         }
         if (/^« /.test(item.name) && _.has(item.children[0], 'presentation')) {
           // context.commit('CURRENT_ITEM', {id: item.children[0].presentation.pid})

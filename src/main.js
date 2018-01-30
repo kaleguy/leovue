@@ -30,6 +30,7 @@ import MathJaxComponent from './components/MathJax'
 import ImageLeft from './components/layout/ImageLeft'
 import Kanban from './components/Kanban'
 import MermaidBoard from './components/MermaidBoard'
+import D3Board from './components/D3Board'
 import { TableComponent, TableColumn } from 'vue-table-component'
 
 import {charts} from './content-components/Charts'
@@ -57,6 +58,7 @@ Vue.component('table-component', TableComponent)
 Vue.component('table-column', TableColumn)
 Vue.component('kanban', Kanban)
 Vue.component('mermaid-board', MermaidBoard)
+Vue.component('d3-board', D3Board)
 
 sync(store, router)
 
