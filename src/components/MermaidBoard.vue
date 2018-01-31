@@ -180,6 +180,7 @@
         }
         text = '<div class="pop-content">' + text + '</div>'
         document.getElementById('popover.content.html').innerHTML = text
+        console.log('POP', document.getElementById('popover.content.html').innerHTML)
         setTimeout(() => this.popover.show('#' + g.id), 10)
         // }
       }
@@ -277,6 +278,10 @@
     },
     mounted () {
       const me = this
+      const popEl = document.getElementById('popover.content.html')
+      if (popEl) {
+        popEl.parentNode.removeChild(popEl)
+      }
       ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
         me.popover = element
       })
@@ -291,6 +296,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+g.node
+  cursor: pointer
 .mm-board
   margin-left: 20px
 .mermaid

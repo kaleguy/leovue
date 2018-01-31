@@ -146,7 +146,9 @@ export default {
       const re = /^\[(.*?)\]\((.*?)\)$/
       const match = re.exec(this.model.name)
       if (!match) {
-        return this.model.name
+        let name = this.model.name
+        name = name.replace(/^@[a-z]+\s/, '')
+        return name
       }
       const title = match[1]
       if (title) {
