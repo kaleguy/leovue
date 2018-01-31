@@ -94,6 +94,7 @@ function formatText (text, noWrapper) {
   if (/^\s*?@/.test(text)) {
     text = removeFirstLine(text)
   }
+  let mu = ''
   switch (language) {
     case 'plaintext':
       text = `<div class="text">${text}</div>`
@@ -113,7 +114,7 @@ function formatText (text, noWrapper) {
     default:
       text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
       text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
-      const mu = hljs.highlight(language, text)
+      mu = hljs.highlight(language, text)
       text = mu.value
       text = `<pre v-pre>${text}</pre>`
       //debugger

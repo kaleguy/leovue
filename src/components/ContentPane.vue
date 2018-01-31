@@ -41,6 +41,7 @@
 
 <script>
 import router from '../router'
+const hljs = require('highlight.js')
 import {presentation} from '../lib/presentation'
 const util = require('../util.js')
 
@@ -194,6 +195,11 @@ export default {
   mounted () {
   },
   updated () {
+    const blocks = this.$el.querySelectorAll('code')
+    // debugger
+    blocks.forEach(function(block) {
+      hljs.highlightBlock(block);
+    });
     console.log('Content Pane Updated.')
     const id = this.$store.state.currentItem.id
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
