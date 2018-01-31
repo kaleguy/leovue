@@ -61,6 +61,7 @@
    * @returns {*}
    */
   function cleanTitle (title, props) {
+    // title = title.replace(/[<>]/g, '')
     let label = ''
     let m = title.match(/^(\|\w+?\|)/)
     if (m && m[1]) {
@@ -69,7 +70,7 @@
     } else {
     }
     if (!/[\[{(]/.test(title)) { // eslint-disable-line
-      title = '[' + title + ']'
+      title = '["' + title + '"]'
     }
     const firstChar = title[0]
     switch (firstChar) {
@@ -220,8 +221,12 @@
             fa: ''
           }
         }
-        const tprops = yaml.safeLoad(this.text) // eslint-disable-line
-        _.merge(props, tprops)
+        try {
+          const tprops = yaml.safeLoad(this.text) // eslint-disable-line
+          _.merge(props, tprops)
+        } catch (e) {
+          console.log('YAML parse')
+        }
         return props
       },
       data () {
