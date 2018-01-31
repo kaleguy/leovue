@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -77,6 +77,7 @@
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
 <v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
+<v t="josephorr.20180129115223.1"><vh>test</vh></v>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -149,13 +150,117 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
+<v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
+<v t="josephorr.20180123100140.1"><vh>{A}</vh>
+<v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
+<v t="josephorr.20180123100145.1" a="E"><vh>((B))</vh>
+<v t="josephorr.20180123100150.1" a="E"><vh>C</vh>
+<v t="josephorr.20180123100152.1" a="E"><vh>D</vh>
+<v t="josephorr.20180123100154.1"><vh>E</vh></v>
+<v t="josephorr.20180123100155.1"><vh>F</vh></v>
+<v t="josephorr.20180123100157.1"></v>
+</v>
+</v>
+<v t="josephorr.20180123100152.1" a="E"></v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180123102749.1"><vh>@mermaidlr People Chart</vh>
+<v t="josephorr.20180123102805.1"><vh>Friends</vh>
+<v t="josephorr.20180123102842.1" a="E"><vh>Ted</vh>
+<v t="josephorr.20180124190020.1" a="E"><vh>Friends</vh>
+<v t="josephorr.20180124190030.1"><vh>Mr Z</vh></v>
+<v t="josephorr.20180124190042.1"><vh>Barb</vh></v>
+<v t="josephorr.20180123102923.1"><vh>Bubba</vh></v>
+</v>
+</v>
+<v t="josephorr.20180123102839.1"><vh>Alice</vh></v>
+<v t="josephorr.20180123102823.1"><vh>Bob</vh></v>
+<v t="josephorr.20180123102846.1"><vh>Jane</vh></v>
+</v>
+<v t="josephorr.20180123102809.1"><vh>Enemies</vh>
+<v t="josephorr.20180123102846.1"></v>
+<v t="josephorr.20180123102850.1"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180123102814.1"><vh>Neutral</vh>
+<v t="josephorr.20180123102901.1"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180123102923.1"></v>
+</v>
+</v>
+<v t="josephorr.20180125092033.1"><vh>@mermaidrl People Chart</vh>
+<v t="josephorr.20180125092033.2"><vh>Friends</vh>
+<v t="josephorr.20180125092033.3" a="E"><vh>Ted</vh>
+<v t="josephorr.20180125092033.4" a="E"><vh>Friends</vh>
+<v t="josephorr.20180125092033.5"><vh>Mr Z</vh></v>
+<v t="josephorr.20180125092033.6"><vh>Barb</vh></v>
+<v t="josephorr.20180125092033.16"><vh>Bubba</vh></v>
+</v>
+</v>
+<v t="josephorr.20180125092033.8"><vh>Alice</vh></v>
+<v t="josephorr.20180125092033.9"><vh>Bob</vh></v>
+<v t="josephorr.20180125092033.12"><vh>Jane</vh></v>
+</v>
+<v t="josephorr.20180125092033.11"><vh>Enemies</vh>
+<v t="josephorr.20180125092033.12"></v>
+<v t="josephorr.20180125092033.13"><vh>The Guy with the Mirror Shades</vh></v>
+</v>
+<v t="josephorr.20180125092033.14"><vh>Neutral</vh>
+<v t="josephorr.20180125092033.15"><vh>The Flower Lady</vh></v>
+<v t="josephorr.20180125092033.16"></v>
+</v>
+</v>
+<v t="josephorr.20180125092052.1"><vh>@mermaidlr App Planning</vh>
+<v t="josephorr.20180125092129.1"><vh>Server</vh>
+<v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180125092343.1"><vh>((Brent  ))</vh></v>
+</v>
+</v>
+<v t="josephorr.20180125092134.1"><vh>Devops</vh>
+<v t="josephorr.20180125092159.1"><vh>AWS</vh></v>
+<v t="josephorr.20180125092210.1" a="E"><vh>Ansible</vh>
+<v t="josephorr.20180125092343.1"></v>
+</v>
+<v t="josephorr.20180125092213.1"><vh>Atlas</vh></v>
+</v>
+<v t="josephorr.20180125092142.1"><vh>Client</vh>
+<v t="josephorr.20180125092224.1" a="E"><vh>(Vue.js)</vh>
+<v t="josephorr.20180125092343.1"></v>
+<v t="josephorr.20180125092353.1"><vh>((Alice))</vh></v>
+</v>
+<v t="josephorr.20180125092240.1" a="E"><vh>Components</vh>
+<v t="josephorr.20180125092259.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180128202836.1"><vh>((Edward))</vh></v>
+</v>
+<v t="josephorr.20180125092318.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20180128202836.1"></v>
+</v>
+<v t="josephorr.20180125093540.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20180128202836.1"></v>
+</v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180129090944.1"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180129091002.1" a="E"><vh>A</vh>
+<v t="josephorr.20180129095035.1"><vh>E</vh></v>
+<v t="josephorr.20180129091009.1" a="E"><vh>{B}</vh>
+<v t="josephorr.20180129091014.1"><vh>|yes|C</vh></v>
+<v t="josephorr.20180129091024.1" a="E"><vh>|no|D</vh>
+<v t="josephorr.20180129095035.1"></v>
+</v>
+</v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
+<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
-<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh></v>
+<v t="josephorr.20180116093114.1"><vh>To Do</vh>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -167,15 +272,32 @@
 <v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
 </v>
 <v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
-</v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-<v t="josephorr.20180122081434.1" a="E"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180116093121.1"><vh>Doing</vh>
+<v t="josephorr.20180116093131.1" a="E"><vh>Mermaid from subtree</vh>
+<v t="josephorr.20180125105051.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
+<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
+<v t="josephorr.20180125105145.1"><vh>properties</vh>
+<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
+<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
+<v t="josephorr.20180125105355.1"><vh>height</vh></v>
+</v>
+</v>
+<v t="josephorr.20180125105055.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
+<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
+<v t="josephorr.20180125105403.1"><vh>center</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1"><vh>Done</vh>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -1604,15 +1726,18 @@ The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
   backData=" Infocards can also have simple graphs."/&gt; </t>
-<t tx="josephorr.20180116093044.1">Some people find Leo outlines to be a good way to organize to do lists and projects.
+<t tx="josephorr.20180116093044.1">@language md
+
+# Kanban
+
+Some people find Leo outlines to be a good way to organize to-do lists and projects.
 
 However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
 
 Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
 
 The nested viewer component makes it possible to display just the selected parts of a tree, so a large subtree can be viewable in a single kanban column. 
-
-The @kanban directive is an example of a summary directive. It summarizes content found in other nodes. You can write you own summary component by adapting the code of the Kanban component. This component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
+</t>
 <t tx="josephorr.20180116093050.1"></t>
 <t tx="josephorr.20180116093114.1"></t>
 <t tx="josephorr.20180116093121.1"></t>
@@ -1633,5 +1758,126 @@ The @kanban directive is an example of a summary directive. It summarizes conten
 <t tx="josephorr.20180122081848.1"></t>
 <t tx="josephorr.20180122082124.1"></t>
 <t tx="josephorr.20180122175250.1"></t>
+<t tx="josephorr.20180123094605.1">height: 600
+click: goto</t>
+<t tx="josephorr.20180123100140.1">This is the A node.</t>
+<t tx="josephorr.20180123100145.1"></t>
+<t tx="josephorr.20180123100150.1"></t>
+<t tx="josephorr.20180123100152.1"></t>
+<t tx="josephorr.20180123100154.1"></t>
+<t tx="josephorr.20180123100155.1"></t>
+<t tx="josephorr.20180123100157.1">style: fill:#f9f,stroke:#333,stroke-width:4px
+text: yes
+</t>
+<t tx="josephorr.20180123102417.1">@language md
+
+# Summary Nodes
+
+Leo Vue can summarize the contents of a subtree. Currently there are two directives that do this:
+
+**@kanban**: Create a Kanban board from the subtree.
+
+**@mermaid** Create a Mermaid diagram from the subtree. To specifiy the digram type, use:
+
+* @mermaidlr: left - right
+* @mermaidrl: right - left
+* @mermaidtd: top - down
+
+You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
+<t tx="josephorr.20180123102440.1">@language md
+
+# Mermaid
+
+Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
+
+Mermaid directives:
+
+* @mermaidtd: create a top down diagram
+* @mermaidlr: create a left right diagram
+* @mermaidrl: create a right left diagram
+
+Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.</t>
+<t tx="josephorr.20180123102749.1">height: 350</t>
+<t tx="josephorr.20180123102805.1"></t>
+<t tx="josephorr.20180123102809.1"></t>
+<t tx="josephorr.20180123102814.1"></t>
+<t tx="josephorr.20180123102823.1"></t>
+<t tx="josephorr.20180123102839.1"></t>
+<t tx="josephorr.20180123102842.1"></t>
+<t tx="josephorr.20180123102846.1"></t>
+<t tx="josephorr.20180123102850.1"></t>
+<t tx="josephorr.20180123102901.1"></t>
+<t tx="josephorr.20180123102923.1"></t>
+<t tx="josephorr.20180124190020.1"></t>
+<t tx="josephorr.20180124190030.1"></t>
+<t tx="josephorr.20180124190042.1"></t>
+<t tx="josephorr.20180125092033.1">height: 350</t>
+<t tx="josephorr.20180125092033.11"></t>
+<t tx="josephorr.20180125092033.12"></t>
+<t tx="josephorr.20180125092033.13"></t>
+<t tx="josephorr.20180125092033.14"></t>
+<t tx="josephorr.20180125092033.15"></t>
+<t tx="josephorr.20180125092033.16"></t>
+<t tx="josephorr.20180125092033.2"></t>
+<t tx="josephorr.20180125092033.3"></t>
+<t tx="josephorr.20180125092033.4"></t>
+<t tx="josephorr.20180125092033.5"></t>
+<t tx="josephorr.20180125092033.6"></t>
+<t tx="josephorr.20180125092033.8"></t>
+<t tx="josephorr.20180125092033.9"></t>
+<t tx="josephorr.20180125092052.1">type: lr
+height: 600
+circle: 
+  fill: "#f9f,stroke:#333,stroke-width:4px;width:100px"
+  fa: user
+rounded: 
+  fill: "#ccf,stroke:#33f,stroke-width:1px"
+  fa: star
+</t>
+<t tx="josephorr.20180125092129.1"></t>
+<t tx="josephorr.20180125092134.1"></t>
+<t tx="josephorr.20180125092142.1"></t>
+<t tx="josephorr.20180125092159.1"></t>
+<t tx="josephorr.20180125092210.1"></t>
+<t tx="josephorr.20180125092213.1"></t>
+<t tx="josephorr.20180125092224.1"></t>
+<t tx="josephorr.20180125092240.1"></t>
+<t tx="josephorr.20180125092259.1"></t>
+<t tx="josephorr.20180125092318.1"></t>
+<t tx="josephorr.20180125092331.1"></t>
+<t tx="josephorr.20180125092343.1">### Brent is a problem
+
+Brent is used in a lot of projects. He has made himself indispensable, slowing the entire system down.</t>
+<t tx="josephorr.20180125092353.1">Alice is famous in computer circles, but little is known about her.</t>
+<t tx="josephorr.20180125093540.1"></t>
+<t tx="josephorr.20180125105051.1"></t>
+<t tx="josephorr.20180125105055.1"></t>
+<t tx="josephorr.20180125105145.1"></t>
+<t tx="josephorr.20180125105157.1"></t>
+<t tx="josephorr.20180125105208.1"></t>
+<t tx="josephorr.20180125105322.1"></t>
+<t tx="josephorr.20180125105332.1"></t>
+<t tx="josephorr.20180125105355.1"></t>
+<t tx="josephorr.20180125105403.1"></t>
+<t tx="josephorr.20180128123133.1"></t>
+<t tx="josephorr.20180128123139.1"></t>
+<t tx="josephorr.20180128202836.1"></t>
+<t tx="josephorr.20180129090944.1">height: 450</t>
+<t tx="josephorr.20180129091002.1"></t>
+<t tx="josephorr.20180129091009.1"></t>
+<t tx="josephorr.20180129091014.1"></t>
+<t tx="josephorr.20180129091024.1"></t>
+<t tx="josephorr.20180129095035.1"></t>
+<t tx="josephorr.20180129115223.1">&lt;mermaid height="300" width="450"&gt;
+graph TD;
+mm20180129090944_1[Process] --&gt; mm20180129091002_1[A];
+mm20180129091002_1[A] --&gt; mm20180129095035_1[E];
+mm20180129091002_1[A] --&gt; mm20180129091009_1{B};
+mm20180129091009_1{B} --&gt; |yes| mm20180129091014_1[C];
+mm20180129091009_1{B} --&gt; |no| mm20180129091024_1[D];
+mm20180129091024_1[D] --&gt; mm20180129095035_1[E];
+&lt;/mermaid&gt;
+</t>
+<t tx="josephorr.20180130120957.1"></t>
 </tnodes>
 </leo_file>

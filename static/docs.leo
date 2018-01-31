@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
@@ -61,7 +61,7 @@
 <v t="josephorr.20170327233137.1"></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -1133,9 +1133,9 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.5.0
+Leo Vue is currently at version 1.6.0
 
-Leo Vue 1.5.x is currently is only tested in Chrome and may not display correctly in other browsers.
+Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
