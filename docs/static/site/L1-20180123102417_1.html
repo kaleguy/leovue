@@ -1,0 +1,40 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><h1>Summary Nodes</h1>
+<p>Leo Vue can summarize the contents of a subtree. Currently there are two directives that do this:</p>
+<p><strong>@kanban</strong>: Create a Kanban board from the subtree.</p>
+<p><strong>@mermaid</strong> Create a Mermaid diagram from the subtree. To specifiy the digram type, use:</p>
+<ul>
+<li>@mermaidlr: left - right</li>
+<li>@mermaidrl: right - left</li>
+<li>@mermaidtd: top - down</li>
+</ul>
+<p>You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</p>
+</div>
+</body>
+</html>
