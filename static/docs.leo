@@ -254,27 +254,15 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180201064444.1"><vh>@mermaidtd Process</vh>
-<v t="josephorr.20180201064457.1"><vh>A</vh>
-<v t="josephorr.20180201064502.1" a="E"><vh>B</vh>
-<v t="josephorr.20180201064517.1"><vh>(D)</vh></v>
-<v t="josephorr.20180201064525.1"><vh>(E)</vh></v>
+<v t="josephorr.20180201133413.1" a="E"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180201133420.1" a="E"><vh>A</vh>
+<v t="josephorr.20180201133422.1" a="E"><vh>B</vh>
+<v t="josephorr.20180201133431.1"><vh>(F)</vh></v>
+<v t="josephorr.20180201133425.1"><vh>(D)</vh></v>
 </v>
-<v t="josephorr.20180201064508.1" a="E"><vh>C</vh>
-<v t="josephorr.20180201064525.1"></v>
-<v t="josephorr.20180201064537.1"><vh>(F)</vh></v>
-</v>
-</v>
-</v>
-<v t="josephorr.20180201080120.1"><vh>@mermaidtd Process 2</vh>
-<v t="josephorr.20180201080128.1" a="E"><vh>A</vh>
-<v t="josephorr.20180201080135.1"><vh>B</vh>
-<v t="josephorr.20180201080140.1"><vh>(D)</vh></v>
-<v t="josephorr.20180201080147.1"><vh>(F)</vh></v>
-</v>
-<v t="josephorr.20180201080137.1"><vh>C</vh>
-<v t="josephorr.20180201080144.1"><vh>(E)</vh></v>
-<v t="josephorr.20180201080147.1"></v>
+<v t="josephorr.20180201133424.1"><vh>C</vh>
+<v t="josephorr.20180201133429.1"><vh>(E)</vh></v>
+<v t="josephorr.20180201133431.1"></v>
 </v>
 </v>
 </v>
@@ -285,7 +273,7 @@
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20180116093114.1"><vh>To Do</vh>
+<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -301,27 +289,27 @@
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093121.1"><vh>Doing</vh>
-<v t="josephorr.20180116093131.1" a="E"><vh>Mermaid from subtree</vh>
-<v t="josephorr.20180125105051.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
+<v t="josephorr.20180125105051.1"><vh>Doing</vh></v>
+<v t="josephorr.20180125105055.1"><vh>Done</vh>
 <v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
 <v t="josephorr.20180125105145.1"><vh>properties</vh>
 <v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
 <v t="josephorr.20180125105322.1"><vh>styles</vh></v>
 <v t="josephorr.20180125105355.1"><vh>height</vh></v>
 </v>
-</v>
-<v t="josephorr.20180125105055.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
 <v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
 <v t="josephorr.20180125105208.1"><vh>directive</vh></v>
 <v t="josephorr.20180125105403.1"><vh>center</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-</v>
-<v t="josephorr.20180116093125.1"><vh>Done</vh>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+<v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
 </v>
 </v>
 </v>
@@ -1782,7 +1770,7 @@ The nested viewer component makes it possible to display just the selected parts
 <t tx="josephorr.20180122081825.1"></t>
 <t tx="josephorr.20180122081835.1"></t>
 <t tx="josephorr.20180122081848.1"></t>
-<t tx="josephorr.20180122082124.1"></t>
+<t tx="josephorr.20180122082124.1">Need a script to download all CDNs for running locally.</t>
 <t tx="josephorr.20180122175250.1"></t>
 <t tx="josephorr.20180123094605.1">height: 600
 click: goto</t>
@@ -1906,26 +1894,19 @@ mm20180129091024_1[D] --&gt; mm20180129095035_1[E];
 <t tx="josephorr.20180130120957.1"></t>
 <t tx="josephorr.20180131221020.1"></t>
 <t tx="josephorr.20180131221301.1"></t>
-<t tx="josephorr.20180201064444.1">height: 500
-rounded: 
+<t tx="josephorr.20180201111523.1"></t>
+<t tx="josephorr.20180201133413.1">height: 400
+rounded:
   fa: user
   fill: "#85FD31,stroke:#333,stroke-width:4px;width:100px"
-
 </t>
-<t tx="josephorr.20180201064457.1"></t>
-<t tx="josephorr.20180201064502.1"></t>
-<t tx="josephorr.20180201064508.1"></t>
-<t tx="josephorr.20180201064517.1"></t>
-<t tx="josephorr.20180201064525.1"></t>
-<t tx="josephorr.20180201064537.1"></t>
-<t tx="josephorr.20180201080120.1"></t>
-<t tx="josephorr.20180201080128.1"></t>
-<t tx="josephorr.20180201080135.1"></t>
-<t tx="josephorr.20180201080137.1"># This is a pen
+<t tx="josephorr.20180201133420.1"></t>
+<t tx="josephorr.20180201133422.1"></t>
+<t tx="josephorr.20180201133424.1"></t>
+<t tx="josephorr.20180201133425.1"># This is user D
 
-but not this</t>
-<t tx="josephorr.20180201080140.1"></t>
-<t tx="josephorr.20180201080144.1"></t>
-<t tx="josephorr.20180201080147.1"></t>
+The real name of user D is Pat.</t>
+<t tx="josephorr.20180201133429.1"></t>
+<t tx="josephorr.20180201133431.1"></t>
 </tnodes>
 </leo_file>

@@ -33,16 +33,34 @@ Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue
 Leo Vue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
 
-### Kanban and Summary Nodes
+### Summary Nodes
+
+Leo Vue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
+
+Two type of summary node are currently implemented in Leo Vue. You can add your summary directive by customizing the code in one of these directives.
+
+## Kanban
+
 Some people find Leo outlines to be a good way to organize to do lists and projects.
 
 However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
 
 Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
 
-The @kanban directive is an example of a summary directive. It summarizes content found in other nodes. You can write you own summary component by adapting the code of the Kanban component.
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-kanban.gif)
+
+## Mermaid Flowchart
+
+[Mermaidjs](https://mermaidjs.github.io/) is a markup language for creating and viewing diagrams such as flowcharts and gannt charts. If your index.html page has a link to the Mermaid CDN, you can use this markup in Leo Vue to create and display Mermaid diagrams.
+
+The @mermaid directive will create a flowchart from the nodes under the directive node. Because of Leo's clone nodes, these flowcharts can be more complex than simple trees. 
+
+The node in the mermaid directive can have options for sizing the chart and adding styles and icons to the nodes. Node titles can use standard Mermaid syntax such as |line text|{node text}. For more information, see the 
+**[Leo Vue Docs](https://kaleguy.github.io/leovue/)**
+Leo Docs.
+
+[![Mermaid diagrams with Leo Vue](https://kaleguy.github.io/leovue/screencasts/mermaid-leo.png)](https://youtu.be/vjJUkYGBIw0 "Mermaid diagrams with Leo Vue")
 
 ## More Examples
 

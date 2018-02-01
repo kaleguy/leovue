@@ -37,7 +37,10 @@
     typographer: true
   })
 
-  // let itemSet = null
+  function removeDirective (text) {
+    text = text.replace(/^@.*?\n/, '')
+    return text
+  }
   function addParentPointers (item) {
     item.name = item.name.replace(/@mermaid\w\w /, '')
     item.children.forEach(c => {
@@ -174,6 +177,7 @@
           return this.$store.dispatch('setCurrentItem', {id})
         }
         let text = this.$store.state.leotext[g.id.replace(/mm/, '')]
+        text = removeDirective(text)
         text = md.render(text)
         if (!text) {
           text = '<div class="pop-small-text">No description for this node.</div>'
@@ -223,7 +227,7 @@
           }
         }
         try {
-          const tprops = yaml.safeLoad(this.text) // eslint-disable-line
+          const tprops = yaml.safeLoad(removeDirective(this.text)) // eslint-disable-line
           _.merge(props, tprops)
         } catch (e) {
           console.log('YAML parse')
