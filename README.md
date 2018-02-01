@@ -12,34 +12,34 @@ Content items can be text, markdown, or html with Vue components.
 
 **[Live Site with Docs](https://kaleguy.github.io/leovue/)**
 
-### Leo
+## Leo
 Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 
-### Leo Vue
+## Leo Vue
 You can use Leo Vue to view Leo files with a browser. Leo Vue also allows you to put urls in node titles, with the content pane showing the url content.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue.gif)
 
-### Outline Formats
+## Outline Formats
 Leo Vue allows you to view outlines in various formats, including inline.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-trees.gif)
 
-### Vue Components in Content
+## Vue Components in Content
 Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue components.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
 
-### Create Nested Presentations
+## Create Nested Presentations
 Leo Vue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
 
-### Summary Nodes
+## Summary Nodes
 
 Leo Vue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
 
 Two type of summary node are currently implemented in Leo Vue. You can add your summary directive by customizing the code in one of these directives.
 
-## Kanban
+### Kanban
 
 Some people find Leo outlines to be a good way to organize to do lists and projects.
 
@@ -50,7 +50,7 @@ Using the @kanban directive, you can create a kanban board from a node. The next
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-kanban.gif)
 
-## Mermaid Flowchart
+### Mermaid Flowchart
 
 [Mermaidjs](https://mermaidjs.github.io/) is a markup language for creating and viewing diagrams such as flowcharts and Gannt charts. If your index.html page has a link to the Mermaid CDN, you can use this markup in Leo Vue to create and display Mermaid diagrams.
 
