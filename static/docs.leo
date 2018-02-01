@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
@@ -1146,7 +1146,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.6.3
+Leo Vue is currently at version 1.6.4
 
 Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
