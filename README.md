@@ -37,15 +37,15 @@ Leo Vue uses the Reveal.js library to create presentations from Leo outlines. As
 
 Leo Vue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
 
-Two type of summary node are currently implemented in Leo Vue. You can add your summary directive by customizing the code in one of these directives.
+Two types of summary nodes are currently implemented in Leo Vue. You can add your own summary directive by customizing the code in one of these directives.
 
 ### Kanban
 
-Some people find Leo outlines to be a good way to organize to do lists and projects.
+Some people find Leo outlines to be a good way to organize to-do lists and projects.
 
 However, if you have your projects in Leo, you still might want to be able to display a level of your project list as a Kanban board, so that others can easily see that section's progress.
 
-Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
+Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed via the nested accordion component.
 
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-kanban.gif)
