@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
@@ -151,7 +151,7 @@
 </v>
 </v>
 <v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
+<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -241,22 +241,47 @@
 </v>
 </v>
 </v>
-</v>
 <v t="josephorr.20180129090944.1"><vh>@mermaidtd Process</vh>
-<v t="josephorr.20180129091002.1" a="E"><vh>A</vh>
-<v t="josephorr.20180129095035.1"><vh>E</vh></v>
 <v t="josephorr.20180129091009.1" a="E"><vh>{B}</vh>
-<v t="josephorr.20180129091014.1"><vh>|yes|C</vh></v>
+<v t="josephorr.20180129091014.1" a="E"><vh>|yes|C</vh>
+<v t="josephorr.20180131221301.1"><vh>((G))</vh></v>
+<v t="josephorr.20180129095035.1"><vh>((E))</vh></v>
+</v>
 <v t="josephorr.20180129091024.1" a="E"><vh>|no|D</vh>
+<v t="josephorr.20180131221020.1"><vh>((F))</vh></v>
 <v t="josephorr.20180129095035.1"></v>
 </v>
 </v>
 </v>
 </v>
+<v t="josephorr.20180201064444.1"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180201064457.1"><vh>A</vh>
+<v t="josephorr.20180201064502.1" a="E"><vh>B</vh>
+<v t="josephorr.20180201064517.1"><vh>(D)</vh></v>
+<v t="josephorr.20180201064525.1"><vh>(E)</vh></v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
-<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
+<v t="josephorr.20180201064508.1" a="E"><vh>C</vh>
+<v t="josephorr.20180201064525.1"></v>
+<v t="josephorr.20180201064537.1"><vh>(F)</vh></v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180201080120.1"><vh>@mermaidtd Process 2</vh>
+<v t="josephorr.20180201080128.1" a="E"><vh>A</vh>
+<v t="josephorr.20180201080135.1"><vh>B</vh>
+<v t="josephorr.20180201080140.1"><vh>(D)</vh></v>
+<v t="josephorr.20180201080147.1"><vh>(F)</vh></v>
+</v>
+<v t="josephorr.20180201080137.1"><vh>C</vh>
+<v t="josephorr.20180201080144.1"><vh>(E)</vh></v>
+<v t="josephorr.20180201080147.1"></v>
+</v>
+</v>
+</v>
+</v>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
+<v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
@@ -1152,6 +1177,7 @@ Current features include:
 * Search
 * SEO version (static html files)
 * Nested presentations with Reveal.js
+* Summary nodes: Kanban and Flowchart
 
 Planned features not yet supported:
 * Keyboard support
@@ -1784,17 +1810,15 @@ Leo Vue can summarize the contents of a subtree. Currently there are two directi
 * @mermaidtd: top - down
 
 You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
-<t tx="josephorr.20180123102440.1">@language md
-
-# Mermaid
+<t tx="josephorr.20180123102440.1"># Mermaid
 
 Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
 
 Mermaid directives:
 
-* @mermaidtd: create a top down diagram
-* @mermaidlr: create a left right diagram
-* @mermaidrl: create a right left diagram
+* **@mermaidtd:** create a top down diagram
+* **@mermaidlr:** create a left right diagram
+* **@mermaidrl:** create a right left diagram
 
 Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.</t>
 <t tx="josephorr.20180123102749.1">height: 350</t>
@@ -1862,8 +1886,9 @@ Brent is used in a lot of projects. He has made himself indispensable, slowing t
 <t tx="josephorr.20180128123133.1"></t>
 <t tx="josephorr.20180128123139.1"></t>
 <t tx="josephorr.20180128202836.1"></t>
-<t tx="josephorr.20180129090944.1">height: 450</t>
-<t tx="josephorr.20180129091002.1"></t>
+<t tx="josephorr.20180129090944.1">height: 450
+circle:
+  fa: user</t>
 <t tx="josephorr.20180129091009.1"></t>
 <t tx="josephorr.20180129091014.1"></t>
 <t tx="josephorr.20180129091024.1"></t>
@@ -1879,5 +1904,28 @@ mm20180129091024_1[D] --&gt; mm20180129095035_1[E];
 &lt;/mermaid&gt;
 </t>
 <t tx="josephorr.20180130120957.1"></t>
+<t tx="josephorr.20180131221020.1"></t>
+<t tx="josephorr.20180131221301.1"></t>
+<t tx="josephorr.20180201064444.1">height: 500
+rounded: 
+  fa: user
+  fill: "#85FD31,stroke:#333,stroke-width:4px;width:100px"
+
+</t>
+<t tx="josephorr.20180201064457.1"></t>
+<t tx="josephorr.20180201064502.1"></t>
+<t tx="josephorr.20180201064508.1"></t>
+<t tx="josephorr.20180201064517.1"></t>
+<t tx="josephorr.20180201064525.1"></t>
+<t tx="josephorr.20180201064537.1"></t>
+<t tx="josephorr.20180201080120.1"></t>
+<t tx="josephorr.20180201080128.1"></t>
+<t tx="josephorr.20180201080135.1"></t>
+<t tx="josephorr.20180201080137.1"># This is a pen
+
+but not this</t>
+<t tx="josephorr.20180201080140.1"></t>
+<t tx="josephorr.20180201080144.1"></t>
+<t tx="josephorr.20180201080147.1"></t>
 </tnodes>
 </leo_file>

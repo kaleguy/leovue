@@ -288,6 +288,7 @@ function setData (context, ldata, filename, route) {
   loadDataTables(context, ldata)
   loadPresentations(ldata.data[0])
   setLanguageNodes(context, ldata)
+  setChildDirectives(context, ldata)
   let id = route.params.id
   if (!id) {
     id = '1'
@@ -350,6 +351,28 @@ function loadSubtrees (context, trees, data) {
     loadLeoNode(context, item).then(res => resolve(res))
   })
   return p
+}
+// add language directives to subtrees of existing language directives
+function setChildDirectives (context, data) {
+  const textItems = data.textItems
+  data.data.forEach(d => {
+    setChildDirective(context, d, textItems)
+  })
+}
+function setChildDirective (context, d, textItems, parentDirective) {
+  const text = textItems[d.t]
+  const re = /^(@language \w+)/
+  let languageDirective = re.exec(text)
+  if (languageDirective) {
+    languageDirective = languageDirective[1]
+  }
+  if (parentDirective && !languageDirective) {
+    textItems[d.t] = parentDirective + '\n' + textItems[d.t]
+    languageDirective = parentDirective
+  }
+  d.children.forEach(child => {
+    setChildDirective(context, child, textItems, languageDirective)
+  })
 }
 // for @clean nodes, set children with @language of extension
 function setLanguageNodes (context, data) {
