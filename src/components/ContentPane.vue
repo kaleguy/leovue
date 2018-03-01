@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import router from '../router'
 const hljs = require('highlight.js')
 import {presentation} from '../lib/presentation'
 const util = require('../util.js')

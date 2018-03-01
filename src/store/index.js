@@ -358,7 +358,7 @@ function setChildDirectives (context, data) {
   data.data.forEach(d => {
     setChildDirective(context, d, textItems)
   })
-}
+  }
 function setChildDirective (context, d, textItems, parentDirective) {
   const text = textItems[d.t]
   const re = /^(@language \w+)/
