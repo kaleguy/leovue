@@ -117,9 +117,10 @@ function loadLeoNode (context, item) {
         item.children = data.children
         item.t = data.t
         item.name = label // convert to regular title so won't reload
-      } else { // TODO: trunkless load logic in complete
+      } else { // TODO: trunkless load logic incomplete
         item.name = label
         item.children = data
+        console.log('LOADED', item.children)
       }
       resolve(true)
     })
@@ -622,7 +623,7 @@ export default new Vuex.Store({
       state.contentItemsUpdateCount = state.contentItemsUpdateCount + 1
     },
     CURRENT_ITEM (state, o) {
-      console.log('COMMIT CURRENT ITEM')
+      // console.log('COMMIT CURRENT ITEM')
       const id = o.id
       // check current for identical
       if (o.id === state.currentItem.id) {

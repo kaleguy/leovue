@@ -72,7 +72,7 @@ window.loadURL = function (src) {
   document.body.appendChild(script)
 };
 function overrideXFrame(item, textItems) {
-  console.log('override xframe')
+  // console.log('override xframe')
   const iframe = document.getElementsByTagName('iframe')[0];
   if (!iframe){ return }
   window.iframe = iframe
