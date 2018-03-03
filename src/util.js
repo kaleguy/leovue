@@ -103,7 +103,10 @@ function formatText (text, noWrapper) {
       text = md.render(text)
       break
     case 'pug': // eslint-disable-line
-      text = window.pug.render(text) //
+      text = window.pug.render(text) // need to add pug for this to work, see commented out code in index.html
+    case 'python':
+      text = processPython(text)
+      break
     case 'html':
       break
     case 'VueComponent':
@@ -112,15 +115,7 @@ function formatText (text, noWrapper) {
       text = `<pre>${text}</pre>`
       break
     default:
-      text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
-      text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
-      mu = hljs.highlight(language, text)
-      text = mu.value
-      text = `<pre v-pre>${text}</pre>`
-      //debugger
-      text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
-      //  &lt;div class=section-link"&gt;« templates »&lt;/div&gt
-      // text = text.replace(/&lt;div class=section-link"&gt;«(.*?)»&lt;\/div&gt;/g, '<div class="section-link">«$1»</div>')
+      text = hiliteCode(text, language)
   }
 
   if (noWrapper) {
@@ -128,6 +123,65 @@ function formatText (text, noWrapper) {
   }
   text = `<div class='content'>${text}</div>`
   return text
+}
+
+function hiliteCode(text, language) {
+  text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
+  text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
+  const mu = hljs.highlight(language, text)
+  text = mu.value
+  text = `<pre v-pre>${text}</pre>`
+  //debugger
+  text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
+  return text
+}
+
+function processPython(t) {
+  const a = t.split(/\n/)
+  const b = []
+  let c = []
+  let buffer = ''
+  let inDocString = false
+  a.forEach(line => {
+    if (/'''/.test(line)) {
+      inDocString = !inDocString
+      if (!inDocString) {
+        c = c.map(line => line.replace(/^\s*?\|/g, '').replace(/</g, '&lt;').replace(/>/, '&gt;').replace(/^\s*?#/,''))
+        let docString = c.join('\n')
+        docString = md.render(docString)
+        b.push(docString)
+        c = []
+      } else {
+        buffer = hiliteCode(buffer, 'python')
+        b.push(buffer)
+        buffer = ''
+      }
+      return // skip this line
+    }
+    if (inDocString) {
+      return c.push(line)
+    }
+    // line = processSingleDocstring(line)
+    buffer = buffer + '\n' + line
+  })
+  t = b.join('') + hiliteCode(buffer, 'python')
+  return t
+}
+
+function processSingleDocstring(t) {
+  if (/"""/.test(t)) {
+  }
+  return t
+}
+
+function processDocstring(t) {
+  if (/'''/.test(t)) {
+    t = t.replace(/'''/, '</pre>')
+    t = t.replace(/'''/, '<pre>')
+    t = t.replace(/\|/g, '')
+    t = md.render(t)
+  }
+  return t
 }
 
 function getObjectByKeyFromTree (d, k, v) {
