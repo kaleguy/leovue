@@ -254,7 +254,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180201133413.1" a="E"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180201133413.1"><vh>@mermaidtd Process</vh>
 <v t="josephorr.20180201133420.1" a="E"><vh>A</vh>
 <v t="josephorr.20180201133422.1" a="E"><vh>B</vh>
 <v t="josephorr.20180201133431.1"><vh>(F)</vh></v>
@@ -1808,7 +1808,18 @@ Mermaid directives:
 * **@mermaidlr:** create a left right diagram
 * **@mermaidrl:** create a right left diagram
 
-Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.</t>
+Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.
+
+Options (in YAML format) can be placed in the directive node, e.g:
+
+```
+height: 400
+click: goto // click will go to node, otherwise displays popup
+rounded: // or 'circle' or 'square'
+  fa: user // any font awesome icon name
+  fill: "#85FD31,stroke:#333,stroke-width:4px;width:100px"
+```  
+  </t>
 <t tx="josephorr.20180123102749.1">height: 350</t>
 <t tx="josephorr.20180123102805.1"></t>
 <t tx="josephorr.20180123102809.1"></t>
