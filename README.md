@@ -54,11 +54,11 @@ Using the @kanban directive, you can create a kanban board from a node. The next
 
 [Mermaidjs](https://mermaidjs.github.io/) is a markup language for creating and viewing diagrams such as flowcharts and Gannt charts. If your index.html page has a link to the Mermaid CDN, you can use this markup in Leo Vue to create and display Mermaid diagrams.
 
-The @mermaid directive will create a flowchart from the nodes under the directive node. Because of Leo's clone nodes, these flowcharts can be more complex than simple trees. 
+The @mermaid directive will create a flowchart from the nodes under the directive node. Because of Leo's clone nodes, these flowcharts can be more complex than simple trees.
 
 The node in the mermaid directive can have options for sizing the chart and adding styles and icons to the nodes. Node titles can use standard Mermaid syntax such as |line text|{node text}. Clicking on a diagram node pops up the node text or optionally navigates to the node in Leo Vue.
 
-For more information, see the 
+For more information, see the
 **[Leo Vue Docs](https://kaleguy.github.io/leovue/)**.
 
 [![Mermaid diagrams with Leo Vue](https://kaleguy.github.io/leovue/screencasts/mermaid-leo.png)](https://youtu.be/vjJUkYGBIw0 "Mermaid diagrams with Leo Vue")
@@ -125,6 +125,9 @@ If you set up your Github repo to serve pages from the docs folder (in repo sett
 npm run build-deploy
 
 ```
+
+The above command is for deploying this repo. If you simply are trying to get a leo file to display as a web page, you can do that with
+a single index.html file, your leo file, and the LeoVue CDN. See [this example repo](https://kaleguy.github.io/leo-examples/).
 
 ## Built With
 
