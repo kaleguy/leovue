@@ -120,7 +120,7 @@ function loadLeoNode (context, item) {
       } else { // TODO: trunkless load logic incomplete
         item.name = label
         item.children = data
-        console.log('LOADED', item.children)
+        console.log(item.children)
       }
       resolve(true)
     })
