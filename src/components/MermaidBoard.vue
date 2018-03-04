@@ -12,10 +12,11 @@
             v-if="viewSource"
             name="picture-o"></icon>
     </div>
-    <h1>{{title}}</h1>
     <div
       v-if="!viewSource"
+      style="text-align: center"
       @click="click">
+      <h1>{{title}}</h1>
       <mermaid
         :name=mmName
         :mm="mm"

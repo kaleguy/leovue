@@ -120,7 +120,6 @@ function loadLeoNode (context, item) {
       } else { // TODO: trunkless load logic incomplete
         item.name = label
         item.children = data
-        console.log(item.children)
       }
       resolve(true)
     })
@@ -305,7 +304,7 @@ function setData (context, ldata, filename, route) {
   const path = route.path
   let npath = null
   if (path) {
-    npath = path.substring(path.indexOf(2, '/'))
+    npath = path.substring(path.indexOf('/', 2) + 1)
   }
   let subtrees = []
   if (npath) {

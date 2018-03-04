@@ -1,7 +1,8 @@
 <template>
-    <div :name="name" class="mermaid"><slot></slot>
+    <div :name="name" class="mermaid">
+      <slot></slot>
     </div>
-</template>
+ </template>
 
 <script>
   /* global mermaid */

@@ -25,7 +25,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -151,7 +151,7 @@
 </v>
 </v>
 <v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -267,13 +267,15 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban Projects</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
 <v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
+<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -290,6 +292,7 @@
 </v>
 </v>
 <v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
 <v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
@@ -1146,7 +1149,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.6.4
+Leo Vue is currently at version 1.6.5
 
 Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -1919,5 +1922,8 @@ rounded:
 The real name of user D is Pat.</t>
 <t tx="josephorr.20180201133429.1"></t>
 <t tx="josephorr.20180201133431.1"></t>
+<t tx="josephorr.20180303162711.1"></t>
+<t tx="josephorr.20180303171634.1"></t>
+<t tx="josephorr.20180304114723.1">https://en.wikipedia.org/wiki/Evaporating_Cloud</t>
 </tnodes>
 </leo_file>
