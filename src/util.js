@@ -101,6 +101,7 @@ function formatText (text, noWrapper) {
       break
     case 'md':
       text = md.render(text)
+      text = text.replace(/src="https:.*?https:/g, 'src="https:') // hack to fix md not handling absolute urls
       break
     case 'pug': // eslint-disable-line
       text = window.pug.render(text) // need to add pug for this to work, see commented out code in index.html
