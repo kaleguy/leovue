@@ -1150,7 +1150,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.6.5
+Leo Vue is currently at version 1.6.7
 
 Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
