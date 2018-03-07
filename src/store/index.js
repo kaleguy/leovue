@@ -128,6 +128,7 @@ function loadLeoNode (context, item) {
 }
 function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
+  title = title.replace(/^@[a-zA-Z]*? /, '')
   const match = re.exec(title)
   let url = match[2]
   let label = match[1]
@@ -182,6 +183,34 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM', {item: newItem})
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
+}
+function showPageOutline (context, title, id) {
+  let {url, label} = getUrlFromTitle(title) // eslint-disable-line
+  if (!url) { return }
+  let yqlUri = "https://query.yahooapis.com/v1/public/yql?q=" + // eslint-disable-line
+    encodeURIComponent("SELECT * FROM htmlstring " + ' where url="' + encodeURIComponent(url) + '"') //eslint-disable-line
+
+  // yqlUri += encodeURIComponent(" and xpath='/*'") //eslint-disable-line
+  console.log(yqlUri)
+  let site = url
+  // let yql = "select * from htmlstring where url='" + site + "' AND xpath='//div[@id=\"content\"]"
+  let yql = "select * from htmlstring where url='" + site + "' AND xpath='//div'"
+  let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
+
+  /*
+  var script = document.createElement('script')
+  script.setAttribute('type', 'text/template')
+  script.setAttribute('src', url)
+  document.body.appendChild(script)
+  */
+
+  axios.get(resturl)
+    .then((response) => {
+      console.log(response.data.query.results.result)
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
 }
 function showD3Board (context, title, id) {
   let text = `<d3-board/>`
@@ -786,6 +815,9 @@ export default new Vuex.Store({
         }
         if (/^@mermaid/.test(item.name)) {
           return showMermaid(context, item.name, id)
+        }
+        if (/^@outline/.test(item.name)) {
+          return showPageOutline(context, item.name, id)
         }
         if (/^@d3board /.test(item.name)) {
           return showD3Board(context, item.name, id)

@@ -21,6 +21,7 @@
     "d3": "^4.4.0",
     "dataframe-js": "^1.2.4",
     "eslint-plugin-node": "^6.0.1",
+    "h5o": "^0.11.3",
     "highlight.js": "^9.12.0",
     "lodash": "^4.1.0",
     "lodash.pull": "^4.1.0",
