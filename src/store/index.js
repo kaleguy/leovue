@@ -6,6 +6,7 @@ import axios from 'axios'
 import _ from 'lodash'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
+const HTML5Outline = require('h5o')
 const util = require('../util.js')
 const md = require('markdown-it')({
   html: true,
@@ -206,7 +207,13 @@ function showPageOutline (context, title, id) {
 
   axios.get(resturl)
     .then((response) => {
-      console.log(response.data.query.results.result)
+      // console.log(response.data.query.results.result)
+      const dummy = document.createElement('blockquote')
+      dummy.setAttribute('id', 'dummy')
+      document.body.appendChild(dummy)
+      dummy.innerHTML = response.data.query.results.result
+      const outline = HTML5Outline(dummy)
+      console.log('OUTLINE', outline)
     })
     .catch(function (error) {
       console.log(error)
