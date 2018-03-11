@@ -125,10 +125,12 @@ function getLeoJSON (filename, id) {
       .then(xmlString => {
         return transformLeoXML(xmlString, id)
       })
-      .then(data => {resolve(data)})
+      .then(data => resolve(data))
   })
   return p
 }
+
+
 function transformLeoXML2XML(xmlString, startId, parser) {
   const p = new Promise((resolve, reject) => {
 

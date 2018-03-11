@@ -69,6 +69,7 @@ export default {
   computed: {
     isFolder: function () {
       if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
+      if (/^@outline/.test(this.model.name)) { return true } // outline
       return this.model.children && this.model.children.length
     },
     isClosedSibling: function () {
@@ -143,13 +144,11 @@ export default {
       return this.$store.state.currentItem.id === this.model.id
     },
     vtitle: function () {
+      let name = this.model.name
+      name = name.replace(/^@[a-z]+\s/, '')
       const re = /^\[(.*?)\]\((.*?)\)$/
-      const match = re.exec(this.model.name)
-      if (!match) {
-        let name = this.model.name
-        name = name.replace(/^@[a-z]+\s/, '')
-        return name
-      }
+      const match = re.exec(name)
+      if (!match) { return name }
       const title = match[1]
       if (title) {
         return title

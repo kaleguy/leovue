@@ -112,13 +112,13 @@ function loadLeoNode (context, item) {
       context.commit('ADDTEXT', {text})
       if (data.length === 1) {
         context.commit('RESET') // content item has not been drawn
-        console.log('RESET')
+        console.log('SUBTREE RESET')
         context.dispatch('setCurrentItem', {id})
         data = data[0]
         item.children = data.children
         item.t = data.t
         item.name = label // convert to regular title so won't reload
-      } else { // TODO: trunkless load logic incomplete
+      } else { // TODO: trunkless load logic incomplete for subtrees
         item.name = label
         item.children = data
       }
@@ -185,39 +185,59 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showPageOutline (context, title, id) {
-  let {url, label} = getUrlFromTitle(title) // eslint-disable-line
-  if (!url) { return }
-  let yqlUri = "https://query.yahooapis.com/v1/public/yql?q=" + // eslint-disable-line
-    encodeURIComponent("SELECT * FROM htmlstring " + ' where url="' + encodeURIComponent(url) + '"') //eslint-disable-line
+function showPageOutline (context, item, id) {
+  return new Promise((resolve, reject) => {
+    let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
+    if (!url) { return }
+    let site = url
+    let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
+    let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
 
-  // yqlUri += encodeURIComponent(" and xpath='/*'") //eslint-disable-line
-  console.log(yqlUri)
-  let site = url
-  // let yql = "select * from htmlstring where url='" + site + "' AND xpath='//div[@id=\"content\"]"
-  let yql = "select * from htmlstring where url='" + site + "' AND xpath='//div'"
-  let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
-
-  /*
-  var script = document.createElement('script')
-  script.setAttribute('type', 'text/template')
-  script.setAttribute('src', url)
-  document.body.appendChild(script)
-  */
-
-  axios.get(resturl)
-    .then((response) => {
-      // console.log(response.data.query.results.result)
-      const dummy = document.createElement('blockquote')
-      dummy.setAttribute('id', 'dummy')
-      document.body.appendChild(dummy)
-      dummy.innerHTML = response.data.query.results.result
-      const outline = HTML5Outline(dummy)
-      console.log('OUTLINE', outline)
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
+    // mw-content-ltr
+    axios.get(resturl)
+      .then((response) => {
+        const dummy = document.createElement('blockquote')
+        dummy.setAttribute('id', 'dummy')
+        dummy.style.display = 'none'
+        document.body.appendChild(dummy)
+        dummy.innerHTML = response.data.query.results.result
+        // const topSection = dummy.getElementsByClassName('mw-content-ltr')[0]
+        const outline = HTML5Outline(dummy)
+        console.log('OUTLINE', outline)
+        const outlineItem = {}
+        const text = {}
+        outlineToItem(outline.sections[0], outlineItem, item.id, 0, text)
+        context.commit('ADDTEXT', {text})
+        item.children[0] = outlineItem
+        context.commit('RESET') // content item has not been drawn
+        context.dispatch('setCurrentItem', {id})
+        item.children = outlineItem.children
+        resolve(true)
+      })
+      .catch(function (error) {
+        console.log(error)
+        reject(error)
+      })
+  })
+}
+function outlineToItem (outline, item, idBase, counter, textItems) {
+  if (!outline.heading) {
+    return
+  }
+  counter = counter + 1
+  item.id = idBase + '-' + counter
+  item.name = outline.heading.innerText.replace(/\n/g, '').replace(/\[.*?\]/i, '')
+  textItems[item.id] = '<h1>Outline Content</h1>'
+  item.t = item.id
+  const sections = outline.sections
+  if (!sections || !sections.length) { return }
+  item.children = []
+  sections.forEach((section, i) => {
+    let childItem = {}
+    outlineToItem(section, childItem, idBase + i, counter, textItems)
+    item.children.push(childItem)
+  })
+  return item
 }
 function showD3Board (context, title, id) {
   let text = `<d3-board/>`
@@ -604,7 +624,7 @@ export default new Vuex.Store({
     // lunr search index
     RESETINDEX (state, o) {
       if (_.isUndefined) {
-        console.log('No state in RESETINDEX')
+        console.log('No state in RESETINDEX') // TODO: this line needs fix
         return
       }
       const c = loadIndex(state.leodata, state.leotext)
@@ -775,8 +795,6 @@ export default new Vuex.Store({
       // if we're setting a page, we're displaying a presentation
       const presentationNode = JSON.search(context.state.leodata, '//*[id="' + id + '"]')[0]
       const pageNode = presentationNode.children[page]
-      // const pageNode = 0
-      // console.log('PN', presentationNode, pageNode, page)
       if (!pageNode) {
         id = 0
       } else {
@@ -824,7 +842,9 @@ export default new Vuex.Store({
           return showMermaid(context, item.name, id)
         }
         if (/^@outline/.test(item.name)) {
-          return showPageOutline(context, item.name, id)
+          return showPageOutline(context, item, id).then(
+            res => context.commit('RESETINDEX')
+          )
         }
         if (/^@d3board /.test(item.name)) {
           return showD3Board(context, item.name, id)

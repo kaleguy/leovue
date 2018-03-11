@@ -207,7 +207,7 @@
   height: 24px
 .search
   float: right
-  font-family: Avenir
+  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
   margin-right: 10px
   font-size: 14px
   margin-top: -1px
