@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue@1.6.7/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -26,7 +26,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -61,6 +61,9 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
+<v t="josephorr.20180306193229.1" a="E"><vh>Outline Nodes</vh>
+<v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
+</v>
 </v>
 <v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
@@ -77,8 +80,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
-<v t="josephorr.20180129115223.1"><vh>test</vh></v>
+<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -151,7 +153,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -268,15 +270,15 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
 <v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
 <v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
-<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
 <v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
 <v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
 <v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
@@ -293,6 +295,7 @@
 </v>
 </v>
 <v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
 <v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
@@ -323,7 +326,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #fff; width:500px;margin-left:auto;margin-right:auto;font-family:Avenir;font-size:90px;font-weight:bold;text-align:center;"&gt;
+&lt;div style="border:1px solid #fff; width:500px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center;"&gt;
 Leo Vue
 &lt;/div&gt;
 
@@ -625,23 +628,31 @@ site, then this content is being displayed via the Leo Vue.
 
 Leo Vue is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
-<t tx="josephorr.20170401144849.1">You can create nodes that point to external sites.
+<t tx="josephorr.20170401144849.1">@language md
+
+You can create nodes that point to external sites.
 
 To do this, create a node with a Markdown link in the title, for example:
 
+```
 [This is a link](http://www.example.com)
+```
 
 Leo Vue will show the external site in the content pane.
 
 The next node has the following title:
 
+```
 [A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
+```
 
 Note that if Leo Vue is served via https (e.g. Github Pages) only https links will work here.
 
 The second node in this section has the following title:
 
+```
 [Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
+```
 
 This is a clone of one of the earlier nodes in this outline. In this case Leo Vue fetches the document and converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
@@ -772,10 +783,12 @@ function getLeoJSON (filename, id) {
       .then(xmlString =&gt; {
         return transformLeoXML(xmlString, id)
       })
-      .then(data =&gt; {resolve(data)})
+      .then(data =&gt; resolve(data))
   })
   return p
 }
+
+
 function transformLeoXML2XML(xmlString, startId, parser) {
   const p = new Promise((resolve, reject) =&gt; {
 
@@ -875,7 +888,7 @@ Leo Vue can load .leo files into nodes in a parent .leo file.
 The child node of this node has the following title:
 
 ```
-[Example](example.leo)
+[Top](example.leo)
 ```
 Since the title points to a .leo file, the leo file is loaded into the node when the node is clicked.
 
@@ -1150,7 +1163,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.6.5
+Leo Vue is currently at version 1.6.7
 
 Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -1896,16 +1909,6 @@ circle:
 <t tx="josephorr.20180129091014.1"></t>
 <t tx="josephorr.20180129091024.1"></t>
 <t tx="josephorr.20180129095035.1"></t>
-<t tx="josephorr.20180129115223.1">&lt;mermaid height="300" width="450"&gt;
-graph TD;
-mm20180129090944_1[Process] --&gt; mm20180129091002_1[A];
-mm20180129091002_1[A] --&gt; mm20180129095035_1[E];
-mm20180129091002_1[A] --&gt; mm20180129091009_1{B};
-mm20180129091009_1{B} --&gt; |yes| mm20180129091014_1[C];
-mm20180129091009_1{B} --&gt; |no| mm20180129091024_1[D];
-mm20180129091024_1[D] --&gt; mm20180129095035_1[E];
-&lt;/mermaid&gt;
-</t>
 <t tx="josephorr.20180130120957.1"></t>
 <t tx="josephorr.20180131221020.1"></t>
 <t tx="josephorr.20180131221301.1"></t>
@@ -1927,5 +1930,20 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180303171634.1"></t>
 <t tx="josephorr.20180304114723.1">https://en.wikipedia.org/wiki/Evaporating_Cloud</t>
 <t tx="josephorr.20180304203537.1"></t>
+<t tx="josephorr.20180305204208.1"></t>
+<t tx="josephorr.20180306193229.1">@language md
+
+Outline nodes use the HTML5 Outline spec to create an outline from a target web page.
+
+For example, the first child node in this section outlines Wikipedia's Kale page. Wikipedia HTML conforms to the HTML5 Outline spec, so Leo Vue is able to create an outline from the Wikipedia page.
+
+The title of the node in the Leo file is:
+```
+@outline [Kale](https://en.wikipedia.org/wiki/Kale
+```
+
+This feature currently only supports the outline creation, the node content does not display.
+</t>
+<t tx="josephorr.20180306193346.1"></t>
 </tnodes>
 </leo_file>
