@@ -200,17 +200,25 @@ function showPageOutline (context, item, id) {
         dummy.setAttribute('id', 'dummy')
         dummy.style.display = 'none'
         document.body.appendChild(dummy)
-        dummy.innerHTML = response.data.query.results.result
-        // const topSection = dummy.getElementsByClassName('mw-content-ltr')[0]
+        const html = response.data.query.results.result
+        dummy.innerHTML = html
+        let contentHTML = dummy.getElementsByClassName('mw-content-ltr')[0].innerHTML
+        contentHTML = '<div>' + contentHTML + '</div>'
         const outline = HTML5Outline(dummy)
         console.log('OUTLINE', outline)
         const outlineItem = {}
-        const text = {}
-        outlineToItem(outline.sections[0], outlineItem, item.id, 0, text)
+        const textItems = {}
+        outlineToItem(outline.sections[0], outlineItem, item.id, 0, textItems)
+        const text = contentHTML // '<h1>wat</h1>'
+        textItems[id] = text // contentHTML
+        item.t = id
         context.commit('ADDTEXT', {text})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
-        context.dispatch('setCurrentItem', {id})
+        console.log('WTF')
+        // context.dispatch('setCurrentItem', {id})
+        context.commit('CURRENT_ITEM', {id})
+        context.commit('CURRENT_ITEM_CONTENT', { text })
         item.children = outlineItem.children
         resolve(true)
       })
