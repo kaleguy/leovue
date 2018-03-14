@@ -1,0 +1,679 @@
+.citation {
+  word-wrap: break-word
+}
+
+ol.references, div.reflist, div.refbegin {
+  font-size: 90%;
+  margin-bottom: 0.5em
+}
+
+div.refbegin-100 {
+  font-size: 100%
+}
+
+div.reflist ol.references {
+  font-size: 100%;
+  margin-bottom: 0;
+  list-style-type: inherit
+}
+
+sup.reference {
+  font-weight: normal;
+  font-style: normal
+}
+
+span.brokenref {
+  display: none
+}
+
+.refbegin-hanging-indents > ul {
+  list-style-type: none;
+  margin-left: 0
+}
+
+.refbegin-hanging-indents > ul > li, .refbegin-hanging-indents > dl > dd {
+  margin-left: 0;
+  padding-left: 3.2em;
+  text-indent: -3.2em;
+  list-style: none
+}
+
+div.columns {
+  margin-top: 0.3em
+}
+
+div.columns dl, div.columns ol, div.columns ul {
+  margin-top: 0
+}
+
+.nocolbreak, div.columns li, div.columns dd dd {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid-column
+}
+
+.flowlist ul {
+  overflow-x: hidden;
+  margin-left: 0;
+  padding-left: 1.6em
+}
+
+.flowlist ol {
+  overflow-x: hidden;
+  margin-left: 0;
+  padding-left: 3.2em
+}
+
+.flowlist dl {
+  overflow-x: hidden
+}
+
+.hlist dl, .hlist ol, .hlist ul {
+  margin: 0;
+  padding: 0
+}
+
+.hlist dd, .hlist dt, .hlist li {
+  margin: 0;
+  display: inline
+}
+
+.hlist.inline, .hlist.inline dl, .hlist.inline ol, .hlist.inline ul, .hlist dl dl, .hlist dl ol, .hlist dl ul, .hlist ol dl, .hlist ol ol, .hlist ol ul, .hlist ul dl, .hlist ul ol, .hlist ul ul {
+  display: inline
+}
+
+.hlist .mw-empty-li {
+  display: none
+}
+
+.hlist dt:after {
+  content: ":"
+}
+
+.hlist dd:after, .hlist li:after {
+  content: " · ";
+  font-weight: bold
+}
+
+.hlist dd:last-child:after, .hlist dt:last-child:after, .hlist li:last-child:after {
+  content: none
+}
+
+.hlist dd dd:first-child:before, .hlist dd dt:first-child:before, .hlist dd li:first-child:before, .hlist dt dd:first-child:before, .hlist dt dt:first-child:before, .hlist dt li:first-child:before, .hlist li dd:first-child:before, .hlist li dt:first-child:before, .hlist li li:first-child:before {
+  content: " (";
+  font-weight: normal
+}
+
+.hlist dd dd:last-child:after, .hlist dd dt:last-child:after, .hlist dd li:last-child:after, .hlist dt dd:last-child:after, .hlist dt dt:last-child:after, .hlist dt li:last-child:after, .hlist li dd:last-child:after, .hlist li dt:last-child:after, .hlist li li:last-child:after {
+  content: ")";
+  font-weight: normal
+}
+
+.hlist ol {
+  counter-reset: listitem
+}
+
+.hlist ol > li {
+  counter-increment: listitem
+}
+
+.hlist ol > li:before {
+  content: " " counter(listitem) "\a0"
+}
+
+.hlist dd ol > li:first-child:before, .hlist dt ol > li:first-child:before, .hlist li ol > li:first-child:before {
+  content: " (" counter(listitem) "\a0"
+}
+
+.plainlist ol, .plainlist ul {
+  line-height: inherit;
+  list-style: none none;
+  margin: 0
+}
+
+.plainlist ol li, .plainlist ul li {
+  margin-bottom: 0
+}
+
+.navbox {
+  box-sizing: border-box;
+  border: 1px solid #a2a9b1;
+  width: 100%;
+  clear: both;
+  font-size: 88%;
+  text-align: center;
+  padding: 1px;
+  margin: 1em auto 0
+}
+
+.navbox .navbox {
+  margin-top: 0
+}
+
+.navbox + .navbox {
+  margin-top: -1px
+}
+
+.navbox-inner, .navbox-subgroup {
+  width: 100%
+}
+
+.navbox-group, .navbox-title, .navbox-abovebelow {
+  padding: 0.25em 1em;
+  line-height: 1.5em;
+  text-align: center
+}
+
+th.navbox-group {
+  white-space: nowrap;
+  text-align: right
+}
+
+.navbox, .navbox-subgroup {
+  background: #fdfdfd
+}
+
+.navbox-list {
+  line-height: 1.5em;
+  border-color: #fdfdfd
+}
+
+tr + tr > .navbox-abovebelow, tr + tr > .navbox-group, tr + tr > .navbox-image, tr + tr > .navbox-list {
+  border-top: 2px solid #fdfdfd
+}
+
+.navbox th, .navbox-title {
+  background: #ccccff
+}
+
+.navbox-abovebelow, th.navbox-group, .navbox-subgroup .navbox-title {
+  background: #ddddff
+}
+
+.navbox-subgroup .navbox-group, .navbox-subgroup .navbox-abovebelow {
+  background: #e6e6ff
+}
+
+.navbox-even {
+  background: #f7f7f7
+}
+
+.navbox-odd {
+  background: transparent
+}
+
+.navbox .hlist td dl, .navbox .hlist td ol, .navbox .hlist td ul, .navbox td.hlist dl, .navbox td.hlist ol, .navbox td.hlist ul {
+  padding: 0.125em 0
+}
+
+.navbar {
+  display: inline;
+  font-size: 88%;
+  font-weight: normal
+}
+
+.navbar ul {
+  display: inline;
+  white-space: nowrap
+}
+
+.mw-body-content .navbar ul {
+  line-height: inherit
+}
+
+.navbar li {
+  word-spacing: -0.125em
+}
+
+.navbar.mini li abbr[title] {
+  font-variant: small-caps;
+  border-bottom: none;
+  text-decoration: none;
+  cursor: inherit
+}
+
+.infobox .navbar {
+  font-size: 100%
+}
+
+.navbox .navbar {
+  display: block;
+  font-size: 100%
+}
+
+.navbox-title .navbar {
+  float: left;
+  text-align: left;
+  margin-right: 0.5em
+}
+
+.collapseButton {
+  float: right;
+  font-weight: normal;
+  margin-left: 0.5em;
+  text-align: right;
+  width: auto
+}
+
+.mw-parser-output .mw-collapsible-toggle {
+  font-weight: normal;
+  text-align: right;
+  padding-right: 0.2em;
+  padding-left: 0.2em
+}
+
+.mw-collapsible-leftside-toggle .mw-collapsible-toggle {
+  float: left;
+  text-align: left
+}
+
+.infobox {
+  border: 1px solid #a2a9b1;
+  border-spacing: 3px;
+  background-color: #f8f9fa;
+  color: black;
+  margin: 0.5em 0 0.5em 1em;
+  padding: 0.2em;
+  float: right;
+  clear: right;
+  font-size: 88%;
+  line-height: 1.5em
+}
+
+.infobox caption {
+  font-size: 125%;
+  font-weight: bold;
+  padding: 0.2em;
+  text-align: center
+}
+
+.infobox td, .infobox th {
+  vertical-align: top;
+  text-align: left
+}
+
+.infobox.bordered {
+  border-collapse: collapse
+}
+
+.infobox.bordered td, .infobox.bordered th {
+  border: 1px solid #a2a9b1
+}
+
+.infobox.bordered .borderless td, .infobox.bordered .borderless th {
+  border: 0
+}
+
+.infobox.sisterproject {
+  width: 20em;
+  font-size: 90%
+}
+
+.infobox.standard-talk {
+  border: 1px solid #c0c090;
+  background-color: #f8eaba
+}
+
+.infobox.standard-talk.bordered td, .infobox.standard-talk.bordered th {
+  border: 1px solid #c0c090
+}
+
+.infobox.bordered .mergedtoprow td, .infobox.bordered .mergedtoprow th {
+  border: 0;
+  border-top: 1px solid #a2a9b1;
+  border-right: 1px solid #a2a9b1
+}
+
+.infobox.bordered .mergedrow td, .infobox.bordered .mergedrow th {
+  border: 0;
+  border-right: 1px solid #a2a9b1
+}
+
+.infobox.geography {
+  border-collapse: collapse;
+  line-height: 1.2em;
+  font-size: 90%
+}
+
+.infobox.geography td, .infobox.geography th {
+  border-top: 1px solid #a2a9b1;
+  padding: 0.4em 0.6em 0.4em 0.6em
+}
+
+.infobox.geography .mergedtoprow td, .infobox.geography .mergedtoprow th {
+  border-top: 1px solid #a2a9b1;
+  padding: 0.4em 0.6em 0.2em 0.6em
+}
+
+.infobox.geography .mergedrow td, .infobox.geography .mergedrow th {
+  border: 0;
+  padding: 0 0.6em 0.2em 0.6em
+}
+
+.infobox.geography .mergedbottomrow td, .infobox.geography .mergedbottomrow th {
+  border-top: 0;
+  border-bottom: 1px solid #a2a9b1;
+  padding: 0 0.6em 0.4em 0.6em
+}
+
+.infobox.geography .maptable td, .infobox.geography .maptable th {
+  border: 0;
+  padding: 0
+}
+
+.wikitable.plainrowheaders th[scope=row] {
+  font-weight: normal;
+  text-align: left
+}
+
+.wikitable td ul, .wikitable td ol, .wikitable td dl {
+  text-align: left
+}
+
+.toc.hlist ul, #toc.hlist ul, .wikitable.hlist td ul, .wikitable.hlist td ol, .wikitable.hlist td dl {
+  text-align: inherit
+}
+
+div.listenlist {
+  background: url(//upload.wikimedia.org/wikipedia/commons/4/47/Sound-icon.svg) no-repeat scroll 0 0 transparent;
+  background-size: 30px;
+  padding-left: 40px
+}
+
+table.mw-hiero-table td {
+  vertical-align: middle
+}
+
+div.medialist {
+  min-height: 50px;
+  margin: 1em;
+  background-position: top left;
+  background-repeat: no-repeat
+}
+
+div.medialist ul {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0
+}
+
+div.medialist ul li {
+  padding-bottom: 0.5em
+}
+
+div.medialist ul li li {
+  font-size: 91%;
+  padding-bottom: 0
+}
+
+div#content a[href$=".pdf"].external, div#content a[href*=".pdf?"].external, div#content a[href*=".pdf#"].external, div#content a[href$=".PDF"].external, div#content a[href*=".PDF?"].external, div#content a[href*=".PDF#"].external, div#mw_content a[href$=".pdf"].external, div#mw_content a[href*=".pdf?"].external, div#mw_content a[href*=".pdf#"].external, div#mw_content a[href$=".PDF"].external, div#mw_content a[href*=".PDF?"].external, div#mw_content a[href*=".PDF#"].external {
+  background: url(//upload.wikimedia.org/wikipedia/commons/2/23/Icons-mini-file_acrobat.gif) no-repeat right;
+  padding-right: 18px
+}
+
+
+.visualhide {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden
+}
+
+.check-icon a.new {
+  display: none;
+  speak: none
+}
+
+.nounderlines a, .IPA a:link, .IPA a:visited {
+  text-decoration: none !important
+}
+
+div.NavFrame {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #a2a9b1;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 95%
+}
+
+div.NavFrame + div.NavFrame {
+  border-top-style: none;
+  border-top-style: hidden
+}
+
+div.NavPic {
+  background-color: #fff;
+  margin: 0;
+  padding: 2px;
+  float: left
+}
+
+div.NavFrame div.NavHead {
+  line-height: 1.6em;
+  font-weight: bold;
+  background-color: #ccf;
+  position: relative
+}
+
+div.NavFrame p, div.NavFrame div.NavContent, div.NavFrame div.NavContent p {
+  font-size: 100%
+}
+
+div.NavEnd {
+  margin: 0;
+  padding: 0;
+  line-height: 1px;
+  clear: both
+}
+
+a.NavToggle {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  font-weight: normal;
+  font-size: 90%
+}
+
+.hatnote {
+  font-style: italic
+}
+
+.hatnote i {
+  font-style: normal
+}
+
+div.hatnote {
+  padding-left: 1.6em;
+  margin-bottom: 0.5em
+}
+
+div.hatnote + div.hatnote {
+  margin-top: -0.5em
+}
+
+.listify td {
+  display: list-item
+}
+
+.listify tr {
+  display: block
+}
+
+.listify table {
+  display: block
+}
+
+.geo-default, .geo-dms, .geo-dec {
+  display: inline
+}
+
+.geo-nondefault, .geo-multi-punct {
+  display: none
+}
+
+.longitude, .latitude {
+  white-space: nowrap
+}
+
+.hlist .tocnumber, .hlist .toctext {
+  display: inline
+}
+
+.nonumtoc .tocnumber {
+  display: none
+}
+
+.nonumtoc #toc ul, .nonumtoc .toc ul {
+  line-height: 1.5em;
+  list-style: none none;
+  margin: .3em 0 0;
+  padding: 0
+}
+
+.hlist.nonumtoc #toc ul ul, .hlist.nonumtoc .toc ul ul {
+  margin: 0
+}
+
+.toclimit-2 .toclevel-1 ul, .toclimit-3 .toclevel-2 ul, .toclimit-4 .toclevel-3 ul, .toclimit-5 .toclevel-4 ul, .toclimit-6 .toclevel-5 ul, .toclimit-7 .toclevel-6 ul {
+  display: none
+}
+
+blockquote.templatequote div.templatequotecite {
+  line-height: 1.5em;
+  text-align: left;
+  padding-left: 1.6em;
+  margin-top: 0
+}
+
+div.user-block {
+  padding: 5px;
+  margin-bottom: 0.5em;
+  border: 1px solid #A9A9A9;
+  background-color: #FFEFD5
+}
+
+.nowrap, .nowraplinks a, .nowraplinks .selflink {
+  white-space: nowrap
+}
+
+.nowrap pre {
+  white-space: pre
+}
+
+.wrap, .wraplinks a {
+  white-space: normal
+}
+
+.template-documentation {
+  clear: both;
+  margin: 1em 0 0 0;
+  border: 1px solid #a2a9b1;
+  background-color: #ecfcf4;
+  padding: 1em
+}
+
+#wpUploadDescription {
+  height: 13em
+}
+
+.thumbinner {
+  min-width: 100px
+}
+
+#mw-subcategories, #mw-pages, #mw-category-media, #filehistory, #wikiPreview, #wikiDiff {
+  clear: both
+}
+
+.wpb .wpb-header {
+  display: none
+}
+
+.wpbs-inner .wpb .wpb-header {
+  display: block
+}
+
+.wpbs-inner .wpb .wpb-header {
+  display: table-row
+}
+
+.wpbs-inner .wpb-outside {
+  display: none
+}
+
+.mw-tag-markers {
+  font-style: italic;
+  font-size: 90%
+}
+
+
+.times-serif, span.texhtml {
+  font-family: "Nimbus Roman No9 L", "Times New Roman", Times, serif;
+  font-size: 118%;
+  line-height: 1
+}
+
+span.texhtml {
+  white-space: nowrap
+}
+
+span.texhtml span.texhtml {
+  font-size: 100%
+}
+
+span.mwe-math-mathml-inline {
+  font-size: 118%
+}
+
+.digits, .texhtml {
+  -moz-font-feature-settings: "lnum", "tnum", "kern" 0;
+  -webkit-font-feature-settings: "lnum", "tnum", "kern" 0;
+  font-feature-settings: "lnum", "tnum", "kern" 0;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-kerning: none
+}
+
+.mwe-math-fallback-image-display, .mwe-math-mathml-display {
+  margin-left: 1.6em !important;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em
+}
+
+table#mw-prefixindex-list-table, table#mw-prefixindex-nav-table {
+  width: 98%
+}
+
+.mw-body .mw-indicators {
+  padding-top: 0.4em
+}
+
+.infobox {
+  float: none;
+}
+DIV.reflist, DIV.reflist A.text, DIV.reflist TD {
+  font-size: 85%;
+}
+
+LI.gallerybox {
+  list-style-type: none;
+}
+
+.right-pane .navbox TD, .right-pane .navbox A {
+  font-size: 85%;
+}
+.thumbcaption {
+  font-size: 85%;
+}
+
+.mw-hidden-catlinks {
+  display: none;
+}
+.printfooter {
+  margin-top: 12px;
+  font-size: 90%;
+}
+#catlinks {
+  margin-top: 12px;
+}

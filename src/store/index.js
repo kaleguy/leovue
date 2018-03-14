@@ -204,18 +204,19 @@ function showPageOutline (context, item, id) {
         dummy.innerHTML = html
         let contentHTML = dummy.getElementsByClassName('mw-content-ltr')[0].innerHTML
         contentHTML = '<div>' + contentHTML + '</div>'
+        contentHTML = contentHTML.replace(/\/wiki\//g, 'http://www.wikipedia.org/wiki/')
+        contentHTML = contentHTML.replace(/href="http:\/\/www.wikipedia.org/g, ' target="_blank" href="http://www.wikipedia.org')
         const outline = HTML5Outline(dummy)
-        console.log('OUTLINE', outline)
+        console.log('OO', outline)
         const outlineItem = {}
         const textItems = {}
         outlineToItem(outline.sections[0], outlineItem, item.id, 0, textItems)
-        const text = contentHTML // '<h1>wat</h1>'
+        const text = contentHTML //
         textItems[id] = text // contentHTML
         item.t = id
-        context.commit('ADDTEXT', {text})
+        context.commit('ADDTEXT', {text: textItems})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
-        console.log('WTF')
         // context.dispatch('setCurrentItem', {id})
         context.commit('CURRENT_ITEM', {id})
         context.commit('CURRENT_ITEM_CONTENT', { text })
@@ -232,20 +233,32 @@ function outlineToItem (outline, item, idBase, counter, textItems) {
   if (!outline.heading) {
     return
   }
-  counter = counter + 1
+  counter = +counter + 1
   item.id = idBase + '-' + counter
-  item.name = outline.heading.innerText.replace(/\n/g, '').replace(/\[.*?\]/i, '')
-  textItems[item.id] = '<h1>Outline Content</h1>'
+  item.name = getHeadingText(outline.heading.innerText)
   item.t = item.id
   const sections = outline.sections
-  if (!sections || !sections.length) { return }
+  const foo = getHTMLFromSection(outline)
+  textItems[item.id] = foo //  if (!sections || !sections.length) { return }
   item.children = []
   sections.forEach((section, i) => {
     let childItem = {}
-    outlineToItem(section, childItem, idBase + i, counter, textItems)
+    outlineToItem(section, childItem, +idBase + i, counter, textItems)
     item.children.push(childItem)
   })
   return item
+}
+function getHeadingText (h) {
+  return h.replace(/\n/g, '').replace(/\[.*?\]/i, '').trim()
+}
+function getHTMLFromSection (outline) {
+  const html = []
+  const sections = outline.sections
+  sections.forEach(section => {
+    html.push('\u00AB ' + getHeadingText(section.heading.innerText) + ' \u00BB<br>')
+  })
+  return html.join()
+  // return ('section html')
 }
 function showD3Board (context, title, id) {
   let text = `<d3-board/>`

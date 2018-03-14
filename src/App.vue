@@ -74,6 +74,7 @@
 
 @import './assets/global.sass'
 @import './assets/vue-instant.css'
+@import './assets/wikipedia.css'
 @import '~leaflet/dist/leaflet.css'
 
 $mycolor: #2c3e50
