@@ -192,34 +192,62 @@ function showPageOutline (context, item, id) {
     let site = url
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
     let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
-
     // mw-content-ltr
     axios.get(resturl)
       .then((response) => {
-        const dummy = document.createElement('blockquote')
+        let dummy = document.getElementById('dummy')
+        if (dummy) {
+          dummy.outerHTML = ''
+        }
+        dummy = document.createElement('blockquote')
         dummy.setAttribute('id', 'dummy')
         dummy.style.display = 'none'
         document.body.appendChild(dummy)
         const html = response.data.query.results.result
         dummy.innerHTML = html
-        let contentHTML = dummy.getElementsByClassName('mw-content-ltr')[0].innerHTML
-        contentHTML = '<div>' + contentHTML + '</div>'
-        contentHTML = contentHTML.replace(/\/wiki\//g, 'http://www.wikipedia.org/wiki/')
-        contentHTML = contentHTML.replace(/href="http:\/\/www.wikipedia.org/g, ' target="_blank" href="http://www.wikipedia.org')
+        let contentHTML = html
+        let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
+        if (wikiContentEl) {
+          contentHTML = wikiContentEl.innerHTML
+        }
+        contentHTML = '<div class="outline-pane">' +
+          '<div class="note-box">' +
+          'Downloaded from ' +
+          site +
+          '</div>' +
+          contentHTML +
+          '</div>'
+        contentHTML = contentHTML.replace(/href="\//g, 'target="_blank" href="http://www.wikipedia.org/')
+        // contentHTML = contentHTML.replace(/\/static\//g, 'http://www.wikipedia.org/static/')
+        // contentHTML = contentHTML.replace(/href="http:\/\/www.wikipedia.org/g, ' target="_blank" href="http://www.wikipedia.org')
         const outline = HTML5Outline(dummy)
-        console.log('OO', outline)
         const outlineItem = {}
         const textItems = {}
-        outlineToItem(outline.sections[0], outlineItem, item.id, 0, textItems)
-        const text = contentHTML //
-        textItems[id] = text // contentHTML
+        counter = 0 // TODO: refactor this to remove external var
+        outlineToItem(outline.sections[0], outlineItem, item.id, textItems)
+        _.remove(outlineItem.children, c => c.name === 'Contents')
+        const fullContentItem = {
+          id: id + '-0',
+          name: 'Full Page Content',
+          t: id + '-0'
+        }
+        outlineItem.children.unshift(fullContentItem)
+        // const text = '' // contentHTML //
+        const lines = []
+        getPriorContent(document.getElementById('toc').previousElementSibling, lines)
+        let priorContent = lines.reverse().join('')
+        textItems[id + '-' + 1] = '<div class="fp-pane">' +
+          priorContent +
+          textItems[id + '-' + 1] + '</div>'
+        textItems[id] = textItems[id + '-' + 1] // contentHTML
+        textItems[id + '-0'] = contentHTML
         item.t = id
         context.commit('ADDTEXT', {text: textItems})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
         // context.dispatch('setCurrentItem', {id})
         context.commit('CURRENT_ITEM', {id})
-        context.commit('CURRENT_ITEM_CONTENT', { text })
+        context.commit('CURRENT_ITEM_CONTENT', { text: textItems[id] })
         item.children = outlineItem.children
         resolve(true)
       })
@@ -229,7 +257,57 @@ function showPageOutline (context, item, id) {
       })
   })
 }
-function outlineToItem (outline, item, idBase, counter, textItems) {
+
+/**
+ * Used by outlines
+ * @param startNode
+ * @param lines
+ */
+function getLeadContent (startNode, lines) {
+  const sectionTags = ['H1', 'H2', 'H3', 'H4', 'H5']
+  if (sectionTags.indexOf(startNode.tagName) > -1) {
+    return
+  }
+  const nextSibling = startNode.nextElementSibling
+  if (!nextSibling) { return }
+  const cleanedHTML = cleanHTML(startNode.outerHTML)
+  lines.push(cleanedHTML)
+  getLeadContent(nextSibling, lines)
+}
+
+/**
+ * Need this to fix html after retrieve from DOM
+ * @param html
+ * @returns {*}
+ */
+function cleanHTML (html) {
+  html = html.replace(/>\s+?,/g, '>,')
+  html = html.replace(/>\s+?\./g, '>.')
+  html = html.replace(/>\s+?["]/g, '>,"')
+  // html = html.replace(/>\s+?[.]/g, '.')
+  return html
+}
+
+/**
+ * For outlines: section prior to 2nd heading (for sites like Wikipedia
+ * that don't have siblings to first heading).
+ * @param startNode
+ * @param lines
+ */
+function getPriorContent (startNode, lines) {
+  const sectionTags = ['H1', 'H2', 'H3', 'H4', 'H5']
+  if (sectionTags.indexOf(startNode.tagName) > -1) {
+    return
+  }
+  const prevSibling = startNode.previousElementSibling
+  if (!prevSibling) { return }
+  lines.push(cleanHTML(startNode.outerHTML))
+  getPriorContent(prevSibling, lines)
+}
+
+// TODO: do this without external var
+let counter = 0
+function outlineToItem (outline, item, idBase, textItems) {
   if (!outline.heading) {
     return
   }
@@ -238,12 +316,12 @@ function outlineToItem (outline, item, idBase, counter, textItems) {
   item.name = getHeadingText(outline.heading.innerText)
   item.t = item.id
   const sections = outline.sections
-  const foo = getHTMLFromSection(outline)
-  textItems[item.id] = foo //  if (!sections || !sections.length) { return }
+  const html = getHTMLFromSection(outline)
+  textItems[item.id] = html //  if (!sections || !sections.length) { return }
   item.children = []
   sections.forEach((section, i) => {
     let childItem = {}
-    outlineToItem(section, childItem, +idBase + i, counter, textItems)
+    outlineToItem(section, childItem, +idBase, textItems)
     item.children.push(childItem)
   })
   return item
@@ -254,11 +332,25 @@ function getHeadingText (h) {
 function getHTMLFromSection (outline) {
   const html = []
   const sections = outline.sections
+  let content = ''
+  const nextSibling = outline.startingNode.nextElementSibling
+  if (nextSibling) {
+    const contentArray = []
+    getLeadContent(nextSibling, contentArray)
+    content = contentArray.join('')
+  }
+  if (content) {
+    html.push(content)
+  }
   sections.forEach(section => {
-    html.push('\u00AB ' + getHeadingText(section.heading.innerText) + ' \u00BB<br>')
+    let heading = getHeadingText(section.heading.innerText)
+    if (heading === 'Contents') { return } // wikipedia specific
+    heading = `<sectionlink :title="'${heading}'"/>`
+    if (heading) {
+      html.push(heading)
+    }
   })
-  return html.join()
-  // return ('section html')
+  return '<div class="outline-pane">' + html.join('<br>') + '</div>'
 }
 function showD3Board (context, title, id) {
   let text = `<d3-board/>`
@@ -699,7 +791,6 @@ export default new Vuex.Store({
       state.contentItemsUpdateCount = state.contentItemsUpdateCount + 1
     },
     CURRENT_ITEM (state, o) {
-      // console.log('COMMIT CURRENT ITEM')
       const id = o.id
       // check current for identical
       if (o.id === state.currentItem.id) {
@@ -764,7 +855,6 @@ export default new Vuex.Store({
         if (data.namespace === 'leovue' && data.eventName === 'setcurrentitem') {
           const id = data.state.id
           context.dispatch('setCurrentItem', {id})
-          console.log('setcurrentitem', id)
         }
         if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
           const id = data.state.indexh
@@ -789,9 +879,6 @@ export default new Vuex.Store({
       const ids = o.ids
       ids.forEach(id => {
         let item = JSON.search(context.state.leodata, '//children[id="' + id + '"]')
-        if (!item[0]) {
-          console.log(item, id, context.state.leodata)
-        }
         if (item && item[0]) {
           item = item[0]
           // if it starts with a bracket it is a link in markdown syntax
@@ -846,7 +933,6 @@ export default new Vuex.Store({
         context.commit('OPEN_ITEMS', {openItemIds})
       }
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
-      console.log('Current Item:', item)
       context.commit('CURRENT_ITEM', {id})
       if (_.get(item, '[0].presentation')) {
         context.commit('CURRENT_PAGE', {id: 0})
@@ -874,7 +960,6 @@ export default new Vuex.Store({
           // context.commit('CURRENT_ITEM', {id: item.children[0].presentation.pid})
           // context.commit('CURRENT_PAGE', {id})
           // context.commit('CURRENT_PAGE', {id: 0})
-          // console.log('Showing Section presentation.', item.name, context.state.currentItem.id)
           return showPresentation(context, item.name, id)
         }
         // bracket means load file/site
@@ -891,7 +976,6 @@ export default new Vuex.Store({
             setSiteItem(context, item.name, id)
           }
         } else {
-          // console.log(item.t)
           showText(context, context.state.leotext[item.t], id)
         }
         // if it is a page in a presentation

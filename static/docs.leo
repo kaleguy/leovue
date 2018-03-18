@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue@1.6.7/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -49,7 +49,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -63,6 +63,8 @@
 </v>
 <v t="josephorr.20180306193229.1" a="E"><vh>Outline Nodes</vh>
 <v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
+<v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
+<v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 </v>
 <v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
@@ -445,7 +447,9 @@ An example of HTML content.
   &lt;/p&gt;
 &lt;/div&gt;
  </t>
-<t tx="josephorr.20170304174421.1">Content items in Leo outlines can be plain text.</t>
+<t tx="josephorr.20170304174421.1">@language text
+
+Content items in Leo outlines can be plain text.</t>
 <t tx="josephorr.20170304174436.1">This is just some regular text.
 
 And now for some hipster ipsum:
@@ -461,7 +465,9 @@ Use the @language md directive to set the node to markdown.</t>
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
-<t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
+<t tx="josephorr.20170326174500.1">@language text
+
+This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
@@ -1945,5 +1951,7 @@ The title of the node in the Leo file is:
 This feature currently only supports the outline creation, the node content does not display.
 </t>
 <t tx="josephorr.20180306193346.1"></t>
+<t tx="josephorr.20180318101739.1"></t>
+<t tx="josephorr.20180318131630.1"></t>
 </tnodes>
 </leo_file>

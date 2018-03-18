@@ -96,6 +96,9 @@ function formatText (text, noWrapper) {
   }
   let mu = ''
   switch (language) {
+    case 'text':
+      text = `<div class="text">${text}</div>`
+      break
     case 'plaintext':
       text = `<div class="text">${text}</div>`
       break
