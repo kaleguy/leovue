@@ -217,7 +217,7 @@ function showPageOutline (context, item, id) {
           '</div>' +
           contentHTML +
           '</div>'
-        contentHTML = contentHTML.replace(/href="\//g, 'target="_blank" href="http://www.wikipedia.org/')
+        contentHTML = replaceRelLinks('www.wikipedia.org', contentHTML)
         // contentHTML = contentHTML.replace(/\/static\//g, 'http://www.wikipedia.org/static/')
         // contentHTML = contentHTML.replace(/href="http:\/\/www.wikipedia.org/g, ' target="_blank" href="http://www.wikipedia.org')
         const outline = HTML5Outline(dummy)
@@ -257,6 +257,13 @@ function showPageOutline (context, item, id) {
       })
   })
 }
+// TODO: possibly replace this with util.replaceRelUrls
+function replaceRelLinks (host, content) {
+  content = content.replace(/href="\//g, 'target="_blank" href="http://' + host + '/')
+  content = content.replace(/src="\//g, 'src="http://' + host + '/')
+  content = content.replace(/srcset="\//g, 'srcset="http://' + host + '/')
+  return content
+}
 
 /**
  * Used by outlines
@@ -284,6 +291,7 @@ function cleanHTML (html) {
   html = html.replace(/>\s+?,/g, '>,')
   html = html.replace(/>\s+?\./g, '>.')
   html = html.replace(/>\s+?["]/g, '>,"')
+  html = replaceRelLinks('www.wikipedia.org', html)
   // html = html.replace(/>\s+?[.]/g, '.')
   return html
 }
