@@ -199,17 +199,27 @@ function showPageOutline (context, item, id) {
         if (dummy) {
           dummy.outerHTML = ''
         }
-        dummy = document.createElement('blockquote')
+        dummy = document.createElement('section')
         dummy.setAttribute('id', 'dummy')
         dummy.style.display = 'none'
         document.body.appendChild(dummy)
-        const html = response.data.query.results.result
+        let html = response.data.query.results.result
+        // nasty hack to get some pages on wikipedia fixed TODO: replace this with a parser
+        let bad1 = html.indexOf('<div class="toccolours searchaux"')
+        if (bad1) {
+          let bad2 = html.indexOf('<div class="hatnote navigation-not-searchable"', bad1)
+          html = html.substring(0, bad1) + html.substring(bad2)
+        }
+        html = html.replace(/<script(?:(?!\/\/)(?!\/\*)[^'"]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/.*(?:\n)|\/\*(?:(?:.|\s))*?\*\/)*?<\/script>/g, '')
+        html = cleanHTML(html)
         dummy.innerHTML = html
         let contentHTML = html
         let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
         if (wikiContentEl) {
+          console.log('WW', wikiContentEl)
           contentHTML = wikiContentEl.innerHTML
         }
+        // contentHTML = cleanHTML(contentHTML)
         contentHTML = '<div class="outline-pane">' +
           '<div class="note-box">' +
           'Downloaded from ' +
@@ -217,9 +227,6 @@ function showPageOutline (context, item, id) {
           '</div>' +
           contentHTML +
           '</div>'
-        contentHTML = replaceRelLinks('www.wikipedia.org', contentHTML)
-        // contentHTML = contentHTML.replace(/\/static\//g, 'http://www.wikipedia.org/static/')
-        // contentHTML = contentHTML.replace(/href="http:\/\/www.wikipedia.org/g, ' target="_blank" href="http://www.wikipedia.org')
         const outline = HTML5Outline(dummy)
         const outlineItem = {}
         const textItems = {}
@@ -259,8 +266,8 @@ function showPageOutline (context, item, id) {
 }
 // TODO: possibly replace this with util.replaceRelUrls
 function replaceRelLinks (host, content) {
-  content = content.replace(/href="\//g, 'target="_blank" href="http://' + host + '/')
-  content = content.replace(/src="\//g, 'src="http://' + host + '/')
+  content = content.replace(/href="\/[a-zA-Z]/g, 'target="_blank" href="http://' + host + '/')
+  content = content.replace(/src="\/[a-zA-Z]/g, 'src="http://' + host + '/')
   content = content.replace(/srcset="\//g, 'srcset="http://' + host + '/')
   return content
 }
