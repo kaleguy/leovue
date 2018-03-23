@@ -128,6 +128,9 @@ function loadLeoNode (context, item) {
   }).catch(e => console.log('Error: ', e))
   return p
 }
+function loadOutlineNode (context, item) {
+  console.log('Loading Outline', item.name)
+}
 function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   title = title.replace(/^@[a-zA-Z]*? /, '')
@@ -197,6 +200,7 @@ function showPageOutline (context, item, id) {
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
     let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
     // mw-content-ltr
+    context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
     axios.get(resturl)
       .then((response) => {
         let dummy = document.getElementById('dummy')
@@ -419,7 +423,7 @@ function setSiteItem (context, title, id) {
   console.log(label) // TODO: remove this, it is here for eshint
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
-  // TODO: add spinner
+  context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
   if (ext === 'md') {
     axios.get(url)
       .then((response) => {
@@ -490,6 +494,7 @@ function setData (context, ldata, filename, route) {
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
   const path = route.path
+  // see if the path includes a subtree
   let npath = null
   if (path) {
     npath = path.substring(path.indexOf('/', 2) + 1)
@@ -534,8 +539,12 @@ function loadPresentation (id, pages) {
 function loadSubtrees (context, trees, data) {
   if (!trees.length) { return Promise.resolve() }
   const p = new Promise((resolve, reject) => {
+    context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
     // TODO: this just loads the first subtree, need to load all
     let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
+    if (/^@outline/.test(item.name)) {
+      return loadOutlineNode(context, item)
+    }
     loadLeoNode(context, item).then(res => resolve(res))
   })
   return p

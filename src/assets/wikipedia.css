@@ -709,3 +709,39 @@ LI.gallerybox {
 #mw-navigation {
   display: none;
 }
+
+.single10 {
+  height: 100px;
+  width: 100px;
+  border: 8px solid #A2DED0;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: single10anim 2s infinite linear;
+  animation: single10anim 2s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single10:before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #16A085;
+  position: absolute;
+  top: -5px;
+  left: 28px;
+}
+
+@-webkit-keyframes single10anim {
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes single10anim {
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+.spin-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
