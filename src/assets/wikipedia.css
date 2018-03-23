@@ -706,3 +706,6 @@ LI.gallerybox {
 }
 #Container {
 }
+.mw-navigation {
+  display: none;
+}
