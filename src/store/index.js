@@ -195,7 +195,7 @@ function showPageOutline (context, item, id) {
     let host = t.host
     console.log('HOST', host)
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
-    let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
+    let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
     // mw-content-ltr
     axios.get(resturl)
       .then((response) => {
