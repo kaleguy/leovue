@@ -269,10 +269,10 @@ function showPageOutline (context, item, id) {
 }
 // TODO: possibly replace this with util.replaceRelUrls
 function replaceRelLinks (host, content) {
-  content = content.replace(/href="\/([a-zA-Z])/g, 'target="_blank" href="http://' + host + '/$1')
-  content = content.replace(/src="\/([a-zA-Z])/g, 'src="http://' + host + '/$1')
-  content = content.replace(/srcset="\//g, 'srcset="http://' + host + '/')
-  content = content.replace(/, \/static\/images/g, ', ' + 'http://' + host + '/static/images')
+  content = content.replace(/href="\/([a-zA-Z])/g, 'target="_blank" href="//' + host + '/$1')
+  content = content.replace(/src="\/([a-zA-Z])/g, 'src="//' + host + '/$1')
+  content = content.replace(/srcset="\//g, 'srcset="//' + host + '/')
+  content = content.replace(/, \/static\/images/g, ', ' + '//' + host + '/static/images')
   return content
 }
 
