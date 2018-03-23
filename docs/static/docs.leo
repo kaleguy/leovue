@@ -21,12 +21,12 @@
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue@1.6.7/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using Leo Vue</vh>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -46,10 +46,10 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
 </v>
-<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
+<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -61,8 +61,10 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180306193229.1" a="E"><vh>Outline Nodes</vh>
+<v t="josephorr.20180306193229.1"><vh>Outline Nodes</vh>
 <v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
+<v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
+<v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 </v>
 <v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
@@ -153,7 +155,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -445,7 +447,9 @@ An example of HTML content.
   &lt;/p&gt;
 &lt;/div&gt;
  </t>
-<t tx="josephorr.20170304174421.1">Content items in Leo outlines can be plain text.</t>
+<t tx="josephorr.20170304174421.1">@language text
+
+Content items in Leo outlines can be plain text.</t>
 <t tx="josephorr.20170304174436.1">This is just some regular text.
 
 And now for some hipster ipsum:
@@ -461,7 +465,9 @@ Use the @language md directive to set the node to markdown.</t>
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
-<t tx="josephorr.20170326174500.1">This section contains a brief introduction to some of the features of Leo.</t>
+<t tx="josephorr.20170326174500.1">@language text
+
+This section contains a brief introduction to some of the features of Leo.</t>
 <t tx="josephorr.20170326174511.1">@language html
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
@@ -1945,5 +1951,7 @@ The title of the node in the Leo file is:
 This feature currently only supports the outline creation, the node content does not display.
 </t>
 <t tx="josephorr.20180306193346.1"></t>
+<t tx="josephorr.20180318101739.1"></t>
+<t tx="josephorr.20180318131630.1"></t>
 </tnodes>
 </leo_file>
