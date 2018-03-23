@@ -6,6 +6,7 @@ import axios from 'axios'
 import _ from 'lodash'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
+const parserURI = require('uri-parse-lib')
 const HTML5Outline = require('h5o')
 const util = require('../util.js')
 const md = require('markdown-it')({
@@ -190,6 +191,9 @@ function showPageOutline (context, item, id) {
     let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
     if (!url) { return }
     let site = url
+    const t = parserURI(url)
+    let host = t.host
+    console.log('HOST', host)
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
     let resturl = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
     // mw-content-ltr
@@ -211,12 +215,11 @@ function showPageOutline (context, item, id) {
           html = html.substring(0, bad1) + html.substring(bad2)
         }
         html = html.replace(/<script(?:(?!\/\/)(?!\/\*)[^'"]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/.*(?:\n)|\/\*(?:(?:.|\s))*?\*\/)*?<\/script>/g, '')
-        html = cleanHTML(html)
+        html = cleanHTML(html, host)
         dummy.innerHTML = html
         let contentHTML = html
         let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
         if (wikiContentEl) {
-          console.log('WW', wikiContentEl)
           contentHTML = wikiContentEl.innerHTML
         }
         // contentHTML = cleanHTML(contentHTML)
@@ -231,7 +234,7 @@ function showPageOutline (context, item, id) {
         const outlineItem = {}
         const textItems = {}
         counter = 0 // TODO: refactor this to remove external var
-        outlineToItem(outline.sections[0], outlineItem, item.id, textItems)
+        outlineToItem(outline.sections[0], outlineItem, item.id, textItems, host)
         _.remove(outlineItem.children, c => c.name === 'Contents')
         const fullContentItem = {
           id: id + '-0',
@@ -241,7 +244,7 @@ function showPageOutline (context, item, id) {
         outlineItem.children.unshift(fullContentItem)
         // const text = '' // contentHTML //
         const lines = []
-        getPriorContent(document.getElementById('toc').previousElementSibling, lines)
+        getPriorContent(document.getElementById('toc').previousElementSibling, lines, host)
         let priorContent = lines.reverse().join('')
         textItems[id + '-' + 1] = '<div class="fp-pane">' +
           priorContent +
@@ -266,9 +269,10 @@ function showPageOutline (context, item, id) {
 }
 // TODO: possibly replace this with util.replaceRelUrls
 function replaceRelLinks (host, content) {
-  content = content.replace(/href="\/[a-zA-Z]/g, 'target="_blank" href="http://' + host + '/')
-  content = content.replace(/src="\/[a-zA-Z]/g, 'src="http://' + host + '/')
+  content = content.replace(/href="\/([a-zA-Z])/g, 'target="_blank" href="http://' + host + '/$1')
+  content = content.replace(/src="\/([a-zA-Z])/g, 'src="http://' + host + '/$1')
   content = content.replace(/srcset="\//g, 'srcset="http://' + host + '/')
+  content = content.replace(/, \/static\/images/g, ', ' + 'http://' + host + '/static/images')
   return content
 }
 
@@ -277,16 +281,16 @@ function replaceRelLinks (host, content) {
  * @param startNode
  * @param lines
  */
-function getLeadContent (startNode, lines) {
+function getLeadContent (startNode, lines, host) {
   const sectionTags = ['H1', 'H2', 'H3', 'H4', 'H5']
   if (sectionTags.indexOf(startNode.tagName) > -1) {
     return
   }
   const nextSibling = startNode.nextElementSibling
   if (!nextSibling) { return }
-  const cleanedHTML = cleanHTML(startNode.outerHTML)
+  const cleanedHTML = cleanHTML(startNode.outerHTML, host)
   lines.push(cleanedHTML)
-  getLeadContent(nextSibling, lines)
+  getLeadContent(nextSibling, lines, host)
 }
 
 /**
@@ -294,11 +298,11 @@ function getLeadContent (startNode, lines) {
  * @param html
  * @returns {*}
  */
-function cleanHTML (html) {
+function cleanHTML (html, host) {
   html = html.replace(/>\s+?,/g, '>,')
   html = html.replace(/>\s+?\./g, '>.')
   html = html.replace(/>\s+?["]/g, '>,"')
-  html = replaceRelLinks('www.wikipedia.org', html)
+  html = replaceRelLinks(host, html)
   // html = html.replace(/>\s+?[.]/g, '.')
   return html
 }
@@ -309,20 +313,20 @@ function cleanHTML (html) {
  * @param startNode
  * @param lines
  */
-function getPriorContent (startNode, lines) {
+function getPriorContent (startNode, lines, host) {
   const sectionTags = ['H1', 'H2', 'H3', 'H4', 'H5']
   if (sectionTags.indexOf(startNode.tagName) > -1) {
     return
   }
   const prevSibling = startNode.previousElementSibling
   if (!prevSibling) { return }
-  lines.push(cleanHTML(startNode.outerHTML))
+  lines.push(cleanHTML(startNode.outerHTML, host))
   getPriorContent(prevSibling, lines)
 }
 
 // TODO: do this without external var
 let counter = 0
-function outlineToItem (outline, item, idBase, textItems) {
+function outlineToItem (outline, item, idBase, textItems, host) {
   if (!outline.heading) {
     return
   }
@@ -331,12 +335,12 @@ function outlineToItem (outline, item, idBase, textItems) {
   item.name = getHeadingText(outline.heading.innerText)
   item.t = item.id
   const sections = outline.sections
-  const html = getHTMLFromSection(outline)
+  const html = getHTMLFromSection(outline, host)
   textItems[item.id] = html //  if (!sections || !sections.length) { return }
   item.children = []
   sections.forEach((section, i) => {
     let childItem = {}
-    outlineToItem(section, childItem, +idBase, textItems)
+    outlineToItem(section, childItem, +idBase, textItems, host)
     item.children.push(childItem)
   })
   return item
@@ -344,14 +348,14 @@ function outlineToItem (outline, item, idBase, textItems) {
 function getHeadingText (h) {
   return h.replace(/\n/g, '').replace(/\[.*?\]/i, '').trim()
 }
-function getHTMLFromSection (outline) {
+function getHTMLFromSection (outline, host) {
   const html = []
   const sections = outline.sections
   let content = ''
   const nextSibling = outline.startingNode.nextElementSibling
   if (nextSibling) {
     const contentArray = []
-    getLeadContent(nextSibling, contentArray)
+    getLeadContent(nextSibling, contentArray, host)
     content = contentArray.join('')
   }
   if (content) {
