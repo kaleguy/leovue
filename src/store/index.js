@@ -536,13 +536,13 @@ function loadPresentation (id, pages) {
 
 function loadSubtrees (context, trees, data, topId) {
   if (!trees.length) { return Promise.resolve() }
+  let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
+  context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
+  if (/^@outline/.test(item.name)) {
+    return showPageOutline(context, item, topId)
+  }
   const p = new Promise((resolve, reject) => {
-    context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
     // TODO: this just loads the first subtree, need to load all in trees array for case of nested subtrees
-    let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
-    if (/^@outline/.test(item.name)) {
-      return showPageOutline(context, item, topId)
-    }
     loadLeoNode(context, item).then(res => resolve(res))
   })
   return p
@@ -936,6 +936,7 @@ export default new Vuex.Store({
       }
       context.commit('CURRENT_PAGE', {id})
     },
+    // TODO: this is being called by loadSubtrees, fix logic (duplicate for openitems)
     setCurrentItem (context, o) {
       const id = o.id
       if (o.id === context.state.currentItem.id) { return }
