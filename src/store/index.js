@@ -128,9 +128,6 @@ function loadLeoNode (context, item) {
   }).catch(e => console.log('Error: ', e))
   return p
 }
-function loadOutlineNode (context, item) {
-  console.log('Loading Outline', item.name)
-}
 function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   title = title.replace(/^@[a-zA-Z]*? /, '')
@@ -190,16 +187,17 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_PANE', { type: 'board' })
 }
 function showPageOutline (context, item, id) {
+  if (!id) {
+    id = item.id
+  }
   return new Promise((resolve, reject) => {
     let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
     if (!url) { return }
     let site = url
     const t = parserURI(url)
     let host = t.host
-    console.log('HOST', host)
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
     let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
-    // mw-content-ltr
     context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
     axios.get(resturl)
       .then((response) => {
@@ -212,16 +210,16 @@ function showPageOutline (context, item, id) {
         dummy.style.display = 'none'
         document.body.appendChild(dummy)
         let html = response.data.query.results.result
-        // nasty hack to get some pages on wikipedia fixed TODO: replace this with a parser
+        // nasty hack to fix some pages on wikipedia (evolution chart is missing a tag) TODO: replace this with a parser
         let bad1 = html.indexOf('<div class="toccolours searchaux"')
         if (bad1) {
           let bad2 = html.indexOf('<div class="hatnote navigation-not-searchable"', bad1)
           html = html.substring(0, bad1) + html.substring(bad2)
         }
-        html = html.replace(/<script(?:(?!\/\/)(?!\/\*)[^'"]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/.*(?:\n)|\/\*(?:(?:.|\s))*?\*\/)*?<\/script>/g, '')
         html = cleanHTML(html, host)
         dummy.innerHTML = html
         let contentHTML = html
+        // select subnode if wikipedia
         let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
         if (wikiContentEl) {
           contentHTML = wikiContentEl.innerHTML
@@ -241,25 +239,23 @@ function showPageOutline (context, item, id) {
         outlineToItem(outline.sections[0], outlineItem, item.id, textItems, host)
         _.remove(outlineItem.children, c => c.name === 'Contents')
         const fullContentItem = {
-          id: id + '-0',
+          id: item.id + '-0',
           name: 'Full Page Content',
-          t: id + '-0'
+          t: item.id + '-0'
         }
         outlineItem.children.unshift(fullContentItem)
-        // const text = '' // contentHTML //
         const lines = []
         getPriorContent(document.getElementById('toc').previousElementSibling, lines, host)
         let priorContent = lines.reverse().join('')
-        textItems[id + '-' + 1] = '<div class="fp-pane">' +
+        textItems[item.id + '-' + 1] = '<div class="fp-pane">' +
           priorContent +
-          textItems[id + '-' + 1] + '</div>'
-        textItems[id] = textItems[id + '-' + 1] // contentHTML
-        textItems[id + '-0'] = contentHTML
-        item.t = id
+          textItems[item.id + '-' + 1] + '</div>'
+        textItems[item.id] = textItems[id + '-' + 1] // contentHTML
+        textItems[item.id + '-0'] = contentHTML
+        item.t = item.id
         context.commit('ADDTEXT', {text: textItems})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
-        // context.dispatch('setCurrentItem', {id})
         context.commit('CURRENT_ITEM', {id})
         context.commit('CURRENT_ITEM_CONTENT', { text: textItems[id] })
         item.children = outlineItem.children
@@ -303,6 +299,8 @@ function getLeadContent (startNode, lines, host) {
  * @returns {*}
  */
 function cleanHTML (html, host) {
+  // remove script tags
+  html = html.replace(/<script(?:(?!\/\/)(?!\/\*)[^'"]|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/.*(?:\n)|\/\*(?:(?:.|\s))*?\*\/)*?<\/script>/g, '')
   html = html.replace(/>\s+?,/g, '>,')
   html = html.replace(/>\s+?\./g, '>.')
   html = html.replace(/>\s+?["]/g, '>,"')
@@ -503,7 +501,7 @@ function setData (context, ldata, filename, route) {
   if (npath) {
     subtrees = getRoots([], npath)
   }
-  loadSubtrees(context, subtrees, ldata.data).then(() => {
+  loadSubtrees(context, subtrees, ldata.data, id).then(() => {
     const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
     if (!openItems) { return }
     if (!openItems.length) { return }
@@ -536,14 +534,14 @@ function loadPresentation (id, pages) {
   })
 }
 
-function loadSubtrees (context, trees, data) {
+function loadSubtrees (context, trees, data, topId) {
   if (!trees.length) { return Promise.resolve() }
   const p = new Promise((resolve, reject) => {
     context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
-    // TODO: this just loads the first subtree, need to load all
+    // TODO: this just loads the first subtree, need to load all in trees array for case of nested subtrees
     let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
     if (/^@outline/.test(item.name)) {
-      return loadOutlineNode(context, item)
+      return showPageOutline(context, item, topId)
     }
     loadLeoNode(context, item).then(res => resolve(res))
   })
