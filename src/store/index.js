@@ -186,7 +186,16 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showPageOutline (context, item, id) {
+
+/**
+ * Create Leo outline from target url
+ * @param context
+ * @param item
+ * @param id
+ * @param subpath {String} If a literate url has been used, this is the subpath, e.g Dinosaur@Eytomology, 'Eytomology' will be thee subpath
+ * @returns {Promise<any>}
+ */
+function showPageOutline (context, item, id, subpath) {
   if (!id) {
     id = item.id
   }
@@ -219,12 +228,11 @@ function showPageOutline (context, item, id) {
         html = cleanHTML(html, host)
         dummy.innerHTML = html
         let contentHTML = html
-        // select subnode if wikipedia
+        // HACK select subnode if wikipedia
         let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
         if (wikiContentEl) {
           contentHTML = wikiContentEl.innerHTML
         }
-        // contentHTML = cleanHTML(contentHTML)
         contentHTML = '<div class="outline-pane">' +
           '<div class="note-box">' +
           'Downloaded from ' +
@@ -256,6 +264,10 @@ function showPageOutline (context, item, id) {
         context.commit('ADDTEXT', {text: textItems})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
+        if (subpath) {
+          let pathObj = translatePath(subpath, context.state.leodata)
+          id = pathObj.npath
+        }
         context.commit('CURRENT_ITEM', {id})
         context.commit('CURRENT_ITEM_CONTENT', { text: textItems[id] })
         item.children = outlineItem.children
@@ -481,7 +493,9 @@ function setData (context, ldata, filename, route) {
   setChildDirectives(context, ldata)
   // TODO: refactor use of id vs route.path
   let id = route.params.id
-  id = translatePath(id, ldata.data)
+  // check if path is a literate path, translate to number (look up matching node name)
+  const pathObj = translatePath(id, ldata.data)
+  id = pathObj.npath
   if (!id) {
     id = '1'
   }
@@ -500,13 +514,15 @@ function setData (context, ldata, filename, route) {
     npath = path.substring(path.indexOf('/', 2) + 1)
   }
   let subtrees = []
+  let subpath = '' // case of literate path in subtree
   if (npath) {
-    // translate a literate path to number
-    npath = translatePath(npath, ldata.data)
+    // translate a literate path to number, TODO: remove duplicate, this is called above
+    ({ npath, subpath } = translatePath(npath, ldata.data))
     // a subtree is a leo file loaded at a node
     subtrees = getRoots([], npath)
   }
-  loadSubtrees(context, subtrees, ldata.data, id).then(() => {
+  loadSubtrees(context, subtrees, ldata.data, id, subpath).then(() => {
+    context.commit('SUBPATH', {subpath})
     const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
     if (!openItems) { return }
     if (!openItems.length) { return }
@@ -523,7 +539,13 @@ function setData (context, ldata, filename, route) {
 }
 function translatePath (p, d) {
   let item = null
+  let subpath = ''
   if (/^[A-Za-z]/.test(p)) {
+    let uArray = p.split('*')
+    if (uArray.length > 1) {
+      p = uArray[0]
+      subpath = _.last(uArray)
+    }
     let pArray = p.split('~')
     let p2 = ''
     if (pArray.length === 2) {
@@ -533,7 +555,8 @@ function translatePath (p, d) {
     if (p2) {
       item = JSON.search(d, '//*[name="' + p + '" and boolean(ancestor::*[name="' + p2 + '"])]')
     } else {
-      item = JSON.search(d, '//*[name="' + p + '"]')
+      // item = JSON.search(d, '//*[name="' + p + '"]')
+      item = JSON.search(d, '//*[name[contains(.,"' + p + '")]]')
     }
     if (item && item[0]) {
       p = item[0].id
@@ -541,7 +564,7 @@ function translatePath (p, d) {
       p = '1'
     }
   }
-  return p
+  return { npath: p, subpath }
 }
 function loadPresentations (data, loadSections) {
   let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
@@ -561,15 +584,16 @@ function loadPresentation (id, pages) {
   })
 }
 
-function loadSubtrees (context, trees, data, topId) {
+function loadSubtrees (context, trees, data, topId, subpath) {
   if (!trees.length) { return Promise.resolve() }
   let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
   context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
   if (/^@outline/.test(item.name)) {
-    return showPageOutline(context, item, topId)
+    return showPageOutline(context, item, topId, subpath)
   }
   const p = new Promise((resolve, reject) => {
     // TODO: this just loads the first subtree, need to load all in trees array for case of nested subtrees
+    // TODO: implement subPat in leo subtree
     loadLeoNode(context, item).then(res => resolve(res))
   })
   return p
@@ -752,7 +776,8 @@ export default new Vuex.Store({
     accordion: false,
     accordionPrev: false,
     searchFlag: false,
-    selecting: false // e.g. in search dialog using arrow keys
+    selecting: false, // e.g. in search dialog using arrow keys
+    subpath: ''
   },
   mutations: {
     ADDDATASET (state, o) {
@@ -887,7 +912,11 @@ export default new Vuex.Store({
       const ids = state.openItemIds
       ids.splice(0, ids.length)
       ids.push(...o.openItemIds)
+    },
+    SUBPATH (state, o) {
+      state.subpath = o.subpath
     }
+
   },
   actions: {
     setMessages (context) {
@@ -1003,7 +1032,9 @@ export default new Vuex.Store({
           return showMermaid(context, item.name, id)
         }
         if (/^@outline/.test(item.name)) {
-          return showPageOutline(context, item, id).then(
+          let mySubpath = context.state.subpath
+          context.commit('SUBPATH', { subpath: '' })
+          return showPageOutline(context, item, id, mySubpath).then(
             res => context.commit('RESETINDEX')
           )
         }
