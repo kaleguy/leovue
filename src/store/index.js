@@ -479,19 +479,21 @@ function setData (context, ldata, filename, route) {
   loadPresentations(ldata.data[0])
   setLanguageNodes(context, ldata)
   setChildDirectives(context, ldata)
+  // TODO: refactor use of id vs route.path
   let id = route.params.id
+  id = translatePath(id, ldata.data)
   if (!id) {
     id = '1'
   }
   // TODO: use vuex-router
-  const match = route.path.match(/\/(\w+)\//)
+  const match = route.path.match(/\/(\w)\//)
   let pathType = 't'
   if (match) {
     pathType = match[0]
   }
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
-  const path = route.path
+  let path = route.path
   // see if the path includes a subtree
   let npath = null
   if (path) {
@@ -499,6 +501,9 @@ function setData (context, ldata, filename, route) {
   }
   let subtrees = []
   if (npath) {
+    // translate a literate path to number
+    npath = translatePath(npath, ldata.data)
+    // a subtree is a leo file loaded at a node
     subtrees = getRoots([], npath)
   }
   loadSubtrees(context, subtrees, ldata.data, id).then(() => {
@@ -515,6 +520,28 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setContentItems', {ids})
     context.dispatch('setCurrentItem', {id})
   })
+}
+function translatePath (p, d) {
+  let item = null
+  if (/^[A-Za-z]/.test(p)) {
+    let pArray = p.split('~')
+    let p2 = ''
+    if (pArray.length === 2) {
+      p = _.last(pArray)
+      p2 = pArray[0]
+    }
+    if (p2) {
+      item = JSON.search(d, '//*[name="' + p + '" and boolean(ancestor::*[name="' + p2 + '"])]')
+    } else {
+      item = JSON.search(d, '//*[name="' + p + '"]')
+    }
+    if (item && item[0]) {
+      p = item[0].id
+    } else {
+      p = '1'
+    }
+  }
+  return p
 }
 function loadPresentations (data, loadSections) {
   let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
