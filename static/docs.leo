@@ -17,10 +17,11 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue@1.6.7/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
+<v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
@@ -46,10 +47,10 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170304175209.1"></v>
 </v>
-<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
+<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -67,7 +68,7 @@
 <v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -82,7 +83,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -1169,9 +1170,9 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.6.7
+Leo Vue is currently at version 1.7.1
 
-Leo Vue 1.6.x is currently is only tested in Chrome and may not display correctly in other browsers.
+Leo Vue 1.7.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1953,5 +1954,27 @@ This feature currently only supports the outline creation, the node content does
 <t tx="josephorr.20180306193346.1"></t>
 <t tx="josephorr.20180318101739.1"></t>
 <t tx="josephorr.20180318131630.1"></t>
+<t tx="josephorr.20180326061144.1">@language md
+
+A Leo Vue URL looks like this:
+
+https://kaleguy.github.io/leovue/#/t/8/
+
+The format is: # + display type + node number.
+
+You can use a more readable format for bookmarking or distributing URLs:
+
+https://kaleguy.github.io/leovue/#/t/More About Leo Vue
+
+In other words, you can replace the node number with the node title.
+
+You can also specify a parent node, using this syntax:
+
+https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something
+
+Nodes using the @outline directive (which loads and outlines a target site) use a different format,
+the outline node name must be specified first, then an asterisk, then the path.
+
+https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology</t>
 </tnodes>
 </leo_file>
