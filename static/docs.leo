@@ -1954,27 +1954,35 @@ This feature currently only supports the outline creation, the node content does
 <t tx="josephorr.20180306193346.1"></t>
 <t tx="josephorr.20180318101739.1"></t>
 <t tx="josephorr.20180318131630.1"></t>
-<t tx="josephorr.20180326061144.1">@language md
+<t tx="josephorr.20180326061144.1">@language html
 
+&lt;p&gt;
 A Leo Vue URL looks like this:
+&lt;/p&gt;
 
-[https://kaleguy.github.io/leovue/#/t/8/](https://kaleguy.github.io/leovue/#/t/8/)
+&lt;a href="https://kaleguy.github.io/leovue/#/t/8/"&gt;https://kaleguy.github.io/leovue/#/t/8/&lt;/a&gt;
 
+&lt;p&gt;
 The format is: # + display type + node number.
-
+&lt;/p&gt;
+&lt;p&gt;
 You can use a more readable format for bookmarking or distributing URLs:
-
-[https://kaleguy.github.io/leovue/#/t/More About Leo Vue](https://kaleguy.github.io/leovue/#/t/More About Leo Vue)
-
+&lt;/p&gt;
+&lt;a href="https://kaleguy.github.io/leovue/#/t/More About Leo Vue"&gt;https://kaleguy.github.io/leovue/#/t/More About Leo Vue&lt;/a&gt;
+&lt;p&gt;
 In other words, you can replace the node number with the node title.
-
+&lt;/p&gt;
+&lt;p&gt;
 You can also specify a parent node, using this syntax:
+&lt;/p&gt;
 
-[https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something](https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something)
+&lt;a href="https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something&lt;/a&gt;
 
+&lt;p&gt;
 Nodes using the @outline directive (which loads and outlines a target site) use a different format,
 the outline node name must be specified first, then an asterisk, then the path.
+&lt;/p&gt;
 
-[https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology](https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology)</t>
+&lt;a href="https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology"&gt;https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology&lt;/a&gt;</t>
 </tnodes>
 </leo_file>
