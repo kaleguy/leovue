@@ -1958,23 +1958,23 @@ This feature currently only supports the outline creation, the node content does
 
 A Leo Vue URL looks like this:
 
-https://kaleguy.github.io/leovue/#/t/8/
+[https://kaleguy.github.io/leovue/#/t/8/](https://kaleguy.github.io/leovue/#/t/8/)
 
 The format is: # + display type + node number.
 
 You can use a more readable format for bookmarking or distributing URLs:
 
-https://kaleguy.github.io/leovue/#/t/More About Leo Vue
+[https://kaleguy.github.io/leovue/#/t/More About Leo Vue](https://kaleguy.github.io/leovue/#/t/More About Leo Vue)
 
 In other words, you can replace the node number with the node title.
 
 You can also specify a parent node, using this syntax:
 
-https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something
+[https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something](https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something)
 
 Nodes using the @outline directive (which loads and outlines a target site) use a different format,
 the outline node name must be specified first, then an asterisk, then the path.
 
-https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology</t>
+[https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology](https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology)</t>
 </tnodes>
 </leo_file>
