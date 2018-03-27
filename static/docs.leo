@@ -1976,11 +1976,11 @@ In other words, you can replace the node number with the node title.
 You can also specify a parent node, using this syntax:
 &lt;/p&gt;
 
-&lt;a href="https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content::A Note About Something&lt;/a&gt;
+&lt;a href="https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something&lt;/a&gt;
 
 &lt;p&gt;
 Nodes using the @outline directive (which loads and outlines a target site) use a different format,
-the outline node name must be specified first, then an asterisk, then the path.
+the outline node name must be specified first, then an asterisk, then the node title.
 &lt;/p&gt;
 
 &lt;a href="https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology"&gt;https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology&lt;/a&gt;</t>
