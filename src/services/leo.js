@@ -66,7 +66,8 @@ function transform (xml, xslString, transformer, serializer) {
 }
 
 function loadDoc (filename) {
-  console.log('loading file:', filename)
+  console.log('loading file:', filename, window.lconfig, 'test')
+
   var p = new Promise((resolve, reject) => {
     axios.get(filename)
       .then(function (response) {
@@ -121,15 +122,37 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
     }
-    loadDoc(filename, 'Text')
-      .then(xmlString => {
-        return transformLeoXML(xmlString, id)
+    function fromOutline() {
+      const data = []
+      const textItems = {}
+      let item = {
+        name: '@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)',
+        id: '1',
+        children: [],
+        t: ''
+      }
+      data.push(item)
+      resolve({
+        data,
+        textItems
       })
-      .then(data => resolve(data))
+    }
+    function fromFile () {
+      loadDoc(filename, 'Text')
+        .then(xmlString => {
+          return transformLeoXML(xmlString, id)
+        })
+        .then(data => resolve(data))
+    }
+    filename = '~outline'
+    if (filename === '~outline') {
+      fromOutline()
+    } else {
+      fromFile()
+    }
   })
   return p
 }
-
 
 function transformLeoXML2XML(xmlString, startId, parser) {
   const p = new Promise((resolve, reject) => {
