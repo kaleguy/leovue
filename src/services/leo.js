@@ -144,7 +144,7 @@ function getLeoJSON (filename, id) {
         })
         .then(data => resolve(data))
     }
-    filename = '~outline'
+    // filename = '~outline'
     if (filename === '~outline') {
       fromOutline()
     } else {
