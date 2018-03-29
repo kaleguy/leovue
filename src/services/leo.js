@@ -160,7 +160,7 @@ function getLeoJSON (filename, id) {
       url = url.replace('%3A', ':')
       let name = lconfig.outlineTitle
       if (!name) {
-        name = url.split('/')[0]
+        name = url.replace(/^http[s]?:\/\//, '') // .split('/')[0]
       }
       const compiled = _.template(outlineInfoTemplate)
       const outlineInfoHTML = compiled({url})
@@ -185,11 +185,11 @@ function getLeoJSON (filename, id) {
         t: '2'
       }
       data.push(item)
+      data.push(infoItem)
       resolve({
         data,
         textItems
       })
-      data.push(infoItem)
     }
     function fromFile () {
       loadDoc(filename, 'Text')
