@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -50,7 +50,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -62,13 +62,13 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180306193229.1"><vh>Outline Nodes</vh>
+<v t="josephorr.20180306193229.1" a="E"><vh>Outline Nodes</vh>
 <v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
 <v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
 <v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -691,6 +691,39 @@ const xslTemplate = `
 
 &lt;/xsl:stylesheet&gt;
 `
+const outlineInfoTemplate = `
+
+&lt;h2&gt;Outline Information&lt;/h2&gt;
+&lt;% if (url) { %&gt;
+&lt;p&gt;
+This outline was downloaded from &lt;strong&gt;&lt;%- url %&gt;/&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Outline displayed via &lt;a href="kaleguy.github.io"&gt;Leo Vue&lt;/a&gt;
+&lt;/p&gt;
+&lt;% } else { %&gt;
+&lt;p&gt;
+No url specified!
+&lt;/p&gt;
+&lt;p&gt;
+Url parameter format:
+&lt;/p&gt;
+&lt;p&gt;?outlineUrl=https://www.mysite.com&amp;outlineTitle=the outline
+&lt;/p&gt;
+
+&lt;% } %&gt;
+`
+const outlineInfoError = `
+
+#Error
+
+No url specified!
+
+Url parameter format:
+
+url=www.mysite.com&amp;name=the outline
+  
+`
 function transform (xml, xslString, transformer, serializer) {
   function serverTransform(resolve, reject) {
     const xmlString = new serializer().serializeToString(xml)
@@ -731,7 +764,8 @@ function transform (xml, xslString, transformer, serializer) {
 }
 
 function loadDoc (filename) {
-  console.log('loading file:', filename)
+  console.log('loading file:', filename, window.lconfig, 'test')
+
   var p = new Promise((resolve, reject) =&gt; {
     axios.get(filename)
       .then(function (response) {
@@ -786,15 +820,58 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
     }
-    loadDoc(filename, 'Text')
-      .then(xmlString =&gt; {
-        return transformLeoXML(xmlString, id)
+    function fromOutline() {
+      let url = lconfig.outlineUrl || ''
+      url = url.replace('%3A', ':')
+      let name = lconfig.outlineTitle
+      if (!name) {
+        name = url.split('/')[0]
+      }
+      const compiled = _.template(outlineInfoTemplate)
+      const outlineInfoHTML = compiled({url})
+      const data = []
+      const textItems = {
+        '2': outlineInfoHTML
+      }
+      let nodeTitle = `@outline [${name}](${url})`
+      if (!url) {
+        nodeTitle = 'Empty Outline'
+      }
+      const item = {
+        name: nodeTitle,
+        id: '1',
+        children: [],
+        t: ''
+      }
+      const infoItem = {
+        name: 'Information',
+        id: '2',
+        children: [],
+        t: '2'
+      }
+      data.push(item)
+      resolve({
+        data,
+        textItems
       })
-      .then(data =&gt; resolve(data))
+      data.push(infoItem)
+    }
+    function fromFile () {
+      loadDoc(filename, 'Text')
+        .then(xmlString =&gt; {
+          return transformLeoXML(xmlString, id)
+        })
+        .then(data =&gt; resolve(data))
+    }
+    // filename = '~outline.leo'
+    if (filename === '~outline.leo') {
+      fromOutline()
+    } else {
+      fromFile()
+    }
   })
   return p
 }
-
 
 function transformLeoXML2XML(xmlString, startId, parser) {
   const p = new Promise((resolve, reject) =&gt; {
@@ -1190,6 +1267,7 @@ Current features include:
 * SEO version (static html files)
 * Nested presentations with Reveal.js
 * Summary nodes: Kanban and Flowchart
+* Outline nodes: outline a target page
 
 Planned features not yet supported:
 * Keyboard support

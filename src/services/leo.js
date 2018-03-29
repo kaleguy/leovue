@@ -156,7 +156,6 @@ function getLeoJSON (filename, id) {
       filename = filename + '.leo'
     }
     function fromOutline() {
-      console.log('WW', lconfig)
       let url = lconfig.outlineUrl || ''
       url = url.replace('%3A', ':')
       let name = lconfig.outlineTitle
@@ -166,12 +165,15 @@ function getLeoJSON (filename, id) {
       const compiled = _.template(outlineInfoTemplate)
       const outlineInfoHTML = compiled({url})
       const data = []
-      console.log('000', `@outline [${name}](${url})`)
       const textItems = {
         '2': outlineInfoHTML
       }
+      let nodeTitle = `@outline [${name}](${url})`
+      if (!url) {
+        nodeTitle = 'Empty Outline'
+      }
       const item = {
-        name: `@outline [${name}](${url})`,
+        name: nodeTitle,
         id: '1',
         children: [],
         t: ''
