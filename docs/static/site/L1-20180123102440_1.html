@@ -1,0 +1,51 @@
+<html>
+<head>
+  <style type="text/css">
+    BODY {
+      font-family: Verdana;
+    }
+    .level3 {
+      margin-left: 15px;
+    }
+    .level4 {
+       margin-left: 30px;
+    }
+    .level5 {
+      margin-left: 45px;
+    }
+    .level6 {
+      margin-left: 60px;
+    }
+    .level7 {
+      margin-left: 75px;
+    }
+    DIV {
+      margin-top: 8px
+    }
+  </style>
+</head>
+<body>
+<div class='content'><div class="text"># Mermaid
+
+Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
+
+Mermaid directives:
+
+* **@mermaidtd:** create a top down diagram
+* **@mermaidlr:** create a left right diagram
+* **@mermaidrl:** create a right left diagram
+
+Clicking on the icon in the upper right of the content pane displays the Mermaid markup, which you can use in other environments that support Mermaid.
+
+Options (in YAML format) can be placed in the directive node, e.g:
+
+```
+height: 400
+click: goto // click will go to node, otherwise displays popup
+rounded: // or 'circle' or 'square'
+  fa: user // any font awesome icon name
+  fill: "#85FD31,stroke:#333,stroke-width:4px;width:100px"
+```  
+  </div></div>
+</body>
+</html>
