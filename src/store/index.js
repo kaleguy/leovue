@@ -316,6 +316,8 @@ function cleanHTML (html, host) {
   html = html.replace(/>\s+?,/g, '>,')
   html = html.replace(/>\s+?\./g, '>.')
   html = html.replace(/>\s+?["]/g, '>,"')
+  html = html.replace(/\( "/g, '("')
+  html = html.replace(/" \)/g, '")')
   html = replaceRelLinks(host, html)
   // html = html.replace(/>\s+?[.]/g, '.')
   return html
