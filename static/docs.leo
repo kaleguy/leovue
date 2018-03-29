@@ -825,7 +825,7 @@ function getLeoJSON (filename, id) {
       url = url.replace('%3A', ':')
       let name = lconfig.outlineTitle
       if (!name) {
-        name = url.split('/')[0]
+        name = url.replace(/^http[s]?:\/\//, '') // .split('/')[0]
       }
       const compiled = _.template(outlineInfoTemplate)
       const outlineInfoHTML = compiled({url})
@@ -850,11 +850,11 @@ function getLeoJSON (filename, id) {
         t: '2'
       }
       data.push(item)
+      data.push(infoItem)
       resolve({
         data,
         textItems
       })
-      data.push(infoItem)
     }
     function fromFile () {
       loadDoc(filename, 'Text')
@@ -1247,7 +1247,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.7.1
+Leo Vue is currently at version 1.7.2
 
 Leo Vue 1.7.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
