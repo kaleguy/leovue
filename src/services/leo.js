@@ -26,6 +26,39 @@ const xslTemplate = `
 
 </xsl:stylesheet>
 `
+const outlineInfoTemplate = `
+
+<h2>Outline Information</h2>
+<% if (url) { %>
+<p>
+This outline was downloaded from <strong><%- url %>/</strong>.
+</p>
+<p>
+Outline displayed via <a href="kaleguy.github.io">Leo Vue</a>
+</p>
+<% } else { %>
+<p>
+No url specified!
+</p>
+<p>
+Url parameter format:
+</p>
+<p>?outlineUrl=https://www.mysite.com&outlineTitle=the outline
+</p>
+
+<% } %>
+`
+const outlineInfoError = `
+
+#Error
+
+No url specified!
+
+Url parameter format:
+
+url=www.mysite.com&name=the outline
+  
+`
 function transform (xml, xslString, transformer, serializer) {
   function serverTransform(resolve, reject) {
     const xmlString = new serializer().serializeToString(xml)
@@ -123,19 +156,38 @@ function getLeoJSON (filename, id) {
       filename = filename + '.leo'
     }
     function fromOutline() {
+      console.log('WW', lconfig)
+      let url = lconfig.outlineUrl || ''
+      url = url.replace('%3A', ':')
+      let name = lconfig.outlineTitle
+      if (!name) {
+        name = url.split('/')[0]
+      }
+      const compiled = _.template(outlineInfoTemplate)
+      const outlineInfoHTML = compiled({url})
       const data = []
-      const textItems = {}
-      let item = {
-        name: '@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)',
+      console.log('000', `@outline [${name}](${url})`)
+      const textItems = {
+        '2': outlineInfoHTML
+      }
+      const item = {
+        name: `@outline [${name}](${url})`,
         id: '1',
         children: [],
         t: ''
+      }
+      const infoItem = {
+        name: 'Information',
+        id: '2',
+        children: [],
+        t: '2'
       }
       data.push(item)
       resolve({
         data,
         textItems
       })
+      data.push(infoItem)
     }
     function fromFile () {
       loadDoc(filename, 'Text')
@@ -144,8 +196,8 @@ function getLeoJSON (filename, id) {
         })
         .then(data => resolve(data))
     }
-    // filename = '~outline'
-    if (filename === '~outline') {
+    // filename = '~outline.leo'
+    if (filename === '~outline.leo') {
       fromOutline()
     } else {
       fromFile()

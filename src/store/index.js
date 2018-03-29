@@ -947,7 +947,6 @@ export default new Vuex.Store({
     },
     loadLeo (context, o) {
       getLeoJSON(o.filename, o.id).then(ldata => {
-        console.log('LD', ldata)
         setData(context, ldata, o.filename, o.route)
       })
     },
