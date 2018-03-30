@@ -18,7 +18,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.1",
     "component-tip": "^3.0.3",
-    "d3": "^4.4.0",
+    "d3": "^5.0.0",
     "dataframe-js": "^1.2.4",
     "eslint-plugin-node": "^6.0.1",
     "h5o": "^0.11.3",

@@ -228,11 +228,19 @@ function showPageOutline (context, item, id, subpath) {
         html = cleanHTML(html, host)
         dummy.innerHTML = html
         let contentHTML = html
+
         // HACK select subnode if wikipedia
         let wikiContentEl = dummy.getElementsByClassName('mw-content-ltr')[0]
         if (wikiContentEl) {
           contentHTML = wikiContentEl.innerHTML
         }
+        // HACK Gitbooks
+        let gbContentEl = dummy.getElementsByClassName('markdown-section')[0]
+        if (gbContentEl) {
+          contentHTML = gbContentEl.innerHTML
+          dummy = gbContentEl
+        }
+
         contentHTML = '<div class="outline-pane">' +
           '<div class="note-box">' +
           'Downloaded from ' +
@@ -241,10 +249,12 @@ function showPageOutline (context, item, id, subpath) {
           contentHTML +
           '</div>'
         const outline = HTML5Outline(dummy)
+        debugger
         const outlineItem = {}
         const textItems = {}
         counter = 0 // TODO: refactor this to remove external var
         outlineToItem(outline.sections[0], outlineItem, item.id, textItems, host)
+
         _.remove(outlineItem.children, c => c.name === 'Contents')
         const fullContentItem = {
           id: item.id + '-0',
@@ -253,7 +263,11 @@ function showPageOutline (context, item, id, subpath) {
         }
         outlineItem.children.unshift(fullContentItem)
         const lines = []
-        getPriorContent(document.getElementById('toc').previousElementSibling, lines, host)
+        // wikipedia hack
+        const toc = document.getElementById('toc')
+        if (toc && toc.previousElementSibling) {
+          getPriorContent(toc.previousElementSibling, lines, host)
+        }
         let priorContent = lines.reverse().join('')
         textItems[item.id + '-' + 1] = '<div class="fp-pane">' +
           priorContent +
@@ -362,7 +376,15 @@ function outlineToItem (outline, item, idBase, textItems, host) {
   return item
 }
 function getHeadingText (h) {
-  return h.replace(/\n/g, '').replace(/\[.*?\]/i, '').trim()
+  if (!h) {
+    h = ''
+  }
+  try {
+    h = h.replace(/\n/g, '').replace(/\[.*?\]/i, '').trim()
+  } catch (e) {
+    console.log('Error in outline parse heading:', e)
+  }
+  return h
 }
 function getHTMLFromSection (outline, host) {
   const html = []
