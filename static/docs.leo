@@ -2030,8 +2030,8 @@ The title of the node in the Leo file is:
 @outline [Kale](https://en.wikipedia.org/wiki/Kale
 ```
 
-This feature currently only supports the outline creation, the node content does not display.
-</t>
+If you set the filename to "~outline", you can load a target webpage into an outline with a url parameter. See
+[The Leo Vue Example Site](https://kaleguy.github.io/leo-examples/)</t>
 <t tx="josephorr.20180306193346.1"></t>
 <t tx="josephorr.20180318101739.1"></t>
 <t tx="josephorr.20180318131630.1"></t>
@@ -2064,6 +2064,7 @@ Nodes using the @outline directive (which loads and outlines a target site) use 
 the outline node name must be specified first, then an asterisk, then the node title.
 &lt;/p&gt;
 
-&lt;a href="https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology"&gt;https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology&lt;/a&gt;</t>
+&lt;a href="https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology"&gt;https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology&lt;/a&gt;
+</t>
 </tnodes>
 </leo_file>

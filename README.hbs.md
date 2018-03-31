@@ -1,6 +1,5 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Dependency Status](https://david-dm.org/kaleguy/leovue.svg)](https://david-dm.org/kaleguy/leovue)
-[![devDependencies Status](https://david-dm.org/kaleguy/leovue/dev-status.svg)](https://david-dm.org/kaleguy/leovue?type=dev)
 
 # Leo Vue
 
