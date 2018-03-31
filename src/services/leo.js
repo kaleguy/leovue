@@ -155,6 +155,9 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
     }
+    // case of outline loaded from url specified in outlineUrl param
+    // this just loads a node with the correct directive, the actual
+    // outline will get loaded in loadSubtree in index.js
     function fromOutline() {
       let url = lconfig.outlineUrl || ''
       url = url.replace('%3A', ':')

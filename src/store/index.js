@@ -107,6 +107,7 @@ function loadLeoNode (context, item) {
     const title = item.name
     const id = item.id
     let {url, label} = getUrlFromTitle(title)
+    if (!url) { return }
     getLeoJSON(url, id).then(data => {
       let text = data.textItems
       data = data.data
@@ -132,6 +133,7 @@ function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   title = title.replace(/^@[a-zA-Z]*? /, '')
   const match = re.exec(title)
+  if (!match) { return null }
   let url = match[2]
   let label = match[1]
   if (!url) { return null }
@@ -249,7 +251,6 @@ function showPageOutline (context, item, id, subpath) {
           contentHTML +
           '</div>'
         const outline = HTML5Outline(dummy)
-        debugger
         const outlineItem = {}
         const textItems = {}
         counter = 0 // TODO: refactor this to remove external var
@@ -278,6 +279,9 @@ function showPageOutline (context, item, id, subpath) {
         context.commit('ADDTEXT', {text: textItems})
         item.children[0] = outlineItem
         context.commit('RESET') // content item has not been drawn
+        if (window.lconfig.path) {
+          subpath = window.lconfig.path
+        }
         if (subpath) {
           let pathObj = translatePath(subpath, context.state.leodata)
           id = pathObj.npath
@@ -454,6 +458,7 @@ function showSite (context, title, id) {
 
 function setSiteItem (context, title, id) {
   let {url, label} = getUrlFromTitle(title)
+  if (!url) { return }
   console.log(label) // TODO: remove this, it is here for eshint
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
@@ -561,6 +566,13 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setCurrentItem', {id})
   })
 }
+
+/**
+ * Given a word path, find the matching node
+ * @param p
+ * @param d
+ * @returns {{npath: *, subpath: string}}
+ */
 function translatePath (p, d) {
   let item = null
   let subpath = ''
@@ -608,6 +620,15 @@ function loadPresentation (id, pages) {
   })
 }
 
+/**
+ * Used to load subtrees when navigating directly to a node.
+ * @param context
+ * @param trees {Array} Array of nodes to be preloaded.
+ * @param data
+ * @param topId
+ * @param subpath
+ * @returns {*}
+ */
 function loadSubtrees (context, trees, data, topId, subpath) {
   if (!trees.length) { return Promise.resolve() }
   let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]

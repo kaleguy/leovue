@@ -19,7 +19,7 @@
 </v>
 <v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
-<v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue@1.6.7/README.md)</vh></v>
+<v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
@@ -820,6 +820,9 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/\.leo$/)) {
       filename = filename + '.leo'
     }
+    // case of outline loaded from url specified in outlineUrl param
+    // this just loads a node with the correct directive, the actual
+    // outline will get loaded in loadSubtree in index.js
     function fromOutline() {
       let url = lconfig.outlineUrl || ''
       url = url.replace('%3A', ':')
@@ -1247,7 +1250,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.7.2
+Leo Vue is currently at version 1.7.3
 
 Leo Vue 1.7.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
