@@ -9,7 +9,7 @@ Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-
 
 Content items can be text, markdown, or html with Vue components.
 
-**[Live Site with Docs](https://kaleguy.github.io/leovue/)**
+## [Live Site with Docs](https://kaleguy.github.io/leovue/)**
 
 ## Leo
 Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
