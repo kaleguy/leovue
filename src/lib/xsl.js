@@ -56,7 +56,7 @@ function render (xml) {
         // hack to get rid of garbage in Slashdot feed
         const garbageIndex = descriptionNode.innerHTML.indexOf('&lt;')
         if (garbageIndex > 0) {
-          descriptionNode.innerHTML = descriptionNode.innerHTML.substring(0, garbageIndex)
+          descriptionNode.innerHTML = descriptionNode.innerHTML.substring(0, garbageIndex).replace(/&amp;amp;/g, '&amp;')
         }
       }
       const xsl = oParser.parseFromString(xslString, 'text/xml')

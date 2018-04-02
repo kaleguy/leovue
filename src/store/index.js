@@ -1109,6 +1109,11 @@ export default new Vuex.Store({
           if (!url) { return }
           return showRSS(context, id, url)
         }
+        if (/^@xml/.test(item.name)) {
+          let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
+          if (!url) { return }
+          return showXML(context, id, url)
+        }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
           context.commit('SUBPATH', { subpath: '' })
