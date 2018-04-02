@@ -6,6 +6,7 @@ import axios from 'axios'
 import _ from 'lodash'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
+import xsl from '../lib/xsl'
 const parserURI = require('uri-parse-lib')
 const HTML5Outline = require('h5o')
 const util = require('../util.js')
@@ -14,6 +15,7 @@ const md = require('markdown-it')({
   linkify: true,
   typographer: true
 })
+console.log('xsl', axios, 'test', xsl)
 const lunr = require('lunr')
 
 function loadIndex (titles, text) {
@@ -188,6 +190,29 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
+function showRSS (context, id, url) {
+  let query = url
+  // xttp means, route it through YQL
+
+  if (/^xttp/.test(url)) {
+    url = url.replace(/^xttp/, 'http')
+    query = 'https://query.yahooapis.com/v1/public/yql?q=' +
+      encodeURIComponent('select * from xml where url="' +
+        url + '"') + '&format=xml'
+  }
+  axios.get(query)
+    .then((response) => {
+      let data = response.data
+      xsl.render(data, 'xml').then(html => {
+        // html = util.replaceRelUrls(html, base)
+        showText(context, html, id)
+        context.commit('CONTENT_PANE', {type: 'text'})
+      })
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
 
 /**
  * Create Leo outline from target url
@@ -207,7 +232,7 @@ function showPageOutline (context, item, id, subpath) {
     let site = url
     const t = parserURI(url)
     let host = t.host
-    let yql = "select * from htmlstring where url='" + site + "' AND xpath='//body'"
+    let yql = "select * from htmlstring where url='" + site + "' AND xpath='//*'"
     let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
     context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
     axios.get(resturl)
@@ -421,12 +446,11 @@ function showD3Board (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showSite (context, title, id) {
+function showSite (context, title, id, content) {
   let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
-  // TODO: add spinner
   if (ext === 'md') {
     axios.get(url)
       .then((response) => {
@@ -440,7 +464,9 @@ function showSite (context, title, id) {
       .catch(function (error) {
         console.log(error)
       })
-    return
+  }
+  if (ext === 'xml') {
+    showRSS(context, id, url)
   }
   const iframeHTML = `
     <div style="width:100%">
@@ -1067,6 +1093,8 @@ export default new Vuex.Store({
       }
       if (item) {
         item = item[0]
+        let itemText = context.state.leotext[item.t]
+        console.log('item text', itemText)
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)
         }
@@ -1075,6 +1103,11 @@ export default new Vuex.Store({
         }
         if (/^@mermaid/.test(item.name)) {
           return showMermaid(context, item.name, id)
+        }
+        if (/^@rss/.test(item.name)) {
+          let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
+          if (!url) { return }
+          return showRSS(context, id, url)
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
@@ -1102,7 +1135,7 @@ export default new Vuex.Store({
             )
           } else {
             console.log('load site')
-            showSite(context, item.name, id)
+            showSite(context, item.name, id, itemText)
             setSiteItem(context, item.name, id)
           }
         } else {
