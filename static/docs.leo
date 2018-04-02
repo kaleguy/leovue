@@ -1256,7 +1256,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.7.3
+Leo Vue is currently at version 1.7.4
 
 Leo Vue 1.7.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -1277,6 +1277,7 @@ Current features include:
 * Nested presentations with Reveal.js
 * Summary nodes: Kanban and Flowchart
 * Outline nodes: outline a target page
+* RSS nodes: point a node to an RSS feed to have content area display HTML version.
 
 Planned features not yet supported:
 * Keyboard support
