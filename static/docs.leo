@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -50,7 +50,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -68,9 +68,12 @@
 <v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
 <v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
-<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
+</v>
+<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
+<v t="josephorr.20180402071950.1"><vh>[New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
 </v>
 </v>
@@ -162,7 +165,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -279,7 +282,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
@@ -2095,5 +2098,7 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 <t tx="josephorr.20180402061306.1">A URL node can be a simple website displayed in the content area.</t>
 <t tx="josephorr.20180402070616.1">&amp;amp; in RSS
 </t>
+<t tx="josephorr.20180402071948.1"></t>
+<t tx="josephorr.20180402071950.1"></t>
 </tnodes>
 </leo_file>

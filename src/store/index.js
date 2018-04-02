@@ -190,7 +190,7 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showRSS (context, id, url) {
+function showXML (context, id, url, xslType) {
   let query = url
   // xttp means, route it through YQL
 
@@ -203,7 +203,7 @@ function showRSS (context, id, url) {
   axios.get(query)
     .then((response) => {
       let data = response.data
-      xsl.render(data, 'xml').then(html => {
+      xsl.render(data, xslType).then(html => {
         // html = util.replaceRelUrls(html, base)
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
@@ -466,7 +466,7 @@ function showSite (context, title, id, content) {
       })
   }
   if (ext === 'xml') {
-    showRSS(context, id, url)
+    showXML(context, id, url)
   }
   const iframeHTML = `
     <div style="width:100%">
@@ -1107,7 +1107,7 @@ export default new Vuex.Store({
         if (/^@rss/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
-          return showRSS(context, id, url)
+          return showXML(context, id, url, 'rss')
         }
         if (/^@xml/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line

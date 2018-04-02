@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<current_observation version="1.0"
+                     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="http://www.weather.gov/view/current_observation.xsd">
+  <credit>NOAA's National Weather Service</credit>
+  <credit_URL>http://weather.gov/</credit_URL>
+  <image>
+    <url>http://weather.gov/images/xml_logo.gif</url>
+    <title>NOAA's National Weather Service</title>
+    <link>http://weather.gov</link>
+  </image>
+  <suggested_pickup>15 minutes after the hour</suggested_pickup>
+  <suggested_pickup_period>60</suggested_pickup_period>
+  <location>New York, La Guardia Airport, NY</location>
+  <station_id>KLGA</station_id>
+  <latitude>40.7792</latitude>
+  <longitude>-73.88</longitude>
+  <observation_time>Last Updated on Apr 2 2018, 6:51 am EDT</observation_time>
+  <observation_time_rfc822>Mon, 02 Apr 2018 06:51:00 -0400</observation_time_rfc822>
+  <weather>Heavy Snow Fog</weather>
+  <temperature_string>32.0 F (0.0 C)</temperature_string>
+  <temp_f>32.0</temp_f>
+  <temp_c>0.0</temp_c>
+  <relative_humidity>92</relative_humidity>
+  <wind_string>Northeast at 10.4 MPH (9 KT)</wind_string>
+  <wind_dir>Northeast</wind_dir>
+  <wind_degrees>60</wind_degrees>
+  <wind_mph>10.4</wind_mph>
+  <wind_kt>9</wind_kt>
+  <pressure_string>1019.4 mb</pressure_string>
+  <pressure_mb>1019.4</pressure_mb>
+  <pressure_in>30.10</pressure_in>
+  <dewpoint_string>30.0 F (-1.1 C)</dewpoint_string>
+  <dewpoint_f>30.0</dewpoint_f>
+  <dewpoint_c>-1.1</dewpoint_c>
+  <windchill_string>24 F (-4 C)</windchill_string>
+  <windchill_f>24</windchill_f>
+  <windchill_c>-4</windchill_c>
+  <visibility_mi>0.25</visibility_mi>
+  <icon_url_base>http://forecast.weather.gov/images/wtf/small/</icon_url_base>
+  <two_day_history_url>http://www.weather.gov/data/obhistory/KLGA.html</two_day_history_url>
+  <icon_url_name>nsn.png</icon_url_name>
+  <ob_url>http://www.weather.gov/data/METAR/KLGA.1.txt</ob_url>
+  <disclaimer_url>http://weather.gov/disclaimer.html</disclaimer_url>
+  <copyright_url>http://weather.gov/disclaimer.html</copyright_url>
+  <privacy_policy_url>http://weather.gov/notice.html</privacy_policy_url>
+</current_observation>

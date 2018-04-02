@@ -1,4 +1,4 @@
-const xslString = `
+const rss = `
 <xsl:stylesheet version="1.0" 
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
  xmlns:media="http://search.yahoo.com/mrss/"
@@ -44,8 +44,17 @@ const xslString = `
 
 `
 
-function render (xml) {
+const styleSheets = { rss }
+
+function render (xml, xslType) {
   const oParser = new DOMParser()
+  if (!xslType) {
+    xslType = 'rss'
+  }
+  const xslString = styleSheets[xslType]
+  if (!xslString) {
+    return (Promise.resolve('<div>No Matching XSL</div>'))
+  }
   return new Promise((resolve, reject) => {
     let resultDocument = null
     try {
