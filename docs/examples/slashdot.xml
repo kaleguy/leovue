@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2018-04-01T17:20:34Z"
+       yahoo:lang="en-US">
+  <results>
+    <rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:admin="http://webns.net/mvcb/"
+             xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+             xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+             xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
+
+      <channel rdf:about="https://slashdot.org/">
+        <title>Slashdot</title>
+        <link>https://slashdot.org/</link>
+        <description>News for nerds, stuff that matters</description>
+        <dc:language>en-us</dc:language>
+        <dc:rights>Copyright 1997-2016, SlashdotMedia. All Rights Reserved.</dc:rights>
+        <dc:date>2018-04-01T17:17:11+00:00</dc:date>
+        <dc:publisher>Dice</dc:publisher>
+        <dc:creator>help@slashdot.org</dc:creator>
+        <dc:subject>Technology</dc:subject>
+        <syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+        <syn:updateFrequency>1</syn:updateFrequency>
+        <syn:updatePeriod>hourly</syn:updatePeriod>
+        <items>
+          <rdf:Seq>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/04/01/1625202/cloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/04/01/161239/our-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://entertainment.slashdot.org/story/18/04/01/159240/april-fools-day-roundup?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/04/01/1127213/president-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://apple.slashdot.org/story/18/04/01/119226/apple-goes-on-hiring-spree-to-improve-siris-smarts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://news.slashdot.org/story/18/04/01/0527249/atlanta-still-struggles-to-recover-from-ransomware-attack?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/04/01/0429255/microsoft-email-privacy-case-no-longer-needed-says-the-us?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://ask.slashdot.org/story/18/03/31/0351251/ask-slashdot-are-full-stack-developers-a-thing?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/03/31/0253219/thousands-of-companies-are-spying-on-you?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://science.slashdot.org/story/18/03/31/189259/should-we-revive-extinct-species?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://slashdot.org/story/18/03/31/1938242/mailchimp-bans-emails-promoting-cryptocurrency?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://yro.slashdot.org/story/18/03/31/1828213/the-eff-hosts-a-john-perry-barlow-symposium-next-saturday?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://news.slashdot.org/story/18/03/31/1857255/nature-explores-why-so-many-postgrads-have-bad-mental-health?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://slashdot.org/story/18/03/31/1615245/is-it-illegal-to-trick-a-robot?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+            <rdf:li
+              rdf:resource="https://news.slashdot.org/story/18/03/31/0622248/open-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed"/>
+          </rdf:Seq>
+        </items>
+        <image rdf:resource="https://a.fsdn.com/sd/topics/topicslashdot.gif"/>
+        <textinput rdf:resource="https://slashdot.org/search.pl"/>
+        <atom10:link href="http://rss.slashdot.org/slashdot/slashdotMain" rel="self" type="application/rdf+xml"
+                     xmlns:atom10="http://www.w3.org/2005/Atom"/>
+        <feedburner:info uri="slashdot/slashdotmain" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"/>
+        <atom10:link href="http://pubsubhubbub.appspot.com/" rel="hub" xmlns:atom10="http://www.w3.org/2005/Atom"/>
+      </channel>
+      <image rdf:about="https://a.fsdn.com/sd/topics/topicslashdot.gif">
+        <title>Slashdot</title>
+        <url>https://a.fsdn.com/sd/topics/topicslashdot.gif</url>
+        <link>https://slashdot.org/</link>
+      </image>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/04/01/1625202/cloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Cloudflare Launches 1.1.1.1 Consumer DNS Service With a Focus On Privacy</title>
+        <link>
+          https://yro.slashdot.org/story/18/04/01/1625202/cloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>BrianFagioli writes: Today, Cloudflare announces a new consumer DNS service with a focus on
+          privacy. Called '1.1.1.1.' it quite literally uses that easy-to-remeber IP address as the primary DNS server.
+          Why announce on April Fool's Day? Because the IP is four ones and today's date is 4/1 -- clever. The secondary
+          server is 1.0.0.1 -- also easy to remember. The big question is why? With solid offerings from Google and
+          Comodo, for instance, does the world need another DNS service? The answer is yes, because Cloudflare intends
+          to focus on both speed, and more importantly, privacy.&lt;p&gt;&lt;div class="share_submission"
+          style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Cloudflare+Launches+1.1.1.1+Consumer+DNS+Service+With+a+Focus+On+Privacy%3A+http%3A%2F%2Fbit.ly%2F2GpNurx"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F04%2F01%2F1625202%2Fcloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/04/01/1625202/cloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/04/01/1625202/cloudflare-launches-1111-consumer-dns-service-with-a-focus-on-privacy?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11931241&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>msmash</dc:creator>
+        <dc:date>2018-04-01T17:00:00+00:00</dc:date>
+        <dc:subject>network</dc:subject>
+        <slash:department>how-about-that</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>8</slash:comments>
+        <slash:hit_parade>8,5,1,1,1,0,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/04/01/161239/our-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Our Devices May Listen More Attentively, Patents Filed By Google and Amazon Suggest</title>
+        <link>
+          https://yro.slashdot.org/story/18/04/01/161239/our-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>Amazon and Google, the leading sellers of smart speakers, say their AI-powered assistants record
+          and process audio only after users trigger them by pushing a button or uttering a phrase like "Hey, Alexa&amp;#226;
+          or &amp;#226;oeO.K., Google." But each company has filed patent applications, many of them still under
+          consideration, that outline an array of possibilities for how devices like these could monitor more of what
+          users say and do (the link may be paywalled), The New York Times reports. From the report: That information
+          could then be used to identify a person's desires or interests, which could be mined for ads and product
+          recommendations. In one set of patent applications, Amazon describes how a "voice sniffer algorithm" could be
+          used on an array of devices, like tablets and e-book readers, to analyze audio almost in real time when it
+          hears words like "love," "bought" or "dislike." A diagram included with the application illustrated how a
+          phone call between two friends could result in one receiving an offer for the San Diego Zoo and the other
+          seeing an ad for a Wine of the Month Club membership. Some patent applications from Google, which also owns
+          the smart home product maker Nest Labs, describe how audio and visual signals could be used in the context of
+          elaborate smart home setups. One application details how audio monitoring could help detect that a child is
+          engaging in "mischief" at home by first using speech patterns and pitch to identify a child's presence, one
+          filing said. A device could then try to sense movement while listening for whispers or silence, and even
+          program a smart speaker to "provide a verbal warning." A separate application regarding personalizing content
+          for people while respecting their privacy noted that voices could be used to determine a speaker's mood using
+          the "volume of the user's voice, detected breathing rate, crying and so forth," and medical condition "based
+          on detected coughing, sneezing and so forth."&lt;p&gt;&lt;div class="share_submission"
+          style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Our+Devices+May+Listen+More+Attentively%2C+Patents+Filed+By+Google+and+Amazon+Suggest%3A+http%3A%2F%2Fbit.ly%2F2GHHOsj"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F04%2F01%2F161239%2Four-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/04/01/161239/our-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/04/01/161239/our-devices-may-listen-more-attentively-patents-filed-by-google-and-amazon-suggest?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11931217&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>msmash</dc:creator>
+        <dc:date>2018-04-01T16:02:00+00:00</dc:date>
+        <dc:subject>privacy</dc:subject>
+        <slash:department>shape-of-things-to-come</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>20</slash:comments>
+        <slash:hit_parade>20,20,9,9,0,0,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://entertainment.slashdot.org/story/18/04/01/159240/april-fools-day-roundup?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>April Fool's Day Roundup</title>
+        <link>
+          https://entertainment.slashdot.org/story/18/04/01/159240/april-fools-day-roundup?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>It might be a holiday for most of us today, but for tech companies, April Fool's is the day when
+          they work overtime to send weird press releases. So far we have seen Google Maps help users find Waldo, and
+          Google Australia rethink its brand name (to Googz). T-Mobile has revivedthe Sidekick as the world's first
+          smart shoe phone. Google has also added a feature to its file manager app Files Go that detects bad jokes from
+          your phone. Snapchat has finally found a way to make fun of Facebook. Languages learning app Duolingo has
+          launched a range of craft beers. Chinese smartphone maker OnePlus has launched a cryptocurrency. Some more
+          here. What's your favorite prank so far today?&lt;p&gt;&lt;div class="share_submission"
+          style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=April+Fool's+Day+Roundup%3A+http%3A%2F%2Fbit.ly%2F2uCirnb"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fentertainment.slashdot.org%2Fstory%2F18%2F04%2F01%2F159240%2Fapril-fools-day-roundup%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://entertainment.slashdot.org/story/18/04/01/159240/april-fools-day-roundup?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://entertainment.slashdot.org/story/18/04/01/159240/april-fools-day-roundup?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11931151&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>msmash</dc:creator>
+        <dc:date>2018-04-01T15:10:00+00:00</dc:date>
+        <dc:subject>humor</dc:subject>
+        <slash:department>here-we-go-again</slash:department>
+        <slash:section>entertainment</slash:section>
+        <slash:comments>28</slash:comments>
+        <slash:hit_parade>28,27,13,12,1,1,1</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/04/01/1127213/president-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>President of France Emmanuel Macron Talks About Nation's New AI Strategy</title>
+        <link>
+          https://yro.slashdot.org/story/18/04/01/1127213/president-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>Earlier this week, Emmanuel Macron, President of France, pledged to spend $1.9 billion over the
+          next five years and allow expanded data-sharing to help make France a leader in artificial intelligence. In an
+          interview with Wired, Emmanuel Macron, President of France, explained why he is making big investments to
+          bring France into the "winner takes all" race with the U.S. and China on artificial intelligence. An
+          interesting quote, "At some point, as citizens, people will say, 'I want to be sure that all of this personal
+          data is not used against me, but used ethically, and that everything is monitored. I want to understand what
+          is behind this algorithm that plays a role in my life." An excerpt from the story: AI will raise a lot of
+          issues in ethics, in politics, it will question our democracy and our collective preferences. For instance, if
+          you take healthcare: you can totally transform medical care making it much more predictive and personalized if
+          you get access to a lot of data. We will open our data in France. I made this decision and announced it this
+          afternoon. But the day you start dealing with privacy issues, the day you open this data and unveil personal
+          information, you open a Pandora's Box, with potential use cases that will not be increasing the common good
+          and improving the way to treat you. In particular, it's creating a potential for all the players to select
+          you. This can be a very profitable business model: this data can be used to better treat people, it can be
+          used to monitor patients, but it can also be sold to an insurer that will have intelligence on you and your
+          medical risks, and could get a lot of money out of this information. The day we start to make such business
+          out of this data is when a huge opportunity becomes a huge risk. It could totally dismantle our national
+          cohesion and the way we live together. This leads me to the conclusion that this huge technological revolution
+          is in fact a political revolution.&lt;p&gt;&lt;div class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=President+of+France+Emmanuel+Macron+Talks+About+Nation's+New+AI+Strategy%3A+http%3A%2F%2Fbit.ly%2F2uKmDBp"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F04%2F01%2F1127213%2Fpresident-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/04/01/1127213/president-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/04/01/1127213/president-of-france-emmanuel-macron-talks-about-nations-new-ai-strategy?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11930855&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>msmash</dc:creator>
+        <dc:date>2018-04-01T14:00:00+00:00</dc:date>
+        <dc:subject>ai</dc:subject>
+        <slash:department>we-as-a-nation</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>26</slash:comments>
+        <slash:hit_parade>26,25,13,10,5,4,2</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://apple.slashdot.org/story/18/04/01/119226/apple-goes-on-hiring-spree-to-improve-siris-smarts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Apple Goes on Hiring Spree To Improve Siri's Smarts</title>
+        <link>
+          https://apple.slashdot.org/story/18/04/01/119226/apple-goes-on-hiring-spree-to-improve-siris-smarts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>Thinknum has noticed that Apple has been on a Siri-related hiring spree in recent months, with 161
+          positions listed as of the end of March. There's been an uptick ever since summer 2016, but there was a
+          distinct surge in February of this year. From a report: Nearly all of the new positions are for engineers, and
+          it's notable that some of those spots are meant to tackle Siri's relative weakness in general questions. There
+          are entries for Siri software engineers tackling "General Knowledge" and the "Knowledge Graph," for instance.
+          Other notable recruiting efforts include a machine learning scientist as well as multiple engineers to address
+          areas like Proactive Intelligence (Siri's ability to anticipate info you might need), the SiriKit developer
+          framework and speech generation.&lt;p&gt;&lt;div class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Apple+Goes+on+Hiring+Spree+To+Improve+Siri's+Smarts%3A+http%3A%2F%2Fbit.ly%2F2uCrNiz"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fapple.slashdot.org%2Fstory%2F18%2F04%2F01%2F119226%2Fapple-goes-on-hiring-spree-to-improve-siris-smarts%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://apple.slashdot.org/story/18/04/01/119226/apple-goes-on-hiring-spree-to-improve-siris-smarts?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://apple.slashdot.org/story/18/04/01/119226/apple-goes-on-hiring-spree-to-improve-siris-smarts?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11930831&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>msmash</dc:creator>
+        <dc:date>2018-04-01T12:00:00+00:00</dc:date>
+        <dc:subject>ai</dc:subject>
+        <slash:department>closer-look</slash:department>
+        <slash:section>apple</slash:section>
+        <slash:comments>24</slash:comments>
+        <slash:hit_parade>24,24,12,12,3,1,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://news.slashdot.org/story/18/04/01/0527249/atlanta-still-struggles-to-recover-from-ransomware-attack?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Atlanta Still Struggles To Recover From Ransomware Attack</title>
+        <link>
+          https://news.slashdot.org/story/18/04/01/0527249/atlanta-still-struggles-to-recover-from-ransomware-attack?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader quotes Reuters:
+          Atlanta's top officials holed up in their offices on Saturday as they worked to restore critical systems
+          knocked out by a nine-day-old cyber attack that plunged the Southeastern U.S. metropolis into technological
+          chaos and forced some city workers to revert to paper... Police and other public servants have spent the past
+          week trying to piece together their digital work lives, recreating audit spreadsheets and conducting business
+          on mobile phones in response to one of the most devastating "ransomware" virus attacks to hit an American
+          city. Three city council staffers have been sharing a single clunky personal laptop brought in after cyber
+          extortionists attacked Atlanta's computer network with a virus that scrambled data and still prevents access
+          to critical systems. "It's extraordinarily frustrating," said Councilman Howard Shook, whose office lost 16
+          years of digital records...
+          City officials have declined to discuss the extent of damage beyond disclosed outages that have shut down some
+          services at municipal offices, including courts and the water department. Nearly 6 million people live in the
+          Atlanta metropolitan area... Atlanta police returned to taking written case notes and have lost access to some
+          investigative databases, department spokesman Carlos Campos told Reuters... Meanwhile, some city employees
+          complained they have been left in the dark, unsure when it is safe to turn on their computers. "We don't know
+          anything," said one frustrated employee as she left for a lunch break on Friday.
+
+
+          "Our data management teams are working diligently to restore normal operations and functionalities to these
+          systems," said a spokesperson for the police department, adding that they "hope to be back online in the very
+          near future."&lt;p&gt;&lt;div class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Atlanta+Still+Struggles+To+Recover+From+Ransomware+Attack%3A+http%3A%2F%2Fbit.ly%2F2uD8PbC"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnews.slashdot.org%2Fstory%2F18%2F04%2F01%2F0527249%2Fatlanta-still-struggles-to-recover-from-ransomware-attack%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://news.slashdot.org/story/18/04/01/0527249/atlanta-still-struggles-to-recover-from-ransomware-attack?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://news.slashdot.org/story/18/04/01/0527249/atlanta-still-struggles-to-recover-from-ransomware-attack?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11930467&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-04-01T07:34:00+00:00</dc:date>
+        <dc:subject>usa</dc:subject>
+        <slash:department>old-school-analog</slash:department>
+        <slash:section>news</slash:section>
+        <slash:comments>66</slash:comments>
+        <slash:hit_parade>66,58,33,25,7,2,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/04/01/0429255/microsoft-email-privacy-case-no-longer-needed-says-the-us?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Microsoft Email Privacy Case No Longer Needed, Says The US</title>
+        <link>
+          https://yro.slashdot.org/story/18/04/01/0429255/microsoft-email-privacy-case-no-longer-needed-says-the-us?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader quotes CNN:
+          The U.S. Department of Justice is asking the Supreme Court to abandon its case against Microsoft over
+          international data privacy. A new law signed by President Donald Trump last week answers the legal question at
+          the heart of Microsoft's case, the DOJ says. So the case "is now moot," the department said in a court filing
+          posted Saturday.
+
+          Microsoft's legal battle began in 2013, when it refused to hand over emails stored on a server in Ireland to
+          US officials who were investigating drug trafficking. Microsoft argued at the time that sharing data stored
+          abroad could violate international treaties and policies, and there was no law on the books to provide any
+          clarity. That changed with the The Cloud Act, which was tucked into the spending bill that Trump signed March
+          23. The act establishes a legal pathway for the United States to form agreements with other nations that make
+          it easier for law enforcement to collect data stored on foreign soil... Microsoft cheered the new law, saying
+          the Cloud Act provides the legal clarity the company sought.
+
+          The ACLU's legislative counsel argues that the new act hurts privacy and human rights, "at a time when human
+          rights activists, dissidents and journalists around the world face unprecedented attacks."
+
+          "Would even a well-intentioned technology company, particularly a small one, have the expertise and resources
+          to competently assess the risk that a foreign order may pose to a particular human rights activist?"&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Microsoft+Email+Privacy+Case+No+Longer+Needed%2C+Says+The+US%3A+http%3A%2F%2Fbit.ly%2F2Gs2rt6"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F04%2F01%2F0429255%2Fmicrosoft-email-privacy-case-no-longer-needed-says-the-us%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/04/01/0429255/microsoft-email-privacy-case-no-longer-needed-says-the-us?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/04/01/0429255/microsoft-email-privacy-case-no-longer-needed-says-the-us?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11930423&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-04-01T04:34:00+00:00</dc:date>
+        <dc:subject>microsoft</dc:subject>
+        <slash:department>adjourning</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>63</slash:comments>
+        <slash:hit_parade>63,60,33,29,11,3,3</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://ask.slashdot.org/story/18/03/31/0351251/ask-slashdot-are-full-stack-developers-a-thing?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Ask Slashdot: Are 'Full Stack' Developers a Thing?</title>
+        <link>
+          https://ask.slashdot.org/story/18/03/31/0351251/ask-slashdot-are-full-stack-developers-a-thing?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>"It seems that nearly every job posting for a software developer these days requires someone who
+          can do it all," complains Slashdot reader datavirtue, noting a main focus on finding someone to do "front end
+          work and back end work and database work and message queue work...."
+
+          I have been in a relatively small shop that for years that has always had a few guys focused on the UI. The
+          rest of us might have to do something on the front-end but are mostly engaged in more complex "back-end"
+          development or MQ and database architecture. I have been keeping my eye on the market, and the laser focus on
+          full stack developers is a real turn-off.
+
+          When was the last time you had an outage because the UI didn't work right? I can't count the number of outages
+          resulting from inexperienced developers introducing a bug in the business logic or middle tier. Am I correct
+          in assuming that the shops that are always looking for full stack developers just aren't grown up yet?
+
+          sjames (Slashdot reader #1,099) responded that "They are a thing, but in order to have comprehensive
+          experience in everything involved, the developer will almost certainly be older than HR departments in 'the
+          valley' like to hire."
+          And Dave Ostrander argues that "In the last 10 years front end software development has gotten really complex.
+          Gulp, Grunt, Sass, 35+ different mobile device screen sizes and 15 major browsers to code for, has made the
+          front end skillset very valuable." The original submitter argues that front-end development "is a much simpler
+          domain," leading to its own discussion.
+          Share your own thoughts in the comments. Are "full-stack" developers a thing?&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Ask+Slashdot%3A+Are+'Full+Stack'+Developers+a+Thing%3F%3A+http%3A%2F%2Fbit.ly%2F2GrUFf1"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fask.slashdot.org%2Fstory%2F18%2F03%2F31%2F0351251%2Fask-slashdot-are-full-stack-developers-a-thing%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://ask.slashdot.org/story/18/03/31/0351251/ask-slashdot-are-full-stack-developers-a-thing?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://ask.slashdot.org/story/18/03/31/0351251/ask-slashdot-are-full-stack-developers-a-thing?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11927685&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-04-01T01:34:00+00:00</dc:date>
+        <dc:subject>programming</dc:subject>
+        <slash:department>you-vs-UI</slash:department>
+        <slash:section>askslashdot</slash:section>
+        <slash:comments>235</slash:comments>
+        <slash:hit_parade>235,232,139,118,34,19,11</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/03/31/0253219/thousands-of-companies-are-spying-on-you?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>'Thousands of Companies Are Spying On You'</title>
+        <link>
+          https://yro.slashdot.org/story/18/03/31/0253219/thousands-of-companies-are-spying-on-you?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>Security guru Bruce Schneier warns that "thousands of companies" are spying on us and manipulating
+          us for profit. An anonymous reader quotes his article on CNN:
+          Harvard Business School professor Shoshana Zuboff calls it "surveillance capitalism." And as creepy as
+          Facebook is turning out to be, the entire industry is far creepier. It has existed in secret far too long, and
+          it's up to lawmakers to force these companies into the public spotlight, where we can all decide if this is
+          how we want society to operate and -- if not -- what to do about it...
+          Surveillance capitalism drives much of the internet. It's behind most of the "free" services, and many of the
+          paid ones as well. Its goal is psychological manipulation, in the form of personalized advertising to persuade
+          you to buy something or do something, like vote for a candidate. And while the individualized profile-driven
+          manipulation exposed by Cambridge Analytica feels abhorrent, it's really no different from what every company
+          wants in the end... Surveillance capitalism is deeply embedded in our increasingly computerized society, and
+          if the extent of it came to light there would be broad demands for limits and regulation. But because this
+          industry can largely operate in secret, only occasionally exposed after a data breach or investigative report,
+          we remain mostly ignorant of its reach...
+          Regulation is the only answer.The first step to any regulation is transparency. Who has our data? Is it
+          accurate? What are they doing with it? Who are they selling it to? How are they securing it? Can we delete
+          it...? The market can put pressure on these companies to reduce their spying on us, but it can only do that if
+          we force the industry out of its secret shadows.
+
+          The article also insists that "None of this is new," pointing out that companies like Facebook and Google
+          offer their free services in exchange for your data.
+
+          But he also notes that there are now already 2,500 to 4,000 data brokers just in the U.S., including Equifax.&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status='Thousands+of+Companies+Are+Spying+On+You'%3A+http%3A%2F%2Fbit.ly%2F2GnjCvX"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F03%2F31%2F0253219%2Fthousands-of-companies-are-spying-on-you%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/03/31/0253219/thousands-of-companies-are-spying-on-you?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/03/31/0253219/thousands-of-companies-are-spying-on-you?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11927605&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T23:34:00+00:00</dc:date>
+        <dc:subject>privacy</dc:subject>
+        <slash:department>data-and-Goliath</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>136</slash:comments>
+        <slash:hit_parade>136,133,59,53,16,9,4</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://science.slashdot.org/story/18/03/31/189259/should-we-revive-extinct-species?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Should We Revive Extinct Species?</title>
+        <link>
+          https://science.slashdot.org/story/18/03/31/189259/should-we-revive-extinct-species?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader writes:
+          The last male northern white rhinoceros died just last week, and a total of just 29,000 rhinoceroses now
+          remain on earth. But National Geographic reports that "the genetic material of several northern white rhinos
+          has been stored away," and scientists hope to give birth to another using in vitro fertilization -- or to
+          breed a hybrid using a genetically similar southern white rhino.
+
+
+          Meanwhile, a postdoctoral fellow in ecology and evolutionary biology reports that scientists are seriously
+          considering the possibility of "de-extincting" the Carolina parakeet, America's only native parrot, which
+          became extinct 100 years ago.
+          Thanks to the data I compiled as well as cutting-edge machine learning approaches to analyze those data, my
+          colleagues and I were able to reconstruct the Carolina parakeets' likely range and climate niche, [which]
+          turned out to be much smaller than previously believed... While this may seem rather minor, some scientists
+          consider the Carolina parakeet one of the top candidates for 'de-extinction', a process in which DNA is
+          harvested from specimens and used to "resurrect" extinct species... If someone were to spend millions of
+          dollars doing all of the genetic and breeding work to bring back this species, or any other, how will they
+          figure out where to release these birds...? Whether or not de-extinction is a worthwhile use of conservation
+          effort and money is another question, best answered by someone other than me. But this is just an example of
+          one potential use of this type of research. "
+          It seems like all kinds of havoc could ensue if we released a resurrected species back into the modern
+          ecosystem. And yet Harvard researchers are already working to breed a new creature that's half-elephant, half
+          Wooly Mammoth. What do Slashdot's readers think? Should we revive extinct species?&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Should+We+Revive+Extinct+Species%3F%3A+http%3A%2F%2Fbit.ly%2F2Gs4cTe"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fscience.slashdot.org%2Fstory%2F18%2F03%2F31%2F189259%2Fshould-we-revive-extinct-species%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://science.slashdot.org/story/18/03/31/189259/should-we-revive-extinct-species?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://science.slashdot.org/story/18/03/31/189259/should-we-revive-extinct-species?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11929939&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T22:34:00+00:00</dc:date>
+        <dc:subject>earth</dc:subject>
+        <slash:department>fallen-kingdoms</slash:department>
+        <slash:section>science</slash:section>
+        <slash:comments>158</slash:comments>
+        <slash:hit_parade>158,154,94,82,27,9,5</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://slashdot.org/story/18/03/31/1938242/mailchimp-bans-emails-promoting-cryptocurrency?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>MailChimp Bans Emails Promoting Cryptocurrency</title>
+        <link>
+          https://slashdot.org/story/18/03/31/1938242/mailchimp-bans-emails-promoting-cryptocurrency?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>"MailChimp to Cryptocurrency Promoters: Your Fake Money's No Good Here," jokes the headline at
+          Gizmodo. The mass emailing service -- which sends over a billion emails a day -- just updated its Acceptable
+          Use Policy to warn users that MailChimp "does not allow businesses involved in any aspect of the sale,
+          transaction, exchange, storage, marketing, or production of cryptocurrencies, virtual currencies, and any
+          digital assets related to an Initial Coin Offering, to use MailChimp to facilitate or support any of those
+          activities."
+          An anonymous reader quotes Gizmodo:
+          The ban on cryptocurrency promotion isn't out of the blue so much as a clarification of existing use
+          policies... In a statement to Gizmodo, MailChimp further clarified: "We recognize that blockchain technology
+          is in its infancy and has tremendous potential. Nonetheless, the promotion and exchange of cryptocurrencies is
+          too frequently associated with scams, fraud, phishing, and potentially misleading business practices at this
+          time..." MailChimp previously held policies prohibiting multi-level marketing, "make money online" businesses,
+          and "industries hav[ing] higher-than-average abuse complaints," and earmarked "online trading, day trading
+          tips, or stock market related content" for "additional scrutiny..." This follows similar, though less
+          restrictive bans by Facebook (and Instagram by extension), Google, Linkedin, Twitter, and Snapchat on ICO ads,
+          and country-wide bans in China and South Korea.
+
+          Futurism reports that the first victims are "responding in kind by attempting to read the riot act to a
+          Twitter account whose avatar is a monkey with a hat," strongly informing that monkey that "Centralized
+          capricious power is exactly why we need blockchains."&lt;p&gt;&lt;div class="share_submission"
+          style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=MailChimp+Bans+Emails+Promoting+Cryptocurrency%3A+http%3A%2F%2Fbit.ly%2F2Gnougz"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fslashdot.org%2Fstory%2F18%2F03%2F31%2F1938242%2Fmailchimp-bans-emails-promoting-cryptocurrency%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://slashdot.org/story/18/03/31/1938242/mailchimp-bans-emails-promoting-cryptocurrency?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://slashdot.org/story/18/03/31/1938242/mailchimp-bans-emails-promoting-cryptocurrency?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11930037&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T21:34:00+00:00</dc:date>
+        <dc:subject>advertising</dc:subject>
+        <slash:department>monkey-see-monkey-don't</slash:department>
+        <slash:section>slashdot</slash:section>
+        <slash:comments>45</slash:comments>
+        <slash:hit_parade>45,41,24,18,5,0,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://yro.slashdot.org/story/18/03/31/1828213/the-eff-hosts-a-john-perry-barlow-symposium-next-saturday?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>The EFF Hosts a 'John Perry Barlow Symposium' Next Saturday</title>
+        <link>
+          https://yro.slashdot.org/story/18/03/31/1828213/the-eff-hosts-a-john-perry-barlow-symposium-next-saturday?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader writes:
+          The EFF is announcing "a celebration of the life and leadership of the recently departed founder of EFF, John
+          Perry Barlow," to be held next Saturday at the Internet Archive in San Francisco from 2:00 to 6:00. The event
+          will also be streamed live on the Internet Archive's YouTube channel.
+          Confirmed speakers include Edward Snowden, Cory Doctorow, EFF co-founders John Gilmore and Mitch Kapor, and
+          Shari Steele, the executive director of the Tor Project (and a former EFF executive director).&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=The+EFF+Hosts+a+'John+Perry+Barlow+Symposium'+Next+Saturday%3A+http%3A%2F%2Fbit.ly%2F2GoSuwP"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fyro.slashdot.org%2Fstory%2F18%2F03%2F31%2F1828213%2Fthe-eff-hosts-a-john-perry-barlow-symposium-next-saturday%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://yro.slashdot.org/story/18/03/31/1828213/the-eff-hosts-a-john-perry-barlow-symposium-next-saturday?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://yro.slashdot.org/story/18/03/31/1828213/the-eff-hosts-a-john-perry-barlow-symposium-next-saturday?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11929967&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T21:04:00+00:00</dc:date>
+        <dc:subject>eff</dc:subject>
+        <slash:department>electronic-frontiers</slash:department>
+        <slash:section>yro</slash:section>
+        <slash:comments>14</slash:comments>
+        <slash:hit_parade>14,13,6,5,1,0,0</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://news.slashdot.org/story/18/03/31/1857255/nature-explores-why-so-many-postgrads-have-bad-mental-health?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>'Nature' Explores Why So Many Postgrads Have Bad Mental Health</title>
+        <link>
+          https://news.slashdot.org/story/18/03/31/1857255/nature-explores-why-so-many-postgrads-have-bad-mental-health?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader writes:
+          This week Nature tweeted that the rates of depression and anxiety reported by postgraduate students were six
+          times higher than in the general population -- and received more than 1,200 retweets and received 170 replies.
+          "This is not a one dimensional problem. Financial burden, hostile academia, red tape, tough job market, no
+          proper career guidance. Take your pick," read one response. "Maybe being told day in, day out that the work
+          you spend 10+ hrs a day, 6-7 days a week on isn't good enough," said another.
+          The science magazine takes this as more proof that "there is a problem among young scientists. Too many have
+          mental-health difficulties, and too many say that the demands of the role are partly to blame. Neither issue
+          gets the attention it deserves." They're now gathering stories from postgraduates about mental-health issues,
+          and vowing to give the issue more coverage. "There is a problem with the culture in science, and it is one
+          that loads an increasing burden on the shoulders of younger generations. The evidence suggests that they are
+          feeling the effects. (Among the tweets, one proposed solution to improving the PhD is to 'treat it like
+          professional training instead of indentured servitude with no hope of a career at the end?'.)"&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status='Nature'+Explores+Why+So+Many+Postgrads+Have+Bad+Mental+Health%3A+http%3A%2F%2Fbit.ly%2F2GnKpIH"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnews.slashdot.org%2Fstory%2F18%2F03%2F31%2F1857255%2Fnature-explores-why-so-many-postgrads-have-bad-mental-health%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://news.slashdot.org/story/18/03/31/1857255/nature-explores-why-so-many-postgrads-have-bad-mental-health?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://news.slashdot.org/story/18/03/31/1857255/nature-explores-why-so-many-postgrads-have-bad-mental-health?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11929995&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T20:34:00+00:00</dc:date>
+        <dc:subject>education</dc:subject>
+        <slash:department>lower-education</slash:department>
+        <slash:section>news</slash:section>
+        <slash:comments>144</slash:comments>
+        <slash:hit_parade>144,142,63,51,17,10,6</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://slashdot.org/story/18/03/31/1615245/is-it-illegal-to-trick-a-robot?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Is It Illegal to Trick a Robot?</title>
+        <link>https://slashdot.org/story/18/03/31/1615245/is-it-illegal-to-trick-a-robot?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</link>
+        <description>An anonymous reader writes:
+          Can you get into trouble under anti-hacking laws for tricking machine learning...? A new paper by security
+          researchers and legal experts asks whether fooling a driverless car into seeing a stop sign as a speed sign,
+          for instance, is the same as hacking into it.
+          The original submission asks another question -- "Do you have inadequate security if your product is too easy
+          to trick?" But the paper explores the possibility of bad actors who deliberately build a secret blind spot
+          into a learning system, or reconstruct all the private data that was used for training. One of the paper's
+          authors even coded DNA that corrupts gene-sequencing software and takes control of its underlying computer,
+          and the researchers ultimately warn about the dangers of "missing or skewed security incentives" in the status
+          quo.
+          "Our aim is to introduce the law and policy community within and beyond academia to the ways adversarial
+          machine learning alter the nature of [cracking] and with it the cybersecurity landscape."&lt;p&gt;&lt;div
+          class="share_submission" style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Is+It+Illegal+to+Trick+a+Robot%3F%3A+http%3A%2F%2Fbit.ly%2F2GqxFkr"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fslashdot.org%2Fstory%2F18%2F03%2F31%2F1615245%2Fis-it-illegal-to-trick-a-robot%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://slashdot.org/story/18/03/31/1615245/is-it-illegal-to-trick-a-robot?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://slashdot.org/story/18/03/31/1615245/is-it-illegal-to-trick-a-robot?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11929769&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T19:34:00+00:00</dc:date>
+        <dc:subject>ai</dc:subject>
+        <slash:department>pranks-on-programmers</slash:department>
+        <slash:section>slashdot</slash:section>
+        <slash:comments>70</slash:comments>
+        <slash:hit_parade>70,68,30,27,6,4,1</slash:hit_parade>
+      </item>
+      <item
+        rdf:about="https://news.slashdot.org/story/18/03/31/0622248/open-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">
+        <title>Open Source RISC V Processor Gets Support From Google, Samsung, Qualcomm, and Tesla</title>
+        <link>
+          https://news.slashdot.org/story/18/03/31/0622248/open-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed
+        </link>
+        <description>An anonymous reader writes:
+          Google, Qualcomm, and Samsung "are among 80 tech companies joining forces to develop a new open-source chip
+          design for new technologies like self-driving vehicles," writes Seeking Alpha, citing a (pay-walled) report on
+          The Information. "Western Digital and Nvidia also plan to use the new chip design for some of their products,"
+          while Tesla "has joined the RISC-V Foundation and is considering using the tech in its new chip efforts."
+
+          MIT Technology Review adds that while Arm had hoped to bring their low-power/high performance processors to AI
+          and self-driving cars, "The company that masterminded the processor inside your smartphone may find that a set
+          of free-to-use alternative designs erode some of its future success."&lt;p&gt;&lt;div class="share_submission"
+          style="position:relative;"&gt;
+          &lt;a class="slashpop"
+          href="http://twitter.com/home?status=Open+Source+RISC+V+Processor+Gets+Support+From+Google%2C+Samsung%2C+Qualcomm%2C+and+Tesla%3A+http%3A%2F%2Fbit.ly%2F2GmZbzo"&gt;&lt;img
+          src="https://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+          &lt;a class="slashpop"
+          href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnews.slashdot.org%2Fstory%2F18%2F03%2F31%2F0622248%2Fopen-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+          src="https://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+
+          &lt;a class="nobg"
+          href="http://plus.google.com/share?url=https://news.slashdot.org/story/18/03/31/0622248/open-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+          onclick="javascript:window.open(this.href,'',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"&gt;&lt;img
+          src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/&gt;&lt;/a&gt;
+
+
+          &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+          href="https://news.slashdot.org/story/18/03/31/0622248/open-source-risc-v-processor-gets-support-from-google-samsung-qualcomm-and-tesla?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+          more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+          src="https://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=11928067&amp;amp;smallembed=1" style="height:
+          300px; width: 100%; border: none;"&gt;&lt;/iframe&gt;
+        </description>
+        <dc:creator>EditorDavid</dc:creator>
+        <dc:date>2018-03-31T18:34:00+00:00</dc:date>
+        <dc:subject>business</dc:subject>
+        <slash:department>world-domination</slash:department>
+        <slash:section>news</slash:section>
+        <slash:comments>118</slash:comments>
+        <slash:hit_parade>118,117,68,61,14,6,3</slash:hit_parade>
+      </item>
+      <textinput rdf:about="https://slashdot.org/search.pl">
+        <title>Search Slashdot</title>
+        <description>Search Slashdot stories</description>
+        <name>query</name>
+        <link>https://slashdot.org/search.pl</link>
+      </textinput>
+    </rdf:RDF>
+  </results>
+</query><!-- total: 151 -->
