@@ -218,8 +218,9 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
   axios.get(query)
     .then((response) => {
       let data = response.data
-      data.params = params
-      console.log('DATTTT', data)
+      if (dataType === 'json') {
+        data.params = params
+      }
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
@@ -1129,12 +1130,10 @@ export default new Vuex.Store({
           const re = /^@(xml|json)/
           const match = re.exec(item.name)
           let dataType = match[1]
-          console.log('DT', dataType)
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
           itemText = itemText.replace(/^@.*?\n/, '')
           const params = jsyaml.load(itemText)
-          console.log('XXXXX', itemText, params)
           return showFormattedData(context, id, url, params.template, dataType, params)
         }
         if (/^@outline/.test(item.name)) {
