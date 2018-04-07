@@ -7,6 +7,7 @@ import _ from 'lodash'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
 import xsl from '../lib/xsl'
+import lodashTemplate from '../lib/lodash-template'
 const parserURI = require('uri-parse-lib')
 const HTML5Outline = require('h5o')
 const util = require('../util.js')
@@ -15,7 +16,6 @@ const md = require('markdown-it')({
   linkify: true,
   typographer: true
 })
-console.log('xsl', axios, 'test', xsl)
 const lunr = require('lunr')
 
 function loadIndex (titles, text) {
@@ -190,7 +190,7 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showXML (context, id, url, xslType) {
+function showFormattedData (context, id, url, xslType, dataType) {
   let query = url
   // xttp means, route it through YQL
 
@@ -200,11 +200,14 @@ function showXML (context, id, url, xslType) {
       encodeURIComponent('select * from xml where url="' +
         url + '"') + '&format=xml'
   }
+  const templateEngines = {
+    'xml': xsl,
+    'json': lodashTemplate
+  }
   axios.get(query)
     .then((response) => {
       let data = response.data
-      xsl.render(data, xslType).then(html => {
-        // html = util.replaceRelUrls(html, base)
+      templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
@@ -466,7 +469,7 @@ function showSite (context, title, id, content) {
       })
   }
   if (ext === 'xml') {
-    showXML(context, id, url)
+    showFormattedData(context, id, url, null, 'xml')
   }
   const iframeHTML = `
     <div style="width:100%">
@@ -1094,7 +1097,6 @@ export default new Vuex.Store({
       if (item) {
         item = item[0]
         let itemText = context.state.leotext[item.t]
-        console.log('item text', itemText)
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)
         }
@@ -1107,12 +1109,22 @@ export default new Vuex.Store({
         if (/^@rss/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
-          return showXML(context, id, url, 'rss')
+          return showFormattedData(context, id, url, 'rss', 'xml')
         }
-        if (/^@xml/.test(item.name)) {
+        if (/^@(xml|json)/.test(item.name)) {
+          // match
+          const re = /^@(xml|json)/
+          const match = re.exec(item.name)
+          let dataType = match[1]
+          console.log('DT', dataType)
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
-          return showXML(context, id, url)
+          const parts = itemText.split(':')
+          let xslType = ''
+          if (parts && parts[1]) {
+            xslType = parts[1].trim()
+          }
+          return showFormattedData(context, id, url, xslType, dataType)
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath

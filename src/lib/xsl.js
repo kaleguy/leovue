@@ -43,8 +43,38 @@ const rss = `
 </xsl:stylesheet>
 
 `
+const weather =
+`
+<xsl:stylesheet version="1.0" 
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+ xmlns:media="http://search.yahoo.com/mrss/"
+ xmlns:rdf="http://purl.org/rss/1.0/"
+> 
+<xsl:output method="html"/>
+  <xsl:template match="//current_observation">
+    <h2><xsl:value-of select="location"/></h2>
+    <div class="weather-report">
+      <table>   
+        <tr><td class="col-label">Observation Time:</td><td><xsl:value-of select="observation_time"/></td></tr>      
+        <tr><td class="col-label">Weather:</td><td><xsl:value-of select="weather"/></td></tr>      
+        <tr><td class="col-label">Temperature:</td><td><xsl:value-of select="temperature_string"/></td></tr>      
+        <tr><td class="col-label">Humidity:</td><td><xsl:value-of select="relative_humidity"/></td></tr>      
+        <tr><td class="col-label">Wind:</td><td><xsl:value-of select="wind_string"/>, 
+                   <xsl:value-of select="wind_mph"/> mph, from 
+                   <xsl:value-of select="wind_dir"/>
+        </td></tr>
+      </table>
+    </div>        
+  </xsl:template>
 
-const styleSheets = { rss }
+  <xsl:template match="text()|@*">
+  </xsl:template>
+
+</xsl:stylesheet>
+
+`
+
+const styleSheets = { rss, weather }
 
 function render (xml, xslType) {
   const oParser = new DOMParser()

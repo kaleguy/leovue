@@ -68,12 +68,16 @@
 <v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
 <v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
-<v t="josephorr.20180331164142.1"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
+<v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
-<v t="josephorr.20180402071950.1"><vh>[New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
+<v t="josephorr.20180402071948.1"><vh>XML</vh>
+<v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
+</v>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10001)</vh></v>
 </v>
 </v>
 </v>
@@ -2099,6 +2103,9 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 <t tx="josephorr.20180402070616.1">&amp;amp; in RSS
 </t>
 <t tx="josephorr.20180402071948.1"></t>
-<t tx="josephorr.20180402071950.1"></t>
+<t tx="josephorr.20180402071950.1">template: weather</t>
+<t tx="josephorr.20180403094722.1"></t>
+<t tx="josephorr.20180407102550.1"></t>
+<t tx="josephorr.20180407102553.1"></t>
 </tnodes>
 </leo_file>

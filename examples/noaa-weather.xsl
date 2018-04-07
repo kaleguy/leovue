@@ -2,12 +2,14 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:media="http://search.yahoo.com/mrss/"
                 xmlns:rdf="http://purl.org/rss/1.0/"
-                exclude-result-prefixes="rdf media"
 >
   <xsl:output method="html"/>
 
   <xsl:template match="/">
     <xsl:apply-templates select="//item | //rdf:item"/>
+  </xsl:template>
+
+  <xsl:template match="results">
   </xsl:template>
 
   <xsl:template match="item | rdf:item">
@@ -20,7 +22,7 @@
           <a target="_blank" href="{link}">
             <xsl:apply-templates select="title | rdf:title"/>
           </a>
-          <xsl:apply-templates select="description"/>
+          <xsl:apply-templates select="description | rdf:description"/>
         </td>
       </tr>
     </table>
@@ -32,7 +34,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="description">
+  <xsl:template match="description | rdf:description">
     <div class="rss-description">
       <xsl:value-of select="."/>
     </div>
@@ -46,3 +48,6 @@
   </xsl:template>
 
 </xsl:stylesheet>
+
+
+
