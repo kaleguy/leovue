@@ -1,0 +1,42 @@
+{
+  "coord": {
+    "lon": 3.83,
+    "lat": 36.35
+  },
+  "weather": [
+    {
+      "id": 802,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 68,
+    "pressure": 1007,
+    "humidity": 68,
+    "temp_min": 68,
+    "temp_max": 68
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 13.87,
+    "deg": 310
+  },
+  "clouds": {
+    "all": 40
+  },
+  "dt": 1523109600,
+  "sys": {
+    "type": 1,
+    "id": 6194,
+    "message": 0.1657,
+    "country": "DZ",
+    "sunrise": 1523078500,
+    "sunset": 1523124732
+  },
+  "id": 2508268,
+  "name": "Tizi Ouzou",
+  "cod": 200
+}

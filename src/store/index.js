@@ -4,6 +4,7 @@ import {getLeoJSON, transformLeoXML} from '../services/leo.js'
 import router from '../router'
 import axios from 'axios'
 import _ from 'lodash'
+import jsyaml from 'js-yaml'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
 import xsl from '../lib/xsl'
@@ -190,7 +191,17 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showFormattedData (context, id, url, xslType, dataType) {
+
+/**
+ *
+ * @param context
+ * @param id
+ * @param url
+ * @param xslType
+ * @param dataType
+ * @param params {json} Extra data that will be added before template rendering
+ */
+function showFormattedData (context, id, url, xslType, dataType, params) {
   let query = url
   // xttp means, route it through YQL
 
@@ -207,6 +218,8 @@ function showFormattedData (context, id, url, xslType, dataType) {
   axios.get(query)
     .then((response) => {
       let data = response.data
+      data.params = params
+      console.log('DATTTT', data)
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
@@ -1119,12 +1132,10 @@ export default new Vuex.Store({
           console.log('DT', dataType)
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
-          const parts = itemText.split(':')
-          let xslType = ''
-          if (parts && parts[1]) {
-            xslType = parts[1].trim()
-          }
-          return showFormattedData(context, id, url, xslType, dataType)
+          itemText = itemText.replace(/^@.*?\n/, '')
+          const params = jsyaml.load(itemText)
+          console.log('XXXXX', itemText, params)
+          return showFormattedData(context, id, url, params.template, dataType, params)
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
