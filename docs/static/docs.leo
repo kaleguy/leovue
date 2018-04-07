@@ -76,9 +76,8 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSONxxx</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
-<v t="josephorr.20180407105415.1"><vh>@json [NYC Weather](http://localhost:8081/weather.json)</vh></v>
 </v>
 </v>
 </v>
@@ -2108,9 +2107,6 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 <t tx="josephorr.20180403094722.1"></t>
 <t tx="josephorr.20180407102550.1"></t>
 <t tx="josephorr.20180407102553.1">template: weather
-location: NYC Central Park
-source: OpenWeather Map</t>
-<t tx="josephorr.20180407105415.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
 </tnodes>
