@@ -59,7 +59,7 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -68,13 +68,13 @@
 <v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
 <v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
-<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1"><vh>XML</vh>
-<v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
+<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
+<v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
@@ -2102,10 +2102,50 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 <t tx="josephorr.20180402061306.1">A URL node can be a simple website displayed in the content area.</t>
 <t tx="josephorr.20180402070616.1">&amp;amp; in RSS
 </t>
-<t tx="josephorr.20180402071948.1"></t>
+<t tx="josephorr.20180402071948.1">@language md
+
+Using the @xml directive, you can retrieve and format XML content. The content will be formatted with the xsl template 
+that you specify.
+
+For example:
+
+```
+@xml [New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)
+```
+
+You need to tell the directive what template to use to format the xml. So in the body of the following node in the leo file, 
+put 
+
+```
+template: weather
+```
+
+By default, Leo Vue comes with just an 'rss' and 'weather' template. These templates are in lib/xsl.js. You can add more 
+templates to this file to format other xml sources.
+</t>
 <t tx="josephorr.20180402071950.1">template: weather</t>
 <t tx="josephorr.20180403094722.1"></t>
-<t tx="josephorr.20180407102550.1"></t>
+<t tx="josephorr.20180407102550.1">@language md 
+
+Using the @json directive, you can retrieve and format JSON data with lodash templates.
+
+For example:
+
+```
+@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)
+```
+
+You need to tell the directive what template to use to format the JSON. So in the body of the following node in the leo file, 
+specify the template. You can also add other data that will be added to the JSON retrieved from the data endpoint.
+
+```
+template: weather
+location: NYC Central Park
+source: OpenWeather Map
+```
+
+By default, Leo Vue comes with just a 'weather' template for JSON data from OpenWeather Map. This template is in lib/lodash-template.js. You can add more 
+templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>

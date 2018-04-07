@@ -51,7 +51,7 @@
     "vue-youtube-embed": "^2.1.1",
     "vue2-leaflet": "0.0.57",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
