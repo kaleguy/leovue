@@ -47,6 +47,7 @@ function loadIndexItems (arr, titles, textItems) {
 }
 
 Vue.use(Vuex)
+const spinnerHTML = `<div class="spin-box"><div class="single10"></div></div>`
 
 function showText (context, text, id, nowrapper) {
   context.commit('CONTENT_PANE', {type: 'text'})
@@ -215,6 +216,7 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
     'xml': xsl,
     'json': lodashTemplate
   }
+  context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
   axios.get(query)
     .then((response) => {
       let data = response.data
@@ -251,7 +253,7 @@ function showPageOutline (context, item, id, subpath) {
     let host = t.host
     let yql = "select * from htmlstring where url='" + site + "' AND xpath='//*'"
     let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
-    context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
+    context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
     axios.get(resturl)
       .then((response) => {
         let dummy = document.getElementById('dummy')
