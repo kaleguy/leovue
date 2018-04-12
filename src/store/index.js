@@ -194,12 +194,76 @@ function showMermaid (context, title, id) {
 }
 
 /**
+ * Load Title and abstract from ResearchGate. TODO: move to module
+ * @param context
+ * @param id
+ * @param url
+ */
+function showRG (context, item, url) {
+  const id = item.id
+  if (item.loaded) {
+    console.log('Retrieving', url, ' content from cache.')
+    showText(context, context.state.leotext[item.t], item.id, true)
+    return
+  }
+  url = `https://www.researchgate.net/publication/` + url
+  // route it through YQL to get around access restrictions
+
+  let yql = `select * from htmlstring where url='${url}' AND xpath='//div[@class="public-publication-details-top"]'`
+  let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
+  context.commit('CURRENT_ITEM_CONTENT', {text: spinnerHTML})
+  axios.get(resturl)
+    .then((response) => {
+      let dummy = document.getElementById('dummy')
+      if (dummy) {
+        dummy.outerHTML = ''
+      }
+      dummy = document.createElement('section')
+      dummy.setAttribute('id', 'dummy')
+      dummy.style.display = 'none'
+      document.body.appendChild(dummy)
+      let html = response.data.query.results.result
+      // html = html.replace(/href="\/m\//g, 'href="https://www.researchgate.net/m/')
+
+      dummy.innerHTML = html
+      removeElement('publication-header-download-citation')
+      removeElement('publication-header-download-citation')
+      removeElement('fade-in')
+      removeElement('publication-meta-secondary')
+      removeElement('signup-promo-with-stats')
+      function hack () {
+        const barIconEl = document.getElementsByClassName('nova-e-icon')[0]
+        if (!barIconEl) { return }
+        barIconEl.outerHTML = '<div class="bars-1"></div>'
+        hack()
+      }
+      hack() // WTF? loop doesn't work
+      let text = '<div class="rg">' + dummy.innerHTML + '</div>'
+      context.commit('CURRENT_ITEM_CONTENT', { text })
+      const newItem = { id, t: text }
+      context.commit('CONTENT_ITEM', {item: newItem})
+      context.commit('CONTENT_ITEM_UPDATE')
+      context.state.leotext[item.t] = text
+      item.loaded = true
+    })
+}
+
+/**
+ * remove Element by className TODO: move this to utils
+ * @param className
+ */
+function removeElement (className) {
+  const el = document.getElementsByClassName(className)[0]
+  if (el) { el.outerHTML = '' }
+}
+
+/**
  *
  * @param context
  * @param id
  * @param url
- * @param xslType
- * @param dataType
+ * @param xslType {String} xsl template name (in xsl.js)
+ * @param dataType {String} 'xsl' or 'json'
  * @param params {json} Extra data that will be added before template rendering
  */
 function showFormattedData (context, id, url, xslType, dataType, params) {
@@ -343,6 +407,9 @@ function showPageOutline (context, item, id, subpath) {
 }
 // TODO: possibly replace this with util.replaceRelUrls
 function replaceRelLinks (host, content) {
+  if (!host || !content) {
+    return content
+  }
   content = content.replace(/href="\/([a-zA-Z])/g, 'target="_blank" href="//' + host + '/$1')
   content = content.replace(/src="\/([a-zA-Z])/g, 'src="//' + host + '/$1')
   content = content.replace(/srcset="\//g, 'srcset="//' + host + '/')
@@ -1137,6 +1204,9 @@ export default new Vuex.Store({
           itemText = itemText.replace(/^@.*?\n/, '')
           const params = jsyaml.load(itemText)
           return showFormattedData(context, id, url, params.template, dataType, params)
+        }
+        if (/^@rg/.test(item.name)) {
+          showRG(context, item, item.name.replace(/@rg /, ''))
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath

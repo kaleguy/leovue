@@ -73,11 +73,14 @@
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
+<v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
+</v>
+<v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
+<v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
 </v>
 </v>
@@ -2149,5 +2152,7 @@ templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
+<t tx="josephorr.20180407195952.1"></t>
+<t tx="josephorr.20180407195958.1"></t>
 </tnodes>
 </leo_file>

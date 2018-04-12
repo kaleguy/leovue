@@ -145,6 +145,10 @@ export default {
     },
     vtitle: function () {
       let name = this.model.name
+      // TODO @rg functionality should be in separate module
+      if (/@rg /.test(name)) {
+        name = name.replace(/@rg \d+/, '').replace(/_/g, ' ')
+      }
       name = name.replace(/^@[a-z]+\s/, '')
       const re = /^\[(.*?)\]\((.*?)\)$/
       const match = re.exec(name)
