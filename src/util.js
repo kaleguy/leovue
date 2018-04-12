@@ -78,7 +78,6 @@ function parseQueryString (config, url) {
  */
 function formatText (text, noWrapper) {
   if (!text) { return '' }
-  if (noWrapper) { return text }
   let language = getLanguage(text)
 
   // text = text.replace(/<</g, '\u00AB')
@@ -122,7 +121,7 @@ function formatText (text, noWrapper) {
     default:
       text = hiliteCode(text, language)
   }
-
+  if (noWrapper) { return text }
   text = `<div class='content'>${text}</div>`
   return text
 }

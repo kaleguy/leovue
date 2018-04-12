@@ -203,7 +203,8 @@ function showRG (context, item, url) {
   const id = item.id
   if (item.loaded) {
     console.log('Retrieving', url, ' content from cache.')
-    showText(context, context.state.leotext[item.t], item.id, true)
+    let text = context.state.leotext[item.t]
+    context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
   url = `https://www.researchgate.net/publication/` + url
@@ -1206,7 +1207,7 @@ export default new Vuex.Store({
           return showFormattedData(context, id, url, params.template, dataType, params)
         }
         if (/^@rg/.test(item.name)) {
-          showRG(context, item, item.name.replace(/@rg /, ''))
+          return showRG(context, item, item.name.replace(/@rg /, ''))
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
