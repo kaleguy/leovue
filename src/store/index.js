@@ -238,7 +238,7 @@ function showRG (context, item, url) {
         barIconEl.outerHTML = '<div class="bars-1"></div>'
         hack()
       }
-      hack() // WTF? loop doesn't work
+      hack() // WTF? loop doesn't work, have to use recursion to remove els
       const footer = `<div class="footer"><a target="_blank" href="${url}">See this article on ResearchGate.</a></div>`
       let text = '<div class="rg">' + dummy.innerHTML + footer + '</div>'
       context.commit('CURRENT_ITEM_CONTENT', { text })
