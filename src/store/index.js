@@ -239,7 +239,8 @@ function showRG (context, item, url) {
         hack()
       }
       hack() // WTF? loop doesn't work
-      let text = '<div class="rg">' + dummy.innerHTML + '</div>'
+      const footer = `<div class="footer"><a target="_blank" href="${url}">See this article on ResearchGate.</a></div>`
+      let text = '<div class="rg">' + dummy.innerHTML + footer + '</div>'
       context.commit('CURRENT_ITEM_CONTENT', { text })
       const newItem = { id, t: text }
       context.commit('CONTENT_ITEM', {item: newItem})
