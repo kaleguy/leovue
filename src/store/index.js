@@ -207,7 +207,8 @@ function showRG (context, item, url) {
     context.commit('CURRENT_ITEM_CONTENT', { text })
     return
   }
-  url = `https://www.researchgate.net/publication/` + url
+  const host = 'www.researchgate.net'
+  url = `https://${host}/publication/` + url
   // route it through YQL to get around access restrictions
 
   let yql = `select * from htmlstring where url='${url}' AND xpath='//div[@class="public-publication-details-top"]'`
@@ -225,13 +226,14 @@ function showRG (context, item, url) {
       document.body.appendChild(dummy)
       let html = response.data.query.results.result
       // html = html.replace(/href="\/m\//g, 'href="https://www.researchgate.net/m/')
-
-      dummy.innerHTML = html
-      removeElement('publication-header-download-citation')
+      html = html.replace(/<svg[\s\S]*?<\/svg>/mg, '<div class="bars-1"></div>')
+      dummy.innerHTML = cleanHTML(html, host)
       removeElement('publication-header-download-citation')
       removeElement('fade-in')
       removeElement('publication-meta-secondary')
       removeElement('signup-promo-with-stats')
+      /*
+      // don't need this if keep replace all SVG as above
       function hack () {
         const barIconEl = document.getElementsByClassName('nova-e-icon')[0]
         if (!barIconEl) { return }
@@ -239,6 +241,7 @@ function showRG (context, item, url) {
         hack()
       }
       hack() // WTF? loop doesn't work, have to use recursion to remove els
+      */
       const footer = `<div class="footer"><a target="_blank" href="${url}">See this article on ResearchGate.</a></div>`
       let text = '<div class="rg">' + dummy.innerHTML + footer + '</div>'
       context.commit('CURRENT_ITEM_CONTENT', { text })
@@ -247,6 +250,7 @@ function showRG (context, item, url) {
       context.commit('CONTENT_ITEM_UPDATE')
       context.state.leotext[item.t] = text
       item.loaded = true
+      dummy.outerHTML = ''
     })
 }
 
@@ -412,7 +416,8 @@ function replaceRelLinks (host, content) {
   if (!host || !content) {
     return content
   }
-  content = content.replace(/href="\/([a-zA-Z])/g, 'target="_blank" href="//' + host + '/$1')
+  content = content.replace(/href="http/g, 'target="_blank" href="http')
+  content = content.replace(/href="\//g, 'target="_blank" href="//' + host + '/')
   content = content.replace(/src="\/([a-zA-Z])/g, 'src="//' + host + '/$1')
   content = content.replace(/srcset="\//g, 'srcset="//' + host + '/')
   content = content.replace(/, \/static\/images/g, ', ' + '//' + host + '/static/images')

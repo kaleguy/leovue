@@ -2,7 +2,7 @@
 <template>
   <div class="treeviewer">
     <splitpane leftPaneStyle="width:360px">
-      <ul slot="left">
+      <ul slot="left" class="left-pane">
         <div v-for="itemdata in data">
         <item
           class="item"
