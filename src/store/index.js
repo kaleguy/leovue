@@ -318,7 +318,7 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
  */
 function showBook (context, item, url, params) {
   const id = item.id
-  url = 'http://openlibrary.org/api/books?format=json&jscmd=data&bibkeys=ISBN:' + url
+  url = 'https://openlibrary.org/api/books?format=json&jscmd=data&bibkeys=ISBN:' + url
   context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
   axios.get(url)
     .then((response) => {
