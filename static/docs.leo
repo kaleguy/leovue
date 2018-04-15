@@ -76,11 +76,16 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
+<v t="josephorr.20180414145445.1"><vh>@json [Math Book](http://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
 <v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
+</v>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
+<v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
@@ -530,7 +535,7 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
     &lt;splitpane leftPaneStyle="width:360px"&gt;
-      &lt;ul slot="left"&gt;
+      &lt;ul slot="left" class="left-pane"&gt;
         &lt;div v-for="itemdata in data"&gt;
         &lt;item
           class="item"
@@ -2152,7 +2157,24 @@ templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
-<t tx="josephorr.20180407195952.1"></t>
+<t tx="josephorr.20180407195952.1">@language md 
+
+Using the @rg directive, you can load an abstract from ResearchGate into the content for a node.
+
+In this case, the markdown syntax isn't used, just put "@rg" + the page title.
+
+For example:
+
+
+```
+@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation
+```
+</t>
 <t tx="josephorr.20180407195958.1"></t>
+<t tx="josephorr.20180414145445.1">template: openbooks
+comments: This is a math book. It was on the Openlibrary site.</t>
+<t tx="josephorr.20180414204138.1"></t>
+<t tx="josephorr.20180414204148.1"></t>
+<t tx="josephorr.20180414205753.1"></t>
 </tnodes>
 </leo_file>

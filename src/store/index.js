@@ -137,9 +137,11 @@ function getUrlFromTitle (title) {
   const re = /^\[(.*?)\]\((.*?)\)$/
   title = title.replace(/^@[a-zA-Z]*? /, '')
   const match = re.exec(title)
-  if (!match) { return null }
-  let url = match[2]
-  let label = match[1]
+  let url = ''
+  let label = ''
+  if (!match) { return { url, label } }
+  url = match[2]
+  label = match[1]
   if (!url) { return null }
   if (isRelative(url)) {
     // url = 'static/' + url
@@ -193,6 +195,16 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_PANE', { type: 'board' })
 }
 
+function checkCache (context, item, url) {
+  if (item.loaded) {
+    console.log('Retrieving', url, ' content from cache.')
+    let text = context.state.leotext[item.t]
+    context.commit('CURRENT_ITEM_CONTENT', { text })
+    return true
+  }
+  return false
+}
+
 /**
  * Load Title and abstract from ResearchGate. TODO: move to module
  * @param context
@@ -201,12 +213,7 @@ function showMermaid (context, title, id) {
  */
 function showRG (context, item, url) {
   const id = item.id
-  if (item.loaded) {
-    console.log('Retrieving', url, ' content from cache.')
-    let text = context.state.leotext[item.t]
-    context.commit('CURRENT_ITEM_CONTENT', { text })
-    return
-  }
+  if (checkCache(context, item, url)) { return }
   const host = 'www.researchgate.net'
   url = `https://${host}/publication/` + url
   // route it through YQL to get around access restrictions
@@ -295,7 +302,35 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
       }
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id)
-        context.commit('CONTENT_PANE', {type: 'text'})
+      })
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+}
+
+/**
+ *
+ * @param context
+ * @param item
+ * @param url {string} ISBN number
+ * @param params {json} Additional info from node content that will get added to template compile.
+ */
+function showBook (context, item, url, params) {
+  const id = item.id
+  url = 'http://openlibrary.org/api/books?format=json&jscmd=data&bibkeys=ISBN:' + url
+  context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
+  axios.get(url)
+    .then((response) => {
+      let data = response.data
+      const bookData = data[Object.keys(data)[0]]
+      item.name = bookData.title.split(' ').map(w => _.capitalize(w)).join(' ')
+      item.loaded = true
+      data.params = params
+      lodashTemplate.render(data, 'openbooks').then(html => {
+        showText(context, html, id)
+        context.commit('CONTENT_ITEM_UPDATE')
+        context.state.leotext[item.t] = html
       })
     })
     .catch(function (error) {
@@ -418,6 +453,7 @@ function replaceRelLinks (host, content) {
   }
   content = content.replace(/href="http/g, 'target="_blank" href="http')
   content = content.replace(/href="\//g, 'target="_blank" href="//' + host + '/')
+  content = content.replace(/href="([a-zA-Z])/g, 'target="_blank" href="//' + host + '/$1')
   content = content.replace(/src="\/([a-zA-Z])/g, 'src="//' + host + '/$1')
   content = content.replace(/srcset="\//g, 'srcset="//' + host + '/')
   content = content.replace(/, \/static\/images/g, ', ' + '//' + host + '/static/images')
@@ -576,9 +612,8 @@ function showSite (context, title, id, content) {
 }
 
 function setSiteItem (context, title, id) {
-  let {url, label} = getUrlFromTitle(title)
+  let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
-  console.log(label) // TODO: remove this, it is here for eshint
   const ext = util.getFileExtension(url)
   const base = url.substring(0, url.lastIndexOf('/'))
   context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
@@ -1214,6 +1249,17 @@ export default new Vuex.Store({
         }
         if (/^@rg/.test(item.name)) {
           return showRG(context, item, item.name.replace(/@rg /, ''))
+        }
+        if (/^@book/.test(item.name)) {
+          let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
+          url = url.replace('static/', '')
+          if (!url) { return }
+          itemText = itemText.replace(/^@.*?\n/, '')
+          let params = jsyaml.load(itemText)
+          if (_.isUndefined(params)) {
+            params = {}
+          }
+          return showBook(context, item, url, params)
         }
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
