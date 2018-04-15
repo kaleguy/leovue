@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -76,11 +76,16 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
+<v t="josephorr.20180414145445.1"><vh>@json [Math Book](http://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
 <v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
+</v>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
+<v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
@@ -530,7 +535,7 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
     &lt;splitpane leftPaneStyle="width:360px"&gt;
-      &lt;ul slot="left"&gt;
+      &lt;ul slot="left" class="left-pane"&gt;
         &lt;div v-for="itemdata in data"&gt;
         &lt;item
           class="item"
@@ -1267,9 +1272,9 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.7.4
+Leo Vue is currently at version 1.8.0
 
-Leo Vue 1.7.x is currently is only tested in Chrome and may not display correctly in other browsers.
+Leo Vue 1.8.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1289,6 +1294,7 @@ Current features include:
 * Summary nodes: Kanban and Flowchart
 * Outline nodes: outline a target page
 * RSS nodes: point a node to an RSS feed to have content area display HTML version.
+* Nodes with templated data, e.g. @xml and @json nodes.
 
 Planned features not yet supported:
 * Keyboard support
@@ -2152,7 +2158,39 @@ templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
-<t tx="josephorr.20180407195952.1"></t>
+<t tx="josephorr.20180407195952.1">@language md 
+
+Using the @rg directive, you can load an abstract from ResearchGate into the content for a node.
+
+In this case, the markdown syntax isn't used, just put "@rg" + the page title.
+
+For example:
+
+
+```
+@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation
+```
+</t>
 <t tx="josephorr.20180407195958.1"></t>
+<t tx="josephorr.20180414145445.1">template: openbooks
+comments: This is a math book. It was on the Openlibrary site.</t>
+<t tx="josephorr.20180414204138.1">@language md 
+
+Using the @book directive, you can use a book title and ISBN to load book details into the content for a node.
+
+If you want to add comments to the book listing, add for example "comments: My comments" to the node body.
+
+For example:
+
+```
+@book [Evolution of Civilizations](0913966576)
+```</t>
+<t tx="josephorr.20180414204148.1">comments: This is a book about Mathematics.</t>
+<t tx="josephorr.20180414205753.1">comments: |
+   This beautifully written book gives the reader the tools to 
+   analyze history from the most important patterns.
+   
+   These patterns are illustrated by an overview of the last 
+   3000 years of history.</t>
 </tnodes>
 </leo_file>
