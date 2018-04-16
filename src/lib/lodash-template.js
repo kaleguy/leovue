@@ -10,7 +10,9 @@ const openbooks = `
   <h2><%- book.title %></h2>
   <h3><%- book.subtitle %></h3>
   <div style="float:left;margin-right:6px;">
+    <% if (book.cover) { %>
     <a target="_blank" href="<%= book.url %>"><img src="<%= book.cover.medium %>"/></a>
+    <% } %>
   </div>
   <div style="float:left">  
     <table>
@@ -37,6 +39,11 @@ const openbooks = `
           </td>
       </tr>    </table>
   </div>
+  <% if (data.params.rating) { %>
+  <div style="clear:both; padding-top:10px;">
+    <star-rating :show-rating="false" :read-only="true" star-size="25" rating="<%= data.params.rating %>"></star-rating>
+  </div>
+  <% } %>
   <div class="comments">
   <%- data.params.comments %>
   </div>   

@@ -4,6 +4,7 @@ import AppBase from './AppBase.vue'
 import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
+import StarRating from 'vue-star-rating'
 import Icon from 'vue-awesome/components/Icon.vue'
 import 'vue-awesome/icons/bars'
 import 'vue-awesome/icons/arrow-left'
@@ -41,6 +42,7 @@ const Defiant = require('./lib/defiant') // eslint-disable-line
 Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
+Vue.component('star-rating', StarRating)
 Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)
 Vue.component('Nodelink', NodeLink)

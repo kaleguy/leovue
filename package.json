@@ -1,6 +1,6 @@
 {
   "name": "leo-vue",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr <joe.orr@gmail.com>",
   "private": false,
@@ -46,6 +46,7 @@
     "vue-nav-tabs": "^0.5.4",
     "vue-resize-directive": "^1.0.0",
     "vue-router": "^3.0.1",
+    "vue-star-rating": "^1.5.1",
     "vue-table-component": "^1.8.0",
     "vue-template-compiler": "^2.3.3",
     "vue-youtube-embed": "^2.1.1",
