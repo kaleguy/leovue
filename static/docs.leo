@@ -177,7 +177,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -1272,7 +1272,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.8.2
+Leo Vue is currently at version 1.8.3
 
 Leo Vue 1.8.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2179,7 +2179,7 @@ comments: This is a math book. It was on the Openlibrary site.</t>
 Using the @book directive, you can use a book title and ISBN to load book details into the content for a node.
 
 If you want to add comments to the book listing, add for example "comments: My comments" to the node body.
-You can also add star ratings in the node body, e.g. "stars:4".
+You can also add star ratings in the node body, e.g. "rating: 4".
 
 For example:
 

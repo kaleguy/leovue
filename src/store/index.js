@@ -253,6 +253,7 @@ function showRG (context, item, url) {
       let text = '<div class="rg">' + dummy.innerHTML + footer + '</div>'
       context.commit('CURRENT_ITEM_CONTENT', { text })
       const newItem = { id, t: text }
+      console.log(item.name)
       context.commit('CONTENT_ITEM', {item: newItem})
       context.commit('CONTENT_ITEM_UPDATE')
       context.state.leotext[item.t] = text
@@ -262,7 +263,7 @@ function showRG (context, item, url) {
 }
 
 /**
- * remove Element by className TODO: move this to utils
+ * remove Element by className TODO: move these to utils
  * @param className
  */
 function removeElement (className) {
@@ -1248,7 +1249,14 @@ export default new Vuex.Store({
           return showFormattedData(context, id, url, params.template, dataType, params)
         }
         if (/^@rg/.test(item.name)) {
-          return showRG(context, item, item.name.replace(/@rg /, ''))
+          const url = item.name
+            .replace(/@rg /, '')
+            .replace(/,/g, '')
+            .replace(/:/g, '')
+            .replace(/\//, '')
+            .replace(/\?/g, '')
+            .replace(/\(.*?\)/, '') // remove parentheticals
+          return showRG(context, item, url)
         }
         if (/^@book/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
