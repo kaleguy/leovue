@@ -489,6 +489,7 @@ function cleanHTML (html, host) {
   html = html.replace(/>\s+?,/g, '>,')
   html = html.replace(/>\s+?\./g, '>.')
   html = html.replace(/>\s+?["]/g, '>,"')
+  html = html.replace(/&amp;#27;/g, "'") // eslint-disable-line
   html = html.replace(/\( "/g, '("')
   html = html.replace(/" \)/g, '")')
   html = replaceRelLinks(host, html)
