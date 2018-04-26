@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -62,11 +62,6 @@
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
-</v>
-<v t="josephorr.20180306193229.1"><vh>Outline Nodes</vh>
-<v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
-<v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
-<v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 <v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
@@ -2048,22 +2043,6 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180304114723.1">https://en.wikipedia.org/wiki/Evaporating_Cloud</t>
 <t tx="josephorr.20180304203537.1"></t>
 <t tx="josephorr.20180305204208.1"></t>
-<t tx="josephorr.20180306193229.1">@language md
-
-Outline nodes use the HTML5 Outline spec to create an outline from a target web page.
-
-For example, the first child node in this section outlines Wikipedia's Kale page. Wikipedia HTML conforms to the HTML5 Outline spec, so Leo Vue is able to create an outline from the Wikipedia page.
-
-The title of the node in the Leo file is:
-```
-@outline [Kale](https://en.wikipedia.org/wiki/Kale
-```
-
-If you set the filename to "~outline", you can load a target webpage into an outline with a url parameter. See
-[The Leo Vue Example Site](https://kaleguy.github.io/leo-examples/)</t>
-<t tx="josephorr.20180306193346.1"></t>
-<t tx="josephorr.20180318101739.1"></t>
-<t tx="josephorr.20180318131630.1"></t>
 <t tx="josephorr.20180326061144.1">@language html
 
 &lt;p&gt;
