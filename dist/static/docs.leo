@@ -26,62 +26,8 @@
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Leo Vue Project Kanban</vh>
-<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
-<v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
-<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
-<v t="josephorr.20180420165601.1"><vh>Runkit Component</vh></v>
-<v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
-<v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
-<v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
-<v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
-<v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
-<v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
-<v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
-</v>
-<v t="josephorr.20180122081704.1"><vh>Content</vh>
-<v t="josephorr.20180122175250.1"><vh>Tree of Life</vh></v>
-<v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
-<v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
-</v>
-<v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
-<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
-<v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
-</v>
-</v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180420165631.1"><vh>@page</vh></v>
-<v t="josephorr.20180420165635.1"><vh>?page=</vh></v>
-<v t="josephorr.20180420165609.1"><vh>@sort</vh></v>
-<v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-</v>
-<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
-<v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
-<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
-<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
-<v t="josephorr.20180125105051.1"><vh>Doing</vh></v>
-<v t="josephorr.20180125105055.1"><vh>Done</vh>
-<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
-<v t="josephorr.20180125105145.1"><vh>properties</vh>
-<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
-<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
-<v t="josephorr.20180125105355.1"><vh>height</vh></v>
-</v>
-<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
-<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
-<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
-<v t="josephorr.20180125105403.1"><vh>center</vh></v>
-</v>
-</v>
-<v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
-<v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
-</v>
-</v>
-</v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -116,11 +62,6 @@
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
-</v>
-<v t="josephorr.20180306193229.1"><vh>Outline Nodes</vh>
-<v t="josephorr.20180306193346.1"><vh>@outline [Kale](https://en.wikipedia.org/wiki/Kale)</vh></v>
-<v t="josephorr.20180318101739.1"><vh>@outline [Dinosaurs](https://en.wikipedia.org/wiki/Dinosaur)</vh></v>
-<v t="josephorr.20180318131630.1"><vh>@outline [Def: test](https://en.wiktionary.org/wiki/test)</vh></v>
 </v>
 <v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
@@ -231,7 +172,6 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
@@ -350,7 +290,60 @@
 </v>
 </v>
 <v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"></v>
+<v t="josephorr.20180116093050.1"><vh>@kanban Leo Vue Project Kanban</vh>
+<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
+<v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
+<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
+</v>
+<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180420165601.1"><vh>Runkit Component</vh></v>
+<v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
+<v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
+<v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
+<v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
+<v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
+<v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
+<v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
+</v>
+<v t="josephorr.20180122081704.1"><vh>Content</vh>
+<v t="josephorr.20180122175250.1"><vh>Tree of Life</vh></v>
+<v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
+<v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
+</v>
+<v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
+<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180420165631.1"><vh>@page</vh></v>
+<v t="josephorr.20180420165635.1"><vh>?page=</vh></v>
+<v t="josephorr.20180420165609.1"><vh>@sort</vh></v>
+<v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
+<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
+<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
+<v t="josephorr.20180125105051.1"><vh>Doing</vh></v>
+<v t="josephorr.20180125105055.1"><vh>Done</vh>
+<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
+<v t="josephorr.20180125105145.1"><vh>properties</vh>
+<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
+<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
+<v t="josephorr.20180125105355.1"><vh>height</vh></v>
+</v>
+<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
+<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
+<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
+<v t="josephorr.20180125105403.1"><vh>center</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+<v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
+</v>
+</v>
 </v>
 </v>
 </v>
@@ -2050,22 +2043,6 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180304114723.1">https://en.wikipedia.org/wiki/Evaporating_Cloud</t>
 <t tx="josephorr.20180304203537.1"></t>
 <t tx="josephorr.20180305204208.1"></t>
-<t tx="josephorr.20180306193229.1">@language md
-
-Outline nodes use the HTML5 Outline spec to create an outline from a target web page.
-
-For example, the first child node in this section outlines Wikipedia's Kale page. Wikipedia HTML conforms to the HTML5 Outline spec, so Leo Vue is able to create an outline from the Wikipedia page.
-
-The title of the node in the Leo file is:
-```
-@outline [Kale](https://en.wikipedia.org/wiki/Kale
-```
-
-If you set the filename to "~outline", you can load a target webpage into an outline with a url parameter. See
-[The Leo Vue Example Site](https://kaleguy.github.io/leo-examples/)</t>
-<t tx="josephorr.20180306193346.1"></t>
-<t tx="josephorr.20180318101739.1"></t>
-<t tx="josephorr.20180318131630.1"></t>
 <t tx="josephorr.20180326061144.1">@language html
 
 &lt;p&gt;
