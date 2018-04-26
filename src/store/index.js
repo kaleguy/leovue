@@ -217,8 +217,7 @@ function showRG (context, item, url) {
   const host = 'www.researchgate.net'
   url = `https://${host}/publication/` + url
   // route it through YQL to get around access restrictions
-
-  let yql = `select * from htmlstring where url='${url}' AND xpath='//div[@class="public-publication-details-top"]'`
+  let yql = `select * from htmlstring where url='${url}' AND xpath='//div[@class="public-publication-details-top"]|//div[@class="publication-resources-summary"]'`
   let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
   context.commit('CURRENT_ITEM_CONTENT', {text: spinnerHTML})
   axios.get(resturl)
@@ -231,7 +230,11 @@ function showRG (context, item, url) {
       dummy.setAttribute('id', 'dummy')
       dummy.style.display = 'none'
       document.body.appendChild(dummy)
-      let html = response.data.query.results.result
+      let html = _.get(response, 'data.query.results.result', '')
+      if (!html) {
+        html = '<div>No results for query</div>'
+        console.log('Bad result for:', url, resturl)
+      }
       // html = html.replace(/href="\/m\//g, 'href="https://www.researchgate.net/m/')
       html = html.replace(/<svg[\s\S]*?<\/svg>/mg, '<div class="bars-1"></div>')
       dummy.innerHTML = cleanHTML(html, host)
@@ -1248,6 +1251,34 @@ export default new Vuex.Store({
           itemText = itemText.replace(/^@.*?\n/, '')
           const params = jsyaml.load(itemText)
           return showFormattedData(context, id, url, params.template, dataType, params)
+        }
+        if (/^@sort/.test(item.name)) {
+          // we'll sort text ascending, anything else e.g. year, descending
+          let sortDirection = 'asc'
+          const re = /^@sort-(.*?\s)/
+          const match = re.exec(item.name)
+          let sortType = ''
+          if (match && match[1]) {
+            sortType = match[1]
+            console.log('sort type', sortType)
+          }
+          const children = item.children
+          // if e.g. sort-year, load yaml in each node content,
+          // sort will be on 'year'
+          // here we will set a 'sname' property on each item for sorting
+          if (sortType) {
+            sortDirection = 'desc'
+            sortType = sortType.trim()
+            children.forEach(child => {
+              let childText = context.state.leotext[child.t]
+              childText = childText.replace(/^@.*?\n/, '')
+              let params = jsyaml.load(childText)
+              child.sname = _.get(params, sortType, '')
+            })
+          } else {
+            children.forEach(c => c.sname = c.name.replace(/^@rg \d+_/g, '').toLowerCase().replace(/^(a_|the_|an_)/i, '')) // eslint-disable-line
+          }
+          item.children = _.orderBy(children, o => o.sname, sortDirection) // eslint-disable-line
         }
         if (/^@rg/.test(item.name)) {
           const url = item.name

@@ -153,7 +153,7 @@ export default {
         name = toTitleCase(name.replace(/@rg \d+/, '').replace(/_/g, ' ').toLowerCase()) // eslint-disable-line
         name = name.replace(/%27/g, "'")
       }
-      name = name.replace(/^@[a-z]+\s/, '')
+      name = name.replace(/^@[a-z-]+\s/, '')
       const re = /^\[(.*?)\]\((.*?)\)$/
       const match = re.exec(name)
       if (!match) { return name }
