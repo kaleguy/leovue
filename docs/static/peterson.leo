@@ -71,7 +71,7 @@
 <v t="josephorr.20180417200515.1"><vh>@rg 242656064_Anticipatory_consciousness_Libet%27s_veto_and_a_close-enough_theory_of_free_will</vh></v>
 <v t="josephorr.20180416175918.1"><vh>@rg 7785003_Sources_of_Openness/Intellect:_Cognitive_and_Neuropsychological_Correlates_of_the_Fifth_Factor_of_Personality</vh></v>
 <v t="josephorr.20180416175935.1"><vh>@rg 7822912_Matching_effects_on_eating:_Do_individual_differences_make_a_difference</vh></v>
-<v t="josephorr.20180416175952.1" a="M"><vh>@rg 234821414_Attentional_biases_and_memory_distortions_in_self-enhancers</vh></v>
+<v t="josephorr.20180416175952.1"><vh>@rg 234821414_Attentional_biases_and_memory_distortions_in_self-enhancers</vh></v>
 <v t="josephorr.20180416180006.1"><vh>@rg 235336060_Peacemaking_among_higher-order_primates</vh></v>
 <v t="josephorr.20180416180023.1"><vh>@rg 235336076_Play_and_the_regulation_of_aggression</vh></v>
 <v t="josephorr.20180416180039.1"><vh>@rg 234822689_Self-induced_memory_distortions_and_the_allocation_of_processing_resources_at_encoding_and_retrieval</vh></v>
@@ -99,36 +99,36 @@
 <v t="josephorr.20180416180754.1"><vh>@rg 14222330_Ethanol-Induced_Change_in_Cardiac_and_Endogenous_Opiate_Function_and_Risk_for_Alcoholism</vh></v>
 <v t="josephorr.20180416180810.1"><vh>@rg 14351045_Characteristics_and_Putative_Mechanisms_in_Boys_at_Risk_for_Drug_Abuse_and_Aggressio</vh></v>
 <v t="josephorr.20180416180826.1"><vh>@rg 240962030_Fighting_as_a_Function_of_Personality_and_Neuropsychological_Measures</vh></v>
-<v t="josephorr.20180416180838.1" a="M"><vh>@rg 14673915_Alcoholism:_The_role_of_different_motivational_systems</vh></v>
+<v t="josephorr.20180416180838.1"><vh>@rg 14673915_Alcoholism:_The_role_of_different_motivational_systems</vh></v>
 <v t="josephorr.20180416180853.1"><vh>@rg 15302270_Provocation,_Acute_Alcohol_Intoxication,_Cognitive_Performance_and_Aggression</vh></v>
 <v t="josephorr.20180416193429.1"><vh>@rg 15496388_Drugs_and_aggression:_Correlations,_crime_and_human_manipulative_studies_and_some_proposed_mechanisms</vh></v>
-<v t="josephorr.20180416193446.1" a="M"><vh>@rg 223073010_Anxiety_sensitivity_and_self-reported_alcohol_consumption_rates_in_university_women</vh></v>
+<v t="josephorr.20180416193446.1"><vh>@rg 223073010_Anxiety_sensitivity_and_self-reported_alcohol_consumption_rates_in_university_women</vh></v>
 <v t="josephorr.20180416193503.1"><vh>@rg 15185499_Cardiovascular_reactivity_as_a_predictor_of_alcohol_consumption_in_a_taste_test_situation</vh></v>
 <v t="josephorr.20180416193520.1"><vh>@rg 14788263_A_biosocial_model_of_the_alcohol-aggression_relationship</vh></v>
 <v t="josephorr.20180416193553.1"><vh>@rg 14825060_Heart-rate_reactivity_and_alcohol_consumption_among_sons_of_alcoholics_and_sons_of_non-alcoholics</vh></v>
 <v t="josephorr.20180416193616.1"><vh>@rg 14884346_Risk_for_alcoholism_antisocial_behavior_and_response_perseveration</vh></v>
 <v t="josephorr.20180416193631.1"><vh>@rg 236273549_Genetic_and_other_risk_factors_for_alcoholism</vh></v>
-<v t="josephorr.20180416193643.1" a="M"><vh>@rg 242760361_Alcohol_serotonin_and_aggression</vh></v>
+<v t="josephorr.20180416193643.1"><vh>@rg 242760361_Alcohol_serotonin_and_aggression</vh></v>
 <v t="josephorr.20180416193656.1"><vh>@rg 247168273_Social_variability,_alcohol_consumption_and_the_inherited_predisposition_to_alcoholism</vh></v>
-<v t="josephorr.20180416193807.1" a="M"><vh>@rg 236273594_Alcohol_and_aggression:_Three_potential_mechanisms_of_the_drug_effect</vh></v>
+<v t="josephorr.20180416193807.1"><vh>@rg 236273594_Alcohol_and_aggression:_Three_potential_mechanisms_of_the_drug_effect</vh></v>
 <v t="josephorr.20180416193817.1"><vh>@rg 21571633_Factor_structure_and_correlates_of_the_Tridimensional_Personality_Questionnaire</vh></v>
 <v t="josephorr.20180416193835.1"><vh>@rg 21594394_Cognitive_Dysfunction_and_the_Inherited_Predisposition_to_Alcoholism</vh></v>
-<v t="josephorr.20180416193847.1" a="M"><vh>@rg 236273524_Alcohol_drug_use_and_aggressive_behavior</vh></v>
+<v t="josephorr.20180416193847.1"><vh>@rg 236273524_Alcohol_drug_use_and_aggressive_behavior</vh></v>
 <v t="josephorr.20180416193859.1"><vh>@rg 242829160_Etiology (of Addiction)</vh></v>
 <v t="josephorr.20180416193909.1"><vh>@rg 21309516_A_biobehavioural_model_for_the_inherited_predisposition_to_alcoholism</vh></v>
 <v t="josephorr.20180416193925.1"><vh>@rg 21353541_The_Tridimensional_Personality_Questionnaire_and_the_inherited_risk_for_alcoholism</vh></v>
-<v t="josephorr.20180416193939.1" a="M"><vh>@rg 234081762_Attention-deficit_hyperactivity_disorder,_childhood_conduct_disorder_and_alcoholism:_Is_there_an_association?</vh></v>
-<v t="josephorr.20180416193955.1" a="M"><vh>@rg 20848433_Acute_alcohol_intoxication_and_cognitive_functioning</vh></v>
+<v t="josephorr.20180416193939.1"><vh>@rg 234081762_Attention-deficit_hyperactivity_disorder,_childhood_conduct_disorder_and_alcoholism:_Is_there_an_association?</vh></v>
+<v t="josephorr.20180416193955.1"><vh>@rg 20848433_Acute_alcohol_intoxication_and_cognitive_functioning</vh></v>
 <v t="josephorr.20180416202245.1"><vh>@rg 21002590_Information_processing,_neuropsychological_function_and_the_inherited_predisposition_to_alcoholism</vh></v>
-<v t="josephorr.20180416202302.1" a="M"><vh>@rg 232458007_Acute_alcohol_intoxication_and_cognitive_functioning</vh></v>
+<v t="josephorr.20180416202302.1"><vh>@rg 232458007_Acute_alcohol_intoxication_and_cognitive_functioning</vh></v>
 <v t="josephorr.20180416202331.1"><vh>@rg 232523002_A_heuristic_model_for_the_inherited_predisposition_to_alcoholism</vh></v>
 <v t="josephorr.20180416202345.1"><vh>@rg 20944340_Inherited_Predisposition_to_Alcoholism:_Characteristics_of_Sons_of_Male_Alcoholics</vh></v>
 <v t="josephorr.20180416202500.1"><vh>@rg 30009551_Potential_psychological_markers_for_the_predisposition_to_alcoholism</vh></v>
 <v t="josephorr.20180416202631.1"><vh>@rg 247167876_Response_to_reward_and_punishment_and_the_inherited_risk_for_alcoholism</vh></v>
 <v t="josephorr.20180416202700.1"><vh>@rg 314831662_An_heuristic_model_for_the_inherited_predisposition_to_alcoholism</vh></v>
-<v t="josephorr.20180416202726.1" a="M"><vh>@rg 20491119_Autonomic_hyperreactivity_and_risk_for_alcoholism</vh></v>
+<v t="josephorr.20180416202726.1"><vh>@rg 20491119_Autonomic_hyperreactivity_and_risk_for_alcoholism</vh></v>
 </v>
-<v t="josephorr.20180419080843.1" a="E"><vh>Alphabetical Order</vh>
+<v t="josephorr.20180419080843.1"><vh>@sort Alphabetical Order</vh>
 <v t="josephorr.20180416082335.1"></v>
 <v t="josephorr.20180416082445.1"></v>
 <v t="josephorr.20180416082229.1"></v>
@@ -187,7 +187,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175837.1"></v>
 <v t="josephorr.20180416175855.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
 <v t="josephorr.20180416180006.1"></v>
@@ -214,17 +214,17 @@
 <v t="josephorr.20180416180659.1"></v>
 <v t="josephorr.20180416180720.1"></v>
 <v t="josephorr.20180416180735.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
+<v t="josephorr.20180416193955.1"></v>
+<v t="josephorr.20180416193446.1"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180754.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
+<v t="josephorr.20180416193643.1"></v>
+<v t="josephorr.20180416193939.1"></v>
 <v t="josephorr.20180416180810.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416180826.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
@@ -307,7 +307,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -335,36 +335,36 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
-<v t="josephorr.20180419081404.1"><vh>By Year</vh>
+<v t="josephorr.20180419081404.1" a="E"><vh>@sort-year By Year</vh>
 <v t="josephorr.20180417204548.1"></v>
 <v t="josephorr.20180329190116.1"></v>
 <v t="josephorr.20180414141543.1"></v>
@@ -425,7 +425,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -453,34 +453,34 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
 <v t="josephorr.20180419081459.1"><vh>By Topic</vh>
 <v t="josephorr.20180417204548.1"></v>
@@ -543,7 +543,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -571,34 +571,34 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
 <v t="josephorr.20180419081543.1"><vh>By Number of Reads</vh>
 <v t="josephorr.20180417204548.1"></v>
@@ -661,7 +661,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -689,34 +689,34 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
 <v t="josephorr.20180419081603.1"><vh>By Journal</vh>
 <v t="josephorr.20180417204548.1"></v>
@@ -779,7 +779,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -807,34 +807,34 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
 <v t="josephorr.20180419081625.1"><vh>By Number of Citations</vh>
 <v t="josephorr.20180417204548.1"></v>
@@ -897,7 +897,7 @@
 <v t="josephorr.20180417200515.1"></v>
 <v t="josephorr.20180416175918.1"></v>
 <v t="josephorr.20180416175935.1"></v>
-<v t="josephorr.20180416175952.1" a="M"></v>
+<v t="josephorr.20180416175952.1"></v>
 <v t="josephorr.20180416180006.1"></v>
 <v t="josephorr.20180416180023.1"></v>
 <v t="josephorr.20180416180039.1"></v>
@@ -925,155 +925,853 @@
 <v t="josephorr.20180416180754.1"></v>
 <v t="josephorr.20180416180810.1"></v>
 <v t="josephorr.20180416180826.1"></v>
-<v t="josephorr.20180416180838.1" a="M"></v>
+<v t="josephorr.20180416180838.1"></v>
 <v t="josephorr.20180416180853.1"></v>
 <v t="josephorr.20180416193429.1"></v>
-<v t="josephorr.20180416193446.1" a="M"></v>
+<v t="josephorr.20180416193446.1"></v>
 <v t="josephorr.20180416193503.1"></v>
 <v t="josephorr.20180416193520.1"></v>
 <v t="josephorr.20180416193553.1"></v>
 <v t="josephorr.20180416193616.1"></v>
 <v t="josephorr.20180416193631.1"></v>
-<v t="josephorr.20180416193643.1" a="M"></v>
+<v t="josephorr.20180416193643.1"></v>
 <v t="josephorr.20180416193656.1"></v>
-<v t="josephorr.20180416193807.1" a="M"></v>
+<v t="josephorr.20180416193807.1"></v>
 <v t="josephorr.20180416193817.1"></v>
 <v t="josephorr.20180416193835.1"></v>
-<v t="josephorr.20180416193847.1" a="M"></v>
+<v t="josephorr.20180416193847.1"></v>
 <v t="josephorr.20180416193859.1"></v>
 <v t="josephorr.20180416193909.1"></v>
 <v t="josephorr.20180416193925.1"></v>
-<v t="josephorr.20180416193939.1" a="M"></v>
-<v t="josephorr.20180416193955.1" a="M"></v>
+<v t="josephorr.20180416193939.1"></v>
+<v t="josephorr.20180416193955.1"></v>
 <v t="josephorr.20180416202245.1"></v>
-<v t="josephorr.20180416202302.1" a="M"></v>
+<v t="josephorr.20180416202302.1"></v>
 <v t="josephorr.20180416202331.1"></v>
 <v t="josephorr.20180416202345.1"></v>
 <v t="josephorr.20180416202500.1"></v>
 <v t="josephorr.20180416202631.1"></v>
 <v t="josephorr.20180416202700.1"></v>
-<v t="josephorr.20180416202726.1" a="M"></v>
+<v t="josephorr.20180416202726.1"></v>
 </v>
 </v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20180329190106.2"></t>
-<t tx="josephorr.20180329190116.1"></t>
-<t tx="josephorr.20180414141543.1"></t>
-<t tx="josephorr.20180414141606.1"></t>
-<t tx="josephorr.20180414141634.1"></t>
-<t tx="josephorr.20180414141735.1"></t>
-<t tx="josephorr.20180416082229.1"></t>
-<t tx="josephorr.20180416082249.1"></t>
-<t tx="josephorr.20180416082310.1"></t>
-<t tx="josephorr.20180416082335.1"></t>
-<t tx="josephorr.20180416082352.1"></t>
-<t tx="josephorr.20180416082416.1"></t>
-<t tx="josephorr.20180416082431.1"></t>
-<t tx="josephorr.20180416082445.1"></t>
-<t tx="josephorr.20180416082502.1"></t>
-<t tx="josephorr.20180416082519.1"></t>
-<t tx="josephorr.20180416082534.1"></t>
-<t tx="josephorr.20180416082548.1"></t>
-<t tx="josephorr.20180416082610.1"></t>
-<t tx="josephorr.20180416082624.1"></t>
-<t tx="josephorr.20180416082639.1"></t>
-<t tx="josephorr.20180416082702.1"></t>
-<t tx="josephorr.20180416082729.1"></t>
-<t tx="josephorr.20180416082745.1"></t>
-<t tx="josephorr.20180416082807.1"></t>
-<t tx="josephorr.20180416082826.1"></t>
-<t tx="josephorr.20180416082844.1"></t>
-<t tx="josephorr.20180416082902.1"></t>
-<t tx="josephorr.20180416082939.1"></t>
-<t tx="josephorr.20180416082955.1"></t>
-<t tx="josephorr.20180416083013.1"></t>
-<t tx="josephorr.20180416083034.1"></t>
-<t tx="josephorr.20180416083048.1"></t>
-<t tx="josephorr.20180416083102.1"></t>
-<t tx="josephorr.20180416083116.1"></t>
-<t tx="josephorr.20180416083130.1"></t>
-<t tx="josephorr.20180416083148.1"></t>
-<t tx="josephorr.20180416083205.1"></t>
-<t tx="josephorr.20180416083239.1"></t>
-<t tx="josephorr.20180416083253.1"></t>
-<t tx="josephorr.20180416083323.1"></t>
-<t tx="josephorr.20180416083338.1"></t>
-<t tx="josephorr.20180416083400.1"></t>
-<t tx="josephorr.20180416175654.1"></t>
-<t tx="josephorr.20180416175719.1"></t>
-<t tx="josephorr.20180416175737.1"></t>
-<t tx="josephorr.20180416175757.1"></t>
-<t tx="josephorr.20180416175837.1"></t>
-<t tx="josephorr.20180416175855.1"></t>
-<t tx="josephorr.20180416175918.1"></t>
-<t tx="josephorr.20180416175935.1"></t>
-<t tx="josephorr.20180416175952.1"></t>
-<t tx="josephorr.20180416180006.1"></t>
-<t tx="josephorr.20180416180023.1"></t>
-<t tx="josephorr.20180416180039.1"></t>
-<t tx="josephorr.20180416180131.1"></t>
-<t tx="josephorr.20180416180149.1"></t>
-<t tx="josephorr.20180416180211.1"></t>
-<t tx="josephorr.20180416180232.1"></t>
-<t tx="josephorr.20180416180257.1"></t>
-<t tx="josephorr.20180416180315.1"></t>
-<t tx="josephorr.20180416180334.1"></t>
-<t tx="josephorr.20180416180353.1"></t>
-<t tx="josephorr.20180416180411.1"></t>
-<t tx="josephorr.20180416180438.1"></t>
-<t tx="josephorr.20180416180458.1"></t>
-<t tx="josephorr.20180416180514.1"></t>
-<t tx="josephorr.20180416180535.1"></t>
-<t tx="josephorr.20180416180552.1"></t>
-<t tx="josephorr.20180416180614.1"></t>
-<t tx="josephorr.20180416180659.1"></t>
-<t tx="josephorr.20180416180720.1"></t>
-<t tx="josephorr.20180416180735.1"></t>
-<t tx="josephorr.20180416180754.1"></t>
-<t tx="josephorr.20180416180810.1"></t>
-<t tx="josephorr.20180416180826.1"></t>
-<t tx="josephorr.20180416180838.1"></t>
-<t tx="josephorr.20180416180853.1"></t>
-<t tx="josephorr.20180416193429.1"></t>
-<t tx="josephorr.20180416193446.1"></t>
-<t tx="josephorr.20180416193503.1"></t>
-<t tx="josephorr.20180416193520.1"></t>
-<t tx="josephorr.20180416193553.1"></t>
-<t tx="josephorr.20180416193616.1"></t>
-<t tx="josephorr.20180416193631.1"></t>
-<t tx="josephorr.20180416193643.1"></t>
-<t tx="josephorr.20180416193656.1"></t>
-<t tx="josephorr.20180416193807.1"></t>
-<t tx="josephorr.20180416193817.1"></t>
-<t tx="josephorr.20180416193835.1"></t>
-<t tx="josephorr.20180416193847.1"></t>
-<t tx="josephorr.20180416193859.1"></t>
-<t tx="josephorr.20180416193909.1"></t>
-<t tx="josephorr.20180416193925.1"></t>
-<t tx="josephorr.20180416193939.1"></t>
-<t tx="josephorr.20180416193955.1"></t>
-<t tx="josephorr.20180416202245.1"></t>
-<t tx="josephorr.20180416202302.1"></t>
-<t tx="josephorr.20180416202331.1"></t>
-<t tx="josephorr.20180416202345.1"></t>
-<t tx="josephorr.20180416202500.1"></t>
-<t tx="josephorr.20180416202631.1"></t>
-<t tx="josephorr.20180416202700.1"></t>
-<t tx="josephorr.20180416202726.1"></t>
-<t tx="josephorr.20180417194411.1"></t>
-<t tx="josephorr.20180417194534.1"></t>
-<t tx="josephorr.20180417194727.1"></t>
-<t tx="josephorr.20180417200515.1"></t>
-<t tx="josephorr.20180417200942.1"></t>
-<t tx="josephorr.20180417201059.1"></t>
-<t tx="josephorr.20180417201336.1"></t>
-<t tx="josephorr.20180417201534.1"></t>
-<t tx="josephorr.20180417201556.1"></t>
-<t tx="josephorr.20180417201720.1"></t>
-<t tx="josephorr.20180417201843.1"></t>
-<t tx="josephorr.20180417202404.1"></t>
-<t tx="josephorr.20180417204548.1"></t>
+<t tx="josephorr.20180329190116.1">pub: Scientometrics
+year: 2017-10
+citations: 0
+references: 35
+topics: ''
+tags: ''
+reads: 1927</t>
+<t tx="josephorr.20180414141543.1">pub: Journal of Science
+year: 2017-04
+citations: 0
+references: 47
+topics: ''
+tags: ''
+reads: 5252</t>
+<t tx="josephorr.20180414141606.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180414141634.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180414141735.1">pub: Journal of Science
+year: 2018
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082229.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082249.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082310.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082335.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082352.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082416.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082431.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082445.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082502.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082519.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082534.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082548.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082610.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082624.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082639.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082702.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082729.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082745.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082807.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082826.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082844.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082902.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082939.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416082955.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083013.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083034.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083048.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083102.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083116.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083130.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083148.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083205.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083239.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083253.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083323.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083338.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416083400.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175654.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175719.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175737.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175757.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175837.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175855.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175918.1">pub: Journal of Science
+year: 1933
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175935.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416175952.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180006.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180023.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180039.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180131.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180149.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180211.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180232.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180257.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180315.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180334.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180353.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180411.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180438.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180458.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180514.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180535.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180552.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180614.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180659.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180720.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180735.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180754.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180810.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180826.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180838.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416180853.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193429.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193446.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193503.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193520.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193553.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193616.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193631.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193643.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193656.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193807.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193817.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193835.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193847.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193859.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193909.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193925.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193939.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416193955.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202245.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202302.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202331.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202345.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202500.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202631.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202700.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180416202726.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417194411.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417194534.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417194727.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417200515.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417200942.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201059.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201336.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201534.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201556.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201720.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417201843.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417202404.1">pub: Journal of Science
+year: 1999
+citations: 5
+references: 6
+topics: 'Alcoholism'
+tags: ''
+reads: 5</t>
+<t tx="josephorr.20180417204548.1">pub: Scientometrics
+year: 2017-04
+citations: 0
+references: 47
+topics: ''
+reads: 1922
+tags: ''
+
+</t>
 <t tx="josephorr.20180419080843.1"></t>
 <t tx="josephorr.20180419081027.1">@language md
 

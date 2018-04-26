@@ -26,8 +26,62 @@
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Leo Vue Project Kanban</vh>
+<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
+<v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
+<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180420165601.1"><vh>Runkit Component</vh></v>
+<v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
+<v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
+<v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
+<v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
+<v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
+<v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
+<v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
+</v>
+<v t="josephorr.20180122081704.1"><vh>Content</vh>
+<v t="josephorr.20180122175250.1"><vh>Tree of Life</vh></v>
+<v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
+<v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
+</v>
+<v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
+<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
+<v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180420165631.1"><vh>@page</vh></v>
+<v t="josephorr.20180420165635.1"><vh>?page=</vh></v>
+<v t="josephorr.20180420165609.1"><vh>@sort</vh></v>
+<v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
+</v>
+<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
+<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
+<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
+<v t="josephorr.20180125105051.1"><vh>Doing</vh></v>
+<v t="josephorr.20180125105055.1"><vh>Done</vh>
+<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
+<v t="josephorr.20180125105145.1"><vh>properties</vh>
+<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
+<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
+<v t="josephorr.20180125105355.1"><vh>height</vh></v>
+</v>
+<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
+<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
+<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
+<v t="josephorr.20180125105403.1"><vh>center</vh></v>
+</v>
+</v>
+<v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
+<v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
+</v>
+</v>
+</v>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -52,13 +106,13 @@
 </v>
 <v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
-<v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
+<v t="josephorr.20170328225527.1" a="E"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
 <v t="josephorr.20170328225718.1"><vh>&lt;&lt; script &gt;&gt;</vh></v>
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>External Content: URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -73,17 +127,17 @@
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
+<v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](http://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
 <v t="josephorr.20180407195952.1"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
-<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -177,7 +231,8 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -295,55 +350,7 @@
 </v>
 </v>
 <v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban Projects</vh>
-<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
-<v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
-<v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
-</v>
-<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
-<v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
-<v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
-<v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
-<v t="josephorr.20180122081417.1"><vh>Form.io integration</vh></v>
-<v t="josephorr.20180122081825.1"><vh>Nested Viewer</vh>
-<v t="josephorr.20180122081835.1"><vh>standalone version</vh></v>
-<v t="josephorr.20180122081848.1"><vh>separate repo</vh></v>
-</v>
-<v t="josephorr.20180122081704.1"><vh>Content</vh>
-<v t="josephorr.20180122175250.1"><vh>Tree of Life</vh></v>
-<v t="josephorr.20180122081707.1"><vh>Gospels</vh></v>
-<v t="josephorr.20180122081714.1"><vh>AI Outline</vh></v>
-</v>
-<v t="josephorr.20180122082124.1"><vh>Standalone Script</vh></v>
-<v t="josephorr.20180122081434.1"><vh>Kanban v2</vh>
-<v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
-</v>
-</v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
-<v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
-<v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
-</v>
-<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
-<v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
-<v t="josephorr.20180125105051.1"><vh>Doing</vh></v>
-<v t="josephorr.20180125105055.1"><vh>Done</vh>
-<v t="josephorr.20180125105332.1"><vh>markup view</vh></v>
-<v t="josephorr.20180125105145.1"><vh>properties</vh>
-<v t="josephorr.20180125105157.1"><vh>font-awesome</vh></v>
-<v t="josephorr.20180125105322.1"><vh>styles</vh></v>
-<v t="josephorr.20180125105355.1"><vh>height</vh></v>
-</v>
-<v t="josephorr.20180128123139.1"><vh>click goto</vh></v>
-<v t="josephorr.20180128123133.1"><vh>tooltip</vh></v>
-<v t="josephorr.20180125105208.1"><vh>directive</vh></v>
-<v t="josephorr.20180125105403.1"><vh>center</vh></v>
-</v>
-</v>
-<v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
-<v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
-</v>
-</v>
+<v t="josephorr.20180116093050.1" a="E"></v>
 </v>
 </v>
 </v>
@@ -2039,7 +2046,7 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180201133429.1"></t>
 <t tx="josephorr.20180201133431.1"></t>
 <t tx="josephorr.20180303162711.1"></t>
-<t tx="josephorr.20180303171634.1"></t>
+<t tx="josephorr.20180303171634.1">sort-item etc.</t>
 <t tx="josephorr.20180304114723.1">https://en.wikipedia.org/wiki/Evaporating_Cloud</t>
 <t tx="josephorr.20180304203537.1"></t>
 <t tx="josephorr.20180305204208.1"></t>
@@ -2197,5 +2204,10 @@ comments: |
    
    These patterns are illustrated by an overview of the last 
    3000 years of history.</t>
+<t tx="josephorr.20180420165601.1"></t>
+<t tx="josephorr.20180420165609.1"></t>
+<t tx="josephorr.20180420165631.1"></t>
+<t tx="josephorr.20180420165635.1"></t>
+<t tx="josephorr.20180420165801.1"></t>
 </tnodes>
 </leo_file>
