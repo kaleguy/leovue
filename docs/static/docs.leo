@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>External Content: URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>External Content: URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -71,14 +71,14 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
-<v t="josephorr.20180414145445.1"><vh>@json [Math Book](http://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
+<v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
-<v t="josephorr.20180407195952.1"><vh>ResearchGate</vh>
+<v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
-<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -172,7 +172,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20170401144849.1" a="E"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
