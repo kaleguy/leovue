@@ -1319,7 +1319,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.8.4
+Leo Vue is currently at version 1.8.5
 
 Leo Vue 1.8.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -1342,6 +1342,7 @@ Current features include:
 * Outline nodes: outline a target page
 * RSS nodes: point a node to an RSS feed to have content area display HTML version.
 * Nodes with templated data, e.g. @xml and @json nodes.
+* Optional Google Analytics
 
 Planned features not yet supported:
 * Keyboard support

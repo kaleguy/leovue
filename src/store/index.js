@@ -20,6 +20,7 @@ const md = require('markdown-it')({
 const lunr = require('lunr')
 
 function sendGTag (item) {
+  if (_.isUndefined(gtag)) { return }
   gtag('config', 'UA-118289537-1', {  // eslint-disable-line
     'page_title': item.name,
     'page_path': '#/t/' + item.id,
