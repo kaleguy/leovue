@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -71,14 +71,14 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
-<v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
+<v t="josephorr.20180407195952.1"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
-<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -1319,7 +1319,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.8.5
+Leo Vue is currently at version 1.8.6
 
 Leo Vue 1.8.x is currently is only tested in Chrome and may not display correctly in other browsers.
 

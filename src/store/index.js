@@ -20,7 +20,7 @@ const md = require('markdown-it')({
 const lunr = require('lunr')
 
 function sendGTag (item) {
-  if (_.isUndefined(gtag)) { return }
+  if (_.isUndefined(gtag)) { return } // eslint-disable-line
   gtag('config', 'UA-118289537-1', {  // eslint-disable-line
     'page_title': item.name,
     'page_path': '#/t/' + item.id,
@@ -464,8 +464,8 @@ function replaceRelLinks (host, content) {
   if (!host || !content) {
     return content
   }
-  content = content.replace(/href="http/g, 'target="_blank" href="http')
-  content = content.replace(/href="\//g, 'target="_blank" href="//' + host + '/')
+  // content = content.replace(/href="http/g, 'target="_blank" href="http')
+  // content = content.replace(/href="\//g, 'target="_blank" href="//' + host + '/')
   content = content.replace(/href="([a-zA-Z])/g, 'target="_blank" href="//' + host + '/$1')
   content = content.replace(/src="\/([a-zA-Z])/g, 'src="//' + host + '/$1')
   content = content.replace(/srcset="\//g, 'srcset="//' + host + '/')
