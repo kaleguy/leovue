@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
@@ -172,10 +172,11 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
+<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
-<v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
-<v t="josephorr.20180123100140.1"><vh>{A}</vh>
+<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
+<v t="josephorr.20180123100140.1" a="E"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
 <v t="josephorr.20180123100145.1" a="E"><vh>((B))</vh>
 <v t="josephorr.20180123100150.1" a="E"><vh>C</vh>
@@ -276,13 +277,13 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180201133413.1"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180201133413.1" a="E"><vh>@mermaidtd Process</vh>
 <v t="josephorr.20180201133420.1" a="E"><vh>A</vh>
 <v t="josephorr.20180201133422.1" a="E"><vh>B</vh>
 <v t="josephorr.20180201133431.1"><vh>(F)</vh></v>
 <v t="josephorr.20180201133425.1"><vh>(D)</vh></v>
 </v>
-<v t="josephorr.20180201133424.1"><vh>C</vh>
+<v t="josephorr.20180201133424.1" a="E"><vh>C</vh>
 <v t="josephorr.20180201133429.1"><vh>(E)</vh></v>
 <v t="josephorr.20180201133431.1"></v>
 </v>
@@ -929,6 +930,39 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       textItems[a] = elText
     }
     const vnodes = xml.getElementsByTagName('v')
+    function cloneNode (xml, node) {
+      let t = node.getAttribute('t')
+      let cloneNodes = xml.evaluate('//v[@t="' + t + '"]', xml, null, XPathResult.ANY_TYPE, null)
+      let result = cloneNodes.iterateNext()
+      if (!result) {
+        return
+      }
+      while (result) {
+        let cnode = result
+        if (cnode &amp;&amp; cnode.getElementsByTagName('v').length) {
+
+          let vnodes = cnode.getElementsByTagName('v')
+          for (let i = 0; i &lt; vnodes.length; i++) {
+             node.appendChild(vnodes[i].cloneNode())
+          }
+          return
+        }
+        result = cloneNodes.iterateNext()
+      }
+    }
+    function cloneNodes(xml, nodes) {
+      if (!nodes) { return }
+      for (let i = 0; i &lt; nodes.length; i++) {
+        let n = nodes[i]
+        let children = n.getElementsByTagName('vh')
+        if (!children.length) {
+          cloneNode(xml, n)
+        }
+      }
+    }
+    console.log(cloneNodes)
+    // cloneNodes(xml, vnodes)
+
     let pid
     for (let i = 0; i &lt; vnodes.length; i++) {
       pid = i + 1
@@ -937,10 +971,22 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       }
       vnodes[i].setAttribute('id', '"' + pid + '"')
     }
+    console.log('xml', xml)
     resolve({xml, textItems})
 
   })
   return p
+}
+let counter = 0
+function setIds (startId, d) {
+  d.id = counter++
+  if (_.isArray(d)) {
+    return d.forEach(i =&gt; setIds(startId, i))
+  }
+  if (startId) {
+    d.id = startId + '-' + d.id
+  }
+  d.children.forEach(c =&gt; setIds(startId, c))
 }
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
     const p = new Promise((resolve, reject) =&gt; {
@@ -951,6 +997,7 @@ function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
         jsdata = jsdata.replace(/,\s?$/, '') // kludge to get rid of trailing comma
         jsdata = '[' + jsdata + ']'
         jsdata = JSON.parse(jsdata)
+        setIds(startId, jsdata)
         jsdata.forEach(d =&gt; cleanText(d, startId))
         const xdata = {}
         xdata.data = jsdata
