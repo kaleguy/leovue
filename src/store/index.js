@@ -19,6 +19,14 @@ const md = require('markdown-it')({
 })
 const lunr = require('lunr')
 
+function sendGTag (item) {
+  gtag('config', 'UA-118289537-1', {  // eslint-disable-line
+    'page_title': item.name,
+    'page_path': '#/t/' + item.id,
+    't': item.t
+  })
+}
+
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
   // return indexItems
@@ -1068,6 +1076,7 @@ export default new Vuex.Store({
     // for inline content, keep hash of content items
     CONTENT_ITEM (state, o) {
       const item = o.item
+      sendGTag(item) // google analytics, if it has been loaded
       state.contentItems[item.id] = item.t
     },
     CONTENT_ITEM_UPDATE (state, o) {
