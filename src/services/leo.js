@@ -242,6 +242,39 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       textItems[a] = elText
     }
     const vnodes = xml.getElementsByTagName('v')
+    function cloneNode (xml, node) {
+      let t = node.getAttribute('t')
+      let cloneNodes = xml.evaluate('//v[@t="' + t + '"]', xml, null, XPathResult.ANY_TYPE, null)
+      let result = cloneNodes.iterateNext()
+      if (!result) {
+        return
+      }
+      while (result) {
+        let cnode = result
+        if (cnode && cnode.getElementsByTagName('v').length) {
+
+          let vnodes = cnode.getElementsByTagName('v')
+          for (let i = 0; i < vnodes.length; i++) {
+             node.appendChild(vnodes[i].cloneNode())
+          }
+          return
+        }
+        result = cloneNodes.iterateNext()
+      }
+    }
+    function cloneNodes(xml, nodes) {
+      if (!nodes) { return }
+      for (let i = 0; i < nodes.length; i++) {
+        let n = nodes[i]
+        let children = n.getElementsByTagName('vh')
+        if (!children.length) {
+          cloneNode(xml, n)
+        }
+      }
+    }
+    console.log(cloneNodes)
+    // cloneNodes(xml, vnodes)
+
     let pid
     for (let i = 0; i < vnodes.length; i++) {
       pid = i + 1
@@ -250,10 +283,22 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       }
       vnodes[i].setAttribute('id', '"' + pid + '"')
     }
+    console.log('xml', xml)
     resolve({xml, textItems})
 
   })
   return p
+}
+let counter = 0
+function setIds (startId, d) {
+  d.id = counter++
+  if (_.isArray(d)) {
+    return d.forEach(i => setIds(startId, i))
+  }
+  if (startId) {
+    d.id = startId + '-' + d.id
+  }
+  d.children.forEach(c => setIds(startId, c))
 }
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
     const p = new Promise((resolve, reject) => {
@@ -264,6 +309,7 @@ function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
         jsdata = jsdata.replace(/,\s?$/, '') // kludge to get rid of trailing comma
         jsdata = '[' + jsdata + ']'
         jsdata = JSON.parse(jsdata)
+        setIds(startId, jsdata)
         jsdata.forEach(d => cleanText(d, startId))
         const xdata = {}
         xdata.data = jsdata

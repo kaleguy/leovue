@@ -667,6 +667,7 @@ function setSiteItem (context, title, id) {
  * @param route
  */
 function setData (context, ldata, filename, route) {
+  console.log(ldata)
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
   context.commit('LEO', {
