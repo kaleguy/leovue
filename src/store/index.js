@@ -27,6 +27,7 @@ function sendGTag (item) {
     't': item.t
   })
 }
+console.log(sendGTag)
 
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
@@ -1077,7 +1078,6 @@ export default new Vuex.Store({
     // for inline content, keep hash of content items
     CONTENT_ITEM (state, o) {
       const item = o.item
-      sendGTag(item) // google analytics, if it has been loaded
       state.contentItems[item.id] = item.t
     },
     CONTENT_ITEM_UPDATE (state, o) {
@@ -1237,6 +1237,7 @@ export default new Vuex.Store({
       }
       if (item) {
         item = item[0]
+        sendGTag(item) // send Google Analytics if GA initialized in index.html
         let itemText = context.state.leotext[item.t]
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)
