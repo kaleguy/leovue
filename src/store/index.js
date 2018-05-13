@@ -143,12 +143,23 @@ function loadLeoNode (context, item) {
   }).catch(e => console.log('Error: ', e))
   return p
 }
-function getUrlFromTitle (title) {
-  const re = /^\[(.*?)\]\((.*?)\)$/
-  title = title.replace(/^@[a-zA-Z]*? /, '')
-  const match = re.exec(title)
+function getUrlFromTitle (title, dataType) {
   let url = ''
   let label = ''
+  let template = ''
+  title = title.replace(/^@[a-zA-Z-]*? /, '')
+  let dataParams = null
+  if (dataType) {
+    dataType = dataType.replace('-', '')
+    dataParams = window.lconfig.dataSources[dataType]
+    if (!dataParams) { return { url, label } }
+    url = dataParams.host + '/' + title
+    label = title.replace(/_/g, ' ')
+    template = dataParams.template
+    return { url, label, template }
+  }
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(title)
   if (!match) { return { url, label } }
   url = match[2]
   label = match[1]
@@ -1255,14 +1266,16 @@ export default new Vuex.Store({
         }
         if (/^@(xml|json)/.test(item.name)) {
           // match
-          const re = /^@(xml|json)/
+          const re = /^@(xml|json)(-.*?)?\s/
           const match = re.exec(item.name)
           let dataType = match[1]
-          let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
+          let dataSubType = match[2]
+          let {url, label, template} = getUrlFromTitle(item.name, dataSubType) // eslint-disable-line
           if (!url) { return }
           itemText = itemText.replace(/^@.*?\n/, '')
           const params = jsyaml.load(itemText)
-          return showFormattedData(context, id, url, params.template, dataType, params)
+          template = template || params.template
+          return showFormattedData(context, id, url, template, dataType, params)
         }
         if (/^@sort/.test(item.name)) {
           // we'll sort text ascending, anything else e.g. year, descending
