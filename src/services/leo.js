@@ -157,7 +157,7 @@ function getLeoJSON (filename, id) {
     }
     // case of outline loaded from url specified in outlineUrl param
     // this just loads a node with the correct directive, the actual
-    // outline will get loaded in loadSubtree in index.js
+    // outline will get loaded in showPageOutline in index.js
     function fromOutline() {
       let url = lconfig.outlineUrl || ''
       url = url.replace('%3A', ':')
@@ -197,6 +197,7 @@ function getLeoJSON (filename, id) {
     function fromFile () {
       loadDoc(filename, 'Text')
         .then(xmlString => {
+          // will return data with ids equal to id-1, id-2 etc
           return transformLeoXML(xmlString, id)
         })
         .then(data => resolve(data))
