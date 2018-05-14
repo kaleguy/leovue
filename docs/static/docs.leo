@@ -72,7 +72,7 @@
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
-<v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](http://scrape-rg-dev.us-east-1.elasticbeanstalk.com/weather/new%20york)</vh></v>
+<v t="josephorr.20180513143321.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
 <v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
@@ -2188,9 +2188,6 @@ source: OpenWeather Map
 
 By default, Leo Vue comes with just a 'weather' template for JSON data from OpenWeather Map. This template is in lib/lodash-template.js. You can add more 
 templates to this file to format other JSON data sources.</t>
-<t tx="josephorr.20180407102553.1">template: weather
-location: NYC Central Park
-source: OpenWeather Map</t>
 <t tx="josephorr.20180407195952.1">@language md 
 
 Using the @rg directive, you can load an abstract from ResearchGate into the content for a node.
@@ -2235,5 +2232,6 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
+<t tx="josephorr.20180513143321.1">template: weather</t>
 </tnodes>
 </leo_file>
