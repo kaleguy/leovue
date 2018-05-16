@@ -153,7 +153,7 @@ function getUrlFromTitle (title, dataType) {
     dataType = dataType.replace('-', '')
     dataParams = window.lconfig.dataSources[dataType]
     if (!dataParams) { return { url, label } }
-    url = dataParams.host + '/' + title
+    url = dataParams.host + title
     label = title.replace(/_/g, ' ')
     template = dataParams.template
     return { url, label, template }
