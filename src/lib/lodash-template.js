@@ -71,7 +71,14 @@ function render (json, templateType) {
   if (!templateType) {
     templateType = 'none'
   }
-  const templateString = templates[templateType]
+  let templateString = null //
+  let templateEl = document.getElementById(templateType)
+  if (templateEl) {
+    templateString = templateEl.innerText
+      .replace(/{{/g, '<%')
+      .replace(/}}/g, '%>')
+  }
+  templateString = templateString || templates[templateType]
   if (!templateString) {
     return (Promise.resolve('<h2>No Matching Template</h2>'))
   }

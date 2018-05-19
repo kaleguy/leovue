@@ -85,11 +85,13 @@ function getRoots (acc, p, startIndex) {
   if (i < 0) { return acc }
   acc.push(p.substring(0, i))
   return getRoots(acc, p, i + 1)
+  // TODO: move to util
 }
 /**
  * Is url relative
  * @param url {string}
  * @returns {boolean} - if is relative
+ * TODO: move to util
  */
 function isRelative (url) {
   let ok = true
@@ -109,6 +111,7 @@ function isRelative (url) {
  * @param s {string} The input string
  * @param c {string} The character from which the string will be chopped
  * @returns {string} The chopped string
+ * TODO: move to util
  */
 function chop (s, c) {
   if (s.indexOf(c) < 0) { return s }
@@ -143,10 +146,16 @@ function loadLeoNode (context, item) {
   }).catch(e => console.log('Error: ', e))
   return p
 }
+
+/**
+ * clean up title for display, get url
+ * @param title {String} This is an md format link, unless dataType is passed in
+ * @param dataType {String} e.g. 'rgarticle', host will be in lconfig.dataSources, not extracted from title
+ * @returns { url, label }
+ */
 function getUrlFromTitle (title, dataType) {
   let url = ''
   let label = ''
-  let template = ''
   title = title.replace(/^@[a-zA-Z-]*? /, '')
   let dataParams = null
   if (dataType) {
@@ -154,9 +163,8 @@ function getUrlFromTitle (title, dataType) {
     dataParams = window.lconfig.dataSources[dataType]
     if (!dataParams) { return { url, label } }
     url = dataParams.host + title
-    label = title.replace(/_/g, ' ')
-    template = dataParams.template
-    return { url, label, template }
+    label = title.replace(/_/g, ' ').replace(/^\d+/, '') // remove leading numbers
+    return { url, label }
   }
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(title)
@@ -216,7 +224,7 @@ function showMermaid (context, title, id) {
   context.commit('CONTENT_PANE', { type: 'board' })
 }
 
-function checkCache (context, item, url) {
+function checkCache (context, item, url) { // eslint-disable-line
   if (item.loaded) {
     console.log('Retrieving', url, ' content from cache.')
     let text = context.state.leotext[item.t]
@@ -227,87 +235,17 @@ function checkCache (context, item, url) {
 }
 
 /**
- * Load Title and abstract from ResearchGate. TODO: move to module
- * @param context
- * @param id
- * @param url
- */
-function showRG (context, item, url) {
-  const id = item.id
-  if (checkCache(context, item, url)) { return }
-  const host = 'www.researchgate.net'
-  url = `https://${host}/publication/` + url
-  // route it through YQL to get around access restrictions
-  let yql = `select * from htmlstring where url='${url}' AND xpath='//div[@class="public-publication-details-top"]|//div[@class="publication-resources-summary"]'`
-  let resturl = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(yql) + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" //eslint-disable-line
-  context.commit('CURRENT_ITEM_CONTENT', {text: spinnerHTML})
-  axios.get(resturl)
-    .then((response) => {
-      let dummy = document.getElementById('dummy')
-      if (dummy) {
-        dummy.outerHTML = ''
-      }
-      dummy = document.createElement('section')
-      dummy.setAttribute('id', 'dummy')
-      dummy.style.display = 'none'
-      document.body.appendChild(dummy)
-      let html = _.get(response, 'data.query.results.result', '')
-      if (!html) {
-        html = '<div>No results for query</div>'
-        console.log('Bad result for:', url, resturl)
-      }
-      // html = html.replace(/href="\/m\//g, 'href="https://www.researchgate.net/m/')
-      html = html.replace(/<svg[\s\S]*?<\/svg>/mg, '<div class="bars-1"></div>')
-      dummy.innerHTML = cleanHTML(html, host)
-      removeElement('publication-header-download-citation')
-      removeElement('fade-in')
-      removeElement('publication-meta-secondary')
-      removeElement('signup-promo-with-stats')
-      /*
-      // don't need this if keep replace all SVG as above
-      function hack () {
-        const barIconEl = document.getElementsByClassName('nova-e-icon')[0]
-        if (!barIconEl) { return }
-        barIconEl.outerHTML = '<div class="bars-1"></div>'
-        hack()
-      }
-      hack() // WTF? loop doesn't work, have to use recursion to remove els
-      */
-      const footer = `<div class="footer"><a target="_blank" href="${url}">See this article on ResearchGate.</a></div>`
-      let text = '<div class="rg">' + dummy.innerHTML + footer + '</div>'
-      context.commit('CURRENT_ITEM_CONTENT', { text })
-      const newItem = { id, t: text }
-      console.log(item.name)
-      context.commit('CONTENT_ITEM', {item: newItem})
-      context.commit('CONTENT_ITEM_UPDATE')
-      context.state.leotext[item.t] = text
-      item.loaded = true
-      dummy.outerHTML = ''
-    })
-}
-
-/**
- * remove Element by className TODO: move these to utils
- * @param className
- */
-function removeElement (className) {
-  const el = document.getElementsByClassName(className)[0]
-  if (el) { el.outerHTML = '' }
-}
-
-/**
  *
  * @param context
  * @param id
  * @param url
- * @param xslType {String} xsl template name (in xsl.js)
+ * @param xslType {String} xsl template name (in xsl.js or lodash_templates.js)
  * @param dataType {String} 'xsl' or 'json'
  * @param params {json} Extra data that will be added before template rendering
  */
 function showFormattedData (context, id, url, xslType, dataType, params) {
   let query = url
   // xttp means, route it through YQL
-
   if (/^xttp/.test(url)) {
     url = url.replace(/^xttp/, 'http')
     query = 'https://query.yahooapis.com/v1/public/yql?q=' +
@@ -1270,11 +1208,16 @@ export default new Vuex.Store({
           const match = re.exec(item.name)
           let dataType = match[1]
           let dataSubType = match[2]
-          let {url, label, template} = getUrlFromTitle(item.name, dataSubType) // eslint-disable-line
+          let {url, label} = getUrlFromTitle(item.name, dataSubType) // eslint-disable-line
+          item.name = label
           if (!url) { return }
           itemText = itemText.replace(/^@.*?\n/, '')
-          const params = jsyaml.load(itemText)
-          template = template || params.template
+          const params = jsyaml.load(itemText) || {}
+          let template = params.template || ''
+          if (dataSubType) {
+            dataSubType = dataSubType.replace('-', '')
+            template = dataSubType
+          }
           return showFormattedData(context, id, url, template, dataType, params)
         }
         if (/^@sort/.test(item.name)) {
@@ -1301,19 +1244,9 @@ export default new Vuex.Store({
               child.sname = _.get(params, sortType, '')
             })
           } else {
-            children.forEach(c => c.sname = c.name.replace(/^@rg \d+_/g, '').toLowerCase().replace(/^(a_|the_|an_)/i, '')) // eslint-disable-line
+            children.forEach(c => c.sname = c.name.replace(/^\d+_/g, '').toLowerCase().replace(/^(a_|the_|an_)/i, '')) // eslint-disable-line
           }
           item.children = _.orderBy(children, o => o.sname, sortDirection) // eslint-disable-line
-        }
-        if (/^@rg/.test(item.name)) {
-          const url = item.name
-            .replace(/@rg /, '')
-            .replace(/,/g, '')
-            .replace(/:/g, '')
-            .replace(/\//, '')
-            .replace(/\?/g, '')
-            .replace(/\(.*?\)/, '') // remove parentheticals
-          return showRG(context, item, url)
         }
         if (/^@book/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line

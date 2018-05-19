@@ -79,6 +79,7 @@
 </v>
 <v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
 <v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
+<v t="josephorr.20180516185057.1"><vh>test</vh></v>
 </v>
 <v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
@@ -2238,6 +2239,47 @@ comments: |
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
 <t tx="josephorr.20180513120416.1"></t>
-<t tx="josephorr.20180513143321.1">template: weather</t>
+<t tx="josephorr.20180513143321.1">template: weather
+location: NYC Central Park
+source: OpenWeather Map</t>
+<t tx="josephorr.20180516185057.1">@language html
+
+&lt;div class="rg"&gt;
+	47 References
+	&lt;div class="publication-header"&gt;
+		&lt;h1&gt;Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation&lt;/h1&gt;
+		&lt;div class="publication-meta"&gt;
+			&lt;div class="publication-meta-text"&gt;
+				&lt;strong&gt;Article (PDF Available) in 
+					&lt;a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing" 
+					&gt;Reading and Writing&lt;/a&gt;
+				&lt;/strong&gt;	
+				30(4):857-869 April 2017 with 5,414 Reads
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div&gt;
+			&lt;ul&gt;
+				&lt;li class="publication-author-list__item"&gt;
+					&lt;div&gt;
+						&lt;a target="_blank" href="//www.researchgate.net/https://www.researchgate.net/profile/Ashley_Chung-Fat-Yim" &gt;Ashley Chung-Fat-Yim&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class="bars-1"/&gt;
+						13.33	York University
+					&lt;/div&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div class="publication-abstract"&gt;
+			&lt;div&gt;
+				&lt;strong&gt;Abstract&lt;/strong&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+			Previous studies on discourse have employed a self-paced sentence-by-sentence paradigm to present text and record reading times. However, presenting discourse this way does not mirror real-world reading conditions; for example, this paradigm prevents regressions to earlier portions of the text. The purpose of the present study is to investigate the ecological validity of self-paced sentence-by-sentence presentations by comparing it to normal page reading with respect to comprehension, recall, and narrative transportation, across two time points (immediate and delayed). Bayesian analyses found greater evidence in favor of the null hypothesis for transportation, indicating that little difference likely exists between sentence-by-sentence presentations and normal reading for this outcome. Weak evidence supporting the alternative hypothesis was found for immediate comprehension and recall, with participants who read the story as isolated sentences scoring marginally higher. Altogether, these results validate the self-paced sentence-by-sentence paradigm for measuring reading times, uncovering few differences in outcomes relative to natural reading.&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="footer"&gt;
+		&lt;a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation"&gt;See this article on ResearchGate.&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</t>
 </tnodes>
 </leo_file>

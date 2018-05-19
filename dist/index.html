@@ -15,19 +15,52 @@
       "dataSources":
         {
           "rgarticle": {
-            "host": "https://www.treebased.io/rg/article?title=",
-            "template":
-`
-<h1>TEST</h1>
-`
+            "host": "http://localhost:8888/rg/article?title=",
           }
         }
-    }</script><meta charset=utf-8><title>Leo Vue</title><link href=static/css/app.css?97dd4149362a3b833cd8bf70c08548c4 rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
-      <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
-        <p>This is a popover!</p>
-        <p><small>Click the background to remove the popover.</small></p>
+    }</script><meta charset=utf-8><title>Leo Vue</title><link href=static/css/app.css?d1a8a56c1af2a3ae75fcfa3467003794 rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
+    <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
+      <p>This is a popover!</p>
+      <p><small>Click the background to remove the popover.</small></p>
+    </div>
+  </ons-popover></script><script type=text/template id=rgarticle><div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.title }}</h1>
+      <div class="publication-meta-text">
+        <strong>
+          <span>Article (PDF Available) in
+          <a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing">{{- data.journal.text }}</a>
+        </span>
+        </strong>
+        <span>30(4):857-869 {{- data.journal.date }} with {{- data.reads }}</span>
       </div>
-    </ons-popover></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-118289537-1');</script><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?49767c83ae5f9d9fca6d></script><script type=text/javascript src=static/js/app.js?712a65f0de7ec8954e4a></script></body></html>
+      <div>
+        <ul>
+          {{ data.authors.forEach(author => { }}
+          <li class="publication-author-list__item">
+            <div>
+              <a target="_blank" href="{{- author.name.href }}" >{{- author.name.text }}</a>
+            </div>
+            {{ if (author.rating){ }}
+            <span class="bars-1"/>
+            {{ } }}
+            <span>{{- author.rating }}	{{- author.institution }}</span>
+          </li>
+          {{ }) }}
+        </ul>
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+        <div class="references">{{- data.references }} References</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation">See this article on ResearchGate.</a>
+      </div>
+    </div>
+  </div></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-118289537-1');</script><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?49767c83ae5f9d9fca6d></script><script type=text/javascript src=static/js/app.js?57abe588f9b0b69815a5></script></body></html>

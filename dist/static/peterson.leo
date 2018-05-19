@@ -364,7 +364,7 @@
 <v t="josephorr.20180416202700.1"></v>
 <v t="josephorr.20180416202726.1"></v>
 </v>
-<v t="josephorr.20180419081404.1" a="E"><vh>@sort-year By Year</vh>
+<v t="josephorr.20180419081404.1"><vh>@sort-year By Year</vh>
 <v t="josephorr.20180417204548.1"></v>
 <v t="josephorr.20180329190116.1"></v>
 <v t="josephorr.20180414141543.1"></v>
@@ -954,6 +954,8 @@
 <v t="josephorr.20180416202700.1"></v>
 <v t="josephorr.20180416202726.1"></v>
 </v>
+<v t="josephorr.20180519075912.1"><vh>New Format</vh></v>
+<v t="josephorr.20180519075935.1"><vh>@json-rgarticle 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -1782,5 +1784,7 @@ tags: ''
 <t tx="josephorr.20180419081543.1"></t>
 <t tx="josephorr.20180419081603.1"></t>
 <t tx="josephorr.20180419081625.1"></t>
+<t tx="josephorr.20180519075912.1"></t>
+<t tx="josephorr.20180519075935.1"></t>
 </tnodes>
 </leo_file>
