@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>External Content: URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>External Content: URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -74,7 +74,6 @@
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20180513120416.1"><vh>@json-rgarticle 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
 </v>
 <v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
@@ -170,7 +169,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20170401144849.1" a="E"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
@@ -2218,6 +2217,5 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180513120416.1"></t>
 </tnodes>
 </leo_file>
