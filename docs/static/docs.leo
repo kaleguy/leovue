@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About Leo Vue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>External Content: URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>External Content: URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -73,13 +73,8 @@
 </v>
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
-<v t="josephorr.20180513143321.1"><vh>@json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20180513120416.1"><vh>@json-rgarticle 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
-</v>
-<v t="josephorr.20180407195952.1" a="E"><vh>ResearchGate</vh>
-<v t="josephorr.20180407195958.1"><vh>@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
-<v t="josephorr.20180516185057.1"><vh>test</vh></v>
 </v>
 <v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
@@ -175,7 +170,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
+<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
@@ -1323,9 +1318,9 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.8.7
+Leo Vue is currently at version 1.9.0
 
-Leo Vue 1.8.x is currently is only tested in Chrome and may not display correctly in other browsers.
+Leo Vue 1.9.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1343,7 +1338,6 @@ Current features include:
 * SEO version (static html files)
 * Nested presentations with Reveal.js
 * Summary nodes: Kanban and Flowchart
-* Outline nodes: outline a target page
 * RSS nodes: point a node to an RSS feed to have content area display HTML version.
 * Nodes with templated data, e.g. @xml and @json nodes.
 * Optional Google Analytics
@@ -2194,20 +2188,6 @@ templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
-<t tx="josephorr.20180407195952.1">@language md 
-
-Using the @rg directive, you can load an abstract from ResearchGate into the content for a node.
-
-In this case, the markdown syntax isn't used, just put "@rg" + the page title.
-
-For example:
-
-
-```
-@rg 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation
-```
-</t>
-<t tx="josephorr.20180407195958.1"></t>
 <t tx="josephorr.20180414145445.1">template: openbooks
 comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20180414204138.1">@language md 
@@ -2239,47 +2219,5 @@ comments: |
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
 <t tx="josephorr.20180513120416.1"></t>
-<t tx="josephorr.20180513143321.1">template: weather
-location: NYC Central Park
-source: OpenWeather Map</t>
-<t tx="josephorr.20180516185057.1">@language html
-
-&lt;div class="rg"&gt;
-	47 References
-	&lt;div class="publication-header"&gt;
-		&lt;h1&gt;Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation&lt;/h1&gt;
-		&lt;div class="publication-meta"&gt;
-			&lt;div class="publication-meta-text"&gt;
-				&lt;strong&gt;Article (PDF Available) in 
-					&lt;a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing" 
-					&gt;Reading and Writing&lt;/a&gt;
-				&lt;/strong&gt;	
-				30(4):857-869 April 2017 with 5,414 Reads
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div&gt;
-			&lt;ul&gt;
-				&lt;li class="publication-author-list__item"&gt;
-					&lt;div&gt;
-						&lt;a target="_blank" href="//www.researchgate.net/https://www.researchgate.net/profile/Ashley_Chung-Fat-Yim" &gt;Ashley Chung-Fat-Yim&lt;/a&gt;
-					&lt;/div&gt;
-					&lt;div class="bars-1"/&gt;
-						13.33	York University
-					&lt;/div&gt;
-				&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-		&lt;div class="publication-abstract"&gt;
-			&lt;div&gt;
-				&lt;strong&gt;Abstract&lt;/strong&gt;
-			&lt;/div&gt;
-			&lt;div&gt;
-			Previous studies on discourse have employed a self-paced sentence-by-sentence paradigm to present text and record reading times. However, presenting discourse this way does not mirror real-world reading conditions; for example, this paradigm prevents regressions to earlier portions of the text. The purpose of the present study is to investigate the ecological validity of self-paced sentence-by-sentence presentations by comparing it to normal page reading with respect to comprehension, recall, and narrative transportation, across two time points (immediate and delayed). Bayesian analyses found greater evidence in favor of the null hypothesis for transportation, indicating that little difference likely exists between sentence-by-sentence presentations and normal reading for this outcome. Weak evidence supporting the alternative hypothesis was found for immediate comprehension and recall, with participants who read the story as isolated sentences scoring marginally higher. Altogether, these results validate the self-paced sentence-by-sentence paradigm for measuring reading times, uncovering few differences in outcomes relative to natural reading.&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="footer"&gt;
-		&lt;a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation"&gt;See this article on ResearchGate.&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</t>
 </tnodes>
 </leo_file>
