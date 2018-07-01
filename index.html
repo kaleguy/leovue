@@ -33,6 +33,15 @@
         {
           "rgarticle": {
             "host": "http://localhost:8888/rg/article?title=",
+          },
+          "rgarticles": {
+            "host": "http://localhost:8888/rg/author?name=",
+          },
+          "rgauthor": {
+            "host": "http://localhost:8888/rg/author?name=",
+          },
+          "rgcitations": {
+            "host": "http://localhost:8888/rg/author?name=",
           }
         }
     }
@@ -94,6 +103,92 @@
     </div>
   </div>
 </script>
+<script type="text/template" id="rgauthor">
+  <div class="rg">
+    <h1>Author</h1>
+    <div>{{- data.name}}</div>
+  </div>
+</script>
+<script type="text/template" id="rgarticles">
+  <div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.title }}</h1>
+      <div class="publication-meta-text">
+        <strong>
+          <span>Article (PDF Available) in
+          <a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing">{{- data.journal.text }}</a>
+        </span>
+        </strong>
+        <span>30(4):857-869 {{- data.journal.date }} with {{- data.reads }}</span>
+      </div>
+      <div>
+        <ul>
+          {{ data.authors.forEach(author => { }}
+          <li class="publication-author-list__item">
+            <div>
+              <a target="_blank" href="{{- author.name.href }}" >{{- author.name.text }}</a>
+            </div>
+            {{ if (author.rating){ }}
+            <span class="bars-1"/>
+            {{ } }}
+            <span>{{- author.rating }}	{{- author.institution }}</span>
+          </li>
+          {{ }) }}
+        </ul>
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+        <div class="references">{{- data.references }} References</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation">See this article on ResearchGate.</a>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/template" id="rgcitations">
+  <div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.title }}</h1>
+      <div class="publication-meta-text">
+        <strong>
+          <span>Article (PDF Available) in
+          <a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing">{{- data.journal.text }}</a>
+        </span>
+        </strong>
+        <span>30(4):857-869 {{- data.journal.date }} with {{- data.reads }}</span>
+      </div>
+      <div>
+        <ul>
+          {{ data.authors.forEach(author => { }}
+          <li class="publication-author-list__item">
+            <div>
+              <a target="_blank" href="{{- author.name.href }}" >{{- author.name.text }}</a>
+            </div>
+            {{ if (author.rating){ }}
+            <span class="bars-1"/>
+            {{ } }}
+            <span>{{- author.rating }}	{{- author.institution }}</span>
+          </li>
+          {{ }) }}
+        </ul>
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+        <div class="references">{{- data.references }} References</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation">See this article on ResearchGate.</a>
+      </div>
+    </div>
+  </div>
+</script>
 <!-- End templates -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script>
@@ -105,9 +200,6 @@
 </script>
 </body>
 </html>
-<!--
-<script src="/static/dataframe.js"></script>
--->
 <!-- PUG SUPPORT, comment back in and move to top for Pug support
  <script src="https://pugjs.org/js/pug.js" charset="UTF-8"></script>
  <script>

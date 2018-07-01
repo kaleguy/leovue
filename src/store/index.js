@@ -158,16 +158,21 @@ function getUrlFromTitle (title, dataType) {
   let label = ''
   title = title.replace(/^@[a-zA-Z-]*? /, '')
   let dataParams = null
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(title)
   if (dataType) {
     dataType = dataType.replace('-', '')
     dataParams = window.lconfig.dataSources[dataType]
     if (!dataParams) { return { url, label } }
     url = dataParams.host + title
-    label = title.replace(/_/g, ' ').replace(/^\d+/, '') // remove leading numbers
+    if (match) {
+      label = match[1]
+      url = dataParams.host + match[2]
+    } else {
+      label = title.replace(/_/g, ' ').replace(/^\d+/, '') // remove leading numbers
+    }
     return { url, label }
   }
-  const re = /^\[(.*?)\]\((.*?)\)$/
-  const match = re.exec(title)
   if (!match) { return { url, label } }
   url = match[2]
   label = match[1]

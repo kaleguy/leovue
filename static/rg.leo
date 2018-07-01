@@ -10,7 +10,10 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2"><vh>Leo Vue</vh></v>
+<v t="josephorr.20180701141809.1" a="E"><vh>Jordan Peterson on ResearchGate</vh>
 <v t="josephorr.20180513120416.1"><vh>@json-rgarticle 309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation</vh></v>
+<v t="josephorr.20180521092759.1"><vh>@json-rgauthor [Jordan Peterson](Jordan_Peterson2)</vh></v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
@@ -34,5 +37,7 @@ Leo Vue was created using Vue.js, so you can add Vue.js components to your outli
 &lt;/p&gt;
  </t>
 <t tx="josephorr.20180513120416.1"></t>
+<t tx="josephorr.20180521092759.1"></t>
+<t tx="josephorr.20180701141809.1"></t>
 </tnodes>
 </leo_file>
