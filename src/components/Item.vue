@@ -47,6 +47,7 @@ import _ from 'lodash'
 function toTitleCase (str) {
   return str.replace(/\w*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
 }
+// console.log(toTitleCase)
 export default {
   name: 'item',
   props: {
@@ -149,11 +150,14 @@ export default {
     vtitle: function () {
       let name = this.model.name
       // TODO @rg functionality should be in separate module
-      if (/@rg /.test(name)) {
-        name = toTitleCase(name.replace(/@rg \d+/, '').replace(/_/g, ' ').toLowerCase()) // eslint-disable-line
+      if (/@json-rg/.test(name)) {
+        console.log('MATH')
+        name = name.replace(/@json-rg[\w]+ \d+/, '').replace(/_/g, ' ').toLowerCase() // eslint-disable-line
         name = name.replace(/%27/g, "'")
+        name = toTitleCase(name)
+        // return name
       }
-      name = name.replace(/^@[a-z-]+\s/, '')
+      name = name.replace(/^@[a-zA-Z-]+\s/, '')
       const re = /^\[(.*?)\]\((.*?)\)$/
       const match = re.exec(name)
       if (!match) { return name }
