@@ -105,8 +105,19 @@
 </script>
 <script type="text/template" id="rgauthor">
   <div class="rg">
-    <h1>Author</h1>
+    <h2>Author</h2>
     <div>{{- data.name}} {{- data.title}}</div>
+    <div>
+      <a target="_blank" href="{{- data.institution.href}}">{{- data.institution.text}}</a>
+    </div>
+    <div>
+      <a target="_blank" href="{{- data.department.href}}">{{- data.department.text}}</a>
+    </div>
+    <h3>ResearchGate Stats</h3>
+    <div>Citations: {{- data.citations}}</div>
+    <div>Reads: {{- data.reads}}</div>
+    <div>Research Items: {{- data.researchItems}}</div>
+    <div><a target="_blank" href="{{- data.url}}">Profile</a></div>
   </div>
 </script>
 <script type="text/template" id="rgarticles">
