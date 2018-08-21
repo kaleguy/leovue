@@ -19,7 +19,7 @@
       "showAppTitle": true,
       "showHeader": true,
       "docTitle": "",
-      "filename": "static/docs",
+      "filename": "static/rg",
       "firstNodeAsTitle": false,
       "baseMode": "t",
       "viewTypes": [
@@ -128,7 +128,7 @@
       {{ if (article.type.text === 'Article') { }}
       {
         title: '<div>{{- article.title.text}}</div>',
-        date: '<div>{{- article.date}}</div>',
+        date: '<div>{{- moment(article.date).format('YYYY-MM-DD') }}</div>',
         reads: '{{- article.reads.replace(/[a-zA-Z]/g, '')}}',
         readNum: {{- article.reads.replace(/[,a-zA-Z]/g, '')}}
       },
