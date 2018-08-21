@@ -59,8 +59,12 @@ function loadIndexItems (arr, titles, textItems) {
 Vue.use(Vuex)
 const spinnerHTML = `<div class="spin-box"><div class="single10"></div></div>`
 
-function showText (context, text, id, nowrapper) {
-  context.commit('CONTENT_PANE', {type: 'text'})
+function showText (context, text, id, nowrapper, params) {
+  if (!!params && params.displayType === 'board') {
+    context.commit('CONTENT_PANE', {type: 'board'})
+  } else {
+    context.commit('CONTENT_PANE', {type: 'text'})
+  }
   if (!text) {
     text = ''
     context.commit('CURRENT_ITEM_CONTENT', { text })
@@ -269,7 +273,7 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
         data.params = params
       }
       templateEngines[dataType].render(data, xslType).then(html => {
-        showText(context, html, id)
+        showText(context, html, id, null, params)
       })
     })
     .catch(function (error) {

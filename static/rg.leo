@@ -32,6 +32,6 @@ display it in this format, &lt;a href=""&gt;see these instructions&lt;/a&gt;.
 <t tx="josephorr.20180513120416.1"></t>
 <t tx="josephorr.20180521092759.1"></t>
 <t tx="josephorr.20180701141809.1"></t>
-<t tx="josephorr.20180704152951.1"></t>
+<t tx="josephorr.20180704152951.1">displayType: board</t>
 </tnodes>
 </leo_file>

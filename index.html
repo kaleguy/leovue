@@ -121,9 +121,28 @@
   </div>
 </script>
 <script type="text/template" id="rgarticles">
-  {{ data.articles.forEach(article => { }}
-  Title: {{article.title.text}}
-  {{ }) }}
+<div class="table-component">
+  <table-component
+    :data="[
+    {{ data.articles.forEach(article => { }}
+      {{ if (article.type.text === 'Article') { }}
+      {
+        title: '<div>{{- article.title.text}}</div>',
+        date: '<div>{{- article.date}}</div>',
+        reads: '{{- article.reads.replace(/[a-zA-Z]/g, '')}}',
+        readNum: {{- article.reads.replace(/[,a-zA-Z]/g, '')}}
+      },
+      {{ } }}
+    {{ }) }}
+     ]"
+  sort-order="asc"
+  sort-by="readNum">
+    <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
+    <table-column show="date" label="Date" header-class="data-cell" cell-class="data-cell"></table-column>
+    <table-column show="reads" label="Reads" sort-by="readNum" cell-class="right"></table-column>
+    <table-column show="readNum" label="R" data-type="numeric" :hidden="true" ></table-column>
+  </table-component>
+</div>
 </script>
 <script type="text/template" id="rgcitations">
 CITATIONS
