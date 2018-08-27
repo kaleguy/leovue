@@ -287,13 +287,19 @@ function addChildNodes (context, parentId, data) {
   console.log(item)
   const children = []
   data.forEach((n, index) => {
+    let name = n.name
+    if (n.title) {
+      name = `@json [${n.title.text}](${n.title.href})`
+    }
     children.push(
       {
-        name: n.title.text,
+        name,
         id: parentId + '-' + index
       }
     )
   })
+  // TODO: CURRENT load articles with proper template
+  debugger
   item.children = children
   return true
 }

@@ -279,6 +279,7 @@ export default {
     width: 100%;
     background: #fff;
     height: calc(100vh - 33px);
+    overflow: scroll;
   }
   #tlayout {
     background: #fff;

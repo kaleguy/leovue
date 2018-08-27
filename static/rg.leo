@@ -36,6 +36,7 @@ display it in this format, &lt;a href=""&gt;see these instructions&lt;/a&gt;.
 nodeList: articles
 filter:
   key: type.text
-  value: Article</t>
+  value: Article
+template: rgarticle  </t>
 </tnodes>
 </leo_file>
