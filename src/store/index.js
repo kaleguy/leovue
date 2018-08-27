@@ -19,15 +19,7 @@ const md = require('markdown-it')({
 })
 const lunr = require('lunr')
 
-function sendGTag (item) {
-  if (_.isUndefined(gtag)) { return } // eslint-disable-line
-  gtag('config', 'UA-118289537-1', {  // eslint-disable-line
-    'page_title': item.name,
-    'page_path': '#/t/' + item.id,
-    't': item.t
-  })
-}
-console.log(sendGTag)
+// console.log(util.sendGTag)
 
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
@@ -110,17 +102,7 @@ function isRelative (url) {
   }
   return ok
 }
-/**
- * Chop the end of a string off
- * @param s {string} The input string
- * @param c {string} The character from which the string will be chopped
- * @returns {string} The chopped string
- * TODO: move to util
- */
-function chop (s, c) {
-  if (s.indexOf(c) < 0) { return s }
-  return s.substring(0, s.lastIndexOf(c))
-}
+
 // load subtree - separate leo file loaded into node
 function loadLeoNode (context, item) {
   console.log('LOADING SUBTREE')
@@ -129,6 +111,8 @@ function loadLeoNode (context, item) {
     const id = item.id
     let {url, label} = getUrlFromTitle(title)
     if (!url) { return }
+    // this will fetch the leo file and convert to JSON with
+    // the id prepended to the id in the fetched data
     getLeoJSON(url, id).then(data => {
       let text = data.textItems
       data = data.data
@@ -140,7 +124,7 @@ function loadLeoNode (context, item) {
         data = data[0]
         item.children = data.children
         item.t = data.t
-        item.name = label // convert to regular title so won't reload
+        item.name = label // convert to regular title so won't reload (remove the directive)
       } else { // TODO: trunkless load logic incomplete for subtrees
         item.name = label
         item.children = data
@@ -194,9 +178,9 @@ function getUrlFromTitle (title, dataType) {
   }
   if (cname) {
     let u = window.lconfig.filename
-    u = chop(u, '#')
-    u = chop(u, '?')
-    u = chop(u, '/')
+    u = util.chop(u, '#')
+    u = util.chop(u, '?')
+    u = util.chop(u, '/')
     url = u + '/' + url
   }
   return {url, label}
@@ -274,11 +258,44 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
       }
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id, null, params)
+        if (params.nodeList) {
+          let dataArray = data[params.nodeList]
+          if (params.filter) {
+            const filter = params.filter
+            dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
+          }
+          // debugger
+          addChildNodes(context.state, id, dataArray)
+        }
       })
     })
     .catch(function (error) {
       console.log(error)
     })
+}
+
+/**
+ * Given an array of data, convert to child nodes and add to item.
+ * @param context: basically, the data store
+ * @param parentId: id of the item to which child nodes will be appended.
+ * @param data: the array to be converted into child nodes
+ * @returns {boolean}
+ */
+function addChildNodes (context, parentId, data) {
+  if (!_.isArray(data)) { return }
+  const item = JSON.search(context.leodata, '//*[id="' + parentId + '"]')[0]
+  console.log(item)
+  const children = []
+  data.forEach((n, index) => {
+    children.push(
+      {
+        name: n.title.text,
+        id: parentId + '-' + index
+      }
+    )
+  })
+  item.children = children
+  return true
 }
 
 /**
@@ -761,6 +778,7 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   if (!trees.length) { return Promise.resolve() }
   let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
   context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
+  // special case of outlining a page, e.g. wikipedia
   if (/^@outline/.test(item.name)) {
     return showPageOutline(context, item, topId, subpath)
   }
@@ -1195,7 +1213,7 @@ export default new Vuex.Store({
       }
       if (item) {
         item = item[0]
-        sendGTag(item) // send Google Analytics if GA initialized in index.html
+        util.sendGTag(item) // send Google Analytics if GA initialized in index.html
         let itemText = context.state.leotext[item.t]
         if (/^@presentation /.test(item.name)) {
           return showPresentation(context, item.name, id)

@@ -71,7 +71,8 @@ function render (json, templateType) {
   if (!templateType) {
     templateType = 'none'
   }
-  let templateString = null //
+  let templateString = null
+  // check to see if there is a SCRIPT/template with the matching name
   let templateEl = document.getElementById(templateType)
   if (templateEl) {
     templateString = templateEl.innerText

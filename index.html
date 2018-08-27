@@ -128,7 +128,7 @@
       {{ if (article.type.text === 'Article') { }}
       {
         title: '<div>{{- article.title.text}}</div>',
-        date: '<div>{{- moment(article.date).format('YYYY-MM-DD') }}</div>',
+        date: '<div>{{- moment(article.date).format('YYYY-MM') }}</div>',
         reads: '{{- article.reads.replace(/[a-zA-Z]/g, '')}}',
         readNum: {{- article.reads.replace(/[,a-zA-Z]/g, '')}}
       },

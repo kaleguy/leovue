@@ -126,13 +126,31 @@ function formatText (text, noWrapper) {
   return text
 }
 
+function sendGTag (item) {
+  if (_.isUndefined(gtag)) { return } // eslint-disable-line
+  gtag('config', 'UA-118289537-1', {  // eslint-disable-line
+    'page_title': item.name,
+    'page_path': '#/t/' + item.id,
+    't': item.t
+  })
+}
+/**
+ * Chop the end of a string off
+ * @param s {string} The input string
+ * @param c {string} The character from which the string will be chopped
+ * @returns {string} The chopped string
+ */
+function chop (s, c) {
+  if (s.indexOf(c) < 0) { return s }
+  return s.substring(0, s.lastIndexOf(c))
+}
+
 function hiliteCode(text, language) {
   text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
   text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
   const mu = hljs.highlight(language, text)
   text = mu.value
   text = `<pre v-pre>${text}</pre>`
-  //debugger
   text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
   return text
 }
@@ -205,7 +223,9 @@ module.exports = {
   removeFirstLine,
   parseQueryString,
   formatText,
-  getObjectByKeyFromTree
+  getObjectByKeyFromTree,
+  sendGTag,
+  chop
 }
 
 /*
