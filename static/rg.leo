@@ -37,6 +37,7 @@ nodeList: articles
 filter:
   key: type.text
   value: Article
-template: rgarticle  </t>
+template: rgarticle
+urlIsQueryString: true</t>
 </tnodes>
 </leo_file>

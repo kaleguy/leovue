@@ -265,7 +265,8 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
             dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
           }
           // debugger
-          addChildNodes(context.state, id, dataArray)
+          const template = params.template || ''
+          addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString)
         }
       })
     })
@@ -279,27 +280,35 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
  * @param context: basically, the data store
  * @param parentId: id of the item to which child nodes will be appended.
  * @param data: the array to be converted into child nodes
+ * @param template: template to use, e.g. rgarticle (see index.html for example)
+ * @param urlIsQueryString: use just the portion of the url after last '/' (will be passed to template host)
  * @returns {boolean}
  */
-function addChildNodes (context, parentId, data) {
+function addChildNodes (context, parentId, data, template, urlIsQueryString) {
   if (!_.isArray(data)) { return }
   const item = JSON.search(context.leodata, '//*[id="' + parentId + '"]')[0]
-  console.log(item)
   const children = []
+  if (template) {
+    template = '-' + template
+  }
   data.forEach((n, index) => {
     let name = n.name
-    if (n.title) {
-      name = `@json [${n.title.text}](${n.title.href})`
+    let url = n.title.href
+    if (urlIsQueryString) {
+      url = '/' + url
+      url = url.substring(url.lastIndexOf('/') + 1)
     }
+    if (n.title) {
+      name = `@json${template} [${n.title.text}](${url})`
+    }
+    const id = parentId + '-' + index
+    const t = id
+    context.leotext[t] = '' // TODO: does this need to be same format as other t (timestamp)
     children.push(
-      {
-        name,
-        id: parentId + '-' + index
-      }
+      { name, id, t }
     )
   })
   // TODO: CURRENT load articles with proper template
-  debugger
   item.children = children
   return true
 }
