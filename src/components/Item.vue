@@ -16,7 +16,7 @@
         </div>
         <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
-        <span class="otitle">{{vtitle}}</span>
+        <span class="otitle">{{model.vtitle}}</span>
       </div>
     </div>
     <div v-show="isOpen" class="child-items">
@@ -44,9 +44,7 @@
 
 import Velocity from 'velocity-animate'
 import _ from 'lodash'
-function toTitleCase (str) {
-  return str.replace(/\w*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
-}
+
 export default {
   name: 'item',
   props: {
@@ -141,29 +139,6 @@ export default {
         return this.$store.state.currentPage.id === this.model.id
       }
       return this.$store.state.currentItem.id === this.model.id
-    },
-    vtitle: function () {
-      let name = this.model.name
-      // TODO @rg (Researchgate) functionality should be in separate module
-      if (/@json-rg/.test(name)) {
-        name = name.replace(/@json-rg[\w]+ \d+/, '').replace(/_/g, ' ').toLowerCase() // eslint-disable-line
-        name = name.replace(/%27/g, "'")
-        name = toTitleCase(name)
-        // return name
-      }
-      name = name.replace(/^@[a-zA-Z-]+\s/, '')
-      const re = /^\[(.*?)\]\((.*?)\)$/
-      const match = re.exec(name)
-      if (!match) { return name }
-      const title = match[1]
-      if (title) {
-        return title
-      } else {
-        return this.name
-      }
-    },
-    initialized () {
-      return this.$store.state.initialized
     }
   },
   methods: {

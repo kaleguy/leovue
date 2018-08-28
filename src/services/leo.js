@@ -1,5 +1,6 @@
 // import escape from 'escape-html'
 import axios from 'axios'
+const util = require('../util.js')
 
 const xslTemplate = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -138,7 +139,7 @@ function cleanText(data, startId){
  * @returns {boolean} - if is relative
  */
 function isRelative (url) {
-  var ok = true
+  let ok = true
   if (/^http/.test(url)) {
     ok = false
   }
@@ -292,6 +293,25 @@ function transformLeoXML2XML(xmlString, startId, parser) {
 }
 let counter = 0
 function setIds (startId, d) {
+  // set viewing title, e.g. title with directives removed
+  let vtitle = _.get(d, 'name', '')
+  // TODO @rg (Researchgate) functionality should be in separate module
+  if (/@json-rg/.test(vtitle)) {
+    vtitle = vtitle.replace(/@json-rg[\w]+ \d+/, '')
+      .replace(/_/g, ' ')
+      .toLowerCase() // eslint-disable-line
+      .replace(/%27/g, "'")
+    vtitle = util.toTitleCase(vtitle)
+    // return name
+  }
+  vtitle = vtitle.replace(/^@[a-zA-Z-]+\s/, '')
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(vtitle)
+  if (match) {
+    vtitle = match[1]
+  }
+  d.vtitle = vtitle
+
   d.id = counter++
   if (_.isArray(d)) {
     return d.forEach(i => setIds(startId, i))

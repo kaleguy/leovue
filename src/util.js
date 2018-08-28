@@ -125,6 +125,9 @@ function formatText (text, noWrapper) {
   text = `<div class='content'>${text}</div>`
   return text
 }
+function toTitleCase (str) {
+  return str.replace(/\w*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
+}
 
 function sendGTag (item) {
   if (_.isUndefined(gtag)) { return } // eslint-disable-line
@@ -225,46 +228,7 @@ module.exports = {
   formatText,
   getObjectByKeyFromTree,
   sendGTag,
-  chop
+  chop,
+  toTitleCase
 }
-
-/*
- showContent: function () {
- let targetEl = this.targetEl
- if (!targetEl) {
- this.inline = true
- }
- // test for presence of url in title, if so it is external content
- if (/^\[/.test(this.model.name)) {
- return showSite.call(this, this.model.name, this.inline)
- } else {
- this.$store.commit('CONTENT_PANE', {type: 'text'})
- showText.call(this, this.textItems[this.model.t])
- }
- }
- */
-
-/* ,
- setContent: function () {
- if (this.model.t && !this.initialized && (this.$store.state.currentItem.id === this.model.id)) {
- this.$store.commit('INIT') // set that current item has been shown
- this.showContent()
- }
- if ((!this.targetEl) && this.isOpen && (this.$store.state.currentItem.id !== this.model.id)) {
- this.showContent()
- }
- }
- */
-
-/*
- function getParentEls (arr, el) {
- if (el.parentElement) {
- arr.push(el.parentElement)
- getParentEls(arr, el.parentElement)
- } else {
- return arr
- }
- }
- */
-
 

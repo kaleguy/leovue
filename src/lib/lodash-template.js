@@ -88,7 +88,7 @@ function render (json, templateType) {
   try {
     html = compiled({data: json})
   } catch (e) {
-    console.log('Template compilation error: ', e)
+    console.log('Template compilation error: ', templateType, e)
   }
   return Promise.resolve(html)
 }

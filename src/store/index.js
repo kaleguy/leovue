@@ -53,7 +53,7 @@ Vue.use(Vuex)
 const spinnerHTML = `<div class="spin-box"><div class="single10"></div></div>`
 
 function showText (context, text, id, nowrapper, params) {
-  if (!!params && params.displayType === 'board') {
+  if (params && params.displayType === 'board') {
     context.commit('CONTENT_PANE', {type: 'board'})
   } else {
     context.commit('CONTENT_PANE', {type: 'text'})
@@ -260,10 +260,8 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       }
       // const currentText = context.state.leotext[t]
       // const text = hljs.highlight('javascript', JSON.stringify(data)).value
-      const text = JSON.stringify(data)
+      const text = JSON.stringify(data, null, 2)
       context.state.leotext[t] = text
-      console.log('TT', context.state.leotext[t])
-      // console.log('CURET', currentText)
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id, null, params)
         if (params.nodeList) {
@@ -272,8 +270,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
             const filter = params.filter
             dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
           }
-          // debugger
-          const template = params.template || ''
+          const template = params.childTemplate || ''
           addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString)
         }
       })
@@ -301,6 +298,7 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
   }
   data.forEach((n, index) => {
     let name = n.name
+    let vtitle = name
     let url = n.title.href
     if (urlIsQueryString) {
       url = '/' + url
@@ -308,12 +306,13 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
     }
     if (n.title) {
       name = `@json${template} [${n.title.text}](${url})`
+      vtitle = n.title.text
     }
     const id = parentId + '-' + index
     const t = id
     context.leotext[t] = '' // TODO: does this need to be same format as other t (timestamp)
     children.push(
-      { name, id, t }
+      { name, id, vtitle, t }
     )
   })
   // TODO: CURRENT load articles with proper template
@@ -340,7 +339,7 @@ function showBook (context, item, url, params) {
       item.loaded = true
       data.params = params
       lodashTemplate.render(data, 'openbooks').then(html => {
-        showText(context, html, id)
+        showText(context, html, id, null, params)
         context.commit('CONTENT_ITEM_UPDATE')
         context.state.leotext[item.t] = html
       })
@@ -358,6 +357,7 @@ function showBook (context, item, url, params) {
  * @param subpath {String} If a literate url has been used, this is the subpath, e.g Dinosaur@Eytomology, 'Eytomology' will be thee subpath
  * @returns {Promise<any>}
  */
+// TODO: move outline functionality into separate module
 function showPageOutline (context, item, id, subpath) {
   if (!id) {
     id = item.id
@@ -1260,7 +1260,6 @@ export default new Vuex.Store({
           console.log('data', itemData)
           const template = _.get(itemData, 'params.template', '')
           if (template) {
-            // item.vtitle = 'foo'
             lodashTemplate.render(itemData, template).then(html => {
               showText(context, html, id, null, {})
             })
@@ -1286,6 +1285,7 @@ export default new Vuex.Store({
           if (dataSubType) {
             dataSubType = dataSubType.replace('-', '')
             template = dataSubType
+            params.template = template
           }
           return showFormattedData(context, id, url, template, dataType, params, item.t)
         }

@@ -25,9 +25,10 @@
 Put example of leo file with live links on restify site.
 
 * Retrieve json list
-1. display sortable table in node pane
-1. each article is an empty child node
-1. click to load child node
+ok 1. display sortable table in node pane
+     11. clickable rows
+ok 1. each article is an empty child node
+ok 1. click to load child node
 1. child node content has "load citations" link,
   a. click this link creates citations child node
   b. puts citations as empty child nodes
