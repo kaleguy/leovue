@@ -47,7 +47,6 @@ import _ from 'lodash'
 function toTitleCase (str) {
   return str.replace(/\w*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase() })
 }
-// console.log(toTitleCase)
 export default {
   name: 'item',
   props: {
@@ -130,13 +129,9 @@ export default {
       // return this.isOpen && this.$route.name === 'ANode'
     },
     isOpenA: function () {
-      // console.log('HEY', this.closearrow)
       if (_.has(this.model, 'o')) {
-        // console.log('123456')
         return this.closearrow
       }
-      // let foo = this.isOpen && !this.closearrow
-      // console.log(foo, this.closearrow, !this.closearrow)
       return this.isOpen && !this.closearrow
     },
     active: function () {
@@ -149,9 +144,8 @@ export default {
     },
     vtitle: function () {
       let name = this.model.name
-      // TODO @rg functionality should be in separate module
+      // TODO @rg (Researchgate) functionality should be in separate module
       if (/@json-rg/.test(name)) {
-        console.log('MATH')
         name = name.replace(/@json-rg[\w]+ \d+/, '').replace(/_/g, ' ').toLowerCase() // eslint-disable-line
         name = name.replace(/%27/g, "'")
         name = toTitleCase(name)
@@ -174,6 +168,10 @@ export default {
   },
   methods: {
     toggle: function () {
+      // set vtitle if it has been set elsewhere
+      if (this.model.vtitle) {
+        this.vtitle = this.model.vtitle
+      }
       // toggle the tree node
       let duration = 300
       const easing = 'linear'
@@ -272,7 +270,6 @@ export default {
       siblings.forEach(sid => {
         // if (sid === id) { return }
         let el = document.getElementById(sid)
-        console.log(sid, direction, el)
         el.style.display = 'none'
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         })

@@ -18,6 +18,7 @@ const md = require('markdown-it')({
   typographer: true
 })
 const lunr = require('lunr')
+// const hljs = require('highlight.js')
 
 // console.log(util.sendGTag)
 
@@ -231,12 +232,13 @@ function checkCache (context, item, url) { // eslint-disable-line
  *
  * @param context
  * @param id
- * @param url
+ * @param url{String} where to retrieve the data
  * @param xslType {String} xsl template name (in xsl.js or lodash_templates.js)
  * @param dataType {String} 'xsl' or 'json'
  * @param params {json} Extra data that will be added before template rendering
+ * @param t {String} The text id (the node text should be yaml, will be converted to JSON and merged with incoming data)
  */
-function showFormattedData (context, id, url, xslType, dataType, params) {
+function showFormattedData (context, id, url, xslType, dataType, params, t) {
   let query = url
   // xttp means, route it through YQL
   if (/^xttp/.test(url)) {
@@ -256,6 +258,12 @@ function showFormattedData (context, id, url, xslType, dataType, params) {
       if (dataType === 'json') {
         data.params = params
       }
+      // const currentText = context.state.leotext[t]
+      // const text = hljs.highlight('javascript', JSON.stringify(data)).value
+      const text = JSON.stringify(data)
+      context.state.leotext[t] = text
+      console.log('TT', context.state.leotext[t])
+      // console.log('CURET', currentText)
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id, null, params)
         if (params.nodeList) {
@@ -878,6 +886,12 @@ function addDirectiveToSubTree (subtree, directive, textItems) {
     addDirectiveToSubTree(child, directive, textItems)
   })
 }
+
+/**
+ * Load all of the dataSet nodes (e.g. the JSON in the node) into a hash.
+ * @param context
+ * @param data
+ */
 function loadDataSets (context, data) {
   const textItems = data.textItems
   data.data.forEach(d => {
@@ -1239,6 +1253,19 @@ export default new Vuex.Store({
         if (/^@mermaid/.test(item.name)) {
           return showMermaid(context, item.name, id)
         }
+        // if dataSet has a param.template, render the transformed html
+        if (/^@dataSet/.test(item.name)) {
+          console.log('DATASET', item.name)
+          const itemData = JSON.parse(itemText)
+          console.log('data', itemData)
+          const template = _.get(itemData, 'params.template', '')
+          if (template) {
+            // item.vtitle = 'foo'
+            lodashTemplate.render(itemData, template).then(html => {
+              showText(context, html, id, null, {})
+            })
+          }
+        }
         if (/^@rss/.test(item.name)) {
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
@@ -1251,7 +1278,7 @@ export default new Vuex.Store({
           let dataType = match[1]
           let dataSubType = match[2]
           let {url, label} = getUrlFromTitle(item.name, dataSubType) // eslint-disable-line
-          item.name = label
+          item.name = `@dataSet set${id} ${label}`// label
           if (!url) { return }
           itemText = itemText.replace(/^@.*?\n/, '')
           const params = jsyaml.load(itemText) || {}
@@ -1260,7 +1287,7 @@ export default new Vuex.Store({
             dataSubType = dataSubType.replace('-', '')
             template = dataSubType
           }
-          return showFormattedData(context, id, url, template, dataType, params)
+          return showFormattedData(context, id, url, template, dataType, params, item.t)
         }
         if (/^@sort/.test(item.name)) {
           // we'll sort text ascending, anything else e.g. year, descending
