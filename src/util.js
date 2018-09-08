@@ -95,6 +95,7 @@ function formatText (text, noWrapper) {
     text = removeFirstLine(text)
   }
   let mu = ''
+  let muv = null
   switch (language) {
     case 'text':
       text = `<div class="text">${text}</div>`
@@ -113,8 +114,13 @@ function formatText (text, noWrapper) {
       break
     case 'html':
       break
+    case 'htmlsource':
+      muv = hljs.highlight('javascript', text)
+      text = muv.value
+      text = `<pre>${text}</pre>`
+      break
     case 'VueComponent':
-      const muv = hljs.highlight('javascript', text)
+      muv = hljs.highlight('javascript', text)
       text = muv.value
       text = `<pre>${text}</pre>`
       break
@@ -130,7 +136,7 @@ function toTitleCase (str) {
 }
 
 function sendGTag (item) {
-  if (_.isUndefined(gtag)) { return } // eslint-disable-line
+  if (typeof gtag === 'undefined') { return } // eslint-disable-line
   gtag('config', 'UA-118289537-1', {  // eslint-disable-line
     'page_title': item.name,
     'page_path': '#/t/' + item.id,
