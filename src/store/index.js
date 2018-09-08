@@ -611,7 +611,7 @@ function showSite (context, title, id, content) {
     showFormattedData(context, id, url, null, 'xml')
   }
   const iframeHTML = `
-    <div style="width:100%">
+    <div class=iframe-${ext} style="width:100%">
     <iframe
        src="${url}" height="100%" width="100%"
        marginwidth="0" marginheight="0"

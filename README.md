@@ -163,7 +163,8 @@ docker run -p 8080:8080 leovue
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaleguy/leovue/tags).
+We use [SemVer](http://semver.org/) for versioning.
+For the versions available, see the [tags on this repository](https://github.com/kaleguy/leovue/tags).
 
 ## Authors
 

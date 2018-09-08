@@ -113,10 +113,13 @@ function formatText (text, noWrapper) {
       text = processPython(text)
       break
     case 'html':
+      text = text.replace(/(@\w+)/, '<span class="directive" title="Leo Directive - does not appear in source file.">$1</span>')
       break
     case 'htmlsource':
       muv = hljs.highlight('javascript', text)
       text = muv.value
+      text = text.replace(/(@\w+)/, '<span class="directive" title="Leo Directive - does not appear in source file.">$1</span>')
+      text = text.replace(/@others/g, '<span class="directive" title="Leo Directive: rest of tree goes here.">@others</span>')
       text = `<pre>${text}</pre>`
       break
     case 'VueComponent':
