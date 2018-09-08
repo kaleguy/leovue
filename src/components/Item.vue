@@ -62,6 +62,7 @@ export default {
     return {
       reset: true,
       openFlag: false,
+      hasRibbon: true,
       inline: false,
       closearrow: false,
       myContent: ''
@@ -143,6 +144,13 @@ export default {
   },
   methods: {
     toggle: function () {
+      if (this.hasRibbon) {
+        const ribbon = document.getElementsByClassName('github-ribbon')
+        if (ribbon && ribbon[0]) {
+          ribbon[0].style.display = 'none'
+          this.hasRibbon = false
+        }
+      }
       // set vtitle if it has been set elsewhere
       if (this.model.vtitle) {
         this.vtitle = this.model.vtitle

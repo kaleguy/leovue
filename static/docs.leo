@@ -349,7 +349,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #333; border-radius: 10px; width:380px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center;"&gt;
+&lt;div style="border:1px solid #333; border-radius: 10px; width:380px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center; margin-top:20px; margin-bottom: 40px;"&gt;
 Leo Vue
 &lt;/div&gt;
 
