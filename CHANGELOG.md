@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Github ribbon widget
+- Bootstrap Vue
+- header styles
 - Export to JSON and LEO format
 - @JSON array to subnodes
 - @formio directive

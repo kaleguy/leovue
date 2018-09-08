@@ -12,6 +12,7 @@ import 'vue-awesome/icons/arrow-right'
 import 'vue-awesome/icons/check'
 import 'vue-awesome/icons/chevron-left'
 import 'vue-awesome/icons/'
+import ForkeMeOnGithub from 'fork-me-on-github-vue'
 
 // content components
 import Vue2Leaflet from 'vue2-leaflet'
@@ -42,6 +43,7 @@ const Defiant = require('./lib/defiant') // eslint-disable-line
 Vue.use(VTooltip)
 Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
+Vue.use(ForkeMeOnGithub)
 Vue.component('star-rating', StarRating)
 Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)

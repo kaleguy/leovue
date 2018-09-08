@@ -4,11 +4,23 @@
        @dragover="dragover_handler($event);"
        @dragend="dragend_handler($event);">
     <router-view></router-view>
+    <Ribbon
+      v-bind="ribbonOptions"
+    ></Ribbon>
   </div>
 </template>
 
 <script>
   export default {
+    data () {
+      return {
+        ribbonOptions: {
+          text: 'Fork me on GitHub',
+          linkUrl: 'https://github.com/kaleguy/leovue',
+          fixed: true
+        }
+      }
+    },
     name: 'app',
     methods: {
       // drag and drop a leo file

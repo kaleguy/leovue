@@ -59,7 +59,7 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"><vh>External Content: URL Nodes</vh>
-<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -75,13 +75,13 @@
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
-<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -118,17 +118,17 @@
 </v>
 </v>
 <v t="josephorr.20171109061104.1"><vh>Data</vh>
-<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
+<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
-<v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
+<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
 <v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
 <v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
@@ -349,7 +349,7 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #fff; width:500px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center;"&gt;
+&lt;div style="border:1px solid #333; border-radius: 10px; width:380px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center;"&gt;
 Leo Vue
 &lt;/div&gt;
 
@@ -685,6 +685,7 @@ This is a clone of one of the earlier nodes in this outline. In this case Leo Vu
 <t tx="josephorr.20170408092907.1">@language javascript
 // import escape from 'escape-html'
 import axios from 'axios'
+const util = require('../util.js')
 
 const xslTemplate = `
 &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
@@ -823,7 +824,7 @@ function cleanText(data, startId){
  * @returns {boolean} - if is relative
  */
 function isRelative (url) {
-  var ok = true
+  let ok = true
   if (/^http/.test(url)) {
     ok = false
   }
@@ -977,6 +978,25 @@ function transformLeoXML2XML(xmlString, startId, parser) {
 }
 let counter = 0
 function setIds (startId, d) {
+  // set viewing title, e.g. title with directives removed
+  let vtitle = _.get(d, 'name', '')
+  // TODO @rg (Researchgate) functionality should be in separate module
+  if (/@json-rg/.test(vtitle)) {
+    vtitle = vtitle.replace(/@json-rg[\w]+ \d+/, '')
+      .replace(/_/g, ' ')
+      .toLowerCase() // eslint-disable-line
+      .replace(/%27/g, "'")
+    vtitle = util.toTitleCase(vtitle)
+    // return name
+  }
+  vtitle = vtitle.replace(/^@[a-zA-Z-]+\s/, '')
+  const re = /^\[(.*?)\]\((.*?)\)$/
+  const match = re.exec(vtitle)
+  if (match) {
+    vtitle = match[1]
+  }
+  d.vtitle = vtitle
+
   d.id = counter++
   if (_.isArray(d)) {
     return d.forEach(i =&gt; setIds(startId, i))
