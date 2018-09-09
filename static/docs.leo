@@ -9,21 +9,21 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="josephorr.20170228222411.2" a="E"><vh>Leo Vue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170228222411.2" a="E"><vh>LeoVue</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About Leo Vue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
-<v t="josephorr.20180304203537.1"><vh>[Leo Vue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
+<v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using Leo Vue</vh>
-<v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running Leo Vue from Github &gt;&gt;</vh></v>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
@@ -129,8 +129,8 @@
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation Leo Vue</vh>
-<v t="josephorr.20171121003417.1"><vh>Leo Vue</vh></v>
+<v t="josephorr.20171120183454.1"><vh>@presentation LeoVue</vh>
+<v t="josephorr.20171121003417.1"><vh>LeoVue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
 <v t="josephorr.20171121003459.1"><vh>Reveal</vh>
@@ -161,7 +161,7 @@
 <v t="josephorr.20171209190744.1"><vh>Mermaid Diagrams</vh></v>
 <v t="josephorr.20171121003508.1"><vh>Youtube</vh></v>
 <v t="josephorr.20171207180149.1"><vh>Layout Components</vh></v>
-<v t="josephorr.20171210104012.1"><vh>More about Leo Vue Presentations</vh></v>
+<v t="josephorr.20171210104012.1"><vh>More about LeoVue Presentations</vh></v>
 <v t="josephorr.20171125134539.1"><vh>Math</vh></v>
 <v t="josephorr.20171126181736.1"><vh>Markdown</vh></v>
 <v t="josephorr.20171126192228.1"><vh>Javascript Example</vh></v>
@@ -288,7 +288,7 @@
 </v>
 </v>
 <v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban Leo Vue Project Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
@@ -350,11 +350,11 @@
 <t tx="josephorr.20170228222411.2">@language html
 
 &lt;div style="border:1px solid #333; border-radius: 10px; width:380px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center; margin-top:20px; margin-bottom: 40px;"&gt;
-Leo Vue
+LeoVue
 &lt;/div&gt;
 
 &lt;p&gt;
-Leo Vue is a web app that can display files created with 
+LeoVue is a web app that can display files created with
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 &lt;/p&gt;
 &lt;p&gt;
@@ -362,9 +362,9 @@ Leo has features that make it particularly suitable for documenting code and oth
 &lt;/p&gt;
 &lt;p&gt;
 Using Leo, you can create an outlined website or document like the one you are viewing. Content nodes can contain
-text, html, markdown or code. Content nodes can also point to other documents or websites. 
+text, html, markdown or code. Content nodes can also point to other documents or websites.
 &lt;p&gt;
-Leo Vue was created using Vue.js, so you can add Vue.js components to your outline's content.
+LeoVue was created using Vue.js, so you can add Vue.js components to your outline's content.
 &lt;/p&gt;
  </t>
 <t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
@@ -482,7 +482,7 @@ Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby 
 This node was writen with Markdown.
 
 Use the @language md directive to set the node to markdown.</t>
-<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content. 
+<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
@@ -493,8 +493,8 @@ This section contains a brief introduction to some of the features of Leo.</t>
 
 &lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
 
-Using Leo, you can create an outline tree with various types of content. This subsection contains some simple examples of different types of content created in a Leo file and displayed with Leo Vue.</t>
-<t tx="josephorr.20170327233126.1">This section contains a guide to using the Leo Vue program to view files created in Leo.</t>
+Using Leo, you can create an outline tree with various types of content. This subsection contains some simple examples of different types of content created in a Leo file and displayed with LeoVue.</t>
+<t tx="josephorr.20170327233126.1">This section contains a guide to using the LeoVue program to view files created in Leo.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1">@language md
@@ -617,7 +617,7 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
 The purpose of this document is to make a brief introduction to creating tree-based content with Leo and
-displaying it with Leo Viewer. 
+displaying it with Leo Viewer.
 
 Leo has features that make it particularly suitable for creating documentation of code.
 
@@ -626,34 +626,34 @@ programming where documentation comes first, and code is generated from the docu
 is developed in tandem with it.</t>
 <t tx="josephorr.20170331200411.1">@language md
 
-# Installing and Using Leo Vue
+# Installing and Using LeoVue
 
-To use Leo Vue, copy the files in the [dist folder at github](https://github.com/kaleguy/leovue) to your server. A web server is
-required, you can't simply open Leo Vue index.html file from your local file system. If you want to view
+To use LeoVue, copy the files in the [dist folder at github](https://github.com/kaleguy/leovue) to your server. A web server is
+required, you can't simply open LeoVue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
-&lt;&lt; Running Leo Vue from Github &gt;&gt;
+&lt;&lt; Running LeoVue from Github &gt;&gt;
 
-The leo file that Leo Vue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
-or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration 
+The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
+or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
 parameters in index.html.
 
-For a quick look at a Leo file, you can also drag and drop the file on to Leo Vue.
+For a quick look at a Leo file, you can also drag and drop the file on to LeoVue.
 </t>
 <t tx="josephorr.20170331200439.1">@language md
 
-# Leo Vue
+# LeoVue
 
-**Leo Vue** is a web app that can display files created with 
+**LeoVue** is a web app that can display files created with
 &lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
 
-Using **Leo**, you can create outlined content. Using **Leo Vue** you can display this
+Using **Leo**, you can create outlined content. Using **LeoVue** you can display this
 content as a web page.
 
-The content you are reading was created in Leo. If you're reading this on the Leo Vue
-site, then this content is being displayed via the Leo Vue.
+The content you are reading was created in Leo. If you're reading this on the LeoVue
+site, then this content is being displayed via the LeoVue.
 
-Leo Vue is licensed under the MIT license.</t>
+LeoVue is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">@language md
 
@@ -665,7 +665,7 @@ To do this, create a node with a Markdown link in the title, for example:
 [This is a link](http://www.example.com)
 ```
 
-Leo Vue will show the external site in the content pane.
+LeoVue will show the external site in the content pane.
 
 The next node has the following title:
 
@@ -673,7 +673,7 @@ The next node has the following title:
 [A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)
 ```
 
-Note that if Leo Vue is served via https (e.g. Github Pages) only https links will work here.
+Note that if LeoVue is served via https (e.g. Github Pages) only https links will work here.
 
 The second node in this section has the following title:
 
@@ -681,7 +681,7 @@ The second node in this section has the following title:
 [Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
 ```
 
-This is a clone of one of the earlier nodes in this outline. In this case Leo Vue fetches the document and converts it to HTML before displaying it.</t>
+This is a clone of one of the earlier nodes in this outline. In this case LeoVue fetches the document and converts it to HTML before displaying it.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
 // import escape from 'escape-html'
 import axios from 'axios'
@@ -720,7 +720,7 @@ const outlineInfoTemplate = `
 This outline was downloaded from &lt;strong&gt;&lt;%- url %&gt;/&lt;/strong&gt;.
 &lt;/p&gt;
 &lt;p&gt;
-Outline displayed via &lt;a href="kaleguy.github.io"&gt;Leo Vue&lt;/a&gt;
+Outline displayed via &lt;a href="kaleguy.github.io"&gt;LeoVue&lt;/a&gt;
 &lt;/p&gt;
 &lt;% } else { %&gt;
 &lt;p&gt;
@@ -743,7 +743,7 @@ No url specified!
 Url parameter format:
 
 url=www.mysite.com&amp;name=the outline
-  
+
 `
 function transform (xml, xslString, transformer, serializer) {
   function serverTransform(resolve, reject) {
@@ -1037,12 +1037,12 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
 
 # Basic Configuration Options
 
-Leo Vue loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
+LeoVue loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
 
 Currently Available Parameters:
 * **fileName**: name of leo file to load (without .leo extension)
 * **docTitle**: Title for the Leo file (will show in top menubar)
-* **showAppTitle**: Display 'Leo Vue' in upper left of app
+* **showAppTitle**: Display 'LeoVue' in upper left of app
 * **viewTypes**: Array of viewTypes (e.g. Outline, Line, Graphic Tree) to be displayed in upper right menu.
 * **baseMode**: Default viewType
 
@@ -1055,9 +1055,9 @@ http://www.mysite.com/leovue?title=MyFile&amp;showapptitle=false
 
 ```
 </t>
-<t tx="josephorr.20170511082833.1">@language md 
+<t tx="josephorr.20170511082833.1">@language md
 
-Leo Vue can load .leo files into nodes in a parent .leo file.
+LeoVue can load .leo files into nodes in a parent .leo file.
 
 The child node of this node has the following title:
 
@@ -1083,9 +1083,9 @@ An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js
 &lt;/div&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
 
-Leo Vue is written in Vue.js, and Vue components can be added to content panes.
+LeoVue is written in Vue.js, and Vue components can be added to content panes.
 
-By default the following components are added to LeoVue. 
+By default the following components are added to LeoVue.
 
 * YouTube Viewer
 * Leaflet Maps
@@ -1099,16 +1099,16 @@ By default the following components are added to LeoVue.
 
 In your html content, add the Vue.js Youtube component like so:
 ```
-&lt;youtube video-id="pRnQFGskg9w" 
-         :player-width="320" 
+&lt;youtube video-id="pRnQFGskg9w"
+         :player-width="320"
          :player-height="195"&gt;&lt;/youtube&gt;
 
 ```
-To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes. 
+To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes.
 </t>
 <t tx="josephorr.20171103103421.1">@language md
 
-You can also run Leo Vue from github pages. Fork the repository on Github, 
+You can also run LeoVue from github pages. Fork the repository on Github,
 then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
 be viewable at username.github.io/myforkname/.</t>
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
@@ -1118,8 +1118,8 @@ be viewable at username.github.io/myforkname/.</t>
 &lt;/div&gt;</t>
 <t tx="josephorr.20171104211357.1">@language md
 
-Besides the Vue components included with Leo Vue, you can 
-easily add any other Vue.js component by installing it in Leo VUe and then 
+Besides the Vue components included with LeoVue, you can
+easily add any other Vue.js component by installing it in LeoVue and then
 declaring it in the main.js file.
 
 For example:
@@ -1132,21 +1132,21 @@ Vue.use(VueYouTubeEmbed)
 ```
 
 
-See the main.js file in the Leo Vue source for how other components are included with Leo Vue.
+See the main.js file in the LeoVue source for how other components are included with LeoVue.
 </t>
 <t tx="josephorr.20171104212406.1">&lt;info-card
   frontTitle=" Info Card "
   frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
   backTitle=" Back Title "
   backData=" This is the back of the card. "/&gt;
-  
+
 &lt;info-card
   frontType="graph"
   frontTitle=" Graph Card "
   :frontData="[3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
   backTitle=" Create a Graph Card "
-  backData=" You can easily create graph cards like this one using the Vue Info Card component. Open the docs.leo file in the Leo Editor to see the source for this card. "/&gt;  
-  
+  backData=" You can easily create graph cards like this one using the Vue Info Card component. Open the docs.leo file in the Leo Editor to see the source for this card. "/&gt;
+
   </t>
 <t tx="josephorr.20171105105136.1">@language html
 
@@ -1156,18 +1156,18 @@ See the main.js file in the Leo Vue source for how other components are included
     &lt;p&gt;
       Use the Vue-Tabs component to add tabs to a content item.
     &lt;/p&gt;
-    &lt;p&gt;  
+    &lt;p&gt;
       Open the docs.leo file in Leo to see the source for this tab.
     &lt;/p&gt;
     &lt;p&gt;
       A content item using the tabs directive should use the html directive.
-    &lt;/p&gt;  
+    &lt;/p&gt;
     &lt;/v-tab&gt;
     &lt;v-tab title="Second tab"&gt;
       &lt;h2&gt;Second tab content&lt;/h2&gt;
     &lt;/v-tab&gt;
     &lt;v-tab title="Third tab"&gt;
-      
+
       &lt;h3&gt;Third tab content&lt;/h3&gt;
     &lt;/v-tab&gt;
 &lt;/vue-tabs&gt;</t>
@@ -1183,11 +1183,11 @@ See the main.js file in the Leo Vue source for how other components are included
 &lt;/p&gt;</t>
 <t tx="josephorr.20171105173610.1">@language md
 
-The Vue-Chartjs component is included by default with Leo Vue.
+The Vue-Chartjs component is included by default with LeoVue.
 
 The Vue-Chartjs component isn't used directly, it is necessary to subclass each graph type.
 
-The following Chartjs components are included by default with Leo Vue:
+The following Chartjs components are included by default with LeoVue:
 
 * Line Chart
 * Bar Chart
@@ -1252,9 +1252,9 @@ A bar chart with some random data contained in the [[set1]] @dataTable node.
 &lt;bar-chart :dataSet="'set2'"/&gt;</t>
 <t tx="josephorr.20171107100246.1">@language md
 
-Leo Vue has a component for the MathJax library that allows display of mathmetical symbols and formulas.
+LeoVue has a component for the MathJax library that allows display of mathmetical symbols and formulas.
 
-In order for the component to work, the internet must be accessible, since the main library is not included with Leo Vue, because of file size.
+In order for the component to work, the internet must be accessible, since the main library is not included with LeoVue, because of file size.
 
 </t>
 <t tx="josephorr.20171108082557.1">@language html
@@ -1277,15 +1277,15 @@ Another formula:
 &lt;/mj&gt;</t>
 <t tx="josephorr.20171109061104.1">@language md
 
-Nodes in Leo Vue can contain data, and this data can be used by Vue components.
+Nodes in LeoVue can contain data, and this data can be used by Vue components.
 
 There are two types of data nodes:
 
-* **dataSets**: these contain JSON data. 
+* **dataSets**: these contain JSON data.
 * **dataTables**: these contain CSV data.</t>
 <t tx="josephorr.20171109061151.1">@language md
 
-DataTables can be used to put csv data into a Leo node, for viewing with Leo Vue.
+DataTables can be used to put csv data into a Leo node, for viewing with LeoVue.
 
 The first word after the @dataTable directive is the name of the dataTable, and the rest of the node title becomes the dataTable title.
 
@@ -1331,15 +1331,15 @@ This data in these charts is from the [Wikipedia article on World Population](ht
 A basic table component is included for displaying table data. The table component displays data from a dataTable node (see the [[Data]] node).
 &lt;/p&gt;
 &lt;br&gt;
-&lt;v-table 
+&lt;v-table
   fontSize="12"
   dataTable="worldpop"&gt;
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-Leo Vue is currently at version 1.9.0
+LeoVue is currently at version 1.12.0
 
-Leo Vue 1.9.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.12.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1391,7 +1391,7 @@ If you view this node in Leo, you'll see that in this example all of the data an
  &lt;/table-component&gt;</t>
 <t tx="josephorr.20171116140935.1">@language md
 
-Leo Vue includes three components for displaying tables:
+LeoVue includes three components for displaying tables:
 
 * **vtable**: A very simple table component for displaying data from @dataTable nodes.
 * **table-component**: A Vue.js component for displaying JSON data
@@ -1400,20 +1400,20 @@ Leo Vue includes three components for displaying tables:
 <t tx="josephorr.20171117082339.1">@language html
 
 &lt;p&gt;
-This example uses the &lt;b&gt;vc-table&lt;/b&gt; component to display the data from the &lt;b&gt;worldpop&lt;/b&gt; dataTable. 
+This example uses the &lt;b&gt;vc-table&lt;/b&gt; component to display the data from the &lt;b&gt;worldpop&lt;/b&gt; dataTable.
 &lt;/p&gt;
 
 &lt;vc-table dataTable="worldpop"&gt;&lt;/vc-table&gt;
 </t>
 <t tx="josephorr.20171118020637.1">@language md
 
-Leo Vue includes a component for displaying diagrams written for the [Mermaid library](https://mermaidjs.github.io/).
-Since this library is large it isn't included with Leo Vue, but the default index.html file has a link to the Mermaid CDN.
+LeoVue includes a component for displaying diagrams written for the [Mermaid library](https://mermaidjs.github.io/).
+Since this library is large it isn't included with LeoVue, but the default index.html file has a link to the Mermaid CDN.
 
-In order to use the Mermaid component, the CDN link must be in the Leo Vue index.html and the internet needs to be accessible. 
-Or, you can add the Mermaid files directly to your own installation of Leo Vue.
+In order to use the Mermaid component, the CDN link must be in the LeoVue index.html and the internet needs to be accessible.
+Or, you can add the Mermaid files directly to your own installation of LeoVue.
 
-Leo Vue can also display any content supported by modern browsers, including SVG.
+LeoVue can also display any content supported by modern browsers, including SVG.
 
  </t>
 <t tx="josephorr.20171118025629.1">@language html
@@ -1449,7 +1449,7 @@ graph TD;
     Everything--&gt;C;
     B--&gt;D;
     C--&gt;D;
-&lt;/pre&gt;    
+&lt;/pre&gt;
 
 &lt;mermaid height="300" width="250"&gt;
 
@@ -1505,7 +1505,7 @@ graph TB
     subgraph three
     c1--&gt;c2
     end
-&lt;/pre&gt; 
+&lt;/pre&gt;
 
 &lt;mermaid height="200"&gt;
 graph TB
@@ -1522,10 +1522,10 @@ graph TB
 &lt;/mermaid&gt;    </t>
 <t tx="josephorr.20171120081455.1">@language html
 &lt;p&gt;
-Since Leo Vue is a web viewer, it supports any content supported by modern browsers, including SVG.
+Since LeoVue is a web viewer, it supports any content supported by modern browsers, including SVG.
 &lt;/p&gt;
 &lt;p&gt;
-A simple SVG wrapper component is included to make SVG sizing for the Leo Vue content pane easier.
+A simple SVG wrapper component is included to make SVG sizing for the LeoVue content pane easier.
 &lt;/p&gt;
 &lt;p&gt;
 Below is an example of an SVG chart created on draw.io, exported to SVG and displayed with v-svg.
@@ -1536,9 +1536,9 @@ Below is an example of an SVG chart created on draw.io, exported to SVG and disp
 &lt;/v-svg&gt;</t>
 <t tx="josephorr.20171120183447.1">@language md
 
-# Presentations with Leo Vue
+# Presentations with LeoVue
 
-Leo Vue uses the Reveal.js library to display presentations.
+LeoVue uses the Reveal.js library to display presentations.
 
 Create content in Leo, including content with Vue Components.
 
@@ -1548,21 +1548,21 @@ Presentations can be nested.</t>
 <t tx="josephorr.20171120183454.1">
 
 </t>
-<t tx="josephorr.20171121003417.1">&lt;h3&gt;Presentations with Leo Vue&lt;/h3&gt;
+<t tx="josephorr.20171121003417.1">&lt;h3&gt;Presentations with LeoVue&lt;/h3&gt;
 
 &lt;p&gt;
 &lt;em&gt;Create content with the Leo Outlining Editor.&lt;/em&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;em&gt;Display it with Leo Vue.&lt;/em&gt;
+&lt;em&gt;Display it with LeoVue.&lt;/em&gt;
 &lt;/p&gt;</t>
-<t tx="josephorr.20171121003459.1">&lt;em&gt;Leo Vue uses the Reveal.js Library to display presentations.&lt;/em&gt;
+<t tx="josephorr.20171121003459.1">&lt;em&gt;LeoVue uses the Reveal.js Library to display presentations.&lt;/em&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;ul&gt;
   &lt;li&gt;Create intereactive slide desks using HTML&lt;/li&gt;
   &lt;li&gt;Create decks in Leo&lt;/li&gt;
-  &lt;li&gt;Display with Leo Vue&lt;/li&gt;
+  &lt;li&gt;Display with LeoVue&lt;/li&gt;
   &lt;li&gt;Content can include Vue.js components&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;
@@ -1578,9 +1578,9 @@ Presentations can be nested.</t>
             &lt;/v-svg&gt;
             </t>
 <t tx="josephorr.20171121003508.1">&lt;h4&gt;Videos&lt;/h4&gt;
-&lt;youtube 
-  :video-id="'pRnQFGskg9w'" 
-  :player-width="420" 
+&lt;youtube
+  :video-id="'pRnQFGskg9w'"
+  :player-width="420"
   :player-height="295"&gt;
 &lt;/youtube&gt;
 </t>
@@ -1622,9 +1622,9 @@ Vue.js components in Presentations
   &lt;li&gt;Custom Layouts&lt;/li&gt;
  &lt;/ul&gt;</t>
 <t tx="josephorr.20171125134128.1">&lt;h4&gt;Charts&lt;/h4&gt;
-&lt;line-chart 
-  dataTable="worldpop" 
-  :gridLines="true" 
+&lt;line-chart
+  dataTable="worldpop"
+  :gridLines="true"
   :width="700"
   :height="500"
   :responsive="false"
@@ -1663,7 +1663,7 @@ Vue.js components in Presentations
 
 #### Markdown
 
-Leo Vue supports Markdown
+LeoVue supports Markdown
 
 * use the @language md directive
 * node text will be converted to html
@@ -1803,7 +1803,7 @@ reveal.js comes with a few themes built in: &lt;br&gt;
   &lt;h2&gt;... and GIFs!&lt;/h2&gt;
 &lt;/section&gt;
 </t>
-<t tx="josephorr.20171207180149.1">&lt;img-left 
+<t tx="josephorr.20171207180149.1">&lt;img-left
   height="300"
   src="https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png"&gt;
    &lt;div slot="txt"&gt;
@@ -1909,7 +1909,7 @@ graph TB
 &lt;/mermaidp&gt; </t>
 <t tx="josephorr.20171210104012.1">@language md
 
-#### Other Leo Vue Features
+#### Other LeoVue Features
 
 * Markdown
 * Math (MathJax)
@@ -1919,7 +1919,7 @@ graph TB
 
 #### Shared Slides
 
-Because of Leo's cloned nodes, 
+Because of Leo's cloned nodes,
 slides can be shared among multiple presentations.
 
 The next slide is from the &lt;&lt; Reveal.js &gt;&gt; presentation.</t>
@@ -1944,7 +1944,7 @@ However, if you have your projects in Leo, you still might want to be able to di
 
 Using the @kanban directive, you can create a kanban board from a node. The next level node become the columns of the boards, and the lower levels are displayed in the nested viewer.
 
-The nested viewer component makes it possible to display just the selected parts of a tree, so a large subtree can be viewable in a single kanban column. 
+The nested viewer component makes it possible to display just the selected parts of a tree, so a large subtree can be viewable in a single kanban column.
 </t>
 <t tx="josephorr.20180116093050.1"></t>
 <t tx="josephorr.20180116093114.1"></t>
@@ -1981,7 +1981,7 @@ text: yes
 
 # Summary Nodes
 
-Leo Vue can summarize the contents of a subtree. Currently there are two directives that do this:
+LeoVue can summarize the contents of a subtree. Currently there are two directives that do this:
 
 **@kanban**: Create a Kanban board from the subtree.
 
@@ -1991,10 +1991,10 @@ Leo Vue can summarize the contents of a subtree. Currently there are two directi
 * @mermaidrl: right - left
 * @mermaidtd: top - down
 
-You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the Leo Vue tree and use it in a new Vue component.</t>
+You can write your own summary component by adapting the code of an existing summary component. The component code shows how to access data in the LeoVue tree and use it in a new Vue component.</t>
 <t tx="josephorr.20180123102440.1"># Mermaid
 
-Mermaid is a javascript library for creating diagrams. Leo Vue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
+Mermaid is a javascript library for creating diagrams. LeoVue can create (and then display) Mermaid markup to summarize the contents of a subtree. Since Leo subtrees can contain cloned nodes, the resulting diagrams can be can be more complex than a simple outline.
 
 Mermaid directives:
 
@@ -2012,7 +2012,7 @@ click: goto // click will go to node, otherwise displays popup
 rounded: // or 'circle' or 'square'
   fa: user // any font awesome icon name
   fill: "#85FD31,stroke:#333,stroke-width:4px;width:100px"
-```  
+```
   </t>
 <t tx="josephorr.20180123102749.1">height: 350</t>
 <t tx="josephorr.20180123102805.1"></t>
@@ -2044,10 +2044,10 @@ rounded: // or 'circle' or 'square'
 <t tx="josephorr.20180125092033.9"></t>
 <t tx="josephorr.20180125092052.1">type: lr
 height: 600
-circle: 
+circle:
   fill: "#f9f,stroke:#333,stroke-width:4px;width:100px"
   fa: user
-rounded: 
+rounded:
   fill: "#ccf,stroke:#33f,stroke-width:1px"
   fa: star
 </t>
@@ -2111,7 +2111,7 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180326061144.1">@language html
 
 &lt;p&gt;
-A Leo Vue URL looks like this:
+A LeoVue URL looks like this:
 &lt;/p&gt;
 
 &lt;a href="https://kaleguy.github.io/leovue/#/t/8/"&gt;https://kaleguy.github.io/leovue/#/t/8/&lt;/a&gt;
@@ -2122,7 +2122,7 @@ The format is: # + display type + node number.
 &lt;p&gt;
 You can use a more readable format for bookmarking or distributing URLs:
 &lt;/p&gt;
-&lt;a href="https://kaleguy.github.io/leovue/#/t/More About Leo Vue"&gt;https://kaleguy.github.io/leovue/#/t/More About Leo Vue&lt;/a&gt;
+&lt;a href="https://kaleguy.github.io/leovue/#/t/More About LeoVue"&gt;https://kaleguy.github.io/leovue/#/t/More About LeoVue&lt;/a&gt;
 &lt;p&gt;
 In other words, you can replace the node number with the node title.
 &lt;/p&gt;
@@ -2162,7 +2162,7 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 </t>
 <t tx="josephorr.20180402071948.1">@language md
 
-Using the @xml directive, you can retrieve and format XML content. The content will be formatted with the xsl template 
+Using the @xml directive, you can retrieve and format XML content. The content will be formatted with the xsl template
 that you specify.
 
 For example:
@@ -2171,19 +2171,19 @@ For example:
 @xml [New York Weather](http://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)
 ```
 
-You need to tell the directive what template to use to format the xml. So in the body of the following node in the leo file, 
-put 
+You need to tell the directive what template to use to format the xml. So in the body of the following node in the leo file,
+put
 
 ```
 template: weather
 ```
 
-By default, Leo Vue comes with just an 'rss' and 'weather' template. These templates are in lib/xsl.js. You can add more 
+By default, LeoVue comes with just an 'rss' and 'weather' template. These templates are in lib/xsl.js. You can add more
 templates to this file to format other xml sources.
 </t>
 <t tx="josephorr.20180402071950.1">template: weather</t>
 <t tx="josephorr.20180403094722.1"></t>
-<t tx="josephorr.20180407102550.1">@language md 
+<t tx="josephorr.20180407102550.1">@language md
 
 Using the @json directive, you can retrieve and format JSON data with lodash templates.
 
@@ -2193,7 +2193,7 @@ For example:
 @json [NYC Weather](https://tranquil-headland-86417.herokuapp.com/weather/10021)
 ```
 
-You need to tell the directive what template to use to format the JSON. So in the body of the following node in the leo file, 
+You need to tell the directive what template to use to format the JSON. So in the body of the following node in the leo file,
 specify the template. You can also add other data that will be added to the JSON retrieved from the data endpoint.
 
 ```
@@ -2202,14 +2202,14 @@ location: NYC Central Park
 source: OpenWeather Map
 ```
 
-By default, Leo Vue comes with just a 'weather' template for JSON data from OpenWeather Map. This template is in lib/lodash-template.js. You can add more 
+By default, LeoVue comes with just a 'weather' template for JSON data from OpenWeather Map. This template is in lib/lodash-template.js. You can add more
 templates to this file to format other JSON data sources.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
 <t tx="josephorr.20180414145445.1">template: openbooks
 comments: This is a math book. It was on the Openlibrary site.</t>
-<t tx="josephorr.20180414204138.1">@language md 
+<t tx="josephorr.20180414204138.1">@language md
 
 Using the @book directive, you can use a book title and ISBN to load book details into the content for a node.
 
@@ -2222,15 +2222,15 @@ For example:
 @book [Evolution of Civilizations](0913966576)
 ```
 
-The data for the book is taken from OpenLibary.org. If data for the book you want to display is missing, you can 
+The data for the book is taken from OpenLibary.org. If data for the book you want to display is missing, you can
 add it to the OpenLibary database.</t>
 <t tx="josephorr.20180414204148.1">comments: This is a book about Mathematics.</t>
 <t tx="josephorr.20180414205753.1">rating: 5
 comments: |
-   This beautifully written book gives the reader the tools to 
+   This beautifully written book gives the reader the tools to
    analyze history from the most important patterns.
-   
-   These patterns are illustrated by an overview of the last 
+
+   These patterns are illustrated by an overview of the last
    3000 years of history.</t>
 <t tx="josephorr.20180420165601.1"></t>
 <t tx="josephorr.20180420165609.1"></t>

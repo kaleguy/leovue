@@ -1,7 +1,7 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Dependency Status](https://david-dm.org/kaleguy/leovue.svg)](https://david-dm.org/kaleguy/leovue)
 
-# Leo Vue
+# LeoVue
 
 Viewer for Leo Files, built with Vue.js.
 
@@ -16,27 +16,27 @@ Leo is a cross platform desktop program that allows you to create outlined conte
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 
-## Leo Vue
-You can use Leo Vue to view Leo files with a browser. Leo Vue also allows you to put urls in node titles, with the content pane showing the url content.
+## LeoVue
+You can use LeoVue to view Leo files with a browser. LeoVue also allows you to put urls in node titles, with the content pane showing the url content.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue.gif)
 
 ## Outline Formats
-Leo Vue allows you to view outlines in various formats, including inline.
+LeoVue allows you to view outlines in various formats, including inline.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-trees.gif)
 
 ## Vue Components in Content
-Content in nodes can contain Vue components or csv data. Leo Vue renders the Vue components.
+Content in nodes can contain Vue components or csv data. LeoVue renders the Vue components.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
 
 ## Create Nested Presentations
-Leo Vue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
+LeoVue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
 
 ## Summary Nodes
 
-Leo Vue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
+LeoVue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
 
-Two types of summary nodes are currently implemented in Leo Vue. You can add your own summary directive by customizing the code in one of these directives.
+Two types of summary nodes are currently implemented in LeoVue. You can add your own summary directive by customizing the code in one of these directives.
 
 ### Kanban
 
@@ -51,16 +51,16 @@ Using the @kanban directive, you can create a kanban board from a node. The next
 
 ### Mermaid Flowchart
 
-[Mermaidjs](https://mermaidjs.github.io/) is a markup language for creating and viewing diagrams such as flowcharts and Gannt charts. If your index.html page has a link to the Mermaid CDN, you can use this markup in Leo Vue to create and display Mermaid diagrams.
+[Mermaidjs](https://mermaidjs.github.io/) is a markup language for creating and viewing diagrams such as flowcharts and Gannt charts. If your index.html page has a link to the Mermaid CDN, you can use this markup in LeoVue to create and display Mermaid diagrams.
 
 The @mermaid directive will create a flowchart from the nodes under the directive node. Because of Leo's clone nodes, these flowcharts can be more complex than simple trees.
 
-The node in the mermaid directive can have options for sizing the chart and adding styles and icons to the nodes. Node titles can use standard Mermaid syntax such as |line text|{node text}. Clicking on a diagram node pops up the node text or optionally navigates to the node in Leo Vue.
+The node in the mermaid directive can have options for sizing the chart and adding styles and icons to the nodes. Node titles can use standard Mermaid syntax such as |line text|{node text}. Clicking on a diagram node pops up the node text or optionally navigates to the node in LeoVue.
 
 For more information, see the
-**[Leo Vue Docs](https://kaleguy.github.io/leovue/)**.
+**[LeoVue Docs](https://kaleguy.github.io/leovue/)**.
 
-[![Mermaid diagrams with Leo Vue](https://kaleguy.github.io/leovue/screencasts/mermaid-leo.png)](https://youtu.be/vjJUkYGBIw0 "Mermaid diagrams with Leo Vue")
+[![Mermaid diagrams with LeoVue](https://kaleguy.github.io/leovue/screencasts/mermaid-leo.png)](https://youtu.be/vjJUkYGBIw0 "Mermaid diagrams with LeoVue")
 
 ## More Examples
 
@@ -72,7 +72,7 @@ For more information, see the
 
 ## Quick Start
 
-Leo Vue requires a webserver to run. Either install it on your server or run it locally with http-server:
+LeoVue requires a webserver to run. Either install it on your server or run it locally with http-server:
 
 ``` bash
 # install node.js, then:
@@ -80,9 +80,9 @@ npm install -g http-server
 
 ```
 
-For a quick start using Leo Vue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
+For a quick start using LeoVue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
 
-[Leo Vue CDN](https://www.jsdelivr.com/package/npm/leo-vue)
+[LeoVue CDN](https://www.jsdelivr.com/package/npm/leo-vue)
 
 ## Build Setup
 

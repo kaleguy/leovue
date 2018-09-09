@@ -144,11 +144,11 @@ export default {
   },
   methods: {
     toggle: function () {
-      if (this.hasRibbon) {
+      if (window.lconfig.githubRibbon) {
         const ribbon = document.getElementsByClassName('github-ribbon')
         if (ribbon && ribbon[0]) {
           ribbon[0].style.display = 'none'
-          this.hasRibbon = false
+          window.lconfig.githubRibbon = false
         }
       }
       // set vtitle if it has been set elsewhere

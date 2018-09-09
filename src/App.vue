@@ -4,7 +4,7 @@
        @dragover="dragover_handler($event);"
        @dragend="dragend_handler($event);">
     <router-view></router-view>
-    <Ribbon
+    <Ribbon v-if="hasGithubRibbon"
       v-bind="ribbonOptions"
     ></Ribbon>
   </div>
@@ -12,16 +12,20 @@
 
 <script>
   export default {
-    data () {
-      return {
-        ribbonOptions: {
-          text: 'Fork me on GitHub',
-          linkUrl: 'https://github.com/kaleguy/leovue',
-          fixed: true
+    name: 'app',
+    computed: {
+      hasGithubRibbon: function () {
+        if (window.lconfig.githubRibbon) {
+          console.log('HAS')
+          return true
         }
+        console.log('DONT HAVE')
+        return false
+      },
+      ribbonOptions: function () {
+        return window.lconfig.githubRibbon
       }
     },
-    name: 'app',
     methods: {
       // drag and drop a leo file
       dragover_handler (ev) {

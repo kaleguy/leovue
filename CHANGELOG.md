@@ -6,12 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Github ribbon widget
 - Bootstrap Vue
 - header styles
 - Export to JSON and LEO format
 - @JSON array to subnodes
 - @formio directive
+
+## [1.12.0] - 2018-09-08
+### Added
+- Github ribbon
+
+### Changed
+- Changed name from "Leo Vue" to "LeoVue"
 
 ## [1.11.0] - 2018-09-08
 ### Added
