@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  // this module is for loading Leo Vue into iframe of an existing Leo Vue app
+  // this module is for loading Leo Vue into iframe of an existing LeoVue app
   export default {
     name: 'appBase',
     data: function () {

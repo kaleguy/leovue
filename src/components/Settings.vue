@@ -1,10 +1,10 @@
 <template>
   <div class="settings">
     <div>
-      <h1 style="margin-left:0">Leo Viewer</h1>
-      <div>Version 1.9.0</div>
+      <h1 style="margin-left:0">LeoVue</h1>
+      <div>Version 1.12.2</div>
       <div class="hshim"></div>
-      <div><a href="https://github.com/kaleguy/leoviewer">Leo Viewer on Github</a></div>
+      <div><a href="https://github.com/kaleguy/leoviewer">LeoVue on Github</a></div>
       <div class="hshim"></div>
       <div v-if="staticSite">
         <div><a href="static/site/index.html">HTML Site</a></div>

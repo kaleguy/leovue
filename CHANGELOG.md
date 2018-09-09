@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Export to JSON and LEO format
 - @JSON array to subnodes
 - @formio directive
+- format @doc directive
+- fix to inline formatting (@language htmlsource, text)
 
 ## [1.12.0] - 2018-09-08
 ### Added

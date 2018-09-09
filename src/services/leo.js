@@ -35,7 +35,7 @@ const outlineInfoTemplate = `
 This outline was downloaded from <strong><%- url %>/</strong>.
 </p>
 <p>
-Outline displayed via <a href="kaleguy.github.io">Leo Vue</a>
+Outline displayed via <a href="kaleguy.github.io">LeoVue</a>
 </p>
 <% } else { %>
 <p>

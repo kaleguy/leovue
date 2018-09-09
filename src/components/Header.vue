@@ -2,7 +2,7 @@
   <div style="height:33px">
     <div class="holder">
       <div class="header" v-if="config.showHeader">
-        <span v-if="config.showAppTitle" class="app-title">Leo Vue</span>
+        <span v-if="config.showAppTitle" class="app-title">LeoVue</span>
         <span v-if="config.showAppTitle && config.docTitle">: </span>
         <span class="doc-title">{{ config.docTitle }}</span>
         <div @click="toggle" class="icon icon-button">
@@ -51,7 +51,7 @@
         </div>
         <div class="menu-label">Accordion</div>
       </div>
-      <div class="menu-footer" @click="settings">Leo Vue</div>
+      <div class="menu-footer" @click="settings">LeoVue</div>
     </div>
   </div>
 </template>
