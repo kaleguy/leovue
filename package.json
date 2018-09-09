@@ -1,6 +1,6 @@
 {
   "name": "leo-vue",
-  "version": "1.12.0",
+  "version": "1.12.2",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr <joe.orr@gmail.com>",
   "private": false,
@@ -133,5 +133,21 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaleguy/leovue.git"
+  },
+  "keywords": [
+    "JSON",
+    "forms",
+    "form.io"
+  ],
+  "author": "Joe Orr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaleguy/leovue/issues"
+  },
+  "homepage": "https://kaleguy.github.io/leovue/"
+
 }
