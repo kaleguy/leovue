@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>LeoVue</vh>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -87,6 +87,7 @@
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
+<v t="josephorr.20180909120438.1"><vh>Bootstrap Vue</vh></v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
@@ -743,7 +744,7 @@ No url specified!
 Url parameter format:
 
 url=www.mysite.com&amp;name=the outline
-
+  
 `
 function transform (xml, xslString, transformer, serializer) {
   function serverTransform(resolve, reject) {
@@ -2237,5 +2238,14 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
+<t tx="josephorr.20180909120438.1">&lt;b-alert variant="danger"    dismissible :show="showDismissibleAlert"  @dismissed="showDismissibleAlert=false" show&gt;  Dismissible Alert!&lt;/b-alert&gt;
+&lt;b-alert variant="danger"    dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
+
+&lt;b-alert show&gt;Default Alert&lt;/b-alert&gt;
+
+&lt;b-alert variant="success" show&gt;Success Alert&lt;/b-alert&gt;
+
+
+</t>
 </tnodes>
 </leo_file>
