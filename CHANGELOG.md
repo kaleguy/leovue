@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
+- fix to treeviewer scroll on windows
 
 ## [1.12.0] - 2018-09-08
 ### Added

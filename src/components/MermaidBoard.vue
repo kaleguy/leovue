@@ -3,6 +3,7 @@
   <div
     class="mm-board">
     <div class="mbutton"
+         ref="mbutton"
          @click="clickb"
          id="mbutton">
       <icon class="icon"
@@ -32,6 +33,9 @@
   import Item from './Item'
   import _ from 'lodash'
   import yaml from 'js-yaml'
+  import Popper from 'popper.js'
+  import PopOver from 'bootstrap-vue/src/utils/popover.class' // eslint-disable-line
+  import toolpopMixin from 'bootstrap-vue/src/mixins/toolpop' // eslint-disable-line
   const md = require('markdown-it')({
     html: true,
     linkify: true,
@@ -184,9 +188,30 @@
           text = '<div class="pop-small-text">No description for this node.</div>'
         }
         text = '<div class="pop-content">' + text + '</div>'
-        document.getElementById('popover.content.html').innerHTML = text
-        console.log('POP', document.getElementById('popover.content.html').innerHTML)
-        setTimeout(() => this.popover.show('#' + g.id), 10)
+
+        const ref = document.getElementById(g.id)
+        const popup = document.getElementById('popup')
+
+        const popper = new Popper(ref,popup,{ // eslint-disable-line
+          placement: 'top',
+          onCreate: function (data) {
+            console.log(data)
+          },
+          modifiers: {
+            flip: {
+              behavior: ['left', 'right', 'top', 'bottom']
+            },
+            offset: {
+              enabled: true,
+              offset: '0,10'
+            }
+          }
+        })
+
+        // document.getElementById('popover.content.html').innerHTML = text
+        // console.log('POP', document.getElementById('popover.content.html').innerHTML)
+        // setTimeout(() => this.popover.show('#' + g.id), 10)
+        // console.log('REFS', this.$refs.mbutton)
         // }
       }
     },
@@ -282,14 +307,24 @@
       const foo = this.mm // eslint-disable-line
     },
     mounted () {
-      const me = this
+      // const me = this
+      // var popper = new Popper(referenceElement, onPopper, {
+      //  placement: 'right'
+      // });
+      /*
       const popEl = document.getElementById('popover.content.html')
+      const popper = new Popper(this.$refs.mbutton, popEl, {
+        placement: 'right'
+      });
+      */
+      /*
       if (popEl) {
         popEl.parentNode.removeChild(popEl)
       }
       ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
         me.popover = element
       })
+      */
     },
     watch: {
       '$route' (to, from) {
