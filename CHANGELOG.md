@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
 
+## [1.12.4] - 2018-09-11
+### Changed
+- Patch to fix style issues
+
 ## [1.12.3] - 2018-09-11
 ### Changed
 - Patch to fix directive highlighting
