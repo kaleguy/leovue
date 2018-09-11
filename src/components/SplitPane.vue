@@ -121,7 +121,7 @@
     width: 100%;
   }
   #left-pane {
-    overflow-y: scroll;
+    overflow-y: auto;
     // padding-top: 33px;
   }
   .split-left, .split-right {
