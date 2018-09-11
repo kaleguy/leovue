@@ -204,7 +204,7 @@
   padding-left: 6px
   color: #333
   border-bottom: 1px solid #ddd
-  height: 24px
+  height: 33px
 .search
   float: right
   font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
