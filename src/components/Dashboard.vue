@@ -57,6 +57,8 @@ li {
 #main {
   height: calc(100vh - 33px);
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 a {
   color: #42b983;
