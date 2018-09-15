@@ -1,7 +1,7 @@
 
 <template>
   <div class="treeviewer">
-    <splitpane leftPaneStyle="width:360px">
+    <splitpane leftPaneStyle="width:460px">
       <ul slot="left" class="left-pane">
         <div v-for="itemdata in data">
         <item
