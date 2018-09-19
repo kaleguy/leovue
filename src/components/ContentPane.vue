@@ -260,7 +260,7 @@ export default {
     background: #fff;
     padding: 0px;
     // padding-top: 33px;
-    max-width: 620px;
+    max-width: 720px;
     width: 620px;
     min-width: 500px;
     height: calc(100vh - 33px);
