@@ -645,7 +645,7 @@ function setSiteItem (context, title, id) {
         context.commit('CONTENT_ITEM', {item: newItem})
       })
       .catch(function (error) {
-        console.log(error)
+        console.log('Unable to get MD file for processing!', error)
       })
     return
   }
