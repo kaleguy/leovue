@@ -3,7 +3,8 @@
       :nid="nid"
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
-         :class="{bold: isFolder, active: active, topItem: top}">
+         :class="{bold: isFolder, active: active, topItem: top}"
+         :style="{backgroundColor: activeBackgroundColor}">
       <div
         @click="toggle">
         <div v-bind:class="{'icon-bracket': top}"
@@ -143,6 +144,13 @@ export default {
         return this.$store.state.currentPage.id === this.model.id
       }
       return this.$store.state.currentItem.id === this.model.id
+    },
+    activeBackgroundColor: function () {
+      const bg = window.lconfig.activeBackgroundColor || '#01FF70'
+      if (this.active) {
+        return bg
+      }
+      return '#ffffff'
     }
   },
   methods: {
@@ -340,7 +348,7 @@ $contentBorderColor: #ccc
 .bold
   font-weight: bold
 .active
-  background: #81ff00
+  background: #01FF70 //#81ff00
   max-width: 772px
 .activeb
   background: #81ff00
