@@ -12,7 +12,7 @@
              padding-right:3px;"
              v-if="isFolder">
           <div class="arrow"
-               v-bind:class="{arrowdown: isOpenA}">▶</div>
+               v-bind:class="{arrowdown: isOpenA}">{{arrowIcon}}</div>
         </div>
         <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
@@ -69,6 +69,9 @@ export default {
     }
   },
   computed: {
+    arrowIcon: function () {
+      return window.lconfig.itemArrow || '▶'
+    },
     isFolder: function () {
       if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
       if (/^@outline/.test(this.model.name)) { return true } // outline
