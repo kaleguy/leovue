@@ -27,7 +27,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304174421.1"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>External Content: URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -86,8 +86,13 @@
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
 <v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
-<v t="josephorr.20171105130557.1"><vh>Tooltips</vh></v>
-<v t="josephorr.20180909120438.1"><vh>Bootstrap Vue</vh></v>
+<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
+<v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
+<v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
+<v t="josephorr.20180909144412.1"><vh>Modal</vh></v>
+<v t="josephorr.20180909143556.1"><vh>Popovers and Tooltips</vh></v>
+</v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
@@ -533,7 +538,7 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 <t tx="josephorr.20170328225654.1">@language xml
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
-    &lt;splitpane leftPaneStyle="width:360px"&gt;
+    &lt;splitpane :leftPaneStyle="leftPaneStyle"&gt;
       &lt;ul slot="left" class="left-pane"&gt;
         &lt;div v-for="itemdata in data"&gt;
         &lt;item
@@ -571,7 +576,11 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
       }
     },
     computed: {
-
+      leftPaneStyle () {
+        const w = window.lconfig.leftPaneWidth || '420px'
+        const p = window.lconfig.leftPanePadding || '0'
+        return `padding-left:${p};width:${w}`
+      },
       top () {
         // if (this.$store.state.leodata.length &gt; 1) { return false }
         if (window.lconfig.firstNodeAsTitle === false) { return false }
@@ -592,13 +601,13 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 &lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;
 &lt;style lang="sass"&gt;
 .treeviewer
-  margin-left: 0
+  margin: 0
   height: 100%
   #left-pane
     ul
-      list-style-type: none;
-      padding: 0;
-      padding-left: 10px;
+      list-style-type: none
+      padding: 0
+      padding-left: 10px
       line-height: 1.4em
       list-style-type: none
       margin-bottom: 8px
@@ -1172,16 +1181,6 @@ See the main.js file in the LeoVue source for how other components are included 
       &lt;h3&gt;Third tab content&lt;/h3&gt;
     &lt;/v-tab&gt;
 &lt;/vue-tabs&gt;</t>
-<t tx="josephorr.20171105130557.1">@language html
-
-&lt;h2&gt;Random Title&lt;/h2&gt;
-
-&lt;p&gt;
-  Add tooltips to text with &lt;span  class='tlink' v-tooltip.top-center=" 'This is the hover message'  "&gt;the Vue Tooltip Component.&lt;/span&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button v-tooltip.top-center=" 'This is the hover message'  "&gt;Hover me&lt;/button&gt;
-&lt;/p&gt;</t>
 <t tx="josephorr.20171105173610.1">@language md
 
 The Vue-Chartjs component is included by default with LeoVue.
@@ -2238,8 +2237,14 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">&lt;b-alert variant="danger"    dismissible :show="showDismissibleAlert"  @dismissed="showDismissibleAlert=false" show&gt;  Dismissible Alert!&lt;/b-alert&gt;
-&lt;b-alert variant="danger"    dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
+<t tx="josephorr.20180909120438.1">@language html
+
+The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
+
+</t>
+<t tx="josephorr.20180909142644.1">&lt;h2&gt;Alerts&lt;/h2&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
 
 &lt;b-alert show&gt;Default Alert&lt;/b-alert&gt;
 
@@ -2247,5 +2252,98 @@ comments: |
 
 
 </t>
+<t tx="josephorr.20180909142750.1">&lt;h2&gt;Badges&lt;/h2&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;h2&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h2&gt;
+  &lt;h3&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h3&gt;
+  &lt;h4&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h4&gt;
+  &lt;h5&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h5&gt;
+  &lt;h6&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h6&gt;
+&lt;/div&gt;
+
+</t>
+<t tx="josephorr.20180909143556.1">&lt;h2&gt;Popovers and Tooltips&lt;/h2&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+&lt;h3&gt;Tooltip&lt;/h3&gt;
+&lt;div&gt;
+  &lt;b-btn v-b-tooltip.hover title="Tooltip content"&gt;Hover Me&lt;/b-btn&gt;
+&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+&lt;h3&gt;Popover on Hover&lt;/h3&gt;
+&lt;div&gt;
+  &lt;b-btn 
+  v-b-popover.hover="'Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'" 
+  title="Popover Title"&gt;Hover Me&lt;/b-btn&gt;
+&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+&lt;h3&gt;Popover on Click&lt;/h3&gt;
+&lt;div&gt;
+  &lt;b-btn 
+  v-b-popover.click="'Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'" 
+  title="Popover Title"&gt;Click Me&lt;/b-btn&gt;
+&lt;/div&gt;</t>
+<t tx="josephorr.20180909144412.1">&lt;h2&gt;Modals&lt;/h2&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;b-btn v-b-modal.modal1&gt;Launch demo modal&lt;/b-btn&gt;
+
+  &lt;!-- Modal Component --&gt;
+  &lt;b-modal id="modal1" title="Bootstrap-Vue"&gt;
+    &lt;p class="my-4"&gt;Hello from modal!&lt;/p&gt;
+  &lt;/b-modal&gt;
+&lt;/div&gt;</t>
+<t tx="josephorr.20180909144649.1">&lt;h2&gt;Carousel&lt;/h2&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+&lt;b-carousel id="carousel1"
+            style="text-shadow: 1px 1px 2px #333;"
+            controls
+            indicators
+            background="#ababab"
+            :interval="4000"
+            img-width="1024"
+            img-height="480"
+&gt;
+
+      &lt;!-- Text slides with image --&gt;
+      &lt;b-carousel-slide caption="First slide"
+                        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+                        img-src="https://picsum.photos/1024/480/?image=52"
+      &gt;&lt;/b-carousel-slide&gt;
+
+      &lt;!-- Slides with custom text --&gt;
+      &lt;b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"&gt;
+        &lt;h1&gt;Hello world!&lt;/h1&gt;
+      &lt;/b-carousel-slide&gt;
+
+      &lt;!-- Slides with image only --&gt;
+      &lt;b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"&gt;
+      &lt;/b-carousel-slide&gt;
+
+      &lt;!-- Slides with img slot --&gt;
+      &lt;!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment --&gt;
+      &lt;b-carousel-slide&gt;
+        &lt;img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
+             src="https://picsum.photos/1024/480/?image=55" alt="image slot"&gt;
+      &lt;/b-carousel-slide&gt;
+
+      &lt;!-- Slide with blank fluid image to maintain slide aspect ratio --&gt;
+      &lt;b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image"&gt;
+        &lt;p&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
+          ut lacus vel interdum.
+        &lt;/p&gt;
+      &lt;/b-carousel-slide&gt;
+
+    &lt;/b-carousel&gt;
+
+  &lt;/div&gt;</t>
 </tnodes>
 </leo_file>

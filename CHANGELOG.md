@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- leftPaneWidth config option
+### WIP
 - Bootstrap Vue
 - header styles
 - Export to JSON and LEO format
@@ -13,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
+
 
 ## [1.12.4] - 2018-09-11
 ### Changed
