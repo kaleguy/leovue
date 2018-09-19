@@ -107,7 +107,7 @@ H1
 .md
   margin-left: 10px
   margin-top: 10px
-  max-width: 700px
+  max-width: 720px
   padding-right: 10px
 
 .unselectable
