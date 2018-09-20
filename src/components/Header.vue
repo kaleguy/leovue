@@ -204,6 +204,7 @@
   padding-left: 6px
   color: #333
   border-bottom: 1px solid #ddd
+  box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1)
   height: 33px
 .search
   float: right
