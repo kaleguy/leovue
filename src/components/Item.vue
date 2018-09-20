@@ -339,6 +339,7 @@ $contentBorderColor: #ccc
   width: 11px
   height: 21px
   margin-top: 2px
+  font-family: FontAwesome
 .arrowdown
   -webkit-transform: rotate(90deg)
   transform: rotate(90deg)
