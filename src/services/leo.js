@@ -301,10 +301,15 @@ function setIds (startId, d) {
       .replace(/_/g, ' ')
       .toLowerCase() // eslint-disable-line
       .replace(/%27/g, "'")
+
     vtitle = util.toTitleCase(vtitle)
     // return name
   }
-  vtitle = vtitle.replace(/^@[a-zA-Z-]+\s/, '')
+  vtitle = vtitle
+    .replace(/^@[a-zA-Z-]+\s/, '')
+    .replace(/<</g, '\u00AB')
+    .replace(/>>/g, '\u00BB')
+
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(vtitle)
   if (match) {

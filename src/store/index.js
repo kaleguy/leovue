@@ -308,6 +308,8 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
       name = `@json${template} [${n.title.text}](${url})`
       vtitle = n.title.text
     }
+    vtitle = vtitle.replace(/<</g, '\u00AB').replace(/>>/g, '\u00BB')
+    console.log(vtitle)
     const id = parentId + '-' + index
     const t = id
     context.leotext[t] = '' // TODO: does this need to be same format as other t (timestamp)
