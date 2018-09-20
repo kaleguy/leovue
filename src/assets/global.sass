@@ -448,3 +448,14 @@ H1, .h1
   margin-bottom: 15px
   font-size: 2.5em
 
+// used for removing scrollbars
+.inner-container
+  position: absolute
+  left: 0
+  overflow-x: hidden
+  overflow-y: scroll
+
+.inner-container::-webkit-scrollbar
+  display: none
+
+

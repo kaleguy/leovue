@@ -1,24 +1,32 @@
 <template>
-    <div class="panes-container">
-      <div class="left-pane unselectable"
-           :style="leftPaneStyle"
-           id="left-pane">
-         <slot name="left"></slot>
-      </div>
-      <div class="panes-separator"
-           id="panes-separator">
-           <div class="split-left"
-                @click="slide('left')"><icon name="angle-double-left"></icon>
-           </div>
-           <div class="split-right"
-                v-show="showRightButton"
-                @click="slide('right')"><icon name="angle-double-right"></icon>
-           </div>
-      </div>
-      <div id="right-pane" class="right-pane">
-        <slot name="right"></slot>
+  <div class="panes-container">
+    <div class="left-pane unselectable"
+         :style="leftPaneStyle"
+         id="left-pane">
+      <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 33px)'}">
+        <div class="inner-container">
+          <div style="height: calc(100vh - 33px)">
+            <slot name="left"></slot>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="panes-separator"
+         id="panes-separator">
+      <div class="split-left"
+           @click="slide('left')">
+        <icon name="angle-double-left"></icon>
+      </div>
+      <div class="split-right"
+           v-show="showRightButton"
+           @click="slide('right')">
+        <icon name="angle-double-right"></icon>
+      </div>
+    </div>
+    <div id="right-pane" class="right-pane">
+      <slot name="right"></slot>
+    </div>
+  </div>
 </template>
 
 <script>

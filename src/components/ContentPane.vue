@@ -262,15 +262,6 @@ export default {
     flex: auto;
     display: flex;
   }
-  .inner-container {
-    position: absolute;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  .inner-container::-webkit-scrollbar {
-    display: none;
-  }
   .right-cpane {
     flex: auto;
     background: #fff;
