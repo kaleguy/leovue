@@ -2835,7 +2835,7 @@ H1, .h1 {
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
-CODE {
+CODE.hljs {
   background: #eeeeee;
   padding: 12px;
   border-radius: 6px;
@@ -3401,7 +3401,7 @@ H1, .h1 {
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
-CODE {
+CODE.hljs {
   background: #eeeeee;
   padding: 12px;
   border-radius: 6px;
@@ -14912,4 +14912,4 @@ g.node[data-v-063d5ac6] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?a2aa9455585949a34e918be752bfbce6*/
+/*# sourceMappingURL=app.css.map?bd84acdce55cf20eee679e9a3cd9bdb1*/

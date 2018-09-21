@@ -235,6 +235,7 @@
 .app-title
   font-weight: normal
   color: #333
+  margin-left: 40px
 .doc-title
   font-weight: bold
 .menu-footer
