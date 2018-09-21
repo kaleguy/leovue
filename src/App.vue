@@ -111,7 +111,7 @@ HTML, BODY
   height: 100%
 
 .right-pane .text, .inline .text
-  margin-top: 20px
+  // margin-top: 20px
   border: none
   background-color: transparent
   resize: none

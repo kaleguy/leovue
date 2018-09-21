@@ -2648,6 +2648,7 @@ BUTTON {
 .content {
   padding-right: 2px;
   padding-top: 40px;
+  margin-top: 30px;
 }
 DIV.pop-content {
   margin: 10px;
@@ -2845,7 +2846,6 @@ HTML, BODY {
   height: 100%;
 }
 .right-pane .text, .inline .text {
-  margin-top: 20px;
   border: none;
   background-color: transparent;
   resize: none;
@@ -3204,6 +3204,7 @@ BUTTON {
 .content {
   padding-right: 2px;
   padding-top: 40px;
+  margin-top: 30px;
 }
 DIV.pop-content {
   margin: 10px;
@@ -14891,4 +14892,4 @@ g.node[data-v-063d5ac6] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?22937cb81c59e8d038313ff1fafe9020*/
+/*# sourceMappingURL=app.css.map?5f8deb73b00c62d3ab6bfad8fb9126f5*/
