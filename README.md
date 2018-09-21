@@ -3,17 +3,18 @@
 
 # LeoVue
 
-Viewer for Leo Files, built with Vue.js.
-
 Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-based websites.
 
 Content items can be text, markdown, or html with Vue components.
+
+Tree nodes can load content from websites or files, including other .leo files.
 
 ## [Live Site with Docs](https://kaleguy.github.io/leovue/)
 
 
 ## Leo
-Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
+Leo is a cross platform desktop program that allows you to create outlined content,
+like the docs.leo file from this project shown below:
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
 

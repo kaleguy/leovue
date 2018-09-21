@@ -2832,8 +2832,13 @@ H1, .h1 {
 .md h2, .md .h2 {
   margin-top: 50px;
   margin-bottom: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+}
+CODE {
+  background: #eeeeee;
+  padding: 12px;
+  border-radius: 6px;
 }
 HTML, BODY {
   margin: 0;
@@ -3393,8 +3398,13 @@ H1, .h1 {
 .md h2, .md .h2 {
   margin-top: 50px;
   margin-bottom: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+}
+CODE {
+  background: #eeeeee;
+  padding: 12px;
+  border-radius: 6px;
 }
 HTML, BODY {
   margin: 0;
@@ -14902,4 +14912,4 @@ g.node[data-v-063d5ac6] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?4dfe0391abd5c936e7e0007c1e4ac4c2*/
+/*# sourceMappingURL=app.css.map?a2aa9455585949a34e918be752bfbce6*/
