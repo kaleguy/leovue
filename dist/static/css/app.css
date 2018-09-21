@@ -2648,7 +2648,6 @@ BUTTON {
 .content {
   padding-right: 2px;
   padding-top: 40px;
-  margin-top: 30px;
 }
 DIV.pop-content {
   margin: 10px;
@@ -2829,6 +2828,12 @@ H1, .h1 {
 }
 .inner-container::-webkit-scrollbar {
   display: none;
+}
+.md h2, .md .h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 HTML, BODY {
   margin: 0;
@@ -3204,7 +3209,6 @@ BUTTON {
 .content {
   padding-right: 2px;
   padding-top: 40px;
-  margin-top: 30px;
 }
 DIV.pop-content {
   margin: 10px;
@@ -3385,6 +3389,12 @@ H1, .h1 {
 }
 .inner-container::-webkit-scrollbar {
   display: none;
+}
+.md h2, .md .h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 HTML, BODY {
   margin: 0;
@@ -14892,4 +14902,4 @@ g.node[data-v-063d5ac6] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?5f8deb73b00c62d3ab6bfad8fb9126f5*/
+/*# sourceMappingURL=app.css.map?4dfe0391abd5c936e7e0007c1e4ac4c2*/
