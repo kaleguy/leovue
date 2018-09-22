@@ -2835,9 +2835,6 @@ H1, .h1 {
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
 }
-.md IMG {
-  border: 1px solid #ccc;
-}
 CODE.hljs {
   background: #eeeeee;
   padding: 12px;
@@ -3403,9 +3400,6 @@ H1, .h1 {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
-}
-.md IMG {
-  border: 1px solid #ccc;
 }
 CODE.hljs {
   background: #eeeeee;
@@ -14927,4 +14921,4 @@ g.node[data-v-063d5ac6] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?4495ed4b73c4c659c6c0bef6021f11dd*/
+/*# sourceMappingURL=app.css.map?2bd5ba4f64fd4476f0beaf098805e1cf*/

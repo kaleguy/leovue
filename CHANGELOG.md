@@ -14,7 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
 
-## [1.12.5] - 2018-09-11
+## [1.12.6] - 2018-09-21
+### Changed
+- Fix to md IMG style
+
+## [1.12.5] - 2018-09-21
 ### Added
 - Style improvements
 - lconfig options for node caret, leftPaneWidth, contentPaneWidth, highlightColor
