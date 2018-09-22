@@ -5,9 +5,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Added
-- leftPaneWidth config option
-- item highlight color option
 ### WIP
 - Bootstrap Vue
 - header styles
@@ -17,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
 
+## [1.12.5] - 2018-09-11
+### Added
+- Style improvements
+- lconfig options for node caret, leftPaneWidth, contentPaneWidth, highlightColor
 
 ## [1.12.4] - 2018-09-11
 ### Changed

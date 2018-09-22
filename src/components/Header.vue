@@ -235,7 +235,13 @@
 .app-title
   font-weight: normal
   color: #333
-  margin-left: 40px
+  margin-left: 10px
+  border: 2px solid #fff
+  border-radius: 5px
+  margin-top: -3px
+  width: 72px
+  display: inline-block
+  text-align: center
 .doc-title
   font-weight: bold
 .menu-footer

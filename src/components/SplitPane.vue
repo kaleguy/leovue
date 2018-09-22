@@ -110,13 +110,15 @@
     transition: width .3s
   }
   .panes-separator {
-    width: 11px;
-    background: #eee;
+    width: 14px;
+    background: #fcfcfc;
     position: relative;
     cursor: col-resize;
     background-image: url('../assets/vertical.png');
     background-repeat: no-repeat;
     background-position: 50% 46%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
   }
   .panes-container,
   .panes-separator,
