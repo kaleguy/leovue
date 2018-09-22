@@ -204,7 +204,8 @@
   padding-left: 6px
   color: #333
   border-bottom: 1px solid #ddd
-  height: 35px
+  box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1)
+  height: 33px
 .search
   float: right
   font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
@@ -234,6 +235,13 @@
 .app-title
   font-weight: normal
   color: #333
+  margin-left: 10px
+  border: 2px solid #fff
+  border-radius: 5px
+  margin-top: -3px
+  width: 72px
+  display: inline-block
+  text-align: center
 .doc-title
   font-weight: bold
 .menu-footer

@@ -101,9 +101,6 @@ HTML, BODY
   height: 100%
   width: 100%
 
-H1
-  margin: 4px
-
 #app
   font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
@@ -114,7 +111,7 @@ H1
   height: 100%
 
 .right-pane .text, .inline .text
-  margin-top: 20px
+  // margin-top: 20px
   border: none
   background-color: transparent
   resize: none
@@ -130,7 +127,7 @@ H1
 .md
   margin-left: 10px
   margin-top: 10px
-  max-width: 700px
+  max-width: 720px
   padding-right: 10px
 
 .unselectable

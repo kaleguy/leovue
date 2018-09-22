@@ -1,24 +1,32 @@
 <template>
-    <div class="panes-container">
-      <div class="left-pane unselectable"
-           :style="leftPaneStyle"
-           id="left-pane">
-         <slot name="left"></slot>
-      </div>
-      <div class="panes-separator"
-           id="panes-separator">
-           <div class="split-left"
-                @click="slide('left')"><icon name="angle-double-left"></icon>
-           </div>
-           <div class="split-right"
-                v-show="showRightButton"
-                @click="slide('right')"><icon name="angle-double-right"></icon>
-           </div>
-      </div>
-      <div id="right-pane" class="right-pane">
-        <slot name="right"></slot>
+  <div class="panes-container">
+    <div class="left-pane unselectable"
+         :style="leftPaneStyle"
+         id="left-pane">
+      <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 33px)'}">
+        <div class="inner-container">
+          <div style="height: calc(100vh - 33px)">
+            <slot name="left"></slot>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="panes-separator"
+         id="panes-separator">
+      <div class="split-left"
+           @click="slide('left')">
+        <icon name="angle-double-left"></icon>
+      </div>
+      <div class="split-right"
+           v-show="showRightButton"
+           @click="slide('right')">
+        <icon name="angle-double-right"></icon>
+      </div>
+    </div>
+    <div id="right-pane" class="right-pane">
+      <slot name="right"></slot>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -61,8 +69,8 @@
       // The script below constrains the target to move horizontally between a left and a right virtual boundaries.
       // - the left limit is positioned at 10% of the screen width
       // - the right limit is positioned at 90% of the screen width
-      var leftLimit = 0
-      var rightLimit = 90
+      const leftLimit = 0
+      const rightLimit = 90
 
       paneSep.sdrag(function (el, pageX, startX, pageY, startY, fix) {
         fix.skipX = true
@@ -74,14 +82,14 @@
           pageX = window.innerWidth * rightLimit / 100
           fix.pageX = pageX
         }
-        var cur = pageX / window.innerWidth * 100
+        let cur = pageX / window.innerWidth * 100
         if (cur < 0) {
           cur = 0
         }
         if (cur > window.innerWidth) {
           cur = window.innerWidth
         }
-        var right = (100 - cur - 2)
+        let right = (100 - cur - 2)
         leftPane.style.width = cur + '%'
         rightPane.style.width = right + '%'
       }, null, 'horizontal')
@@ -102,13 +110,15 @@
     transition: width .3s
   }
   .panes-separator {
-    width: 11px;
-    background: #eee;
+    width: 14px;
+    background: #fcfcfc;
     position: relative;
     cursor: col-resize;
     background-image: url('../assets/vertical.png');
     background-repeat: no-repeat;
     background-position: 50% 46%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
   }
   .panes-container,
   .panes-separator,
@@ -121,7 +131,7 @@
     width: 100%;
   }
   #left-pane {
-    overflow-y: scroll;
+    //overflow-y: auto;
     // padding-top: 33px;
   }
   .split-left, .split-right {

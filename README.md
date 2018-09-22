@@ -3,40 +3,48 @@
 
 # LeoVue
 
-Viewer for Leo Files, built with Vue.js.
-
 Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-based websites.
 
 Content items can be text, markdown, or html with Vue components.
 
+Tree nodes can load content from websites or files, including other .leo files.
+
 ## [Live Site with Docs](https://kaleguy.github.io/leovue/)
 
+
 ## Leo
-Leo is a cross platform desktop program that allows you to create outlined content, like the docs.leo file from this project shown below:
+Leo is a cross platform desktop program that allows you to create outlined content,
+like the docs.leo file from this project shown below:
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leo.gif)
+
 
 ## LeoVue
 You can use LeoVue to view Leo files with a browser. LeoVue also allows you to put urls in node titles, with the content pane showing the url content.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue.gif)
 
+
 ## Outline Formats
 LeoVue allows you to view outlines in various formats, including inline.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-trees.gif)
+
 
 ## Vue Components in Content
 Content in nodes can contain Vue components or csv data. LeoVue renders the Vue components.
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-components.gif)
 
+
 ## Create Nested Presentations
 LeoVue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
+
 
 ## Summary Nodes
 
 LeoVue has a couple of directives that create summary nodes: nodes that summarize content found in other nodes.
 
 Two types of summary nodes are currently implemented in LeoVue. You can add your own summary directive by customizing the code in one of these directives.
+
 
 ### Kanban
 
@@ -48,6 +56,7 @@ Using the @kanban directive, you can create a kanban board from a node. The next
 
 
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-kanban.gif)
+
 
 ### Mermaid Flowchart
 
@@ -62,6 +71,7 @@ For more information, see the
 
 [![Mermaid diagrams with LeoVue](https://kaleguy.github.io/leovue/screencasts/mermaid-leo.png)](https://youtu.be/vjJUkYGBIw0 "Mermaid diagrams with LeoVue")
 
+
 ## More Examples
 
 [Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
@@ -69,6 +79,7 @@ For more information, see the
 [Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
 
 [More](https://kaleguy.github.io/leo-examples/)
+
 
 ## Quick Start
 
@@ -83,6 +94,7 @@ npm install -g http-server
 For a quick start using LeoVue from a CDN, see [this example repo](https://kaleguy.github.io/leo-examples/)
 
 [LeoVue CDN](https://www.jsdelivr.com/package/npm/leo-vue)
+
 
 ## Build Setup
 

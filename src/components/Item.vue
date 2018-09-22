@@ -3,7 +3,8 @@
       :nid="nid"
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
-         :class="{bold: isFolder, active: active, topItem: top}">
+         :class="{bold: isFolder, active: active, topItem: top}"
+         :style="{backgroundColor: activeBackgroundColor}">
       <div
         @click="toggle">
         <div v-bind:class="{'icon-bracket': top}"
@@ -12,7 +13,7 @@
              padding-right:3px;"
              v-if="isFolder">
           <div class="arrow"
-               v-bind:class="{arrowdown: isOpenA}">▶</div>
+               v-bind:class="{arrowdown: isOpenA}">{{arrowIcon}}</div>
         </div>
         <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
@@ -69,6 +70,9 @@ export default {
     }
   },
   computed: {
+    arrowIcon: function () {
+      return window.lconfig.itemArrow || '▶'
+    },
     isFolder: function () {
       if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
       if (/^@outline/.test(this.model.name)) { return true } // outline
@@ -140,6 +144,13 @@ export default {
         return this.$store.state.currentPage.id === this.model.id
       }
       return this.$store.state.currentItem.id === this.model.id
+    },
+    activeBackgroundColor: function () {
+      const bg = window.lconfig.activeBackgroundColor || '#01FF70'
+      if (this.active) {
+        return bg
+      }
+      return '#ffffff'
     }
   },
   methods: {
@@ -328,6 +339,7 @@ $contentBorderColor: #ccc
   width: 11px
   height: 21px
   margin-top: 2px
+  font-family: FontAwesome
 .arrowdown
   -webkit-transform: rotate(90deg)
   transform: rotate(90deg)
@@ -337,7 +349,7 @@ $contentBorderColor: #ccc
 .bold
   font-weight: bold
 .active
-  background: #81ff00
+  background: #01FF70 //#81ff00
   max-width: 772px
 .activeb
   background: #81ff00

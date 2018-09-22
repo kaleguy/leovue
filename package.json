@@ -1,6 +1,6 @@
 {
   "name": "leo-vue",
-  "version": "1.12.2",
+  "version": "1.12.6",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr",
   "private": false,
@@ -18,8 +18,8 @@
     "axios": "^0.18.0",
     "bootstrap-vue": "^2.0.0-rc.11",
     "chart.js": "^2.7.1",
+    "css-loader": "^1.0.0",
     "component-tip": "^3.0.3",
-    "css-loader": "^0.28.11",
     "d3": "^5.0.0",
     "dataframe-js": "^1.2.4",
     "fork-me-on-github-vue": "^1.0.7",

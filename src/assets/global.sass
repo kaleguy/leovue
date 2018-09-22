@@ -7,9 +7,8 @@
 
 .directive
   font-weight: bold
+
 /* title */
-H1
-  margin: 0
 .cls-1
   font-size: 122px
   stroke: #000
@@ -292,7 +291,7 @@ BUTTON
 .content
   padding-right: 2px
   padding-top: 40px
-
+  //margin-top: 30px
 
 // used by onsen popover
 DIV.pop-content
@@ -445,6 +444,17 @@ DIV.content *
   max-width: 100%
   max-height: 100%
 
+H1, .h1
+  margin-top: 15px
+  margin-bottom: 15px
+  font-size: 2.5em
+
+// used for removing scrollbars
+.inner-container
+  position: absolute
+  left: 0
+  overflow-x: hidden
+  overflow-y: scroll
 
 // popper
 .link-anchor
@@ -586,3 +596,18 @@ p.bold
   margin-left: 0
   margin-right: 0
 
+.inner-container::-webkit-scrollbar
+  display: none
+
+// Markdown files
+.md
+  h2, .h2
+    margin-top: 50px
+    margin-bottom: 15px
+    padding-bottom: 5px
+    border-bottom: 1px solid #ccc
+
+CODE.hljs
+  background: #eeeeee
+  padding: 12px
+  border-radius: 6px

@@ -308,6 +308,8 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
       name = `@json${template} [${n.title.text}](${url})`
       vtitle = n.title.text
     }
+    vtitle = vtitle.replace(/<</g, '\u00AB').replace(/>>/g, '\u00BB')
+    console.log(vtitle)
     const id = parentId + '-' + index
     const t = id
     context.leotext[t] = '' // TODO: does this need to be same format as other t (timestamp)
@@ -645,7 +647,7 @@ function setSiteItem (context, title, id) {
         context.commit('CONTENT_ITEM', {item: newItem})
       })
       .catch(function (error) {
-        console.log(error)
+        console.log('Unable to get MD file for processing!', error)
       })
     return
   }

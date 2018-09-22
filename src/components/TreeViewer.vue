@@ -1,8 +1,8 @@
 
 <template>
   <div class="treeviewer">
-    <splitpane leftPaneStyle="width:360px">
-      <ul slot="left" class="left-pane">
+    <splitpane :leftPaneStyle="leftPaneStyle">
+      <ul slot="left" class="left-pane" :style="ulStyle">
         <div v-for="itemdata in data">
         <item
           class="item"
@@ -38,7 +38,14 @@
       }
     },
     computed: {
-
+      ulStyle () {
+        const p = window.lconfig.leftPanePadding || '0'
+        return `padding-left:${p}`
+      },
+      leftPaneStyle () {
+        const w = window.lconfig.leftPaneWidth || '420px'
+        return `padding-top: 15px; width:${w}`
+      },
       top () {
         // if (this.$store.state.leodata.length > 1) { return false }
         if (window.lconfig.firstNodeAsTitle === false) { return false }
@@ -58,13 +65,13 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass">
 .treeviewer
-  margin-left: 0
+  margin: 0
   height: 100%
   #left-pane
     ul
-      list-style-type: none;
-      padding: 0;
-      padding-left: 10px;
+      list-style-type: none
+      padding: 0
+      padding-left: 10px
       line-height: 1.4em
       list-style-type: none
       margin-bottom: 8px

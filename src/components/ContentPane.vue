@@ -11,8 +11,12 @@
                 name="chevron-left"></icon>
         </div>
       </div>
-      <div class="right-cpane">
-        <component :is="dynComponent" v-bind="$props"/>
+      <div :style="{position:'relative', overflow: 'hidden', width: cpWidth, height: 'calc(100vh - 33px)'}">
+        <div class="inner-container">
+          <div class="right-cpane" :style="{width: cpWidth}">
+            <component :is="dynComponent" v-bind="$props"/>
+          </div>
+        </div>
       </div>
       <div id="rhandle"
            class="handle">
@@ -137,6 +141,9 @@ export default {
     }
   },
   computed: {
+    cpWidth () {
+      return window.lconfig.contentPaneWidth || '700px'
+    },
     data () {
       return this.$store.state.leodata
     },
@@ -260,11 +267,11 @@ export default {
     background: #fff;
     padding: 0px;
     // padding-top: 33px;
-    max-width: 620px;
-    width: 620px;
+    //max-width: 720px;
+    //width: 700px;
     min-width: 500px;
+    //overflow: auto;
     height: calc(100vh - 33px);
-    overflow: auto;
   }
   p {
     line-height:1.3em;
