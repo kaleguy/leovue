@@ -10,14 +10,14 @@
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20170228222411.2" a="E"><vh>LeoVue</vh>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -27,14 +27,14 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
-<v t="josephorr.20170304174421.1"><vh>Text</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
 <v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
 </v>
 <v t="josephorr.20170304173237.1"><vh>HTML</vh>
 <v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
 </v>
-<v t="josephorr.20170304113011.1"><vh>Code</vh>
+<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
@@ -81,7 +81,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -539,7 +539,7 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 &lt;template&gt;
   &lt;div class="treeviewer"&gt;
     &lt;splitpane :leftPaneStyle="leftPaneStyle"&gt;
-      &lt;ul slot="left" class="left-pane"&gt;
+      &lt;ul slot="left" class="left-pane" :style="ulStyle"&gt;
         &lt;div v-for="itemdata in data"&gt;
         &lt;item
           class="item"
@@ -576,10 +576,13 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
       }
     },
     computed: {
+      ulStyle () {
+        const p = window.lconfig.leftPanePadding || '0'
+        return `padding-left:${p}`
+      },
       leftPaneStyle () {
         const w = window.lconfig.leftPaneWidth || '420px'
-        const p = window.lconfig.leftPanePadding || '0'
-        return `padding-left:${p};width:${w}`
+        return `padding-top: 15px; width:${w}`
       },
       top () {
         // if (this.$store.state.leodata.length &gt; 1) { return false }
@@ -996,10 +999,15 @@ function setIds (startId, d) {
       .replace(/_/g, ' ')
       .toLowerCase() // eslint-disable-line
       .replace(/%27/g, "'")
+
     vtitle = util.toTitleCase(vtitle)
     // return name
   }
-  vtitle = vtitle.replace(/^@[a-zA-Z-]+\s/, '')
+  vtitle = vtitle
+    .replace(/^@[a-zA-Z-]+\s/, '')
+    .replace(/&lt;&lt;/g, '\u00AB')
+    .replace(/&gt;&gt;/g, '\u00BB')
+
   const re = /^\[(.*?)\]\((.*?)\)$/
   const match = re.exec(vtitle)
   if (match) {
@@ -1337,7 +1345,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.12.0
+LeoVue is currently at version 1.12.5
 
 LeoVue 1.12.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
