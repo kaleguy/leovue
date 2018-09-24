@@ -6,14 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### WIP
-- Bootstrap Vue
 - header styles
 - Export to JSON and LEO format
 - @JSON array to subnodes
 - @formio directive
 - format @doc directive
 - fix to inline formatting (@language htmlsource, text)
-- fix to treeviewer scroll on windows
+- @cover directive
+
+## [1.13.0] - 2018-09-23
+### Added
+- Added Bootstrap Vue
+
+### Changed
+- removed scrollbars
+- fix to onsen popup (used in mermaid charts)
+- Leaflet component fix
+- main doc.leo file updates
 
 ## [1.12.6] - 2018-09-21
 ### Changed

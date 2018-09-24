@@ -3,7 +3,7 @@
       :nid="nid"
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
-         :class="{bold: isFolder, active: active, topItem: top}"
+         :class="{bold: isFolder, iactive: active, topItem: top}"
          :style="{backgroundColor: activeBackgroundColor}">
       <div
         @click="toggle">
@@ -348,7 +348,7 @@ $contentBorderColor: #ccc
   width: 100%
 .bold
   font-weight: bold
-.active
+.iactive
   background: #01FF70 //#81ff00
   max-width: 772px
 .activeb

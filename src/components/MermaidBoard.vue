@@ -33,9 +33,10 @@
   import Item from './Item'
   import _ from 'lodash'
   import yaml from 'js-yaml'
-  import Popper from 'popper.js'
+  import Popper from 'popper.js' // eslint-disable-line
   import PopOver from 'bootstrap-vue/src/utils/popover.class' // eslint-disable-line
   import toolpopMixin from 'bootstrap-vue/src/mixins/toolpop' // eslint-disable-line
+  import Tooltip from 'tooltip.js' // eslint-disable-line
   const md = require('markdown-it')({
     html: true,
     linkify: true,
@@ -190,28 +191,18 @@
         text = '<div class="pop-content">' + text + '</div>'
 
         const ref = document.getElementById(g.id)
-        const popup = document.getElementById('popup')
-
-        const popper = new Popper(ref,popup,{ // eslint-disable-line
-          placement: 'top',
-          onCreate: function (data) {
-            console.log(data)
-          },
-          modifiers: {
-            flip: {
-              behavior: ['left', 'right', 'top', 'bottom']
-            },
-            offset: {
-              enabled: true,
-              offset: '0,10'
-            }
-          }
-        })
-
-        // document.getElementById('popover.content.html').innerHTML = text
-        // console.log('POP', document.getElementById('popover.content.html').innerHTML)
-        // setTimeout(() => this.popover.show('#' + g.id), 10)
-        // console.log('REFS', this.$refs.mbutton)
+        // const popup = document.getElementById('popup')
+        const pop = new Tooltip(ref,
+          {
+            placement: 'top',
+            title: 'bar',
+            content: 'foo'
+          })
+        pop.show()
+        document.getElementById('popover.content.html').innerHTML = text
+        console.log('POP', document.getElementById('popover.content.html').innerHTML)
+        setTimeout(() => this.popover.show('#' + g.id), 10)
+        console.log('REFS', this.$refs.mbutton)
         // }
       }
     },
@@ -307,24 +298,10 @@
       const foo = this.mm // eslint-disable-line
     },
     mounted () {
-      // const me = this
-      // var popper = new Popper(referenceElement, onPopper, {
-      //  placement: 'right'
-      // });
-      /*
-      const popEl = document.getElementById('popover.content.html')
-      const popper = new Popper(this.$refs.mbutton, popEl, {
-        placement: 'right'
-      });
-      */
-      /*
-      if (popEl) {
-        popEl.parentNode.removeChild(popEl)
-      }
+      const me = this
       ons.createPopover('popover.html').then(function (element) { // eslint-disable-line
         me.popover = element
       })
-      */
     },
     watch: {
       '$route' (to, from) {
