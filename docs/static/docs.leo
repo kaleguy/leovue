@@ -27,25 +27,14 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
-<v t="josephorr.20170304174421.1" a="E"><vh>Text</vh>
-<v t="josephorr.20170304174436.1"><vh>A Note About Something</vh></v>
-</v>
-<v t="josephorr.20170304173237.1"><vh>HTML</vh>
-<v t="josephorr.20170304174041.1"><vh>Text and Photo</vh></v>
-</v>
-<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170304103722.1"><vh>Markdown</vh>
-<v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
-<v t="josephorr.20170304103726.1"><vh>A Markdown Section</vh></v>
-<v t="josephorr.20170511084727.1"><vh>[Markdown from a file](example.md)</vh></v>
-</v>
 <v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
-<v t="josephorr.20170304175209.1"></v>
+<v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
 </v>
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
@@ -81,17 +70,17 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20171105105136.1"><vh>Vue Tabs</vh></v>
 <v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
 <v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
 <v t="josephorr.20180909144412.1"><vh>Modal</vh></v>
 <v t="josephorr.20180909143556.1"><vh>Popovers and Tooltips</vh></v>
+<v t="josephorr.20180923194344.1"><vh>Tabs</vh></v>
 </v>
 <v t="josephorr.20171107100246.1"><vh>Math</vh>
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
@@ -373,27 +362,6 @@ text, html, markdown or code. Content nodes can also point to other documents or
 LeoVue was created using Vue.js, so you can add Vue.js components to your outline's content.
 &lt;/p&gt;
  </t>
-<t tx="josephorr.20170304103722.1">Content items in Leo outlines can be Markdown.
-
-To mark content as Markdown, put the following in the first line of the node content:
-
-@language md
-
-When Leo Viewer encounters a node with @language md as the first line, it displays the (html) output, not the md source.
-</t>
-<t tx="josephorr.20170304103726.1">@language md
-
-# A topic
-
-This is fascinating.
-
-## Another Topic
-
-This one is less so.
-
-### Fine Print
-
-We would rather you not read this section.</t>
 <t tx="josephorr.20170304113011.1">@language md
 
 Content items in Leo outlines can be code.
@@ -452,36 +420,6 @@ c.connect(
   user : 'username@domain.com'
   password : 'password'
 )</t>
-<t tx="josephorr.20170304173237.1">@language md
-
-Content items in Leo outlines can be HTML.
-
-To mark content as HTML, put the following in the first line of the node content:
-
-&lt;span class='directive'&gt;@language html&lt;/span&gt;
-
-When Leo Viewer encounters a node with @language html as the first line, it displays the html output, not the html source.
-</t>
-<t tx="josephorr.20170304174041.1">@language html
-
-&lt;h1&gt;Bee And Flower&lt;/h1&gt;
-
-An example of HTML content.
-
-&lt;div&gt;
-  &lt;p&gt;
-    &lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/5e/200x133px-Biene_auf_lavendel.png'&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
- </t>
-<t tx="josephorr.20170304174421.1">@language text
-
-Content items in Leo outlines can be plain text.</t>
-<t tx="josephorr.20170304174436.1">This is just some regular text.
-
-And now for some hipster ipsum:
-
-Prism selvage farm-to-table, chillwave hexagon echo park tacos wayfarers shabby chic. Man braid chartreuse offal meggings. Messenger bag fap shabby chic blue bottle, typewriter la croix man braid chicharrones fashion axe mlkshk mustache narwhal. Single-origin coffee banh mi put a bird on it, lomo cred mumblecore schlitz flexitarian freegan retro. Edison bulb keytar single-origin coffee, direct trade plaid pug everyday carry ethical enamel pin. Viral neutra direct trade ramps semiotics intelligentsia, organic celiac food truck vice. Echo park PBR&amp;B iPhone trust fund dreamcatcher.</t>
 <t tx="josephorr.20170304175209.1">@language md
 ## Leo Does Markdown
 
@@ -495,11 +433,20 @@ The nodes in this branch are clones of nodes appearing elsewhere in this documen
 <t tx="josephorr.20170326174500.1">@language text
 
 This section contains a brief introduction to some of the features of Leo.</t>
-<t tx="josephorr.20170326174511.1">@language html
+<t tx="josephorr.20170326174511.1">@language md
 
-&lt;h2&gt;Content Creation with Leo&lt;/h2&gt;
+## Content Creation with Leo
 
-Using Leo, you can create an outline tree with various types of content. This subsection contains some simple examples of different types of content created in a Leo file and displayed with LeoVue.</t>
+Using Leo, you can create content in your outline tree with either plain text, html or markdown.
+
+You can also create other types of content nodes:
+* **Code content nodes** with syntax highlighting
+* **Cloned nodes** (content items that appear in more than one place in your outline).
+* **Subtrees** - nodes that load other Leo outlines
+* **File Nodes** - nodes that load content from files
+* **Url Nodes** - nodes that load content from a url
+
+See the nodes below for examples of the above items.</t>
 <t tx="josephorr.20170327233126.1">This section contains a guide to using the LeoVue program to view files created in Leo.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
@@ -1089,7 +1036,6 @@ The subtree isn't loaded until you click on the node, so outlines can contain ma
 Note that search will not work on nodes that have not been loaded yet.
 </t>
 <t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
-<t tx="josephorr.20170511084727.1"></t>
 <t tx="josephorr.20170602132642.1">@language html
 
 &lt;p&gt;
@@ -1130,9 +1076,9 @@ You can also run LeoVue from github pages. Fork the repository on Github,
 then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
 be viewable at username.github.io/myforkname/.</t>
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
-  &lt;v-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
-    &lt;v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/v-tilelayer&gt;
-  &lt;/v-map&gt;
+  &lt;l-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
+    &lt;l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/l-tilelayer&gt;
+  &lt;/l-map&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20171104211357.1">@language md
 
@@ -1166,29 +1112,6 @@ See the main.js file in the LeoVue source for how other components are included 
   backData=" You can easily create graph cards like this one using the Vue Info Card component. Open the docs.leo file in the Leo Editor to see the source for this card. "/&gt;
 
   </t>
-<t tx="josephorr.20171105105136.1">@language html
-
-&lt;vue-tabs&gt;
-    &lt;v-tab title="First tab"&gt;
-    &lt;br&gt;
-    &lt;p&gt;
-      Use the Vue-Tabs component to add tabs to a content item.
-    &lt;/p&gt;
-    &lt;p&gt;
-      Open the docs.leo file in Leo to see the source for this tab.
-    &lt;/p&gt;
-    &lt;p&gt;
-      A content item using the tabs directive should use the html directive.
-    &lt;/p&gt;
-    &lt;/v-tab&gt;
-    &lt;v-tab title="Second tab"&gt;
-      &lt;h2&gt;Second tab content&lt;/h2&gt;
-    &lt;/v-tab&gt;
-    &lt;v-tab title="Third tab"&gt;
-
-      &lt;h3&gt;Third tab content&lt;/h3&gt;
-    &lt;/v-tab&gt;
-&lt;/vue-tabs&gt;</t>
 <t tx="josephorr.20171105173610.1">@language md
 
 The Vue-Chartjs component is included by default with LeoVue.
@@ -1259,6 +1182,8 @@ A bar chart with some random data contained in the [[set1]] @dataTable node.
 
 &lt;bar-chart :dataSet="'set2'"/&gt;</t>
 <t tx="josephorr.20171107100246.1">@language md
+
+## MathJax
 
 LeoVue has a component for the MathJax library that allows display of mathmetical symbols and formulas.
 
@@ -2247,7 +2172,11 @@ comments: |
 <t tx="josephorr.20180420165801.1"></t>
 <t tx="josephorr.20180909120438.1">@language html
 
+&lt;h2&gt;Bootstrap Vue Components&lt;/h2&gt;
+
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
+
+The child nodes below contain some examples of Bootstrap Vue components in use.
 
 </t>
 <t tx="josephorr.20180909142644.1">&lt;h2&gt;Alerts&lt;/h2&gt;
@@ -2353,5 +2282,63 @@ The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue c
     &lt;/b-carousel&gt;
 
   &lt;/div&gt;</t>
+<t tx="josephorr.20180923194344.1">&lt;h2&gt;Tabs&lt;/h2&gt;
+
+&lt;h4&gt;Plain Tabs&lt;/h4&gt;
+&lt;b-tabs&gt;
+  &lt;b-tab title="first" active&gt;
+    &lt;br&gt;I'm the first fading tab
+  &lt;/b-tab&gt;
+  &lt;b-tab title="second" &gt;
+    &lt;br&gt;I'm the second tab content
+  &lt;/b-tab&gt;
+  &lt;b-tab title="disabled" disabled&gt;
+    &lt;br&gt;Disabled tab!
+  &lt;/b-tab&gt;
+&lt;/b-tabs&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;h4&gt;Card tabs&lt;/h4&gt;
+&lt;b-card no-body&gt;
+  &lt;b-tabs card&gt;
+    &lt;b-tab title="Tab 1" active&gt;
+      Tab Contents 1
+    &lt;/b-tab&gt;
+    &lt;b-tab title="Tab 2"&gt;
+      Tab Contents 2
+    &lt;/b-tab&gt;
+  &lt;/b-tabs&gt;
+&lt;/b-card&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;h4&gt;Card tabs&lt;/h4&gt;
+
+&lt;b-card no-body&gt;
+  &lt;b-tabs card&gt;
+    &lt;b-tab no-body title="Picture 1" active&gt;
+      &lt;b-card-img bottom src="https://picsum.photos/600/200/?image=21" /&gt;
+      &lt;b-card-footer&gt;Picture 1 footer&lt;/b-card-footer&gt;
+    &lt;/b-tab&gt;
+    &lt;b-tab no-body title="Picture 2"&gt;
+      &lt;b-card-img bottom src="https://picsum.photos/600/200/?image=25" /&gt;
+      &lt;b-card-footer&gt;Picture 2 footer&lt;/b-card-footer&gt;
+    &lt;/b-tab&gt;
+    &lt;b-tab no-body title="Picture 3"&gt;
+      &lt;b-card-img bottom src="https://picsum.photos/600/200/?image=26" /&gt;
+      &lt;b-card-footer&gt;Picture 3 footer&lt;/b-card-footer&gt;
+    &lt;/b-tab&gt;
+    &lt;b-tab title="Text"&gt;
+      &lt;h5&gt;This tab does not have the &lt;code&gt;no-body&lt;/code&gt; prop set&lt;/h5&gt;
+      Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla
+      tempor. Laborum consequat non elit enim exercitation cillum aliqua consequat
+      id aliqua. Esse ex consectetur mollit voluptate est in duis laboris ad sit
+      ipsum anim Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua quis
+      ullamco deserunt sit enim elit aliqua esse irure.
+    &lt;/b-tab&gt;
+  &lt;/b-tabs&gt;
+&lt;/b-card&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;</t>
 </tnodes>
 </leo_file>
