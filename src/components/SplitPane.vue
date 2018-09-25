@@ -3,8 +3,8 @@
     <div class="left-pane unselectable"
          :style="leftPaneStyle"
          id="left-pane">
-      <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 33px)'}">
-        <div class="inner-container">
+      <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 53px)'}">
+        <div class="inner-container" style="padding-top:20px">
           <div style="height: calc(100vh - 33px)">
             <slot name="left"></slot>
           </div>

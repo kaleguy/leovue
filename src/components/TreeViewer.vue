@@ -44,7 +44,7 @@
       },
       leftPaneStyle () {
         const w = window.lconfig.leftPaneWidth || '420px'
-        return `padding-top: 15px; width:${w}`
+        return `width:${w}`
       },
       top () {
         // if (this.$store.state.leodata.length > 1) { return false }
