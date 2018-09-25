@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix to inline formatting (@language htmlsource, text)
 - @cover directive
 
+## [1.13.2] - 2018-09-25
+### Changed
+- Treeview scroll fix
+
 ## [1.13.1] - 2018-09-24
 ### Changed
 - Main screen scroll fix
