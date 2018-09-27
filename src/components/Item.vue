@@ -4,13 +4,10 @@
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
          :class="{bold: isFolder, iactive: active, topItem: top}"
-         :style="{backgroundColor: activeBackgroundColor}">
+         >
       <div
         @click="toggle">
-        <div v-bind:class="{'icon-bracket': top}"
-             style="display:inline-block;
-             padding-left:3px;
-             padding-right:3px;"
+        <div v-bind:class="{'icon-bracket': top}" class="icon-b"
              v-if="isFolder">
           <div class="arrow"
                v-bind:class="{arrowdown: isOpenA}">{{arrowIcon}}</div>
@@ -315,12 +312,19 @@ $contentBorderColor: #ccc
   SPAN
     font-size: 30px
     line-height: 1.5
+  .icon-bracket
+    display: none
 .topItemIcon
   vertical-align: top
   padding-left: 20px
   margin-right: -10px
-.icon-bracket
+  // display: none
+.icon-b
   display: inline-block
+  padding-left: 3px
+  padding-right: 3px
+.icon-bracket
+  display: none
   height: 26px
   vertical-align: middle
   padding-bottom: 8px
@@ -351,6 +355,8 @@ $contentBorderColor: #ccc
 .iactive
   background: #01FF70 //#81ff00
   max-width: 772px
+.iactive.topItem
+    background: #fff
 .activeb
   background: #81ff00
   font-weight: bold

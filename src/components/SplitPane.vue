@@ -5,7 +5,7 @@
          id="left-pane">
       <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 33px)'}">
         <div class="inner-container">
-          <div style="height: calc(100vh - 33px);padding-top:40px">
+          <div style="height: calc(100vh - 33px);padding-top:30px">
             <slot name="left"></slot>
           </div>
         </div>

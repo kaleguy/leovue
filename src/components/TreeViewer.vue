@@ -3,11 +3,11 @@
   <div class="treeviewer">
     <splitpane :leftPaneStyle="leftPaneStyle">
       <ul slot="left" class="left-pane" :style="ulStyle">
-        <div v-for="itemdata in data">
+        <div v-for="(itemdata, index) in data">
         <item
           class="item"
           :model="itemdata"
-          :top="top"
+          :top="getTop(index)"
           :textItems="text"
           :targetEl="target.el">
         </item>
@@ -35,6 +35,13 @@
     data: function () {
       return {
         target: target
+      }
+    },
+    methods: {
+      getTop (index) {
+        if (!index) {
+          return this.top
+        }
       }
     },
     computed: {
