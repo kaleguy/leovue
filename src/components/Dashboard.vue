@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard" id="dashboard">
     <appheader/>
     <div id="main" :class="{'header-space': config.showHeader}">
       <router-view :id="id"></router-view>

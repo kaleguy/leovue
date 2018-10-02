@@ -149,7 +149,7 @@ function getLeoJSON (filename, id) {
   if (filename.indexOf('#') > 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
-  var p = new Promise((resolve, reject) => {
+  const p = new Promise((resolve, reject) => {
     if (!filename.match(/static/) && isRelative(filename)) {
       // filename = 'static/' + filename
     }

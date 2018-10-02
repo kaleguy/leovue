@@ -2,7 +2,7 @@
   <div class="accordionviewer">
     <div class="panes-container">
       <div class="center-pane" id="center-pane">
-        <ul>
+        <ul :style="ulStyle">
           <div v-for="itemdata in data">
           <item
             class="item"
@@ -52,6 +52,10 @@
       },
       text () {
         return this.$store.state.leotext
+      },
+      ulStyle () {
+        const p = window.lconfig.leftPanePadding || '0'
+        return `padding-left:${p}`
       }
     },
     mounted: function () {
@@ -61,7 +65,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
   .accordionviewer{
-    height: 100%
+    height: 100%;
+    margin-top: 40px;
   }
   .accordionviewer UL {
     list-style-type: none;

@@ -1,7 +1,7 @@
 <template>
   <div class="nestedviewer">
-    <splitpane leftPaneStyle="width:360px">
-      <ul slot="left">
+    <splitpane :leftPaneStyle="leftPaneStyle">
+      <ul slot="left" :style="ulStyle">
         <div v-for="itemdata in data">
         <item
           class="item"
@@ -42,6 +42,14 @@
       },
       text () {
         return this.$store.state.leotext
+      },
+      ulStyle () {
+        let p = window.lconfig.leftPanePadding || '0'
+        return `padding-left:${p}`
+      },
+      leftPaneStyle () {
+        const w = window.lconfig.leftPaneWidth || '420px'
+        return `width:${w}`
       }
     }
 
@@ -68,6 +76,7 @@
     white-space: nowrap
     margin-bottom: 4px
     margin-top: 4px
+    min-width: 200px
   li > div
     padding-left: 0
   .leaf-button

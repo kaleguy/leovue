@@ -9,6 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
+<v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
 <v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
@@ -17,7 +18,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -27,7 +28,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -39,7 +40,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -47,12 +48,12 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
@@ -60,11 +61,11 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
-<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -74,7 +75,7 @@
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1"><vh>Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
 <v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
@@ -129,7 +130,7 @@
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
 <v t="josephorr.20171121003459.1"><vh>Reveal</vh>
-<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
 <v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
 <v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
@@ -164,28 +165,28 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
+<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
-<v t="josephorr.20180123094605.1" a="E"><vh>@mermaidtd (Simple Example Top Down)</vh>
-<v t="josephorr.20180123100140.1" a="E"><vh>{A}</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
+<v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
+<v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
-<v t="josephorr.20180123100145.1" a="E"><vh>((B))</vh>
-<v t="josephorr.20180123100150.1" a="E"><vh>C</vh>
-<v t="josephorr.20180123100152.1" a="E"><vh>D</vh>
+<v t="josephorr.20180123100145.1"><vh>((B))</vh>
+<v t="josephorr.20180123100150.1"><vh>C</vh>
+<v t="josephorr.20180123100152.1"><vh>D</vh>
 <v t="josephorr.20180123100154.1"><vh>E</vh></v>
 <v t="josephorr.20180123100155.1"><vh>F</vh></v>
 <v t="josephorr.20180123100157.1"></v>
 </v>
 </v>
-<v t="josephorr.20180123100152.1" a="E"></v>
+<v t="josephorr.20180123100152.1"></v>
 </v>
 </v>
 </v>
 <v t="josephorr.20180123102749.1"><vh>@mermaidlr People Chart</vh>
 <v t="josephorr.20180123102805.1"><vh>Friends</vh>
-<v t="josephorr.20180123102842.1" a="E"><vh>Ted</vh>
-<v t="josephorr.20180124190020.1" a="E"><vh>Friends</vh>
+<v t="josephorr.20180123102842.1"><vh>Ted</vh>
+<v t="josephorr.20180124190020.1"><vh>Friends</vh>
 <v t="josephorr.20180124190030.1"><vh>Mr Z</vh></v>
 <v t="josephorr.20180124190042.1"><vh>Barb</vh></v>
 <v t="josephorr.20180123102923.1"><vh>Bubba</vh></v>
@@ -206,8 +207,8 @@
 </v>
 <v t="josephorr.20180125092033.1"><vh>@mermaidrl People Chart</vh>
 <v t="josephorr.20180125092033.2"><vh>Friends</vh>
-<v t="josephorr.20180125092033.3" a="E"><vh>Ted</vh>
-<v t="josephorr.20180125092033.4" a="E"><vh>Friends</vh>
+<v t="josephorr.20180125092033.3"><vh>Ted</vh>
+<v t="josephorr.20180125092033.4"><vh>Friends</vh>
 <v t="josephorr.20180125092033.5"><vh>Mr Z</vh></v>
 <v t="josephorr.20180125092033.6"><vh>Barb</vh></v>
 <v t="josephorr.20180125092033.16"><vh>Bubba</vh></v>
@@ -226,69 +227,57 @@
 <v t="josephorr.20180125092033.16"></v>
 </v>
 </v>
-<v t="josephorr.20180125092052.1"><vh>@mermaidlr App Planning</vh>
-<v t="josephorr.20180125092129.1"><vh>Server</vh>
+<v t="josephorr.20180125092052.1" a="E"><vh>@mermaidlr App Planning</vh>
+<v t="josephorr.20180125092129.1" a="E"><vh>Server</vh>
 <v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
 <v t="josephorr.20180125092343.1"><vh>((Brent  ))</vh></v>
 </v>
 </v>
 <v t="josephorr.20180125092134.1"><vh>Devops</vh>
 <v t="josephorr.20180125092159.1"><vh>AWS</vh></v>
-<v t="josephorr.20180125092210.1" a="E"><vh>Ansible</vh>
+<v t="josephorr.20180125092210.1"><vh>Ansible</vh>
 <v t="josephorr.20180125092343.1"></v>
 </v>
 <v t="josephorr.20180125092213.1"><vh>Atlas</vh></v>
 </v>
 <v t="josephorr.20180125092142.1"><vh>Client</vh>
-<v t="josephorr.20180125092224.1" a="E"><vh>(Vue.js)</vh>
+<v t="josephorr.20180125092224.1"><vh>(Vue.js)</vh>
 <v t="josephorr.20180125092343.1"></v>
 <v t="josephorr.20180125092353.1"><vh>((Alice))</vh></v>
 </v>
-<v t="josephorr.20180125092240.1" a="E"><vh>Components</vh>
-<v t="josephorr.20180125092259.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180125092240.1"><vh>Components</vh>
+<v t="josephorr.20180125092259.1"><vh>Form.io</vh>
 <v t="josephorr.20180128202836.1"><vh>((Edward))</vh></v>
 </v>
-<v t="josephorr.20180125092318.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20180125092318.1"><vh>Charts</vh>
 <v t="josephorr.20180128202836.1"></v>
 </v>
-<v t="josephorr.20180125093540.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20180125093540.1"><vh>Tables</vh>
 <v t="josephorr.20180128202836.1"></v>
-</v>
-</v>
-</v>
-<v t="josephorr.20180129090944.1"><vh>@mermaidtd Process</vh>
-<v t="josephorr.20180129091009.1" a="E"><vh>{B}</vh>
-<v t="josephorr.20180129091014.1" a="E"><vh>|yes|C</vh>
-<v t="josephorr.20180131221301.1"><vh>((G))</vh></v>
-<v t="josephorr.20180129095035.1"><vh>((E))</vh></v>
-</v>
-<v t="josephorr.20180129091024.1" a="E"><vh>|no|D</vh>
-<v t="josephorr.20180131221020.1"><vh>((F))</vh></v>
-<v t="josephorr.20180129095035.1"></v>
 </v>
 </v>
 </v>
 </v>
 <v t="josephorr.20180201133413.1" a="E"><vh>@mermaidtd Process</vh>
-<v t="josephorr.20180201133420.1" a="E"><vh>A</vh>
-<v t="josephorr.20180201133422.1" a="E"><vh>B</vh>
+<v t="josephorr.20180201133420.1"><vh>A</vh>
+<v t="josephorr.20180201133422.1"><vh>B</vh>
 <v t="josephorr.20180201133431.1"><vh>(F)</vh></v>
 <v t="josephorr.20180201133425.1"><vh>(D)</vh></v>
 </v>
-<v t="josephorr.20180201133424.1" a="E"><vh>C</vh>
+<v t="josephorr.20180201133424.1"><vh>C</vh>
 <v t="josephorr.20180201133429.1"><vh>(E)</vh></v>
 <v t="josephorr.20180201133431.1"></v>
 </v>
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban LeoVue Project Kanban</vh>
-<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
+<v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
 </v>
-<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
+<v t="josephorr.20180116093114.1"><vh>To Do</vh>
 <v t="josephorr.20180420165601.1"><vh>Runkit Component</vh></v>
 <v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
 <v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
@@ -308,14 +297,14 @@
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20180116093121.1"><vh>Doing</vh>
 <v t="josephorr.20180420165631.1"><vh>@page</vh></v>
 <v t="josephorr.20180420165635.1"><vh>?page=</vh></v>
 <v t="josephorr.20180420165609.1"><vh>@sort</vh></v>
 <v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
 <v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
-<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
+<v t="josephorr.20180116093125.1"><vh>Done</vh>
 <v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
 <v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
 <v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
@@ -486,11 +475,11 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
   &lt;div class="treeviewer"&gt;
     &lt;splitpane :leftPaneStyle="leftPaneStyle"&gt;
       &lt;ul slot="left" class="left-pane" :style="ulStyle"&gt;
-        &lt;div v-for="itemdata in data"&gt;
+        &lt;div v-for="(itemdata, index) in data"&gt;
         &lt;item
           class="item"
           :model="itemdata"
-          :top="top"
+          :top="getTop(index)"
           :textItems="text"
           :targetEl="target.el"&gt;
         &lt;/item&gt;
@@ -519,6 +508,13 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
     data: function () {
       return {
         target: target
+      }
+    },
+    methods: {
+      getTop (index) {
+        if (!index) {
+          return this.top
+        }
       }
     },
     computed: {
@@ -592,6 +588,7 @@ required, you can't simply open LeoVue index.html file from your local file syst
 files on your local machine without a server, use a node utility like 'http-server'.
 
 &lt;&lt; Running LeoVue from Github &gt;&gt;
+
 
 The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
@@ -793,7 +790,7 @@ function getLeoJSON (filename, id) {
   if (filename.indexOf('#') &gt; 0) {
     filename = filename.substring(0, filename.indexOf('#'))
   }
-  var p = new Promise((resolve, reject) =&gt; {
+  const p = new Promise((resolve, reject) =&gt; {
     if (!filename.match(/static/) &amp;&amp; isRelative(filename)) {
       // filename = 'static/' + filename
     }
@@ -1074,9 +1071,13 @@ To see how to add other components, view the docs.leo file using Leo, and check 
 You can also run LeoVue from github pages. Fork the repository on Github,
 then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
 be viewable at username.github.io/myforkname/.</t>
-<t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height: 90%"&gt;
-  &lt;l-map :zoom=13 :center="[40.6971494, -74.0277793]"&gt;
-    &lt;l-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;&lt;/l-tilelayer&gt;
+<t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height:90%"&gt;
+  &lt;l-map 
+    :zoom=13 
+    :center="[40.6971494, -74.0277793]"&gt;
+    &lt;l-tilelayer 
+      url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;
+    &lt;/l-tilelayer&gt;
   &lt;/l-map&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20171104211357.1">@language md
@@ -1224,12 +1225,12 @@ The first word after the @dataTable directive is the name of the dataTable, and 
 This data is from the [Wikipedia article on World Population](https://en.wikipedia.org/wiki/World_population#Population_growth_by_region).
 
 </t>
-<t tx="josephorr.20171109061229.1">Country,            1500,	1600,	1700,	1750,	1800,	1850,	1900,	1950,	1999,	2050,   $color
-Africa,	            86,	114,	106,	106,	107,	111,	133,	221,	783,	2478,   #8e5ea2
-Asia,	            282,	350,	411,	502,	635,	809,	947,	1402,	3700,	5267,   #3cba9f
-Europe,	            168,	170,	178,	190,	203,	276,	408,	547,	675,	734,    #3e95cd
-Latin America,   40,	20,	10,	16,	24,	38,	74,	167,	508,	784,    #e8c3b9
-North America,	6,	3,	2,	2,	7,	26,	82,	172,	312,	433,    #c45850</t>
+<t tx="josephorr.20171109061229.1">Country, 1500,	1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050, $color
+Africa,	 86, 114, 106,	106, 107, 111,	133, 221, 783,	2478, #8e5ea2
+Asia, 282, 350, 411,	502, 635, 809,	947, 1402, 3700, 5267, #3cba9f
+Europe, 168, 170, 178, 190,	203, 276, 408,	547, 675, 734, #3e95cd
+Latin America,40, 20,	10, 16,	24, 38,	74, 167, 508,	784, #e8c3b9
+North America,	6, 3,2,	2, 7,	26, 82,	172, 312, 433, #c45850</t>
 <t tx="josephorr.20171111182810.1">@language html
 
 &lt;line-chart dataTable="worldpop" :gridLines="true" /&gt;</t>
@@ -2011,16 +2012,7 @@ Brent is used in a lot of projects. He has made himself indispensable, slowing t
 <t tx="josephorr.20180128123133.1"></t>
 <t tx="josephorr.20180128123139.1"></t>
 <t tx="josephorr.20180128202836.1"></t>
-<t tx="josephorr.20180129090944.1">height: 450
-circle:
-  fa: user</t>
-<t tx="josephorr.20180129091009.1"></t>
-<t tx="josephorr.20180129091014.1"></t>
-<t tx="josephorr.20180129091024.1"></t>
-<t tx="josephorr.20180129095035.1"></t>
 <t tx="josephorr.20180130120957.1"></t>
-<t tx="josephorr.20180131221020.1"></t>
-<t tx="josephorr.20180131221301.1"></t>
 <t tx="josephorr.20180201111523.1"></t>
 <t tx="josephorr.20180201133413.1">height: 400
 rounded:
@@ -2339,5 +2331,66 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   &lt;/b-tabs&gt;
 &lt;/b-card&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;</t>
+<t tx="josephorr.20181002174010.1">@language html
+&lt;div class="cover-main"&gt;
+  &lt;div style="max-width:70%;margin-left:auto;margin-right:auto;padding-bottom:30px;"&gt;
+  &lt;b-carousel id="carousel1"
+              style=""
+              controls
+              indicators
+              background="#fff"
+              :interval="0"
+              img-height="480"
+  &gt;
+    &lt;b-carousel-slide caption="Knowledge Organization with Leo and LeoVue"
+                      text="Create outlines with the Leo Outliner, display with LeoVue"
+                      img-src="/static/images/leovue1.png"
+    &gt;&lt;/b-carousel-slide&gt;
+
+    &lt;b-carousel-slide caption="Create Content in Text, HTML or Markdown"
+                      text="Create content in Leo, display with LeoVue"
+                      img-src="/static/images/leovue2.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Load External Files from your Leo Outline"
+                      text="Point to text, html or markdown files."
+                      img-src="/static/images/leovue3.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Add Vue Components to your Content"
+                      text="Vue Bootstrap, Vue-Chartjs and others included, or add your own."
+                      img-src="/static/images/leovue4.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Add Data or Load from URL, display via Vue-Chartjs"
+                      text="Load CSV or JSON data from outline nodes or URLs, display as chart or table."
+                      img-src="/static/images/leovue5.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Create Nested Presentations from Leo Outlines"
+                      text="A single @presentation directive converts a Leo subtree into a Reveal.js presentation."
+                      img-src="/static/images/leovue6.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Create Diagrams from Outlines"
+                      text="Display a Leo Subtree as a Mermaidjs Diagram"
+                      img-src="/static/images/leovue7.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Display an Outline as a Kanban board."
+                      text="Use a Leo outline for task management, display as a Kanban"
+                      img-src="/static/images/leovue8.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="Display RSS, XML or JSON content."
+                      text="Use the built in RSS template, or create your own for any XML or JSON source."
+                      img-src="/static/images/leovue9.png"
+    &gt;&lt;/b-carousel-slide&gt;
+
+  &lt;/b-carousel&gt;
+  &lt;div class="app-title"&gt;
+     LeoVue
+   &lt;/div&gt;
+   &lt;p&gt;
+     &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.13.1 Docs / Demo&lt;/a&gt;
+   &lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+  
+</t>
 </tnodes>
 </leo_file>

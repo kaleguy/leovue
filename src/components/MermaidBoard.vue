@@ -33,9 +33,9 @@
   import Item from './Item'
   import _ from 'lodash'
   import yaml from 'js-yaml'
-  import Popper from 'popper.js' // eslint-disable-line
-  import PopOver from 'bootstrap-vue/src/utils/popover.class' // eslint-disable-line
-  import toolpopMixin from 'bootstrap-vue/src/mixins/toolpop' // eslint-disable-line
+  // import Popper from 'popper.js' // eslint-disable-line
+  // import PopOver from 'bootstrap-vue/src/utils/popover.class' // eslint-disable-line
+  // import toolpopMixin from 'bootstrap-vue/src/mixins/toolpop' // eslint-disable-line
   import Tooltip from 'tooltip.js' // eslint-disable-line
   const md = require('markdown-it')({
     html: true,

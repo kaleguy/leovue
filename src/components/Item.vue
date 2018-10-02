@@ -158,6 +158,10 @@ export default {
           ribbon[0].style.display = 'none'
           window.lconfig.githubRibbon = false
         }
+        const cover = document.getElementById('cover-page')
+        if (cover) {
+          cover.style.display = 'none'
+        }
       }
       // set vtitle if it has been set elsewhere
       if (this.model.vtitle) {
@@ -221,7 +225,7 @@ export default {
 
         return
       }
-      if (!this.targetEl) { return }
+      // if (!this.targetEl) { return }
       this.$store.dispatch('setCurrentItem', {id})
     },
     toggleN: function () {
@@ -270,14 +274,12 @@ export default {
       const duration = 500
       let siblings = _.clone(this.model.parent.children)
       siblings = siblings.map(s => s.id)
-      console.log('SIB', siblings)
       const id = this.model.id
       siblings.forEach(sid => {
         if (sid === id) { return }
         let nid = this.prefix + '' + sid
         // let el = document.querySelectorAll('li[nid = ' + nid + ']')[0]
         let el = document.getElementById(nid)
-        console.log('Y', nid, sid, direction, el)
         Velocity(el, 'slide' + direction, {duration, easing}).then(els => {
         }).catch(e => console.log(e))
       })
@@ -289,7 +291,6 @@ export default {
         if (!this.isOpenInline) { return }
         if (val > 0 && val !== oldVal) {
           const text = this.$store.state.contentItems[this.model.id]
-          // if (!text) { return }
           this.myContent = text
         }
       },
@@ -313,7 +314,7 @@ $contentBorderColor: #ccc
     font-size: 30px
     line-height: 1.5
   .icon-bracket
-    display: none
+    // display: none
 .topItemIcon
   vertical-align: top
   padding-left: 20px
@@ -324,7 +325,7 @@ $contentBorderColor: #ccc
   padding-left: 3px
   padding-right: 3px
 .icon-bracket
-  display: none
+  //display: none
   height: 26px
   vertical-align: middle
   padding-bottom: 8px
@@ -400,4 +401,6 @@ $contentBorderColor: #ccc
   transition: height 4s ease
 .leo-box
   display: none
+.accordion
+  margin-top: 40px
 </style>

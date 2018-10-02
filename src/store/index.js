@@ -264,7 +264,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       context.state.leotext[t] = text
       templateEngines[dataType].render(data, xslType).then(html => {
         showText(context, html, id, null, params)
-        if (params.nodeList) {
+        if (params && params.nodeList) {
           let dataArray = data[params.nodeList]
           if (params.filter) {
             const filter = params.filter
@@ -670,6 +670,21 @@ function setSiteItem (context, title, id) {
 }
 
 /**
+ * If the first node has a @cover directive, pop it off the data and return the node text content
+ * @param ldata
+ * @returns {string}
+ */
+function extractCover (ldata) {
+  let cover = ''
+  if (ldata.data[0].name.indexOf('@cover') > -1) {
+    cover = ldata.textItems[ldata.data[0].t]
+    ldata.data.shift()
+  }
+
+  return cover.replace('@language html', '')
+}
+
+/**
  * setData Set data loaded from the Leo file, get content for open items (from path).
  * @param context
  * @param ldata
@@ -680,10 +695,13 @@ function setData (context, ldata, filename, route) {
   console.log(ldata)
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
+  let cover = extractCover(ldata) // cover page, pull out any nodes with @cover directive
+  debugger
   context.commit('LEO', {
     data: ldata.data,
     text: ldata.textItems,
-    filename: filename
+    filename: filename,
+    cover: cover
   })
   loadDataSets(context, ldata)
   loadDataTables(context, ldata)
@@ -976,6 +994,7 @@ export default new Vuex.Store({
     initializedData: false,
     contentPane: 'text',
     viewType: 't',
+    cover: '',
     currentItem: {
       id: 0,
       next: 0,
@@ -1030,6 +1049,7 @@ export default new Vuex.Store({
       const c = loadIndex(o.data, o.text)
       state.idx = c.idx
       state.idxDocs = c.docs
+      state.cover = o.cover
       state.filename = o.filename
       window.lconfig.leodata = o.data
       window.lconfig.leotext = o.text

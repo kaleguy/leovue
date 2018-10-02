@@ -1,8 +1,10 @@
 <template>
   <div id="app"
+       style="scroll-behavior: smooth;"
        @drop="drop_handler($event);"
        @dragover="dragover_handler($event);"
        @dragend="dragend_handler($event);">
+    <cover></cover>
     <router-view></router-view>
     <Ribbon v-if="hasGithubRibbon"
       v-bind="ribbonOptions"
@@ -11,8 +13,12 @@
 </template>
 
 <script>
+  import Cover from './components/Cover'
   export default {
     name: 'app',
+    components: {
+      cover: Cover
+    },
     computed: {
       hasGithubRibbon: function () {
         if (window.lconfig.githubRibbon) {
@@ -48,9 +54,9 @@
       drop_handler (ev) {
         ev.preventDefault()
         // If dropped items aren't files, reject them
-        var dt = ev.dataTransfer
-        var i
-        var f
+        const dt = ev.dataTransfer
+        let i
+        let f
         if (dt.items) {
           // Use DataTransferItemList interface to access the file(s)
           for (i = 0; i < dt.items.length; i++) {
@@ -64,7 +70,7 @@
             f = dt.files[i]
           }
         }
-        var reader = new FileReader()
+        const reader = new FileReader()
         reader.onload = (xml) => {
           const xmlString = xml.srcElement.result
           this.$store.dispatch('loadLeoFromXML', {xml: xmlString, route: this.$route})
@@ -118,7 +124,7 @@ HTML, BODY
   outline: none
   font-size: 16px
   // height: 100%
-  white-space: pre-line
+  // white-space: pre-line
   width: 100%
 
 .directive

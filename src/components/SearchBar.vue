@@ -1,6 +1,6 @@
 <template>
   <div class="searchbar">
-    <div id="app">
+    <div id="searchbar">
       <vue-instant :suggestion-attribute="suggestionAttribute"
                    v-model="value" :disabled="false"
                    @input="changed"

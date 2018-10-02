@@ -21,7 +21,6 @@
                 :class="{disabled: noBack}"
                 name="arrow-left"></icon>
         </div>
-        <div class="hshim"></div>
         <searchbar class="searchbar"></searchbar>
         <div class="vshim"></div>
       </div>
@@ -157,7 +156,7 @@
 .holder
   padding: 0
   margin: 0
-  position: fixed
+  // position: fixed
   width: 100%
   z-index: 111
 .icon-box
@@ -253,7 +252,11 @@
   text-decoration: none
   cursor: pointer
 .searchbar
-  position: absolute
-  right: 80px
-  top: 0
+  //position: absolute
+  //right: 80px
+  //top: 0
+  margin-top: -6px
+  margin-right: 15px
+  float: right
+  height: 20px
 </style>
