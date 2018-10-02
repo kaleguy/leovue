@@ -188,10 +188,10 @@
     background-color: #555;
     border-radius: 15px;
   }
-  .carousel-indicators .active {
+  section .carousel-indicators .active {
     background-color: #000;
   }
-  .carousel-indicators LI {
+  section .carousel-indicators LI {
     background-color: #ccc;
   }
   section .carousel-indicators {
