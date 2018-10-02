@@ -696,7 +696,6 @@ function setData (context, ldata, filename, route) {
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
   let cover = extractCover(ldata) // cover page, pull out any nodes with @cover directive
-  debugger
   context.commit('LEO', {
     data: ldata.data,
     text: ldata.textItems,
