@@ -3169,7 +3169,7 @@ section.cover .carousel-control-prev-icon {
 .carousel-indicators LI {
   background-color: #ccc;
 }
-.carousel-indicators {
+section .carousel-indicators {
   bottom: -20px;
 }
 
@@ -15348,4 +15348,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?61d633ae07d3499695de793d111c8195*/
+/*# sourceMappingURL=app.css.map?6778b68237ee01365bb09f36297887ab*/

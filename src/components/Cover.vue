@@ -194,7 +194,7 @@
   .carousel-indicators LI {
     background-color: #ccc;
   }
-  .carousel-indicators {
+  section .carousel-indicators {
     bottom: -20px;
   }
 
