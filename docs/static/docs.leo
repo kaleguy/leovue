@@ -2333,7 +2333,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;div class="hshim"&gt;&lt;/div&gt;</t>
 <t tx="josephorr.20181002174010.1">@language html
 &lt;div class="cover-main"&gt;
-  &lt;div style="max-width:70%;margin-left:auto;margin-right:auto;padding-bottom:30px;"&gt;
+  &lt;div style="max-width:60%;margin-left:auto;margin-right:auto;padding-bottom:30px;"&gt;
   &lt;b-carousel id="carousel1"
               style=""
               controls
@@ -2344,40 +2344,40 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   &gt;
     &lt;b-carousel-slide caption="Knowledge Organization with Leo and LeoVue"
                       text="Create outlines with the Leo Outliner, display with LeoVue"
-                      img-src="/static/images/leovue1.png"
+                      img-src="static/images/leovue1.png"
     &gt;&lt;/b-carousel-slide&gt;
 
     &lt;b-carousel-slide caption="Create Content in Text, HTML or Markdown"
                       text="Create content in Leo, display with LeoVue"
-                      img-src="/static/images/leovue2.png"
+                      img-src="static/images/leovue2.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Load External Files from your Leo Outline"
                       text="Point to text, html or markdown files."
-                      img-src="/static/images/leovue3.png"
+                      img-src="static/images/leovue3.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Add Vue Components to your Content"
                       text="Vue Bootstrap, Vue-Chartjs and others included, or add your own."
-                      img-src="/static/images/leovue4.png"
+                      img-src="static/images/leovue4.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Add Data or Load from URL, display via Vue-Chartjs"
                       text="Load CSV or JSON data from outline nodes or URLs, display as chart or table."
-                      img-src="/static/images/leovue5.png"
+                      img-src="static/images/leovue5.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Create Nested Presentations from Leo Outlines"
                       text="A single @presentation directive converts a Leo subtree into a Reveal.js presentation."
-                      img-src="/static/images/leovue6.png"
+                      img-src="static/images/leovue6.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Create Diagrams from Outlines"
                       text="Display a Leo Subtree as a Mermaidjs Diagram"
-                      img-src="/static/images/leovue7.png"
+                      img-src="static/images/leovue7.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Display an Outline as a Kanban board."
                       text="Use a Leo outline for task management, display as a Kanban"
-                      img-src="/static/images/leovue8.png"
+                      img-src="static/images/leovue8.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Display RSS, XML or JSON content."
                       text="Use the built in RSS template, or create your own for any XML or JSON source."
-                      img-src="/static/images/leovue9.png"
+                      img-src="static/images/leovue9.png"
     &gt;&lt;/b-carousel-slide&gt;
 
   &lt;/b-carousel&gt;
