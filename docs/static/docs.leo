@@ -2352,7 +2352,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       img-src="static/images/leovue2.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Load External Files from your Leo Outline"
-                      text="Point to text, html or markdown files."
+                      text="Point to text, html or markdown files, or load from URL."
                       img-src="static/images/leovue3.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Add Vue Components to your Content"
@@ -2368,7 +2368,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       img-src="static/images/leovue6.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Create Diagrams from Outlines"
-                      text="Display a Leo Subtree as a Mermaidjs Diagram"
+                      text="Convert a Leo Subtree as a Mermaidjs Diagram with a single directive. "
                       img-src="static/images/leovue7.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Display an Outline as a Kanban board."

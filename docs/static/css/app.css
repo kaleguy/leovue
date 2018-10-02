@@ -3163,10 +3163,10 @@ section.cover .carousel-control-prev-icon {
   background-color: #555;
   border-radius: 15px;
 }
-.carousel-indicators .active {
+section .carousel-indicators .active {
   background-color: #000;
 }
-.carousel-indicators LI {
+section .carousel-indicators LI {
   background-color: #ccc;
 }
 section .carousel-indicators {
@@ -15348,4 +15348,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?6778b68237ee01365bb09f36297887ab*/
+/*# sourceMappingURL=app.css.map?b8c91d05422d0f16a85a901112abc4ac*/
