@@ -13,6 +13,11 @@ Vue.use(Router)
 let baseMode = window.lconfig.baseMode
 if (!baseMode) { baseMode = 't' }
 
+let startPage = '/1'
+if (window.lconfig.coverPage) {
+  startPage = '/2'
+}
+
 // TODO: add not found link
 export default new Router({
   routes: [
@@ -87,7 +92,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: '/' + baseMode + '/1'
+      redirect: '/' + baseMode + startPage
     }
   ]
 })
