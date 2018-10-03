@@ -172,6 +172,7 @@
     padding-left: 20px;
     padding-right: 20px;
     box-shadow: 3px 3px 10px #666;
+    min-width: 530px;
   }
   section.cover .app-title {
     font-size: 70px;
@@ -199,5 +200,6 @@
   section IMG {
     outline: none
   }
+  section :link:focus, section :visited:focus {outline: none;}
 
 </style>
