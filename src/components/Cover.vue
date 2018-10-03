@@ -158,10 +158,9 @@
     color: var(--theme-color,#ea6f5a)
   }
   section.cover .carousel-caption {
-    left: 10%;
-    right: 10%;
-  }
-  section.cover .carousel-caption {
+    left: 4%;
+    right: 4%;
+    bottom: 15%;
   }
 
   section.cover .carousel-caption P,
@@ -196,6 +195,9 @@
   }
   section .carousel-indicators {
     bottom: -20px;
+  }
+  section IMG {
+    outline: none
   }
 
 </style>

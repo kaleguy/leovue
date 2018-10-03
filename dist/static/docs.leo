@@ -2359,7 +2359,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       text="Vue Bootstrap, Vue-Chartjs and others included, or add your own."
                       img-src="static/images/leovue4.png"
     &gt;&lt;/b-carousel-slide&gt;
-    &lt;b-carousel-slide caption="Add Data or Load from URL, display via Vue-Chartjs"
+    &lt;b-carousel-slide caption="Vue-Chartjs charts from outline or URL Data"
                       text="Load CSV or JSON data from outline nodes or URLs, display as chart or table."
                       img-src="static/images/leovue5.png"
     &gt;&lt;/b-carousel-slide&gt;
@@ -2368,7 +2368,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       img-src="static/images/leovue6.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Create Diagrams from Outlines"
-                      text="Convert a Leo Subtree as a Mermaidjs Diagram with a single directive. "
+                      text="Convert a Leo Subtree to a Mermaidjs Diagram with a single directive. "
                       img-src="static/images/leovue7.png"
     &gt;&lt;/b-carousel-slide&gt;
     &lt;b-carousel-slide caption="Display an Outline as a Kanban board."

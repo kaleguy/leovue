@@ -3133,10 +3133,9 @@ section.cover blockquote>p>a:hover {
   color: var(--theme-color,#ea6f5a)
 }
 section.cover .carousel-caption {
-  left: 10%;
-  right: 10%;
-}
-section.cover .carousel-caption {
+  left: 4%;
+  right: 4%;
+  bottom: 15%;
 }
 section.cover .carousel-caption P,
 section.cover .carousel-caption H3 {
@@ -3171,6 +3170,9 @@ section .carousel-indicators LI {
 }
 section .carousel-indicators {
   bottom: -20px;
+}
+section IMG {
+  outline: none
 }
 
 
@@ -15348,4 +15350,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?b8c91d05422d0f16a85a901112abc4ac*/
+/*# sourceMappingURL=app.css.map?9ea79ec6982c1664575046abf6c108d3*/
