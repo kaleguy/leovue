@@ -3147,6 +3147,7 @@ section.cover .carousel-caption H3 {
   padding-right: 20px;
   -webkit-box-shadow: 3px 3px 10px #666;
           box-shadow: 3px 3px 10px #666;
+  min-width: 530px;
 }
 section.cover .app-title {
   font-size: 70px;
@@ -3173,6 +3174,8 @@ section .carousel-indicators {
 }
 section IMG {
   outline: none
+}
+section :link:focus, section :visited:focus {outline: none;
 }
 
 
@@ -15350,4 +15353,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?9ea79ec6982c1664575046abf6c108d3*/
+/*# sourceMappingURL=app.css.map?616bc3df2708daec6c0f465d46e01d67*/
