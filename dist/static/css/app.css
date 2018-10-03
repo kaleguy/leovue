@@ -3172,7 +3172,7 @@ section .carousel-indicators LI {
 section .carousel-indicators {
   bottom: -20px;
 }
-section .carousel-item .active {
+section .carousel-item.active {
   outline: none
 }
 section IMG {
@@ -15356,4 +15356,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?b40c22b9d7685cfeb3c8f80d3d79104c*/
+/*# sourceMappingURL=app.css.map?4859db16dd78c7e3570d522037bf97bb*/
