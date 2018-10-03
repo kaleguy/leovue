@@ -155,6 +155,7 @@ Major Content Components:
 * [MathJax](https://www.mathjax.org/) - Math Notation
 * [Reveal.js](https://revealjs.com/#/) - presentations
 * [Vue2-Leaflet](https://github.com/KoRiGaN/Vue2Leaflet) - maps
+* [Bootstrap-Vue](https://bootstrap-vue.js.org/)
 * [h5o](https://www.npmjs.com/package/h5o) - HTML5 Outlines
 
 
