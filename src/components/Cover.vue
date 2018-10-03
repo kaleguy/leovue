@@ -197,6 +197,9 @@
   section .carousel-indicators {
     bottom: -20px;
   }
+  section .carousel-item .active {
+    outline: none
+  }
   section IMG {
     outline: none
   }
