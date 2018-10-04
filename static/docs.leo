@@ -18,7 +18,6 @@
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
 <v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
-<v t="josephorr.20170331200439.1"><vh>Overview</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
@@ -432,7 +431,23 @@ You can also create other types of content nodes:
 * **Url Nodes** - nodes that load content from a url
 
 See the nodes below for examples of the above items.</t>
-<t tx="josephorr.20170327233126.1">This section contains a guide to using the LeoVue program to view files created in Leo.</t>
+<t tx="josephorr.20170327233126.1">@language md
+
+# LeoVue
+
+**LeoVue** is a web app that can display files created with
+&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
+
+Using **Leo**, you can create outlined content. Using **LeoVue** you can display this
+content as a web page.
+
+**LeoVue** extends the capabilities of Leo by allowing outline nodes to load content from 
+other files, including text, html or markdown, or even other Leo files.
+
+The content you are reading was created in Leo. If you're reading this on the LeoVue
+site, then this content is being displayed via the LeoVue.
+
+LeoVue is licensed under the MIT license.</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1">@language md
@@ -585,20 +600,6 @@ parameters in index.html.
 
 For a quick look at a Leo file, you can also drag and drop the file on to LeoVue.
 </t>
-<t tx="josephorr.20170331200439.1">@language md
-
-# LeoVue
-
-**LeoVue** is a web app that can display files created with
-&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
-
-Using **Leo**, you can create outlined content. Using **LeoVue** you can display this
-content as a web page.
-
-The content you are reading was created in Leo. If you're reading this on the LeoVue
-site, then this content is being displayed via the LeoVue.
-
-LeoVue is licensed under the MIT license.</t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">@language md
 
