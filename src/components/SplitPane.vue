@@ -23,7 +23,7 @@
         <icon name="angle-double-right"></icon>
       </div>
     </div>
-    <div id="right-pane" class="right-pane">
+    <div id="right-pane" class="right-pane" v-bind:style="rightPaneStyle">
       <slot name="right"></slot>
     </div>
   </div>
@@ -60,6 +60,11 @@
       xshowRightButton: function () {
         if (!leftPane) { return }
         return !leftPane.style.width
+      },
+      rightPaneStyle: function () {
+        let width = window.lconfig.rightPaneWidth
+        width = width || '100%'
+        return { width }
       }
     },
     mounted: function () {
@@ -128,7 +133,7 @@
     padding: 0;
   }
   .right-pane {
-    width: 100%;
+    //width: 100%;
   }
   #left-pane {
     //overflow-y: auto;
