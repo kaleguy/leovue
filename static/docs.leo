@@ -11,8 +11,7 @@
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
-<v t="josephorr.20170331200243.1"><vh>Introduction</vh></v>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
@@ -29,13 +28,13 @@
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
-<v t="josephorr.20170304113011.1"><vh>Code</vh>
+<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
 <v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
-<v t="josephorr.20170304175209.1"><vh>Markdown In Leo</vh></v>
+<v t="josephorr.20170421082838.1"></v>
 </v>
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
@@ -332,24 +331,23 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="border:1px solid #333; border-radius: 10px; width:380px;margin-left:auto;margin-right:auto;font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;font-size:90px;font-weight:bold;text-align:center; margin-top:20px; margin-bottom: 40px;"&gt;
-LeoVue
-&lt;/div&gt;
+&lt;img src="static/images/leo-leovue.png" style="width:680px;margin-left:auto;margin-right:auto;"&gt;
+
+&lt;div style="text-align:center;font-size:60px;margin-bottom:15px;"&gt;LeoVue&lt;/div&gt;
+
+
+&lt;div style="width:600px;margin-left:auto;margin-right:auto"&gt;
+&lt;p&gt;
+&lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor.
+&lt;/p&gt;
+&lt;p&gt;
+Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines.
+&lt;p&gt;
 
 &lt;p&gt;
-LeoVue is a web app that can display files created with
-&lt;a href='http://www.leoeditor.com'&gt;Leo&lt;/a&gt;, the open source outlining editor and IDE.
+The document you are viewing was created with Leo, and is being displayed by LeoVue.
 &lt;/p&gt;
-&lt;p&gt;
-Leo has features that make it particularly suitable for documenting code and other complex documents.
-&lt;/p&gt;
-&lt;p&gt;
-Using Leo, you can create an outlined website or document like the one you are viewing. Content nodes can contain
-text, html, markdown or code. Content nodes can also point to other documents or websites.
-&lt;p&gt;
-LeoVue was created using Vue.js, so you can add Vue.js components to your outline's content.
-&lt;/p&gt;
- </t>
+&lt;/div&gt;</t>
 <t tx="josephorr.20170304113011.1">@language md
 
 Content items in Leo outlines can be code.
@@ -408,19 +406,18 @@ c.connect(
   user : 'username@domain.com'
   password : 'password'
 )</t>
-<t tx="josephorr.20170304175209.1">@language md
-## Leo Does Markdown
-
-This node was writen with Markdown.
-
-Use the @language md directive to set the node to markdown.</t>
 <t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
-<t tx="josephorr.20170326174500.1">@language text
+<t tx="josephorr.20170326174500.1">@language md
 
-This section contains a brief introduction to some of the features of Leo.</t>
+# About Leo
+
+Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
+
+The purpose of this document is to make a brief introduction to creating tree-based content with Leo and
+displaying it with LeoVue.</t>
 <t tx="josephorr.20170326174511.1">@language md
 
 ## Content Creation with Leo
@@ -443,6 +440,12 @@ See the nodes below for examples of the above items.</t>
 # Additional Features of Leo
 
 Leo has more features than can be listed in a brief summary.
+
+Leo has features that make it particularly suitable for creating documentation of code.
+
+More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of
+programming where documentation comes first, and code is generated from the documentation or
+is developed in tandem with it.
 
 Some additional features include:
 
@@ -565,20 +568,6 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
       padding-left: 4px
 &lt;/style&gt;
 </t>
-<t tx="josephorr.20170331200243.1">@language md
-
-# About Leo
-
-Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
-
-The purpose of this document is to make a brief introduction to creating tree-based content with Leo and
-displaying it with Leo Viewer.
-
-Leo has features that make it particularly suitable for creating documentation of code.
-
-More advanced users of Leo are able to use Leo to practice a type of "Literate Programming", that is, a style of
-programming where documentation comes first, and code is generated from the documentation or
-is developed in tandem with it.</t>
 <t tx="josephorr.20170331200411.1">@language md
 
 # Installing and Using LeoVue
