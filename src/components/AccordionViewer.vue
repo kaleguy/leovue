@@ -6,7 +6,7 @@
           <div v-for="itemdata in data">
           <item
             class="item"
-            :top="true"
+            :top="false"
             :model="itemdata"
             :textItems="text"
             :targetEl="false"
@@ -70,5 +70,8 @@
   }
   .accordionviewer UL {
     list-style-type: none;
+  }
+  .accordionviewer .panes-container {
+    margin-left: 40px;
   }
 </style>

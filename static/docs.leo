@@ -21,7 +21,7 @@
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
@@ -337,7 +337,8 @@
 
 &lt;div style="width:600px;margin-left:auto;margin-right:auto"&gt;
 &lt;p&gt;
-&lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor.
+&lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor. It is open source and runs 
+on Windows/Mac/Linux. &lt;a target="_blank" href="http//www.leoeditor.com"&gt;More about Leo.&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
 Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines.
@@ -441,11 +442,12 @@ See the nodes below for examples of the above items.</t>
 Using **Leo**, you can create outlined content. Using **LeoVue** you can display this
 content as a web page.
 
-**LeoVue** extends the capabilities of Leo by allowing outline nodes to load content from 
-other files, including text, html or markdown, or even other Leo files.
+**LeoVue** extends the capabilities of Leo by allowing outline nodes to load content not just from 
+Leo outlines, but from 
+other files, including text, html or markdown files, or even other Leo files.
 
 The content you are reading was created in Leo. If you're reading this on the LeoVue
-site, then this content is being displayed via the LeoVue.
+site, then this content is being displayed via LeoVue.
 
 LeoVue is licensed under the MIT license.</t>
 <t tx="josephorr.20170327233137.1"></t>
@@ -585,9 +587,19 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
 </t>
 <t tx="josephorr.20170331200411.1">@language md
 
-# Installing and Using LeoVue
+## Installing and Using LeoVue with a CDN
 
-To use LeoVue, copy the files in the [dist folder at github](https://github.com/kaleguy/leovue) to your server. A web server is
+The simplest way to use Leo is to load it from a CDN. If so, you just need two files:
+* **index.html**
+* **Your Leo file**
+
+To get started with the CDN, clone &lt;a target="_blank" href="http://kaleguy.github.io/leo-examples"&gt;one of the examples&lt;/a&gt; and swap in your Leo file.
+
+Also see the [[Configuring]] section for a list of parameters for customization. 
+
+## Installing and Using LeoVue on your server.
+
+Copy the files in the [dist folder at github](https://github.com/kaleguy/leovue) to your server. A web server is
 required, you can't simply open LeoVue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
@@ -597,6 +609,8 @@ files on your local machine without a server, use a node utility like 'http-serv
 The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
 parameters in index.html.
+
+## Drag and Drop Quickview
 
 For a quick look at a Leo file, you can also drag and drop the file on to LeoVue.
 </t>
@@ -988,14 +1002,24 @@ export {getLeoJSON, transformLeoXML, transformLeoXML2XML, transform}
 
 # Basic Configuration Options
 
-LeoVue loads static content from the 'static' folder. By default it will load a file named 'docs.leo'.
+By default, LeoVue will load a file located at "static/docs.leo". To load a different file, change the **fileName** param in index.html.
 
-Currently Available Parameters:
-* **fileName**: name of leo file to load (without .leo extension)
+Other Parameters:
 * **docTitle**: Title for the Leo file (will show in top menubar)
 * **showAppTitle**: Display 'LeoVue' in upper left of app
 * **viewTypes**: Array of viewTypes (e.g. Outline, Line, Graphic Tree) to be displayed in upper right menu.
 * **baseMode**: Default viewType
+
+Style parameters:
+
+* **activeBackgroundColor**: Background color of active menu item
+* **itemArrow**: The character to be used as a caret indicating menu open/closed. Any Font Awesome or Unicode character can be used.
+* **leftPaneWidth**: The menu pane width
+* **rightPaneWidth**: The content pane width,
+* **leftPanePadding**: Right margin on the tree menu
+* **contentPaneWidth**: The left (content) pane width
+* **coverPage**: If true, and if the first node of the Leo file is marked with the @cover directive, will create a cover page from the @cover node. (See the LeoVue site for an example).
+
 
 Parameters can be passed in to the url or entered in index.html. See index.html for examples.
 
@@ -1058,8 +1082,13 @@ To see how to add other components, view the docs.leo file using Leo, and check 
 </t>
 <t tx="josephorr.20171103103421.1">@language md
 
-You can also run LeoVue from github pages. Fork the repository on Github,
-then go to Settings - Github pages and choose 'master branch - docs folder'. The file 'docs.leo' in the docs/static folder will
+You can also run LeoVue from github pages. 
+
+1. Fork the repository on Github
+1. Go to Settings - Github pages
+1. Choose 'master branch - docs folder'. 
+
+The file 'docs.leo' in the docs/static folder will
 be viewable at username.github.io/myforkname/.</t>
 <t tx="josephorr.20171104210116.1">&lt;div id="lflt" style="height:90%"&gt;
   &lt;l-map 
@@ -2329,12 +2358,17 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
               controls
               indicators
               background="#fff"
-              :interval="0"
+              :interval="4000"
               img-height="480"
   &gt;
     &lt;b-carousel-slide caption="Knowledge Organization with Leo and LeoVue"
                       text="Create outlines with the Leo Outliner, display with LeoVue"
                       img-src="static/images/leovue1.png"
+    &gt;&lt;/b-carousel-slide&gt;
+    
+    &lt;b-carousel-slide caption="Multiple Tree Styles"
+                      text="Tree view, graphical tree view, inline, or nested menus"
+                      img-src="static/images/leovue1.1.png"
     &gt;&lt;/b-carousel-slide&gt;
 
     &lt;b-carousel-slide caption="Create Content in Text, HTML or Markdown"

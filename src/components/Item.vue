@@ -362,7 +362,7 @@ $contentBorderColor: #ccc
   background: #81ff00
   font-weight: bold
 .inline .content
-  max-width: 700px
+  max-width: 760px
   white-space: normal
   padding: 30px
   padding-top: 20px
