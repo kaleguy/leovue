@@ -5132,7 +5132,7 @@ a[data-v-708bae40] {
   font-weight: bold;
 }
 .inline .content {
-  max-width: 700px;
+  max-width: 760px;
   white-space: normal;
   padding: 30px;
   padding-top: 20px;
@@ -5348,6 +5348,9 @@ p {
 }
 .accordionviewer UL {
   list-style-type: none;
+}
+.accordionviewer .panes-container {
+  margin-left: 40px;
 }
 
 @charset "UTF-8";
@@ -15356,4 +15359,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?13896a21fe809abf35a3b87d37c17f55*/
+/*# sourceMappingURL=app.css.map?18a3f68c8efa5505a947954c5c9053b7*/
