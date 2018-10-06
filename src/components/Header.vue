@@ -235,7 +235,7 @@
   font-weight: normal
   color: #333
   margin-left: 10px
-  border: 2px solid #fff
+  border: 1px solid #ccc
   border-radius: 5px
   margin-top: -3px
   width: 72px

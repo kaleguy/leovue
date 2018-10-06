@@ -30,6 +30,16 @@
 
     },
     mounted () {
+      // TODO: put this in vuex or replace, it is a hack to prevent the dashboard
+      // from causing FOUC
+      if (window.lconfig.coverPage) {
+        const dboard = document.getElementById('dashboard')
+        if (dboard) {
+          this.$nextTick(function () {
+            setTimeout(() => { dboard.style.display = 'block' }, 1000)
+          })
+        }
+      }
     },
     updated () {
     }

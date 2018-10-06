@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard" id="dashboard">
+  <div class="dashboard" id="dashboard" v-bind:style="dashboardStyle">
     <appheader/>
     <div id="main" :class="{'header-space': config.showHeader}">
       <router-view :id="id"></router-view>
@@ -29,6 +29,13 @@ export default {
     },
     config () {
       return window.lconfig
+    },
+    dashboardStyle () {
+      let style = {}
+      if (window.lconfig.coverPage) {
+        style = { display: 'none' }
+      }
+      return style
     }
   },
   watch: {

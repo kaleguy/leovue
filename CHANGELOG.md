@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix to inline formatting (@language htmlsource, text)
 - @cover directive
 
+## [1.14.0] - 2018-10-02
+### Added
+- @cover directive: create cover page from first node
+
+### Changed
+- Fixed inline mode style
+
 ## [1.13.2] - 2018-09-25
 ### Changed
 - Treeview scroll fix
