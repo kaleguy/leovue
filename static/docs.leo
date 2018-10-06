@@ -2403,6 +2403,10 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       text="Use the built in RSS template, or create your own for any XML or JSON source."
                       img-src="static/images/leovue9.png"
     &gt;&lt;/b-carousel-slide&gt;
+    &lt;b-carousel-slide caption="IDE - Leo - LeoVue"
+                      text="Publish an outline of your code, Leo keeps IDE changes in sync"
+                      img-src="static/images/leovue10.png"
+    &gt;&lt;/b-carousel-slide&gt;
 
   &lt;/b-carousel&gt;
   &lt;div class="app-title"&gt;
