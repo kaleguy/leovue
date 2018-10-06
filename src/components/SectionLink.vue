@@ -58,4 +58,5 @@
   cursor: pointer
   text-decoration: none
   display: inline-block
+  margin-bottom: 1rem
 </style>
