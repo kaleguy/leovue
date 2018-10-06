@@ -338,7 +338,7 @@
 &lt;div style="width:600px;margin-left:auto;margin-right:auto"&gt;
 &lt;p&gt;
 &lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor. It is open source and runs 
-on Windows/Mac/Linux. &lt;a target="_blank" href="http//www.leoeditor.com"&gt;More about Leo.&lt;/a&gt;
+on Windows/Mac/Linux. &lt;a target="_blank" href="http://www.leoeditor.com"&gt;More about Leo.&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
 Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines.
@@ -603,7 +603,7 @@ Copy the files in the [dist folder at github](https://github.com/kaleguy/leovue)
 required, you can't simply open LeoVue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
-&lt;&lt; Running LeoVue from Github &gt;&gt;
+ &lt;&lt; Running LeoVue from Github &gt;&gt;
 
 
 The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
