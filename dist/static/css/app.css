@@ -15243,12 +15243,13 @@ TD.number {
   margin-right: auto;
 }
 
-.section-link[data-v-88284af8] {
+.section-link[data-v-2bfed193] {
   color: #4cb986;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .node-link[data-v-2d139bd3] {
@@ -15359,4 +15360,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?7aa69878b7615909666f0f1790940509*/
+/*# sourceMappingURL=app.css.map?8c715c824fa95e3a50537948b0391422*/

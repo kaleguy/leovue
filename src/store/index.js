@@ -1053,6 +1053,9 @@ export default new Vuex.Store({
       window.lconfig.leodata = o.data
       window.lconfig.leotext = o.text
     },
+    RESETCOVER (state, o) { // set the cover page content
+      state.cover = o.cover
+    },
     // lunr search index
     RESETINDEX (state, o) {
       if (_.isUndefined) {

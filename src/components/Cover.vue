@@ -7,6 +7,7 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   export default {
     name: 'cover',
     data () {
@@ -21,8 +22,13 @@
         return this.$store.state.cover
       },
       dynComponent () {
-        // const id = this.$store.state.currentItem.id
-        const template = this.coverContent ? this.coverContent : '<div></div>'
+        // const id = this.$store.state.currentRoute
+        const current = _.get(this.$router, 'currentRoute.params.id', 1)
+        if (+current > 2) {
+          return this.$store.commit('RESETCOVER', { cover: '' })
+        }
+        const blank = '<div></div>'
+        const template = this.coverContent ? this.coverContent : blank
         return {
           template
         }
