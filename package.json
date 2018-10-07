@@ -11,7 +11,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "deploy": "rm -Rf docs && cp -Rf dist docs && cp -Rf examples docs/examples && cp -Rf screencasts docs/screencasts",
+    "deploy": "rm -Rf docs && cp -Rf dist docs && cp README.md docs && cp -Rf examples docs/examples && cp -Rf screencasts docs/screencasts",
     "build-static": "node build/build-static.es6"
   },
   "dependencies": {
