@@ -173,19 +173,22 @@ function getUrlFromTitle (title, dataType) {
   if (/^[xh]ttp/.test(url)) { // xttp will result in http call via proxy
     return {url, label}
   }
-  /**
+  // add doc file host if docfile is not on current host
+  // const hostname = window.location.hostname
   let cname = window.lconfig.filename
+  // const cnameUrl = new URL(cname)
+  // const leoFileHostname = cnameUrl.host
   if (cname.indexOf('/') < 0) {
     cname = ''
   }
-  if (cname) {
+  if (cname && (cname.indexOf('http') > -1)) {
     let u = window.lconfig.filename
     u = util.chop(u, '#')
     u = util.chop(u, '?')
     u = util.chop(u, '/')
     url = u + '/' + url
   }
-   */
+
   return {url, label}
 }
 function showPresentation (context, title, id) {
