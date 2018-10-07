@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix to inline formatting (@language htmlsource, text)
 - @cover directive
 
+## [1.14.1] - 2018-10-05
+### Changed
+- patched replace url function
+
 ## [1.14.0] - 2018-10-02
 ### Added
 - @cover directive: create cover page from first node

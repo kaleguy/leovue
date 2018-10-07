@@ -15,6 +15,7 @@ function replaceRelUrls (html, base) {
     let image = images[i]
     let src = image.getAttribute('src')
     if (/http:/.test(src)) { return }
+    if (/https:/.test(src)) { return }
     if (/^\//.test(src)) {
       src = base + src
     } else {
