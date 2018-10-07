@@ -2425,13 +2425,17 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 <t tx="josephorr.20181006112633.1"></t>
 <t tx="josephorr.20181007134257.1">## Example Sites
 
-[Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
+&lt;div class="hshim"&gt;&lt;/div&gt;
 
-[Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
-
-[Formio.js Client](https://kaleguy.github.io/formiojs-client/#/t/1)
-
-[More](https://kaleguy.github.io/leo-examples/)
+&lt;p&gt;
+&lt;a href="https://kaleguy.github.io/leovue/examples/shakespeare/" target="_blank"&gt;Plays of William Shakespeare&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://kaleguy.github.io/leovue/examples/shakespeare_n/" target="_blank"&gt;Plays of William Shakespeare, nested menu, no headers&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://kaleguy.github.io/formiojs-client/#/t/1/" target="_blank"&gt;Formio.js Client&lt;/a&gt;
+&lt;/p&gt;
 
 </t>
 </tnodes>

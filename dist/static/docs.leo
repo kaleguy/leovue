@@ -2425,6 +2425,8 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 <t tx="josephorr.20181006112633.1"></t>
 <t tx="josephorr.20181007134257.1">## Example Sites
 
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
 [Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
 
 [Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
