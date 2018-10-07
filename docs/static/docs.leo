@@ -18,16 +18,17 @@
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
 <v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
-<v t="josephorr.20180304203537.1"><vh>[LeoVue README](https://cdn.jsdelivr.net/npm/leo-vue/README.md)</vh></v>
+<v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
+<v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
-<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
+<v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
@@ -38,7 +39,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -2395,11 +2396,11 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       text="Convert a Leo Subtree to a Mermaidjs Diagram with a single directive. "
                       img-src="static/images/leovue7.png"
     &gt;&lt;/b-carousel-slide&gt;
-    &lt;b-carousel-slide caption="Display an Outline as a Kanban board."
+    &lt;b-carousel-slide caption="Display an Outline as a Kanban board"
                       text="Use a Leo outline for task management, display as a Kanban"
                       img-src="static/images/leovue8.png"
     &gt;&lt;/b-carousel-slide&gt;
-    &lt;b-carousel-slide caption="Display RSS, XML or JSON content."
+    &lt;b-carousel-slide caption="Display RSS, XML or JSON content"
                       text="Use the built in RSS template, or create your own for any XML or JSON source."
                       img-src="static/images/leovue9.png"
     &gt;&lt;/b-carousel-slide&gt;
@@ -2420,5 +2421,6 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/div&gt;
   
 </t>
+<t tx="josephorr.20181006112633.1"></t>
 </tnodes>
 </leo_file>
