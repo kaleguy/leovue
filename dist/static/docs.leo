@@ -26,6 +26,7 @@
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
+<v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
 <v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
@@ -2422,5 +2423,16 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   
 </t>
 <t tx="josephorr.20181006112633.1"></t>
+<t tx="josephorr.20181007134257.1">## Example Sites
+
+[Plays of William Shakespeare](https://kaleguy.github.io/leovue/examples/shakespeare/)
+
+[Plays of William Shakespeare, version with nested menus and no header](https://kaleguy.github.io/leovue/examples/shakespeare_n/)
+
+[Formio.js Client](https://kaleguy.github.io/formiojs-client/#/t/1)
+
+[More](https://kaleguy.github.io/leo-examples/)
+
+</t>
 </tnodes>
 </leo_file>
