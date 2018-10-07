@@ -2975,7 +2975,7 @@ CODE.hljs {
   padding: 12px;
   border-radius: 6px;
 }
-.lv-md {
+.lv-md IMG {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -3833,7 +3833,7 @@ CODE.hljs {
   padding: 12px;
   border-radius: 6px;
 }
-.lv-md {
+.lv-md IMG {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -15368,4 +15368,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?624b542e940345677533dfc55f1b27ec*/
+/*# sourceMappingURL=app.css.map?cae6e02a93dbe58137572fda4f354e4c*/
