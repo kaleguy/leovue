@@ -2975,6 +2975,10 @@ CODE.hljs {
   padding: 12px;
   border-radius: 6px;
 }
+.lv-md {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 HTML, BODY {
   margin: 0;
   padding: 0;
@@ -3828,6 +3832,10 @@ CODE.hljs {
   background: #eeeeee;
   padding: 12px;
   border-radius: 6px;
+}
+.lv-md {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 HTML, BODY {
   margin: 0;
@@ -5338,7 +5346,7 @@ p {
   stroke-width: 1.5px;
 }
 
-.settings[data-v-71625740] {
+.settings[data-v-c47a44be] {
   padding: 40px;
 }
 
@@ -15360,4 +15368,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?8c715c824fa95e3a50537948b0391422*/
+/*# sourceMappingURL=app.css.map?624b542e940345677533dfc55f1b27ec*/
