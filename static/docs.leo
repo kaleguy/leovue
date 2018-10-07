@@ -1290,7 +1290,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.14.0
+LeoVue is currently at version 1.14.1
 
 LeoVue 1.14.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2415,7 +2415,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.14.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.14.1 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
