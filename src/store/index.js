@@ -173,6 +173,7 @@ function getUrlFromTitle (title, dataType) {
   if (/^[xh]ttp/.test(url)) { // xttp will result in http call via proxy
     return {url, label}
   }
+  /**
   let cname = window.lconfig.filename
   if (cname.indexOf('/') < 0) {
     cname = ''
@@ -184,6 +185,7 @@ function getUrlFromTitle (title, dataType) {
     u = util.chop(u, '/')
     url = u + '/' + url
   }
+   */
   return {url, label}
 }
 function showPresentation (context, title, id) {

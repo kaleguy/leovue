@@ -1,6 +1,8 @@
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Dependency Status](https://david-dm.org/kaleguy/leovue.svg)](https://david-dm.org/kaleguy/leovue)
 
+<div class="lv-md">
+
 # LeoVue
 
 Use the Open Source [Leo Outlining Editor](http://leoeditor.com) to create tree-based websites.
@@ -192,3 +194,5 @@ For detailed explanation on how Vue works with this project, check out the [guid
 Many thanks to **Edward K. Ream** for the uniquely useful Leo program.
 
 Many thanks to **Evan You** and the many contributors to the Vue project and Vue ecosystem.
+
+</div>
