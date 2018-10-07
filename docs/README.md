@@ -18,12 +18,12 @@ Tree nodes can load content from websites or files, including other .leo files.
 Leo is a cross platform desktop program that allows you to create outlined content,
 like the docs.leo file from this project shown below:
 
-![Leo](static/screencasts/leo.gif)
+![Leo](screencasts/leo.gif)
 
 
 ## LeoVue
 You can use LeoVue to view Leo files with a browser. LeoVue also allows you to put urls in node titles, with the content pane showing the url content.
-![Leo](static/screencasts/leovue.gif)
+![Leo](screencasts/leovue.gif)
 
 
 ## Outline Formats

@@ -2978,6 +2978,7 @@ CODE.hljs {
 .lv-md IMG {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 675px;
 }
 HTML, BODY {
   margin: 0;
@@ -3836,6 +3837,7 @@ CODE.hljs {
 .lv-md IMG {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 675px;
 }
 HTML, BODY {
   margin: 0;
@@ -15368,4 +15370,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?cae6e02a93dbe58137572fda4f354e4c*/
+/*# sourceMappingURL=app.css.map?f63a4ff88c5f9155785d6a0ea596b668*/
