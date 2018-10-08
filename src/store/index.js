@@ -17,11 +17,8 @@ const md = require('markdown-it')({
   linkify: true,
   typographer: true
 })
+
 const lunr = require('lunr')
-// const hljs = require('highlight.js')
-
-// console.log(util.sendGTag)
-
 function loadIndex (titles, text) {
   const docs = loadIndexItems([], titles, text)
   // return indexItems
@@ -1063,14 +1060,10 @@ export default new Vuex.Store({
     },
     // lunr search index
     RESETINDEX (state, o) {
-      if (_.isUndefined) {
-        console.log('No state in RESETINDEX') // TODO: this line needs fix
-        return
-      }
       const c = loadIndex(state.leodata, state.leotext)
       state.idx = c.idx
       state.idxDocs = c.docs
-      state.filename = o.filename
+      // state.filename = o.filename
     },
     ADDTEXT (state, o) {
       const text = o.text
