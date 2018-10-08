@@ -121,7 +121,7 @@ function loadLeoNode (context, item) {
       if (data.length === 1) {
         context.commit('RESET') // content item has not been drawn
         console.log('SUBTREE RESET')
-        context.dispatch('setCurrentItem', {id})
+        context.dispatch('setCurrentItem', {id, reset: true})
         data = data[0]
         item.children = data.children
         item.t = data.t
@@ -1244,7 +1244,7 @@ export default new Vuex.Store({
     // TODO: this is being called by loadSubtrees, fix logic (duplicate for openitems)
     setCurrentItem (context, o) {
       const id = o.id
-      if (o.id === context.state.currentItem.id) { return }
+      if (o.id === context.state.currentItem.id && !o.reset) { return }
       // if in iframe, just raise event and leave
       if (window.parent !== window.self) { return }
       // open parent nodes, close others

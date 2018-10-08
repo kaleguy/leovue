@@ -37,8 +37,8 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170421082838.1"></v>
 </v>
-<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
-<v t="josephorr.20170511083006.1"><vh>[Top](example.leo)</vh></v>
+<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
+<v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
 <v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
@@ -1039,7 +1039,7 @@ LeoVue can load .leo files into nodes in a parent .leo file.
 The child node of this node has the following title:
 
 ```
-[Top](example.leo)
+[Top](static/example.leo)
 ```
 Since the title points to a .leo file, the leo file is loaded into the node when the node is clicked.
 
