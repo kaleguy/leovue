@@ -22,10 +22,8 @@
     computed: {
       hasGithubRibbon: function () {
         if (window.lconfig.githubRibbon) {
-          console.log('HAS')
           return true
         }
-        console.log('DONT HAVE')
         return false
       },
       ribbonOptions: function () {

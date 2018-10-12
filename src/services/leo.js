@@ -274,9 +274,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
         }
       }
     }
-    console.log(cloneNodes)
-    // cloneNodes(xml, vnodes)
-
     let pid
     for (let i = 0; i < vnodes.length; i++) {
       pid = i + 1
@@ -285,7 +282,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       }
       vnodes[i].setAttribute('id', '"' + pid + '"')
     }
-    console.log('xml', xml)
     resolve({xml, textItems})
 
   })

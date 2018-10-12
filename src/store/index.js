@@ -603,7 +603,6 @@ function showSite (context, title, id, content) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        // html = util.formatText(html)
         showText(context, html, id)
         context.commit('CONTENT_PANE', {type: 'text'})
       })
@@ -754,8 +753,55 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setContentItems', {ids})
     context.dispatch('setCurrentItem', {id})
   })
+  loadLocalMD(ldata)
 }
 
+/**
+ * Load local markdown files
+ * @param data
+ */
+function loadLocalMD (ldata) {
+  const titles = ldata.data
+  const textItems = ldata.textItems
+  const paths = getLocalMDPaths(titles, [])
+  paths.forEach(path => {
+    const base = path.url.substring(0, path.url.lastIndexOf('/'))
+    axios.get(path.url)
+      .then((response) => {
+        let html = md.render(response.data)
+        html = '@language md\n<div class="md">' + html + '</div>'
+        html = util.replaceRelUrls(html, base)
+        path.item.name = path.label
+        textItems[path.item.t] = html
+      })
+      .catch(error => {
+        console.log('Cache load error:', error)
+      })
+  })
+}
+function getLocalMDPaths (data, arr) {
+  if (arr.length > 20) {
+    return arr
+  }
+  data.name = data.name || ''
+  const {url, label} = getUrlFromTitle(data.name)
+  if (/\.md$/.test(url) && !/http/.test(url)) {
+    const id = data.id
+    const item = data
+    arr.push({url, id, label, item})
+  }
+  let children = data.children
+  if (_.isArray(data)) {
+    children = data
+  }
+  if (!children) {
+    return arr
+  }
+  children.forEach(d => {
+    getLocalMDPaths(d, arr)
+  })
+  return arr
+}
 /**
  * Given a word path, find the matching node
  * @param p
