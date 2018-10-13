@@ -81,15 +81,6 @@ HTML, BODY
 H1
   margin: 4px
 
-#app
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  color: $mycolor
-  margin: 0
-  padding: 0
-  height: 100%
-
 .right-pane .text, .inline .text
   margin-top: 20px
   border: none

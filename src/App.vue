@@ -97,7 +97,6 @@
 @import './assets/wikipedia.css'
 @import '~leaflet/dist/leaflet.css'
 
-$mycolor: #2c3e50
 
 HTML, BODY
   margin: 0
@@ -106,9 +105,6 @@ HTML, BODY
   width: 100%
 
 #app
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
   color: $mycolor
   margin: 0
   padding: 0
