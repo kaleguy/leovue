@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @JSON array to subnodes
 - @formio directive
 - format @doc directive
+- history fix
 
 ## [1.14.1] - 2018-10-05
 ### Changed

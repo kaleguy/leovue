@@ -2462,7 +2462,7 @@ In other words, Leo can outline not just sites, but also individual documents.
 <t tx="josephorr.20181013125750.1">
 As a simple example of outlining, on &lt;a href="https://kaleguy.github.io/formiojs-client/#/t/24/"&gt;this site&lt;/a&gt;:
 
-&lt;img src="static/images/formiojs.png"&gt;
+&lt;img src="static/images/formiojs.png" width="700"&gt;
 
 In the above example, the file src/kitchen-sink.html has been imported into Leo using Leo's @clean directive. 
 
@@ -2470,9 +2470,9 @@ Then, the file has been chunked or outlined with Leo (see [[Chunking]]).
 
 The onload section has been selected.
 
-In the future, edits to src/kitchen-sink.html done in an IDE can be updated in the Leo outline using the Leo application, and 
+Going forward, edits to src/kitchen-sink.html done in an IDE can be updated in the Leo outline using the Leo application, and 
 then republished with LeoVue.
 
-This kind of outlining is useful when want to explain how a particular source file works in detail, as opposed to simply using an interface or API.</t>
+This kind of outlining is useful when you want to explain how a particular source file works in detail, as opposed to simply documenting an interface or API.</t>
 </tnodes>
 </leo_file>
