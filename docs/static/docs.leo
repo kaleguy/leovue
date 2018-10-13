@@ -40,7 +40,7 @@
 <v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -921,9 +921,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
         }
       }
     }
-    console.log(cloneNodes)
-    // cloneNodes(xml, vnodes)
-
     let pid
     for (let i = 0; i &lt; vnodes.length; i++) {
       pid = i + 1
@@ -932,7 +929,6 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       }
       vnodes[i].setAttribute('id', '"' + pid + '"')
     }
-    console.log('xml', xml)
     resolve({xml, textItems})
 
   })
@@ -2367,7 +2363,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       text="Create outlines with the Leo Outliner, display with LeoVue"
                       img-src="static/images/leovue1.png"
     &gt;&lt;/b-carousel-slide&gt;
-    
+
     &lt;b-carousel-slide caption="Multiple Tree Styles"
                       text="Tree view, graphical tree view, inline, or nested menus"
                       img-src="static/images/leovue1.1.png"
@@ -2409,7 +2405,10 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
                       text="Publish an outline of your code, Leo keeps IDE changes in sync"
                       img-src="static/images/leovue10.png"
     &gt;&lt;/b-carousel-slide&gt;
-
+    &lt;b-carousel-slide caption="Leo + Markdown + LeoVue = Wiki"
+                      text="Add links in Leo nodes or external markdown files to create a wiki."
+                      img-src="static/images/leovue11.png"
+    &gt;&lt;/b-carousel-slide&gt;
   &lt;/b-carousel&gt;
   &lt;div class="app-title"&gt;
      LeoVue
