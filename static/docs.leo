@@ -22,8 +22,11 @@
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
+<v t="josephorr.20181013124816.1" a="E"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
+<v t="josephorr.20181013125750.1"><vh>&lt;&lt; A simple outlining example &gt;&gt;</vh></v>
+</v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
@@ -605,8 +608,9 @@ Copy the files in the [dist folder at github](https://github.com/kaleguy/leovue)
 required, you can't simply open LeoVue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
- &lt;&lt; Running LeoVue from Github &gt;&gt;
-
+&lt;&lt; Running LeoVue from Github &gt;&gt;
+ 
+&lt;&lt; Using LeoVue for your Github Project &gt;&gt;
 
 The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
@@ -643,7 +647,10 @@ The second node in this section has the following title:
 [Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)
 ```
 
-This is a clone of one of the earlier nodes in this outline. In this case LeoVue fetches the document and converts it to HTML before displaying it.</t>
+This is a clone of one of the earlier nodes in this outline. In this case LeoVue fetches the document and converts it to HTML before displaying it.
+
+URL nodes are not loaded until clicked on, so the search box in the upper right of LeoVue will not be able 
+to locate any text in the node content until the node is clicked on.</t>
 <t tx="josephorr.20170408092907.1">@language javascript
 // import escape from 'escape-html'
 import axios from 'axios'
@@ -2437,5 +2444,35 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/p&gt;
 
 </t>
+<t tx="josephorr.20181013124816.1">
+A number of good solutions exist for documenting your Github project. For example, 
+&lt;a href="https://docsify.js.org/#/" target="_blank"&gt;Docsify&lt;/a&gt; allows you to create a site for your project using Markdown files. 
+
+Like Docsify, LeoVue can be used to create a site from your markdown files, with many features useful to code documentation, 
+such as syntax highlighting. 
+
+LeoVue additionally adds the ability to add more content in the Leo outline directly, and to create a complex nested menu. Entries in a Leo menu can point not just to markdown or code documents, but to subsections in documents, and these subsections 
+can be defined quickly in Leo. 
+
+In other words, Leo can outline not just sites, but also individual documents.
+
+&lt;&lt; A simple outlining example &gt;&gt;
+
+</t>
+<t tx="josephorr.20181013125750.1">
+As a simple example of outlining, on &lt;a href="https://kaleguy.github.io/formiojs-client/#/t/24/"&gt;this site&lt;/a&gt;:
+
+&lt;img src="static/images/formiojs.png"&gt;
+
+In the above example, the file src/kitchen-sink.html has been imported into Leo using Leo's @clean directive. 
+
+Then, the file has been chunked or outlined with Leo (see [[Chunking]]).
+
+The onload section has been selected.
+
+In the future, edits to src/kitchen-sink.html done in an IDE can be updated in the Leo outline using the Leo application, and 
+then republished with LeoVue.
+
+This kind of outlining is useful when want to explain how a particular source file works in detail, as opposed to simply using an interface or API.</t>
 </tnodes>
 </leo_file>
