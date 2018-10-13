@@ -753,14 +753,14 @@ function setData (context, ldata, filename, route) {
     context.dispatch('setContentItems', {ids})
     context.dispatch('setCurrentItem', {id})
   })
-  loadLocalMD(ldata)
+  loadLocalMD(context, ldata)
 }
 
 /**
  * Load local markdown files
  * @param data
  */
-function loadLocalMD (ldata) {
+function loadLocalMD (context, ldata) {
   const titles = ldata.data
   const textItems = ldata.textItems
   const paths = getLocalMDPaths(titles, [])
@@ -773,11 +773,27 @@ function loadLocalMD (ldata) {
         html = util.replaceRelUrls(html, base)
         path.item.name = path.label
         textItems[path.item.t] = html
+        indexPaths(context, paths, path)
       })
       .catch(error => {
+        indexPaths(context, paths, path)
         console.log('Cache load error:', error)
       })
   })
+}
+
+function indexPaths (context, paths, path) {
+  path.complete = true
+  let complete = true
+  paths.forEach(p => {
+    if (!p.complete) {
+      complete = false
+    }
+  })
+  if (complete) {
+    console.log('local md files loaded, resetting index.')
+    context.commit('RESETINDEX')
+  }
 }
 function getLocalMDPaths (data, arr) {
   if (arr.length > 20) {
