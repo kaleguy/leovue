@@ -2329,6 +2329,15 @@ LI.gallerybox {
 	}
 
 @charset "UTF-8";
+#app {
+  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 .section-title {
   font-size: 140px;
   font-weight: bold;
@@ -2348,7 +2357,6 @@ LI.gallerybox {
 }
 .cls-1, .cls-2 {
   stroke-miterlimit: 10;
-  font-family: Verdana;
 }
 .cls-2 {
   font-size: 40px;
@@ -2449,7 +2457,6 @@ BUTTON {
 .tooltip {
   display: block !important;
   z-index: 10000;
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
 }
 .tooltip .tooltip-inner {
     background: black;
@@ -2987,9 +2994,6 @@ HTML, BODY {
   width: 100%;
 }
 #app {
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin: 0;
   padding: 0;
@@ -3188,6 +3192,15 @@ section :link:focus, section :visited:focus {outline: none;
 
 
 @charset "UTF-8";
+#app {
+  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 .section-title {
   font-size: 140px;
   font-weight: bold;
@@ -3207,7 +3220,6 @@ section :link:focus, section :visited:focus {outline: none;
 }
 .cls-1, .cls-2 {
   stroke-miterlimit: 10;
-  font-family: Verdana;
 }
 .cls-2 {
   font-size: 40px;
@@ -3308,7 +3320,6 @@ BUTTON {
 .tooltip {
   display: block !important;
   z-index: 10000;
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
 }
 .tooltip .tooltip-inner {
     background: black;
@@ -3848,15 +3859,6 @@ HTML, BODY {
 H1 {
   margin: 4px;
 }
-#app {
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 .right-pane .text, .inline .text {
   margin-top: 20px;
   border: none;
@@ -3919,37 +3921,37 @@ a[data-v-289af36a] {
   height: 100%;
 }
 
-.check[data-v-f59d12e6] {
+.check[data-v-7b96c74e] {
   margin-top: 2px;
   margin-bottom: -3px;
 }
-.holder[data-v-f59d12e6] {
+.holder[data-v-7b96c74e] {
   padding: 0;
   margin: 0;
   width: 100%;
   z-index: 111;
 }
-.icon-box[data-v-f59d12e6] {
+.icon-box[data-v-7b96c74e] {
   width: 20px;
   margin-left: 20px;
   display: inline-block;
 }
-.menu-label[data-v-f59d12e6] {
+.menu-label[data-v-7b96c74e] {
   width: 80px;
   display: inline;
 }
-.menu-header[data-v-f59d12e6] {
+.menu-header[data-v-7b96c74e] {
   padding: 10px;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
 }
-.menu-item[data-v-f59d12e6] {
+.menu-item[data-v-7b96c74e] {
   padding: 4px;
   white-space: nowrap;
   cursor: pointer;
 }
-.menu[data-v-f59d12e6] {
+.menu[data-v-7b96c74e] {
   position: fixed;
   z-index: 111;
   top: 33px;
@@ -3962,11 +3964,11 @@ a[data-v-289af36a] {
   -webkit-transition: width .5s;
   transition: width .5s;
 }
-.menu-separator[data-v-f59d12e6] {
+.menu-separator[data-v-7b96c74e] {
   border-bottom: 1px solid #ddd;
   margin-top: 10px;
 }
-.header[data-v-f59d12e6] {
+.header[data-v-7b96c74e] {
   text-align: left;
   background: #eee;
   font-weight: normal;
@@ -3979,39 +3981,38 @@ a[data-v-289af36a] {
           box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
   height: 33px;
 }
-.search[data-v-f59d12e6] {
+.search[data-v-7b96c74e] {
   float: right;
-  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
   margin-right: 10px;
   font-size: 14px;
   margin-top: -1px;
   display: none;
 }
-.icon[data-v-f59d12e6] {
+.icon[data-v-7b96c74e] {
   float: right;
   padding: 0;
   padding-top: 2px;
   padding-right: 7px;
   color: #666;
 }
-.icon-button[data-v-f59d12e6] {
+.icon-button[data-v-7b96c74e] {
   cursor: pointer;
   margin: 0;
   padding: 0;
 }
-.vshim[data-v-f59d12e6] {
+.vshim[data-v-7b96c74e] {
   width: 8px;
   float: right;
 }
-.disabled[data-v-f59d12e6] {
+.disabled[data-v-7b96c74e] {
   color: #ccc;
 }
-.button-shim[data-v-f59d12e6] {
+.button-shim[data-v-7b96c74e] {
   width: 8px;
   float: right;
   height: 16px;
 }
-.app-title[data-v-f59d12e6] {
+.app-title[data-v-7b96c74e] {
   font-weight: normal;
   color: #333;
   margin-left: 10px;
@@ -4022,10 +4023,10 @@ a[data-v-289af36a] {
   display: inline-block;
   text-align: center;
 }
-.doc-title[data-v-f59d12e6] {
+.doc-title[data-v-7b96c74e] {
   font-weight: bold;
 }
-.menu-footer[data-v-f59d12e6] {
+.menu-footer[data-v-7b96c74e] {
   color: #fff;
   position: absolute;
   bottom: 60px;
@@ -4034,7 +4035,7 @@ a[data-v-289af36a] {
   text-decoration: none;
   cursor: pointer;
 }
-.searchbar[data-v-f59d12e6] {
+.searchbar[data-v-7b96c74e] {
   margin-top: -6px;
   margin-right: 15px;
   float: right;
@@ -15370,4 +15371,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?f63a4ff88c5f9155785d6a0ea596b668*/
+/*# sourceMappingURL=app.css.map?8cb29c6424fed08d777c7767e3adf15c*/

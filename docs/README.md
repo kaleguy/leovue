@@ -114,7 +114,8 @@ npm run build --report
 
 ## Static Site Builder
 
-This project includes a utility to generate a static site. The outline tree becomes a standalone page, as do each of the content items. These are simple HTML pages with no javascript, so Vue components in content don't work. This feature is generating a site that is easily crawlable, for example for SEO. The pages are very basic at the moment because they aren't really intended for viewing, but styles could be added to make them more presentable.
+This project includes a utility to generate a static site. The outline tree becomes a standalone page, as do each of the content items. These are simple HTML pages with no javascript, so Vue components in content don't work.
+This feature is for generating a site that is easily crawlable, for example for SEO. The pages are very basic at the moment because they aren't really intended for viewing, but styles could be added to make them more presentable.
 
 To generate the static site:
 
@@ -152,6 +153,7 @@ Main feature components:
 Major Content Components:
 
 * [Vue-Chartjs](https://github.com/apertureless/vue-chartjs) - Charts
+* [Bootstrap-Vue](https://bootstrap-vue.js.org/) - Multiple Components
 * [Vue-Table-Component](https://github.com/spatie/vue-table-component) - Tables
 * [Mermaid](https://mermaidjs.github.io/) - Diagrams
 * [MathJax](https://www.mathjax.org/) - Math Notation
