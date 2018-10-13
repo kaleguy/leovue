@@ -99,6 +99,14 @@ Leo outline (or portion of an outline) as a Kanban.
 
 <div class="hshim"></div>
 
+### Leo + Markdown + LeoVue = Wiki
+
+Put internal links in content to Leo nodes. Leo nodes can point to external files, including
+markdown files. Local markdown files are preloaded so that they are searchable. Publish with LeoVue.
+
+<div class="hshim"></div>
+
+
 ### And More...
 
 See the online documentation for detailed working examples, or fork the repo to
