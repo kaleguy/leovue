@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - history fix
 
+## [1.14.3-5] - 2018-10-14
+### Changed
+- removed unneeded files from npm package
+
 ## [1.14.2] - 2018-10-14
 ### Changed
 - patched sectionlinks in external html files
