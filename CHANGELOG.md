@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - history fix
 
+## [1.14.2] - 2018-10-14
+### Changed
+- patched sectionlinks in external html files
+
 ## [1.14.1] - 2018-10-05
 ### Changed
 - patched replace url function

@@ -639,7 +639,7 @@ function setSiteItem (context, title, id) {
         let html = md.render(response.data)
         html = '@language md\n<div class="md">' + html + '</div>'
         html = util.replaceRelUrls(html, base)
-        html = util.formatText(html)
+        // html = util.formatText(html)
         const newItem = {
           id: id,
           t: html

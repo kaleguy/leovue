@@ -11,7 +11,7 @@
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
@@ -22,7 +22,7 @@
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 <v t="josephorr.20181013124816.1" a="E"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
 <v t="josephorr.20181013125750.1"><vh>&lt;&lt; A simple outlining example &gt;&gt;</vh></v>
@@ -40,10 +40,10 @@
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170421082838.1"></v>
 </v>
-<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
+<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -56,7 +56,7 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
@@ -64,11 +64,11 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 </v>
-<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -608,9 +608,10 @@ Copy the files in the [dist folder at github](https://github.com/kaleguy/leovue)
 required, you can't simply open LeoVue index.html file from your local file system. If you want to view
 files on your local machine without a server, use a node utility like 'http-server'.
 
-&lt;&lt; Running LeoVue from Github &gt;&gt;
- 
+&lt;p&gt;
+&lt;&lt; Running LeoVue from Github &gt;&gt; 
 &lt;&lt; Using LeoVue for your Github Project &gt;&gt;
+&lt;/p&gt;
 
 The leo file that LeoVue displays is located at 'static/docs.leo'. You can edit this leo file using the Leo program
 or replace it with your own file. You can change the name of the leo file that is loaded by editing the configuration
@@ -1294,7 +1295,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.14.1
+LeoVue is currently at version 1.14.2
 
 LeoVue 1.14.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2422,7 +2423,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.14.1 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.14.2 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

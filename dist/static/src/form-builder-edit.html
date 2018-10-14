@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js'></script>
+    <script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
+    <style type="text/css">
+        BODY {
+            padding: 20px;
+            padding-right: 40px;
+        }
+        TEXTAREA {
+            width: 100%;
+            font-family: "Courier New";
+            height: 200px;
+        }
+        BUTTON {
+            margin-top: 4px;
+        }
+        #json {
+            border: 1px solid #555;
+            padding: 20px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<h3>Form Builder</h3>
+<div id="builder"></div>
+<h3>Form JSON</h3>
+<textarea id="edit-json"></textarea>
+<button onclick="updateBuilder()" class="btn btn-primary">Update Builder</button>
+</body>
+<script type='text/javascript'>
+  var jsonElement = document.getElementById('json');
+  var jsonEditElement = document.getElementById('edit-json');
+  function setupBuilder(components) {
+    var builder = new Formio.FormBuilder(document.getElementById("builder"), {
+      display: 'form',
+      components,
+      settings: {}
+    }, {
+      baseUrl: ''
+    });
+    builder.setDisplay('form').then(function (instance) {
+      instance.on('change', function (form) {
+        formRef = form;
+        if (form.components) {
+          jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
+        }
+      });
+    });
+  }
+  function updateBuilder() {
+     components = jsonEditElement.value;
+     try {
+       var form = JSON.parse(components);
+       var components = form.components;
+       if (_.isArray(components)) {
+         setupBuilder(components);
+         console.log(components);
+       }
+     } catch (e) {
+       alert(e);
+       console.log(e);
+     }
+  }
+  setupBuilder([])
+</script>
+</html>
+

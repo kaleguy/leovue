@@ -5349,7 +5349,7 @@ p {
   stroke-width: 1.5px;
 }
 
-.settings[data-v-c47a44be] {
+.settings[data-v-7436e6e2] {
   padding: 40px;
 }
 
@@ -15254,13 +15254,12 @@ TD.number {
   margin-right: auto;
 }
 
-.section-link[data-v-2bfed193] {
+.section-link[data-v-6b1820be] {
   color: #4cb986;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
-  margin-bottom: 1rem;
+  display: block;
 }
 
 .node-link[data-v-2d139bd3] {
@@ -15371,4 +15370,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?8cb29c6424fed08d777c7767e3adf15c*/
+/*# sourceMappingURL=app.css.map?231f2b67365034b66e427737daf3ab94*/

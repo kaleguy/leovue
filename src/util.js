@@ -117,11 +117,15 @@ function formatText (text, noWrapper) {
       text = text.replace(/(@docs|others)/g, '<span class="directive" title="Leo Directive - does not appear in source file.">$1</span>')
       break
     case 'htmlsource':
-      muv = hljs.highlight('javascript', text)
+      muv = hljs.highlight('html', text)
       text = muv.value
       text = text.replace(/(@\w+)/, '<span class="directive" title="Leo Directive - does not appear in source file.">$1</span>')
       text = text.replace(/@others/g, '<span class="directive" title="Leo Directive: rest of tree goes here.">@others</span>')
       text = `<pre>${text}</pre>`
+      // hack to put section link component back in
+      const re = /<span class="hljs-tag">&lt;<span class="hljs-name">sectionlink<\/span> <span class="hljs-attr">:title<\/span>=<span class="hljs-string">"' (.*?) '"<\/span>\/&gt;<\/span>/g
+      const sl = '<sectionlink :title="\' $1 \'"/>'
+      text = text.replace(re, sl) // put back section directive
       break
     case 'VueComponent':
       muv = hljs.highlight('javascript', text)
