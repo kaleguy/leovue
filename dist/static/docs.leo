@@ -1295,7 +1295,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.14.2
+LeoVue is currently at version 1.14.5
 
 LeoVue 1.14.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2063,7 +2063,7 @@ The real name of user D is Pat.</t>
 A LeoVue URL looks like this:
 &lt;/p&gt;
 
-&lt;a href="https://kaleguy.github.io/leovue/#/t/8/"&gt;https://kaleguy.github.io/leovue/#/t/8/&lt;/a&gt;
+&lt;a target="_blank" href="https://kaleguy.github.io/leovue/#/t/8/"&gt;https://kaleguy.github.io/leovue/#/t/8/&lt;/a&gt;
 
 &lt;p&gt;
 The format is: # + display type + node number.
@@ -2071,7 +2071,7 @@ The format is: # + display type + node number.
 &lt;p&gt;
 You can use a more readable format for bookmarking or distributing URLs:
 &lt;/p&gt;
-&lt;a href="https://kaleguy.github.io/leovue/#/t/More About LeoVue"&gt;https://kaleguy.github.io/leovue/#/t/More About LeoVue&lt;/a&gt;
+&lt;a  target="_blank" href="https://kaleguy.github.io/leovue/#/t/More About LeoVue"&gt;https://kaleguy.github.io/leovue/#/t/More About LeoVue&lt;/a&gt;
 &lt;p&gt;
 In other words, you can replace the node number with the node title.
 &lt;/p&gt;
@@ -2079,15 +2079,16 @@ In other words, you can replace the node number with the node title.
 You can also specify a parent node, using this syntax:
 &lt;/p&gt;
 
-&lt;a href="https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something&lt;/a&gt;
+&lt;a  target="_blank" href="https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something&lt;/a&gt;
 
+&lt;!--
 &lt;p&gt;
 Nodes using the @outline directive (which loads and outlines a target site) use a different format,
 the outline node name must be specified first, then an asterisk, then the node title.
 &lt;/p&gt;
 
 &lt;a href="https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology"&gt;https://kaleguy.github.io/leovue/#/t/Dinosaurs*Etymology&lt;/a&gt;
-</t>
+--&gt;</t>
 <t tx="josephorr.20180331164142.1">@language md
 
 Using the @rss directive, you can retrieve and format RSS content.
@@ -2423,7 +2424,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.14.2 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.14.5 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -2443,6 +2444,10 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;p&gt;
 &lt;a href="https://kaleguy.github.io/formiojs-client/#/t/1/" target="_blank"&gt;Formio.js Client&lt;/a&gt;
 &lt;/p&gt;
+&lt;p&gt;
+&lt;a href="https://kaleguy.github.io/leo-examples" target="_blank"&gt;More Examples&lt;/a&gt;
+&lt;/p&gt;
+
 
 </t>
 <t tx="josephorr.20181013124816.1">
