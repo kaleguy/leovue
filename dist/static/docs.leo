@@ -2079,7 +2079,7 @@ In other words, you can replace the node number with the node title.
 You can also specify a parent node, using this syntax:
 &lt;/p&gt;
 
-&lt;a  target="_blank" href="https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~A Note About Something&lt;/a&gt;
+&lt;a  target="_blank" href="https://kaleguy.github.io/leovue/#/t/Sample Content~Javascript"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~Javascript&lt;/a&gt;
 
 &lt;!--
 &lt;p&gt;
