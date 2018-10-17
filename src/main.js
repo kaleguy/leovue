@@ -20,8 +20,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // content components
 import Vue2Leaflet from 'vue2-leaflet'
 import InfoCard from 'vue-info-card'
-import VueTabs from 'vue-nav-tabs'
-import 'vue-nav-tabs/themes/vue-tabs.scss'
 import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import VTable from './components/Table'
@@ -44,7 +42,6 @@ charts(Vue)
 const Defiant = require('./lib/defiant') // eslint-disable-line
 
 Vue.use(VTooltip)
-Vue.use(VueTabs)
 Vue.use(VueYouTubeEmbed)
 Vue.use(ForkeMeOnGithub)
 Vue.use(BootstrapVue)

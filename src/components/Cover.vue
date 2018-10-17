@@ -24,6 +24,11 @@
       dynComponent () {
         // const id = this.$store.state.currentRoute
         const current = _.get(this.$router, 'currentRoute.params.id', 1)
+        // if it is a title based route, close the cover page
+        if (/[A-Za-z]/.test(current)) {
+          return this.$store.commit('RESETCOVER', {cover: ''})
+        }
+        // if it is not first page close cover page
         if (+current > 2) {
           return this.$store.commit('RESETCOVER', { cover: '' })
         }

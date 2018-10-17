@@ -1738,7 +1738,8 @@ LI.gallerybox {
 .leaflet-container .leaflet-marker-pane img,
 .leaflet-container .leaflet-shadow-pane img,
 .leaflet-container .leaflet-tile-pane img,
-.leaflet-container img.leaflet-image-layer {
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
 	max-width: none !important;
 	max-height: none !important;
 	}
@@ -1861,7 +1862,6 @@ LI.gallerybox {
 	opacity: 0;
 	-webkit-transition: opacity 0.2s linear;
 	   -moz-transition: opacity 0.2s linear;
-	     -o-transition: opacity 0.2s linear;
 	        transition: opacity 0.2s linear;
 	}
 .leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
@@ -1878,14 +1878,12 @@ LI.gallerybox {
 .leaflet-zoom-anim .leaflet-zoom-animated {
 	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
 	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
-	     -o-transition:      -o-transform 0.25s cubic-bezier(0,0,0.25,1);
 	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
 	}
 .leaflet-zoom-anim .leaflet-tile,
 .leaflet-pan-anim .leaflet-tile {
 	-webkit-transition: none;
 	   -moz-transition: none;
-	     -o-transition: none;
 	        transition: none;
 	}
 
@@ -1902,6 +1900,7 @@ LI.gallerybox {
 .leaflet-grab {
 	cursor: -webkit-grab;
 	cursor:    -moz-grab;
+	cursor:         grab;
 	}
 .leaflet-crosshair,
 .leaflet-crosshair .leaflet-interactive {
@@ -1917,6 +1916,7 @@ LI.gallerybox {
 	cursor: move;
 	cursor: -webkit-grabbing;
 	cursor:    -moz-grabbing;
+	cursor:         grabbing;
 	}
 
 /* marker & overlays interactivity */
@@ -2187,7 +2187,6 @@ LI.gallerybox {
 	-webkit-transform: rotate(45deg);
 	   -moz-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
-	     -o-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	}
 .leaflet-popup-content-wrapper,
@@ -15093,130 +15092,6 @@ table.b-table.b-table-stacked > tbody > tr > [data-label]::before {
 table.b-table > tbody > tr.b-table-details > td {
     border-top: none;
 }
-.vue-tabs.stacked {
-  display: flex; }
-
-.vue-tabs .tabs__link {
-  text-decoration: none;
-  color: gray; }
-
-.vue-tabs .nav {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 0;
-  list-style: none; }
-  .vue-tabs .nav:before, .vue-tabs .nav:after {
-    content: " ";
-    display: table; }
-  .vue-tabs .nav:after {
-    clear: both; }
-  .vue-tabs .nav > li {
-    position: relative;
-    display: block; }
-    .vue-tabs .nav > li > a {
-      position: relative;
-      display: block;
-      padding: 10px 15px; }
-      .vue-tabs .nav > li > a:hover, .vue-tabs .nav > li > a:focus {
-        text-decoration: none;
-        background-color: #eeeeee; }
-    .vue-tabs .nav > li span.title {
-      display: flex;
-      justify-content: center; }
-    .vue-tabs .nav > li.disabled > a {
-      color: #777777; }
-      .vue-tabs .nav > li.disabled > a:hover, .vue-tabs .nav > li.disabled > a:focus {
-        color: #777777;
-        text-decoration: none;
-        cursor: not-allowed;
-        background-color: transparent;
-        border-color: transparent; }
-  .vue-tabs .nav .nav-divider {
-    height: 1px;
-    margin: 9px 0;
-    overflow: hidden;
-    background-color: #e5e5e5; }
-  .vue-tabs .nav > li > a > img {
-    max-width: none; }
-
-.vue-tabs .nav-tabs {
-  border-bottom: 1px solid #ddd; }
-  .vue-tabs .nav-tabs > li {
-    float: left;
-    margin-bottom: -1px; }
-    .vue-tabs .nav-tabs > li > a {
-      margin-right: 2px;
-      line-height: 1.42857;
-      border: 1px solid transparent;
-      border-radius: 4px 4px 0 0; }
-      .vue-tabs .nav-tabs > li > a:hover {
-        border-color: #eeeeee #eeeeee #ddd; }
-    .vue-tabs .nav-tabs > li.active > a, .vue-tabs .nav-tabs > li.active > a:hover, .vue-tabs .nav-tabs > li.active > a:focus {
-      color: #555555;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-bottom-color: transparent;
-      cursor: default; }
-
-.vue-tabs .nav-pills > li {
-  float: left; }
-  .vue-tabs .nav-pills > li > a {
-    border-radius: 4px; }
-  .vue-tabs .nav-pills > li + li {
-    margin-left: 2px; }
-  .vue-tabs .nav-pills > li.active > a, .vue-tabs .nav-pills > li.active > a:hover, .vue-tabs .nav-pills > li.active > a:focus {
-    color: #fff;
-    background-color: #337ab7; }
-
-.vue-tabs .nav-stacked > li {
-  float: none; }
-  .vue-tabs .nav-stacked > li + li {
-    margin-top: 2px;
-    margin-left: 0; }
-
-.vue-tabs .nav-justified, .vue-tabs .nav-tabs.nav-justified {
-  width: 100%; }
-  .vue-tabs .nav-justified > li, .vue-tabs .nav-tabs.nav-justified > li {
-    float: none; }
-    .vue-tabs .nav-justified > li > a, .vue-tabs .nav-tabs.nav-justified > li > a {
-      text-align: center;
-      margin-bottom: 5px; }
-  .vue-tabs .nav-justified > .dropdown .dropdown-menu {
-    top: auto;
-    left: auto; }
-  @media (min-width: 768px) {
-    .vue-tabs .nav-justified > li, .vue-tabs .nav-tabs.nav-justified > li {
-      display: table-cell;
-      width: 1%; }
-      .vue-tabs .nav-justified > li > a, .vue-tabs .nav-tabs.nav-justified > li > a {
-        margin-bottom: 0; } }
-
-.vue-tabs .nav-tabs-justified, .vue-tabs .nav-tabs.nav-justified {
-  border-bottom: 0; }
-  .vue-tabs .nav-tabs-justified > li > a, .vue-tabs .nav-tabs.nav-justified > li > a {
-    margin-right: 0;
-    border-radius: 4px; }
-  .vue-tabs .nav-tabs-justified > .active > a, .vue-tabs .nav-tabs.nav-justified > .active > a,
-  .vue-tabs .nav-tabs-justified > .active > a:hover, .vue-tabs .nav-tabs.nav-justified > .active > a:hover,
-  .vue-tabs .nav-tabs-justified > .active > a:focus, .vue-tabs .nav-tabs.nav-justified > .active > a:focus {
-    border: 1px solid #ddd; }
-  @media (min-width: 768px) {
-    .vue-tabs .nav-tabs-justified > li > a, .vue-tabs .nav-tabs.nav-justified > li > a {
-      border-bottom: 1px solid #ddd;
-      border-radius: 4px 4px 0 0; }
-    .vue-tabs .nav-tabs-justified > .active > a, .vue-tabs .nav-tabs.nav-justified > .active > a,
-    .vue-tabs .nav-tabs-justified > .active > a:hover, .vue-tabs .nav-tabs.nav-justified > .active > a:hover,
-    .vue-tabs .nav-tabs-justified > .active > a:focus, .vue-tabs .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #fff; } }
-
-.vue-tabs .tab-content > .tab-pane {
-  display: none; }
-
-.vue-tabs .tab-content > .active {
-  display: block; }
-
-.vue-tabs section[aria-hidden="true"] {
-  display: none; }
 
 TABLE[data-v-4f105438] {
   border: 1px solid #ccc;
@@ -15370,4 +15245,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?32e40f604a9d9f86db9e9c2d74990885*/
+/*# sourceMappingURL=app.css.map?806b4adf9b6a138a72f4ec935aabba73*/
