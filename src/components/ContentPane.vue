@@ -138,6 +138,9 @@ export default {
       // const currentItem = { id }
       // this.$store.commit('RESET')
       this.$store.dispatch('setCurrentItem', {id})
+    },
+    dataTableClick (r) {
+      console.log('ROW CLICK', r)
     }
   },
   computed: {

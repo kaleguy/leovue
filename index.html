@@ -84,7 +84,8 @@
   </div>
 </div>
 <!-- templates -->
-<script type="text/template" id="rgarticle">
+<script type="text/template"
+        id="rgarticle">
   <div class="rg">
     <div class="publication-header">
       <h1>{{- data.title }}</h1>
@@ -124,6 +125,37 @@
     </div>
   </div>
 </script>
+<script type="text/template"
+        id="rgarticle-brief">
+  <div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.title.text }}</h1>
+      <div class="publication-meta-text">
+        <span> {{- data['type'].text}}: {{- data.date }} with {{- data.reads }}</span>
+      </div>
+      <div>
+        <ul>
+          {{ data.authors.forEach(author => { }}
+          <li class="publication-author-list__item_brief">
+            <div>
+              <a target="_blank" href="http://researchget.net/{{- author.author.href }}" >{{- author.author.text }}</a>
+            </div>
+          </li>
+          {{ }) }}
+        </ul>
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="https://www.researchgate.net/{{- data.title.href}}">See this article on ResearchGate.</a>
+      </div>
+    </div>
+  </div>
+</script>
 <script type="text/template" id="rgauthor">
   <div class="rg">
     <h2>Author</h2>
@@ -144,6 +176,7 @@
 <script type="text/template" id="rgarticles">
 <div class="table-component">
   <table-component
+    @rowClick="this.$parent.dataTableClick"
     :data="[
     {{ data.articles.forEach(article => { }}
       {{ if (article.type.text === 'Article') { }}

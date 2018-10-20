@@ -2154,7 +2154,9 @@ source: OpenWeather Map
 ```
 
 By default, LeoVue comes with just a 'weather' template for JSON data from OpenWeather Map. This template is in lib/lodash-template.js. You can add more
-templates to this file to format other JSON data sources.</t>
+templates to this file to format other JSON data sources.
+
+You can also add templates directly to index.html. See the index.html in the LeoVue repo for examples.</t>
 <t tx="josephorr.20180407102553.1">template: weather
 location: NYC Central Park
 source: OpenWeather Map</t>
@@ -2487,7 +2489,7 @@ nodeList: articles
 filter:
   key: type.text
   value: Article
-childTemplate: rgarticle
+childTemplate: rgarticle-brief
 urlIsQueryString: true</t>
 </tnodes>
 </leo_file>

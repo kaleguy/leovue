@@ -1,4 +1,7 @@
 import _ from 'lodash'
+import jsyaml from 'js-yaml'
+import lodashTemplate from './lib/lodash-template'
+
 const hljs = require('highlight.js')
 // const pug = require('pug')
 const md = require('markdown-it')({
@@ -98,6 +101,12 @@ function formatText (text, noWrapper) {
   let mu = ''
   let muv = null
   switch (language) {
+    case 'yaml':
+      const data = jsyaml.load(text.replace('@language yaml', ''))
+      console.log('YAML DATA..........', data)
+      const template = _.get(data, 'params.template', '')
+      text = lodashTemplate.render(data, template)
+      break
     case 'text':
       text = `<div class="text">${text}</div>`
       break

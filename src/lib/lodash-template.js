@@ -81,7 +81,8 @@ function render (json, templateType) {
   }
   templateString = templateString || templates[templateType]
   if (!templateString) {
-    return (Promise.resolve('<h2>No Matching Template</h2>'))
+    // return (Promise.resolve('<h2>No Matching Template</h2>'))
+    return '<h2>No Matching Template</h2>'
   }
   const compiled = _.template(templateString)
   let html = '<h2>Template Compilation Error</h2>'
@@ -90,7 +91,8 @@ function render (json, templateType) {
   } catch (e) {
     console.log('Template compilation error: ', templateType, e)
   }
-  return Promise.resolve(html)
+  // return Promise.resolve(html)
+  return html
 }
 
 export default { render }

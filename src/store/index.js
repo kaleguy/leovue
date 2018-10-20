@@ -61,8 +61,10 @@ function showText (context, text, id, nowrapper, params) {
     return
   }
   text = util.formatText(text, nowrapper)
+
   // current (user selected) content item
   context.commit('CURRENT_ITEM_CONTENT', { text })
+
   // hash of all content items
   const newItem = { id, t: text }
   context.commit('CONTENT_ITEM', {item: newItem})
@@ -259,23 +261,25 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       let data = response.data
       if (dataType === 'json') {
         data.params = params
+        if (params.nodeList) {
+          data.params.displayType = 'board'
+        }
       }
       // const currentText = context.state.leotext[t]
       // const text = hljs.highlight('javascript', JSON.stringify(data)).value
-      const text = JSON.stringify(data, null, 2)
+      let text = JSON.stringify(data, null, 2)
       context.state.leotext[t] = text
-      templateEngines[dataType].render(data, xslType).then(html => {
-        showText(context, html, id, null, params)
-        if (params && params.nodeList) {
-          let dataArray = data[params.nodeList]
-          if (params.filter) {
-            const filter = params.filter
-            dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
-          }
-          const template = params.childTemplate || ''
-          addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString)
+      const html = templateEngines[dataType].render(data, xslType)
+      showText(context, html, id, null, params)
+      if (params && params.nodeList) {
+        let dataArray = data[params.nodeList]
+        if (params.filter) {
+          const filter = params.filter
+          dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
         }
-      })
+        const template = params.childTemplate || ''
+        addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString, params.urlTitle, params.childTemplate)
+      }
     })
     .catch(function (error) {
       console.log(error)
@@ -291,7 +295,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
  * @param urlIsQueryString: use just the portion of the url after last '/' (will be passed to template host)
  * @returns {boolean}
  */
-function addChildNodes (context, parentId, data, template, urlIsQueryString) {
+function addChildNodes (context, parentId, data, template, urlIsQueryString, urlTitle, childTemplate) {
   if (!_.isArray(data)) { return }
   const item = JSON.search(context.leodata, '//*[id="' + parentId + '"]')[0]
   const children = []
@@ -299,6 +303,7 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
     template = '-' + template
   }
   data.forEach((n, index) => {
+    _.set(n, 'params.template', childTemplate)
     let name = n.name
     let vtitle = name
     let url = n.title.href
@@ -307,14 +312,18 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString) {
       url = url.substring(url.lastIndexOf('/') + 1)
     }
     if (n.title) {
-      name = `@json${template} [${n.title.text}](${url})`
       vtitle = n.title.text
+    }
+    const id = parentId + '-' + index
+    if (urlTitle) {
+      name = `@json${template} [${n.title.text}](${url})`
+    } else {
+      name = `@dataSet set${id} ${n.title.text}`// label
     }
     vtitle = vtitle.replace(/<</g, '\u00AB').replace(/>>/g, '\u00BB')
     console.log(vtitle)
-    const id = parentId + '-' + index
     const t = id
-    context.leotext[t] = '' // TODO: does this need to be same format as other t (timestamp)
+    context.leotext[t] = JSON.stringify(n) // TODO: does this need to be same format as other t (timestamp)
     children.push(
       { name, id, vtitle, t }
     )
@@ -342,11 +351,10 @@ function showBook (context, item, url, params) {
       item.name = bookData.title.split(' ').map(w => _.capitalize(w)).join(' ')
       item.loaded = true
       data.params = params
-      lodashTemplate.render(data, 'openbooks').then(html => {
-        showText(context, html, id, null, params)
-        context.commit('CONTENT_ITEM_UPDATE')
-        context.state.leotext[item.t] = html
-      })
+      const html = lodashTemplate.render(data, 'openbooks')
+      showText(context, html, id, null, params)
+      context.commit('CONTENT_ITEM_UPDATE')
+      context.state.leotext[item.t] = html
     })
     .catch(function (error) {
       console.log(error)
@@ -1344,9 +1352,8 @@ export default new Vuex.Store({
           console.log('data', itemData)
           const template = _.get(itemData, 'params.template', '')
           if (template) {
-            lodashTemplate.render(itemData, template).then(html => {
-              showText(context, html, id, null, {})
-            })
+            const html = lodashTemplate.render(itemData, template)
+            return showText(context, html, id, null, _.get(itemData, 'params', {}))
           }
         }
         if (/^@rss/.test(item.name)) {
