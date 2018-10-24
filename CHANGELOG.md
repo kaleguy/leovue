@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 - history fix
+- JSON data -> node list
 
 ## [1.14.3-5] - 2018-10-14
 ### Changed

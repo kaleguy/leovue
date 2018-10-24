@@ -156,6 +156,29 @@
     </div>
   </div>
 </script>
+<script type="text/template"
+        id="repec">
+  <div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.bibliographic.name }}</h1>
+      <div>
+         {{- data.author }}
+      </div>
+      <div class="series">
+        {{- data.series && data.series.name }} ({{- data.bibliographic.creation_date || data.bibliographic.year }})
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="{{- data.link}}">See this article on IDEAS.</a>
+      </div>
+    </div>
+  </div>
+</script>
 <script type="text/template" id="rgauthor">
   <div class="rg">
     <h2>Author</h2>
@@ -197,6 +220,24 @@
     <table-column show="readNum" label="R" data-type="numeric" :hidden="true" ></table-column>
   </table-component>
 </div>
+</script>
+<script type="text/template" id="repec-articles">
+  <div class="table-component">
+    <table-component
+      @rowClick="this.$parent.dataTableClick"
+      :data="[
+      {{ data.articles.forEach(article => { }}
+        {
+          title: '<div>{{- article.bibliographic.name}}</div>',
+          year: '<div>{{- article.bibliographic.creation_date || article.bibliographic.year }}</div>'
+        },
+      {{ }) }}
+     ]"
+      sort-order="asc">
+      <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
+      <table-column show="year" label="Year" header-class="data-cell" cell-class="data-cell"></table-column>
+    </table-component>
+  </div>
 </script>
 <script type="text/template" id="rgcitations">
 CITATIONS

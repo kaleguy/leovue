@@ -251,10 +251,12 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       encodeURIComponent('select * from xml where url="' +
         url + '"') + '&format=xml'
   }
+  /*
   const templateEngines = {
     'xml': xsl,
     'json': lodashTemplate
   }
+  */
   context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
   axios.get(query)
     .then((response) => {
@@ -269,7 +271,13 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       // const text = hljs.highlight('javascript', JSON.stringify(data)).value
       let text = JSON.stringify(data, null, 2)
       context.state.leotext[t] = text
-      const html = templateEngines[dataType].render(data, xslType)
+
+      if (dataType === 'xml') {
+        return xsl.render(data, xslType).then(html => {
+          showText(context, html, id, null, params)
+        })
+      }
+      const html = lodashTemplate.render(data, xslType)
       showText(context, html, id, null, params)
       if (params && params.nodeList) {
         let dataArray = data[params.nodeList]
@@ -278,7 +286,8 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
           dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
         }
         const template = params.childTemplate || ''
-        addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString, params.urlTitle, params.childTemplate)
+        addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString,
+          params.urlTitle, params.childTemplate, params.titleKey)
       }
     })
     .catch(function (error) {
@@ -295,7 +304,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
  * @param urlIsQueryString: use just the portion of the url after last '/' (will be passed to template host)
  * @returns {boolean}
  */
-function addChildNodes (context, parentId, data, template, urlIsQueryString, urlTitle, childTemplate) {
+function addChildNodes (context, parentId, data, template, urlIsQueryString, urlTitle, childTemplate, titleKey) {
   if (!_.isArray(data)) { return }
   const item = JSON.search(context.leodata, '//*[id="' + parentId + '"]')[0]
   const children = []
@@ -304,24 +313,25 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString, url
   }
   data.forEach((n, index) => {
     _.set(n, 'params.template', childTemplate)
-    let name = n.name
-    let vtitle = name
-    let url = n.title.href
-    if (urlIsQueryString) {
-      url = '/' + url
-      url = url.substring(url.lastIndexOf('/') + 1)
-    }
+    const id = parentId + '-' + index
+    titleKey = titleKey || 'title.text'
+    let titleText = _.get(n, titleKey, 'NO TITLE')
+    let name = titleText
+    let vtitle = titleText
     if (n.title) {
       vtitle = n.title.text
     }
-    const id = parentId + '-' + index
     if (urlTitle) {
-      name = `@json${template} [${n.title.text}](${url})`
+      let url = n.title.href
+      if (urlIsQueryString) {
+        url = '/' + url
+        url = url.substring(url.lastIndexOf('/') + 1)
+      }
+      name = `@json${template} [${titleText}](${url})`
     } else {
-      name = `@dataSet set${id} ${n.title.text}`// label
+      name = `@dataSet set${id} ${titleText}`// label
     }
     vtitle = vtitle.replace(/<</g, '\u00AB').replace(/>>/g, '\u00BB')
-    console.log(vtitle)
     const t = id
     context.leotext[t] = JSON.stringify(n) // TODO: does this need to be same format as other t (timestamp)
     children.push(
@@ -701,7 +711,6 @@ function extractCover (ldata) {
  * @param route
  */
 function setData (context, ldata, filename, route) {
-  console.log(ldata)
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
   let cover = extractCover(ldata) // cover page, pull out any nodes with @cover directive
@@ -1245,7 +1254,6 @@ export default new Vuex.Store({
             console.log('msg:', event.data)
           }
         }
-        console.log('MDATA', data)
         if (data.namespace === 'leovue' && data.eventName === 'setcurrentitem') {
           const id = data.state.id
           context.dispatch('setCurrentItem', {id})
@@ -1347,9 +1355,7 @@ export default new Vuex.Store({
         }
         // if dataSet has a param.template, render the transformed html
         if (/^@dataSet/.test(item.name)) {
-          console.log('DATASET', item.name)
           const itemData = JSON.parse(itemText)
-          console.log('data', itemData)
           const template = _.get(itemData, 'params.template', '')
           if (template) {
             const html = lodashTemplate.render(itemData, template)

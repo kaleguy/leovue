@@ -140,7 +140,14 @@ export default {
       this.$store.dispatch('setCurrentItem', {id})
     },
     dataTableClick (r) {
-      console.log('ROW CLICK', r)
+      const title = r.data.title.replace(/<[^>]*>/g, "")
+      // const title = r.data.title.innerHTML.replaceAll("<[^>]*>", "")
+      const item = JSON.search(this.$store.state.leodata, '//*[vtitle="' + title + '"]')[0]
+      if (item) {
+        const id = item.id
+        this.$store.dispatch('setCurrentItem', {id})
+      }
+      console.log('ROW CLICK', title, item)
     }
   },
   computed: {

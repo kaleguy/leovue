@@ -56,10 +56,11 @@
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
+<v t="josephorr.20181020180335.1"><vh>@rss [NYT Columns of Paul Krugman](https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/paul-krugman/rss.xml)</vh></v>
 </v>
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
@@ -68,6 +69,7 @@
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
+<v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
 </v>
 <v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
@@ -2484,12 +2486,16 @@ then republished with LeoVue.
 
 This kind of outlining is useful when you want to explain how a particular source file works in detail, as opposed to simply documenting an interface or API.</t>
 <t tx="josephorr.20181016191554.1">template: rgarticles
-displayType: board
 nodeList: articles
 filter:
   key: type.text
   value: Article
 childTemplate: rgarticle-brief
 urlIsQueryString: true</t>
+<t tx="josephorr.20181020175246.1">template: repec-articles
+nodeList: articles
+childTemplate: repec
+titleKey: bibliographic.name</t>
+<t tx="josephorr.20181020180335.1"></t>
 </tnodes>
 </leo_file>
