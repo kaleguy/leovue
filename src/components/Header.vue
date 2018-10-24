@@ -100,7 +100,7 @@
           historyIndex = historyIndex - 1
         }
         const id = history[historyIndex]
-        this.$store.commit('CURRENT_ITEM', { id, historyIndex })
+        this.$store.dispatch('setCurrentItem', { id, historyIndex })
       },
       goForward () {
         if (this.noForward) { return }

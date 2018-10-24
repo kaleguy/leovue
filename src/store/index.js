@@ -1336,7 +1336,11 @@ export default new Vuex.Store({
         context.commit('OPEN_ITEMS', {openItemIds})
       }
       let item = JSON.search(context.state.leodata, '//*[id="' + id + '"]')
-      context.commit('CURRENT_ITEM', {id})
+      let itemObj = {id}
+      if (o.historyIndex) {
+        itemObj = {id, historyIndex: o.historyIndex}
+      }
+      context.commit('CURRENT_ITEM', itemObj)
       if (_.get(item, '[0].presentation')) {
         context.commit('CURRENT_PAGE', {id: 0})
       }
