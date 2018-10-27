@@ -110,7 +110,7 @@
         if (historyIndex < history.length - 1) {
           historyIndex = historyIndex + 1
         }
-        this.$store.commit('CURRENT_ITEM', { id, historyIndex })
+        this.$store.dispatch('setCurrentItem', { id, historyIndex })
       }
     },
     computed: {

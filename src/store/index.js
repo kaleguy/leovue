@@ -119,12 +119,12 @@ function loadLeoNode (context, item) {
       context.commit('ADDTEXT', {text})
       if (data.length === 1) {
         context.commit('RESET') // content item has not been drawn
-        console.log('SUBTREE RESET')
-        context.dispatch('setCurrentItem', {id, reset: true})
+        console.log('SUBTREE RESET', id)
         data = data[0]
         item.children = data.children
         item.t = data.t
         item.name = label // convert to regular title so won't reload (remove the directive)
+        context.dispatch('setCurrentItem', {id, reset: true})
       } else { // TODO: trunkless load logic incomplete for subtrees
         item.name = label
         item.children = data
@@ -742,7 +742,7 @@ function setData (context, ldata, filename, route) {
   pathType = pathType.replace(/\//g, '')
   context.commit('VIEW_TYPE', {type: pathType})
   let path = route.path
-  // see if the path includes a subtree
+  // see if the path includes a subtree (a child leo file)
   let npath = null
   if (path) {
     npath = path.substring(path.indexOf('/', 2) + 1)
@@ -755,7 +755,8 @@ function setData (context, ldata, filename, route) {
     // a subtree is a leo file loaded at a node
     subtrees = getRoots([], npath)
   }
-  loadSubtrees(context, subtrees, ldata.data, id, subpath).then(() => {
+  loadSubtrees(context, subtrees, ldata.data, id, subpath, npath).then(() => {
+    console.log('SUBPATH', subpath)
     context.commit('SUBPATH', {subpath})
     const openItems = JSON.search(ldata.data, '//*[id="' + id + '"]/ancestor::*')
     if (!openItems) { return }
@@ -908,7 +909,11 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   const p = new Promise((resolve, reject) => {
     // TODO: this just loads the first subtree, need to load all in trees array for case of nested subtrees
     // TODO: implement subPat in leo subtree
-    loadLeoNode(context, item).then(res => resolve(res))
+    loadLeoNode(context, item).then(res => {
+      resolve(res)
+      // const item = JSON.search(data, '//*[id="' + topId + '"]')[0]
+      console.log('ITEM', topId, item)
+    })
   })
   return p
 }

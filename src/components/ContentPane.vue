@@ -216,8 +216,8 @@ export default {
     blocks.forEach(function(block) {
       hljs.highlightBlock(block);
     });
-    console.log('Content Pane Updated.')
     const id = this.$store.state.currentItem.id
+    console.log('Content Pane Updated.', id)
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
     overrideXFrame(item, this.$store.state.leotext)
     const clinks = document.getElementsByClassName('csection-link')

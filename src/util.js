@@ -230,6 +230,7 @@ function processDocstring(t) {
 }
 
 function getObjectByKeyFromTree (d, k, v) {
+  k = k + ''
   if (d[k].indexOf(v) > -1) {
     return d
   }
