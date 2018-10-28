@@ -153,7 +153,8 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/static/) && isRelative(filename)) {
       // filename = 'static/' + filename
     }
-    if (!filename.match(/\.leo$/)) {
+    // add .leo if no extension
+    if (!filename.match(/\.\w\w\w\w?$/)) {
       filename = filename + '.leo'
     }
     // case of outline loaded from url specified in outlineUrl param
@@ -195,7 +196,11 @@ function getLeoJSON (filename, id) {
         textItems
       })
     }
-    function fromFile () {
+    function fromJSONFile () {
+      loadDoc(filename, 'Text')
+        .then(data => resolve(data))
+    }
+    function fromLeoFile () {
       loadDoc(filename, 'Text')
         .then(xmlString => {
           // will return data with ids equal to id-1, id-2 etc
@@ -206,8 +211,10 @@ function getLeoJSON (filename, id) {
     // filename = '~outline.leo'
     if (filename === '~outline.leo') {
       fromOutline()
+    } else if (filename.match(/\.json/i)) {
+      fromJSONFile()
     } else {
-      fromFile()
+      fromLeoFile()
     }
   })
   return p

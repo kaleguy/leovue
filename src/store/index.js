@@ -121,7 +121,7 @@ function loadLeoNode (context, item) {
         context.commit('RESET') // content item has not been drawn
         console.log('SUBTREE RESET', id)
         data = data[0]
-        item.children = data.children
+        item.children = data.children //
         item.t = data.t
         item.name = label // convert to regular title so won't reload (remove the directive)
         context.dispatch('setCurrentItem', {id, reset: true})
@@ -233,7 +233,7 @@ function checkCache (context, item, url) { // eslint-disable-line
 }
 
 /**
- *
+ * Get JSON or XML from url, format and display
  * @param context
  * @param id
  * @param url{String} where to retrieve the data
@@ -258,7 +258,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
   }
   */
   context.commit('CURRENT_ITEM_CONTENT', { text: spinnerHTML })
-  axios.get(query)
+  return axios.get(query)
     .then((response) => {
       let data = response.data
       if (dataType === 'json') {
@@ -280,14 +280,15 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
       const html = lodashTemplate.render(data, xslType)
       showText(context, html, id, null, params)
       if (params && params.nodeList) {
-        let dataArray = data[params.nodeList]
+        const nodeList = params.nodeList
+        let dataArray = data[nodeList.listKey]
         if (params.filter) {
           const filter = params.filter
           dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
         }
-        const template = params.childTemplate || ''
+        const template = nodeList.template || ''
         addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString,
-          params.urlTitle, params.childTemplate, params.titleKey)
+          params.urlTitle, nodeList.template, nodeList.titleKey)
       }
     })
     .catch(function (error) {
@@ -610,7 +611,7 @@ function showD3Board (context, title, id) {
   context.commit('CONTENT_ITEM_UPDATE')
   context.commit('CONTENT_PANE', { type: 'board' })
 }
-function showSite (context, title, id, content) {
+function showSite (context, title, id) {
   let {url, label} = getUrlFromTitle(title) // eslint-disable-line
   if (!url) { return }
   const ext = util.getFileExtension(url)
@@ -901,6 +902,16 @@ function loadPresentation (id, pages) {
 function loadSubtrees (context, trees, data, topId, subpath) {
   if (!trees.length) { return Promise.resolve() }
   let item = JSON.search(data, '//*[id="' + trees[0] + '"]')[0]
+  let {url, label} = getUrlFromTitle(item.name)
+  if (url.match(/\.json$/)) {
+    let itemText = context.state.leotext[item.t].replace(/^@.*?\n/, '')
+    const params = jsyaml.load(itemText) || {}
+    const template = params.template || ''
+    // change directive from @json to @dataSet so that data will not be reloaded
+    // and can be accessed by other nodes
+    item.name = `@dataSet set${item.id} ${label}`
+    return showFormattedData(context, item.id, url, template, 'json', params, item.t, topId)
+  }
   context.commit('CURRENT_ITEM_CONTENT', { text: '<div class="spin-box"><div class="single10"></div></div>' })
   // special case of outlining a page, e.g. wikipedia
   if (/^@outline/.test(item.name)) {
@@ -1377,7 +1388,6 @@ export default new Vuex.Store({
           return showFormattedData(context, id, url, 'rss', 'xml')
         }
         if (/^@(xml|json)/.test(item.name)) {
-          // match
           const re = /^@(xml|json)(-.*?)?\s/
           const match = re.exec(item.name)
           let dataType = match[1]
@@ -1385,7 +1395,7 @@ export default new Vuex.Store({
           let {url, label} = getUrlFromTitle(item.name, dataSubType) // eslint-disable-line
           item.name = `@dataSet set${id} ${label}`// label
           if (!url) { return }
-          itemText = itemText.replace(/^@.*?\n/, '')
+          itemText = itemText.replace(/^@.*?\n/, '') // remove language directive if exist
           const params = jsyaml.load(itemText) || {}
           let template = params.template || ''
           if (dataSubType) {
@@ -1460,7 +1470,7 @@ export default new Vuex.Store({
             )
           } else {
             console.log('load site')
-            showSite(context, item.name, id, itemText)
+            showSite(context, item.name, id)
             setSiteItem(context, item.name, id)
           }
         } else {

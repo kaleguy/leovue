@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### WIP
 - Export to JSON and LEO format
-- @JSON array to subnodes
 - @formio directive
 - format @doc directive
-- history fix
-- JSON data -> node list
+
+## [1.14.6] - 2018-10-14
+### Changed
+- Fix to subtree routes/bookmarking
+- Fix to history buttons
+
+### Added
+- Nodelist from JSON array
+
 
 ## [1.14.3-5] - 2018-10-14
 ### Changed

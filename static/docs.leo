@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -68,10 +68,12 @@
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
+<v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
 <v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
+<v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
-<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+</v>
+<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
@@ -811,7 +813,8 @@ function getLeoJSON (filename, id) {
     if (!filename.match(/static/) &amp;&amp; isRelative(filename)) {
       // filename = 'static/' + filename
     }
-    if (!filename.match(/\.leo$/)) {
+    // add .leo if no extension
+    if (!filename.match(/\.\w\w\w\w?$/)) {
       filename = filename + '.leo'
     }
     // case of outline loaded from url specified in outlineUrl param
@@ -853,7 +856,11 @@ function getLeoJSON (filename, id) {
         textItems
       })
     }
-    function fromFile () {
+    function fromJSONFile () {
+      loadDoc(filename, 'Text')
+        .then(data =&gt; resolve(data))
+    }
+    function fromLeoFile () {
       loadDoc(filename, 'Text')
         .then(xmlString =&gt; {
           // will return data with ids equal to id-1, id-2 etc
@@ -864,8 +871,10 @@ function getLeoJSON (filename, id) {
     // filename = '~outline.leo'
     if (filename === '~outline.leo') {
       fromOutline()
+    } else if (filename.match(/\.json/i)) {
+      fromJSONFile()
     } else {
-      fromFile()
+      fromLeoFile()
     }
   })
   return p
@@ -1298,7 +1307,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.14.5
+LeoVue is currently at version 1.15.0
 
 LeoVue 1.14.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2429,7 +2438,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.14.5 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.15.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -2486,16 +2495,72 @@ then republished with LeoVue.
 
 This kind of outlining is useful when you want to explain how a particular source file works in detail, as opposed to simply documenting an interface or API.</t>
 <t tx="josephorr.20181016191554.1">template: rgarticles
-nodeList: articles
+nodeList: 
+  listKey: articles
+  template: rgarticle-brief
 filter:
   key: type.text
   value: Article
-childTemplate: rgarticle-brief
 urlIsQueryString: true</t>
 <t tx="josephorr.20181020175246.1">template: repec-articles
-nodeList: articles
-childTemplate: repec
-titleKey: bibliographic.name</t>
+nodeList: 
+  listKey: articles
+  template: repec
+  titleKey: bibliographic.name</t>
 <t tx="josephorr.20181020180335.1"></t>
+<t tx="josephorr.20181028132300.1"># Node Lists from JSON Data
+
+If the JSON data has an array, you can tell LeoVue to display each array item as a separate node.
+
+In this case, you can add a sortable summary table to the template of the parent node. 
+The below examples have been configured like so:
+
+
+## Example 1
+
+The node title is a link to JSON data downloaded from idea.repec.org:
+
+```
+@json [Papers of Paul Krugman](static/repec-krugman.json)
+```
+
+The node body contains parameters telling LeoVue how to display the data:
+
+```
+template: repec-articles
+nodeList: 
+  listKey: articles
+  template: repec
+  titleKey: bibliographic.name
+```
+
+The first template parameter is the template for the parent node. This template is in index.html, and uses the LeoVue table 
+component to display sortable, filterable summary of the data.
+
+The nodeList parameters tell LeoVue which key in the JSON data has the data array to convert to a node list, which template to 
+use for displaying the data of a single node, and what is the JSON key for the title of the node.
+
+## Example 2
+
+The node title is a link to JSON data downloaded from ResearchGate, using 
+&lt;a href="https://github.com/kaleguy/scraper-api" target="_blank"&gt;Scraper API&lt;/a&gt;
+
+```
+@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)
+```
+
+The node body contains params telling LeoVue how to display the data:
+
+```
+template: rgarticles
+nodeList: 
+  titleKey: title.text
+  listKey: articles
+  template: rgarticle-brief
+filter:
+  key: type.text
+  value: Article
+```
+</t>
 </tnodes>
 </leo_file>

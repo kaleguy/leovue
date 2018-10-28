@@ -42,7 +42,7 @@
             "host": "http://localhost:8888/rg/citations?name=",
           }
         }
-    }</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?806b4adf9b6a138a72f4ec935aabba73 rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
+    }</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?3be5ca2fc7949b6a445eb7a04424d768 rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
     <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
       <p>This is a popover!</p>
       <p><small>Click the background to remove the popover.</small></p>
@@ -84,6 +84,52 @@
         <a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation">See this article on ResearchGate.</a>
       </div>
     </div>
+  </div></script><script type=text/template id=rgarticle-brief><div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.title.text }}</h1>
+      <div class="publication-meta-text">
+        <span> {{- data['type'].text}}: {{- data.date }} with {{- data.reads }}</span>
+      </div>
+      <div>
+        <ul>
+          {{ data.authors.forEach(author => { }}
+          <li class="publication-author-list__item_brief">
+            <div>
+              <a target="_blank" href="http://researchget.net/{{- author.author.href }}" >{{- author.author.text }}</a>
+            </div>
+          </li>
+          {{ }) }}
+        </ul>
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="https://www.researchgate.net/{{- data.title.href}}">See this article on ResearchGate.</a>
+      </div>
+    </div>
+  </div></script><script type=text/template id=repec><div class="rg">
+    <div class="publication-header">
+      <h1>{{- data.bibliographic.name }}</h1>
+      <div>
+         {{- data.author }}
+      </div>
+      <div class="series">
+        {{- data.series && data.series.name }} ({{- data.bibliographic.creation_date || data.bibliographic.year }})
+      </div>
+      <div class="publication-abstract">
+        <div>
+          <strong>Abstract</strong>
+        </div>
+        <div>{{- data.abstract }}</div>
+      </div>
+      <div class="footer">
+        <a target="_blank" href="{{- data.link}}">See this article on IDEAS.</a>
+      </div>
+    </div>
   </div></script><script type=text/template id=rgauthor><div class="rg">
     <h2>Author</h2>
     <div>{{- data.name}} {{- data.title}}</div>
@@ -100,6 +146,7 @@
     <div><a target="_blank" href="{{- data.url}}">Profile</a></div>
   </div></script><script type=text/template id=rgarticles><div class="table-component">
   <table-component
+    @rowClick="this.$parent.dataTableClick"
     :data="[
     {{ data.articles.forEach(article => { }}
       {{ if (article.type.text === 'Article') { }}
@@ -119,11 +166,26 @@
     <table-column show="reads" label="Reads" sort-by="readNum" cell-class="right"></table-column>
     <table-column show="readNum" label="R" data-type="numeric" :hidden="true" ></table-column>
   </table-component>
-</div></script><script type=text/template id=rgcitations>CITATIONS</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
+</div></script><script type=text/template id=repec-articles><div class="table-component">
+    <table-component
+      @rowClick="this.$parent.dataTableClick"
+      :data="[
+      {{ data.articles.forEach(article => { }}
+        {
+          title: '<div>{{- article.bibliographic.name}}</div>',
+          year: '<div>{{- article.bibliographic.creation_date || article.bibliographic.year }}</div>'
+        },
+      {{ }) }}
+     ]"
+      sort-order="asc">
+      <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
+      <table-column show="year" label="Year" header-class="data-cell" cell-class="data-cell"></table-column>
+    </table-component>
+  </div></script><script type=text/template id=rgcitations>CITATIONS</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-118289537-1');</script><script src=https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js></script><script>var scroll = new SmoothScroll('a[href*="#"]');</script><style type=text/css>#app {
     font-family: Avenir, Nunito, Helvetica, Arial, sans-serif
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?6ab58512dcd987f57893></script><script type=text/javascript src=static/js/app.js?0d24489b605dd85b4f3c></script></body></html>
+  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?19cc2ba6486225b48356></script><script type=text/javascript src=static/js/app.js?ec39dbdbf96616da9d59></script></body></html>
