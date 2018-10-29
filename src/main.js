@@ -88,7 +88,29 @@ new Vue({
   store,
   router,
   template: template,
-  components: { App, AppBase }
+  components: { App, AppBase },
+  mounted: function () {
+    // const vm = this
+    window.addEventListener('keyup', e => {
+      // If down arrow was pressed...
+      let direction = ''
+      switch (e.keyCode) {
+        case 40:
+          direction = 'down'
+          break
+        case 38:
+          direction = 'up'
+          break
+        case 13:
+          direction = 'in'
+          break
+        default:
+      }
+      if (direction) {
+        this.$store.dispatch('changeCurrent', { direction })
+      }
+    })
+  }
 })
 
 window.noop = () => {}

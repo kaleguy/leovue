@@ -1315,6 +1315,9 @@ export default new Vuex.Store({
         }
       })
     },
+    changeCurrent (context, o) {
+      console.log('DIRECTION', o.direction)
+    },
     setCurrentPage (context, o) {
       let page = +o.id
       let id = context.state.currentItem.id
