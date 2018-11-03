@@ -18,7 +18,7 @@
     methods: {
       gotoSection: function () {
         const plainTitle = _.trim(this.title)
-        // const searchTitle = '« ' + plainTitle + ' »'
+        const searchTitle = '« ' + plainTitle + ' »'
         let leodata = this.$store.state.leodata
         if (window.parent !== window.self) {
           leodata = window.parent.lconfig.leodata
