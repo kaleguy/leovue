@@ -1659,9 +1659,9 @@ function presentation(name, content, index, theme, codeTheme) {
 		<script src="lib/js/head.min.js"></script>
 		-->
 		
-		<script src="https://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/manifest.js"></script>
-		<script src="https://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/vendor.js"></script>
-		<script src="https://cdn.rawgit.com/kaleguy/leovue/master/dist/static/js/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/leo-vue/dist/static/js/manifest.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/leovue/master/dist/static/js/vendor.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/leovue/master/dist/static/js/app.js"></script>
 		<script>
 		  Reveal.addEventListener( 'slidechanged', function( event ) {
         MathJax.Hub.Rerender(event.currentSlide);

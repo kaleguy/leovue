@@ -10,9 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 
-## [1.15.0] - 2018-11-01
+## [1.16.0] - 2018-11-01
 ### Added
 - Arrow Key tree navigation
+
+### Changed
+- Fix to Section Links in Presentation
 
 ## [1.15.0] - 2018-10-14
 ### Changed

@@ -11,7 +11,7 @@
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
@@ -22,7 +22,7 @@
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
 <v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
-<v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
+<v t="josephorr.20170331200411.1" a="E"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 <v t="josephorr.20181013124816.1" a="E"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
 <v t="josephorr.20181013125750.1"><vh>&lt;&lt; A simple outlining example &gt;&gt;</vh></v>
@@ -31,7 +31,7 @@
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -51,7 +51,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -132,13 +132,13 @@
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
-<v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1"><vh>@presentation LeoVue</vh>
+<v t="josephorr.20171120183447.1" a="E"><vh>Presentations</vh>
+<v t="josephorr.20171120183454.1" a="E"><vh>@presentation LeoVue</vh>
 <v t="josephorr.20171121003417.1"><vh>LeoVue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
-<v t="josephorr.20171121003459.1"><vh>Reveal</vh>
-<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
+<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
 <v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
 <v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
@@ -173,7 +173,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
+<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
@@ -1307,7 +1307,7 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.15.0
+LeoVue is currently at version 1.16.0
 
 LeoVue 1.14.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
