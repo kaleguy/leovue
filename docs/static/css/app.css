@@ -3169,7 +3169,10 @@ section.cover .carousel-caption H3 {
   padding-right: 20px;
   -webkit-box-shadow: 3px 3px 10px #666;
           box-shadow: 3px 3px 10px #666;
-  min-width: 530px;
+  min-width: 60%;
+}
+section.cover .carousel-caption P {
+   min-width: 50%;
 }
 section.cover .app-title {
   font-size: 70px;
@@ -15157,7 +15160,7 @@ TD.number {
   margin-right: auto;
 }
 
-.section-link[data-v-6b1820be] {
+.section-link[data-v-16bdb7e6] {
   color: #4cb986;
   font-weight: bold;
   cursor: pointer;
@@ -15273,4 +15276,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?3be5ca2fc7949b6a445eb7a04424d768*/
+/*# sourceMappingURL=app.css.map?2099c64c464946827610f914e57bcee1*/
