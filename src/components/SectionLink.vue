@@ -18,14 +18,18 @@
     methods: {
       gotoSection: function () {
         const plainTitle = _.trim(this.title)
-        const searchTitle = '« ' + plainTitle + ' »'
+        // const searchTitle = '« ' + plainTitle + ' »'
         let leodata = this.$store.state.leodata
         if (window.parent !== window.self) {
           leodata = window.parent.lconfig.leodata
         }
         let titleObj = JSON.search(leodata, '//*[name="' + searchTitle + '"]')[0]
         if (!titleObj) {
-          titleObj = util.getObjectByKeyFromTree(leodata[0], 'name', plainTitle)
+          let i = 0
+          while (!titleObj && (i < leodata.length)) {
+            titleObj = util.getObjectByKeyFromTree(leodata[i], 'name', plainTitle)
+            i = i + 1
+          }
         }
         let id = null
         let index = null

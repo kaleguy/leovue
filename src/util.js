@@ -154,6 +154,10 @@ function toTitleCase (str) {
 
 function sendGTag (item) {
   if (typeof gtag === 'undefined') { return } // eslint-disable-line
+  if (!item) {
+    console.log('No item in GTAG')
+    return
+  }
   gtag('config', 'UA-118289537-1', {  // eslint-disable-line
     'page_title': item.name,
     'page_path': '#/t/' + item.id,

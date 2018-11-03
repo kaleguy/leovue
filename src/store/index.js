@@ -45,6 +45,15 @@ function loadIndexItems (arr, titles, textItems) {
   })
   return arr
 }
+function goToAdjacentItem (context, item) {
+  if (item && item[0] && item[0].id) {
+    const id = item[0].id
+    context.dispatch('setCurrentItem', {id})
+    return true
+  } else {
+    return false
+  }
+}
 
 Vue.use(Vuex)
 const spinnerHTML = `<div class="spin-box"><div class="single10"></div></div>`
@@ -1315,8 +1324,48 @@ export default new Vuex.Store({
         }
       })
     },
-    changeCurrent (context, o) {
-      console.log('DIRECTION', o.direction)
+    // TODO refactor, too slow. May need to replace XPath with refs in item
+    changeCurrentItem (context, o) {
+      // const prevSibling = JSON.search(state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
+      let id = context.state.currentItem.id
+      const currentItem = JSON.search(context.state.leodata, '//*[id="' + id + '"]')[0]
+      if (!currentItem) {
+        console.log('No current item!')
+        return
+      }
+      switch (o.direction) {
+        case 'down':
+          if (currentItem.children && currentItem.children.length) {
+            id = currentItem.children[0].id
+            return context.dispatch('setCurrentItem', {id})
+          }
+          const nextSibling = JSON.search(context.state.leodata, '//children[id="' + id + '"]/following-sibling::*')
+          if (!goToAdjacentItem(context, nextSibling)) {
+            const parent = JSON.search(context.state.leodata, '//*[id="' + id + '"]/parent::*')
+            if (parent && parent[0] && parent[0].id) {
+              const parentSibling = JSON.search(context.state.leodata, '//children[id="' + parent[0].id + '"]/following-sibling::*')
+              goToAdjacentItem(context, parentSibling)
+            }
+          }
+          break
+        case 'up':
+          const prevSibling = JSON.search(context.state.leodata, '//children[id="' + id + '"]/preceding-sibling::children')
+          if (!prevSibling || !prevSibling.length) {
+            const parent = JSON.search(context.state.leodata, '//*[id="' + id + '"]/parent::*')
+            if (parent && parent[0]) {
+              id = parent[0].id
+              context.dispatch('setCurrentItem', {id})
+            }
+            console.log('PARENT', parent)
+          }
+          if (prevSibling && prevSibling.length) {
+            id = prevSibling[prevSibling.length - 1].id
+            console.log('new id', id)
+            context.dispatch('setCurrentItem', {id})
+          }
+          break
+        default:
+      }
     },
     setCurrentPage (context, o) {
       let page = +o.id
@@ -1365,6 +1414,10 @@ export default new Vuex.Store({
       }
       if (item) {
         item = item[0]
+        if (!item) {
+          console.log('No item[0] for item:', item)
+          return
+        }
         util.sendGTag(item) // send Google Analytics if GA initialized in index.html
         let itemText = context.state.leotext[item.t]
         if (/^@presentation /.test(item.name)) {

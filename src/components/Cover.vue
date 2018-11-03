@@ -193,7 +193,10 @@
     padding-left: 20px;
     padding-right: 20px;
     box-shadow: 3px 3px 10px #666;
-    min-width: 530px;
+    min-width: 60%;
+  }
+  section.cover .carousel-caption P {
+     min-width: 50%;
   }
   section.cover .app-title {
     font-size: 70px;

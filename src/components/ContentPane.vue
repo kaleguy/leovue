@@ -217,13 +217,12 @@ export default {
       hljs.highlightBlock(block);
     });
     const id = this.$store.state.currentItem.id
-    console.log('Content Pane Updated.', id)
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
     overrideXFrame(item, this.$store.state.leotext)
     const clinks = document.getElementsByClassName('csection-link')
     let leodata = this.$store.state.leodata
     let me = this
-    // section links in code require explicit processing bc vue components
+    // section links in code content require explicit processing bc vue components
     // are turned off in code (with v-pre)
     function gotoSectionFunc (leodata) {
        function func (e) {

@@ -9,9 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Export to JSON and LEO format
 - @formio directive
 - format @doc directive
-- arrow and enter keys
 
-## [1.50.0] - 2018-10-14
+## [1.15.0] - 2018-11-01
+### Added
+- Arrow Key tree navigation
+
+## [1.15.0] - 2018-10-14
 ### Changed
 - Fix to subtree routes/bookmarking
 - Fix to history buttons

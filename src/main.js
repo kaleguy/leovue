@@ -94,6 +94,7 @@ new Vue({
     window.addEventListener('keyup', e => {
       // If down arrow was pressed...
       let direction = ''
+      e.preventDefault()
       switch (e.keyCode) {
         case 40:
           direction = 'down'
@@ -107,7 +108,7 @@ new Vue({
         default:
       }
       if (direction) {
-        this.$store.dispatch('changeCurrent', { direction })
+        this.$store.dispatch('changeCurrentItem', { direction })
       }
     })
   }
