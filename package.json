@@ -1,6 +1,6 @@
 {
   "name": "leo-vue",
-  "version": "1.16.0",
+  "version": "1.16.1",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr",
   "private": false,
