@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 
+## [1.16.2] - 2018-11-03
+### Changed
+- Fix to Presentations page click
+
 ## [1.16.1] - 2018-11-03
 ### Changed
 - Fix to Presentations

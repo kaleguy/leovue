@@ -732,7 +732,13 @@ function setData (context, ldata, filename, route) {
   })
   loadDataSets(context, ldata)
   loadDataTables(context, ldata)
-  loadPresentations(ldata.data[0])
+  if (_.isArray(ldata.data)) {
+    ldata.data.forEach(d => {
+      loadPresentations(d)
+    })
+  } else {
+    loadPresentations(ldata.data)
+  }
   setLanguageNodes(context, ldata)
   setChildDirectives(context, ldata)
   // TODO: refactor use of id vs route.path
@@ -881,6 +887,13 @@ function translatePath (p, d) {
   }
   return { npath: p, subpath }
 }
+
+/**
+ * Mark all of the presentation pages/items so that when selected they
+ * will be displayed in presentation, not as basic content
+ * @param data
+ * @param loadSections
+ */
 function loadPresentations (data, loadSections) {
   let p = /@presentation ([a-zA-Z0-9]*)(.*)$/.test(data.name)
   if (p) { loadSections = true }
