@@ -3,9 +3,9 @@
     <div class="left-pane unselectable"
          :style="leftPaneStyle"
          id="left-pane">
-      <div :style="{position:'relative', overflow: 'hidden', height: 'calc(100vh - 33px)'}">
+      <div :style="{position:'relative', overflow: 'hidden', width: '800px', height: 'calc(100vh - 33px)'}">
         <div class="inner-container">
-          <div style="height: calc(100vh - 33px);padding-top:30px">
+          <div style="height: calc(100vh - 33px);width:1000px;padding-top:30px">
             <slot name="left"></slot>
           </div>
         </div>

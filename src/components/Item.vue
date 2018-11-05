@@ -355,7 +355,7 @@ $contentBorderColor: #ccc
   font-weight: bold
 .iactive
   background: #01FF70 //#81ff00
-  max-width: 772px
+  // max-width: 772px
 .iactive.topItem
     background: #fff
 .activeb

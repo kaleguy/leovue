@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### WIP
+- Horizontal scroll on tree menu
+- Graphical tree resizing
 - Export to JSON and LEO format
 - @formio directive
 - format @doc directive
