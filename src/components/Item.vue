@@ -158,10 +158,10 @@ export default {
           ribbon[0].style.display = 'none'
           window.lconfig.githubRibbon = false
         }
-        const cover = document.getElementById('cover-page')
-        if (cover) {
-          cover.style.display = 'none'
-        }
+      }
+      const cover = document.getElementById('cover-page')
+      if (cover) {
+        cover.style.display = 'none'
       }
       // set vtitle if it has been set elsewhere
       if (this.model.vtitle) {
