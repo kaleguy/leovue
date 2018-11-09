@@ -50,6 +50,17 @@
         </div>
         <div class="menu-label">Accordion</div>
       </div>
+      <div class="menu-separator"></div>
+      <div class="hshim"></div>
+      <div class="hshim"></div>
+      <div class="hshim"></div>
+      <div class="menu-item" style="text-align: center">
+        <div class="menu-label">Download<br> Node Data</div>
+        <div @click="downloadJSON()"
+             class="menu-item">
+          <div class="menu-label" style="text-decoration: underline; color: blue">JSON</div>
+        </div>
+      </div>
       <div class="menu-footer" @click="settings">LeoVue</div>
     </div>
   </div>
@@ -70,6 +81,15 @@
     methods: {
       settings () {
         this.$router.replace({path: '/settings'})
+      },
+      downloadJSON () {
+        const data = this.$store.state.leodata
+        console.log(data)
+        const hiddenElement = document.createElement('a')
+        hiddenElement.href = 'data:text/json;charset=utf-8,' + encodeURI(JSON.stringify(data))
+        hiddenElement.target = '_blank'
+        hiddenElement.download = 'leo.json'
+        hiddenElement.click()
       },
       setAccordion () {
         this.$store.commit('TOGGLEACCORDION')

@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### WIP
-- Horizontal scroll on tree menu
+- vtitle on Graphical Tree
+- remove Git label on click anywhere
 - Graphical tree resizing
 - Export to JSON and LEO format
 - @formio directive

@@ -264,6 +264,7 @@ export default {
   }
   #lhandle {
     max-width: 50px;
+    margin-right: 1%;
   }
   .handle {
     width:50px;
@@ -301,6 +302,7 @@ export default {
     background: #fff;
     min-height: 100%;
     margin: 0;
+    margin-left: 5%;
     padding: 0;
     display: flex;
     flex-wrap: nowrap;

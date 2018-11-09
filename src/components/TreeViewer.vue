@@ -47,11 +47,13 @@
     computed: {
       ulStyle () {
         const p = window.lconfig.leftPanePadding || '0'
-        return `padding-left:${p}`
+        const c = window.lconfig.leftPaneBackground || '#fff'
+        return `padding-left:${p}; background-color:${c}`
       },
       leftPaneStyle () {
         const w = window.lconfig.leftPaneWidth || '420px'
-        return `width:${w}`
+        const c = window.lconfig.leftPaneBackground || '#fff'
+        return `width:${w};background-color:${c}`
       },
       top () {
         // if (this.$store.state.leodata.length > 1) { return false }

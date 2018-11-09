@@ -321,7 +321,7 @@ export default {
         } else {
           console.log('RR', title)
         }
-        // this.redraw()
+        this.redraw()
       }
     },
 

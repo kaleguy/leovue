@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="setup">
   <section class="cover show" id="cover-page" v-if="coverContent">
     <component :is="dynComponent" />
   </section>
@@ -15,6 +15,13 @@
       }
     },
     methods: {
+      setup () {
+        const ribbon = document.getElementsByClassName('github-ribbon')
+        if (ribbon && ribbon[0]) {
+          ribbon[0].style.display = 'none'
+          window.lconfig.githubRibbon = false
+        }
+      }
     },
     components: {},
     computed: {
@@ -30,6 +37,7 @@
         }
         // if it is not first page close cover page
         if (+current > 2) {
+          this.setup()
           return this.$store.commit('RESETCOVER', { cover: '' })
         }
         const blank = '<div></div>'
