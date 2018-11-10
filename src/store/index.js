@@ -1054,6 +1054,12 @@ function loadDataSet (context, item, textItems) {
     loadDataSet(context, child, textItems)
   })
 }
+
+/**
+ * Datatables are nodes with csv. Parse and load these into storage for use by charts etc.
+ * @param context
+ * @param data
+ */
 function loadDataTables (context, data) {
   const textItems = data.textItems
   data.data.forEach(d => {
@@ -1096,6 +1102,7 @@ function loadDataTable (context, item, textItems) {
     }
     v = {title, arr, objArr}
     context.commit('ADDDATATABLE', {k, v})
+    textItems[item.t] = `<div class="hcode"><pre>${text}</pre></div>`
   }
   item.children.forEach(child => {
     loadDataTable(context, child, textItems)
@@ -1444,6 +1451,7 @@ export default new Vuex.Store({
         }
         // if dataSet has a param.template, render the transformed html
         if (/^@dataSet/.test(item.name)) {
+          itemText = itemText.replace(/^@.*?\n/, '')
           const itemData = JSON.parse(itemText)
           const template = _.get(itemData, 'params.template', '')
           if (template) {
@@ -1513,6 +1521,7 @@ export default new Vuex.Store({
           }
           return showBook(context, item, url, params)
         }
+        // outline currently not in use due to inconsistency in target pages
         if (/^@outline/.test(item.name)) {
           let mySubpath = context.state.subpath
           context.commit('SUBPATH', { subpath: '' })
@@ -1543,7 +1552,11 @@ export default new Vuex.Store({
             setSiteItem(context, item.name, id)
           }
         } else {
-          showText(context, context.state.leotext[item.t], id)
+          const params = {}
+          if (/^@board/.test(item.name)) {
+            params.displayType = 'board'
+          }
+          showText(context, context.state.leotext[item.t], id, null, params)
         }
         // if it is a page in a presentation
         if (item.presentation) {

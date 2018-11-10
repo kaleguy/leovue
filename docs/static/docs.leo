@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -32,7 +32,7 @@
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -52,9 +52,9 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
-<v t="josephorr.20170401114539.1"><vh>[A URL Node](https://kaleguy.github.io/simpleng2admin/#/home)</vh></v>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
 <v t="josephorr.20180331164142.1"><vh>RSS</vh>
@@ -109,9 +109,9 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
-<v t="josephorr.20171107074208.1"><vh>Line Chart from dataSet</vh></v>
+<v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
 <v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
@@ -122,7 +122,7 @@
 <v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171109061104.1"><vh>Data</vh>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -174,9 +174,9 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20170401144849.1" a="E"></v>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -551,11 +551,13 @@ For Mac and Linux users: you may need to install the Droid Sans Mono font (the d
     computed: {
       ulStyle () {
         const p = window.lconfig.leftPanePadding || '0'
-        return `padding-left:${p}`
+        const c = window.lconfig.leftPaneBackground || '#fff'
+        return `padding-left:${p}; background-color:${c}`
       },
       leftPaneStyle () {
         const w = window.lconfig.leftPaneWidth || '420px'
-        return `width:${w}`
+        const c = window.lconfig.leftPaneBackground || '#fff'
+        return `width:${w};background-color:${c}`
       },
       top () {
         // if (this.$store.state.leodata.length &gt; 1) { return false }
@@ -1083,10 +1085,13 @@ By default the following components are added to LeoVue.
 * YouTube Viewer
 * Leaflet Maps
 * InfoCard
-* Tabs
 * Tables
 * Charts
 * SVG
+* Bootstrap Vue Components (e.g. Tabs, Carousel etc.)
+
+The following are added by default but require adding a CDN script tag to index.html:
+
 * Mermaid (diagrams)
 * MathJax
 
@@ -2120,7 +2125,14 @@ Some RSS feeds can't be retrieved via XMLHTTP, which case, use the "xttp" syntax
 ```</t>
 <t tx="josephorr.20180331164148.1"></t>
 <t tx="josephorr.20180401123839.1"></t>
-<t tx="josephorr.20180402061306.1">A URL node can be a simple website displayed in the content area.</t>
+<t tx="josephorr.20180402061306.1"># Websites in the Content Area
+
+A URL node can be a simple website displayed in the content area.
+
+The following nodes show:
+
+1. A Wikipedia page displayed as content
+1. A markdown file loaded as content (this is a cloned node).</t>
 <t tx="josephorr.20180402070616.1">&amp;amp; in RSS
 </t>
 <t tx="josephorr.20180402071948.1">@language md

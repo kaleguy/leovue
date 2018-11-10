@@ -2342,6 +2342,9 @@ LI.gallerybox {
   padding: 20px;
   border-radius: 2px;
 }
+#bpane .content {
+  padding: 40px;
+}
 .section-title {
   font-size: 140px;
   font-weight: bold;
@@ -2847,7 +2850,7 @@ H1, .h1 {
   margin-top: 15px;
   font-size: 2.5em;
 }
-H2 {
+H1, H2 {
   margin-bottom: 1.5rem;
 }
 .inner-container {
@@ -3232,6 +3235,9 @@ section :link:focus, section :visited:focus {outline: none;
   padding: 20px;
   border-radius: 2px;
 }
+#bpane .content {
+  padding: 40px;
+}
 .section-title {
   font-size: 140px;
   font-weight: bold;
@@ -3737,7 +3743,7 @@ H1, .h1 {
   margin-top: 15px;
   font-size: 2.5em;
 }
-H2 {
+H1, H2 {
   margin-bottom: 1.5rem;
 }
 .inner-container {
@@ -15298,4 +15304,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?ef4229bff4f92ef819cdae92a91f62c1*/
+/*# sourceMappingURL=app.css.map?93ea935761c757278bd27cf4653d4d96*/
