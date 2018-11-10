@@ -11,13 +11,13 @@
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -1289,9 +1289,9 @@ The data in a dataSet can be referred to by name in chart or table components.
 
 For example, the first chart in this node contains the following component markup:
 
-&lt;pre&gt;
-&amp;lt;line-chart :dataSet="'set1'" :gridLines="true" /&amp;gt;
-&lt;/pre&gt;
+```
+&lt;line-chart :dataSet="'set1'" :gridLines="true"&gt;
+```
 
 Normally content items are limited to 780px wide. However, you can use the @board directive to make the content take the full available page width. 
 
@@ -1317,7 +1317,10 @@ A basic table component is included for displaying table data. The table compone
 &lt;/v-table&gt;</t>
 <t tx="josephorr.20171116064625.1">@language md
 
-LeoVue is currently at version 1.16.2
+
+# LeoVue Current Feature List
+
+LeoVue is currently at version 1.16.3
 
 LeoVue 1.16.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2081,6 +2084,8 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180305204208.1"></t>
 <t tx="josephorr.20180326061144.1">@language html
 
+&lt;h1&gt;Bookmarks and URLs&lt;/h1&gt;
+
 &lt;p&gt;
 A LeoVue URL looks like this:
 &lt;/p&gt;
@@ -2455,7 +2460,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.16.2 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.16.3 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 
+## [1.16.3] - 2018-11-10
+### Changed
+- @board directive
+- Style fixes, center content pane
+
+
 ## [1.16.2] - 2018-11-03
 ### Changed
 - Fix to Presentations page click

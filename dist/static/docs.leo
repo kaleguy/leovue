@@ -1289,9 +1289,9 @@ The data in a dataSet can be referred to by name in chart or table components.
 
 For example, the first chart in this node contains the following component markup:
 
-&lt;pre&gt;
-&amp;lt;line-chart :dataSet="'set1'" :gridLines="true" /&amp;gt;
-&lt;/pre&gt;
+```
+&lt;line-chart :dataSet="'set1'" :gridLines="true"&gt;
+```
 
 Normally content items are limited to 780px wide. However, you can use the @board directive to make the content take the full available page width. 
 
