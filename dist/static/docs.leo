@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -114,12 +114,12 @@
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
-<v t="josephorr.20171111182810.1"><vh>Line Chart from dataTable</vh></v>
-<v t="josephorr.20171111235348.1"><vh>Bar Chart from dataTable</vh></v>
-<v t="josephorr.20171112004405.1"><vh>Pie Chart from dataTable</vh></v>
-<v t="josephorr.20171112201003.1"><vh>Doughnut Chart from dataTable</vh></v>
-<v t="josephorr.20171113062955.1"><vh>Polar Chart from dataTable</vh></v>
+<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
+<v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
+<v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
+<v t="josephorr.20171112201003.1"><vh>@board Doughnut Chart from dataTable</vh></v>
+<v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
 <v t="josephorr.20171109061104.1"><vh>Data</vh>
@@ -1276,11 +1276,11 @@ Latin America,40, 20,	10, 16,	24, 38,	74, 167, 508,	784, #e8c3b9
 North America,	6, 3,2,	2, 7,	26, 82,	172, 312, 433, #c45850</t>
 <t tx="josephorr.20171111182810.1">@language html
 
-&lt;line-chart dataTable="worldpop" :gridLines="true" /&gt;</t>
-<t tx="josephorr.20171111235348.1">&lt;bar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171112004405.1">&lt;pie-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171112201003.1">&lt;doughnut-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
-<t tx="josephorr.20171113062955.1">&lt;polar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" /&gt;</t>
+&lt;line-chart dataTable="worldpop" :gridLines="true" :board="true" /&gt;</t>
+<t tx="josephorr.20171111235348.1">&lt;bar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" :board="true"/&gt;</t>
+<t tx="josephorr.20171112004405.1">&lt;pie-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" :board="true"/&gt;</t>
+<t tx="josephorr.20171112201003.1">&lt;doughnut-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" :board="true"/&gt;</t>
+<t tx="josephorr.20171113062955.1">&lt;polar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" :board="true" /&gt;</t>
 <t tx="josephorr.20171113063513.1">@language md
 
 A dataSet is a Leo node with a @dataSet directive. It contains JSON data.
