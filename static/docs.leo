@@ -53,7 +53,7 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -69,7 +69,7 @@
 <v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20181028132300.1"><vh>Lists from JSON data</vh>
+<v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
 <v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
@@ -1199,7 +1199,7 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 
 A line chart with some random data contained in the **set1** @dataTable node.
 
-&lt;line-chart dataSet="set1" :gridLines="true" /&gt;</t>
+&lt;line-chart dataSet="set1" :gridLines="true" :board="true"/&gt;</t>
 <t tx="josephorr.20171107074219.1"></t>
 <t tx="josephorr.20171107081559.1">@language json
 {

@@ -71,9 +71,25 @@ function charts (Vue) {
         title: String,
         col: String,
         gridLines: Boolean,
+        board: Boolean,
         responsive: {
           type: Boolean,
           default: true
+        }
+      },
+      computed: {
+        // if board display, make graph 90% of bpane
+        height () {
+          if (!this.board) {
+            return 400
+          }
+          const b = window.document.getElementById('panes-separator')
+          let h = (b && b.scrollHeight) || 0
+          console.log(h)
+          if (h) {
+            h = h - 100
+          }
+          return h || 400
         }
       },
       mounted () {

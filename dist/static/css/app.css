@@ -2344,6 +2344,7 @@ LI.gallerybox {
 }
 #bpane .content {
   padding: 40px;
+  height: 100%;
 }
 .section-title {
   font-size: 140px;
@@ -3237,6 +3238,7 @@ section :link:focus, section :visited:focus {outline: none;
 }
 #bpane .content {
   padding: 40px;
+  height: 100%;
 }
 .section-title {
   font-size: 140px;
@@ -15304,4 +15306,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?93ea935761c757278bd27cf4653d4d96*/
+/*# sourceMappingURL=app.css.map?8459f0a44911c86cabb5d9ff2c7bc073*/
