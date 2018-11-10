@@ -17,11 +17,11 @@
       },
       height: {
         type: String,
-        default: '300'
+        default: '100%'
       },
       width: {
         type: String,
-        default: '400'
+        default: ''
       },
       mm: {
         type: String,
@@ -49,8 +49,10 @@
     },
     mounted () {
       const mermaidEl = this.$el
-      mermaidEl.style.height = this.height + 'px'
-      mermaidEl.style.width = this.width + 'px'
+      mermaidEl.style.height = '90%'
+      // mermaidEl.style.width = this.width + 'px'
+      // mermaidEl.style.height = this.height + 'px'
+      // mermaidEl.style.width = this.width + 'px'
       mermaidEl.name = this.name
       const config = {
         startOnLoad: true,
@@ -74,6 +76,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 .mermaid
+  // margin-top: 60px
   text-align: center
   // margin-left: auto
   // margin-right: auto

@@ -317,6 +317,7 @@ g.node
   cursor: pointer
 .mm-board
   margin-left: 20px
+  margin-top: 60px
 .mermaid
   text-align: center
   // margin-left: auto

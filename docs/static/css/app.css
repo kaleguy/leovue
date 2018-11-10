@@ -15162,7 +15162,7 @@ TD.number {
   text-align: right;
 }
 
-.mermaid[data-v-33c1e30c] {
+.mermaid[data-v-0b07c5fd] {
   text-align: center;
 }
 
@@ -15256,16 +15256,17 @@ H1[data-v-34536ce0] {
     content: '\25CB';
 }
 
-g.node[data-v-1553b28a] {
+g.node[data-v-73c0b51e] {
   cursor: pointer;
 }
-.mm-board[data-v-1553b28a] {
+.mm-board[data-v-73c0b51e] {
   margin-left: 20px;
+  margin-top: 60px;
 }
-.mermaid[data-v-1553b28a] {
+.mermaid[data-v-73c0b51e] {
   text-align: center;
 }
-.mbutton[data-v-1553b28a] {
+.mbutton[data-v-73c0b51e] {
   border: 1px solid #ccc;
   border-radius: 2px;
   width: 16px;
@@ -15287,4 +15288,4 @@ g.node[data-v-1553b28a] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?11cba69b740d0d8096a64489dab43be6*/
+/*# sourceMappingURL=app.css.map?de057768cf0e19bd8f2e859847c5b3b6*/
