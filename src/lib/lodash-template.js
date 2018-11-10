@@ -92,6 +92,8 @@ function render (json, templateType) {
     console.log('Template compilation error: ', templateType, e)
   }
   // return Promise.resolve(html)
+  // TODO: add general cleanup here
+  html = html.replace(/&amp;quot;/g, '"')
   return html
 }
 

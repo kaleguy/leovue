@@ -1292,6 +1292,10 @@ For example, the first chart in this node contains the following component marku
 &lt;pre&gt;
 &amp;lt;line-chart :dataSet="'set1'" :gridLines="true" /&amp;gt;
 &lt;/pre&gt;
+
+Normally content items are limited to 780px wide. However, you can use the @board directive to make the content take the full available page width. 
+
+The first chart is using the @board directive, so the chart displays at 100% width.
 </t>
 <t tx="josephorr.20171113063533.1">@language md
 
