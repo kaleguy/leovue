@@ -2337,6 +2337,11 @@ LI.gallerybox {
   padding: 0;
   height: 100%;
 }
+.hcode {
+  background: #efefef;
+  padding: 20px;
+  border-radius: 2px;
+}
 .section-title {
   font-size: 140px;
   font-weight: bold;
@@ -3221,6 +3226,11 @@ section :link:focus, section :visited:focus {outline: none;
   margin: 0;
   padding: 0;
   height: 100%;
+}
+.hcode {
+  background: #efefef;
+  padding: 20px;
+  border-radius: 2px;
 }
 .section-title {
   font-size: 140px;
@@ -15288,4 +15298,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?de057768cf0e19bd8f2e859847c5b3b6*/
+/*# sourceMappingURL=app.css.map?ef4229bff4f92ef819cdae92a91f62c1*/

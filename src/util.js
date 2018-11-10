@@ -143,6 +143,7 @@ function formatText (text, noWrapper) {
       break
     default:
       text = hiliteCode(text, language)
+      text = '<div class="hcode">' + text + '</div>'
   }
   if (noWrapper) { return text }
   text = `<div class='content'>${text}</div>`
