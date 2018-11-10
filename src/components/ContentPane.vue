@@ -1,7 +1,6 @@
 <template>
   <div class="pane">
-    <div v-if="textContent"
-         id="tlayout">
+    <div v-if="textContent">
       <div id="lhandle"
            class="handle">
         <div class="handle-button"
@@ -11,10 +10,12 @@
                 name="chevron-left"></icon>
         </div>
       </div>
-      <div :style="{position:'relative', overflow: 'hidden', width: cpWidth, height: 'calc(100vh - 33px)'}">
-        <div class="inner-container">
-          <div class="right-cpane" :style="{width: cpWidth}">
-            <component :is="dynComponent" v-bind="$props"/>
+      <div id="tlayout">
+        <div :style="{position:'relative', overflow: 'hidden', width: cpWidth, height: 'calc(100vh - 33px)'}">
+          <div class="inner-container">
+            <div class="right-cpane" :style="{width: cpWidth}">
+              <component :is="dynComponent" v-bind="$props"/>
+            </div>
           </div>
         </div>
       </div>
@@ -266,11 +267,14 @@ export default {
     max-width: 50px;
     margin-right: 1%;
   }
+  #rhandle {
+    float: right;
+  }
   .handle {
     width:50px;
-    align-items: center;
-    flex: auto;
-    display: flex;
+    // align-items: center;
+    //flex: auto;
+    display: inline-block;
   }
   .right-cpane {
     flex: auto;
@@ -306,6 +310,7 @@ export default {
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
   }
   .pane {
     // height: 100%;
