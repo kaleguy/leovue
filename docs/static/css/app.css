@@ -3006,6 +3006,12 @@ p.bold {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+}
+.md {
+  margin-left: 10px;
+  margin-top: 10px;
+  max-width: 720px;
+  padding-right: 10px;
   margin-bottom: 80px;
 }
 CODE.hljs {
@@ -3904,6 +3910,12 @@ p.bold {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+}
+.md {
+  margin-left: 10px;
+  margin-top: 10px;
+  max-width: 720px;
+  padding-right: 10px;
   margin-bottom: 80px;
 }
 CODE.hljs {
@@ -3943,6 +3955,7 @@ H1 {
   margin-top: 10px;
   max-width: 720px;
   padding-right: 10px;
+  margin-bottom: 80px;
 }
 .unselectable {
   -moz-user-select: -moz-none;
@@ -15310,4 +15323,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?e3e232a63ddb837c95306745aac92ea5*/
+/*# sourceMappingURL=app.css.map?9e7b4196e25cb104d7f23144e539e4ac*/
