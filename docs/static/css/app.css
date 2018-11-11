@@ -3010,7 +3010,6 @@ p.bold {
 .md {
   margin-left: 10px;
   margin-top: 10px;
-  max-width: 720px;
   padding-right: 10px;
   margin-bottom: 80px;
 }
@@ -3050,7 +3049,6 @@ HTML, BODY {
 .md {
   margin-left: 10px;
   margin-top: 10px;
-  max-width: 720px;
   padding-right: 10px;
   margin-bottom: 80px;
 }
@@ -3915,7 +3913,6 @@ p.bold {
 .md {
   margin-left: 10px;
   margin-top: 10px;
-  max-width: 720px;
   padding-right: 10px;
   margin-bottom: 80px;
 }
@@ -3954,7 +3951,6 @@ H1 {
 .md {
   margin-left: 10px;
   margin-top: 10px;
-  max-width: 720px;
   padding-right: 10px;
   margin-bottom: 80px;
 }
@@ -15324,4 +15320,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?9de605e765e03a89a4d7c9be1e564f02*/
+/*# sourceMappingURL=app.css.map?5fa0618220ef6bd19e461468321cc1ab*/
