@@ -3006,6 +3006,7 @@ p.bold {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 80px;
 }
 CODE.hljs {
   background: #eeeeee;
@@ -3903,6 +3904,7 @@ p.bold {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 80px;
 }
 CODE.hljs {
   background: #eeeeee;
@@ -5410,7 +5412,7 @@ p {
   stroke-width: 1.5px;
 }
 
-.settings[data-v-5dd86a25] {
+.settings[data-v-344c7366] {
   padding: 40px;
 }
 
@@ -15308,4 +15310,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?f369601a13013670a5c5fb74c9d7c065*/
+/*# sourceMappingURL=app.css.map?e3e232a63ddb837c95306745aac92ea5*/

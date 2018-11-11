@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -110,11 +110,11 @@
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
 <v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
 <v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
@@ -1320,7 +1320,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.16.3
+LeoVue is currently at version 1.16.4
 
 LeoVue 1.16.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2460,7 +2460,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.16.3 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.16.4 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
