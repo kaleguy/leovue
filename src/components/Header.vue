@@ -180,8 +180,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 .check
-  margin-top: 2px
-  margin-bottom: -3px
+  // margin-top: 2px
+  // margin-bottom: -3px
 .holder
   padding: 0
   margin: 0

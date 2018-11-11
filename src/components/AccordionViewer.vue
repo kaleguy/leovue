@@ -3,10 +3,10 @@
     <div class="panes-container">
       <div class="center-pane" id="center-pane">
         <ul :style="ulStyle">
-          <div v-for="itemdata in data">
+          <div v-for="itemdata, index in data">
           <item
             class="item"
-            :top="false"
+            :top="getTop(index)"
             :model="itemdata"
             :textItems="text"
             :targetEl="false"
@@ -38,6 +38,13 @@
         lhandle: true
       }
     },
+    methods: {
+      getTop (index) {
+        if (!index) {
+          return this.top
+        }
+      }
+    },
     watch: {
       '$route': {
         handler: function (val, oldVal, changed) {
@@ -56,6 +63,11 @@
       ulStyle () {
         const p = window.lconfig.leftPanePadding || '0'
         return `padding-left:${p}`
+      },
+      top () {
+        // if (this.$store.state.leodata.length > 1) { return false }
+        if (window.lconfig.firstNodeAsTitle === false) { return false }
+        return true
       }
     },
     mounted: function () {

@@ -76,7 +76,7 @@
     white-space: nowrap
     margin-bottom: 4px
     margin-top: 4px
-    min-width: 200px
+    min-width: 280px
   li > div
     padding-left: 0
   .leaf-button

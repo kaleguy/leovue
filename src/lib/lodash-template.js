@@ -93,7 +93,7 @@ function render (json, templateType) {
   }
   // return Promise.resolve(html)
   // TODO: add general cleanup here
-  html = html.replace(/&amp;quot;/g, '"')
+  html = html.replace(/&amp;quot;/g, '&quot;')
   return html
 }
 
