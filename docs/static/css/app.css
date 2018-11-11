@@ -3052,6 +3052,7 @@ HTML, BODY {
   margin-top: 10px;
   max-width: 720px;
   padding-right: 10px;
+  margin-bottom: 80px;
 }
 .unselectable {
   -moz-user-select: -moz-none;
@@ -15323,4 +15324,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?9e7b4196e25cb104d7f23144e539e4ac*/
+/*# sourceMappingURL=app.css.map?9de605e765e03a89a4d7c9be1e564f02*/

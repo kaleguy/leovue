@@ -129,6 +129,7 @@ HTML, BODY
   margin-top: 10px
   max-width: 720px
   padding-right: 10px
+  margin-bottom: 80px
 
 .unselectable
  -moz-user-select: -moz-none
