@@ -1079,21 +1079,26 @@ The subtree isn't loaded until you click on the node, so outlines can contain ma
 Note that search will not work on nodes that have not been loaded yet.
 </t>
 <t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
-<t tx="josephorr.20170602132642.1">@language md
+<t tx="josephorr.20170602132642.1">@language html
 
-## YouTube Component Example
+&lt;h2&gt;YouTube Component Example&lt;/h2&gt;
 
-
+&lt;p&gt;
 An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js Youtube component&lt;/a&gt; added to an HTML content node.
+&lt;/p&gt;
 
-
+&lt;p&gt;
 Enter this tag:
-```
-&lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
-```
-
-
+&lt;/p&gt;
+&lt;div class="hcode"&gt;
+&lt;pre&gt;
+&amp;lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&amp;gt;&amp;lt;/youtube&amp;gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;p&gt;
 To get this result:
+&lt;/p&gt;
 
 &lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
@@ -1189,9 +1194,9 @@ See the main.js file in the LeoVue source for how other components are included 
   </t>
 <t tx="josephorr.20171105173610.1">@language md
 
-The Vue-Chartjs component is included by default with LeoVue.
+## Charts with Vue-ChartJS
 
-The Vue-Chartjs component isn't used directly, it is necessary to subclass each graph type.
+The Vue-Chartjs component is included by default with LeoVue.
 
 The following Chartjs components are included by default with LeoVue:
 
@@ -1284,6 +1289,8 @@ Another formula:
 \sum_{n = 0}^\infty \frac{(-1)^{n}}{2n+1} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
 &lt;/mj&gt;</t>
 <t tx="josephorr.20171109061104.1">@language md
+
+## Data Nodes
 
 Nodes in LeoVue can contain data, and this data can be used by Vue components.
 
@@ -1406,6 +1413,8 @@ If you view this node in Leo, you'll see that in this example all of the data an
  &lt;/table-component&gt;</t>
 <t tx="josephorr.20171116140935.1">@language md
 
+## The Vue Table Component
+
 LeoVue includes three components for displaying tables:
 
 * **vtable**: A very simple table component for displaying data from @dataTable nodes.
@@ -1421,6 +1430,8 @@ This example uses the &lt;b&gt;vc-table&lt;/b&gt; component to display the data 
 &lt;vc-table dataTable="worldpop"&gt;&lt;/vc-table&gt;
 </t>
 <t tx="josephorr.20171118020637.1">@language md
+
+## Diagrams with Mermaidjs
 
 LeoVue includes a component for displaying diagrams written for the [Mermaid library](https://mermaidjs.github.io/).
 Since this library is large it isn't included with LeoVue, but the default index.html file has a link to the Mermaid CDN.
@@ -1873,6 +1884,8 @@ reveal.js comes with a few themes built in: &lt;br&gt;
 &lt;/p&gt;</t>
 <t tx="josephorr.20171209143344.1">@language html
 
+&lt;h2&gt;Example Mermaid Diagram&lt;h2&gt;
+
 &lt;mermaid height="300" &gt;
 graph TB
     sq[Square shape] --&gt; ci((Circle shape))
@@ -2267,9 +2280,8 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">@language html
-
-&lt;h2&gt;Bootstrap Vue Components&lt;/h2&gt;
+<t tx="josephorr.20180909120438.1">
+## Bootstrap Vue Components
 
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
 
