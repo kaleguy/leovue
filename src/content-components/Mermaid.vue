@@ -49,10 +49,9 @@
     },
     mounted () {
       const mermaidEl = this.$el
-      mermaidEl.style.height = '90%'
-      // mermaidEl.style.width = this.width + 'px'
-      // mermaidEl.style.height = this.height + 'px'
-      // mermaidEl.style.width = this.width + 'px'
+      // mermaidEl.style.height = '90%'
+      mermaidEl.style.height = this.height + 'px'
+      mermaidEl.style.width = this.width + 'px'
       mermaidEl.name = this.name
       const config = {
         startOnLoad: true,

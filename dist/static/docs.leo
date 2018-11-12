@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -33,7 +33,7 @@
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
 <v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
-<v t="josephorr.20170304113011.1"><vh>Code</vh>
+<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
@@ -66,7 +66,7 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
@@ -101,7 +101,7 @@
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -361,6 +361,9 @@ The document you are viewing was created with Leo, and is being displayed by Leo
 &lt;/div&gt;</t>
 <t tx="josephorr.20170304113011.1">@language md
 
+
+## Nodes with Code Content
+
 Content items in Leo outlines can be code.
 
 To mark content as code, put the following in the first line of the node content:
@@ -417,10 +420,15 @@ c.connect(
   user : 'username@domain.com'
   password : 'password'
 )</t>
-<t tx="josephorr.20170326071708.1">Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
+<t tx="josephorr.20170326071708.1">## One Node, Multiple Paths
+
+
+Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
 
 The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
-<t tx="josephorr.20170326072340.1">Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
+<t tx="josephorr.20170326072340.1">## Load File Content into Node
+
+Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
 <t tx="josephorr.20170326174500.1">@language md
 
 # About Leo
@@ -631,6 +639,8 @@ For a quick look at a Leo file, you can also drag and drop the file on to LeoVue
 </t>
 <t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">@language md
+
+## Link Nodes
 
 You can create nodes that point to external sites.
 
@@ -1053,6 +1063,8 @@ http://www.mysite.com/leovue?title=MyFile&amp;showapptitle=false
 </t>
 <t tx="josephorr.20170511082833.1">@language md
 
+## Leo + Leo
+
 LeoVue can load .leo files into nodes in a parent .leo file.
 
 The child node of this node has the following title:
@@ -1067,15 +1079,23 @@ The subtree isn't loaded until you click on the node, so outlines can contain ma
 Note that search will not work on nodes that have not been loaded yet.
 </t>
 <t tx="josephorr.20170511083006.1">The nodes below this one are loaded from another .leo file.</t>
-<t tx="josephorr.20170602132642.1">@language html
+<t tx="josephorr.20170602132642.1">@language md
 
-&lt;p&gt;
+## YouTube Component Example
+
+
 An example &lt;a href="https://github.com/kaorun343/vue-youtube-embed"&gt;Vue.js Youtube component&lt;/a&gt; added to an HTML content node.
-&lt;/p&gt;
 
-&lt;div&gt;
+
+Enter this tag:
+```
 &lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;
-&lt;/div&gt;  </t>
+```
+
+
+To get this result:
+
+&lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
 
 LeoVue is written in Vue.js, and Vue components can be added to content panes.
@@ -1141,7 +1161,19 @@ Vue.use(VueYouTubeEmbed)
 
 See the main.js file in the LeoVue source for how other components are included with LeoVue.
 </t>
-<t tx="josephorr.20171104212406.1">&lt;info-card
+<t tx="josephorr.20171104212406.1">## Infocard Examples
+
+### Code for card 1:
+```
+&lt;info-card
+  frontTitle=" Info Card "
+  frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
+  backTitle=" Back Title "
+  backData=" This is the back of the card. "/&gt;
+```
+
+### Infocards:
+&lt;info-card
   frontTitle=" Info Card "
   frontData=" The Vue Info Card component makes it easy to create simple flashcards. "
   backTitle=" Back Title "
@@ -1426,7 +1458,7 @@ sequenceDiagram
 
 Simple diagram with Mermaid:
 
-&lt;pre&gt;
+&lt;pre class="hcode"&gt;
 graph TD;
     Anything--&gt;B;
     Everything--&gt;C;
@@ -1434,7 +1466,7 @@ graph TD;
     C--&gt;D;
 &lt;/pre&gt;
 
-&lt;mermaid height="300" width="250"&gt;
+&lt;mermaid height="300"&gt;
 
 graph TD;
     Anything--&gt;B;
@@ -1447,7 +1479,7 @@ graph TD;
 
 &lt;h3&gt;A simple GANNT diagram with Mermaid.&lt;/h3&gt;
 
-&lt;pre&gt;
+&lt;pre class="hcode"&gt;
 
 gantt
 dateFormat  YYYY-MM-DD
@@ -1460,7 +1492,7 @@ Future task2              :         des4, after des3, 5d
 
 &lt;/pre&gt;
 
-&lt;mermaid height="200"&gt;
+&lt;mermaid height="215"&gt;
 
 gantt
 dateFormat  YYYY-MM-DD
@@ -1476,7 +1508,7 @@ Future task2               :         des4, after des3, 5d
 
 &lt;h2&gt;Multiple Graphs in one Diagram&lt;/h2&gt;
 
-&lt;pre&gt;
+&lt;pre class="hcode"&gt;
 graph TB
     c1--&gt;a2
     subgraph one
@@ -1490,7 +1522,7 @@ graph TB
     end
 &lt;/pre&gt;
 
-&lt;mermaid height="200"&gt;
+&lt;mermaid height="300"&gt;
 graph TB
     c1--&gt;a2
     subgraph one
@@ -2118,6 +2150,9 @@ the outline node name must be specified first, then an asterisk, then the node t
 --&gt;</t>
 <t tx="josephorr.20180331164142.1">@language md
 
+## RSS Content
+
+
 Using the @rss directive, you can retrieve and format RSS content.
 
 For example:
@@ -2141,10 +2176,14 @@ A URL node can be a simple website displayed in the content area.
 The following nodes show:
 
 1. A Wikipedia page displayed as content
-1. A markdown file loaded as content (this is a cloned node).</t>
+1. A markdown file loaded as content (this is a cloned node).
+
+Sites which don't allow display in an IFRAME tag will not display.</t>
 <t tx="josephorr.20180402070616.1">&amp;amp; in RSS
 </t>
 <t tx="josephorr.20180402071948.1">@language md
+
+## XML Content
 
 Using the @xml directive, you can retrieve and format XML content. The content will be formatted with the xsl template
 that you specify.
@@ -2168,6 +2207,9 @@ templates to this file to format other xml sources.
 <t tx="josephorr.20180402071950.1">template: weather</t>
 <t tx="josephorr.20180403094722.1"></t>
 <t tx="josephorr.20180407102550.1">@language md
+
+
+## JSON Content
 
 Using the @json directive, you can retrieve and format JSON data with lodash templates.
 
@@ -2196,6 +2238,8 @@ source: OpenWeather Map</t>
 <t tx="josephorr.20180414145445.1">template: openbooks
 comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20180414204138.1">@language md
+
+## The @book Directive
 
 Using the @book directive, you can use a book title and ISBN to load book details into the content for a node.
 
