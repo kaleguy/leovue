@@ -270,7 +270,9 @@
   display: inline-block
   text-align: center
 .doc-title
-  font-weight: bold
+  // font-weight: bold
+  margin-left: 6px
+  color: #333
 .menu-footer
   color: #fff
   position: absolute

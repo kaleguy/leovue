@@ -84,7 +84,7 @@
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
 <v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
@@ -2280,8 +2280,7 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">
-## Bootstrap Vue Components
+<t tx="josephorr.20180909120438.1">## Bootstrap Vue Components
 
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
 
@@ -2344,7 +2343,9 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
     &lt;p class="my-4"&gt;Hello from modal!&lt;/p&gt;
   &lt;/b-modal&gt;
 &lt;/div&gt;</t>
-<t tx="josephorr.20180909144649.1">&lt;h2&gt;Carousel&lt;/h2&gt;
+<t tx="josephorr.20180909144649.1">@language html
+
+&lt;h2&gt;Carousel&lt;/h2&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
 
 &lt;b-carousel id="carousel1"
