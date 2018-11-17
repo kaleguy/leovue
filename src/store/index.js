@@ -724,9 +724,10 @@ function setData (context, ldata, filename, route) {
   context.commit('RESET') // content item has not been drawn
   context.commit('INIT_DATA') // loaded the leo data
   let cover = extractCover(ldata) // cover page, pull out any nodes with @cover directive
+  const text = ldata.textItems
   context.commit('LEO', {
     data: ldata.data,
-    text: ldata.textItems,
+    text,
     filename: filename,
     cover: cover
   })
@@ -741,6 +742,13 @@ function setData (context, ldata, filename, route) {
   }
   setLanguageNodes(context, ldata)
   setChildDirectives(context, ldata)
+  if (_.isArray(ldata.data)) {
+    ldata.data.forEach(d => {
+      loadPages(d, text)
+    })
+  } else {
+    loadPages(ldata.data, text)
+  }
   // TODO: refactor use of id vs route.path
   let id = route.params.id
   // check if path is a literate path, translate to number (look up matching node name)
@@ -886,6 +894,42 @@ function translatePath (p, d) {
     }
   }
   return { npath: p, subpath }
+}
+
+/**
+ * Mark all of the @page item children so that when selected they
+ * will navigate to page/anchor, not load new item
+ * @param data
+ * @param loadSections
+ */
+function loadPages (item, textItems) {
+  let p = /^@page /.test(item.name)
+  if (p) {
+    console.log('loading paged/inline items', item.name)
+    loadPage(item, textItems)
+  }
+  item.children.forEach(d => loadPages(d, textItems))
+}
+function loadPage (item, textItems) {
+  const id = item.id
+  const t = item.t
+  const pages = item.children
+  const bottomShim = '<div style="height:40px"></div>'
+  if (!pages) { return }
+  // create the page content by combining the child content, and mark each child as a page child
+  const title = `<h1  id="x${id}">${item.name.replace(/^@page /, '')}</h1>`
+  let content = util.formatText(textItems[t] + bottomShim, true, title)
+  const arr = []
+  pages.forEach((page, index) => {
+    // add to page  content
+    const title = `<h2 id="x${id}-${page.id}">${page.name}</h2>\n`
+    arr.push(util.formatText(textItems[page.t] + bottomShim, true, title))
+    page.page = { pid: id, id: page.id, index } // pid is the id of the @page item, id is item id, index is offset of child
+  })
+  // set the page content
+  content = content + arr.join('')
+  textItems[t] = content // `<div class='content'>${content}</div>`
+  // console.log(content)
 }
 
 /**
@@ -1299,10 +1343,17 @@ export default new Vuex.Store({
             console.log('msg:', event.data)
           }
         }
+        // a message from main app telling us to scroll content
+        if (data.namespace === 'leovue' && data.eventName === 'setcurrentsection') {
+          const id = data.state.indexh
+          context.dispatch('setCurrentPageSection', {id})
+        }
+        // a message from main app telling us to switch items
         if (data.namespace === 'leovue' && data.eventName === 'setcurrentitem') {
           const id = data.state.id
           context.dispatch('setCurrentItem', {id})
         }
+        // a message from a presentation telling us page has changed
         if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
           const id = data.state.indexh
           context.dispatch('setCurrentPage', {id})
@@ -1387,6 +1438,10 @@ export default new Vuex.Store({
         default:
       }
     },
+    setCurrentPageSection (context, o) {
+      let id = o.id
+      context.commit('CURRENT_PAGE', {id})
+    },
     setCurrentPage (context, o) {
       let page = +o.id
       let id = context.state.currentItem.id
@@ -1396,7 +1451,7 @@ export default new Vuex.Store({
       if (!pageNode) {
         id = 0
       } else {
-        id = pageNode.id
+        id = pageNode.id // the actual current item
       }
       context.commit('CURRENT_PAGE', {id})
     },

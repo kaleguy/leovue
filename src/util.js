@@ -80,7 +80,7 @@ function parseQueryString (config, url) {
  * @param text {string}
  * @returns {string}
  */
-function formatText (text, noWrapper) {
+function formatText (text, noWrapper, title) {
   if (!text) { return '' }
   let language = getLanguage(text)
 
@@ -97,6 +97,9 @@ function formatText (text, noWrapper) {
   // remove directives from first line
   if (/^\s*?@/.test(text)) {
     text = removeFirstLine(text)
+  }
+  if (title) {
+    text = title + text
   }
   let mu = ''
   let muv = null

@@ -84,7 +84,7 @@
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1" a="E"><vh>@page Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
 <v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
@@ -2280,15 +2280,13 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">## Bootstrap Vue Components
-
+<t tx="josephorr.20180909120438.1">
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
 
 The child nodes below contain some examples of Bootstrap Vue components in use.
 
 </t>
-<t tx="josephorr.20180909142644.1">&lt;h2&gt;Alerts&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
+<t tx="josephorr.20180909142644.1">&lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
 
 &lt;b-alert show&gt;Default Alert&lt;/b-alert&gt;
@@ -2297,8 +2295,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 
 
 </t>
-<t tx="josephorr.20180909142750.1">&lt;h2&gt;Badges&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
+<t tx="josephorr.20180909142750.1">&lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div&gt;
   &lt;h2&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h2&gt;
   &lt;h3&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h3&gt;
@@ -2308,10 +2305,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/div&gt;
 
 </t>
-<t tx="josephorr.20180909143556.1">&lt;h2&gt;Popovers and Tooltips&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-
+<t tx="josephorr.20180909143556.1">
 &lt;h3&gt;Tooltip&lt;/h3&gt;
 &lt;div&gt;
   &lt;b-btn v-b-tooltip.hover title="Tooltip content"&gt;Hover Me&lt;/b-btn&gt;
@@ -2332,8 +2326,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   v-b-popover.click="'Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'" 
   title="Popover Title"&gt;Click Me&lt;/b-btn&gt;
 &lt;/div&gt;</t>
-<t tx="josephorr.20180909144412.1">&lt;h2&gt;Modals&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
+<t tx="josephorr.20180909144412.1">&lt;div class="hshim"&gt;&lt;/div&gt;
 
 &lt;div&gt;
   &lt;b-btn v-b-modal.modal1&gt;Launch demo modal&lt;/b-btn&gt;
@@ -2345,7 +2338,6 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/div&gt;</t>
 <t tx="josephorr.20180909144649.1">@language html
 
-&lt;h2&gt;Carousel&lt;/h2&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
 
 &lt;b-carousel id="carousel1"
@@ -2392,8 +2384,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
     &lt;/b-carousel&gt;
 
   &lt;/div&gt;</t>
-<t tx="josephorr.20180923194344.1">&lt;h2&gt;Tabs&lt;/h2&gt;
-
+<t tx="josephorr.20180923194344.1">
 &lt;h4&gt;Plain Tabs&lt;/h4&gt;
 &lt;b-tabs&gt;
   &lt;b-tab title="first" active&gt;
@@ -2423,7 +2414,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;h4&gt;Card tabs&lt;/h4&gt;
+&lt;h4&gt;Card tabs With Pictures&lt;/h4&gt;
 
 &lt;b-card no-body&gt;
   &lt;b-tabs card&gt;

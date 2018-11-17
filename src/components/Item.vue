@@ -202,6 +202,18 @@ export default {
         })
       }
       const id = this.model.id
+      if (this.model.page) {
+        let page = this.model.page
+        this.$store.dispatch('setCurrentItem', {id: page.pid})
+        this.$store.dispatch('setCurrentPageSection', {id: page.id})
+        console.log('page', page)
+        const sectionId = `x${page.pid}-${page.id}`
+        const sectionEl = document.getElementById(sectionId)
+        const container = document.getElementsByClassName('inner-container')[1]
+        console.log('Seciont id', sectionId, sectionEl, container)
+        Velocity(sectionEl, 'scroll', { container })
+        return
+      }
       if (this.model.presentation) {
         let presentation = this.model.presentation
         let id = this.model.presentation.pid
@@ -222,7 +234,6 @@ export default {
           }
         }
         window.setTimeout(_toPageF, 1)
-
         return
       }
       // if (!this.targetEl) { return }
