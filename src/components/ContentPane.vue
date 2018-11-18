@@ -12,7 +12,7 @@
       </div>
       <div id="tlayout">
         <div :style="{position:'relative', overflow: 'hidden', width: cpWidth, height: 'calc(100vh - 33px)'}">
-          <div class="inner-container">
+          <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll">
             <div class="right-cpane" :style="{width: cpWidth}">
               <component :is="dynComponent" v-bind="$props"/>
             </div>
@@ -47,6 +47,7 @@
 <script>
 const hljs = require('highlight.js')
 import {presentation} from '../lib/presentation'
+import _ from 'lodash'
 const util = require('../util.js')
 
 // functions for dealing with x-frame headers
@@ -92,6 +93,9 @@ function overrideXFrame(item, textItems) {
 }
 // end functions for dealing with x-frame headers
 
+function f() { console.log('SCROLL') }
+const ff = _.debounce(f, 50)
+
 function loadPresentation(item, textItems, iframe) {
   console.log('loading presentation', item)
   // debugger
@@ -126,6 +130,10 @@ export default {
     }
   },
   methods: {
+    onScroll () {
+      // bail if this isn't a paged item
+      ff()
+    },
     goNext () {
       const next = this.$store.state.currentItem.next
       this.resetCurrentItem(next)
@@ -210,6 +218,7 @@ export default {
   beforeUpdate () {
   },
   mounted () {
+    // if this is a paged item, get list of sections
   },
   updated () {
     const blocks = this.$el.querySelectorAll('code')

@@ -914,17 +914,17 @@ function loadPage (item, textItems) {
   const id = item.id
   const t = item.t
   const pages = item.children
-  const bottomShim = '<div style="height:40px"></div>'
+  item.page = { pid: id, id, index: 0 }
   if (!pages) { return }
   // create the page content by combining the child content, and mark each child as a page child
-  const title = `<h1  id="x${id}">${item.name.replace(/^@page /, '')}</h1>`
-  let content = util.formatText(textItems[t] + bottomShim, true, title)
+  const title = `<h1  id="x${id}-${id}">${item.name.replace(/^@page /, '')}</h1>`
+  let content = util.formatText(textItems[t], true, title)
   const arr = []
   pages.forEach((page, index) => {
     // add to page  content
     const title = `<h2 id="x${id}-${page.id}">${page.name}</h2>\n`
-    arr.push(util.formatText(textItems[page.t] + bottomShim, true, title))
-    page.page = { pid: id, id: page.id, index } // pid is the id of the @page item, id is item id, index is offset of child
+    arr.push(util.formatText(textItems[page.t], true, title))
+    page.page = { pid: id, id: page.id, index: index + 1 } // pid is the id of the @page item, id is item id, index is offset of child
   })
   // set the page content
   content = content + arr.join('')
@@ -1484,7 +1484,12 @@ export default new Vuex.Store({
         itemObj = {id, historyIndex: o.historyIndex}
       }
       context.commit('CURRENT_ITEM', itemObj)
+      // current page is the page of presentation or section of @page content
+      // reset for first item in series
       if (_.get(item, '[0].presentation')) {
+        context.commit('CURRENT_PAGE', {id: 0})
+      }
+      if (_.get(item, '[0].page')) {
         context.commit('CURRENT_PAGE', {id: 0})
       }
       if (item) {
