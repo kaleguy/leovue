@@ -51,6 +51,7 @@ import _ from 'lodash'
 const util = require('../util.js')
 
 // functions for dealing with x-frame headers
+// TODO move these
 window.getData = function (data) {
   if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) {
     let html = data.query.results.resources.content
@@ -93,9 +94,6 @@ function overrideXFrame(item, textItems) {
 }
 // end functions for dealing with x-frame headers
 
-function f() { console.log('SCROLL') }
-const ff = _.debounce(f, 50)
-
 function loadPresentation(item, textItems, iframe) {
   console.log('loading presentation', item)
   // debugger
@@ -127,12 +125,15 @@ export default {
   },
   data () {
     return {
+      xSections: [],
+      handleScroll: null
     }
   },
   methods: {
     onScroll () {
       // bail if this isn't a paged item
-      ff()
+      if (!this.xSections.length) { return }
+      this.handleScroll()
     },
     goNext () {
       const next = this.$store.state.currentItem.next
@@ -218,7 +219,23 @@ export default {
   beforeUpdate () {
   },
   mounted () {
-    // if this is a paged item, get list of sections
+    const xSections = document.getElementsByClassName('x-section')
+    if (xSections) {
+      this.xSections = xSections
+    }
+    function handleScrollF() {
+      const sections = Array.prototype.slice.call(this.xSections)
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top
+        if (top < 100) {
+          const re = /-(\d+)$/
+          const match = re.exec(section.id)
+          let id = match[1]
+          return this.$store.dispatch('setCurrentPageSection', {id})
+        }
+      })
+    }
+    this.handleScroll = _.debounce(handleScrollF, 50)
   },
   updated () {
     const blocks = this.$el.querySelectorAll('code')

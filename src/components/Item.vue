@@ -203,6 +203,7 @@ export default {
       }
       const id = this.model.id
       if (this.model.page) {
+        // TODO: this is duplicate of code in store
         let page = this.model.page
         this.$store.dispatch('setCurrentItem', {id: page.pid})
         this.$store.dispatch('setCurrentPageSection', {id: page.id})
@@ -210,7 +211,6 @@ export default {
         const sectionId = `x${page.pid}-${page.id}`
         const sectionEl = document.getElementById(sectionId)
         const container = document.getElementsByClassName('inner-container')[1]
-        console.log('Seciont id', sectionId, sectionEl, container)
         Velocity(sectionEl, 'scroll', { container })
         return
       }

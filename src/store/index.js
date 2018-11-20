@@ -8,6 +8,7 @@ import jsyaml from 'js-yaml'
 // import CSV from 'csv-string'
 import Papa from 'papaparse'
 import xsl from '../lib/xsl'
+import Velocity from 'velocity-animate'
 import lodashTemplate from '../lib/lodash-template'
 const parserURI = require('uri-parse-lib')
 const HTML5Outline = require('h5o')
@@ -917,12 +918,12 @@ function loadPage (item, textItems) {
   item.page = { pid: id, id, index: 0 }
   if (!pages) { return }
   // create the page content by combining the child content, and mark each child as a page child
-  const title = `<h1  id="x${id}-${id}">${item.name.replace(/^@page /, '')}</h1>`
+  const title = `<h1  id="x${id}-${id}" class="x-section">${item.name.replace(/^@page /, '')}</h1>`
   let content = util.formatText(textItems[t], true, title)
   const arr = []
   pages.forEach((page, index) => {
     // add to page  content
-    const title = `<h2 id="x${id}-${page.id}">${page.name}</h2>\n`
+    const title = `<h2 id="x${id}-${page.id}" class="x-section">${page.name}</h2>\n`
     arr.push(util.formatText(textItems[page.t], true, title))
     page.page = { pid: id, id: page.id, index: index + 1 } // pid is the id of the @page item, id is item id, index is offset of child
   })
@@ -1618,14 +1619,27 @@ export default new Vuex.Store({
           }
           showText(context, context.state.leotext[item.t], id, null, params)
         }
+        if (item.page) {
+          let page = item.page
+          context.dispatch('setCurrentItem', {id: page.pid})
+          context.dispatch('setCurrentPageSection', {id: page.id})
+          // TODO move this, is duplicated in item component
+          const ff = () => {
+            const sectionId = `x${page.pid}-${page.id}`
+            const sectionEl = document.getElementById(sectionId)
+            const container = document.getElementById('content-inner-container')
+            Velocity(sectionEl, 'scroll', { container })
+          }
+          setTimeout(ff, 500)
+          return
+        }
         // if it is a page in a presentation
         if (item.presentation) {
           context.commit('CURRENT_ITEM', {id: item.presentation.pid})
           context.commit('CURRENT_PAGE', {id})
           return showPresentation(context, item.name, id)
-        } else {
-          context.commit('CURRENT_PAGE', {id: 0})
         }
+        context.commit('CURRENT_PAGE', {id: 0})
       }
     }
   }
