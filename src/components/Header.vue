@@ -68,15 +68,18 @@
 
 <script>
   import SearchBar from './SearchBar'
-  // import _ from 'lodash'
-  /**
+  import _ from 'lodash'
   function formatJSONData (data, textItems) {
     if (_.isArray(data)) {
       data.forEach(d => formatJSONData(d, textItems))
+    } else {
+      data.text = textItems[data.t]
+      data.children.forEach(child => {
+        formatJSONData(child, textItems)
+      })
     }
   }
-  */
-  // console.log(formatJSONData)
+
   export default {
     name: 'appheader',
     components: {
@@ -93,8 +96,8 @@
       },
       downloadJSON () {
         let data = this.$store.state.leodata
-        // const textItems = this.$store.state.leotext
-        // data = formatJSONData(data, textItems)
+        const textItems = this.$store.state.leotext
+        formatJSONData(data, textItems)
         console.log(data)
         const hiddenElement = document.createElement('a')
         hiddenElement.href = 'data:text/json;charset=utf-8,' + encodeURI(JSON.stringify(data))

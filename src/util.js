@@ -78,6 +78,7 @@ function parseQueryString (config, url) {
 /**
  * return formatted text, e.g. markdown or html
  * @param text {string}
+ * @param nowrapper {boolean} Skip the content div wrapper el
  * @returns {string}
  */
 function formatText (text, noWrapper, title) {

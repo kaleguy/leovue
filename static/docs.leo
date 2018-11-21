@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -37,7 +37,7 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -87,9 +87,10 @@
 </v>
 <v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
-<v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
+<v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
+<v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1" a="E"><vh>@page Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1"><vh>@page Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
 <v t="josephorr.20181117215156.1"><vh>Card</vh></v>
@@ -243,7 +244,7 @@
 <v t="josephorr.20180125092033.16"></v>
 </v>
 </v>
-<v t="josephorr.20180125092052.1" a="E"><vh>@mermaidlr App Planning</vh>
+<v t="josephorr.20180125092052.1"><vh>@mermaidlr App Planning</vh>
 <v t="josephorr.20180125092129.1" a="E"><vh>Server</vh>
 <v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
 <v t="josephorr.20180125092343.1"><vh>((Brent  ))</vh></v>
@@ -1110,17 +1111,20 @@ To get this result:
 &lt;youtube video-id="pRnQFGskg9w" :player-width="320" :player-height="195"&gt;&lt;/youtube&gt;  </t>
 <t tx="josephorr.20170605184042.1">@language md
 
+# Use Vue.js Components in Content
+
 LeoVue is written in Vue.js, and Vue components can be added to content panes.
 
-By default the following components are added to LeoVue.
+By default the following Vue components are added to LeoVue. You can add these components in your Leo content and LeoVue will display them:
 
 * YouTube Viewer
 * Leaflet Maps
 * InfoCard
 * Tables
-* Charts
+* Charts (Vue-Chartjs)
 * SVG
 * Bootstrap Vue Components (e.g. Tabs, Carousel etc.)
+
 
 The following are added by default but require adding a CDN script tag to index.html:
 
@@ -1135,6 +1139,8 @@ In your html content, add the Vue.js Youtube component like so:
 
 ```
 To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes.
+
+You can also add any other Vue component by including the Vue component source (for example by a link to a CDN) and then adding the Vue component markup to your Leo content.
 </t>
 <t tx="josephorr.20171103103421.1">@language md
 
@@ -2759,5 +2765,14 @@ The label 'Interstellar on Wikipedia' will show in the tree menu, and the conten
 For examples of content directives, see the [[ URL Nodes ]] section.
 
 </t>
+<t tx="josephorr.20181121183647.1">&lt;div id="lflt" style="height:100%"&gt;
+  &lt;l-map 
+    :zoom=13 
+    :center="[40.6971494, -74.0277793]"&gt;
+    &lt;l-tilelayer 
+      url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"&gt;
+    &lt;/l-tilelayer&gt;
+  &lt;/l-map&gt;
+&lt;/div&gt;</t>
 </tnodes>
 </leo_file>

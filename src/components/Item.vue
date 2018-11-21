@@ -186,8 +186,8 @@ export default {
 
       const ul = this.$el.getElementsByClassName('child-items')[0]
       if (!this.isOpen) {
-        this.$store.commit('OPEN_ITEMS', {openItemIds})
         Velocity(ul, 'slideDown', {duration, easing}).then(els => {
+          this.$store.commit('OPEN_ITEMS', {openItemIds})
           if (this.accordion) {
             this.closeSiblings(easing, 'Up')
           }

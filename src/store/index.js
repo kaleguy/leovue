@@ -62,6 +62,7 @@ const spinnerHTML = `<div class="spin-box"><div class="single10"></div></div>`
 function showText (context, text, id, nowrapper, params) {
   if (params && params.displayType === 'board') {
     context.commit('CONTENT_PANE', {type: 'board'})
+    nowrapper = true
   } else {
     context.commit('CONTENT_PANE', {type: 'text'})
   }

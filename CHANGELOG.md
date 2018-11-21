@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 - @page directive
+- fix to arrow keys on @page
 
 ## [1.16.4] - 2018-11-10
 ### Changed
