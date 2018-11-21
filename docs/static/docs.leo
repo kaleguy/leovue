@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -30,6 +30,11 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
+<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
+<v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
+<v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
+<v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
+</v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
 <v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
@@ -53,20 +58,20 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 <v t="josephorr.20181020180335.1"><vh>@rss [NYT Columns of Paul Krugman](https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/paul-krugman/rss.xml)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1"><vh>XML</vh>
+<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
@@ -74,20 +79,22 @@
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
 </v>
-<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1" a="E"><vh>@page Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
-<v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
+<v t="josephorr.20181117215156.1"><vh>Card</vh></v>
+<v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
+<v t="josephorr.20181117215222.1"><vh>Collapse</vh></v>
 <v t="josephorr.20180909144412.1"><vh>Modal</vh></v>
 <v t="josephorr.20180909143556.1"><vh>Popovers and Tooltips</vh></v>
 <v t="josephorr.20180923194344.1"><vh>Tabs</vh></v>
@@ -96,7 +103,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -175,8 +182,8 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"></v>
-<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -280,7 +287,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
@@ -2280,16 +2287,13 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">## Bootstrap Vue Components
-
+<t tx="josephorr.20180909120438.1">
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
 
 The child nodes below contain some examples of Bootstrap Vue components in use.
 
 </t>
-<t tx="josephorr.20180909142644.1">&lt;h2&gt;Alerts&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
+<t tx="josephorr.20180909142644.1">&lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
 
 &lt;b-alert show&gt;Default Alert&lt;/b-alert&gt;
 
@@ -2297,9 +2301,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 
 
 </t>
-<t tx="josephorr.20180909142750.1">&lt;h2&gt;Badges&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;div&gt;
+<t tx="josephorr.20180909142750.1">&lt;div style="margin-left:10px"&gt;
   &lt;h2&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h2&gt;
   &lt;h3&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h3&gt;
   &lt;h4&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h4&gt;
@@ -2308,10 +2310,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/div&gt;
 
 </t>
-<t tx="josephorr.20180909143556.1">&lt;h2&gt;Popovers and Tooltips&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-
+<t tx="josephorr.20180909143556.1">
 &lt;h3&gt;Tooltip&lt;/h3&gt;
 &lt;div&gt;
   &lt;b-btn v-b-tooltip.hover title="Tooltip content"&gt;Hover Me&lt;/b-btn&gt;
@@ -2332,10 +2331,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   v-b-popover.click="'Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'" 
   title="Popover Title"&gt;Click Me&lt;/b-btn&gt;
 &lt;/div&gt;</t>
-<t tx="josephorr.20180909144412.1">&lt;h2&gt;Modals&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-
-&lt;div&gt;
+<t tx="josephorr.20180909144412.1">&lt;div&gt;
   &lt;b-btn v-b-modal.modal1&gt;Launch demo modal&lt;/b-btn&gt;
 
   &lt;!-- Modal Component --&gt;
@@ -2344,9 +2340,6 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   &lt;/b-modal&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20180909144649.1">@language html
-
-&lt;h2&gt;Carousel&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
 
 &lt;b-carousel id="carousel1"
             style="text-shadow: 1px 1px 2px #333;"
@@ -2392,8 +2385,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
     &lt;/b-carousel&gt;
 
   &lt;/div&gt;</t>
-<t tx="josephorr.20180923194344.1">&lt;h2&gt;Tabs&lt;/h2&gt;
-
+<t tx="josephorr.20180923194344.1">
 &lt;h4&gt;Plain Tabs&lt;/h4&gt;
 &lt;b-tabs&gt;
   &lt;b-tab title="first" active&gt;
@@ -2423,7 +2415,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;h4&gt;Card tabs&lt;/h4&gt;
+&lt;h4&gt;Card tabs With Pictures&lt;/h4&gt;
 
 &lt;b-card no-body&gt;
   &lt;b-tabs card&gt;
@@ -2652,5 +2644,85 @@ To scroll the content pane, use your trackpad or scroll wheel.
 The up/down arrows navigate the tree menu.
 
 Shift+scroll will scroll the tree menu left to right (or, use your trackpad).</t>
+<t tx="josephorr.20181117215156.1">&lt;div&gt;
+  &lt;b-card title="Card Title"
+          img-src="https://picsum.photos/600/300/?image=25"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"&gt;
+    &lt;p class="card-text"&gt;
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    &lt;/p&gt;
+    &lt;b-button href="#" variant="primary"&gt;Go somewhere&lt;/b-button&gt;
+  &lt;/b-card&gt;
+&lt;/div&gt;</t>
+<t tx="josephorr.20181117215222.1">&lt;div&gt;
+  &lt;b-btn v-b-toggle.collapse1 variant="primary"&gt;Toggle Collapse&lt;/b-btn&gt;
+  &lt;b-collapse id="collapse1" class="mt-2"&gt;
+    &lt;b-card&gt;
+      &lt;p class="card-text"&gt;Collapse contents Here&lt;/p&gt;
+      &lt;b-btn v-b-toggle.collapse1_inner size="sm"&gt;Toggle Inner Collapse&lt;/b-btn&gt;
+      &lt;b-collapse id=collapse1_inner class="mt-2"&gt;
+        &lt;b-card&gt;Hello!&lt;/b-card&gt;
+      &lt;/b-collapse&gt;
+    &lt;/b-card&gt;
+  &lt;/b-collapse&gt;
+&lt;/div&gt;</t>
+<t tx="josephorr.20181120155646.1">
+&lt;p&gt;
+An important feature of Leo is &lt;b&gt;directives&lt;/b&gt;, short instructions that tell Leo how 
+to process content.
+&lt;/p&gt;
+
+Directives start with an '@' sign. For example, the @clean directive on a node title tells Leo 
+that the content of that node and its subnodes is coming from an external file, and Leo needs to keep 
+the content of the subtree synchronized with that file, but without adding any markers in the target file 
+(hence the name 'clean').</t>
+<t tx="josephorr.20181120155705.1">
+Leo has a number of directives, and only a few are recognized or processed by LeoVue. For example, the **@clean** directive is ignored by LeoVue, since LeoVue only displays content and does not synchronize content with external files.
+
+Leo directives can be used to mark content, for example **@language html** notifies Leo that the node content is html and to highlight that content accordingly.
+
+LeoVue recognizes the @language directive:
+
+* **@language html:** Content will display formatted.
+* **@language md:** Markdown: will be converted to HTML and displayed formatted.
+
+Other languages will be displayed as formatted source (for example @language python).
+
+When LeoVue encounters a language directive, it copies it to all descendant nodes unless those nodes already have a language directive. 
+</t>
+<t tx="josephorr.20181120155718.1">LeoVue adds a few directives not found in the Leo. These are all node level directives that tell LeoVue to load a particular type of content into the node.
+
+
+* **@rss:** Display a formatted RSS feed (requires name and url). Example:
+    ```
+    @rss [NYT New York Region](http://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)
+    
+    ```
+* **@xml:** Read an xml source file and display the formatted output as transformed by a specified template.
+
+* **@json:** Read a JSON source file and display the formatted output as transformed by a specified template.
+
+* **@book:** Given a label and an ISBN, retrieve the book data from openlibrary.org, and display formatted content. Example:
+    ```
+    @book [Concrete Mathematics](0201558025)
+    ```
+* **@kanban:** Display a subtree as Kanban board.
+
+* **@mermaid:** Display a subtree as Mermaidjs diagram.
+
+* **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. </t>
+<t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
+
+    [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))
+    
+The label 'Interstellar on Wikipedia' will show in the tree menu, and the content at the specified URL will display in the content window.
+
+For examples of content directives, see the [[ URL Nodes ]] section.
+
+</t>
 </tnodes>
 </leo_file>

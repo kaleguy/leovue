@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### WIP
 - vtitle on Graphical Tree
-- remove Git label on click anywhere
 - Graphical tree resizing
 - Export to JSON and LEO format
 - @formio directive
 - format @doc directive
+- @page directive
 
 ## [1.16.4] - 2018-11-10
 ### Changed
