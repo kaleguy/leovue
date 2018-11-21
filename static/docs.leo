@@ -21,7 +21,7 @@
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
-<v t="josephorr.20180326061144.1"><vh>Bookmarks and URLs</vh></v>
+<v t="josephorr.20180326061144.1"><vh>Bookmarks, URLs and Links</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
 <v t="josephorr.20181013124816.1" a="E"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
@@ -2136,14 +2136,14 @@ The real name of user D is Pat.</t>
 <t tx="josephorr.20180305204208.1"></t>
 <t tx="josephorr.20180326061144.1">@language html
 
-&lt;h1&gt;Bookmarks and URLs&lt;/h1&gt;
+&lt;h2&gt;Bookmarks and URLs&lt;/h2&gt;
 
 &lt;p&gt;
 A LeoVue URL looks like this:
 &lt;/p&gt;
-
+&lt;p&gt;
 &lt;a target="_blank" href="https://kaleguy.github.io/leovue/#/t/8/"&gt;https://kaleguy.github.io/leovue/#/t/8/&lt;/a&gt;
-
+&lt;/p&gt;    
 &lt;p&gt;
 The format is: # + display type + node number.
 &lt;/p&gt;
@@ -2160,6 +2160,29 @@ You can also specify a parent node, using this syntax:
 
 &lt;a  target="_blank" href="https://kaleguy.github.io/leovue/#/t/Sample Content~Javascript"&gt;https://kaleguy.github.io/leovue/#/t/Sample Content~Javascript&lt;/a&gt;
 
+&lt;h2&gt;Internal Links&lt;/h2&gt;
+
+&lt;p&gt;
+Text with double angle brackets denotes a link to a node subsection.
+&lt;/p&gt;
+&lt;p&gt;
+Internal links that are not links to child nodes are denoted with bold green text.
+&lt;/p&gt;
+&lt;p&gt;
+To create a link to a subsection, use this syntax:
+&lt;/p&gt;
+
+&lt;div class="hcode"&gt;
+    &amp;lt;&amp;lt; link to subsection &amp;gt;&amp;gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;
+For a link to another section in your Leo document (not a subsection) use this format:
+&lt;/p&gt;
+&lt;div class="hcode"&gt;
+
+    &amp;#91;&amp;#91; link to section &amp;#93;&amp;#93; 
+&lt;/div&gt;
 &lt;!--
 &lt;p&gt;
 Nodes using the @outline directive (which loads and outlines a target site) use a different format,
@@ -2694,7 +2717,9 @@ Other languages will be displayed as formatted source (for example @language pyt
 
 When LeoVue encounters a language directive, it copies it to all descendant nodes unless those nodes already have a language directive. 
 </t>
-<t tx="josephorr.20181120155718.1">LeoVue adds a few directives not found in the Leo. These are all node level directives. Most of them are used to tell LeoVue to load a particular type of content into the node or how to display the node content.
+<t tx="josephorr.20181120155718.1">&lt;p&gt;
+LeoVue adds a few directives not found in the Leo. These are all node level directives. Most of them are used to tell LeoVue to load a particular type of content into the node or how to display the node content.
+&lt;/p&gt;
 
 * **@board:** Normally LeoVue limits the width in the content page to a default of 780px (this is configurable). However, sometimes you may want to have content fill the entire pane. The @board directive tells LeoVue to use the entire content pane to display the node content.
 
@@ -2711,9 +2736,11 @@ When LeoVue encounters a language directive, it copies it to all descendant node
     ```
     @book [Concrete Mathematics](0201558025)
     ```
-* **@kanban:** Display a subtree as Kanban board.
+* **@kanban:** Display a subtree as a Kanban board.
 
-* **@mermaid:** Display a subtree as Mermaidjs diagram.
+* **@mermaid:** Display a subtree as a Mermaidjs diagram.
+
+* **@presentation:** Display a subtree as Revealjs presentation. The subtree can have multiple levels, allowing for the creation of nested presentations. S
 
 * **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. 
 
