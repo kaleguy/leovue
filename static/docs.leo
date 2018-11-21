@@ -17,7 +17,7 @@
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -30,6 +30,11 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
+<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
+<v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
+<v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
+<v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
+</v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
 <v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
@@ -53,20 +58,20 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 <v t="josephorr.20181020180335.1"><vh>@rss [NYT Columns of Paul Krugman](https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/paul-krugman/rss.xml)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1"><vh>XML</vh>
+<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
@@ -74,13 +79,13 @@
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
 </v>
-<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -98,7 +103,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -177,8 +182,8 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"></v>
-<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -282,7 +287,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
@@ -2665,5 +2670,59 @@ Shift+scroll will scroll the tree menu left to right (or, use your trackpad).</t
     &lt;/b-card&gt;
   &lt;/b-collapse&gt;
 &lt;/div&gt;</t>
+<t tx="josephorr.20181120155646.1">
+&lt;p&gt;
+An important feature of Leo is &lt;b&gt;directives&lt;/b&gt;, short instructions that tell Leo how 
+to process content.
+&lt;/p&gt;
+
+Directives start with an '@' sign. For example, the @clean directive on a node title tells Leo 
+that the content of that node and its subnodes is coming from an external file, and Leo needs to keep 
+the content of the subtree synchronized with that file, but without adding any markers in the target file 
+(hence the name 'clean').</t>
+<t tx="josephorr.20181120155705.1">
+Leo has a number of directives, and only a few are recognized or processed by LeoVue. For example, the **@clean** directive is ignored by LeoVue, since LeoVue only displays content and does not synchronize content with external files.
+
+Leo directives can be used to mark content, for example **@language html** notifies Leo that the node content is html and to highlight that content accordingly.
+
+LeoVue recognizes the @language directive:
+
+* **@language html:** Content will display formatted.
+* **@language md:** Markdown: will be converted to HTML and displayed formatted.
+
+Other languages will be displayed as formatted source (for example @language python).
+
+When LeoVue encounters a language directive, it copies it to all descendant nodes unless those nodes already have a language directive. 
+</t>
+<t tx="josephorr.20181120155718.1">LeoVue adds a few directives not found in the Leo. These are all node level directives that tell LeoVue to load a particular type of content into the node.
+
+
+* **@rss:** Display a formatted RSS feed (requires name and url). Example:
+    ```
+    @rss [NYT New York Region](http://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)
+    
+    ```
+* **@xml:** Read an xml source file and display the formatted output as transformed by a specified template.
+
+* **@json:** Read a JSON source file and display the formatted output as transformed by a specified template.
+
+* **@book:** Given a label and an ISBN, retrieve the book data from openlibrary.org, and display formatted content. Example:
+    ```
+    @book [Concrete Mathematics](0201558025)
+    ```
+* **@kanban:** Display a subtree as Kanban board.
+
+* **@mermaid:** Display a subtree as Mermaidjs diagram.
+
+* **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. </t>
+<t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
+
+    [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))
+    
+The label 'Interstellar on Wikipedia' will show in the tree menu, and the content at the specified URL will display in the content window.
+
+For examples of content directives, see the [[ URL Nodes ]] section.
+
+</t>
 </tnodes>
 </leo_file>

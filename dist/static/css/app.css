@@ -2342,6 +2342,15 @@ LI.gallerybox {
   padding: 20px;
   border-radius: 2px;
 }
+#content-inner-container H1 {
+  padding-top: 40px;
+}
+#content-inner-container H2 {
+  padding-top: 20px;
+}
+#content-inner-container .content {
+  padding-top: 40px;
+}
 .accordionviewer .item {
   max-width: 800px;
 }
@@ -3244,6 +3253,15 @@ section :link:focus, section :visited:focus {outline: none;
   background: #efefef;
   padding: 20px;
   border-radius: 2px;
+}
+#content-inner-container H1 {
+  padding-top: 40px;
+}
+#content-inner-container H2 {
+  padding-top: 20px;
+}
+#content-inner-container .content {
+  padding-top: 40px;
 }
 .accordionviewer .item {
   max-width: 800px;
@@ -15321,4 +15339,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?d3282f1399a5ca84b282ffb448fdb019*/
+/*# sourceMappingURL=app.css.map?b1a1ff45eaab70e74b8ede8ff65818fd*/

@@ -84,10 +84,12 @@
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
-<v t="josephorr.20180909120438.1" a="E"><vh>Bootstrap Vue</vh>
+<v t="josephorr.20180909120438.1" a="E"><vh>@page Bootstrap Vue</vh>
 <v t="josephorr.20180909142644.1"><vh>Alerts</vh></v>
-<v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
 <v t="josephorr.20180909142750.1"><vh>Badges</vh></v>
+<v t="josephorr.20181117215156.1"><vh>Card</vh></v>
+<v t="josephorr.20180909144649.1"><vh>Carousel</vh></v>
+<v t="josephorr.20181117215222.1"><vh>Collapse</vh></v>
 <v t="josephorr.20180909144412.1"><vh>Modal</vh></v>
 <v t="josephorr.20180909143556.1"><vh>Popovers and Tooltips</vh></v>
 <v t="josephorr.20180923194344.1"><vh>Tabs</vh></v>
@@ -2280,16 +2282,13 @@ comments: |
 <t tx="josephorr.20180420165631.1"></t>
 <t tx="josephorr.20180420165635.1"></t>
 <t tx="josephorr.20180420165801.1"></t>
-<t tx="josephorr.20180909120438.1">## Bootstrap Vue Components
-
+<t tx="josephorr.20180909120438.1">
 The Bootstrap-Vue library is included with LeoVue, so all of the Bootstrap Vue components are supported.
 
 The child nodes below contain some examples of Bootstrap Vue components in use.
 
 </t>
-<t tx="josephorr.20180909142644.1">&lt;h2&gt;Alerts&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
+<t tx="josephorr.20180909142644.1">&lt;b-alert variant="danger" dismissible show&gt;  Dismissible Alert!&lt;/b-alert&gt;
 
 &lt;b-alert show&gt;Default Alert&lt;/b-alert&gt;
 
@@ -2297,9 +2296,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 
 
 </t>
-<t tx="josephorr.20180909142750.1">&lt;h2&gt;Badges&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;div&gt;
+<t tx="josephorr.20180909142750.1">&lt;div style="margin-left:10px"&gt;
   &lt;h2&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h2&gt;
   &lt;h3&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h3&gt;
   &lt;h4&gt;Example heading &lt;b-badge&gt;New&lt;/b-badge&gt;&lt;/h4&gt;
@@ -2308,10 +2305,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;/div&gt;
 
 </t>
-<t tx="josephorr.20180909143556.1">&lt;h2&gt;Popovers and Tooltips&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-
+<t tx="josephorr.20180909143556.1">
 &lt;h3&gt;Tooltip&lt;/h3&gt;
 &lt;div&gt;
   &lt;b-btn v-b-tooltip.hover title="Tooltip content"&gt;Hover Me&lt;/b-btn&gt;
@@ -2332,10 +2326,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   v-b-popover.click="'Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'" 
   title="Popover Title"&gt;Click Me&lt;/b-btn&gt;
 &lt;/div&gt;</t>
-<t tx="josephorr.20180909144412.1">&lt;h2&gt;Modals&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
-
-&lt;div&gt;
+<t tx="josephorr.20180909144412.1">&lt;div&gt;
   &lt;b-btn v-b-modal.modal1&gt;Launch demo modal&lt;/b-btn&gt;
 
   &lt;!-- Modal Component --&gt;
@@ -2344,9 +2335,6 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
   &lt;/b-modal&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20180909144649.1">@language html
-
-&lt;h2&gt;Carousel&lt;/h2&gt;
-&lt;div class="hshim"&gt;&lt;/div&gt;
 
 &lt;b-carousel id="carousel1"
             style="text-shadow: 1px 1px 2px #333;"
@@ -2392,8 +2380,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
     &lt;/b-carousel&gt;
 
   &lt;/div&gt;</t>
-<t tx="josephorr.20180923194344.1">&lt;h2&gt;Tabs&lt;/h2&gt;
-
+<t tx="josephorr.20180923194344.1">
 &lt;h4&gt;Plain Tabs&lt;/h4&gt;
 &lt;b-tabs&gt;
   &lt;b-tab title="first" active&gt;
@@ -2423,7 +2410,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
 &lt;div class="hshim"&gt;&lt;/div&gt;
-&lt;h4&gt;Card tabs&lt;/h4&gt;
+&lt;h4&gt;Card tabs With Pictures&lt;/h4&gt;
 
 &lt;b-card no-body&gt;
   &lt;b-tabs card&gt;
@@ -2652,5 +2639,31 @@ To scroll the content pane, use your trackpad or scroll wheel.
 The up/down arrows navigate the tree menu.
 
 Shift+scroll will scroll the tree menu left to right (or, use your trackpad).</t>
+<t tx="josephorr.20181117215156.1">&lt;div&gt;
+  &lt;b-card title="Card Title"
+          img-src="https://picsum.photos/600/300/?image=25"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"&gt;
+    &lt;p class="card-text"&gt;
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    &lt;/p&gt;
+    &lt;b-button href="#" variant="primary"&gt;Go somewhere&lt;/b-button&gt;
+  &lt;/b-card&gt;
+&lt;/div&gt;</t>
+<t tx="josephorr.20181117215222.1">&lt;div&gt;
+  &lt;b-btn v-b-toggle.collapse1 variant="primary"&gt;Toggle Collapse&lt;/b-btn&gt;
+  &lt;b-collapse id="collapse1" class="mt-2"&gt;
+    &lt;b-card&gt;
+      &lt;p class="card-text"&gt;Collapse contents Here&lt;/p&gt;
+      &lt;b-btn v-b-toggle.collapse1_inner size="sm"&gt;Toggle Inner Collapse&lt;/b-btn&gt;
+      &lt;b-collapse id=collapse1_inner class="mt-2"&gt;
+        &lt;b-card&gt;Hello!&lt;/b-card&gt;
+      &lt;/b-collapse&gt;
+    &lt;/b-card&gt;
+  &lt;/b-collapse&gt;
+&lt;/div&gt;</t>
 </tnodes>
 </leo_file>

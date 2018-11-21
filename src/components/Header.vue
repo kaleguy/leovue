@@ -68,13 +68,15 @@
 
 <script>
   import SearchBar from './SearchBar'
-  import _ from 'lodash'
+  // import _ from 'lodash'
+  /**
   function formatJSONData (data, textItems) {
     if (_.isArray(data)) {
       data.forEach(d => formatJSONData(d, textItems))
     }
   }
-  console.log(formatJSONData)
+  */
+  // console.log(formatJSONData)
   export default {
     name: 'appheader',
     components: {
