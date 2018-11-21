@@ -2350,6 +2350,7 @@ LI.gallerybox {
 }
 #content-inner-container .content {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 .accordionviewer .item {
   max-width: 800px;
@@ -2864,7 +2865,7 @@ H1, .h1 {
   font-size: 2.5em;
 }
 H1, H2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .inner-container {
   position: absolute;
@@ -3262,6 +3263,7 @@ section :link:focus, section :visited:focus {outline: none;
 }
 #content-inner-container .content {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 .accordionviewer .item {
   max-width: 800px;
@@ -3776,7 +3778,7 @@ H1, .h1 {
   font-size: 2.5em;
 }
 H1, H2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .inner-container {
   position: absolute;
@@ -15339,4 +15341,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?731a25187f7e9b982bf281eef1561f57*/
+/*# sourceMappingURL=app.css.map?91a5bc31db9fe5525e1204d605c253bf*/

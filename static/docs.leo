@@ -37,19 +37,19 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
+<v t="josephorr.20170326071708.1" a="E"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170421082838.1"></v>
 </v>
-<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
+<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -85,7 +85,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Maps</vh></v>
 <v t="josephorr.20171104212406.1"><vh>InfoCard</vh></v>
@@ -129,7 +129,7 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>Data</vh>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -2694,8 +2694,9 @@ Other languages will be displayed as formatted source (for example @language pyt
 
 When LeoVue encounters a language directive, it copies it to all descendant nodes unless those nodes already have a language directive. 
 </t>
-<t tx="josephorr.20181120155718.1">LeoVue adds a few directives not found in the Leo. These are all node level directives that tell LeoVue to load a particular type of content into the node.
+<t tx="josephorr.20181120155718.1">LeoVue adds a few directives not found in the Leo. These are all node level directives. Most of them are used to tell LeoVue to load a particular type of content into the node or how to display the node content.
 
+* **@board:** Normally LeoVue limits the width in the content page to a default of 780px (this is configurable). However, sometimes you may want to have content fill the entire pane. The @board directive tells LeoVue to use the entire content pane to display the node content.
 
 * **@rss:** Display a formatted RSS feed (requires name and url). Example:
     ```
@@ -2714,7 +2715,14 @@ When LeoVue encounters a language directive, it copies it to all descendant node
 
 * **@mermaid:** Display a subtree as Mermaidjs diagram.
 
-* **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. </t>
+* **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. 
+
+* **dataSet:** This is the only directive that doesn't indicate how content is shown but rather how it is consumed (by components in other nodes). For example:
+
+   ```
+   @dataSet set1 Some Sample Data
+   ```
+   In the above example, the data in the example node will have a key of 'set1' (which can be used by components elsewhere in the tree). The text after the key name will be used as the node label in the tree menu. </t>
 <t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
 
     [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))
