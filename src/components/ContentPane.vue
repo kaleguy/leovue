@@ -12,9 +12,9 @@
       </div>
       <div id="tlayout">
         <div :style="{position:'relative', overflow: 'hidden', width: '100%', height: 'calc(100vh - 33px)'}">
-          <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll">
+          <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll" style="width:100%">
             <div class="right-cpane" :style="{overflowY: 'auto'}">
-              <div :style="{width: cpWidth}">
+              <div :style="{width: cpWidth, marginLeft: 'auto', marginRight: 'auto'}">
               <component :is="dynComponent" v-bind="$props"/>
               </div>
             </div>
