@@ -2868,7 +2868,7 @@ H1, H2 {
   margin-bottom: 1rem;
 }
 #tpane {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .inner-container {
@@ -3785,7 +3785,7 @@ H1, H2 {
   margin-bottom: 1rem;
 }
 #tpane {
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .inner-container {
@@ -15349,4 +15349,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?7aa8ed7656335cb9b2b78b4d4fd3b911*/
+/*# sourceMappingURL=app.css.map?ff54389676c267716e5f840466a31ac7*/
