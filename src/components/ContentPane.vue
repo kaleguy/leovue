@@ -1,5 +1,5 @@
 <template>
-  <div class="pane" id="dt">
+  <div class="pane" id="dx">
     <div v-if="textContent">
       <div id="lhandle"
            class="handle">
@@ -11,10 +11,12 @@
         </div>
       </div>
       <div id="tlayout">
-        <div :style="{position:'relative', overflow: 'hidden', width: cpWidth, height: 'calc(100vh - 33px)'}">
+        <div :style="{position:'relative', overflow: 'hidden', width: '100%', height: 'calc(100vh - 33px)'}">
           <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll">
-            <div class="right-cpane" :style="{width: cpWidth}">
+            <div class="right-cpane" :style="{overflowY: 'auto'}">
+              <div :style="{width: cpWidth}">
               <component :is="dynComponent" v-bind="$props"/>
+              </div>
             </div>
             </div>
           </div>
