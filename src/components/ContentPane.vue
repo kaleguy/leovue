@@ -11,10 +11,12 @@
         </div>
       </div>
       <div id="tlayout" :style="{height: 'calc(100vh - 33px)'}">
-        <div :style="{position:'relative', overflow: 'hidden', width: '100%'}">
-          <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll" style="width:100%">
+        <div id="tpane" :style="{position:'relative', width: '100%'}">
+          <div :style="{width: cpWidth}">
+          <div class="inner-container" id="content-inner-container" v-on:scroll="onScroll">
             <div class="right-cpane" :style="{width: cpWidth}">
               <component :is="dynComponent" v-bind="$props"/>
+            </div>
             </div>
           </div>
         </div>
