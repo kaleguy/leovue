@@ -1,5 +1,5 @@
 <template>
-  <div class="pane">
+  <div class="pane" id="dt">
     <div v-if="textContent">
       <div id="lhandle"
            class="handle">
