@@ -146,11 +146,9 @@ Main feature components:
 
 * [Vue.js](https://vuejs.org/) - The web framework used
 * [Vue.D3.Tree](https://github.com/David-Desmaisons/Vue.D3.tree)
-* [Lunr](https://lunrjs.com/) and [Vue-Instant](https://github.com/santiblanko/vue-instant) - Search
 * [Highlight.js](https://highlightjs.org/) - Code highlighting
-* [Velocity-Animate](https://www.npmjs.com/package/velocity-animate) - Animation
 
-Major Content Components:
+Main Content Components:
 
 * [Vue-Chartjs](https://github.com/apertureless/vue-chartjs) - Charts
 * [Bootstrap-Vue](https://bootstrap-vue.js.org/) - Multiple Components
@@ -160,8 +158,11 @@ Major Content Components:
 * [Reveal.js](https://revealjs.com/#/) - presentations
 * [Vue2-Leaflet](https://github.com/KoRiGaN/Vue2Leaflet) - maps
 * [Bootstrap-Vue](https://bootstrap-vue.js.org/)
-* [h5o](https://www.npmjs.com/package/h5o) - HTML5 Outlines
 
+Libraries
+* [Defiant.js][https://defiantjs.com]
+* [Lunr](https://lunrjs.com/) and [Vue-Instant](https://github.com/santiblanko/vue-instant) - Search
+* [Velocity-Animate](https://www.npmjs.com/package/velocity-animate) - Animation
 
 ## Running Offline
 
