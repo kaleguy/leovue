@@ -60,6 +60,10 @@
              class="menu-item">
           <div class="menu-label" style="text-decoration: underline; color: blue">JSON</div>
         </div>
+        <div @click="downloadLeo()"
+             class="menu-item">
+          <div class="menu-label" style="text-decoration: underline; color: blue">Leo</div>
+        </div>
       </div>
       <div class="menu-footer" @click="settings">LeoVue</div>
     </div>
@@ -69,6 +73,7 @@
 <script>
   import SearchBar from './SearchBar'
   import _ from 'lodash'
+  import { JSONtoLeo } from '../services/leo-file'
   function formatJSONData (data, textItems) {
     if (_.isArray(data)) {
       data.forEach(d => formatJSONData(d, textItems))
@@ -102,7 +107,18 @@
         const hiddenElement = document.createElement('a')
         hiddenElement.href = 'data:text/json;charset=utf-8,' + encodeURI(JSON.stringify(data))
         hiddenElement.target = '_blank'
-        hiddenElement.download = 'leo.json'
+        hiddenElement.download = 'leovue.json'
+        hiddenElement.click()
+      },
+      downloadLeo () {
+        let data = this.$store.state.leodata
+        // const textItems = this.$store.state.leotext
+        data = JSONtoLeo(data, this.$store.state.leotext)
+        console.log(data)
+        const hiddenElement = document.createElement('a')
+        hiddenElement.href = 'data:text/xml;charset=utf-8,' + encodeURI(data)
+        hiddenElement.target = '_blank'
+        hiddenElement.download = 'leovue.leo'
         hiddenElement.click()
       },
       setAccordion () {

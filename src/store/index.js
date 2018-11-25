@@ -716,7 +716,8 @@ function extractCover (ldata) {
 }
 
 /**
- * setData Set data loaded from the Leo file, get content for open items (from path).
+ * setData Set data loaded from the Leo file, get content for open items (from path) (open items may need to loaded
+ * from external sources, e.g. md files. Also process special nodes like @presentation and @page
  * @param context
  * @param ldata
  * @param filename
