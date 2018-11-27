@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
-<leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
-<globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
-</globals>
+<leo_header file_format="2"/>
+<globals/>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
@@ -24,13 +21,13 @@
 <v t="josephorr.20180326061144.1"><vh>Bookmarks, URLs and Links</vh></v>
 <v t="josephorr.20170331200411.1"><vh>Installing and Using LeoVue</vh>
 <v t="josephorr.20171103103421.1"><vh>&lt;&lt; Running LeoVue from Github &gt;&gt;</vh></v>
-<v t="josephorr.20181013124816.1" a="E"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
+<v t="josephorr.20181013124816.1"><vh>&lt;&lt; Using LeoVue for your Github Project &gt;&gt;</vh>
 <v t="josephorr.20181013125750.1"><vh>&lt;&lt; A simple outlining example &gt;&gt;</vh></v>
 </v>
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
-<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
+<v t="josephorr.20181120155646.1"><vh>@page Directives</vh>
 <v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
 <v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
 <v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
@@ -38,18 +35,18 @@
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
 <v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
-<v t="josephorr.20170304113011.1" a="E"><vh>Code</vh>
+<v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170326071708.1" a="E"><vh>Some Cloned Nodes</vh>
+<v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170421082838.1"></v>
 </v>
-<v t="josephorr.20170511082833.1" a="E"><vh>Subtrees</vh>
+<v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -57,35 +54,35 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
-<v t="josephorr.20180331164142.1" a="E"><vh>RSS</vh>
+<v t="josephorr.20180331164142.1"><vh>RSS</vh>
 <v t="josephorr.20180331164148.1"><vh>@rss [NYT New York Region](https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml)</vh></v>
 <v t="josephorr.20180401123839.1"><vh>@rss [Slashdot](xttp://rss.slashdot.org/Slashdot/slashdotMain)</vh></v>
 <v t="josephorr.20180403094722.1"><vh>@rss [The New Yorker](https://www.newyorker.com/feed/everything)</vh></v>
 <v t="josephorr.20181020180335.1"><vh>@rss [NYT Columns of Paul Krugman](https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/paul-krugman/rss.xml)</vh></v>
 </v>
-<v t="josephorr.20180402071948.1" a="E"><vh>XML</vh>
+<v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
+<v t="josephorr.20181028132300.1"><vh>Lists from JSON data</vh>
 <v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
 </v>
-<v t="josephorr.20180414204138.1" a="E"><vh>Book (ISBN)</vh>
+<v t="josephorr.20180414204138.1"><vh>Book (ISBN)</vh>
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -104,12 +101,12 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
 </v>
-<v t="josephorr.20171118020637.1" a="E"><vh>Diagrams</vh>
+<v t="josephorr.20171118020637.1"><vh>Diagrams</vh>
 <v t="josephorr.20171120081455.1"><vh>SVG</vh></v>
 <v t="josephorr.20171118025718.1"><vh>Simple Graph</vh></v>
 <v t="josephorr.20171209143344.1"><vh>Test graph</vh></v>
@@ -117,7 +114,7 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
 <v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
@@ -130,24 +127,24 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
-<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+<v t="josephorr.20171109061104.1"><vh>Data</vh>
+<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
-<v t="josephorr.20171109061151.1" a="E"><vh>Data Tables</vh>
+<v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
 <v t="josephorr.20171120183447.1"><vh>Presentations</vh>
-<v t="josephorr.20171120183454.1" a="E"><vh>@presentation LeoVue</vh>
+<v t="josephorr.20171120183454.1"><vh>@presentation LeoVue</vh>
 <v t="josephorr.20171121003417.1"><vh>LeoVue</vh></v>
 <v t="josephorr.20171125133856.1"><vh>Leo</vh></v>
 <v t="josephorr.20171125133910.1"><vh>Vue</vh></v>
-<v t="josephorr.20171121003459.1" a="E"><vh>Reveal</vh>
-<v t="josephorr.20171130193113.1" a="E"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
+<v t="josephorr.20171121003459.1"><vh>Reveal</vh>
+<v t="josephorr.20171130193113.1"><vh>&lt;&lt; Reveal.js &gt;&gt;</vh>
 <v t="josephorr.20171130193243.1"><vh>Title</vh></v>
 <v t="josephorr.20171130193424.1"><vh>Hello</vh></v>
 <v t="josephorr.20171130193455.1"><vh>Vertical Slides</vh></v>
@@ -182,9 +179,9 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
-<v t="josephorr.20180123102440.1" a="E"><vh>Mermaid</vh>
+<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
 <v t="josephorr.20180123100157.1"><vh>(G)</vh></v>
@@ -245,8 +242,8 @@
 </v>
 </v>
 <v t="josephorr.20180125092052.1"><vh>@mermaidlr App Planning</vh>
-<v t="josephorr.20180125092129.1" a="E"><vh>Server</vh>
-<v t="josephorr.20180125092331.1" a="E"><vh>Form.io</vh>
+<v t="josephorr.20180125092129.1"><vh>Server</vh>
+<v t="josephorr.20180125092331.1"><vh>Form.io</vh>
 <v t="josephorr.20180125092343.1"><vh>((Brent  ))</vh></v>
 </v>
 </v>
@@ -275,7 +272,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180201133413.1" a="E"><vh>@mermaidtd Process</vh>
+<v t="josephorr.20180201133413.1"><vh>@mermaidtd Process</vh>
 <v t="josephorr.20180201133420.1"><vh>A</vh>
 <v t="josephorr.20180201133422.1"><vh>B</vh>
 <v t="josephorr.20180201133431.1"><vh>(F)</vh></v>
@@ -289,7 +286,7 @@
 </v>
 </v>
 <v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
@@ -1372,9 +1369,9 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.16.4
+LeoVue is currently at version 1.17.0
 
-LeoVue 1.16.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.17.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -2538,7 +2535,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.16.4 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.17.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

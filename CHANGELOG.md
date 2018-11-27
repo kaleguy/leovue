@@ -11,8 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Export to JSON and LEO format
 - @formio directive
 - format @doc directive
+
+## [1.17.0] - 2018-11-27
+### Added
 - @page directive
-- fix to arrow keys on @page
+- Vertical scrollbar added back to content window
 
 ## [1.16.4] - 2018-11-10
 ### Changed
