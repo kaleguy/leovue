@@ -346,18 +346,29 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;img src="static/images/leo-leovue.png" style="width:680px;margin-left:auto;margin-right:auto;"&gt;
+&lt;div style="text-align:center;font-size:70px;margin-bottom:15px;font-weight:bold"&gt;LeoVue&lt;/div&gt;
 
-&lt;div style="text-align:center;font-size:60px;margin-bottom:15px;"&gt;LeoVue&lt;/div&gt;
+&lt;div style="text-align:center;font-size:40px;margin-bottom:15px;font-weight:normal"&gt;Leo + Vue = LeoVue&lt;/div&gt;
+
+&lt;img src="static/images/leo-leaflet.png" style="width:700px;margin-left:auto;margin-right:auto;"&gt;
+
+&lt;div style="text-align:center;font-size:70px"&gt;
+&lt;icon name="arrow-down"&gt;&lt;/icon&gt;
+&lt;/div&gt;
+
+&lt;img src="static/images/leovue-leaflet.png" style="width:700px;margin-left:auto;margin-right:auto;"&gt;
 
 
-&lt;div style="width:600px;margin-left:auto;margin-right:auto"&gt;
+&lt;div style="width:600px;margin-left:auto;margin-right:auto; margin-top:20px"&gt;
 &lt;p&gt;
 &lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor. It is open source and runs 
 on Windows/Mac/Linux. &lt;a target="_blank" href="http://www.leoeditor.com"&gt;More about Leo.&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines.
+Leo allows you to create content items and display them in multiple hierarchies.
+&lt;/p&gt;
+&lt;p&gt;
+Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines. Add Vue components to content items. Assemble content items into multiple views and pages. Load sites and data into nodes.
 &lt;p&gt;
 
 &lt;p&gt;
@@ -475,7 +486,9 @@ other files, including text, html or markdown files, or even other Leo files.
 The content you are reading was created in Leo. If you're reading this on the LeoVue
 site, then this content is being displayed via LeoVue.
 
-LeoVue is licensed under the MIT license.</t>
+LeoVue is licensed under the MIT license.
+
+&lt;toc&gt;&lt;/toc&gt;</t>
 <t tx="josephorr.20170327233137.1"></t>
 <t tx="josephorr.20170327233223.1"></t>
 <t tx="josephorr.20170327233236.1">@language md
@@ -1123,6 +1136,7 @@ By default the following Vue components are added to LeoVue. You can add these c
 * Charts (Vue-Chartjs)
 * SVG
 * Bootstrap Vue Components (e.g. Tabs, Carousel etc.)
+* TOC (See below)
 
 
 The following are added by default but require adding a CDN script tag to index.html:
@@ -1140,6 +1154,15 @@ In your html content, add the Vue.js Youtube component like so:
 To see how to add other components, view the docs.leo file using Leo, and check out the contents of the following subnodes.
 
 You can also add any other Vue component by including the Vue component source (for example by a link to a CDN) and then adding the Vue component markup to your Leo content.
+
+The TOC (Table of Contents) component will create a listing for all of the child nodes of the current item. For example, 
+
+```
+&lt;toc/&gt;
+```
+Creates the following:
+
+&lt;toc/&gt;
 </t>
 <t tx="josephorr.20171103103421.1">@language md
 

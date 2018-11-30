@@ -15240,15 +15240,19 @@ TD.number {
   display: block;
 }
 
-.chapter[data-v-8e561adc] {
-  margin: 6px;
+.toc[data-v-6946f428] {
+  font-size: 18px;
+  margin-top: 40px;
 }
-.section-link[data-v-8e561adc] {
-  color: #4cb986;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
+.chapter[data-v-6946f428] {
+  margin-top: 16px;
+}
+.chapter .section-link[data-v-6946f428] {
+    color: #4cb986;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
 }
 
 .node-link[data-v-2d139bd3] {
@@ -15360,4 +15364,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?624b0721476402c312acd7461b794e1b*/
+/*# sourceMappingURL=app.css.map?4dd993b615ca3e783fd3ba9c595b931f*/

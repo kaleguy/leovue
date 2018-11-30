@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="toc">
     <div v-for="chapter in chapters" class="chapter">
          <div class="section-link"
-         @click="gotoSection(chapter.vtitle)">« {{chapter.vtitle}} »</div>
+         @click="gotoSection(chapter.vtitle)">{{chapter.vtitle}}</div>
   </div>
   </div>
 </template>
@@ -67,13 +67,16 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+.toc
+  font-size: 18px
+  margin-top: 40px
 .chapter
-  margin: 6px
-.section-link
-  color: #4cb986
-  font-weight: bold
-  cursor: pointer
-  text-decoration: none
-  display: block
+  margin-top: 16px
+  .section-link
+    color: #4cb986
+    font-weight: bold
+    cursor: pointer
+    text-decoration: none
+    display: block
   // margin-bottom: 1rem
 </style>
