@@ -22,7 +22,9 @@ like the docs.leo file from this project shown below:
 
 
 ## LeoVue
-You can use LeoVue to view Leo files with a browser. LeoVue also allows you to put urls in node titles, with the content pane showing the url content.
+You can use LeoVue to view Leo files with a browser. LeoVue also allows you to put urls in node titles,
+with the content pane showing the url content.
+
 ![Leo](screencasts/leovue.gif)
 
 

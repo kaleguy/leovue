@@ -2342,6 +2342,10 @@ LI.gallerybox {
   padding: 20px;
   border-radius: 2px;
 }
+FIGCAPTION {
+  text-align: center;
+  color: #555;
+}
 #content-inner-container H1 {
   padding-top: 40px;
 }
@@ -3258,6 +3262,10 @@ section :link:focus, section :visited:focus {outline: none;
   background: #efefef;
   padding: 20px;
   border-radius: 2px;
+}
+FIGCAPTION {
+  text-align: center;
+  color: #555;
 }
 #content-inner-container H1 {
   padding-top: 40px;
@@ -15364,4 +15372,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?4dd993b615ca3e783fd3ba9c595b931f*/
+/*# sourceMappingURL=app.css.map?c7b37249c7d862a05aca673527a87dfe*/

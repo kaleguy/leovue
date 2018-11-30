@@ -347,16 +347,18 @@
 <t tx="josephorr.20170228222411.2">@language html
 
 &lt;table style="width:780px;"&gt;&lt;tr&gt;
-&lt;td&gt;&lt;img src="static/images/leo-leaflet.png" width="390"&gt;&lt;/td&gt;
-
-&lt;!--
 &lt;td&gt;
-&lt;div style="width:60px;font-size:70px"&gt;
-&lt;icon name="arrow-right"&gt;&lt;/icon&gt;
-&lt;/div&gt;
+    &lt;figure&gt;
+    &lt;img src="static/images/leo-leaflet.png" width="384"&gt;
+    &lt;figcaption&gt;Leo&lt;/figcaption&gt;
+    &lt;/figure&gt;
 &lt;/td&gt;
---&gt;
-&lt;td&gt;&lt;img src="static/images/leovue-leaflet.png" width="384"&gt;&lt;/td&gt;
+&lt;td&gt;
+    &lt;figure&gt;
+    &lt;img src="static/images/leovue-leaflet.png" width="381"&gt;
+    &lt;figcaption&gt;LeoVue&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;
 
 &lt;div style="width:600px;margin-left:auto;margin-right:auto; margin-top:20px"&gt;
@@ -372,11 +374,11 @@ on Windows/Mac/Linux. &lt;a target="_blank" href="http://www.leoeditor.com"&gt;M
 Leo allows you to create content items and display them in multiple hierarchies.
 &lt;/p&gt;
 &lt;p&gt;
-Use &lt;strong&gt;LeoVue&lt;/strong&gt; to create complex sites from Leo outlines. Add Vue components to content items. Assemble content items into multiple views and pages. Load sites and data into nodes.
+&lt;strong&gt;LeoVue&lt;/strong&gt; is a web app created with the &lt;a target="_blank" href="https://vuejs.org/"&gt;Vue.js&lt;/a&gt; framework. Use LeoVue to create complex sites from Leo outlines. Add Vue components to content items. Assemble content items into multiple views and pages. Load sites and data into nodes.
 &lt;p&gt;
 
 &lt;p&gt;
-The document you are viewing was created with Leo, and is being displayed by LeoVue.
+The website you are viewing was created with Leo, and is being displayed by LeoVue. The tree menu is  created from one or more Leo outlines, and the content is either created in Leo or is loaded from external files and sites.
 &lt;/p&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20170304113011.1">@language md
