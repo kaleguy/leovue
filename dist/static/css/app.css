@@ -5451,7 +5451,7 @@ p {
   stroke-width: 1.5px;
 }
 
-.settings[data-v-37d9e93a] {
+.settings[data-v-8af1d6b8] {
   padding: 40px;
 }
 
@@ -15240,6 +15240,17 @@ TD.number {
   display: block;
 }
 
+.chapter[data-v-8e561adc] {
+  margin: 6px;
+}
+.section-link[data-v-8e561adc] {
+  color: #4cb986;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
 .node-link[data-v-2d139bd3] {
   color: #4cb986;
   font-weight: bold;
@@ -15349,4 +15360,4 @@ g.node[data-v-73c0b51e] {
   stroke-width: 1.5px;
 }
 
-/*# sourceMappingURL=app.css.map?21a91fe34e8141a27e35c59aadc8a106*/
+/*# sourceMappingURL=app.css.map?624b0721476402c312acd7461b794e1b*/

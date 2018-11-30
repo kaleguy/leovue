@@ -207,11 +207,11 @@ export default {
         let page = this.model.page
         this.$store.dispatch('setCurrentItem', {id: page.pid})
         this.$store.dispatch('setCurrentPageSection', {id: page.id})
-        console.log('page', page)
         const sectionId = `x${page.pid}-${page.id}`
         const sectionEl = document.getElementById(sectionId)
-        const container = document.getElementsByClassName('inner-container')[1]
+        const container = document.getElementById('content-inner-containerb')
         Velocity(sectionEl, 'scroll', { container })
+        console.log('page', page)
         return
       }
       if (this.model.presentation) {

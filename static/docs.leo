@@ -441,7 +441,9 @@ Leo Nodes can be @file nodes. This means that Leo keeps a link to an external fi
 Leo is a unique text editor and IDE that facilitates a new way of looking at text documents, including code files.
 
 The purpose of this document is to make a brief introduction to creating tree-based content with Leo and
-displaying it with LeoVue.</t>
+displaying it with LeoVue.
+
+&lt;toc&gt;&lt;/toc&gt;</t>
 <t tx="josephorr.20170326174511.1">@language md
 
 ## Content Creation with Leo
@@ -1369,7 +1371,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.17.0
+LeoVue is currently at version 1.17.1
 
 LeoVue 1.17.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2535,7 +2537,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.17.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.17.1 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -2663,13 +2665,13 @@ filter:
 
 # Navigating LeoVue
 
-Scrollbars have been removed from LeoVue to reduce screen clutter. 
+Scrollbars have been removed from the Tree menu to reduce screen clutter. 
 
-To scroll the content pane, use your trackpad or scroll wheel.
+You can use the your mouse scroll wheel or trackpad to scroll the tree menu, or use the up/down arrows.
 
-The up/down arrows navigate the tree menu.
+Shift+scroll will scroll the tree menu left to right (or, use your trackpad).
 
-Shift+scroll will scroll the tree menu left to right (or, use your trackpad).</t>
+</t>
 <t tx="josephorr.20181117215156.1">&lt;div&gt;
   &lt;b-card title="Card Title"
           img-src="https://picsum.photos/600/300/?image=25"

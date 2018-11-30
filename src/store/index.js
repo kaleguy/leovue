@@ -1629,7 +1629,7 @@ export default new Vuex.Store({
           const ff = () => {
             const sectionId = `x${page.pid}-${page.id}`
             const sectionEl = document.getElementById(sectionId)
-            const container = document.getElementById('content-inner-container')
+            const container = document.getElementById('content-inner-containerb')
             Velocity(sectionEl, 'scroll', { container })
           }
           setTimeout(ff, 500)

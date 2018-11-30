@@ -28,6 +28,7 @@ import Mermaid from './content-components/Mermaid'
 import MermaidP from './content-components/MermaidP'
 import VSVG from './content-components/VSVG'
 import SectionLink from './components/SectionLink'
+import TOC from './components/TOC'
 import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
 import ImageLeft from './components/layout/ImageLeft'
@@ -48,6 +49,7 @@ Vue.use(BootstrapVue)
 Vue.component('star-rating', StarRating)
 Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)
+Vue.component('toc', TOC) // table of contents (of child nodes)
 Vue.component('Nodelink', NodeLink)
 Vue.component('v-table', VTable)
 Vue.component('v-svg', VSVG)
