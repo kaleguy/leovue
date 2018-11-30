@@ -17,26 +17,35 @@ const baseString = `
 </leo_file>
 `
 
-function dataToItems (d, items) {
-  items.push(`<v tx="leovue.${d.t}"><vh>${d.name}</vh></v>`)
+/**
+ *
+ * @param d {Object}
+ * @param items {Array}
+ * @param t {Object}
+ * @param tItems {Array}
+ * @returns {*}
+ */
+function dataToItems (d, items, t, tItems) {
+  console.log(d)
+  items.push(`<v t="leovue.${d.t}"><vh>${d.name}</vh>`)
+  let text = t[d.t]
+  text = text.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  tItems.push(`<v tx="leovue.${d.t}">${text}</v>`)
   if (_.isArray(d)) {
-    return d.forEach(i => dataToItems(i, items))
+    return d.forEach(i => dataToItems(i, items, t, tItems))
   }
   d.children.forEach(i => {
-    dataToItems(i, items)
+    dataToItems(i, items, t, tItems)
   })
+  items.push('</v>')
 }
-function dataToTextItems (d, items) {
-  _.forEach(d, i => items.push(i))
-}
-
 function JSONtoLeo (data, textData) {
   let items = []
   let textItems = []
-  dataToItems(data, items)
-  dataToTextItems(textData, textItems)
+  dataToItems(data, items, textData, textItems)
+  // dataToTextItems(textData, textItems)
   let vnodes = items.join('')
-  let tnodes = dataToTextItems('')
+  let tnodes = textItems.join('')
   let leo = baseString.replace(/%%vnodes%%/, vnodes)
   leo = leo.replace(/%%tnodes%%/, tnodes)
   console.log(leo, baseString)

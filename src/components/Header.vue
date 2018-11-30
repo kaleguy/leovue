@@ -41,6 +41,7 @@
       <div class="menu-separator"></div>
       <div class="hshim"></div>
       <div @click="setAccordion()"
+           title="Accordion mode: close siblings when opening node."
            class="menu-item">
         <div class="icon-box">
           <icon
@@ -101,9 +102,9 @@
       },
       downloadJSON () {
         let data = this.$store.state.leodata
+        let item = JSON.search(data, '//*[id="' + this.$store.state.currentItem.id + '"]')[0]
         const textItems = this.$store.state.leotext
-        formatJSONData(data, textItems)
-        console.log(data)
+        formatJSONData(item, textItems)
         const hiddenElement = document.createElement('a')
         hiddenElement.href = 'data:text/json;charset=utf-8,' + encodeURI(JSON.stringify(data))
         hiddenElement.target = '_blank'
@@ -112,9 +113,8 @@
       },
       downloadLeo () {
         let data = this.$store.state.leodata
-        // const textItems = this.$store.state.leotext
-        data = JSONtoLeo(data, this.$store.state.leotext)
-        console.log(data)
+        let item = JSON.search(data, '//*[id="' + this.$store.state.currentItem.id + '"]')[0]
+        data = JSONtoLeo(item, this.$store.state.leotext)
         const hiddenElement = document.createElement('a')
         hiddenElement.href = 'data:text/xml;charset=utf-8,' + encodeURI(data)
         hiddenElement.target = '_blank'

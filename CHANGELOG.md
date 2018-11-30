@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Export to JSON and LEO format
 - @formio directive
 - format @doc directive
+- fix Accordion mode
 
 ## [1.17.0] - 2018-11-27
 ### Added
