@@ -346,20 +346,24 @@
 <tnodes>
 <t tx="josephorr.20170228222411.2">@language html
 
-&lt;div style="text-align:center;font-size:70px;margin-bottom:15px;font-weight:bold"&gt;LeoVue&lt;/div&gt;
+&lt;table style="width:780px;"&gt;&lt;tr&gt;
+&lt;td&gt;&lt;img src="static/images/leo-leaflet.png" width="390"&gt;&lt;/td&gt;
+
+&lt;!--
+&lt;td&gt;
+&lt;div style="width:60px;font-size:70px"&gt;
+&lt;icon name="arrow-right"&gt;&lt;/icon&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+--&gt;
+&lt;td&gt;&lt;img src="static/images/leovue-leaflet.png" width="384"&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;
+
+&lt;div style="width:600px;margin-left:auto;margin-right:auto; margin-top:20px"&gt;
+&lt;div style="text-align:center;font-size:70px;margin-bottom:15px;font-weight:bold;display:none"&gt;LeoVue&lt;/div&gt;
 
 &lt;div style="text-align:center;font-size:40px;margin-bottom:15px;font-weight:normal"&gt;Leo + Vue = LeoVue&lt;/div&gt;
 
-&lt;img src="static/images/leo-leaflet.png" style="width:700px;margin-left:auto;margin-right:auto;"&gt;
-
-&lt;div style="text-align:center;font-size:70px"&gt;
-&lt;icon name="arrow-down"&gt;&lt;/icon&gt;
-&lt;/div&gt;
-
-&lt;img src="static/images/leovue-leaflet.png" style="width:700px;margin-left:auto;margin-right:auto;"&gt;
-
-
-&lt;div style="width:600px;margin-left:auto;margin-right:auto; margin-top:20px"&gt;
 &lt;p&gt;
 &lt;strong&gt;Leo&lt;/strong&gt; is a uniquely powerful and versatile outlining editor. It is open source and runs 
 on Windows/Mac/Linux. &lt;a target="_blank" href="http://www.leoeditor.com"&gt;More about Leo.&lt;/a&gt;
