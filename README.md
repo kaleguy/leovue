@@ -42,6 +42,10 @@ Content in nodes can contain Vue components or csv data. LeoVue renders the Vue 
 LeoVue uses the Reveal.js library to create presentations from Leo outlines. As with any Leo content, content can be nested and content items can be cloned (shared in multiple presentations).
 ![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-presentations.gif)
 
+## Menu items and Linked Scroll
+Each menu item can point to a single content item, or you can combine menu items into scrolling pages.
+![Leo](https://kaleguy.github.io/leovue/screencasts/leovue-page.gif)
+
 
 ## Summary Nodes
 
