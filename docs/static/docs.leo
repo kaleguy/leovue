@@ -12,6 +12,7 @@
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
+<v t="josephorr.20181202130523.1"><vh>[Screenshots](http://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
 <v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
@@ -2802,5 +2803,6 @@ For examples of content directives, see the [[ URL Nodes ]] section.
     &lt;/l-tilelayer&gt;
   &lt;/l-map&gt;
 &lt;/div&gt;</t>
+<t tx="josephorr.20181202130523.1"></t>
 </tnodes>
 </leo_file>
