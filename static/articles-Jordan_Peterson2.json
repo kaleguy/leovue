@@ -1,14 +1,17 @@
 {
   "articles": [
     {
-      "title": {},
+      "title": {
+        "href": "publication/325961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
+        "text": "Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment"
+      },
       "abstract": "We propose an interpersonal biofeedback technology which uses music-like stimuli to convey a user’s physiological information to another observer. It is argued that this interpersonal biofeedback may facilitate empathy and interpersonal entrainment. We argue that music is an optimal carrier for biofeedback because it naturally regulates psychophysiology, is cross-modally associated with emotion, and can be attended to peripherally. We propose a research study to investigate the effects of interpersonal biofeedback on emotional mindreading.",
       "type": {
         "href": "publication/325961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
         "text": "Chapter"
       },
       "date": "Jan 2019",
-      "reads": "442 Reads",
+      "reads": "878 Reads",
       "authors": [
         {
           "author": {
@@ -47,7 +50,7 @@
         "text": "Article"
       },
       "date": "Sep 2018",
-      "reads": "430 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -80,7 +83,7 @@
         "text": "Article"
       },
       "date": "May 2018",
-      "reads": "1,664 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -107,7 +110,7 @@
         "text": "Data"
       },
       "date": "May 2018",
-      "reads": "439 Reads",
+      "reads": "660 Reads",
       "authors": [
         {
           "author": {
@@ -134,7 +137,7 @@
         "text": "Data"
       },
       "date": "May 2018",
-      "reads": "331 Reads",
+      "reads": "518 Reads",
       "authors": [
         {
           "author": {
@@ -161,7 +164,7 @@
         "text": "Data"
       },
       "date": "May 2018",
-      "reads": "154 Reads",
+      "reads": "228 Reads",
       "authors": [
         {
           "author": {
@@ -188,7 +191,7 @@
         "text": "Article"
       },
       "date": "Nov 2017",
-      "reads": "1,771 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -221,7 +224,7 @@
         "text": "Article"
       },
       "date": "Oct 2017",
-      "reads": "2,757 Reads",
+      "reads": "7 Recommendations",
       "authors": [
         {
           "author": {
@@ -254,7 +257,7 @@
         "text": "Article"
       },
       "date": "Jul 2017",
-      "reads": "5,064 Reads",
+      "reads": "5 Recommendations",
       "authors": [
         {
           "author": {
@@ -287,7 +290,7 @@
         "text": "Article"
       },
       "date": "Apr 2017",
-      "reads": "5,871 Reads",
+      "reads": "5,999 Reads",
       "authors": [
         {
           "author": {
@@ -320,7 +323,7 @@
         "text": "Article"
       },
       "date": "Jun 2016",
-      "reads": "8,295 Reads",
+      "reads": "2 Recommendations",
       "authors": [
         {
           "author": {
@@ -359,7 +362,7 @@
         "text": "Article"
       },
       "date": "Apr 2016",
-      "reads": "7,432 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -392,7 +395,7 @@
         "text": "Article"
       },
       "date": "Dec 2015",
-      "reads": "5,202 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -431,7 +434,7 @@
         "text": "Article"
       },
       "date": "Dec 2015",
-      "reads": "705 Reads",
+      "reads": "765 Reads",
       "authors": [
         {
           "author": {
@@ -458,7 +461,7 @@
         "text": "Article"
       },
       "date": "Oct 2015",
-      "reads": "3,239 Reads",
+      "reads": "3,446 Reads",
       "authors": [
         {
           "author": {
@@ -484,7 +487,7 @@
         "text": "Data"
       },
       "date": "Aug 2015",
-      "reads": "194 Reads",
+      "reads": "204 Reads",
       "authors": [
         {
           "author": {
@@ -517,7 +520,7 @@
         "text": "Article"
       },
       "date": "Jun 2015",
-      "reads": "4,074 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -550,7 +553,7 @@
         "text": "Article"
       },
       "date": "Apr 2015",
-      "reads": "4,536 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -583,7 +586,7 @@
         "text": "Article"
       },
       "date": "Dec 2014",
-      "reads": "1,328 Reads",
+      "reads": "1,393 Reads",
       "authors": [
         {
           "author": {
@@ -616,7 +619,7 @@
         "text": "Article"
       },
       "date": "Dec 2014",
-      "reads": "4,704 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -637,7 +640,7 @@
         "text": "Article"
       },
       "date": "Dec 2014",
-      "reads": "638 Reads",
+      "reads": "668 Reads",
       "authors": [
         {
           "author": {
@@ -676,7 +679,7 @@
         "text": "Article"
       },
       "date": "Dec 2013",
-      "reads": "2,521 Reads",
+      "reads": "2,629 Reads",
       "authors": [
         {
           "author": {
@@ -709,7 +712,7 @@
         "text": "Article"
       },
       "date": "Dec 2013",
-      "reads": "1,394 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -742,7 +745,7 @@
         "text": "Article"
       },
       "date": "Dec 2013",
-      "reads": "660 Reads",
+      "reads": "689 Reads",
       "authors": [
         {
           "author": {
@@ -775,7 +778,7 @@
         "text": "Article"
       },
       "date": "Oct 2013",
-      "reads": "1,901 Reads",
+      "reads": "1,971 Reads",
       "authors": [
         {
           "author": {
@@ -814,7 +817,7 @@
         "text": "Article"
       },
       "date": "Jun 2013",
-      "reads": "1,435 Reads",
+      "reads": "2 Recommendations",
       "authors": [
         {
           "author": {
@@ -853,7 +856,7 @@
         "text": "Article"
       },
       "date": "May 2013",
-      "reads": "1,965 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -886,7 +889,7 @@
         "text": "Chapter"
       },
       "date": "Jan 2013",
-      "reads": "4,049 Reads",
+      "reads": "2 Recommendations",
       "authors": [
         {
           "author": {
@@ -907,7 +910,7 @@
         "text": "Article"
       },
       "date": "Dec 2012",
-      "reads": "5,798 Reads",
+      "reads": "4 Recommendations",
       "authors": [
         {
           "author": {
@@ -940,7 +943,7 @@
         "text": "Article"
       },
       "date": "Dec 2012",
-      "reads": "321 Reads",
+      "reads": "380 Reads",
       "authors": [
         {
           "author": {
@@ -973,7 +976,7 @@
         "text": "Article"
       },
       "date": "Dec 2012",
-      "reads": "1,528 Reads",
+      "reads": "1,709 Reads",
       "authors": [
         {
           "author": {
@@ -1006,7 +1009,7 @@
         "text": "Article"
       },
       "date": "Dec 2012",
-      "reads": "203 Reads",
+      "reads": "218 Reads",
       "authors": [
         {
           "author": {
@@ -1038,7 +1041,7 @@
         "text": "Conference Paper"
       },
       "date": "Sep 2012",
-      "reads": "391 Reads",
+      "reads": "418 Reads",
       "authors": [
         {
           "author": {
@@ -1071,7 +1074,7 @@
         "text": "Chapter"
       },
       "date": "Feb 2012",
-      "reads": "3,594 Reads",
+      "reads": "5 Recommendations",
       "authors": [
         {
           "author": {
@@ -1091,7 +1094,7 @@
         "text": "Article"
       },
       "date": "Dec 2011",
-      "reads": "889 Reads",
+      "reads": "932 Reads",
       "authors": [
         {
           "author": {
@@ -1112,7 +1115,7 @@
         "text": "Article"
       },
       "date": "Dec 2010",
-      "reads": "1,410 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1151,7 +1154,7 @@
         "text": "Article"
       },
       "date": "Dec 2010",
-      "reads": "663 Reads",
+      "reads": "690 Reads",
       "authors": [
         {
           "author": {
@@ -1190,7 +1193,7 @@
         "text": "Article"
       },
       "date": "Dec 2010",
-      "reads": "2,468 Reads",
+      "reads": "2,896 Reads",
       "authors": [
         {
           "author": {
@@ -1217,7 +1220,7 @@
         "text": "Article"
       },
       "date": "Dec 2010",
-      "reads": "1,343 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1256,7 +1259,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "907 Reads",
+      "reads": "987 Reads",
       "authors": [
         {
           "author": {
@@ -1283,7 +1286,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "810 Reads",
+      "reads": "896 Reads",
       "authors": [
         {
           "author": {
@@ -1316,7 +1319,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "1,323 Reads",
+      "reads": "1,381 Reads",
       "authors": [
         {
           "author": {
@@ -1355,7 +1358,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "500 Reads",
+      "reads": "534 Reads",
       "authors": [
         {
           "author": {
@@ -1394,7 +1397,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "582 Reads",
+      "reads": "601 Reads",
       "authors": [
         {
           "author": {
@@ -1427,7 +1430,7 @@
         "text": "Article"
       },
       "date": "Dec 2009",
-      "reads": "2,106 Reads",
+      "reads": "2,132 Reads",
       "authors": [
         {
           "author": {
@@ -1454,7 +1457,7 @@
         "text": "Chapter"
       },
       "date": "Oct 2009",
-      "reads": "815 Reads",
+      "reads": "852 Reads",
       "authors": [
         {
           "author": {
@@ -1475,7 +1478,7 @@
         "text": "Article"
       },
       "date": "Dec 2008",
-      "reads": "856 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1508,7 +1511,7 @@
         "text": "Article"
       },
       "date": "Dec 2008",
-      "reads": "896 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1535,7 +1538,7 @@
         "text": "Article"
       },
       "date": "Dec 2008",
-      "reads": "682 Reads",
+      "reads": "718 Reads",
       "authors": [
         {
           "author": {
@@ -1574,7 +1577,7 @@
         "text": "Article"
       },
       "date": "Aug 2008",
-      "reads": "1,464 Reads",
+      "reads": "1,599 Reads",
       "authors": [
         {
           "author": {
@@ -1607,7 +1610,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "970 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1646,7 +1649,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "1,071 Reads",
+      "reads": "1,118 Reads",
       "authors": [
         {
           "author": {
@@ -1667,7 +1670,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "252 Reads",
+      "reads": "278 Reads",
       "authors": [
         {
           "author": {
@@ -1694,7 +1697,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "249 Reads",
+      "reads": "282 Reads",
       "authors": [
         {
           "author": {
@@ -1727,7 +1730,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "4,429 Reads",
+      "reads": "4 Recommendations",
       "authors": [
         {
           "author": {
@@ -1760,7 +1763,7 @@
         "text": "Article"
       },
       "date": "Dec 2007",
-      "reads": "4,248 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1799,7 +1802,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "933 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -1820,7 +1823,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "444 Reads",
+      "reads": "483 Reads",
       "authors": [
         {
           "author": {
@@ -1859,7 +1862,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "257 Reads",
+      "reads": "279 Reads",
       "authors": [
         {
           "author": {
@@ -1898,7 +1901,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "159 Reads",
+      "reads": "169 Reads",
       "authors": [
         {
           "author": {
@@ -1937,7 +1940,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "665 Reads",
+      "reads": "685 Reads",
       "authors": [
         {
           "author": {
@@ -1976,7 +1979,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "891 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -2015,7 +2018,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "119 Reads",
+      "reads": "126 Reads",
       "authors": [
         {
           "author": {
@@ -2054,7 +2057,7 @@
         "text": "Article"
       },
       "date": "Dec 2006",
-      "reads": "97 Reads",
+      "reads": "105 Reads",
       "authors": [
         {
           "author": {
@@ -2119,7 +2122,7 @@
         "text": "Article"
       },
       "date": "Dec 2005",
-      "reads": "794 Reads",
+      "reads": "2 Recommendations",
       "authors": [
         {
           "author": {
@@ -2152,7 +2155,7 @@
         "text": "Article"
       },
       "date": "Dec 2005",
-      "reads": "14,152 Reads",
+      "reads": "3 Recommendations",
       "authors": [
         {
           "author": {
@@ -2185,7 +2188,7 @@
         "text": "Chapter"
       },
       "date": "Dec 2005",
-      "reads": "534 Reads",
+      "reads": "578 Reads",
       "authors": [
         {
           "author": {
@@ -2212,7 +2215,7 @@
         "text": "Article"
       },
       "date": "Dec 2005",
-      "reads": "1,468 Reads",
+      "reads": "1,475 Reads",
       "authors": [
         {
           "author": {
@@ -2245,7 +2248,7 @@
         "text": "Article"
       },
       "date": "Dec 2005",
-      "reads": "187 Reads",
+      "reads": "195 Reads",
       "authors": [
         {
           "author": {
@@ -2284,7 +2287,7 @@
         "text": "Article"
       },
       "date": "Dec 2005",
-      "reads": "210 Reads",
+      "reads": "222 Reads",
       "authors": [
         {
           "author": {
@@ -2317,7 +2320,7 @@
         "text": "Chapter"
       },
       "date": "Dec 2005",
-      "reads": "13,282 Reads",
+      "reads": "13,919 Reads",
       "authors": [
         {
           "author": {
@@ -2338,7 +2341,7 @@
         "text": "Chapter"
       },
       "date": "Mar 2005",
-      "reads": "660 Reads",
+      "reads": "760 Reads",
       "authors": [
         {
           "author": {
@@ -2364,7 +2367,7 @@
         "text": "Article"
       },
       "date": "Jan 2005",
-      "reads": "32 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -2391,7 +2394,7 @@
         "text": "Article"
       },
       "date": "Dec 2004",
-      "reads": "214 Reads",
+      "reads": "230 Reads",
       "authors": [
         {
           "author": {
@@ -2418,7 +2421,7 @@
         "text": "Article"
       },
       "date": "Dec 2004",
-      "reads": "141 Reads",
+      "reads": "152 Reads",
       "authors": [
         {
           "author": {
@@ -2445,7 +2448,7 @@
         "text": "Chapter"
       },
       "date": "Jun 2004",
-      "reads": "337 Reads",
+      "reads": "383 Reads",
       "authors": [
         {
           "author": {
@@ -2472,7 +2475,7 @@
         "text": "Article"
       },
       "date": "Dec 2003",
-      "reads": "295 Reads",
+      "reads": "327 Reads",
       "authors": [
         {
           "author": {
@@ -2511,7 +2514,7 @@
         "text": "Article"
       },
       "date": "Dec 2003",
-      "reads": "685 Reads",
+      "reads": "771 Reads",
       "authors": [
         {
           "author": {
@@ -2550,7 +2553,7 @@
         "text": "Article"
       },
       "date": "Dec 2003",
-      "reads": "7,107 Reads",
+      "reads": "7,489 Reads",
       "authors": [
         {
           "author": {
@@ -2583,7 +2586,7 @@
         "text": "Article"
       },
       "date": "Dec 2003",
-      "reads": "10,773 Reads",
+      "reads": "2 Recommendations",
       "authors": [
         {
           "author": {
@@ -2610,7 +2613,7 @@
         "text": "Article"
       },
       "date": "Dec 2002",
-      "reads": "8,487 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -2637,7 +2640,7 @@
         "text": "Article"
       },
       "date": "Dec 2002",
-      "reads": "1,858 Reads",
+      "reads": "1,879 Reads",
       "authors": [
         {
           "author": {
@@ -2670,7 +2673,7 @@
         "text": "Article"
       },
       "date": "Dec 2002",
-      "reads": "339 Reads",
+      "reads": "364 Reads",
       "authors": [
         {
           "author": {
@@ -2703,7 +2706,7 @@
         "text": "Article"
       },
       "date": "Dec 2002",
-      "reads": "1,040 Reads",
+      "reads": "1,073 Reads",
       "authors": [
         {
           "author": {
@@ -2735,7 +2738,7 @@
         "text": "Article"
       },
       "date": "Jan 2002",
-      "reads": "18 Reads",
+      "reads": "25 Reads",
       "authors": [
         {
           "author": {
@@ -2768,7 +2771,7 @@
         "text": "Article"
       },
       "date": "Dec 2001",
-      "reads": "159 Reads",
+      "reads": "185 Reads",
       "authors": [
         {
           "author": {
@@ -2801,7 +2804,7 @@
         "text": "Chapter"
       },
       "date": "Dec 2001",
-      "reads": "404 Reads",
+      "reads": "432 Reads",
       "authors": [
         {
           "author": {
@@ -2822,7 +2825,7 @@
         "text": "Article"
       },
       "date": "Dec 2000",
-      "reads": "479 Reads",
+      "reads": "519 Reads",
       "authors": [
         {
           "author": {
@@ -2849,7 +2852,7 @@
         "text": "Article"
       },
       "date": "Dec 2000",
-      "reads": "352 Reads",
+      "reads": "395 Reads",
       "authors": [
         {
           "author": {
@@ -2870,7 +2873,7 @@
         "text": "Article"
       },
       "date": "Dec 2000",
-      "reads": "772 Reads",
+      "reads": "844 Reads",
       "authors": [
         {
           "author": {
@@ -2897,7 +2900,7 @@
         "text": "Article"
       },
       "date": "Dec 1999",
-      "reads": "3,155 Reads",
+      "reads": "8 Recommendations",
       "authors": [
         {
           "author": {
@@ -2918,7 +2921,7 @@
         "text": "Chapter"
       },
       "date": "Aug 1999",
-      "reads": "385 Reads",
+      "reads": "1 Recommendation",
       "authors": [
         {
           "author": {
@@ -2939,7 +2942,7 @@
         "text": "Book"
       },
       "date": "Jan 1999",
-      "reads": "86,452 Reads",
+      "reads": "26 Recommendations",
       "authors": [
         {
           "author": {
@@ -2959,7 +2962,7 @@
         "text": "Article"
       },
       "date": "Jan 1999",
-      "reads": "133 Reads",
+      "reads": "148 Reads",
       "authors": [
         {
           "author": {
@@ -2980,7 +2983,7 @@
         "text": "Article"
       },
       "date": "Dec 1997",
-      "reads": "113 Reads",
+      "reads": "120 Reads",
       "authors": [
         {
           "author": {
@@ -3013,7 +3016,7 @@
         "text": "Article"
       },
       "date": "Dec 1997",
-      "reads": "68 Reads",
+      "reads": "72 Reads",
       "authors": [
         {
           "author": {
@@ -3044,5 +3047,5 @@
   ],
   "url": "https://www.researchgate.net/profile/Jordan_Peterson2",
   "key": "/rg/articles?name=Jordan_Peterson2",
-  "cached": "2018-10-17T00:50:12.431Z"
+  "cached": "2018-12-14T11:04:31.671Z"
 }
