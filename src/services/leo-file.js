@@ -26,17 +26,18 @@ const baseString = `
  * @returns {*}
  */
 function dataToItems (d, items, t, tItems) {
-  console.log(d)
   items.push(`<v t="leovue.${d.t}"><vh>${d.name}</vh>`)
   let text = t[d.t]
-  text = text.replace(/</g, '&lt;').replace(/>/g, '&gt;')
-  tItems.push(`<v tx="leovue.${d.t}">${text}</v>`)
+  text = text.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/&\s/g, '&amp;')
+  tItems.push(`<t tx="leovue.${d.t}">${text}</t>`)
   if (_.isArray(d)) {
     return d.forEach(i => dataToItems(i, items, t, tItems))
   }
-  d.children.forEach(i => {
-    dataToItems(i, items, t, tItems)
-  })
+  if (d.children) {
+    d.children.forEach(i => {
+      dataToItems(i, items, t, tItems)
+    })
+  }
   items.push('</v>')
 }
 function JSONtoLeo (data, textData) {

@@ -162,7 +162,10 @@ function getUrlFromTitle (title, dataType) {
   if (dataType) {
     dataType = dataType.replace('-', '')
     dataParams = window.lconfig.dataSources[dataType]
-    if (!dataParams) { return { url, label } }
+    if (!dataParams) {
+      console.log('No match for dataType:', dataType)
+      return { url, label }
+    }
     url = dataParams.host + title
     if (match) {
       label = match[1]
@@ -975,8 +978,11 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   let {url, label} = getUrlFromTitle(item.name)
   if (url.match(/\.json$/)) {
     let itemText = context.state.leotext[item.t].replace(/^@.*?\n/, '')
-    const params = jsyaml.load(itemText) || {}
+    let params = jsyaml.load(itemText) || {}
     const template = params.template || ''
+    if (params.params) {
+      params = params.params
+    }
     // change directive from @json to @dataSet so that data will not be reloaded
     // and can be accessed by other nodes
     item.name = `@dataSet set${item.id} ${label}`
@@ -1537,8 +1543,11 @@ export default new Vuex.Store({
           item.name = `@dataSet set${id} ${label}`// label
           if (!url) { return }
           itemText = itemText.replace(/^@.*?\n/, '') // remove language directive if exist
-          const params = jsyaml.load(itemText) || {}
+          let params = jsyaml.load(itemText) || {}
           let template = params.template || ''
+          if (params.params) {
+            params = params.params
+          }
           if (dataSubType) {
             dataSubType = dataSubType.replace('-', '')
             template = dataSubType

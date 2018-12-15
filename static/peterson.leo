@@ -15,7 +15,7 @@
 <t tx="josephorr.20181204092754.1">template: rgarticles
 nodeList: 
   listKey: articles
-  template: rgarticle-brief
+  template: rgarticle
 filter:
   key: type.text
   value: Article
