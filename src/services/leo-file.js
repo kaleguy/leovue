@@ -49,7 +49,6 @@ function JSONtoLeo (data, textData) {
   let tnodes = textItems.join('')
   let leo = baseString.replace(/%%vnodes%%/, vnodes)
   leo = leo.replace(/%%tnodes%%/, tnodes)
-  console.log(leo, baseString)
   return leo
 }
 
