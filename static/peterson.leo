@@ -9,7 +9,9 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
+<v t="josephorr.20181220072125.1" a="E"><vh>Research of Jordan Peterson</vh>
 <v t="josephorr.20181204092754.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20181204092754.1">template: rgarticles
@@ -21,5 +23,6 @@ filter:
   value: Article
 urlTitle: true
 urlIsQueryString: true</t>
+<t tx="josephorr.20181220072125.1"></t>
 </tnodes>
 </leo_file>

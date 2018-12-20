@@ -147,7 +147,6 @@
         "href": "https://www.researchgate.net/profile/Xiaowen_Xu4",
         "text": "Xiaowen Xu"
       },
-      "rating": "15.11",
       "institution": "College of William and Mary"
     },
     {
@@ -155,7 +154,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
@@ -422,9 +420,9 @@
   "pubdate": "2013/12/31",
   "title": "Does Cultural Exposure Partially Explain the Association Between Personality and Political Orientation?",
   "citations": "22",
-  "references": "",
-  "date": "",
-  "reads": "xx1,460 Reads",
+  "references": "59",
+  "date": "2013-12",
+  "reads": "1,460 Reads",
   "journal": {
     "href": "journal/1552-7433_Personality_and_Social_Psychology_Bulletin",
     "text": "Personality and Social Psychology Bulletin"
@@ -507,9 +505,9 @@
   "pubdate": "2013/10/01",
   "title": "Unifying the Aspects of the Big Five, the Interpersonal Circumplex, and Trait Affiliation",
   "citations": "71",
-  "references": "",
-  "date": "",
-  "reads": "Article in Journal of Personality 81(5):465-475October 2013 with 1,963 Reads",
+  "references": "52",
+  "date": "2013-10",
+  "reads": "1,963 Reads",
   "journal": {
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -574,7 +572,6 @@
         "href": "https://www.researchgate.net/profile/Christopher_Zou",
         "text": "Christopher Zou"
       },
-      "rating": "19.01",
       "institution": "Altus Assessments"
     },
     {
@@ -588,7 +585,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
@@ -652,9 +648,9 @@
   "pubdate": "2013/05/10",
   "title": "Personal narratives as the highest level of cognitive integration",
   "citations": "16",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Behavioral and Brain Sciences 36(3):36-37May 2013 with 2,140 Reads",
+  "references": "24",
+  "date": "2013-05",
+  "reads": "2,140 Reads",
   "journal": {
     "href": "journal/1469-1825_Behavioral_and_Brain_Sciences",
     "text": "Behavioral and Brain Sciences"
@@ -780,8 +776,8 @@
   "pubdate": "2011/12/31",
   "title": "Creative Exploration and Its Illnesses",
   "citations": "2",
-  "references": "",
-  "date": "",
+  "references": "17",
+  "date": "2011-12",
   "reads": "Article (PDF Available) in Canadian journal of psychiatry. Revue canadienne de psychiatrie 56(3):129-31December 2011 with 929 Reads",
   "journal": {
     "href": "journal/1497-0015_Canadian_journal_of_psychiatry_Revue_canadienne_de_psychiatrie",
@@ -906,8 +902,8 @@
   "pubdate": "2010/12/30",
   "title": "The Benefits of Writing",
   "citations": "1",
-  "references": "",
-  "date": "",
+  "references": "35",
+  "date": "2010-12",
   "reads": "Article (PDF Available)December 2010 with 2,839 Reads",
   "journal": {
     "href": "application.LostPassword.html",
@@ -955,7 +951,6 @@
         "href": "https://www.researchgate.net/profile/Christopher_Zou",
         "text": "Christopher Zou"
       },
-      "rating": "19.01",
       "institution": "Altus Assessments"
     },
     {
@@ -969,7 +964,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
@@ -1034,8 +1028,8 @@
   "pubdate": "2009/12/31",
   "title": "Exploring the link between reading fiction and empathy: Ruling out individual differences and examining outcomes",
   "citations": "152",
-  "references": "",
-  "date": "",
+  "references": "64",
+  "date": "2009-12",
   "reads": "Article (PDF Available) in Communications 34:407-428December 2009 with 893 Reads",
   "journal": {
     "href": "journal/0588-8018_Communications",
@@ -1077,8 +1071,8 @@
   "pubdate": "2009/12/31",
   "title": "On Being Moved by Art: How Reading Fiction Transforms the Self",
   "citations": "108",
-  "references": "",
-  "date": "",
+  "references": "48",
+  "date": "2009-12",
   "reads": "Article (PDF Available) in Creativity Research Journal 21(1):24-29December 2009 with 1,375 Reads",
   "journal": {
     "href": "journal/1532-6934_Creativity_Research_Journal",
@@ -1130,9 +1124,9 @@
   "pubdate": "2009/12/31",
   "title": "Defenceless against art? Impact of reading fiction on emotion in avoidantly attached individuals",
   "citations": "18",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Journal of Research in Personality 43:14-17December 2009 with 531 Reads",
+  "references": "29",
+  "date": "2009-12",
+  "reads": "531 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
@@ -1183,9 +1177,9 @@
   "pubdate": "2009/12/31",
   "title": "Metatraits of the Big Five Differentially Predict Engagement and Restraint of Behavior",
   "citations": "62",
-  "references": "",
-  "date": "",
-  "reads": "Article in Journal of Personality 77(4):1085-102December 2009 with 600 Reads",
+  "references": "39",
+  "date": "2009-12",
+  "reads": "600 Reads",
   "journal": {
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -1228,9 +1222,9 @@
   "pubdate": "2009/12/30",
   "title": "Personality and Language Use in Self-Narratives",
   "citations": "66",
-  "references": "",
-  "date": "",
-  "reads": "Article in Journal of Research in Personality 43(3):524-527December 2009 with 2,130 Reads",
+  "references": "20",
+  "date": "2009-12",
+  "reads": "2,130 Reads",
   "journal": {
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
@@ -1307,9 +1301,9 @@
   "pubdate": "2008/12/31",
   "title": "Predicting creativity and academic success with a “Fake-Proof” measure of the Big Five",
   "citations": "46",
-  "references": "",
-  "date": "",
-  "reads": "Article in Journal of Research in Personality 43(5):1323-1333December 2008 with 930 Reads",
+  "references": "91",
+  "date": "2008-12",
+  "reads": "930 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
@@ -1436,9 +1430,9 @@
   "pubdate": "2007/12/31",
   "title": "Morning people are stable people: Circadian rhythm and the higher-order factors of the Big Five",
   "citations": "118",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Personality and Individual Differences 43:267-276December 2007 with 1,056 Reads",
+  "references": "51",
+  "date": "2007-12",
+  "reads": "1,056 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -1474,7 +1468,14 @@
         "href": "https://www.researchgate.net/scientific-contributions/2132949405_Brock_Criger",
         "text": "Brock Criger"
       }
-    }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "rating": "University of Toronto"
+    }    
   ],
   "url": "https://www.researchgate.net/publication/222396133_Morning_people_are_stable_people_Circadian_rhythm_and_the_higher-order_factors_of_the_Big_Five",
   "key": "/rg/article?title=222396133_Morning_people_are_stable_people_Circadian_rhythm_and_the_higher-order_factors_of_the_Big_Five",
@@ -1837,7 +1838,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2322,7 +2322,6 @@
         "href": "https://www.researchgate.net/profile/Shona_Tritt",
         "text": "Shona Melissa Tritt"
       },
-      "rating": "18.72",
       "institution": "New York University"
     },
     {
@@ -2330,7 +2329,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2338,7 +2336,6 @@
         "href": "https://www.researchgate.net/profile/Elizabeth_Page-Gould",
         "text": "Elizabeth Page-Gould"
       },
-      "rating": "31.6",
       "institution": "University of Toronto"
     },
     {
@@ -2346,7 +2343,6 @@
         "href": "https://www.researchgate.net/profile/Michael_Inzlicht",
         "text": "Michael Inzlicht"
       },
-      "rating": "41.31",
       "institution": "University of Toronto"
     }
   ],
@@ -3173,7 +3169,6 @@
         "href": "https://www.researchgate.net/profile/Scott_Kaufman2",
         "text": "Scott Barry Kaufman"
       },
-      "rating": "28.43",
       "institution": "University of Pennsylvania"
     },
     {
@@ -3181,7 +3176,6 @@
         "href": "https://www.researchgate.net/profile/Lena_Quilty",
         "text": "Lena C Quilty"
       },
-      "rating": "37.57",
       "institution": "Centre for Addiction and Mental Health"
     },
     {
@@ -3189,7 +3183,6 @@
         "href": "https://www.researchgate.net/profile/Rachael_Grazioplene",
         "text": "Rachael Grazioplene"
       },
-      "rating": "23.01",
       "institution": "Yale University"
     },
     {
@@ -3197,7 +3190,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.98",
       "institution": "University of Toronto"
     }
   ],
