@@ -152,6 +152,7 @@ export default {
       this.$store.dispatch('setCurrentItem', {id})
     },
     dataTableClick (r) {
+      debugger
       const title = r.data.title.replace(/<[^>]*>/g, "")
       // const title = r.data.title.innerHTML.replaceAll("<[^>]*>", "")
       const item = JSON.search(this.$store.state.leodata, '//*[vtitle="' + title + '"]')[0]

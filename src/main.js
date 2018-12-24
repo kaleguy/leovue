@@ -36,6 +36,7 @@ import Kanban from './components/Kanban'
 import MermaidBoard from './components/MermaidBoard'
 import D3Board from './components/D3Board'
 import { TableComponent, TableColumn } from 'vue-table-component'
+import SummaryTable from './components/SummaryTable'
 
 import {charts} from './content-components/Charts'
 charts(Vue)
@@ -61,6 +62,7 @@ Vue.component('info-card', InfoCard)
 Vue.component('l-map', Vue2Leaflet.LMap)
 Vue.component('l-tilelayer', Vue2Leaflet.LTileLayer)
 Vue.component('l-marker', Vue2Leaflet.LMarker)
+Vue.component('summary-table', SummaryTable)
 Vue.component('table-component', TableComponent)
 Vue.component('table-column', TableColumn)
 Vue.component('kanban', Kanban)

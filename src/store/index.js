@@ -1019,6 +1019,9 @@ function setChildDirective (context, d, textItems, parentDirective) {
     languageDirective = languageDirective[1]
   }
   if (parentDirective && !languageDirective) {
+    if (/^{/.test(textItems[d.t])) {
+      return // skip if the text item is JSON data
+    }
     textItems[d.t] = parentDirective + '\n' + textItems[d.t]
     languageDirective = parentDirective
   }
