@@ -105,7 +105,7 @@
 <v t="leovue.2-92"><vh>@dataSet set2-92 Social variability, alcohol consumption, and the inherited predisposition to alcoholism</vh></v>
 <v t="leovue.2-93"><vh>@dataSet set2-93 Factor structure and correlates of the Tridimensional Personality Questionnaire</vh></v>
 <v t="leovue.2-94"><vh>@dataSet set2-94 Cognitive Dysfunction and the Inherited Predisposition to Alcoholism:</vh></v>
-<v t="leovue.2-95"><vh>@dataSet set2-95 Etiology</vh></v>
+<v t="leovue.2-95"><vh>@dataSet set2-95 Etiology (of Addiction)</vh></v>
 <v t="leovue.2-96"><vh>@dataSet set2-96 A biobehavioural model for the inherited predisposition to alcoholism</vh></v>
 <v t="leovue.2-97"><vh>@dataSet set2-97 The Tridimensional Personality Questionnaire and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-98"><vh>@dataSet set2-98 Attention-deficit hyperactivity disorder, childhood conduct disorder, and alcoholism: Is there an association?</vh></v>
@@ -116,8 +116,51 @@
 <v t="leovue.2-103"><vh>@dataSet set2-103 Inherited Predisposition to Alcoholism: Characteristics of Sons of Male Alcoholics</vh></v>
 <v t="leovue.2-104"><vh>@dataSet set2-104 Potential psychological markers for the predisposition to alcoholism</vh></v>
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
-<v t="leovue.2-106"><vh>@dataSet set2-106 An heuristic model for the inherited predisposition to alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
+</v>
+<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
+<v t="josephorr.20181224141950.1"><vh>@board Alcoholism</vh>
+<v t="leovue.2-53"></v>
+<v t="leovue.2-55"></v>
+<v t="leovue.2-72"></v>
+<v t="leovue.2-78"></v>
+<v t="leovue.2-79"></v>
+<v t="leovue.2-80"></v>
+<v t="leovue.2-83"></v>
+<v t="leovue.2-84"></v>
+<v t="leovue.2-85"></v>
+<v t="leovue.2-86"></v>
+<v t="leovue.2-87"></v>
+<v t="leovue.2-88"></v>
+<v t="leovue.2-89"></v>
+<v t="leovue.2-90"></v>
+<v t="leovue.2-91"></v>
+<v t="leovue.2-92"></v>
+<v t="leovue.2-93"></v>
+<v t="leovue.2-94"></v>
+<v t="leovue.2-96"></v>
+<v t="leovue.2-97"></v>
+<v t="leovue.2-98"></v>
+<v t="leovue.2-99"></v>
+<v t="leovue.2-100"></v>
+<v t="leovue.2-101"></v>
+<v t="leovue.2-102"></v>
+<v t="leovue.2-103"></v>
+<v t="leovue.2-104"></v>
+<v t="leovue.2-105"></v>
+<v t="leovue.2-107"></v>
+</v>
+<v t="josephorr.20181225065606.1"><vh>@board Political Orientation</vh>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-27"></v>
+</v>
 </v>
 </v>
 </vnodes>
@@ -167,6 +210,13 @@
 "key": "/rg/article?title=25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
 "cached": "2018-12-21T02:33:40.806Z"
 }</t>
+<t tx="josephorr.20181224141950.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20181225065128.1">&lt;toc/&gt;</t>
+<t tx="josephorr.20181225065606.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -446,46 +496,6 @@
   "url": "https://www.researchgate.net/publication/247167876_Response_to_reward_and_punishment_and_the_inherited_risk_for_alcoholism",
   "key": "/rg/article?title=247167876_Response_to_reward_and_punishment_and_the_inherited_risk_for_alcoholism",
   "cached": "2018-12-20T23:48:38.688Z",
-  "params": {
-    "template": "rgarticle"
-  }
-}</t>
-<t tx="leovue.2-106">{
-  "pubdate": "1990/01/01",
-  "title": "An heuristic model for the inherited predisposition to alcoholism",
-  "citations": "20",
-  "references": "",
-  "reads": "97 Reads",
-  "journal": {
-    "href": "journal/0893-164X_Psychology_of_Addictive_Behaviors",
-    "text": "Psychology of Addictive Behaviors"
-  },
-  "abstract": "",
-  "authors": [
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Robert_Pihl",
-        "text": "Robert O Pihl"
-      },
-      "institution": "McGill University"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
-        "text": "Jordan B Peterson"
-      },
-      "institution": "University of Toronto"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_Finn",
-        "text": "Peter Finn"
-      }
-    }
-  ],
-  "url": "https://www.researchgate.net/publication/314831662_An_heuristic_model_for_the_inherited_predisposition_to_alcoholism",
-  "key": "/rg/article?title=314831662_An_heuristic_model_for_the_inherited_predisposition_to_alcoholism",
-  "cached": "2018-12-20T23:48:46.168Z",
   "params": {
     "template": "rgarticle"
   }
@@ -3401,7 +3411,7 @@
   "reads": "150 Reads",
   "journal": {
     "href": "",
-    "text": " Encyclopedia of Violence, Peace and Conflict"
+    "text": "(Book) Encyclopedia of Violence, Peace and Conflict"
   },
   "abstract": "(No Abstract)",
   "authors": [
@@ -4203,7 +4213,10 @@
   "citations": "4",
   "references": "",
   "reads": "186 Reads",
-  "journal": [],
+  "journal": {
+     "href": "",
+     "text": "(Book) Annual Review of Addictions Research and Treatment"
+  },
   "abstract": "Many diverse processes terminate in addiction.",
   "authors": [
     {

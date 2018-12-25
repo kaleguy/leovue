@@ -38,7 +38,7 @@ function loadIndexItems (arr, titles, textItems) {
     arr.push(
       {
         id: item.id,
-        name: item.name,
+        name: item.name.replace(/^@(.*?)\s/, '').replace(/^set(.*?)\s/, ''),
         text: textItems[item.t]
       }
     )

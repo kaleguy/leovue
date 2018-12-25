@@ -98,11 +98,13 @@
       <h1>{{- data.title }}</h1>
       <div class="publication-meta-text">
         <strong>
-          <span>Article (PDF Available) in
-          <a target="_blank" href="//www.researchgate.net/journal/0922-4777_Reading_and_Writing">{{- data.journal.text }}</a>
+          <span>
+            <a target="_blank" href="{{- data.url }}">Article</a>
+            in
+          <a target="_blank" href="//www.researchgate.net/{{- data.journal.href}}">{{- data.journal.text }}</a>
         </span>
         </strong>
-        <span>30(4):857-869 {{- data.journal.date }} with {{- data.reads }}</span>
+        <span> with {{- data.reads }}</span>
       </div>
       <div>
         <ul>
@@ -126,8 +128,18 @@
         <div>{{- data.abstract }}</div>
         <div class="references">{{- data.references }} References</div>
       </div>
+      {{ if (data.correction) { }}
+      <div class="publication-abstract">
+       <div class="hshim"></div>
+        <div>
+          <strong>Correction</strong>
+        </div>
+        <div>{{- data.correction.text }} <a href="{{- data.correction.href }}">Details</a>
+        </div>
+      </div>
+      {{ } }}
       <div class="footer">
-        <a target="_blank" href="https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation">See this article on ResearchGate.</a>
+        <a target="_blank" href="{{- data.url }}">See this article on ResearchGate.</a>
       </div>
     </div>
   </div>

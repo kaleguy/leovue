@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - fix Accordion mode
 - @tab
+- summary-table
 
 ## [1.17.1] - 2018-11-28
 ### Changed

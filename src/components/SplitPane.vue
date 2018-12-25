@@ -133,7 +133,7 @@
     padding: 0;
   }
   .right-pane {
-    //width: 100%;
+    overflow: hidden;
   }
   #left-pane {
     //overflow-y: auto;

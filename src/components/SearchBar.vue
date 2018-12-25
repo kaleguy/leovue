@@ -114,4 +114,7 @@
 .sbx-twitter__input-placeholder
   box-shadow: none
   // background: #fff
+UL.vue-instant__suggestions
+  left: -160px
+  width: 440px
 </style>
