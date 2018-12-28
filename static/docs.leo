@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -38,7 +38,7 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -131,8 +131,8 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>Data</vh>
-<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
@@ -1283,7 +1283,26 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 A line chart with some random data contained in the **set1** @dataTable node.
 
 &lt;line-chart dataSet="set1" :gridLines="true" :board="true"/&gt;</t>
-<t tx="josephorr.20171107074219.1"></t>
+<t tx="josephorr.20171107074219.1">## Data Sets
+
+A dataset is a node containing JSON data.
+
+You can use a dataset in another component by referring to it by name.
+
+You can also display a dataset as HTML by specifying a lodash template. See this
+sourcefile for examples.
+
+If you have a node containing child datasets, you can summarize the datasets in a table 
+like this:
+
+```
+&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;
+```
+
+For a more complete example of JSON data in LeoVue see:
+[Research of Jordan B Peterson](https://kaleguy.github.io/leo-examples/peterson)</t>
 <t tx="josephorr.20171107081559.1">@language json
 {
    "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -1405,9 +1424,9 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.17.1
+LeoVue is currently at version 1.18.0
 
-LeoVue 1.17.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.18.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1429,6 +1448,7 @@ Current features include:
 * Nodes with templated data, e.g. @xml and @json nodes.
 * Optional Google Analytics
 * Arrow key navigation of menu
+* Load JSON - Export to Leo
 
 Planned features not yet supported:
 * Form.io support
@@ -2571,7 +2591,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.17.1 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.18.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

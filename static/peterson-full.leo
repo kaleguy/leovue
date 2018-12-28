@@ -85,7 +85,7 @@
 <v t="leovue.2-72"><vh>@dataSet set2-72 Reliability and validity of alcohol-induced heart rate increase as a measure of sensitivity to the stimulant properties of alcohol</vh></v>
 <v t="leovue.2-73"><vh>@dataSet set2-73 Metaphoric threat is more real than real threat</vh></v>
 <v t="leovue.2-74"><vh>@dataSet set2-74 Awareness may be existence as well as (higher-order) thought</vh></v>
-<v t="leovue.2-75"><vh>@dataSet set2-75 Latent Inhibition and Openness to Experience in a high- achieving student population</vh></v>
+<v t="leovue.2-75"><vh>@dataSet set2-75 Latent Inhibition and Openness to Experience in a high-achieving student population</vh></v>
 <v t="leovue.2-76"><vh>@dataSet set2-76 Maps of Meaning: The architecture of belief (precis)</vh></v>
 <v t="leovue.2-77"><vh>@dataSet set2-77 Individual motivation for group aggression: Psychological, mythological and neuropsychological perspectives</vh></v>
 <v t="leovue.2-78"><vh>@dataSet set2-78 Disinhibited Personality and Sensitivity to Alcohol Reinforcement</vh></v>
@@ -119,13 +119,15 @@
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
 <v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
-<v t="josephorr.20181224141950.1"><vh>@board Alcoholism</vh>
+<v t="josephorr.20181224141950.1" a="E"><vh>@board Alcoholism and Addiction</vh>
+<v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
 <v t="leovue.2-55"></v>
 <v t="leovue.2-72"></v>
 <v t="leovue.2-78"></v>
 <v t="leovue.2-79"></v>
 <v t="leovue.2-80"></v>
+<v t="leovue.2-81"></v>
 <v t="leovue.2-83"></v>
 <v t="leovue.2-84"></v>
 <v t="leovue.2-85"></v>
@@ -138,6 +140,7 @@
 <v t="leovue.2-92"></v>
 <v t="leovue.2-93"></v>
 <v t="leovue.2-94"></v>
+<v t="leovue.2-95"></v>
 <v t="leovue.2-96"></v>
 <v t="leovue.2-97"></v>
 <v t="leovue.2-98"></v>
@@ -149,6 +152,102 @@
 <v t="leovue.2-104"></v>
 <v t="leovue.2-105"></v>
 <v t="leovue.2-107"></v>
+</v>
+<v t="josephorr.20181226172138.1"><vh>@board Not Alcoholism or Addiction</vh>
+<v t="josephorr.20181220213416.1"></v>
+<v t="leovue.2-1"></v>
+<v t="leovue.2-3"></v>
+<v t="leovue.2-4"></v>
+<v t="leovue.2-5"></v>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-9"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-11"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-15"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-21"></v>
+<v t="leovue.2-22"></v>
+<v t="leovue.2-23"></v>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-25"></v>
+<v t="leovue.2-26"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-28"></v>
+<v t="leovue.2-29"></v>
+<v t="leovue.2-30"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-32"></v>
+<v t="leovue.2-33"></v>
+<v t="leovue.2-34"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-36"></v>
+<v t="leovue.2-37"></v>
+<v t="leovue.2-38"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-40"></v>
+<v t="leovue.2-41"></v>
+<v t="leovue.2-42"></v>
+<v t="leovue.2-43"></v>
+<v t="leovue.2-44"></v>
+<v t="leovue.2-45"></v>
+<v t="leovue.2-46"></v>
+<v t="leovue.2-47"></v>
+<v t="leovue.2-48"></v>
+<v t="leovue.2-49"></v>
+<v t="leovue.2-51"></v>
+<v t="leovue.2-52"></v>
+<v t="leovue.2-54"></v>
+<v t="leovue.2-56"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-58"></v>
+<v t="leovue.2-59"></v>
+<v t="leovue.2-60"></v>
+<v t="leovue.2-61"></v>
+<v t="leovue.2-62"></v>
+<v t="leovue.2-63"></v>
+<v t="leovue.2-64"></v>
+<v t="leovue.2-65"></v>
+<v t="leovue.2-66"></v>
+<v t="leovue.2-67"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-69"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-73"></v>
+<v t="leovue.2-74"></v>
+<v t="leovue.2-75"></v>
+<v t="leovue.2-76"></v>
+<v t="leovue.2-77"></v>
+<v t="leovue.2-82"></v>
+</v>
+<v t="josephorr.20181226072600.1"><vh>@board Big 5 Personality Traits</vh>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-75"></v>
 </v>
 <v t="josephorr.20181225065606.1"><vh>@board Political Orientation</vh>
 <v t="leovue.2-6"></v>
@@ -217,6 +316,10 @@
 <t tx="josephorr.20181225065606.1">&lt;summary-table
  :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
 &lt;/summary-table&gt;</t>
+<t tx="josephorr.20181226072600.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20181226172138.1"></t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",

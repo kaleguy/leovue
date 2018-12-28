@@ -13,7 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - format @doc directive
 - fix Accordion mode
 - @tab
+
+## [1.18.0] - 2018-12-28
+### Added
+- Export to JSON and LEO format
 - summary-table
+
+### Changed
+- Fix to scroll on @board
 
 ## [1.17.1] - 2018-11-28
 ### Changed
