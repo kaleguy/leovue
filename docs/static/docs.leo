@@ -11,14 +11,14 @@
 <vnodes>
 <v t="josephorr.20181002174010.1"><vh>@cover</vh></v>
 <v t="josephorr.20170228222411.2"><vh>LeoVue</vh></v>
-<v t="josephorr.20170326174500.1" a="E"><vh>More About Leo</vh>
+<v t="josephorr.20170326174500.1"><vh>More About Leo</vh>
 <v t="josephorr.20170327233137.1"><vh>[Feature Introduction](https://kaleguy.github.io/leo-tutorials/feature-introduction.md)</vh></v>
 <v t="josephorr.20170327233223.1"><vh>[Chunking](https://kaleguy.github.io/leo-tutorials/chunking.md)</vh></v>
 <v t="josephorr.20170327233236.1"><vh>Additional Features</vh></v>
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -50,7 +50,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -86,7 +86,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -105,7 +105,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -131,8 +131,8 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>Data</vh>
-<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
@@ -1012,6 +1012,7 @@ function setIds (startId, d) {
     // return name
   }
   vtitle = vtitle
+    .replace(/^@[a-zA-Z-]+\sset.*?\s/, '')
     .replace(/^@[a-zA-Z-]+\s/, '')
     .replace(/&lt;&lt;/g, '\u00AB')
     .replace(/&gt;&gt;/g, '\u00BB')
@@ -1282,7 +1283,26 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 A line chart with some random data contained in the **set1** @dataTable node.
 
 &lt;line-chart dataSet="set1" :gridLines="true" :board="true"/&gt;</t>
-<t tx="josephorr.20171107074219.1"></t>
+<t tx="josephorr.20171107074219.1">## Data Sets
+
+A dataset is a node containing JSON data.
+
+You can use a dataset in another component by referring to it by name.
+
+You can also display a dataset as HTML by specifying a lodash template. See this
+sourcefile for examples.
+
+If you have a node containing child datasets, you can summarize the datasets in a table 
+like this:
+
+```
+&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;
+```
+
+For a more complete example of JSON data in LeoVue see:
+[Research of Jordan B Peterson](https://kaleguy.github.io/leo-examples/peterson)</t>
 <t tx="josephorr.20171107081559.1">@language json
 {
    "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -1404,9 +1424,9 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.17.1
+LeoVue is currently at version 1.18.0
 
-LeoVue 1.17.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.18.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -1428,6 +1448,7 @@ Current features include:
 * Nodes with templated data, e.g. @xml and @json nodes.
 * Optional Google Analytics
 * Arrow key navigation of menu
+* Load JSON - Export to Leo
 
 Planned features not yet supported:
 * Form.io support
@@ -2570,7 +2591,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.17.1 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.18.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

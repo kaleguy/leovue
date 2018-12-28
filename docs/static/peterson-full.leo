@@ -9,97 +9,322 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leovue.20181204092754_1" a="E"><vh>@dataSet set1 Research of Jordan Peterson</vh>
-<v t="leovue.1-0"><vh>@dataSet set1-0 Don’t Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions</vh></v>
-<v t="leovue.1-1"><vh>@dataSet set1-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
-<v t="leovue.1-2"><vh>@dataSet set1-2 Correction to: The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology</vh></v>
-<v t="leovue.1-3"><vh>@dataSet set1-3 The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology</vh></v>
-<v t="leovue.1-4"><vh>@dataSet set1-4 Don't Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions</vh></v>
-<v t="leovue.1-5"><vh>@dataSet set1-5 Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation</vh></v>
-<v t="leovue.1-6"><vh>@dataSet set1-6 Ideological Reactivity: Political Conservatism and Brain Responsivity to Emotional and Neutral Stimuli</vh></v>
-<v t="leovue.1-7"><vh>@dataSet set1-7 From Dispositions to Goals to Ideology: Toward a Synthesis of Personality and Social Psychological Approaches to Political Orientation</vh></v>
-<v t="leovue.1-8"><vh>@dataSet set1-8 Openness to Experience and Intellect Differentially Predict Creative Achievement in the Arts and Sciences: Openness, Intellect, and Creativity</vh></v>
-<v t="leovue.1-9"><vh>@dataSet set1-9 Quantifying the scientific output of new researchers using the zp-index</vh></v>
-<v t="leovue.1-10"><vh>@dataSet set1-10 Differences in Media Preference Mediate the Link Between Personality and Political Orientation</vh></v>
-<v t="leovue.1-11"><vh>@dataSet set1-11 A scalable goal-setting intervention closes both the gender and ethnic minority achievement gap</vh></v>
-<v t="leovue.1-12"><vh>@dataSet set1-12 Why Do Conservatives Report Being Happier Than Liberals? The Contribution of Neuroticism</vh></v>
-<v t="leovue.1-13"><vh>@dataSet set1-13 Confounding valence and arousal: What really underlies political orientation?</vh></v>
-<v t="leovue.1-14"><vh>@dataSet set1-14 Openness to experience, intellect and cognitive ability</vh></v>
-<v t="leovue.1-15"><vh>@dataSet set1-15 System Justification and Electrophysiological Responses to Feedback: Support for a Positivity Bias</vh></v>
-<v t="leovue.1-16"><vh>@dataSet set1-16 Spiritual Liberals and Religious Conservatives</vh></v>
-<v t="leovue.1-17"><vh>@dataSet set1-17 Does Cultural Exposure Partially Explain the Association Between Personality and Political Orientation?</vh></v>
-<v t="leovue.1-18"><vh>@dataSet set1-18 Preliminary Support for a Generalized Arousal Model of Political Conservatism</vh></v>
-<v t="leovue.1-19"><vh>@dataSet set1-19 Unifying the Aspects of the Big Five, the Interpersonal Circumplex, and Trait Affiliation</vh></v>
-<v t="leovue.1-20"><vh>@dataSet set1-20 Openness to Experience, Intellect, and Cognitive Ability</vh></v>
-<v t="leovue.1-21"><vh>@dataSet set1-21 Personal narratives as the highest level of cognitive integration</vh></v>
-<v t="leovue.1-22"><vh>@dataSet set1-22 Psychological Entropy: A Framework for Understanding Uncertainty-Related Anxiety</vh></v>
-<v t="leovue.1-23"><vh>@dataSet set1-23 Serene Arts: The Effect of Personal Unsettledness and of Paintings' Narrative Structure on Personality</vh></v>
-<v t="leovue.1-24"><vh>@dataSet set1-24 From madness to genius: The Openness/Intellect trait domain as a paradoxical simplex</vh></v>
-<v t="leovue.1-25"><vh>@dataSet set1-25 Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality</vh></v>
-<v t="leovue.1-26"><vh>@dataSet set1-26 Creative Exploration and Its Illnesses</vh></v>
-<v t="leovue.1-27"><vh>@dataSet set1-27 Compassionate Liberals and Polite Conservatives: Associations of Agreeableness With Political Ideology and Moral Values</vh></v>
-<v t="leovue.1-28"><vh>@dataSet set1-28 Positive Mood Effects on Delay Discounting</vh></v>
-<v t="leovue.1-29"><vh>@dataSet set1-29 The Benefits of Writing</vh></v>
-<v t="leovue.1-30"><vh>@dataSet set1-30 Setting, Elaborating, and Reflecting on Personal Goals Improves Academic Performance</vh></v>
-<v t="leovue.1-31"><vh>@dataSet set1-31 Extraversion, neuroticism, and the prisoner’s dilemma</vh></v>
-<v t="leovue.1-32"><vh>@dataSet set1-32 Exploring the link between reading fiction and empathy: Ruling out individual differences and examining outcomes</vh></v>
-<v t="leovue.1-33"><vh>@dataSet set1-33 On Being Moved by Art: How Reading Fiction Transforms the Self</vh></v>
-<v t="leovue.1-34"><vh>@dataSet set1-34 Defenceless against art? Impact of reading fiction on emotion in avoidantly attached individuals</vh></v>
-<v t="leovue.1-35"><vh>@dataSet set1-35 Metatraits of the Big Five Differentially Predict Engagement and Restraint of Behavior</vh></v>
-<v t="leovue.1-36"><vh>@dataSet set1-36 Personality and Language Use in Self-Narratives</vh></v>
-<v t="leovue.1-37"><vh>@dataSet set1-37 Delay discounting: Interactions between personality and cognitive ability</vh></v>
-<v t="leovue.1-38"><vh>@dataSet set1-38 Predicting creativity and academic success with a “Fake-Proof” measure of the Big Five</vh></v>
-<v t="leovue.1-39"><vh>@dataSet set1-39 Externalizing Behavior and the Higher Order Factors of the Big Five</vh></v>
-<v t="leovue.1-40"><vh>@dataSet set1-40 Cognitive Abilities Involved in Insight Problem Solving: An Individual Differences Model</vh></v>
-<v t="leovue.1-41"><vh>@dataSet set1-41 Morning people are stable people: Circadian rhythm and the higher-order factors of the Big Five</vh></v>
-<v t="leovue.1-42"><vh>@dataSet set1-42 A Psycho-ontological Analysis of Genesis 2-6.</vh></v>
-<v t="leovue.1-43"><vh>@dataSet set1-43 An evaluation of early and late stage attentional processing of positive and negative information in dysphoria</vh></v>
-<v t="leovue.1-44"><vh>@dataSet set1-44 Reducing memory distortions in egoistic self-enhancers: Effects of indirect social facilitation</vh></v>
-<v t="leovue.1-45"><vh>@dataSet set1-45 Between Facets and Domains: 10 Aspects of the Big Five</vh></v>
-<v t="leovue.1-46"><vh>@dataSet set1-46 Prefrontal Cognitive Ability, Intelligence, Big Five Personality, and the Prediction of Advanced Academic and Workplace Performance</vh></v>
-<v t="leovue.1-47"><vh>@dataSet set1-47 Religion, sovereignty, natural rights, and the constituent elements of experience</vh></v>
-<v t="leovue.1-48"><vh>@dataSet set1-48 The Bitter-Sweet Labor of Emoting: The Linguistic Comparison of Writers and Physicists</vh></v>
-<v t="leovue.1-49"><vh>@dataSet set1-49 The Dopamine D4 Receptor Gene and Moderation of the Association Between Externalizing Behavior and IQ</vh></v>
-<v t="leovue.1-50"><vh>@dataSet set1-50 Differential effects of naltrexone on cardiac, subjective and behavioural reactions to acute ethanol intoxication</vh></v>
-<v t="leovue.1-51"><vh>@dataSet set1-51 Self-Liking and Self-Competence Separate Self-Evaluation From Self-Deception: Associations With Personality, Ability, and Achievement</vh></v>
-<v t="leovue.1-52"><vh>@dataSet set1-52 Bookworms versus nerds: Exposure to fiction versus non-fiction, divergent associations with social ability, and the simulation of fictional social worlds</vh></v>
-<v t="leovue.1-53"><vh>@dataSet set1-53 Heart rate increase to alcohol administration and video lottery terminal play among probable pathological gamblers and nonpathological gamblers</vh></v>
-<v t="leovue.1-54"><vh>@dataSet set1-54 NUANCE 3.0: Using genetic programming to model variable relationships</vh></v>
-<v t="leovue.1-55"><vh>@dataSet set1-55 You Drink, I Drink: Alcohol Consumption, Social Context and Personality.</vh></v>
-<v t="leovue.1-56"><vh>@dataSet set1-56 Reliability, Validity, and Factor Structure of the Creative Achievement Questionnaire</vh></v>
-<v t="leovue.1-57"><vh>@dataSet set1-57 Sources of Openness/Intellect: Cognitive and Neuropsychological Correlates of the Fifth Factor of Personality</vh></v>
-<v t="leovue.1-58"><vh>@dataSet set1-58 Matching effects on eating: Do individual differences make a difference?</vh></v>
-<v t="leovue.1-59"><vh>@dataSet set1-59 Attentional biases and memory distortions in self-enhancers</vh></v>
-<v t="leovue.1-60"><vh>@dataSet set1-60 Play and the Regulation of Aggression</vh></v>
-<v t="leovue.1-61"><vh>@dataSet set1-61 Self-induced memory distortions and the allocation of processing resources at encoding and retrieval</vh></v>
-<v t="leovue.1-62"><vh>@dataSet set1-62 Defensive Copers Show a Deficit in Passive Avoidance Learning on Newman's Go/No-Go Task: Implications for Self-Deception and Socialization</vh></v>
-<v t="leovue.1-63"><vh>@dataSet set1-63 Self-Deception and Failure to Modulate Responses Despite Accruing Evidence of Error</vh></v>
-<v t="leovue.1-64"><vh>@dataSet set1-64 Neuropsychological Performance, IQ, Personality, and Grades in a Longitudinal Grade-School Male Sample</vh></v>
-<v t="leovue.1-65"><vh>@dataSet set1-65 Decreased Latent Inhibition Is Associated With Increased Creative Achievement in High-Functioning Individuals.</vh></v>
-<v t="leovue.1-66"><vh>@dataSet set1-66 You can neither remember nor forget what you do not understand</vh></v>
-<v t="leovue.1-67"><vh>@dataSet set1-67 Complexity Management Theory: Motivation for Ideological Rigidity and Social Conflict</vh></v>
-<v t="leovue.1-68"><vh>@dataSet set1-68 Higher-order factors of the Big Five predict conformity</vh></v>
-<v t="leovue.1-69"><vh>@dataSet set1-69 Self-deception and impaired categorization of anomaly</vh></v>
-<v t="leovue.1-70"><vh>@dataSet set1-70 Openness and extraversion are associated with reduced latent inhibition: Replication and commentary</vh></v>
-<v t="leovue.1-71"><vh>@dataSet set1-71 Higher-order factors of the B5 predict conformity: Are there neuroses of health?</vh></v>
-<v t="leovue.1-72"><vh>@dataSet set1-72 Reliability and validity of alcohol-induced heart rate increase as a measure of sensitivity to the stimulant properties of alcohol</vh></v>
-<v t="leovue.1-73"><vh>@dataSet set1-73 Metaphoric threat is more real than real threat</vh></v>
-<v t="leovue.1-74"><vh>@dataSet set1-74 Awareness may be existence as well as (higher-order) thought</vh></v>
-<v t="leovue.1-75"><vh>@dataSet set1-75 Latent Inhibition and Openness to Experience in a high- achieving student population</vh></v>
-<v t="leovue.1-76"><vh>@dataSet set1-76 Maps of Meaning: The architecture of belief (precis)</vh></v>
-<v t="leovue.1-77"><vh>@dataSet set1-77 Individual motivation for group aggression: Psychological, mythological and neuropsychological perspectives</vh></v>
-<v t="leovue.1-78"><vh>@dataSet set1-78 Disinhibited Personality and Sensitivity to Alcohol Reinforcement</vh></v>
-<v t="leovue.1-79"><vh>@dataSet set1-79 Biphasic Effects of Alcohol on Heart Rate Are Influenced by Alcoholic Family History and Rate of Alcohol Ingestion</vh></v>
+<v t="leovue.20181220072125_1" a="E"><vh>Research of Jordan Peterson</vh>
+<v t="leovue.20181204092754_1" a="E"><vh>@board All</vh>
+<v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
+<v t="leovue.2-1"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
+<v t="leovue.2-3"><vh>@dataSet set2-3 The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology</vh></v>
+<v t="leovue.2-4"><vh>@dataSet set2-4 Don't Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions</vh></v>
+<v t="leovue.2-5"><vh>@dataSet set2-5 Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation</vh></v>
+<v t="leovue.2-6"><vh>@dataSet set2-6 Ideological Reactivity: Political Conservatism and Brain Responsivity to Emotional and Neutral Stimuli</vh></v>
+<v t="leovue.2-7"><vh>@dataSet set2-7 From Dispositions to Goals to Ideology: Toward a Synthesis of Personality and Social Psychological Approaches to Political Orientation</vh></v>
+<v t="leovue.2-8"><vh>@dataSet set2-8 Openness to Experience and Intellect Differentially Predict Creative Achievement in the Arts and Sciences: Openness, Intellect, and Creativity</vh></v>
+<v t="leovue.2-9"><vh>@dataSet set2-9 Quantifying the scientific output of new researchers using the zp-index</vh></v>
+<v t="leovue.2-10"><vh>@dataSet set2-10 Differences in Media Preference Mediate the Link Between Personality and Political Orientation</vh></v>
+<v t="leovue.2-11"><vh>@dataSet set2-11 A scalable goal-setting intervention closes both the gender and ethnic minority achievement gap</vh></v>
+<v t="leovue.2-12"><vh>@dataSet set2-12 Why Do Conservatives Report Being Happier Than Liberals? The Contribution of Neuroticism</vh></v>
+<v t="leovue.2-13"><vh>@dataSet set2-13 Confounding valence and arousal: What really underlies political orientation?</vh></v>
+<v t="leovue.2-14"><vh>@dataSet set2-14 Openness to experience, intellect and cognitive ability</vh></v>
+<v t="leovue.2-15"><vh>@dataSet set2-15 System Justification and Electrophysiological Responses to Feedback: Support for a Positivity Bias</vh></v>
+<v t="leovue.2-16"><vh>@dataSet set2-16 Spiritual Liberals and Religious Conservatives</vh></v>
+<v t="leovue.2-17"><vh>@dataSet set2-17 Does Cultural Exposure Partially Explain the Association Between Personality and Political Orientation?</vh></v>
+<v t="leovue.2-18"><vh>@dataSet set2-18 Preliminary Support for a Generalized Arousal Model of Political Conservatism</vh></v>
+<v t="leovue.2-19"><vh>@dataSet set2-19 Unifying the Aspects of the Big Five, the Interpersonal Circumplex, and Trait Affiliation</vh></v>
+<v t="leovue.2-20"><vh>@dataSet set2-20 Openness to Experience, Intellect, and Cognitive Ability</vh></v>
+<v t="leovue.2-21"><vh>@dataSet set2-21 Personal narratives as the highest level of cognitive integration</vh></v>
+<v t="leovue.2-22"><vh>@dataSet set2-22 Psychological Entropy: A Framework for Understanding Uncertainty-Related Anxiety</vh></v>
+<v t="leovue.2-23"><vh>@dataSet set2-23 Serene Arts: The Effect of Personal Unsettledness and of Paintings' Narrative Structure on Personality</vh></v>
+<v t="leovue.2-24"><vh>@dataSet set2-24 From madness to genius: The Openness/Intellect trait domain as a paradoxical simplex</vh></v>
+<v t="leovue.2-25"><vh>@dataSet set2-25 Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality</vh></v>
+<v t="leovue.2-26"><vh>@dataSet set2-26 Creative Exploration and Its Illnesses</vh></v>
+<v t="leovue.2-27"><vh>@dataSet set2-27 Compassionate Liberals and Polite Conservatives: Associations of Agreeableness With Political Ideology and Moral Values</vh></v>
+<v t="leovue.2-28"><vh>@dataSet set2-28 Positive Mood Effects on Delay Discounting</vh></v>
+<v t="leovue.2-29"><vh>@dataSet set2-29 The Benefits of Writing</vh></v>
+<v t="leovue.2-30"><vh>@dataSet set2-30 Setting, Elaborating, and Reflecting on Personal Goals Improves Academic Performance</vh></v>
+<v t="leovue.2-31"><vh>@dataSet set2-31 Extraversion, neuroticism, and the prisoner’s dilemma</vh></v>
+<v t="leovue.2-32"><vh>@dataSet set2-32 Exploring the link between reading fiction and empathy: Ruling out individual differences and examining outcomes</vh></v>
+<v t="leovue.2-33"><vh>@dataSet set2-33 On Being Moved by Art: How Reading Fiction Transforms the Self</vh></v>
+<v t="leovue.2-34"><vh>@dataSet set2-34 Defenceless against art? Impact of reading fiction on emotion in avoidantly attached individuals</vh></v>
+<v t="leovue.2-35"><vh>@dataSet set2-35 Metatraits of the Big Five Differentially Predict Engagement and Restraint of Behavior</vh></v>
+<v t="leovue.2-36"><vh>@dataSet set2-36 Personality and Language Use in Self-Narratives</vh></v>
+<v t="leovue.2-37"><vh>@dataSet set2-37 Delay discounting: Interactions between personality and cognitive ability</vh></v>
+<v t="leovue.2-38"><vh>@dataSet set2-38 Predicting creativity and academic success with a “Fake-Proof” measure of the Big Five</vh></v>
+<v t="leovue.2-39"><vh>@dataSet set2-39 Externalizing Behavior and the Higher Order Factors of the Big Five</vh></v>
+<v t="leovue.2-40"><vh>@dataSet set2-40 Cognitive Abilities Involved in Insight Problem Solving: An Individual Differences Model</vh></v>
+<v t="leovue.2-41"><vh>@dataSet set2-41 Morning people are stable people: Circadian rhythm and the higher-order factors of the Big Five</vh></v>
+<v t="leovue.2-42"><vh>@dataSet set2-42 A Psycho-ontological Analysis of Genesis 2-6.</vh></v>
+<v t="leovue.2-43"><vh>@dataSet set2-43 An evaluation of early and late stage attentional processing of positive and negative information in dysphoria</vh></v>
+<v t="leovue.2-44"><vh>@dataSet set2-44 Reducing memory distortions in egoistic self-enhancers: Effects of indirect social facilitation</vh></v>
+<v t="leovue.2-45"><vh>@dataSet set2-45 Between Facets and Domains: 10 Aspects of the Big Five</vh></v>
+<v t="leovue.2-46"><vh>@dataSet set2-46 Prefrontal Cognitive Ability, Intelligence, Big Five Personality, and the Prediction of Advanced Academic and Workplace Performance</vh></v>
+<v t="leovue.2-47"><vh>@dataSet set2-47 Religion, sovereignty, natural rights, and the constituent elements of experience</vh></v>
+<v t="leovue.2-48"><vh>@dataSet set2-48 The Bitter-Sweet Labor of Emoting: The Linguistic Comparison of Writers and Physicists</vh></v>
+<v t="leovue.2-49"><vh>@dataSet set2-49 The Dopamine D4 Receptor Gene and Moderation of the Association Between Externalizing Behavior and IQ</vh></v>
+<v t="leovue.2-50"><vh>@dataSet set2-50 Differential effects of naltrexone on cardiac, subjective and behavioural reactions to acute ethanol intoxication</vh></v>
+<v t="leovue.2-51"><vh>@dataSet set2-51 Self-Liking and Self-Competence Separate Self-Evaluation From Self-Deception: Associations With Personality, Ability, and Achievement</vh></v>
+<v t="leovue.2-52"><vh>@dataSet set2-52 Bookworms versus nerds: Exposure to fiction versus non-fiction, divergent associations with social ability, and the simulation of fictional social worlds</vh></v>
+<v t="leovue.2-53"><vh>@dataSet set2-53 Heart rate increase to alcohol administration and video lottery terminal play among probable pathological gamblers and nonpathological gamblers</vh></v>
+<v t="leovue.2-54"><vh>@dataSet set2-54 NUANCE 3.0: Using genetic programming to model variable relationships</vh></v>
+<v t="leovue.2-55"><vh>@dataSet set2-55 You Drink, I Drink: Alcohol Consumption, Social Context and Personality.</vh></v>
+<v t="leovue.2-56"><vh>@dataSet set2-56 Reliability, Validity, and Factor Structure of the Creative Achievement Questionnaire</vh></v>
+<v t="leovue.2-57"><vh>@dataSet set2-57 Sources of Openness/Intellect: Cognitive and Neuropsychological Correlates of the Fifth Factor of Personality</vh></v>
+<v t="leovue.2-58"><vh>@dataSet set2-58 Matching effects on eating: Do individual differences make a difference?</vh></v>
+<v t="leovue.2-59"><vh>@dataSet set2-59 Attentional biases and memory distortions in self-enhancers</vh></v>
+<v t="leovue.2-60"><vh>@dataSet set2-60 Play and the Regulation of Aggression</vh></v>
+<v t="leovue.2-61"><vh>@dataSet set2-61 Self-induced memory distortions and the allocation of processing resources at encoding and retrieval</vh></v>
+<v t="leovue.2-62"><vh>@dataSet set2-62 Defensive Copers Show a Deficit in Passive Avoidance Learning on Newman's Go/No-Go Task: Implications for Self-Deception and Socialization</vh></v>
+<v t="leovue.2-63"><vh>@dataSet set2-63 Self-Deception and Failure to Modulate Responses Despite Accruing Evidence of Error</vh></v>
+<v t="leovue.2-64"><vh>@dataSet set2-64 Neuropsychological Performance, IQ, Personality, and Grades in a Longitudinal Grade-School Male Sample</vh></v>
+<v t="leovue.2-65"><vh>@dataSet set2-65 Decreased Latent Inhibition Is Associated With Increased Creative Achievement in High-Functioning Individuals.</vh></v>
+<v t="leovue.2-66"><vh>@dataSet set2-66 You can neither remember nor forget what you do not understand</vh></v>
+<v t="leovue.2-67"><vh>@dataSet set2-67 Complexity Management Theory: Motivation for Ideological Rigidity and Social Conflict</vh></v>
+<v t="leovue.2-68"><vh>@dataSet set2-68 Higher-order factors of the Big Five predict conformity</vh></v>
+<v t="leovue.2-69"><vh>@dataSet set2-69 Self-deception and impaired categorization of anomaly</vh></v>
+<v t="leovue.2-70"><vh>@dataSet set2-70 Openness and extraversion are associated with reduced latent inhibition: Replication and commentary</vh></v>
+<v t="leovue.2-71"><vh>@dataSet set2-71 Higher-order factors of the B5 predict conformity: Are there neuroses of health?</vh></v>
+<v t="leovue.2-72"><vh>@dataSet set2-72 Reliability and validity of alcohol-induced heart rate increase as a measure of sensitivity to the stimulant properties of alcohol</vh></v>
+<v t="leovue.2-73"><vh>@dataSet set2-73 Metaphoric threat is more real than real threat</vh></v>
+<v t="leovue.2-74"><vh>@dataSet set2-74 Awareness may be existence as well as (higher-order) thought</vh></v>
+<v t="leovue.2-75"><vh>@dataSet set2-75 Latent Inhibition and Openness to Experience in a high-achieving student population</vh></v>
+<v t="leovue.2-76"><vh>@dataSet set2-76 Maps of Meaning: The architecture of belief (precis)</vh></v>
+<v t="leovue.2-77"><vh>@dataSet set2-77 Individual motivation for group aggression: Psychological, mythological and neuropsychological perspectives</vh></v>
+<v t="leovue.2-78"><vh>@dataSet set2-78 Disinhibited Personality and Sensitivity to Alcohol Reinforcement</vh></v>
+<v t="leovue.2-79"><vh>@dataSet set2-79 Biphasic Effects of Alcohol on Heart Rate Are Influenced by Alcoholic Family History and Rate of Alcohol Ingestion</vh></v>
+<v t="leovue.2-80"><vh>@dataSet set2-80 Ethanol-Induced Change in Cardiac and Endogenous Opiate Function and Risk for Alcoholism</vh></v>
+<v t="leovue.2-81"><vh>@dataSet set2-81 Characteristics and Putative Mechanisms in Boys at Risk for Drug Abuse and Aggression</vh></v>
+<v t="leovue.2-82"><vh>@dataSet set2-82 Fighting as a Function of Personality and Neuropsychological Measures</vh></v>
+<v t="leovue.2-83"><vh>@dataSet set2-83 Alcoholism: The role of different motivational systems</vh></v>
+<v t="leovue.2-84"><vh>@dataSet set2-84 Provocation, Acute Alcohol Intoxication, Cognitive Performance, and Aggression</vh></v>
+<v t="leovue.2-85"><vh>@dataSet set2-85 Drugs and aggression: Correlations, crime and human manipulative studies and some proposed mechanisms</vh></v>
+<v t="leovue.2-86"><vh>@dataSet set2-86 Anxiety sensitivity and self-reported alcohol consumption rates in university women</vh></v>
+<v t="leovue.2-87"><vh>@dataSet set2-87 Cardiovascular reactivity as a predictor of alcohol consumption in a taste test situation</vh></v>
+<v t="leovue.2-88"><vh>@dataSet set2-88 A biosocial model of the alcohol-aggression relationship</vh></v>
+<v t="leovue.2-89"><vh>@dataSet set2-89 Heart-rate reactivity and alcohol consumption among sons of alcoholics and sons of non-alcoholics</vh></v>
+<v t="leovue.2-90"><vh>@dataSet set2-90 Risk for alcoholism, antisocial behavior, and response perseveration</vh></v>
+<v t="leovue.2-91"><vh>@dataSet set2-91 Alcohol, serotonin and aggression</vh></v>
+<v t="leovue.2-92"><vh>@dataSet set2-92 Social variability, alcohol consumption, and the inherited predisposition to alcoholism</vh></v>
+<v t="leovue.2-93"><vh>@dataSet set2-93 Factor structure and correlates of the Tridimensional Personality Questionnaire</vh></v>
+<v t="leovue.2-94"><vh>@dataSet set2-94 Cognitive Dysfunction and the Inherited Predisposition to Alcoholism:</vh></v>
+<v t="leovue.2-95"><vh>@dataSet set2-95 Etiology (of Addiction)</vh></v>
+<v t="leovue.2-96"><vh>@dataSet set2-96 A biobehavioural model for the inherited predisposition to alcoholism</vh></v>
+<v t="leovue.2-97"><vh>@dataSet set2-97 The Tridimensional Personality Questionnaire and the inherited risk for alcoholism</vh></v>
+<v t="leovue.2-98"><vh>@dataSet set2-98 Attention-deficit hyperactivity disorder, childhood conduct disorder, and alcoholism: Is there an association?</vh></v>
+<v t="leovue.2-99"><vh>@dataSet set2-99 Acute alcohol intoxication and cognitive functioning</vh></v>
+<v t="leovue.2-100"><vh>@dataSet set2-100 Information processing, neuropsychological function, and the inherited predisposition to alcoholism</vh></v>
+<v t="leovue.2-101"><vh>@dataSet set2-101 Acute alcohol intoxication and cognitive functioning.</vh></v>
+<v t="leovue.2-102"><vh>@dataSet set2-102 A heuristic model for the inherited predisposition to alcoholism</vh></v>
+<v t="leovue.2-103"><vh>@dataSet set2-103 Inherited Predisposition to Alcoholism: Characteristics of Sons of Male Alcoholics</vh></v>
+<v t="leovue.2-104"><vh>@dataSet set2-104 Potential psychological markers for the predisposition to alcoholism</vh></v>
+<v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
+<v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
+</v>
+<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
+<v t="josephorr.20181224141950.1" a="E"><vh>@board Alcoholism and Addiction</vh>
+<v t="leovue.2-50"></v>
+<v t="leovue.2-53"></v>
+<v t="leovue.2-55"></v>
+<v t="leovue.2-72"></v>
+<v t="leovue.2-78"></v>
+<v t="leovue.2-79"></v>
+<v t="leovue.2-80"></v>
+<v t="leovue.2-81"></v>
+<v t="leovue.2-83"></v>
+<v t="leovue.2-84"></v>
+<v t="leovue.2-85"></v>
+<v t="leovue.2-86"></v>
+<v t="leovue.2-87"></v>
+<v t="leovue.2-88"></v>
+<v t="leovue.2-89"></v>
+<v t="leovue.2-90"></v>
+<v t="leovue.2-91"></v>
+<v t="leovue.2-92"></v>
+<v t="leovue.2-93"></v>
+<v t="leovue.2-94"></v>
+<v t="leovue.2-95"></v>
+<v t="leovue.2-96"></v>
+<v t="leovue.2-97"></v>
+<v t="leovue.2-98"></v>
+<v t="leovue.2-99"></v>
+<v t="leovue.2-100"></v>
+<v t="leovue.2-101"></v>
+<v t="leovue.2-102"></v>
+<v t="leovue.2-103"></v>
+<v t="leovue.2-104"></v>
+<v t="leovue.2-105"></v>
+<v t="leovue.2-107"></v>
+</v>
+<v t="josephorr.20181226172138.1"><vh>@board Not Alcoholism or Addiction</vh>
+<v t="josephorr.20181220213416.1"></v>
+<v t="leovue.2-1"></v>
+<v t="leovue.2-3"></v>
+<v t="leovue.2-4"></v>
+<v t="leovue.2-5"></v>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-9"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-11"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-15"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-21"></v>
+<v t="leovue.2-22"></v>
+<v t="leovue.2-23"></v>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-25"></v>
+<v t="leovue.2-26"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-28"></v>
+<v t="leovue.2-29"></v>
+<v t="leovue.2-30"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-32"></v>
+<v t="leovue.2-33"></v>
+<v t="leovue.2-34"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-36"></v>
+<v t="leovue.2-37"></v>
+<v t="leovue.2-38"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-40"></v>
+<v t="leovue.2-41"></v>
+<v t="leovue.2-42"></v>
+<v t="leovue.2-43"></v>
+<v t="leovue.2-44"></v>
+<v t="leovue.2-45"></v>
+<v t="leovue.2-46"></v>
+<v t="leovue.2-47"></v>
+<v t="leovue.2-48"></v>
+<v t="leovue.2-49"></v>
+<v t="leovue.2-51"></v>
+<v t="leovue.2-52"></v>
+<v t="leovue.2-54"></v>
+<v t="leovue.2-56"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-58"></v>
+<v t="leovue.2-59"></v>
+<v t="leovue.2-60"></v>
+<v t="leovue.2-61"></v>
+<v t="leovue.2-62"></v>
+<v t="leovue.2-63"></v>
+<v t="leovue.2-64"></v>
+<v t="leovue.2-65"></v>
+<v t="leovue.2-66"></v>
+<v t="leovue.2-67"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-69"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-73"></v>
+<v t="leovue.2-74"></v>
+<v t="leovue.2-75"></v>
+<v t="leovue.2-76"></v>
+<v t="leovue.2-77"></v>
+<v t="leovue.2-82"></v>
+</v>
+<v t="josephorr.20181226072600.1"><vh>@board Big 5 Personality Traits</vh>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-75"></v>
+</v>
+<v t="josephorr.20181225065606.1"><vh>@board Political Orientation</vh>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-27"></v>
+</v>
+</v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="leovue.1-0">[]</t>
-<t tx="leovue.1-1">{
+<t tx="josephorr.20181220213416.1">{
+"pubdate": "2019/01/01",
+"title": "Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment",
+"citations": "",
+"references": "33",
+"reads": "852",
+"journal": {
+  "href": "",
+  "text": "(Book) Advances in Human Factors in Wearable Technologies and Game Design"
+},
+"abstract": "We propose an interpersonal biofeedback technology which uses music-like stimuli to convey a user’s physiological information to another observer. It is argued that this interpersonal biofeedback may facilitate empathy and interpersonal entrainment. We argue that music is an optimal carrier for biofeedback because it naturally regulates psychophysiology, is cross-modally associated with emotion, and can be attended to peripherally. We propose a research study to investigate the effects of interpersonal biofeedback on emotional mindreading.",
+"authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2144193706_John_M_Tennant",
+        "text": "John M. Tennant"
+      },
+      "institution": ""
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2144186755_Mihnea_C_Moldoveanu",
+        "text": "Mihnea C. Moldoveanu"
+      },
+      "institution": ""
+    },    
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2144221686_Simon_Cook",
+        "text": "Simon Cook"
+      },
+      "institution": ""
+    },    
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+],
+"url": "https://www.researchgate.net/publication/25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
+"key": "/rg/article?title=25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
+"cached": "2018-12-21T02:33:40.806Z"
+}</t>
+<t tx="josephorr.20181224141950.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20181225065128.1">&lt;toc/&gt;</t>
+<t tx="josephorr.20181225065606.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20181226072600.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20181226172138.1"></t>
+<t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
-  "citations": "0",
+  "citations": "",
   "references": "96",
-  "date": "2018-05",
   "reads": "2,366 Reads",
   "journal": {
     "href": "journal/1932-6203_PLoS_ONE",
@@ -112,29 +337,28 @@
         "href": "https://www.researchgate.net/profile/Victor_Swift",
         "text": "Victor Swift"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/325309277_Improving_the_effectiveness_of_performance_feedback_by_considering_personality_traits_and_task_demands",
   "key": "/rg/article?title=325309277_Improving_the_effectiveness_of_performance_feedback_by_considering_personality_traits_and_task_demands",
-  "cached": "2018-12-15T19:43:24.222Z",
+  "cached": "2018-12-20T23:37:40.043Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-10">{
+<t tx="leovue.2-10">{
   "pubdate": "2015/10/01",
   "title": "Differences in Media Preference Mediate the Link Between Personality and Political Orientation",
   "citations": "8",
   "references": "62",
-  "date": "2015-10",
   "reads": "3,427 Reads",
   "journal": {
     "href": "journal/1467-9221_Political_Psychology",
@@ -159,21 +383,275 @@
   ],
   "url": "https://www.researchgate.net/publication/282790843_Differences_in_Media_Preference_Mediate_the_Link_Between_Personality_and_Political_Orientation",
   "key": "/rg/article?title=282790843_Differences_in_Media_Preference_Mediate_the_Link_Between_Personality_and_Political_Orientation",
-  "cached": "2018-12-15T19:43:48.841Z",
+  "cached": "2018-12-20T23:38:58.176Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-11">{
+<t tx="leovue.2-100">{
+  "pubdate": "1990/12/31",
+  "title": "Information processing, neuropsychological function, and the inherited predisposition to alcoholism",
+  "citations": "53",
+  "references": "137",
+  "reads": "134 Reads",
+  "journal": {
+    "href": "journal/1040-7308_Neuropsychology_Review",
+    "text": "Neuropsychology Review"
+  },
+  "abstract": "Sons of male alcoholics are at particularly heightened risk for the development of alcoholism. This heightened risk frequently appears in association with increased incidence of conduct disorder or hyperactivity, with deficits in abstract thinking and poor school performance, with abnormalities in cued psychophysiological response, and with increased sensitivity to the putatively stress-response-dampening effects of alcohol intoxication. This risk and its associated features are discussed within the context of a neuropsychological theory, predicted on the notions (1) that deficits in cognitive functions theoretically dependent upon the intact functioning of the prefrontal cortex could underlie manifestation of the idiosyncracies commonly attributed to sons of male alcoholics, and (2) that acute alcohol intoxication could relieve the subjective discomfort associated with the consequences of such deficits.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/21002590_Information_processing_neuropsychological_function_and_the_inherited_predisposition_to_alcoholism",
+  "key": "/rg/article?title=21002590_Information_processing_neuropsychological_function_and_the_inherited_predisposition_to_alcoholism",
+  "cached": "2018-12-20T23:47:44.985Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-101">{
+  "pubdate": "1990/12/31",
+  "title": "Acute alcohol intoxication and cognitive functioning.",
+  "citations": "108",
+  "references": "",
+  "reads": "176 Reads",
+  "journal": {
+    "href": "journal/0096-882X_Journal_of_studies_on_alcohol",
+    "text": "Journal of studies on alcohol"
+  },
+  "abstract": "Investigated whether a similar neuropsychological deficit pattern underlies prefrontal lobe syndrome and alcohol intoxication and whether alcohol expectancy detrimentally affects neuropsychological performance. 72 male university students were administered a battery of neuropsychological tests, including the Porteus Maze Test and the Wisconsin Card Sorting Test, after receiving 1 of 3 different doses of alcohol. A high dose of alcohol detrimentally affected many functions associated with the prefrontal and temporal lobes, including planning, verbal fluency, memory, and complex motor control. Expectancy did not appear to play a significant role in determining this effect. (PsycINFO Database Record (c) 2012 APA, all rights reserved)",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2079730566_Jennifer_Rothfleisch",
+        "text": "Jennifer Rothfleisch"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Philip_Zelazo2",
+        "text": "Philip Zelazo"
+      },
+      "institution": "University of Minnesota Twin Cities"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/232458007_Acute_alcohol_intoxication_and_cognitive_functioning",
+  "key": "/rg/article?title=232458007_Acute_alcohol_intoxication_and_cognitive_functioning",
+  "cached": "2018-12-20T23:48:00.275Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-102">{
+  "pubdate": "1990/12/31",
+  "title": "A heuristic model for the inherited predisposition to alcoholism",
+  "citations": "24",
+  "references": "46",
+  "reads": "157 Reads",
+  "journal": {
+    "href": "journal/0893-164X_Psychology_of_Addictive_Behaviors",
+    "text": "Psychology of Addictive Behaviors"
+  },
+  "abstract": "Presents a research program for studying individuals genetically at high risk for alcoholism. Data from multigenerational nonproblem-drinking sons of male alcoholics indicate that the sons display a pattern of autonomic hyperreactivity to a variety of stimuli. This pattern of reactivity is significantly dampened by high doses of alcohol. These individuals also display difficulty on cognitive tests suggestive of prefrontal lobe dysfunction. This response pattern is not characteristic of controls nor of daughters of multigenerational male alcoholics. A model is presented that hypothesizes a cognitive disturbance underlying the hyperreactivity and posits a problem in the attribution of meaning to novel stimuli and threatening events. (PsycINFO Database Record (c) 2012 APA, all rights reserved)",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_Finn",
+        "text": "Peter Finn"
+      }
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/232523002_A_heuristic_model_for_the_inherited_predisposition_to_alcoholism",
+  "key": "/rg/article?title=232523002_A_heuristic_model_for_the_inherited_predisposition_to_alcoholism",
+  "cached": "2018-12-20T23:48:21.802Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-103">{
+  "pubdate": "1990/12/30",
+  "title": "Inherited Predisposition to Alcoholism: Characteristics of Sons of Male Alcoholics",
+  "citations": "150",
+  "references": "1",
+  "reads": "4,864 Reads",
+  "journal": {
+    "href": "journal/0021-843X_Journal_of_Abnormal_Psychology",
+    "text": "Journal of Abnormal Psychology"
+  },
+  "abstract": "Sons of male alcoholics (SOMAs) are at markedly heightened genetic risk for the development of alcohol abuse. Study of SOMAs could therefore conceivably increase the efficiency of research aimed at uncovering those heritable factors that predispose to alcoholism. SOMAs manifest observable behavioral, cognitive, and psychophysiological abnormalities while sober and react idiosyncratically to alcohol intoxication. They are most commonly described as conduct disordered and hyperactive, appear heir to a variety of deficits in verbal and abstract cognition, and perform more poorly in the academic environment. SOMAs are characterized by abnormal patterns of cued psychophysiological response, and appear more sensitive to the putatively reinforcing aspects of alcohol intoxication. Various methodological weaknesses permeate the relevant literature. Some straightforward improvements are suggested.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_R_Finn",
+        "text": "Peter R. Finn"
+      }
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/20944340_Inherited_Predisposition_to_Alcoholism_Characteristics_of_Sons_of_Male_Alcoholics",
+  "key": "/rg/article?title=20944340_Inherited_Predisposition_to_Alcoholism_Characteristics_of_Sons_of_Male_Alcoholics",
+  "cached": "2018-12-20T23:48:30.758Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-104">{
+  "pubdate": "1990/12/30",
+  "title": "Potential psychological markers for the predisposition to alcoholism",
+  "citations": "",
+  "references": "20",
+  "reads": "2,495 Reads",
+  "journal": {
+    "href": "",
+    "text": "Thesis"
+  },
+  "abstract": "Sons of male alcoholics (SOMAs) are at increased risk for the development of alcoholism, and are apparently characterized by other abnormalities. It is possible that one or more of these abnormalities might serve as a marker for the alcoholic predisposition. Research described in this thesis, conducted in the hopes of identifying such a marker, was designed (1) to separate the relative pharmacological and psychological effects of acute alcohol intoxication upon neuropsychological functioning; (2) to investigate the neuropsychological function of SOMAs with a multigenerational family history of male alcoholism; (3) to examine the relationship between SOMAs' neuropsychological function and their cardiovascular hyper-reactivity to threat of and aversive stimuli; and (4) to investigate the relationship between a number of cardiovascular response patterns and voluntary weekly alcohol consumption. These studies are linked conceptually, within the context of a general theory of information-processing and action.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/30009551_Potential_psychological_markers_for_the_predisposition_to_alcoholism",
+  "key": "/rg/article?title=30009551_Potential_psychological_markers_for_the_predisposition_to_alcoholism",
+  "cached": "2018-12-20T23:48:34.679Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-105">{
+  "pubdate": "1990/06/01",
+  "title": "Response to reward and punishment and the inherited risk for alcoholism",
+  "citations": "",
+  "references": "",
+  "reads": "131 Reads",
+  "journal": {
+    "href": "journal/0091-3057_Pharmacology_Biochemistry_and_Behavior",
+    "text": "Pharmacology Biochemistry and Behavior"
+  },
+  "abstract": [],
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/247167876_Response_to_reward_and_punishment_and_the_inherited_risk_for_alcoholism",
+  "key": "/rg/article?title=247167876_Response_to_reward_and_punishment_and_the_inherited_risk_for_alcoholism",
+  "cached": "2018-12-20T23:48:38.688Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-107">{
+  "pubdate": "1989/12/31",
+  "title": "Autonomic hyperreactivity and risk for alcoholism",
+  "citations": "19",
+  "references": "36",
+  "reads": "341 Reads",
+  "journal": {
+    "href": "journal/0278-5846_Progress_in_Neuro-Psychopharmacology_and_Biological_Psychiatry",
+    "text": "Progress in Neuro-Psychopharmacology and Biological Psychiatry"
+  },
+  "abstract": "1. Studies which illustrate autonomic hyperreactivity in sons of alcoholics are reviewed and discussed. This response is elicited by a wide range of stimuli which vary from the stressful to the incidental. It also occurs independently of coping strategy. This hyperreactivity, which is particularly characteristic of multigenerational sons of alcoholics is significantly dampened by alcohol. This pattern of results supports a negative reinforcement model of alcohol abuse in these individuals.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_Finn",
+        "text": "Peter Finn"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/20491119_Autonomic_hyperreactivity_and_risk_for_alcoholism",
+  "key": "/rg/article?title=20491119_Autonomic_hyperreactivity_and_risk_for_alcoholism",
+  "cached": "2018-12-20T23:48:50.393Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-11">{
   "pubdate": "2015/06/09",
   "title": "A scalable goal-setting intervention closes both the gender and ethnic minority achievement gap",
   "citations": "9",
   "references": "83",
-  "date": "2015-06",
   "reads": "4,317 Reads",
   "journal": {
-    href: 'https://www.nature.com/palcomms/about',
-    text: 'Palgrave Communications'
+    "href": "",
+    "text": "Palgrave Communications"
   },
   "abstract": "The gender and ethnicity gap in academic achievement constitutes one of today's key social problems. The current study, therefore, assessed the effects of a brief, evidence-based online intervention aimed at enhancing goal-directed conceptualization and action among first year college students (N = 703) at a large European business school. The academic performance of these students was contrasted with that of three pre-intervention control cohorts (N = 896, 825 and 720), with particular attention paid to the role of gender and ethnicity. The intervention boosted academic achievement and increased retention rates, particularly for ethnic minority and male students (who had underperformed in previous years). The gap in performance between men and women, and for ethnic minorities versus nationals, became considerably smaller within the intervention cohort. After Year 1, the gender gap closed by 98%, and the ethnicity gap by 38% (rising to 93% after the second year). All groups in the intervention cohort performed significantly better than control cohorts, but the effect was particularly large for males and ethnic minorities. The increase in performance was largest for ethnic minority males: they earned 44% more credits, and their retention rate increased 54%. Overall, the results indicate that a comprehensive goal-setting intervention implemented early in students' academic careers can significantly and substantially reduce gender and ethnic minority inequalities in achievement.",
   "authors": [
@@ -182,36 +660,35 @@
         "href": "https://www.researchgate.net/profile/Michaela_Schippers",
         "text": "Michaéla Schippers"
       },
-      "rating": "Erasmus University Rotterdam"
+      "institution": "Erasmus University Rotterdam"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Ad_Scheepers",
         "text": "Ad Scheepers"
       },
-      "rating": "Erasmus University Rotterdam"
+      "institution": "Erasmus University Rotterdam"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/279224047_A_scalable_goal-setting_intervention_closes_both_the_gender_and_ethnic_minority_achievement_gap",
   "key": "/rg/article?title=279224047_A_scalable_goal-setting_intervention_closes_both_the_gender_and_ethnic_minority_achievement_gap",
-  "cached": "2018-12-15T19:43:51.597Z",
+  "cached": "2018-12-20T23:39:04.299Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-12">{
+<t tx="leovue.2-12">{
   "pubdate": "2015/04/08",
   "title": "Why Do Conservatives Report Being Happier Than Liberals? The Contribution of Neuroticism",
   "citations": "9",
   "references": "46",
-  "date": "2015-04",
   "reads": "4,728 Reads",
   "journal": {
     "href": "journal/2195-3325_Journal_of_Social_and_Political_Psychology",
@@ -224,7 +701,6 @@
         "href": "https://www.researchgate.net/profile/Caitlin_Burton5",
         "text": "Caitlin Burton"
       },
-      "rating": "10.02",
       "institution": "Capella University"
     },
     {
@@ -232,7 +708,6 @@
         "href": "https://www.researchgate.net/profile/Jason_Plaks",
         "text": "Jason E. Plaks"
       },
-      "rating": "29.63",
       "institution": "University of Toronto"
     },
     {
@@ -240,23 +715,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/275652281_Why_Do_Conservatives_Report_Being_Happier_Than_Liberals_The_Contribution_of_Neuroticism",
   "key": "/rg/article?title=275652281_Why_Do_Conservatives_Report_Being_Happier_Than_Liberals_The_Contribution_of_Neuroticism",
-  "cached": "2018-12-15T19:43:53.546Z",
+  "cached": "2018-12-20T23:39:08.452Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-13">{
+<t tx="leovue.2-13">{
   "pubdate": "2014/12/31",
   "title": "Confounding valence and arousal: What really underlies political orientation?",
   "citations": "6",
   "references": "23",
-  "date": "2014-12",
   "reads": "1,384 Reads",
   "journal": {
     "href": "journal/1469-1825_Behavioral_and_Brain_Sciences",
@@ -269,37 +742,36 @@
         "href": "https://www.researchgate.net/profile/Shona_Tritt",
         "text": "Shona Melissa Tritt"
       },
-      "rating": "New York University"
+      "institution": "New York University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Michael_Inzlicht",
         "text": "Michael Inzlicht"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/259363679_Confounding_valence_and_arousal_What_really_underlies_political_orientation",
   "key": "/rg/article?title=259363679_Confounding_valence_and_arousal_What_really_underlies_political_orientation",
-  "cached": "2018-12-15T19:43:54.952Z",
+  "cached": "2018-12-20T23:39:13.429Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-14">{
+<t tx="leovue.2-14">{
   "pubdate": "2014/12/31",
   "title": "Openness to experience, intellect and cognitive ability",
   "citations": "2",
   "references": "50",
-  "date": "2014-12",
-  "reads": "4,932 Reads",
+  "reads": "4,971 Reads",
   "journal": {
     "href": "journal/1532-7752_Journal_of_Personality_Assessment",
     "text": "Journal of Personality Assessment"
@@ -311,24 +783,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/274381972_Openness_to_experience_intellect_and_cognitive_ability",
   "key": "/rg/article?title=274381972_Openness_to_experience_intellect_and_cognitive_ability",
-  "cached": "2018-12-15T19:43:56.820Z",
+  "cached": "2018-12-20T23:39:27.241Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-15">{
+<t tx="leovue.2-15">{
   "pubdate": "2014/12/25",
   "title": "System Justification and Electrophysiological Responses to Feedback: Support for a Positivity Bias",
   "citations": "4",
   "references": "54",
-  "date": "2014-12",
-  "reads": "664 Reads",
+  "reads": "675 Reads",
   "journal": {
     "href": "journal/1939-2222_Journal_of_Experimental_Psychology_General",
     "text": "Journal of Experimental Psychology General"
@@ -340,7 +810,6 @@
         "href": "https://www.researchgate.net/profile/Shona_Tritt",
         "text": "Shona Melissa Tritt"
       },
-      "rating": "18.72",
       "institution": "New York University"
     },
     {
@@ -348,7 +817,6 @@
         "href": "https://www.researchgate.net/profile/Elizabeth_Page-Gould",
         "text": "Elizabeth Page-Gould"
       },
-      "rating": "31.6",
       "institution": "University of Toronto"
     },
     {
@@ -356,7 +824,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -364,28 +831,26 @@
         "href": "https://www.researchgate.net/profile/Michael_Inzlicht",
         "text": "Michael Inzlicht"
       },
-      "rating": "41.31",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/258920686_System_Justification_and_Electrophysiological_Responses_to_Feedback_Support_for_a_Positivity_Bias",
   "key": "/rg/article?title=258920686_System_Justification_and_Electrophysiological_Responses_to_Feedback_Support_for_a_Positivity_Bias",
-  "cached": "2018-12-15T19:43:58.282Z",
+  "cached": "2018-12-20T23:39:31.700Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-16">{
+<t tx="leovue.2-16">{
   "pubdate": "2013/12/31",
   "title": "Spiritual Liberals and Religious Conservatives",
   "citations": "14",
   "references": "53",
-  "date": "2013-12",
   "reads": "2,619 Reads",
   "journal": {
-    href: 'https://journals.sagepub.com/home/spp',
-    text: 'Social Psychological and Personality Science'
-  },
+     "href": "",
+     "text": "Social Psychological and Personality Science"
+   },
   "abstract": "While church and state are officially separated in many Western nations, there is nonetheless a great deal of overlap between the religious beliefs and political orientations of individual citizens. Religious individuals tend to be more conservative, placing a greater emphasis on order, obedience, and tradition. While many religious movements emphasize conservative values, there also exists a tradition of religious thought associated with equality, universalism, and transcendence—values more in line with political liberalism. The current study examined whether these divergent political orientations relate to the distinction between reli-giousness and spirituality. Political orientation, spirituality, and religiousness were assessed in two large community samples (Study 1: N =590; Study 2: N =703). Although spirituality and religiousness were positively correlated, they displayed divergent associations with political orientation: conservatives tended to be more religious, while liberals tend to be more spiritual. Experimentally inducing spiritual experiences similarly resulted in more liberal political attitudes.",
   "authors": [
     {
@@ -393,7 +858,7 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -406,22 +871,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234825524_Spiritual_Liberals_and_Religious_Conservatives",
   "key": "/rg/article?title=234825524_Spiritual_Liberals_and_Religious_Conservatives",
-  "cached": "2018-12-15T19:44:00.404Z",
+  "cached": "2018-12-20T23:39:36.552Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-17">{
+<t tx="leovue.2-17">{
   "pubdate": "2013/12/31",
   "title": "Does Cultural Exposure Partially Explain the Association Between Personality and Political Orientation?",
   "citations": "22",
   "references": "59",
-  "date": "2013-12",
   "reads": "1,460 Reads",
   "journal": {
     "href": "journal/1552-7433_Personality_and_Social_Psychology_Bulletin",
@@ -434,7 +898,6 @@
         "href": "https://www.researchgate.net/profile/Xiaowen_Xu4",
         "text": "Xiaowen Xu"
       },
-      "rating": "15.11",
       "institution": "College of William and Mary"
     },
     {
@@ -448,23 +911,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/255714596_Does_Cultural_Exposure_Partially_Explain_the_Association_Between_Personality_and_Political_Orientation",
   "key": "/rg/article?title=255714596_Does_Cultural_Exposure_Partially_Explain_the_Association_Between_Personality_and_Political_Orientation",
-  "cached": "2018-12-15T19:44:04.047Z",
+  "cached": "2018-12-20T23:39:44.533Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-18">{
+<t tx="leovue.2-18">{
   "pubdate": "2013/12/31",
   "title": "Preliminary Support for a Generalized Arousal Model of Political Conservatism",
   "citations": "16",
   "references": "70",
-  "date": "2013-12",
   "reads": "689 Reads",
   "journal": {
     "href": "journal/1932-6203_PLoS_ONE",
@@ -477,37 +938,36 @@
         "href": "https://www.researchgate.net/profile/Shona_Tritt",
         "text": "Shona Melissa Tritt"
       },
-      "rating": "New York University"
+      "institution": "New York University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Michael_Inzlicht",
         "text": "Michael Inzlicht"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/259492496_Preliminary_Support_for_a_Generalized_Arousal_Model_of_Political_Conservatism",
   "key": "/rg/article?title=259492496_Preliminary_Support_for_a_Generalized_Arousal_Model_of_Political_Conservatism",
-  "cached": "2018-12-15T19:44:06.512Z",
+  "cached": "2018-12-20T23:39:51.777Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-19">{
+<t tx="leovue.2-19">{
   "pubdate": "2013/10/01",
   "title": "Unifying the Aspects of the Big Five, the Interpersonal Circumplex, and Trait Affiliation",
   "citations": "71",
   "references": "52",
-  "date": "2013-10",
-  "reads": "1,963 Reads",
+  "reads": "1,978 Reads",
   "journal": {
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -519,7 +979,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -527,7 +986,6 @@
         "href": "https://www.researchgate.net/profile/Yanna_Weisberg",
         "text": "Yanna Weisberg"
       },
-      "rating": "14.58",
       "institution": "Linfield College"
     },
     {
@@ -535,7 +993,6 @@
         "href": "https://www.researchgate.net/profile/Lena_Quilty",
         "text": "Lena C Quilty"
       },
-      "rating": "37.56",
       "institution": "Centre for Addiction and Mental Health"
     },
     {
@@ -543,65 +1000,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/232926949_Unifying_the_Aspects_of_the_Big_Five_the_Interpersonal_Circumplex_and_Trait_Affiliation",
   "key": "/rg/article?title=232926949_Unifying_the_Aspects_of_the_Big_Five_the_Interpersonal_Circumplex_and_Trait_Affiliation",
-  "cached": "2018-12-15T19:44:53.617Z",
+  "cached": "2018-12-20T23:39:57.545Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-2">{
-  "pubdate": "2017/11/01",
-  "title": "Correction to: The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology",
-  "citations": "0",
-  "references": "0",
-  "date": "2017-11",
-  "reads": "1,888 Reads",
-  "journal": {
-    "href": "journal/0138-9130_Scientometrics",
-    "text": "Scientometrics"
-  },
-  "abstract": "In the original publication, Fig. 6 does not properly label the values. The revised version of the Fig. 6 is given below.",
-  "authors": [
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Christopher_Zou",
-        "text": "Christopher Zou"
-      },
-      "institution": "Altus Assessments"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/2134410504_Julia_Tsui",
-        "text": "Julia Tsui"
-      }
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
-        "text": "Jordan B Peterson"
-      },
-      "institution": "University of Toronto"
-    }
-  ],
-  "url": "https://www.researchgate.net/publication/321029988_Correction_to_The_publication_trajectory_of_graduate_students_post-doctoral_fellows_and_new_professors_in_psychology",
-  "key": "/rg/article?title=321029988_Correction_to_The_publication_trajectory_of_graduate_students_post-doctoral_fellows_and_new_professors_in_psychology",
-  "cached": "2018-12-15T19:43:26.534Z",
-  "params": {
-    "template": "rgarticle"
-  }
-}</t>
-<t tx="leovue.1-20">{
+<t tx="leovue.2-20">{
   "pubdate": "2013/06/24",
   "title": "Openness to Experience, Intellect, and Cognitive Ability",
   "citations": "71",
   "references": "51",
-  "date": "2013-06",
-  "reads": "1,684 Reads",
+  "reads": "1,716 Reads",
   "journal": {
     "href": "journal/1532-7752_Journal_of_Personality_Assessment",
     "text": "Journal of Personality Assessment"
@@ -613,43 +1027,42 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Lena_Quilty",
         "text": "Lena C Quilty"
       },
-      "rating": "Centre for Addiction and Mental Health"
+      "institution": "Centre for Addiction and Mental Health"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jeremy_Gray2",
         "text": "Jeremy R Gray"
       },
-      "rating": "Michigan State University"
+      "institution": "Michigan State University"
     }
   ],
   "url": "https://www.researchgate.net/publication/241696020_Openness_to_Experience_Intellect_and_Cognitive_Ability",
   "key": "/rg/article?title=241696020_Openness_to_Experience_Intellect_and_Cognitive_Ability",
-  "cached": "2018-12-15T19:44:57.514Z",
+  "cached": "2018-12-20T23:40:02.745Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-21">{
+<t tx="leovue.2-21">{
   "pubdate": "2013/05/10",
   "title": "Personal narratives as the highest level of cognitive integration",
   "citations": "16",
   "references": "24",
-  "date": "2013-05",
   "reads": "2,140 Reads",
   "journal": {
     "href": "journal/1469-1825_Behavioral_and_Brain_Sciences",
@@ -662,7 +1075,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.99",
       "institution": "University of Toronto"
     },
     {
@@ -676,24 +1088,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/236689768_Personal_narratives_as_the_highest_level_of_cognitive_integration",
   "key": "/rg/article?title=236689768_Personal_narratives_as_the_highest_level_of_cognitive_integration",
-  "cached": "2018-12-15T19:45:00.380Z",
+  "cached": "2018-12-20T23:40:05.627Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-22">{
+<t tx="leovue.2-22">{
   "pubdate": "2012/12/31",
   "title": "Psychological Entropy: A Framework for Understanding Uncertainty-Related Anxiety",
-  "citations": "200",
+  "citations": "203",
   "references": "220",
-  "date": "2012-12",
-  "reads": "6,530 Reads",
+  "reads": "6,762 Reads",
   "journal": {
     "href": "journal/0033-295X_Psychological_Review",
     "text": "Psychological Review"
@@ -705,7 +1115,7 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -718,23 +1128,62 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/221752816_Psychological_Entropy_A_Framework_for_Understanding_Uncertainty-Related_Anxiety",
   "key": "/rg/article?title=221752816_Psychological_Entropy_A_Framework_for_Understanding_Uncertainty-Related_Anxiety",
-  "cached": "2018-12-15T19:45:08.404Z",
+  "cached": "2018-12-20T23:40:16.227Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-23">[]</t>
-<t tx="leovue.1-24">{
+<t tx="leovue.2-23">{
+  "pubdate": "2012/12/31",
+  "title": "Serene Arts: The Effect of Personal Unsettledness and of Paintings' Narrative Structure on Personality",
+  "citations": "4",
+  "references": "33",
+  "reads": "380 Reads",
+  "journal": {
+    "href": "journal/0276-2374_Empirical_Studies_of_the_Arts",
+    "text": "Empirical Studies of the Arts"
+  },
+  "abstract": "Previous research has demonstrated that art can produce some variation in self-reported personality traits. The present experiment addressed two questions. First, does visual art cause greater fluctuations in personality for unsettled or serene individuals, and second, do unsettled individuals respond more to art as a function of its narrative structure? Participants (N = 61) completed a set of questionnaires, then viewed a series of paintings, Giotto's Seven Vices, either unmodified to exhibit high narrative structure, or modified to exhibit low narrative structure, and then filled another set of questionnaires. The results show that unsettled individuals experienced significantly less fluctuation of personality across conditions, and that in the condition of low narrative coherence, serene individuals experienced significantly more personality fluctuations than unsettled individuals. The results suggest that unsettled persons may need more narrative coherence in the art they engage with, while serene individuals may remain open to less-structured and more ambiguous art.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Maja_Djikic",
+        "text": "Maja Djikic"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Keith_Oatley",
+        "text": "Keith Oatley"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/234095818_Serene_Arts_The_Effect_of_Personal_Unsettledness_and_of_Paintings'_Narrative_Structure_on_Personality",
+  "key": "/rg/article?title=234095818_Serene_Arts_The_Effect_of_Personal_Unsettledness_and_of_Paintings'_Narrative_Structure_on_Personality",
+  "cached": "2018-12-20T23:40:32.530Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-24">{
   "pubdate": "2012/12/31",
   "title": "From madness to genius: The Openness/Intellect trait domain as a paradoxical simplex",
   "citations": "122",
   "references": "152",
-  "date": "2012-12",
   "reads": "1,709 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
@@ -747,66 +1196,103 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Rachael_Grazioplene",
         "text": "Rachael Grazioplene"
       },
-      "rating": "Yale University"
+      "institution": "Yale University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234817972_From_madness_to_genius_The_OpennessIntellect_trait_domain_as_a_paradoxical_simplex",
   "key": "/rg/article?title=234817972_From_madness_to_genius_The_OpennessIntellect_trait_domain_as_a_paradoxical_simplex",
-  "cached": "2018-12-15T19:45:20.158Z",
+  "cached": "2018-12-20T23:40:32.530Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-25">[]</t>
-<t tx="leovue.1-26">{
+<t tx="leovue.2-25">{
+  "pubdate": "2012/12/30",
+  "title": "Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality",
+  "citations": "4",
+  "references": "26",
+  "reads": "230 Reads",
+  "journal": {
+    "href": "journal/1541-4493_Empirical_Studies_of_the_Arts",
+    "text": "Empirical Studies of the Arts"
+  },
+  "abstract": "Previous research has demonstrated that art can produce some variation in self-reported personality traits. The present experiment addressed two questions. First, does visual art cause greater fluctuations in personality for unsettled or serene individuals, and second, do unsettled individuals respond more to art as a function of its narrative structure? Participants (N = 61) completed a set of questionnaires, then viewed a series of paintings, Giotto’s Seven Vices, either unmodified to exhibit high narrative structure, or modified to exhibit low narrative structure, and then filled another set of questionnaires. The results show that unsettled individuals experienced significantly less fluctuation of personality across conditions, and that in the condition of low narrative coherence, serene individuals experienced significantly more personality fluctuations than unsettled individuals. The results suggest that unsettled persons may need more narrative coherence in the art they engage with, while serene individuals may remain open to less-structured and more ambiguous art.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Maja_Djikic",
+        "text": "Maja Djikic"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Keith_Oatley",
+        "text": "Keith Oatley"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/259148066_Serene_Arts_The_effect_of_personal_unsettledness_and_of_paintings'_narrative_structure_on_personality",
+  "key": "/rg/article?title=259148066_Serene_Arts_The_effect_of_personal_unsettledness_and_of_paintings%27_narrative_structure_on_personality",
+  "cached": "2018-12-20T23:40:39.731Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-26">{
   "pubdate": "2011/12/31",
   "title": "Creative Exploration and Its Illnesses",
   "citations": "2",
   "references": "17",
-  "date": "2011-12",
-  "reads": "Article (PDF Available) in Canadian journal of psychiatry. Revue canadienne de psychiatrie 56(3):129-31December 2011 with 929 Reads",
+  "reads": "933 Reads",
   "journal": {
     "href": "journal/1497-0015_Canadian_journal_of_psychiatry_Revue_canadienne_de_psychiatrie",
     "text": "Canadian journal of psychiatry. Revue canadienne de psychiatrie"
   },
-  "abstract": "Join ResearchGate to discover and stay up-to-date with the latest research from leading experts in Creativeness and many other scientific topics.",
+  "abstract": "(No Abstract)",
   "authors": [
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/50890909_Creative_Exploration_and_Its_Illnesses",
   "key": "/rg/article?title=50890909_Creative_Exploration_and_Its_Illnesses",
-  "cached": "2018-12-15T19:45:25.070Z",
+  "cached": "2018-12-20T23:40:42.739Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-27">{
+<t tx="leovue.2-27">{
   "pubdate": "2010/12/31",
   "title": "Compassionate Liberals and Polite Conservatives: Associations of Agreeableness With Political Ideology and Moral Values",
   "citations": "157",
   "references": "47",
-  "date": "2010-12",
   "reads": "1,504 Reads",
   "journal": {
     "href": "journal/1552-7433_Personality_and_Social_Psychology_Bulletin",
@@ -819,43 +1305,42 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Xiaowen_Xu4",
         "text": "Xiaowen Xu"
       },
-      "rating": "College of William and Mary"
+      "institution": "College of William and Mary"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/43050088_Compassionate_Liberals_and_Polite_Conservatives_Associations_of_Agreeableness_With_Political_Ideology_and_Moral_Values",
   "key": "/rg/article?title=43050088_Compassionate_Liberals_and_Polite_Conservatives_Associations_of_Agreeableness_With_Political_Ideology_and_Moral_Values",
-  "cached": "2018-12-15T19:45:28.463Z",
+  "cached": "2018-12-20T23:40:46.785Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-28">{
+<t tx="leovue.2-28">{
   "pubdate": "2010/12/31",
   "title": "Positive Mood Effects on Delay Discounting",
   "citations": "46",
   "references": "37",
-  "date": "2010-12",
   "reads": "684 Reads",
   "journal": {
     "href": "journal/1931-1516_Emotion",
@@ -868,7 +1353,7 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -881,30 +1366,29 @@
         "href": "https://www.researchgate.net/profile/Dominique_Morisano",
         "text": "Dominique Morisano"
       },
-      "rating": "WE / WE Charity"
+      "institution": "WE / WE Charity"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/47642299_Positive_Mood_Effects_on_Delay_Discounting",
   "key": "/rg/article?title=47642299_Positive_Mood_Effects_on_Delay_Discounting",
-  "cached": "2018-12-15T19:45:30.430Z",
+  "cached": "2018-12-20T23:40:52.567Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-29">{
+<t tx="leovue.2-29">{
   "pubdate": "2010/12/30",
   "title": "The Benefits of Writing",
   "citations": "1",
   "references": "35",
-  "date": "2010-12",
-  "reads": "Article (PDF Available)December 2010 with 2,839 Reads",
+  "reads": "2,932 Reads",
   "journal": {
     "href": "application.LostPassword.html",
     "text": "Forgot password?"
@@ -916,7 +1400,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -928,23 +1411,26 @@
   ],
   "url": "https://www.researchgate.net/publication/265245291_The_Benefits_of_Writing",
   "key": "/rg/article?title=265245291_The_Benefits_of_Writing",
-  "cached": "2018-12-15T19:45:32.254Z",
+  "cached": "2018-12-20T23:40:58.536Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-3">{
+<t tx="leovue.2-3">{
   "pubdate": "2017/10/27",
   "title": "The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology",
-  "citations": "0",
-  "references": "35",
-  "date": "2017-10",
+  "citations": "35",
+  "references": "1",
   "reads": "2,951 Reads",
   "journal": {
     "href": "journal/0138-9130_Scientometrics",
     "text": "Scientometrics"
   },
   "abstract": "Each year as the number of graduate students in psychology increases, there is also increased competition for academic positions. The general consensus is that there is higher pressure for students to publish prolifically, yet there is little information as to what this exactly means. The main aim of the present study was to examine the average publication trajectory of a psychology student advancing to a post-doctoral fellowship to a faculty position. We obtained curricula vitae from graduate students, post-doctoral fellows, and junior faculty members from 2010 to 2015 in addition to self-reports from the graduate students. The number of publications substantially increased with each step of progression: graduate students published on average 2.89 (self-report) to 3.08 (CV report) papers, post-doctoral fellows on average published 8.06 papers, and junior professors on average had 14.30 publications before they were hired. The same pattern was observed even when restricting the number of publications to only those that were first-authored. However, a slightly different pattern emerged when comparing a scientometric index (zp-index) that takes into account both the quantity and quality of publications.",
+  "correction": {
+     "text": "In the original publication, Fig. 6 does not properly label the values. The revised version of the Fig. 6 is given here:",
+     "href": "https://www.researchgate.net/publication/321029988_Correction_to_The_publication_trajectory_of_graduate_students_post-doctoral_fellows_and_new_professors_in_psychology"
+   },
   "authors": [
     {
       "name": {
@@ -969,17 +1455,16 @@
   ],
   "url": "https://www.researchgate.net/publication/320675379_The_publication_trajectory_of_graduate_students_post-doctoral_fellows_and_new_professors_in_psychology",
   "key": "/rg/article?title=320675379_The_publication_trajectory_of_graduate_students_post-doctoral_fellows_and_new_professors_in_psychology",
-  "cached": "2018-12-15T19:43:29.538Z",
+  "cached": "2018-12-20T23:37:45.578Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-30">{
+<t tx="leovue.2-30">{
   "pubdate": "2010/12/30",
   "title": "Setting, Elaborating, and Reflecting on Personal Goals Improves Academic Performance",
   "citations": "93",
   "references": "84",
-  "date": "2010-12",
   "reads": "1,481 Reads",
   "journal": {
     "href": "journal/1939-1854_Journal_of_Applied_Psychology",
@@ -992,45 +1477,77 @@
         "href": "https://www.researchgate.net/profile/Dominique_Morisano",
         "text": "Dominique Morisano"
       },
-      "rating": "WE / WE Charity"
+      "institution": "WE / WE Charity"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Bruce_Shore2",
         "text": "Bruce M. Shore"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/41967719_Setting_Elaborating_and_Reflecting_on_Personal_Goals_Improves_Academic_Performance",
   "key": "/rg/article?title=41967719_Setting_Elaborating_and_Reflecting_on_Personal_Goals_Improves_Academic_Performance",
-  "cached": "2018-12-15T19:45:34.049Z",
+  "cached": "2018-12-20T23:41:12.191Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-31">[]</t>
-<t tx="leovue.1-32">{
+<t tx="leovue.2-31">{
+  "pubdate": "2009/12/31",
+  "title": "Extraversion, neuroticism, and the prisoner’s dilemma",
+  "citations": "48",
+  "references": "33",
+  "reads": "1,000 Reads",
+  "journal": {
+    "href": "journal/0191-8869_Personality_and_Individual_Differences",
+    "text": "Personality and Individual Differences"
+  },
+  "abstract": "The prisoner’s dilemma has been used to study self-interest and cooperation in a variety of contexts. Applying an individual differences approach to this paradigm allows for the examination of dispositional factors that predict the likelihood of betraying one’s game partner. An iterative prisoner’s dilemma was administered to undergraduate students, along with measures of demographics, personality, and cognitive ability. Results demonstrate that higher scores on the withdrawal aspect of neuroticism and the enthusiasm aspect of extraversion independently predicted a greater likelihood of cooperation.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
+        "text": "Jacob B Hirsh"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/222660114_Extraversion_neuroticism_and_the_prisoner's_dilemma",
+  "key": "/rg/article?title=222660114_Extraversion_neuroticism_and_the_prisoner%27s_dilemma",
+  "cached": "2018-12-20T23:41:19.624Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-32">{
   "pubdate": "2009/12/31",
   "title": "Exploring the link between reading fiction and empathy: Ruling out individual differences and examining outcomes",
   "citations": "152",
   "references": "64",
-  "date": "2009-12",
-  "reads": "Article (PDF Available) in Communications 34:407-428December 2009 with 893 Reads",
+  "reads": "893 Reads",
   "journal": {
     "href": "journal/0588-8018_Communications",
     "text": "Communications"
@@ -1048,7 +1565,6 @@
         "href": "https://www.researchgate.net/profile/Keith_Oatley",
         "text": "Keith Oatley"
       },
-      "rating": "38.04",
       "institution": "University of Toronto"
     },
     {
@@ -1056,24 +1572,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/228803316_Exploring_the_link_between_reading_fiction_and_empathy_Ruling_out_individual_differences_and_examining_outcomes",
   "key": "/rg/article?title=228803316_Exploring_the_link_between_reading_fiction_and_empathy_Ruling_out_individual_differences_and_examining_outcomes",
-  "cached": "2018-12-15T19:45:41.800Z",
+  "cached": "2018-12-20T23:41:25.340Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-33">{
+<t tx="leovue.2-33">{
   "pubdate": "2009/12/31",
   "title": "On Being Moved by Art: How Reading Fiction Transforms the Self",
   "citations": "108",
   "references": "48",
-  "date": "2009-12",
-  "reads": "Article (PDF Available) in Creativity Research Journal 21(1):24-29December 2009 with 1,375 Reads",
+  "reads": "1,388 Reads",
   "journal": {
     "href": "journal/1532-6934_Creativity_Research_Journal",
     "text": "Creativity Research Journal"
@@ -1085,7 +1599,6 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "21.32",
       "institution": "University of Toronto"
     },
     {
@@ -1093,7 +1606,6 @@
         "href": "https://www.researchgate.net/profile/Keith_Oatley",
         "text": "Keith Oatley"
       },
-      "rating": "38.04",
       "institution": "University of Toronto"
     },
     {
@@ -1101,7 +1613,6 @@
         "href": "https://www.researchgate.net/profile/Sara_Zoeterman",
         "text": "Sara Zoeterman"
       },
-      "rating": "5.25",
       "institution": "Columbia University"
     },
     {
@@ -1109,23 +1620,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/233278115_On_Being_Moved_by_Art_How_Reading_Fiction_Transforms_the_Self",
   "key": "/rg/article?title=233278115_On_Being_Moved_by_Art_How_Reading_Fiction_Transforms_the_Self",
-  "cached": "2018-12-15T19:45:43.834Z",
+  "cached": "2018-12-20T23:41:35.784Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-34">{
+<t tx="leovue.2-34">{
   "pubdate": "2009/12/31",
   "title": "Defenceless against art? Impact of reading fiction on emotion in avoidantly attached individuals",
   "citations": "18",
   "references": "29",
-  "date": "2009-12",
   "reads": "531 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
@@ -1138,7 +1647,6 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "21.32",
       "institution": "University of Toronto"
     },
     {
@@ -1146,7 +1654,6 @@
         "href": "https://www.researchgate.net/profile/Keith_Oatley",
         "text": "Keith Oatley"
       },
-      "rating": "38.04",
       "institution": "University of Toronto"
     },
     {
@@ -1154,7 +1661,6 @@
         "href": "https://www.researchgate.net/profile/Sara_Zoeterman",
         "text": "Sara Zoeterman"
       },
-      "rating": "5.25",
       "institution": "Columbia University"
     },
     {
@@ -1162,23 +1668,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234818772_Defenceless_against_art_Impact_of_reading_fiction_on_emotion_in_avoidantly_attached_individuals",
   "key": "/rg/article?title=234818772_Defenceless_against_art_Impact_of_reading_fiction_on_emotion_in_avoidantly_attached_individuals",
-  "cached": "2018-12-15T19:45:45.632Z",
+  "cached": "2018-12-20T23:41:44.552Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-35">{
+<t tx="leovue.2-35">{
   "pubdate": "2009/12/31",
   "title": "Metatraits of the Big Five Differentially Predict Engagement and Restraint of Behavior",
   "citations": "62",
   "references": "39",
-  "date": "2009-12",
   "reads": "600 Reads",
   "journal": {
     "href": "journal/1467-6494_Journal_of_Personality",
@@ -1191,7 +1695,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.98",
       "institution": "University of Toronto"
     },
     {
@@ -1199,7 +1702,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -1207,23 +1709,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/26322688_Metatraits_of_the_Big_Five_Differentially_Predict_Engagement_and_Restraint_of_Behavior",
   "key": "/rg/article?title=26322688_Metatraits_of_the_Big_Five_Differentially_Predict_Engagement_and_Restraint_of_Behavior",
-  "cached": "2018-12-15T19:45:47.255Z",
+  "cached": "2018-12-20T23:41:48.865Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-36">{
+<t tx="leovue.2-36">{
   "pubdate": "2009/12/30",
   "title": "Personality and Language Use in Self-Narratives",
   "citations": "66",
   "references": "20",
-  "date": "2009-12",
   "reads": "2,130 Reads",
   "journal": {
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
@@ -1236,7 +1736,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.99",
       "institution": "University of Toronto"
     },
     {
@@ -1244,23 +1743,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/224983016_Personality_and_Language_Use_in_Self-Narratives",
   "key": "/rg/article?title=224983016_Personality_and_Language_Use_in_Self-Narratives",
-  "cached": "2018-12-15T19:45:48.908Z",
+  "cached": "2018-12-20T23:42:02.875Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-37">{
+<t tx="leovue.2-37">{
   "pubdate": "2008/12/31",
   "title": "Delay discounting: Interactions between personality and cognitive ability",
   "citations": "61",
   "references": "22",
-  "date": "2008-12",
   "reads": "890 Reads",
   "journal": {
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
@@ -1273,36 +1770,35 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Dominique_Morisano",
         "text": "Dominique Morisano"
       },
-      "rating": "WE / WE Charity"
+      "institution": "WE / WE Charity"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/222423709_Delay_discounting_Interactions_between_personality_and_cognitive_ability",
   "key": "/rg/article?title=222423709_Delay_discounting_Interactions_between_personality_and_cognitive_ability",
-  "cached": "2018-12-15T19:45:51.034Z",
+  "cached": "2018-12-20T23:42:05.952Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-38">{
+<t tx="leovue.2-38">{
   "pubdate": "2008/12/31",
   "title": "Predicting creativity and academic success with a “Fake-Proof” measure of the Big Five",
   "citations": "46",
   "references": "91",
-  "date": "2008-12",
   "reads": "930 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
@@ -1315,7 +1811,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.98",
       "institution": "University of Toronto"
     },
     {
@@ -1323,23 +1818,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/222538208_Predicting_creativity_and_academic_success_with_a_Fake-Proof_measure_of_the_Big_Five",
   "key": "/rg/article?title=222538208_Predicting_creativity_and_academic_success_with_a_Fake-Proof_measure_of_the_Big_Five",
-  "cached": "2018-12-15T19:45:52.573Z",
+  "cached": "2018-12-20T23:42:08.620Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-39">{
+<t tx="leovue.2-39">{
   "pubdate": "2008/12/31",
   "title": "Externalizing Behavior and the Higher Order Factors of the Big Five",
   "citations": "61",
   "references": "33",
-  "date": "2008-12",
   "reads": "714 Reads",
   "journal": {
     "href": "journal/0021-843X_Journal_of_Abnormal_Psychology",
@@ -1352,44 +1845,83 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jean_Seguin",
         "text": "Jean Richard Séguin"
       },
-      "rating": "Université de Montréal"
+      "institution": "Université de Montréal"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Richard_Tremblay4",
         "text": "Richard Ernest Tremblay"
       },
-      "rating": "University College Dublin"
+      "institution": "University College Dublin"
     }
   ],
   "url": "https://www.researchgate.net/publication/23489213_Externalizing_Behavior_and_the_Higher_Order_Factors_of_the_Big_Five",
   "key": "/rg/article?title=23489213_Externalizing_Behavior_and_the_Higher_Order_Factors_of_the_Big_Five",
-  "cached": "2018-12-15T19:45:55.047Z",
+  "cached": "2018-12-20T23:42:11.643Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-4">[]</t>
-<t tx="leovue.1-40">{
+<t tx="leovue.2-4">{
+  "pubdate": "2018/09/13",
+  "title": "Don’t Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions",
+  "citations": "",
+  "references": "59",
+  "reads": "5,378 Reads",
+  "journal": {
+    "href": "journal/0022-3891_Journal_of_Personalit",
+    "text": "Journal of Personality Assessment"
+  },
+  "abstract": "A voluminous literature has documented the importance of emotion regulation for health and well-being. The studies in this literature, however, have generally focused on the down-regulation of negative affect. Few studies have examined the down-regulation of positive affect. In Study 1, we constructed a scale, the revised Regulatory Emotional Self-Efficacy Scale (r–RESE), which assesses both the down- and upregulation of positive affect, in addition to the traditional down-regulation of negative affect. In Study 2, we conducted an extensive validation of the r–RESE scale, using a multimethod approach with informant ratings, to illustrate that the down-regulation of positive affect represents a process independent of each of the other forms of emotion regulation. In Study 3, we provided evidence that the ability to down-regulate positive emotions provides added predictive utility when predicting indexes of impulsivity and adjustment. Across the studies, we illustrate the potential importance of the down-regulation of positive emotions as a topic of study for the field of emotion regulation. CORRECTION: DOI:10.1080/00223891.2017.1339711The cohen’s d’s were not calculated correctly in the descriptive statistics for Study 1–the effect sizes in the paper are double what they should be. On Page 3, the cohen’s d’s in the following paragraph should read as follows: We performed Bonferroni-corrected pairwise t tests to examine differences in composite scores between the four factors. Of all the factors, the down-regulation of anger (D-ANG) had the highest score, D-ANG and U-POS, t(489) d = 11.27, p &lt;.001, d =.51; D-ANG and D-DES, t(489) = 5.00, p &lt;.001, d =.23, although it did not differ significantly from D-POS. Similarly, down-regulation of positive emotions scores (D-POS) and down-regulation of despondency or distress (D-DES) scores did not differ significantly from one another, but both scores were significantly higher than the up-regulation of positive emotions (U-POS), D-POS and U-POS, t(489) = 8.14, p &lt;.001, d =.37; D-POS and D-DES, t(489) = 7.62, p &lt;.001, d =.35. These results suggest that people believe that they are better at down-regulating than up-regulating their emotions, and believe they are best at down-regulating their anger. The authors apologize for their oversight.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2148112389_Christopher_Zou",
+        "text": "Christopher Zhou"
+      },
+      "institution": ""
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jason_Plaks",
+        "text": "Jason E. Plaks"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/318239025_Don't_Get_Too_Excited_Assessing_Individual_Differences_in_the_Down-Regulation_of_Positive_Emotions",
+  "key": "/rg/article?title=318239025_Don't_Get_Too_Excited_Assessing_Individual_Differences_in_the_Down-Regulation_of_Positive_Emotions",
+  "cached": "2018-12-20T23:37:40.043Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-40">{
   "pubdate": "2008/08/31",
   "title": "Cognitive Abilities Involved in Insight Problem Solving: An Individual Differences Model",
   "citations": "58",
   "references": "66",
-  "date": "2008-08",
   "reads": "1,599 Reads",
   "journal": {
     "href": "journal/1532-6934_Creativity_Research_Journal",
@@ -1402,37 +1934,36 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Joseph_Flanders",
         "text": "Joseph L Flanders"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234819098_Cognitive_Abilities_Involved_in_Insight_Problem_Solving_An_Individual_Differences_Model",
   "key": "/rg/article?title=234819098_Cognitive_Abilities_Involved_in_Insight_Problem_Solving_An_Individual_Differences_Model",
-  "cached": "2018-12-15T19:45:57.164Z",
+  "cached": "2018-12-20T23:42:14.956Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-41">{
+<t tx="leovue.2-41">{
   "pubdate": "2007/12/31",
   "title": "Morning people are stable people: Circadian rhythm and the higher-order factors of the Big Five",
   "citations": "118",
   "references": "51",
-  "date": "2007-12",
-  "reads": "1,056 Reads",
+  "reads": "1,093 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -1444,7 +1975,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -1452,7 +1982,6 @@
         "href": "https://www.researchgate.net/profile/Lynn_Hasher",
         "text": "Lynn Hasher"
       },
-      "rating": "42.21",
       "institution": "University of Toronto"
     },
     {
@@ -1460,37 +1989,29 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "21.32",
       "institution": "University of Toronto"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/2132949405_Brock_Criger",
-        "text": "Brock Criger"
-      }
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
-    }    
+      "institution": "University of Toronto"
+    }
   ],
   "url": "https://www.researchgate.net/publication/222396133_Morning_people_are_stable_people_Circadian_rhythm_and_the_higher-order_factors_of_the_Big_Five",
   "key": "/rg/article?title=222396133_Morning_people_are_stable_people_Circadian_rhythm_and_the_higher-order_factors_of_the_Big_Five",
-  "cached": "2018-12-15T19:45:59.231Z",
+  "cached": "2018-12-20T23:42:24.435Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-42">{
+<t tx="leovue.2-42">{
   "pubdate": "2007/12/31",
   "title": "A Psycho-ontological Analysis of Genesis 2-6.",
   "citations": "35",
-  "references": "",
-  "date": "",
-  "reads": "Article in Archive for the Psychology of Religion / Archiv für Religionspychologie 29(1):87-125December 2007 with 1,111 Reads",
+  "references": [],
+  "reads": "1,121 Reads",
   "journal": {
     "href": "journal/0084-6724_Archive_for_the_Psychology_of_Religion_Archiv_fuer_Religionspychologie",
     "text": "Archive for the Psychology of Religion / Archiv für Religionspychologie"
@@ -1502,24 +2023,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/233604448_A_Psycho-ontological_Analysis_of_Genesis_2-6",
   "key": "/rg/article?title=233604448_A_Psycho-ontological_Analysis_of_Genesis_2-6",
-  "cached": "2018-12-15T19:46:00.763Z",
+  "cached": "2018-12-20T23:42:28.307Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-43">{
+<t tx="leovue.2-43">{
   "pubdate": "2007/12/31",
   "title": "An evaluation of early and late stage attentional processing of positive and negative information in dysphoria",
   "citations": "44",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Cognition and EmotionDecember 2007 with 274 Reads",
+  "references": "73",
+  "reads": "274 Reads",
   "journal": {
     "href": "journal/1464-0600_Cognition_and_Emotion",
     "text": "Cognition and Emotion"
@@ -1531,7 +2050,6 @@
         "href": "https://www.researchgate.net/profile/Matthew_Shane2",
         "text": "Matthew S Shane"
       },
-      "rating": "28.84",
       "institution": "University of Ontario Institute of Technology"
     },
     {
@@ -1539,24 +2057,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234820033_An_evaluation_of_early_and_late_stage_attentional_processing_of_positive_and_negative_information_in_dysphoria",
   "key": "/rg/article?title=234820033_An_evaluation_of_early_and_late_stage_attentional_processing_of_positive_and_negative_information_in_dysphoria",
-  "cached": "2018-12-15T19:46:02.348Z",
+  "cached": "2018-12-20T23:42:35.139Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-44">{
+<t tx="leovue.2-44">{
   "pubdate": "2007/12/31",
   "title": "Reducing memory distortions in egoistic self-enhancers: Effects of indirect social facilitation",
   "citations": "7",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Personality and Individual Differences 42:723-731December 2007 with 282 Reads",
+  "references": "27",
+  "reads": "284 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -1568,7 +2084,6 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "21.32",
       "institution": "University of Toronto"
     },
     {
@@ -1576,7 +2091,6 @@
         "href": "https://www.researchgate.net/profile/Irene_Chan15",
         "text": "Irene Chan"
       },
-      "rating": "3.39",
       "institution": "Hertfordshire Partnership NHS Foundation Trust"
     },
     {
@@ -1584,24 +2098,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234820612_Reducing_memory_distortions_in_egoistic_self-enhancers_Effects_of_indirect_social_facilitation",
   "key": "/rg/article?title=234820612_Reducing_memory_distortions_in_egoistic_self-enhancers_Effects_of_indirect_social_facilitation",
-  "cached": "2018-12-15T19:46:05.103Z",
+  "cached": "2018-12-20T23:42:37.871Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-45">{
+<t tx="leovue.2-45">{
   "pubdate": "2007/12/31",
   "title": "Between Facets and Domains: 10 Aspects of the Big Five",
-  "citations": "615",
+  "citations": "617",
   "references": "65",
-  "date": "2007-12",
-  "reads": "5,124 Reads",
+  "reads": "5,277 Reads",
   "journal": {
     "href": "journal/0022-3514_Journal_of_Personality_and_Social_Psychology",
     "text": "Journal of Personality and Social Psychology"
@@ -1613,37 +2125,36 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Lena_Quilty",
         "text": "Lena C Quilty"
       },
-      "rating": "Centre for Addiction and Mental Health"
+      "institution": "Centre for Addiction and Mental Health"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/5863998_Between_Facets_and_Domains_10_Aspects_of_the_Big_Five",
   "key": "/rg/article?title=5863998_Between_Facets_and_Domains_10_Aspects_of_the_Big_Five",
-  "cached": "2018-12-15T19:46:10.381Z",
+  "cached": "2018-12-20T23:42:45.121Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-46">{
+<t tx="leovue.2-46">{
   "pubdate": "2007/12/31",
   "title": "Prefrontal Cognitive Ability, Intelligence, Big Five Personality, and the Prediction of Advanced Academic and Workplace Performance",
   "citations": "103",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Journal of Personality and Social Psychology 93(2):298-319December 2007 with 4,753 Reads",
+  "references": "167",
+  "reads": "4,753 Reads",
   "journal": {
     "href": "journal/0022-3514_Journal_of_Personality_and_Social_Psychology",
     "text": "Journal of Personality and Social Psychology"
@@ -1661,7 +2172,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -1669,7 +2179,6 @@
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "45.31",
       "institution": "McGill University"
     },
     {
@@ -1681,18 +2190,17 @@
   ],
   "url": "https://www.researchgate.net/publication/6194035_Prefrontal_Cognitive_Ability_Intelligence_Big_Five_Personality_and_the_Prediction_of_Advanced_Academic_and_Workplace_Performance",
   "key": "/rg/article?title=6194035_Prefrontal_Cognitive_Ability_Intelligence_Big_Five_Personality_and_the_Prediction_of_Advanced_Academic_and_Workplace_Performance",
-  "cached": "2018-12-15T19:46:14.563Z",
+  "cached": "2018-12-20T23:42:55.478Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-47">{
+<t tx="leovue.2-47">{
   "pubdate": "2006/12/31",
   "title": "Religion, sovereignty, natural rights, and the constituent elements of experience",
   "citations": "4",
-  "references": "",
-  "date": "",
-  "reads": "Article in Archive for the Psychology of Religion / Archiv für Religionspychologie 28(1):135-180December 2006 with 990 Reads",
+  "references": "32",
+  "reads": "990 Reads",
   "journal": {
     "href": "journal/0084-6724_Archive_for_the_Psychology_of_Religion_Archiv_fuer_Religionspychologie",
     "text": "Archive for the Psychology of Religion / Archiv für Religionspychologie"
@@ -1704,23 +2212,21 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/233579688_Religion_sovereignty_natural_rights_and_the_constituent_elements_of_experience",
   "key": "/rg/article?title=233579688_Religion_sovereignty_natural_rights_and_the_constituent_elements_of_experience",
-  "cached": "2018-12-15T19:46:16.101Z",
+  "cached": "2018-12-20T23:42:57.729Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-48">{
+<t tx="leovue.2-48">{
   "pubdate": "2006/12/31",
   "title": "The Bitter-Sweet Labor of Emoting: The Linguistic Comparison of Writers and Physicists",
   "citations": "37",
   "references": "39",
-  "date": "2006-12",
   "reads": "470 Reads",
   "journal": {
     "href": "journal/1532-6934_Creativity_Research_Journal",
@@ -1733,21 +2239,21 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Keith_Oatley",
         "text": "Keith Oatley"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -1758,17 +2264,16 @@
   ],
   "url": "https://www.researchgate.net/publication/234820878_The_Bitter-Sweet_Labor_of_Emoting_The_Linguistic_Comparison_of_Writers_and_Physicists",
   "key": "/rg/article?title=234820878_The_Bitter-Sweet_Labor_of_Emoting_The_Linguistic_Comparison_of_Writers_and_Physicists",
-  "cached": "2018-12-15T19:46:20.606Z",
+  "cached": "2018-12-20T23:43:00.504Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-49">{
+<t tx="leovue.2-49">{
   "pubdate": "2006/12/31",
   "title": "The Dopamine D4 Receptor Gene and Moderation of the Association Between Externalizing Behavior and IQ",
   "citations": "52",
   "references": "66",
-  "date": "2006-12",
   "reads": "278 Reads",
   "journal": {
     "href": "journal/0003-990X_Archives_of_General_Psychiatry",
@@ -1781,44 +2286,43 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jean_Seguin",
         "text": "Jean Richard Séguin"
       },
-      "rating": "Université de Montréal"
+      "institution": "Université de Montréal"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Roberta_Palmour",
         "text": "Roberta M Palmour"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/6653134_The_Dopamine_D4_Receptor_Gene_and_Moderation_of_the_Association_Between_Externalizing_Behavior_and_IQ",
   "key": "/rg/article?title=6653134_The_Dopamine_D4_Receptor_Gene_and_Moderation_of_the_Association_Between_Externalizing_Behavior_and_IQ",
-  "cached": "2018-12-15T19:46:23.903Z",
+  "cached": "2018-12-20T23:43:03.630Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-5">{
+<t tx="leovue.2-5">{
   "pubdate": "2017/04/01",
   "title": "Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation",
-  "citations": "48",
-  "references": "",
-  "date": "2017-04",
-  "reads": "Article (PDF Available) in Reading and Writing 30(4):857-869April 2017 with 5,984 Reads",
+  "citations": "",
+  "references": "48",
+  "reads": "5,984 Reads",
   "journal": {
     "href": "journal/0922-4777_Reading_and_Writing",
     "text": "Reading and Writing"
@@ -1830,7 +2334,6 @@
         "href": "https://www.researchgate.net/profile/Ashley_Chung-Fat-Yim",
         "text": "Ashley Chung-Fat-Yim"
       },
-      "rating": "15.28",
       "institution": "York University"
     },
     {
@@ -1849,17 +2352,16 @@
   ],
   "url": "https://www.researchgate.net/publication/309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation",
   "key": "/rg/article?title=309182447_Validating_self-paced_sentence-by-sentence_reading_story_comprehension_recall_and_narrative_transportation",
-  "cached": "2018-12-15T19:43:36.691Z",
+  "cached": "2018-12-20T23:38:32.966Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-50">{
+<t tx="leovue.2-50">{
   "pubdate": "2006/12/31",
   "title": "Differential effects of naltrexone on cardiac, subjective and behavioural reactions to acute ethanol intoxication",
   "citations": "19",
   "references": "75",
-  "date": "2006-12",
   "reads": "169 Reads",
   "journal": {
     "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
@@ -1872,44 +2374,43 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Patricia_Conrod2",
         "text": "Patricia Conrod"
       },
-      "rating": "Université de Montréal"
+      "institution": "Université de Montréal"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jasmin_Vassileva",
         "text": "Jasmin Vassileva"
       },
-      "rating": "Virginia Commonwealth University"
+      "institution": "Virginia Commonwealth University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/6662954_Differential_effects_of_naltrexone_on_cardiac_subjective_and_behavioural_reactions_to_acute_ethanol_intoxication",
   "key": "/rg/article?title=6662954_Differential_effects_of_naltrexone_on_cardiac_subjective_and_behavioural_reactions_to_acute_ethanol_intoxication",
-  "cached": "2018-12-15T19:46:28.355Z",
+  "cached": "2018-12-20T23:43:07.018Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-51">{
+<t tx="leovue.2-51">{
   "pubdate": "2006/12/31",
   "title": "Self-Liking and Self-Competence Separate Self-Evaluation From Self-Deception: Associations With Personality, Ability, and Achievement",
   "citations": "35",
-  "references": "",
-  "date": "",
-  "reads": "Article in Journal of Personality 74(4):1047-78December 2006 with 685 Reads",
+  "references": "101",
+  "reads": "685 Reads",
   "journal": {
     "href": "journal/0022-3506_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -1927,7 +2428,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -1941,24 +2441,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/6997589_Self-Liking_and_Self-Competence_Separate_Self-Evaluation_From_Self-Deception_Associations_With_Personality_Ability_and_Achievement",
   "key": "/rg/article?title=6997589_Self-Liking_and_Self-Competence_Separate_Self-Evaluation_From_Self-Deception_Associations_With_Personality_Ability_and_Achievement",
-  "cached": "2018-12-15T19:46:30.853Z",
+  "cached": "2018-12-20T23:43:09.583Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-52">{
+<t tx="leovue.2-52">{
   "pubdate": "2006/12/30",
   "title": "Bookworms versus nerds: Exposure to fiction versus non-fiction, divergent associations with social ability, and the simulation of fictional social worlds",
   "citations": "219",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Journal of Research in Personality 40(5):694-712December 2006 with 1,098 Reads",
+  "references": "77",
+  "reads": "1,098 Reads",
   "journal": {
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
@@ -1976,7 +2474,6 @@
         "href": "https://www.researchgate.net/profile/Keith_Oatley",
         "text": "Keith Oatley"
       },
-      "rating": "38.05",
       "institution": "University of Toronto"
     },
     {
@@ -1984,7 +2481,6 @@
         "href": "https://www.researchgate.net/profile/Jacob_Hirsh",
         "text": "Jacob B Hirsh"
       },
-      "rating": "32.98",
       "institution": "University of Toronto"
     },
     {
@@ -1996,17 +2492,16 @@
   ],
   "url": "https://www.researchgate.net/publication/224983017_Bookworms_versus_nerds_Exposure_to_fiction_versus_non-fiction_divergent_associations_with_social_ability_and_the_simulation_of_fictional_social_worlds",
   "key": "/rg/article?title=224983017_Bookworms_versus_nerds_Exposure_to_fiction_versus_non-fiction_divergent_associations_with_social_ability_and_the_simulation_of_fictional_social_worlds",
-  "cached": "2018-12-15T19:46:33.609Z",
+  "cached": "2018-12-20T23:43:12.414Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-53">{
+<t tx="leovue.2-53">{
   "pubdate": "2006/12/30",
   "title": "Heart rate increase to alcohol administration and video lottery terminal play among probable pathological gamblers and nonpathological gamblers",
   "citations": "14",
   "references": "59",
-  "date": "2006-12",
   "reads": "126 Reads",
   "journal": {
     "href": "journal/0893-164X_Psychology_of_Addictive_Behaviors",
@@ -2019,14 +2514,14 @@
         "href": "https://www.researchgate.net/profile/Sherry_Stewart",
         "text": "Sherry H Stewart"
       },
-      "rating": "Dalhousie University"
+      "institution": "Dalhousie University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -2043,17 +2538,16 @@
   ],
   "url": "https://www.researchgate.net/publication/7241279_Heart_rate_increase_to_alcohol_administration_and_video_lottery_terminal_play_among_probable_pathological_gamblers_and_nonpathological_gamblers",
   "key": "/rg/article?title=7241279_Heart_rate_increase_to_alcohol_administration_and_video_lottery_terminal_play_among_probable_pathological_gamblers_and_nonpathological_gamblers",
-  "cached": "2018-12-15T19:46:39.529Z",
+  "cached": "2018-12-20T23:43:16.479Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-54">{
+<t tx="leovue.2-54">{
   "pubdate": "2006/12/01",
   "title": "NUANCE 3.0: Using genetic programming to model variable relationships",
   "citations": "6",
   "references": "19",
-  "date": "2006-12",
   "reads": "104 Reads",
   "journal": {
     "href": "journal/1554-351X_Behavior_Research_Methods",
@@ -2066,37 +2560,36 @@
         "href": "https://www.researchgate.net/profile/Geoff_Hollis",
         "text": "Geoff Hollis"
       },
-      "rating": "University of Alberta"
+      "institution": "University of Alberta"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Chris_Westbury",
         "text": "Chris F Westbury"
       },
-      "rating": "University of Alberta"
+      "institution": "University of Alberta"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/6834426_NUANCE_30_Using_genetic_programming_to_model_variable_relationships",
   "key": "/rg/article?title=6834426_NUANCE_30_Using_genetic_programming_to_model_variable_relationships",
-  "cached": "2018-12-15T19:46:43.964Z",
+  "cached": "2018-12-20T23:43:20.864Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-55">{
+<t tx="leovue.2-55">{
   "pubdate": "2005/12/31",
   "title": "You Drink, I Drink: Alcohol Consumption, Social Context and Personality.",
   "citations": "19",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Individual Differences Research 3:23-35December 2005 with 964 Reads",
+  "references": "33",
+  "reads": "1,004 Reads",
   "journal": {
     "href": "journal/1541-745X_Individual_Differences_Research",
     "text": "Individual Differences Research"
@@ -2108,7 +2601,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2126,17 +2618,16 @@
   ],
   "url": "https://www.researchgate.net/publication/232586911_You_Drink_I_Drink_Alcohol_Consumption_Social_Context_and_Personality",
   "key": "/rg/article?title=232586911_You_Drink_I_Drink_Alcohol_Consumption_Social_Context_and_Personality",
-  "cached": "2018-12-15T19:46:46.299Z",
+  "cached": "2018-12-20T23:43:32.530Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-56">{
+<t tx="leovue.2-56">{
   "pubdate": "2005/12/31",
   "title": "Reliability, Validity, and Factor Structure of the Creative Achievement Questionnaire",
   "citations": "412",
   "references": "63",
-  "date": "2005-12",
   "reads": "16,616 Reads",
   "journal": {
     "href": "journal/1532-6934_Creativity_Research_Journal",
@@ -2149,14 +2640,14 @@
         "href": "https://www.researchgate.net/profile/Shelley_Carson",
         "text": "Shelley H Carson"
       },
-      "rating": "Harvard University"
+      "institution": "Harvard University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -2167,18 +2658,17 @@
   ],
   "url": "https://www.researchgate.net/publication/234822027_Reliability_Validity_and_Factor_Structure_of_the_Creative_Achievement_Questionnaire",
   "key": "/rg/article?title=234822027_Reliability_Validity_and_Factor_Structure_of_the_Creative_Achievement_Questionnaire",
-  "cached": "2018-12-15T19:46:49.639Z",
+  "cached": "2018-12-20T23:43:38.881Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-57">{
+<t tx="leovue.2-57">{
   "pubdate": "2005/12/31",
   "title": "Sources of Openness/Intellect: Cognitive and Neuropsychological Correlates of the Fifth Factor of Personality",
   "citations": "247",
-  "references": "",
-  "date": "",
-  "reads": "Article· Literature Review in Journal of Personality 73(4):825-58December 2005 with 1,475 Reads",
+  "references": "102",
+  "reads": "1,475 Reads",
   "journal": {
     "href": "journal/0022-3506_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -2190,7 +2680,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -2198,7 +2687,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     },
     {
@@ -2210,18 +2698,17 @@
   ],
   "url": "https://www.researchgate.net/publication/7785003_Sources_of_OpennessIntellect_Cognitive_and_Neuropsychological_Correlates_of_the_Fifth_Factor_of_Personality",
   "key": "/rg/article?title=7785003_Sources_of_OpennessIntellect_Cognitive_and_Neuropsychological_Correlates_of_the_Fifth_Factor_of_Personality",
-  "cached": "2018-12-15T19:46:52.524Z",
+  "cached": "2018-12-20T23:43:41.373Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-58">{
+<t tx="leovue.2-58">{
   "pubdate": "2005/12/31",
   "title": "Matching effects on eating: Do individual differences make a difference?",
   "citations": "45",
-  "references": "",
-  "date": "",
-  "reads": "Article in Appetite 45(2):108-9December 2005 with 194 Reads",
+  "references": "9",
+  "reads": "196 Reads",
   "journal": {
     "href": "journal/0195-6663_Appetite",
     "text": "Appetite"
@@ -2245,7 +2732,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2257,17 +2743,16 @@
   ],
   "url": "https://www.researchgate.net/publication/7822912_Matching_effects_on_eating_Do_individual_differences_make_a_difference",
   "key": "/rg/article?title=7822912_Matching_effects_on_eating_Do_individual_differences_make_a_difference",
-  "cached": "2018-12-15T19:46:54.588Z",
+  "cached": "2018-12-20T23:43:45.283Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-59">{
+<t tx="leovue.2-59">{
   "pubdate": "2005/12/30",
   "title": "Attentional biases and memory distortions in self-enhancers",
   "citations": "9",
   "references": "34",
-  "date": "2005-12",
   "reads": "220 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
@@ -2280,37 +2765,36 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Philip_Zelazo2",
         "text": "Philip Zelazo"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     }
   ],
   "url": "https://www.researchgate.net/publication/234821414_Attentional_biases_and_memory_distortions_in_self-enhancers",
   "key": "/rg/article?title=234821414_Attentional_biases_and_memory_distortions_in_self-enhancers",
-  "cached": "2018-12-15T19:46:57.257Z",
+  "cached": "2018-12-20T23:43:52.643Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-6">{
+<t tx="leovue.2-6">{
   "pubdate": "2016/06/30",
   "title": "Ideological Reactivity: Political Conservatism and Brain Responsivity to Emotional and Neutral Stimuli",
   "citations": "5",
   "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Emotion 16(8)June 2016 with 8,563 Reads",
+  "reads": "8,637 Reads",
   "journal": {
     "href": "journal/1528-3542_Emotion",
     "text": "Emotion"
@@ -2348,30 +2832,28 @@
   ],
   "url": "https://www.researchgate.net/publication/304662727_Ideological_Reactivity_Political_Conservatism_and_Brain_Responsivity_to_Emotional_and_Neutral_Stimuli",
   "key": "/rg/article?title=304662727_Ideological_Reactivity_Political_Conservatism_and_Brain_Responsivity_to_Emotional_and_Neutral_Stimuli",
-  "cached": "2018-12-15T19:43:38.991Z",
+  "cached": "2018-12-20T23:38:35.790Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-60">{
+<t tx="leovue.2-60">{
   "pubdate": "2005/01/01",
   "title": "Play and the Regulation of Aggression",
   "citations": "16",
   "references": "",
-  "date": "",
-  "reads": "ArticleJanuary 2005 with 47 Reads",
+  "reads": "49 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "",
+    "text": "In book: Developmental Origins of Aggression"
   },
-  "abstract": [],
+  "abstract": "Is the human being a noble savage, corrupted by the stresses of civilized social being, or a beast of prey, selfish and cruel? To answer this question, it is necessary to consider evidence derived from a diverse sampling of the behavioral sciences, and to reframe the argument: what tendencies to aggression, if any, characterize the human species, and what mechanisms, individual and social, regulate and constrain those tendencies?",
   "authors": [
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     },
     {
@@ -2383,17 +2865,16 @@
   ],
   "url": "https://www.researchgate.net/publication/313220340_Play_and_the_Regulation_of_Aggression",
   "key": "/rg/article?title=313220340_Play_and_the_Regulation_of_Aggression",
-  "cached": "2018-12-15T19:47:00.231Z",
+  "cached": "2018-12-20T23:43:58.231Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-61">{
+<t tx="leovue.2-61">{
   "pubdate": "2004/12/31",
   "title": "Self-induced memory distortions and the allocation of processing resources at encoding and retrieval",
   "citations": "18",
   "references": "70",
-  "date": "2004-12",
   "reads": "230 Reads",
   "journal": {
     "href": "journal/1464-0600_Cognition_and_Emotion",
@@ -2406,31 +2887,63 @@
         "href": "https://www.researchgate.net/profile/Matthew_Shane2",
         "text": "Matthew S Shane"
       },
-      "rating": "University of Ontario Institute of Technology"
+      "institution": "University of Ontario Institute of Technology"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/234822689_Self-induced_memory_distortions_and_the_allocation_of_processing_resources_at_encoding_and_retrieval",
   "key": "/rg/article?title=234822689_Self-induced_memory_distortions_and_the_allocation_of_processing_resources_at_encoding_and_retrieval",
-  "cached": "2018-12-15T19:47:03.510Z",
+  "cached": "2018-12-20T23:44:01.561Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-62">[]</t>
-<t tx="leovue.1-63">{
+<t tx="leovue.2-62">{
+  "pubdate": "2004/12/31",
+  "title": "Defensive Copers Show a Deficit in Passive Avoidance Learning on Newman's Go/No-Go Task: Implications for Self-Deception and Socialization",
+  "citations": "13",
+  "references": "78",
+  "reads": "152 Reads",
+  "journal": {
+    "href": "journal/0022-3506_Journal_of_Personality",
+    "text": "Journal of Personality"
+  },
+  "abstract": "The present study investigated whether passive avoidance learning was retarded by defensive coping strategies designed to minimize exposure to negatively valenced stimuli. High-anxious individuals, low-anxious individuals, and defensive copers completed a computerized go/no-go task, in which they learned when to press or not to press a button, in response to contingent positive and negative feedback. The duration that feedback remained onscreen was self-regulated. Defensive copers showed preferential reflection away from negative feedback, committed more passive-avoidance errors, and were characterized by impaired learning, overall. Further, the ratio of reflection on negative feedback to reflection on positive feedback directly mediated both passive-avoidance errors and overall learning. Defensive coping strategies, therefore, appear to interfere with passive avoidance learning, thereby fostering perseverative, dysfunctional action patterns by reducing knowledge gained from previous mistakes. Implications for the learning of effective socialization strategies, and for psychopathy-which is commonly characterized by similar passive-avoidance deficits-are subsequently considered.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Matthew_Shane2",
+        "text": "Matthew S Shane"
+      },
+      "institution": "University of Ontario Institute of Technology"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/8377744_Defensive_Copers_Show_a_Deficit_in_Passive_Avoidance_Learning_on_Newman's_GoNo-Go_Task_Implications_for_Self-Deception_and_Socialization",
+  "key": "/rg/article?title=8377744_Defensive_Copers_Show_a_Deficit_in_Passive_Avoidance_Learning_on_Newman's_GoNo-Go_Task_Implications_for_Self-Deception_and_Socialization",
+  "cached": "2018-12-20T23:44:54.289Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-63">{
   "pubdate": "2003/12/31",
   "title": "Self-Deception and Failure to Modulate Responses Despite Accruing Evidence of Error",
   "citations": "25",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Journal of Research in Personality 37:205-223December 2003 with 322 Reads",
+  "references": "67",
+  "reads": "322 Reads",
   "journal": {
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
@@ -2442,7 +2955,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2450,7 +2962,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -2458,7 +2969,6 @@
         "href": "https://www.researchgate.net/profile/Erin_Driver-Linn",
         "text": "Erin Driver-Linn"
       },
-      "rating": "15.74",
       "institution": "Harvard University"
     },
     {
@@ -2466,24 +2976,22 @@
         "href": "https://www.researchgate.net/profile/Jean_Seguin",
         "text": "Jean Richard Séguin"
       },
-      "rating": "41.31",
       "institution": "Université de Montréal"
     }
   ],
   "url": "https://www.researchgate.net/publication/222393728_Self-Deception_and_Failure_to_Modulate_Responses_Despite_Accruing_Evidence_of_Error",
   "key": "/rg/article?title=222393728_Self-Deception_and_Failure_to_Modulate_Responses_Despite_Accruing_Evidence_of_Error",
-  "cached": "2018-12-15T19:47:09.924Z",
+  "cached": "2018-12-20T23:44:54.289Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-64">{
+<t tx="leovue.2-64">{
   "pubdate": "2003/12/31",
   "title": "Neuropsychological Performance, IQ, Personality, and Grades in a Longitudinal Grade-School Male Sample",
   "citations": "8",
   "references": "49",
-  "date": "2003-12",
-  "reads": "771 Reads",
+  "reads": "781 Reads",
   "journal": {
     "href": "journal/1541-745X_Individual_Differences_Research",
     "text": "Individual Differences Research"
@@ -2495,14 +3003,14 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     },
     {
       "name": {
@@ -2515,22 +3023,21 @@
         "href": "https://www.researchgate.net/profile/Richard_Tremblay4",
         "text": "Richard Ernest Tremblay"
       },
-      "rating": "University College Dublin"
+      "institution": "University College Dublin"
     }
   ],
   "url": "https://www.researchgate.net/publication/234823080_Neuropsychological_Performance_IQ_Personality_and_Grades_in_a_Longitudinal_Grade-School_Male_Sample",
   "key": "/rg/article?title=234823080_Neuropsychological_Performance_IQ_Personality_and_Grades_in_a_Longitudinal_Grade-School_Male_Sample",
-  "cached": "2018-12-15T19:47:12.505Z",
+  "cached": "2018-12-20T23:44:57.427Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-65">{
+<t tx="leovue.2-65">{
   "pubdate": "2003/12/31",
   "title": "Decreased Latent Inhibition Is Associated With Increased Creative Achievement in High-Functioning Individuals.",
   "citations": "382",
   "references": "47",
-  "date": "2003-12",
   "reads": "7,492 Reads",
   "journal": {
     "href": "journal/0022-3514_Journal_of_Personality_and_Social_Psychology",
@@ -2543,14 +3050,14 @@
         "href": "https://www.researchgate.net/profile/Shelley_Carson",
         "text": "Shelley H Carson"
       },
-      "rating": "Harvard University"
+      "institution": "Harvard University"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
@@ -2561,18 +3068,17 @@
   ],
   "url": "https://www.researchgate.net/publication/5995267_Decreased_Latent_Inhibition_Is_Associated_With_Increased_Creative_Achievement_in_High-Functioning_Individuals",
   "key": "/rg/article?title=5995267_Decreased_Latent_Inhibition_Is_Associated_With_Increased_Creative_Achievement_in_High-Functioning_Individuals",
-  "cached": "2018-12-15T19:47:17.279Z",
+  "cached": "2018-12-20T23:45:00.372Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-66">{
+<t tx="leovue.2-66">{
   "pubdate": "2003/12/30",
   "title": "You can neither remember nor forget what you do not understand",
   "citations": "4",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available)December 2003 with 10,998 Reads",
+  "references": "71",
+  "reads": "11,093 Reads",
   "journal": {
     "href": "application.LostPassword.html",
     "text": "Forgot password?"
@@ -2584,7 +3090,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2592,23 +3097,21 @@
         "href": "https://www.researchgate.net/profile/Maja_Djikic",
         "text": "Maja Djikic"
       },
-      "rating": "21.32",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/242697022_You_can_neither_remember_nor_forget_what_you_do_not_understand",
   "key": "/rg/article?title=242697022_You_can_neither_remember_nor_forget_what_you_do_not_understand",
-  "cached": "2018-12-15T19:47:19.535Z",
+  "cached": "2018-12-20T23:45:03.510Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-67">{
+<t tx="leovue.2-67">{
   "pubdate": "2002/12/31",
   "title": "Complexity Management Theory: Motivation for Ideological Rigidity and Social Conflict",
   "citations": "49",
   "references": "78",
-  "date": "2002-12",
   "reads": "8,660 Reads",
   "journal": {
     "href": "journal/0010-9452_Cortex",
@@ -2621,30 +3124,29 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Joseph_Flanders",
         "text": "Joseph L Flanders"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/11235376_Complexity_Management_Theory_Motivation_for_Ideological_Rigidity_and_Social_Conflict",
   "key": "/rg/article?title=11235376_Complexity_Management_Theory_Motivation_for_Ideological_Rigidity_and_Social_Conflict",
-  "cached": "2018-12-15T19:47:22.054Z",
+  "cached": "2018-12-20T23:45:06.047Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-68">{
+<t tx="leovue.2-68">{
   "pubdate": "2002/12/31",
   "title": "Higher-order factors of the Big Five predict conformity",
   "citations": "256",
-  "references": "",
-  "date": "",
-  "reads": "Article in Personality and Individual Differences 33:533-552December 2002 with 1,879 Reads",
+  "references": "93",
+  "reads": "1,881 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -2656,7 +3158,6 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     },
     {
@@ -2664,7 +3165,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2676,18 +3176,17 @@
   ],
   "url": "https://www.researchgate.net/publication/222301053_Higher-order_factors_of_the_Big_Five_predict_conformity",
   "key": "/rg/article?title=222301053_Higher-order_factors_of_the_Big_Five_predict_conformity",
-  "cached": "2018-12-15T19:47:23.622Z",
+  "cached": "2018-12-20T23:45:11.055Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-69">{
+<t tx="leovue.2-69">{
   "pubdate": "2002/12/31",
   "title": "Self-deception and impaired categorization of anomaly",
   "citations": "14",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Personality and Individual Differences 33:327-340December 2002 with 357 Reads",
+  "references": "85",
+  "reads": "357 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -2699,7 +3198,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2707,7 +3205,6 @@
         "href": "https://www.researchgate.net/profile/Erin_Driver-Linn",
         "text": "Erin Driver-Linn"
       },
-      "rating": "15.74",
       "institution": "Harvard University"
     },
     {
@@ -2715,24 +3212,22 @@
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "39.8",
       "institution": "University of Minnesota Twin Cities"
     }
   ],
   "url": "https://www.researchgate.net/publication/222408794_Self-deception_and_impaired_categorization_of_anomaly",
   "key": "/rg/article?title=222408794_Self-deception_and_impaired_categorization_of_anomaly",
-  "cached": "2018-12-15T19:47:25.366Z",
+  "cached": "2018-12-20T23:45:13.775Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-7">{
+<t tx="leovue.2-7">{
   "pubdate": "2016/04/26",
   "title": "From Dispositions to Goals to Ideology: Toward a Synthesis of Personality and Social Psychological Approaches to Political Orientation",
   "citations": "7",
   "references": "74",
-  "date": "2016-04",
-  "reads": "7,703 Reads",
+  "reads": "7,722 Reads",
   "journal": {
     "href": "journal/1751-9004_Social_and_Personality_Psychology_Compass",
     "text": "Social and Personality Psychology Compass"
@@ -2744,37 +3239,36 @@
         "href": "https://www.researchgate.net/profile/Xiaowen_Xu4",
         "text": "Xiaowen Xu"
       },
-      "rating": "College of William and Mary"
+      "institution": "College of William and Mary"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jason_Plaks",
         "text": "Jason E. Plaks"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/301698900_From_Dispositions_to_Goals_to_Ideology_Toward_a_Synthesis_of_Personality_and_Social_Psychological_Approaches_to_Political_Orientation",
   "key": "/rg/article?title=301698900_From_Dispositions_to_Goals_to_Ideology_Toward_a_Synthesis_of_Personality_and_Social_Psychological_Approaches_to_Political_Orientation",
-  "cached": "2018-12-15T19:43:42.372Z",
+  "cached": "2018-12-20T23:38:40.573Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-70">{
+<t tx="leovue.2-70">{
   "pubdate": "2002/12/31",
   "title": "Openness and extraversion are associated with reduced latent inhibition: Replication and commentary",
-  "citations": "104",
-  "references": "",
-  "date": "",
-  "reads": "Article in Personality and Individual Differences 33:1137-1147December 2002 with 1,052 Reads",
+  "citations": "105",
+  "references": "52",
+  "reads": "1,074 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -2786,7 +3280,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2794,7 +3287,6 @@
         "href": "https://www.researchgate.net/profile/Kathleen_W_Smith",
         "text": "Kathleen W. Smith"
       },
-      "rating": "18.63",
       "institution": "Toronto"
     },
     {
@@ -2802,29 +3294,27 @@
         "href": "https://www.researchgate.net/profile/Shelley_Carson",
         "text": "Shelley H Carson"
       },
-      "rating": "17.84",
       "institution": "Harvard University"
     }
   ],
   "url": "https://www.researchgate.net/publication/222686098_Openness_and_extraversion_are_associated_with_reduced_latent_inhibition_Replication_and_commentary",
   "key": "/rg/article?title=222686098_Openness_and_extraversion_are_associated_with_reduced_latent_inhibition_Replication_and_commentary",
-  "cached": "2018-12-15T19:47:27.136Z",
+  "cached": "2018-12-20T23:45:16.898Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-71">{
+<t tx="leovue.2-71">{
   "pubdate": "2002/01/01",
   "title": "Higher-order factors of the B5 predict conformity: Are there neuroses of health?",
   "citations": "57",
-  "references": "",
-  "date": "",
-  "reads": "Article in Personality and Individual Differences 33:53-552January 2002 with 25 Reads",
+  "references": [],
+  "reads": "25 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
   },
-  "abstract": [],
+  "abstract": "(No Abstract)",
   "authors": [
     {
       "name": {
@@ -2837,7 +3327,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.96",
       "institution": "University of Toronto"
     },
     {
@@ -2849,18 +3338,17 @@
   ],
   "url": "https://www.researchgate.net/publication/312705047_Higher-order_factors_of_the_B5_predict_conformity_Are_there_neuroses_of_health",
   "key": "/rg/article?title=312705047_Higher-order_factors_of_the_B5_predict_conformity_Are_there_neuroses_of_health",
-  "cached": "2018-12-15T19:43:17.498Z",
+  "cached": "2018-12-20T23:45:20.262Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-72">{
+<t tx="leovue.2-72">{
   "pubdate": "2001/12/31",
   "title": "Reliability and validity of alcohol-induced heart rate increase as a measure of sensitivity to the stimulant properties of alcohol",
   "citations": "88",
   "references": "72",
-  "date": "2001-12",
-  "reads": "185 Reads",
+  "reads": "187 Reads",
   "journal": {
     "href": "journal/0033-3158_Psychopharmacology",
     "text": "Psychopharmacology"
@@ -2872,36 +3360,35 @@
         "href": "https://www.researchgate.net/profile/Patricia_Conrod2",
         "text": "Patricia Conrod"
       },
-      "rating": "Université de Montréal"
+      "institution": "Université de Montréal"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "McGill University"
+      "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/11833470_Reliability_and_validity_of_alcohol-induced_heart_rate_increase_as_a_measure_of_sensitivity_to_the_stimulant_properties_of_alcohol",
   "key": "/rg/article?title=11833470_Reliability_and_validity_of_alcohol-induced_heart_rate_increase_as_a_measure_of_sensitivity_to_the_stimulant_properties_of_alcohol",
-  "cached": "2018-12-15T19:47:33.805Z",
+  "cached": "2018-12-20T23:45:28.224Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-73">{
+<t tx="leovue.2-73">{
   "pubdate": "2000/12/31",
   "title": "Metaphoric threat is more real than real threat",
   "citations": "19",
   "references": "4",
-  "date": "2000-12",
   "reads": "517 Reads",
   "journal": {
     "href": "journal/1469-1825_Behavioral_and_Brain_Sciences",
@@ -2914,30 +3401,29 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Colin_Deyoung",
         "text": "Colin G Deyoung"
       },
-      "rating": "University of Minnesota Twin Cities"
+      "institution": "University of Minnesota Twin Cities"
     }
   ],
   "url": "https://www.researchgate.net/publication/231880892_Metaphoric_threat_is_more_real_than_real_threat",
   "key": "/rg/article?title=231880892_Metaphoric_threat_is_more_real_than_real_threat",
-  "cached": "2018-12-15T19:47:35.344Z",
+  "cached": "2018-12-20T23:45:31.479Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-74">{
+<t tx="leovue.2-74">{
   "pubdate": "2000/12/31",
   "title": "Awareness may be existence as well as (higher-order) thought",
-  "citations": [],
+  "citations": "",
   "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Behavioral and Brain Sciences 23(02):214 - 215December 2000 with 392 Reads",
+  "reads": "400 Reads",
   "journal": {
     "href": "journal/1469-1825_Behavioral_and_Brain_Sciences",
     "text": "Behavioral and Brain Sciences"
@@ -2949,24 +3435,22 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/231931035_Awareness_may_be_existence_as_well_as_higher-order_thought",
   "key": "/rg/article?title=231931035_Awareness_may_be_existence_as_well_as_higher-order_thought",
-  "cached": "2018-12-15T19:47:36.423Z",
+  "cached": "2018-12-20T23:45:42.266Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-75">{
+<t tx="leovue.2-75">{
   "pubdate": "2000/12/30",
   "title": "Latent Inhibition and Openness to Experience in a high- achieving student population",
   "citations": "101",
-  "references": "",
-  "date": "",
-  "reads": "Article in Personality and Individual Differences 28:323-332December 2000 with 834 Reads",
+  "references": "31",
+  "reads": "850 Reads",
   "journal": {
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
@@ -2978,7 +3462,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -2986,24 +3469,22 @@
         "href": "https://www.researchgate.net/profile/Shelley_Carson",
         "text": "Shelley H Carson"
       },
-      "rating": "17.84",
       "institution": "Harvard University"
     }
   ],
   "url": "https://www.researchgate.net/publication/234825005_Latent_Inhibition_and_Openness_to_Experience_in_a_high-_achieving_student_population",
   "key": "/rg/article?title=234825005_Latent_Inhibition_and_Openness_to_Experience_in_a_high-_achieving_student_population",
-  "cached": "2018-12-15T19:47:38.524Z",
+  "cached": "2018-12-20T23:45:44.852Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-76">{
+<t tx="leovue.2-76">{
   "pubdate": "1999/12/31",
   "title": "Maps of Meaning: The architecture of belief (precis)",
   "citations": "6",
-  "references": "",
-  "date": "",
-  "reads": "Article (PDF Available) in Psycoloquy 10:1-31December 1999 with 3,442 Reads",
+  "references": "42",
+  "reads": "3,442 Reads",
   "journal": {
     "href": "journal/1055-0143_Psycoloquy",
     "text": "Psycoloquy"
@@ -3015,53 +3496,49 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/235336102_Maps_of_Meaning_The_architecture_of_belief_precis",
   "key": "/rg/article?title=235336102_Maps_of_Meaning_The_architecture_of_belief_precis",
-  "cached": "2018-12-15T19:47:40.728Z",
+  "cached": "2018-12-20T23:45:50.112Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-77">{
+<t tx="leovue.2-77">{
   "pubdate": "1999/01/01",
   "title": "Individual motivation for group aggression: Psychological, mythological and neuropsychological perspectives",
   "citations": "2",
   "references": "",
-  "date": "",
-  "reads": "ArticleJanuary 1999 with 142 Reads",
+  "reads": "150 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "",
+    "text": "(Book) Encyclopedia of Violence, Peace and Conflict"
   },
-  "abstract": [],
+  "abstract": "(No Abstract)",
   "authors": [
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/313655992_Individual_motivation_for_group_aggression_Psychological_mythological_and_neuropsychological_perspectives",
   "key": "/rg/article?title=313655992_Individual_motivation_for_group_aggression_Psychological_mythological_and_neuropsychological_perspectives",
-  "cached": "2018-12-15T19:47:42.287Z",
+  "cached": "2018-12-20T23:45:53.293Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-78">{
+<t tx="leovue.2-78">{
   "pubdate": "1997/12/31",
   "title": "Disinhibited Personality and Sensitivity to Alcohol Reinforcement",
   "citations": "41",
-  "references": "",
-  "date": "",
-  "reads": "Article in Alcoholism Clinical and Experimental Research 21(7):1320-32December 1997 with 117 Reads",
+  "references": "65",
+  "reads": "121 Reads",
   "journal": {
     "href": "journal/0145-6008_Alcoholism_Clinical_and_Experimental_Research",
     "text": "Alcoholism Clinical and Experimental Research"
@@ -3073,7 +3550,6 @@
         "href": "https://www.researchgate.net/profile/Patricia_Conrod2",
         "text": "Patricia Conrod"
       },
-      "rating": "45.86",
       "institution": "Université de Montréal"
     },
     {
@@ -3081,7 +3557,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -3089,24 +3564,22 @@
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "45.31",
       "institution": "McGill University"
     }
   ],
   "url": "https://www.researchgate.net/publication/13882172_Disinhibited_Personality_and_Sensitivity_to_Alcohol_Reinforcement",
   "key": "/rg/article?title=13882172_Disinhibited_Personality_and_Sensitivity_to_Alcohol_Reinforcement",
-  "cached": "2018-12-15T19:48:03.111Z",
+  "cached": "2018-12-20T23:45:55.734Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-79">{
+<t tx="leovue.2-79">{
   "pubdate": "1997/12/31",
   "title": "Biphasic Effects of Alcohol on Heart Rate Are Influenced by Alcoholic Family History and Rate of Alcohol Ingestion",
   "citations": "84",
-  "references": "",
-  "date": "",
-  "reads": "Article in Alcoholism Clinical and Experimental Research 21(1):140-9December 1997 with 71 Reads",
+  "references": "84",
+  "reads": "75 Reads",
   "journal": {
     "href": "journal/0145-6008_Alcoholism_Clinical_and_Experimental_Research",
     "text": "Alcoholism Clinical and Experimental Research"
@@ -3118,7 +3591,6 @@
         "href": "https://www.researchgate.net/profile/Patricia_Conrod2",
         "text": "Patricia Conrod"
       },
-      "rating": "45.86",
       "institution": "Université de Montréal"
     },
     {
@@ -3126,7 +3598,6 @@
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "40.94",
       "institution": "University of Toronto"
     },
     {
@@ -3134,7 +3605,6 @@
         "href": "https://www.researchgate.net/profile/Robert_Pihl",
         "text": "Robert O Pihl"
       },
-      "rating": "45.31",
       "institution": "McGill University"
     },
     {
@@ -3146,18 +3616,17 @@
   ],
   "url": "https://www.researchgate.net/publication/14165495_Biphasic_Effects_of_Alcohol_on_Heart_Rate_Are_Influenced_by_Alcoholic_Family_History_and_Rate_of_Alcohol_Ingestion",
   "key": "/rg/article?title=14165495_Biphasic_Effects_of_Alcohol_on_Heart_Rate_Are_Influenced_by_Alcoholic_Family_History_and_Rate_of_Alcohol_Ingestion",
-  "cached": "2018-12-15T19:48:05.475Z",
+  "cached": "2018-12-20T23:45:58.076Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-8">{
+<t tx="leovue.2-8">{
   "pubdate": "2015/12/31",
   "title": "Openness to Experience and Intellect Differentially Predict Creative Achievement in the Arts and Sciences: Openness, Intellect, and Creativity",
   "citations": "89",
   "references": "83",
-  "date": "2015-12",
-  "reads": "5,579 Reads",
+  "reads": "5,644 Reads",
   "journal": {
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
@@ -3195,17 +3664,423 @@
   ],
   "url": "https://www.researchgate.net/publication/269286890_Openness_to_Experience_and_Intellect_Differentially_Predict_Creative_Achievement_in_the_Arts_and_Sciences_Openness_Intellect_and_Creativity",
   "key": "/rg/article?title=269286890_Openness_to_Experience_and_Intellect_Differentially_Predict_Creative_Achievement_in_the_Arts_and_Sciences_Openness_Intellect_and_Creativity",
-  "cached": "2018-12-15T19:43:45.134Z",
+  "cached": "2018-12-20T23:38:46.080Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.1-9">{
+<t tx="leovue.2-80">{
+  "pubdate": "1996/12/31",
+  "title": "Ethanol-Induced Change in Cardiac and Endogenous Opiate Function and Risk for Alcoholism",
+  "citations": "65",
+  "references": "65",
+  "reads": "182 Reads",
+  "journal": {
+    "href": "journal/0145-6008_Alcoholism_Clinical_and_Experimental_Research",
+    "text": "Alcoholism Clinical and Experimental Research"
+  },
+  "abstract": "Susceptibility to alcoholism varies with age, gender, and familial background. Youthful nonalcoholic males with multigenerational family histories of male alcoholism seem at particular risk. Previous investigations suggest that such males are characterized by abnormal psychophysiological response, while sober and alcohol-intoxicated; additional recent studies indicate that the endogenous opiate systems are involved in mediating ethanol reinforcement and modulating intake. We first compared cardiac response to alcohol administration among young (mean = 22.8 years), nonalcoholic men and women with multigenerational, unigenerational, and negative family histories of alcohol dependence and abuse. Then, we compared the ethanol-induced cardiac response of the males in these three groups to that of currently alcohol-dependent older males and age-matched nonalcoholic male controls. Finally, we examined ethanol-induced change in plasma beta-endorphin and cortisol levels among a subset of the nonalcoholic males, divided into those with high and low levels of postethanol administration heart-rate increase. Nonalcoholic males with multigenerational family histories of male alcoholism were characterized by significantly higher [t(301) = 5.70, p &lt; 0.0001, Cohen's d = 0.73] levels of ethanol-induced heart-rate increase than nonalcoholics from all other comparison groups. The magnitude of their increase matched that of current male alcohol-dependents. Nonalcoholic males with high levels of ethanol-induced heart-rate increase also produced significantly more plasma beta-endorphin after consuming alcohol. Peak production of beta-endorphin was highly correlated (r = 0.861, p &lt; 0.001) with magnitude of heart-rate increase. A subset of those at risk for alcoholism may be characterized by sensitivity to ethanol-induced reward, marked by heightened ethanol-induced, heart-rate increase, mediated by ethanol stimulation of endogenous opiate production. This subset might contain those who, once alcoholic, would differentially benefit from treatment with opiate antagonists.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/C_Gianoulakis",
+        "text": "C. Gianoulakis"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Patricia_Conrod2",
+        "text": "Patricia Conrod"
+      },
+      "institution": "Université de Montréal"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14222330_Ethanol-Induced_Change_in_Cardiac_and_Endogenous_Opiate_Function_and_Risk_for_Alcoholism",
+  "key": "/rg/article?title=14222330_Ethanol-Induced_Change_in_Cardiac_and_Endogenous_Opiate_Function_and_Risk_for_Alcoholism",
+  "cached": "2018-12-20T23:46:01.189Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-81">{
+  "pubdate": "1996/12/31",
+  "title": "Characteristics and Putative Mechanisms in Boys at Risk for Drug Abuse and Aggression",
+  "citations": "7",
+  "references": "72",
+  "reads": "128 Reads",
+  "journal": {
+    "href": "journal/0077-8923_Annals_of_the_New_York_Academy_of_Sciences",
+    "text": "Annals of the New York Academy of Sciences"
+  },
+  "abstract": "",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14351045_Characteristics_and_Putative_Mechanisms_in_Boys_at_Risk_for_Drug_Abuse_and_Aggression",
+  "key": "/rg/article?title=14351045_Characteristics_and_Putative_Mechanisms_in_Boys_at_Risk_for_Drug_Abuse_and_Aggression",
+  "cached": "2018-12-20T23:46:03.187Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-82">{
+  "pubdate": "1996/12/31",
+  "title": "Fighting as a Function of Personality and Neuropsychological Measures",
+  "citations": "1",
+  "references": "9",
+  "reads": "122 Reads",
+  "journal": {
+    "href": "journal/0077-8923_Annals_of_the_New_York_Academy_of_Sciences",
+    "text": "Annals of the New York Academy of Sciences"
+  },
+  "abstract": "",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2013758150_KRISTIN_E_VICKERS",
+        "text": "KRISTIN E. VICKERS"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2032963933_CHRISTOPHER_D_HORNIG",
+        "text": "CHRISTOPHER D. HORNIG"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/240962030_Fighting_as_a_Function_of_Personality_and_Neuropsychological_Measures",
+  "key": "/rg/article?title=240962030_Fighting_as_a_Function_of_Personality_and_Neuropsychological_Measures",
+  "cached": "2018-12-20T23:46:07.702Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-83">{
+  "pubdate": "1995/12/31",
+  "title": "Alcoholism: The role of different motivational systems",
+  "citations": "86",
+  "references": "231",
+  "reads": "422 Reads",
+  "journal": {
+    "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+    "text": "Journal of psychiatry &amp;neuroscience: JPN"
+  },
+  "abstract": "Individuals use and misuse alcohol (and other drugs) because of the pharmacologically mediated effects these substances have on the operation of 4 psychobiological systems, mediating response to motivationally relevant unconditioned and conditioned stimuli. These 4 systems have unique neuroanatomical structure, biochemical modes of operation, association with affect, behavior and cognition, and responsiveness to drugs of abuse. Individual variation in the operation of these systems determines individual susceptibility to initiation and maintenance of drug use and abuse. Sources of such variation differ, in a vitally important fashion, in various specific populations of individuals at heightened risk for drug abuse. Nonalcoholic sons of male alcoholics, with multigenerational family histories of male alcoholism, appear to be at heightened risk for the development of alcohol abuse because alcohol eliminates their heightened response to threat, and because they are hypersensitive to ethanol's psychomotor stimulant effects. Anxiety-sensitive individuals also appear attracted to alcohol for its anxiolytic properties. Many other important sources of idiosyncratic variability exist. Detailed analysis of such sources may lead to the development of more effective prevention and treatment programs.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14673915_Alcoholism_The_role_of_different_motivational_systems",
+  "key": "/rg/article?title=14673915_Alcoholism_The_role_of_different_motivational_systems",
+  "cached": "2018-12-20T23:46:13.310Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-84">{
+  "pubdate": "1995/12/31",
+  "title": "Provocation, Acute Alcohol Intoxication, Cognitive Performance, and Aggression",
+  "citations": "102",
+  "references": "",
+  "reads": "255 Reads",
+  "journal": {
+    "href": "journal/0021-843X_Journal_of_Abnormal_Psychology",
+    "text": "Journal of Abnormal Psychology"
+  },
+  "abstract": "This study investigated the relationships between provocation, acute alcohol intoxication, impaired frontal-lobe function, and aggressive behavior. The authors ranked 114 men according to their performance on two neuropsychological tests associated with frontal-lobe function. Forty-eight men (24 with scores in the upper and 24 with scores in the lower performance quartiles) participated in the full study. Half completed and aggression task while intoxicated, the remainder while sober. Aggression was defined as shock intensity delivered to a sham opponent. Shock intensity significantly increased as a main effect of provocation, alcohol intoxication, and lower cognitive performance. Furthermore, provocation interacted significantly with test performance such that individuals in the lower cognitive performance quartile responded to increased provocation with heightened aggression.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Mark_Lau2",
+        "text": "Mark A Lau"
+      },
+      "institution": "University of British Columbia - Vancouver"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/15302270_Provocation_Acute_Alcohol_Intoxication_Cognitive_Performance_and_Aggression",
+  "key": "/rg/article?title=15302270_Provocation_Acute_Alcohol_Intoxication_Cognitive_Performance_and_Aggression",
+  "cached": "2018-12-20T23:46:16.558Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-85">{
+  "pubdate": "1995/12/31",
+  "title": "Drugs and aggression: Correlations, crime and human manipulative studies and some proposed mechanisms",
+  "citations": "58",
+  "references": "42",
+  "reads": "189 Reads",
+  "journal": {
+    "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+    "text": "Journal of psychiatry &amp;neuroscience: JPN"
+  },
+  "abstract": "Violence and drugs seem to mix readily. In this paper, relevant correlational studies are briefly reviewed and methodological issues are discussed. With a focus on alcohol, facts pointing to some type of causal relationship are presented both from crime and laboratory manipulative studies. Dose and rate-dependent anxiolytic, psychomotor stimulant and alteration in inhibitory and problem-solving cognitive functions are each in turn seen as precipatory to aggression. Drugs other than alcohol which interact with these systems are also discussed.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/15496388_Drugs_and_aggression_Correlations_crime_and_human_manipulative_studies_and_some_proposed_mechanisms",
+  "key": "/rg/article?title=15496388_Drugs_and_aggression_Correlations_crime_and_human_manipulative_studies_and_some_proposed_mechanisms",
+  "cached": "2018-12-20T23:46:20.378Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-86">{
+  "pubdate": "1995/12/31",
+  "title": "Anxiety sensitivity and self-reported alcohol consumption rates in university women",
+  "citations": "138",
+  "references": "25",
+  "reads": "145 Reads",
+  "journal": {
+    "href": "journal/0887-6185_Journal_of_Anxiety_Disorders",
+    "text": "Journal of Anxiety Disorders"
+  },
+  "abstract": "A growing literature suggests a significant relationship between “anxiety sensitivity” (AS; fear of anxiety symptoms) and alcohol use/abuse. The present study examined the relationship between levels of AS and self-reported rates of weekly alcohol consumption and frequency of “excessive drinking” (i.e., number of times legally intoxicated per year). Subjects were 30 nonalcoholic university women, divided into three AS groups (high, moderate, and low) based upon scores on the Anxiety Sensitivity Index (ASI). High AS women reported consuming significantly more alcoholic beverages on a weekly basis and drinking to excess more times per year than low AS controls. ASI scores were found to be significantly positively correlated with both measures of self-reported alcohol consumption. The results support the hypothesis of a positive relationship between AS levels in young adult women and extent of excessive alcohol use.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Sherry_Stewart",
+        "text": "Sherry H Stewart"
+      },
+      "institution": "Dalhousie University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/223073010_Anxiety_sensitivity_and_self-reported_alcohol_consumption_rates_in_university_women",
+  "key": "/rg/article?title=223073010_Anxiety_sensitivity_and_self-reported_alcohol_consumption_rates_in_university_women",
+  "cached": "2018-12-20T23:46:23.726Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-87">{
+  "pubdate": "1994/12/31",
+  "title": "Cardiovascular reactivity as a predictor of alcohol consumption in a taste test situation",
+  "citations": "18",
+  "references": "19",
+  "reads": "92 Reads",
+  "journal": {
+    "href": "journal/0021-9762_Journal_of_Clinical_Psychology",
+    "text": "Journal of Clinical Psychology"
+  },
+  "abstract": "The existence of a relationship between cardiovascular reactivity to signalled shock and alcohol consumption can be inferred from studies of males at increased familial risk for alcoholism. The present study examined two groups of nonalcoholic men--those with multigenerational histories (MGH) of alcoholism and family--history negative (FH-) controls-to determine whether reactivity was related to voluntary ethanol consumption in the context of a beverage taste test. High reactors, a significant majority of whom were MGH males, drank significantly more vodka and orange juice, rum and coke, and orange juice when asked to rate the flavor of three alcoholic and two nonalcoholic drinks. High reactors also consumed more alcohol on a weekly basis according to their self-report.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/40092640_Peter_R_Giancola",
+        "text": "Peter R. Giancola"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/15185499_Cardiovascular_reactivity_as_a_predictor_of_alcohol_consumption_in_a_taste_test_situation",
+  "key": "/rg/article?title=15185499_Cardiovascular_reactivity_as_a_predictor_of_alcohol_consumption_in_a_taste_test_situation",
+  "cached": "2018-12-20T23:46:26.204Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-88">{
+  "pubdate": "1993/12/31",
+  "title": "A biosocial model of the alcohol-aggression relationship",
+  "citations": "121",
+  "references": [],
+  "reads": "923 Reads",
+  "journal": {
+    "href": "journal/0363-468X_Journal_of_studies_on_alcohol_Supplement",
+    "text": "Journal of studies on alcohol. Supplement"
+  },
+  "abstract": "Four of alcohol's dose- and rate-dependent pharmacological properties may increase the likelihood of human aggression. As an anxiolytic, alcohol is capable of reducing the inhibitory effect of fear on manifestation of aggressive behavior. As a psychomotor stimulant, alcohol can potentiate aggressive behavior, once evoked, or lower the threshold for such evocation. Alcohol-related disruption of certain higher order cognitive functions may reduce the inhibitory control generally exercised by previously established knowledge and decrease ability to plan in the face of threat or punishment. Finally, alcohol's ability to increase pain sensitivity may increase the likelihood of defensive aggression. Discussion of the nature and relevance of these pharmacological properties is structured according to a heuristic and synthetic schema, predicated upon consideration of an inhibitory neuropsychological structure--the individually and culturally determined general expectancy set.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Mark_Lau2",
+        "text": "Mark A Lau"
+      },
+      "institution": "University of British Columbia - Vancouver"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14788263_A_biosocial_model_of_the_alcohol-aggression_relationship",
+  "key": "/rg/article?title=14788263_A_biosocial_model_of_the_alcohol-aggression_relationship",
+  "cached": "2018-12-20T23:46:31.750Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-89">{
+  "pubdate": "1993/12/31",
+  "title": "Heart-rate reactivity and alcohol consumption among sons of alcoholics and sons of non-alcoholics",
+  "citations": "55",
+  "references": "68",
+  "reads": "142 Reads",
+  "journal": {
+    "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+    "text": "Journal of psychiatry &amp;neuroscience: JPN"
+  },
+  "abstract": "Recent studies have demonstrated that sons of male alcoholics with multigenerational family histories of male alcoholism are characterized by sober heart-rate hyperreactivity to aversive stimuli, susceptibility to alcohol-induced dampening of that hyperreactivity and by increased resting heart rate while intoxicated. Regression analyses indicate that the magnitude of alcohol-induced change in resting and reactive cardiac response is significantly and powerfully associated with the degree of self-reported voluntary alcohol consumption among 85 non-alcoholic males who are either lacking or who have moderate or extensive family histories of male alcoholism. It appears that heightened sensitivity to alcohol-induced increase in resting and decrease in reactive heart rate might mark or underlie familial risk for developing alcoholism.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jean_Seguin",
+        "text": "Jean Richard Séguin"
+      },
+      "institution": "Université de Montréal"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Sherry_Stewart",
+        "text": "Sherry H Stewart"
+      },
+      "institution": "Dalhousie University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14825060_Heart-rate_reactivity_and_alcohol_consumption_among_sons_of_alcoholics_and_sons_of_non-alcoholics",
+  "key": "/rg/article?title=14825060_Heart-rate_reactivity_and_alcohol_consumption_among_sons_of_alcoholics_and_sons_of_non-alcoholics",
+  "cached": "2018-12-20T23:46:41.850Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-9">{
   "pubdate": "2015/12/24",
   "title": "Quantifying the scientific output of new researchers using the zp-index",
   "citations": "2",
   "references": "37",
-  "date": "2015-12",
   "reads": "761 Reads",
   "journal": {
     "href": "journal/0138-9130_Scientometrics",
@@ -3218,23 +4093,423 @@
         "href": "https://www.researchgate.net/profile/Christopher_Zou",
         "text": "Christopher Zou"
       },
-      "rating": "Altus Assessments"
+      "institution": "Altus Assessments"
     },
     {
       "name": {
         "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
         "text": "Jordan B Peterson"
       },
-      "rating": "University of Toronto"
+      "institution": "University of Toronto"
     }
   ],
   "url": "https://www.researchgate.net/publication/288074226_Quantifying_the_scientific_output_of_new_researchers_using_the_zp-index",
   "key": "/rg/article?title=288074226_Quantifying_the_scientific_output_of_new_researchers_using_the_zp-index",
-  "cached": "2018-12-15T19:43:46.830Z",
+  "cached": "2018-12-20T23:38:55.012Z",
   "params": {
     "template": "rgarticle"
   }
 }</t>
-<t tx="leovue.20181204092754_1"></t>
+<t tx="leovue.2-90">{
+  "pubdate": "1993/12/31",
+  "title": "Risk for alcoholism, antisocial behavior, and response perseveration",
+  "citations": "37",
+  "references": "38",
+  "reads": "125 Reads",
+  "journal": {
+    "href": "journal/0021-9762_Journal_of_Clinical_Psychology",
+    "text": "Journal of Clinical Psychology"
+  },
+  "abstract": "Numerous studies have demonstrated the existence of an association between alcoholism and antisocial personality (ASP). The present study tested two hypotheses: First, that nonalcoholic men with a multigenerational familial history (MGH) of alcoholism would play more cards on a card task that has been shown previously to differentiate antisocial populations from normals and, second, that MGH subjects would display more evidence of ASP on two personality questionnaires: The Self-Report Psychopathy scale and the Socialization scale of the California Psychological Inventory. A total of 28 subjects (14 MGH and 14 family history negative for alcoholism [FH-]) were employed in this study. MGH subjects played significantly more cards during the card task than did FH- subjects. However, the two groups did not differ on the ASP questionnaires. The possibility that a subtle frontal-lobe deficit, rather than ASP per se, underlies the poorer performance of the MGH males is discussed.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/40092640_Peter_R_Giancola",
+        "text": "Peter R. Giancola"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/14884346_Risk_for_alcoholism_antisocial_behavior_and_response_perseveration",
+  "key": "/rg/article?title=14884346_Risk_for_alcoholism_antisocial_behavior_and_response_perseveration",
+  "cached": "2018-12-20T23:46:47.206Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-91">{
+  "pubdate": "1993/12/31",
+  "title": "Alcohol, serotonin and aggression",
+  "citations": "3",
+  "references": "",
+  "reads": "623 Reads",
+  "journal": {
+    "href": "journal/0090-838X_Alcohol_health_and_research_world",
+    "text": "Alcohol health and research world"
+  },
+  "abstract": "Deficiencies in the brain chemical serotonin are associated with increased tendency to violence and victimization. Alcohol consumption interacts with serotonin levels to increase the likelihood of aggression.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/242760361_Alcohol_serotonin_and_aggression",
+  "key": "/rg/article?title=242760361_Alcohol_serotonin_and_aggression",
+  "cached": "2018-12-20T23:47:05.702Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-92">{
+  "pubdate": "1993/12/31",
+  "title": "Social variability, alcohol consumption, and the inherited predisposition to alcoholism",
+  "citations": "",
+  "references": "",
+  "reads": "58 Reads",
+  "journal": {
+    "href": "journal/0091-3057_Pharmacology_Biochemistry_and_Behavior",
+    "text": "Pharmacology Biochemistry and Behavior"
+  },
+  "abstract": "This study examines psychological and demographic differences between (other) drug-using and non-drug-using alcoholic women and two contrast groups of controls in a population based nonclinical sample of women. Respondents varied in extent of drug use and were categorized into one of five groups ranging from drug abusing/dependent alcoholics to controls. As in previous studies on males, higher levels of drug involvement were associated with higher rates of antisocial behavior, depression, and alcohol-related problems, and were inversely related to level of mental health, adaptive functioning , and income. ALCOHOL EXPECTANCIES AS MEDIATORS OF OTHER BIOPSYCHOSOCIAL RISK FACTORS. Paul Greenbaum, Jack Darkes, Bruce Rather and Mark Goldman. University of South Florida, Tampa, FL. Statistical modeling techniques and a longitudinal design were used to examine the hypothesis that alcohol expectancies serve as a central mediating process in alcohol use. In a sample of entering college students (N = 107), alcohol expectancies were found to mediate significant variance in the influence of several known antecedents of drinking upon drinking one year later. Expectancies also accounted for significant unique variance in drinking at the end of one year (p &lt; .01) beyond that accounted for by initial drinking. Results support the hypothesis that antecedent risk factors may influence drinking in part through alcohol expectancies stored in memory which subsequently exert proximal influence on drinking decision.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/33759705_D_LEMARQUAND",
+        "text": "D LEMARQUAND"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/2020374167_RM_Roth",
+        "text": "R.M. Roth"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/247168273_Social_variability_alcohol_consumption_and_the_inherited_predisposition_to_alcoholism",
+  "key": "/rg/article?title=247168273_Social_variability_alcohol_consumption_and_the_inherited_predisposition_to_alcoholism",
+  "cached": "2018-12-20T23:47:11.739Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-93">{
+  "pubdate": "1992/12/31",
+  "title": "Factor structure and correlates of the Tridimensional Personality Questionnaire",
+  "citations": "60",
+  "references": "",
+  "reads": "110 Reads",
+  "journal": {
+    "href": "journal/0096-882X_Journal_of_studies_on_alcohol",
+    "text": "Journal of studies on alcohol"
+  },
+  "abstract": "Cloninger has proposed a model linking personality characteristics to patterns of responses to various stimuli, including alcohol. The model also uses personality characteristics to divide alcoholics into two types. In order to assess the relevant aspects of personality, the Tridimensional Personality Questionnaire (TPQ) was developed. This study examined the factor structure and correlates of the questionnaire to shed light on its validity. A confirmatory factor analysis of the TPQ failed to replicate the three proposed factors of novelty seeking, harm avoidance and reward dependence. Alternative models also failed to fit the data. The three factors were correlated with other personality measures theoretically linked to drinking (MacAndrew, Socialization and Sensation-Seeking scales), quantity and frequency measures of alcohol use and a measure of alcohol abuse (the Michigan Alcoholism Screening Test). The pattern of correlations provides evidence for the convergent validity of the TPQ. Nevertheless, the failure to replicate the factor structure suggests that the scale requires further revision before the model can be adequately tested.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Mitch_Earleywine",
+        "text": "Mitch Earleywine"
+      },
+      "institution": "University at Albany, The State University of New York"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_R_Finn",
+        "text": "Peter R. Finn"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/21571633_Factor_structure_and_correlates_of_the_Tridimensional_Personality_Questionnaire",
+  "key": "/rg/article?title=21571633_Factor_structure_and_correlates_of_the_Tridimensional_Personality_Questionnaire",
+  "cached": "2018-12-20T23:47:15.879Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-94">{
+  "pubdate": "1992/12/31",
+  "title": "Cognitive Dysfunction and the Inherited Predisposition to Alcoholism:",
+  "citations": "104",
+  "references": "",
+  "reads": "204 Reads",
+  "journal": {
+    "href": "journal/0096-882X_Journal_of_studies_on_alcohol",
+    "text": "Journal of studies on alcohol"
+  },
+  "abstract": "A battery of neuropsychological tests was administered to 22 nonalcoholic sons of male alcoholics (SOMAs) from families with extensive histories of male alcoholism and to 22 nonalcoholic controls with no history of familial alcoholism. In each group 11 subjects were tested while sober and 11 were tested while alcohol-intoxicated. Analyses of the results of this battery suggested (1) that SOMAs may be characterized by comparative decrements in those cognitive functions associated with the organization of novel information, dependent in theory upon the prefrontal cortex; and (2) that alcohol detrimentally affects delayed memory, associated with the temporal cortex, equally across groups. Of these SOMAs 20 had previously participated in one of two studies that demonstrated their cardiovascular hyper-reactivity to threat/stress and their increased sensitivity to the reactivity-dampening effects of alcohol intoxication. Correlational analyses of the results of the present and previous studies demonstrated the existence of a highly significant relationship between cognitive impairment, cardiovascular hyper-reactivity and susceptibility to the reactivity-dampening effects of alcohol.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_R_Finn",
+        "text": "Peter R. Finn"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/21594394_Cognitive_Dysfunction_and_the_Inherited_Predisposition_to_Alcoholism",
+  "key": "/rg/article?title=21594394_Cognitive_Dysfunction_and_the_Inherited_Predisposition_to_Alcoholism",
+  "cached": "2018-12-20T23:47:20.572Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-95">{
+  "pubdate": "1992/12/31",
+  "title": "Etiology",
+  "citations": "4",
+  "references": "",
+  "reads": "186 Reads",
+  "journal": {
+     "href": "",
+     "text": "(Book) Annual Review of Addictions Research and Treatment"
+  },
+  "abstract": "Many diverse processes terminate in addiction.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/242829160_Etiology",
+  "key": "/rg/article?title=242829160_Etiology",
+  "cached": "2018-12-20T23:47:24.201Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-96">{
+  "pubdate": "1991/12/31",
+  "title": "A biobehavioural model for the inherited predisposition to alcoholism",
+  "citations": "12",
+  "references": "18",
+  "reads": "135 Reads",
+  "journal": {
+    "href": "journal/1358-6173_Alcohol_and_alcoholism_Oxford_Oxfordshire_Supplement",
+    "text": "Alcohol and alcoholism (Oxford, Oxfordshire). Supplement"
+  },
+  "abstract": "Sons of male alcoholics are at increased risk for the development of alcoholism, and are characterized as well by other traits, that may serve as markers for the alcoholic predisposition. These other traits include mild cognitive abnormalities, cardiac hyper-reactivity to signalled electric shock, susceptibility to alcohol-intoxication elimination of that hyper-reactivity, and increased baseline heart-rate while drinking.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/21309516_A_biobehavioural_model_for_the_inherited_predisposition_to_alcoholism",
+  "key": "/rg/article?title=21309516_A_biobehavioural_model_for_the_inherited_predisposition_to_alcoholism",
+  "cached": "2018-12-20T23:47:27.544Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-97">{
+  "pubdate": "1991/12/31",
+  "title": "The Tridimensional Personality Questionnaire and the inherited risk for alcoholism",
+  "citations": "19",
+  "references": "5",
+  "reads": "79 Reads",
+  "journal": {
+    "href": "journal/0306-4603_Addictive_Behaviors",
+    "text": "Addictive Behaviors"
+  },
+  "abstract": "The Tridimensional Personality Questionnaire (TPQ) (Cloninger, 1987c) was administered to four groups of young men. The first group was composed of nonalcoholic sons of male alcoholics with extensive multigenerational family histories of male alcohol abuse. The second was made up of nonalcoholic men with alcoholic fathers. The third group was composed of nonalcoholic men with no family history of alcoholism, taken from the general population. The fourth group contained male undergraduates with no family history of alcoholism. There were no significant differences between the mean scores obtained by members of all four groups on the three major subscales of the TPQ.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/43775285_Daniel_Weiner",
+        "text": "Daniel Weiner"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/56491612_Peter_R_Finn",
+        "text": "Peter R. Finn"
+      }
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/21353541_The_Tridimensional_Personality_Questionnaire_and_the_inherited_risk_for_alcoholism",
+  "key": "/rg/article?title=21353541_The_Tridimensional_Personality_Questionnaire_and_the_inherited_risk_for_alcoholism",
+  "cached": "2018-12-20T23:47:31.827Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-98">{
+  "pubdate": "1991/12/30",
+  "title": "Attention-deficit hyperactivity disorder, childhood conduct disorder, and alcoholism: Is there an association?",
+  "citations": "33",
+  "references": "",
+  "reads": "192 Reads",
+  "journal": {
+    "href": "journal/0090-838X_Alcohol_health_and_research_world",
+    "text": "Alcohol health and research world"
+  },
+  "abstract": "What are the connections between attention-deficit hyperactivity disorder, childhood conduct disorder, and the development later in life of alcoholism or other drug abuse? Can we differentiate children who may develop problems with alcohol or other drugs later in life from those who may not?",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/234081762_Attention-deficit_hyperactivity_disorder_childhood_conduct_disorder_and_alcoholism_Is_there_an_association",
+  "key": "/rg/article?title=234081762_Attention-deficit_hyperactivity_disorder_childhood_conduct_disorder_and_alcoholism_Is_there_an_association",
+  "cached": "2018-12-20T23:47:38.465Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.2-99">{
+  "pubdate": "1990/12/31",
+  "title": "Acute alcohol intoxication and cognitive functioning",
+  "citations": "167",
+  "references": "",
+  "reads": "5,163 Reads",
+  "journal": {
+    "href": "journal/0096-882X_Journal_of_studies_on_alcohol",
+    "text": "Journal of studies on alcohol"
+  },
+  "abstract": "Acute alcohol intoxication produces changes in the cognitive functioning of normal individuals. These changes appear similar prima facie to those exhibited by individuals who sustain prefrontal lobe damage during adulthood. In order to test the validity of this observation, and to control for the confounding effects of expectancy, 72 male subjects were administered a battery of neuropsychological tests, within the context of a balanced-placebo design. Each subject received one of three widely different doses of alcohol. Analysis of the results of the cognitive test battery demonstrated that a high dose of alcohol detrimentally affects a number of functions associated with the prefrontal and temporal lobes, including planning, verbal fluency, memory and complex motor control. Expectancy does not appear to play a significant role in determining this effect. The implications of this pattern of impairment are analyzed and discussed.",
+  "authors": [
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+        "text": "Jordan B Peterson"
+      },
+      "institution": "University of Toronto"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/scientific-contributions/6570170_Rothfleisch_JM",
+        "text": "Rothfleisch JM"
+      }
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Philip_Zelazo2",
+        "text": "Philip Zelazo"
+      },
+      "institution": "University of Minnesota Twin Cities"
+    },
+    {
+      "name": {
+        "href": "https://www.researchgate.net/profile/Robert_Pihl",
+        "text": "Robert O Pihl"
+      },
+      "institution": "McGill University"
+    }
+  ],
+  "url": "https://www.researchgate.net/publication/20848433_Acute_alcohol_intoxication_and_cognitive_functioning",
+  "key": "/rg/article?title=20848433_Acute_alcohol_intoxication_and_cognitive_functioning",
+  "cached": "2018-12-20T23:47:41.829Z",
+  "params": {
+    "template": "rgarticle"
+  }
+}</t>
+<t tx="leovue.20181204092754_1">@language html
+
+&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="leovue.20181220072125_1"></t>
 </tnodes>
 </leo_file>
