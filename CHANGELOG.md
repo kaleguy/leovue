@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix Accordion mode
 - @tab
 
+## [1.18.1] - 2018-12-28
+### Changed
+- fix to summary-table sort
+
+
 ## [1.18.0] - 2018-12-28
 ### Added
 - Export to JSON and LEO format

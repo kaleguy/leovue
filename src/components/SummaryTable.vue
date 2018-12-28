@@ -6,8 +6,14 @@
       sort-by="pubdate"
       sort-order="desc"
     >
-      <table-column v-for="col in colKeys" v-bind:key="col.title" v-bind="col"></table-column>
+      <table-column v-for="col in colKeys"
+                    :key="col.title"
+                    v-bind="col"></table-column>
     </table-component>
+    <h1>wut</h1>
+    <div v-for="col in colKeys"
+                  :key="col.title"
+                  v-bind="col"></div>
   </div>
 </template>
 
@@ -34,6 +40,7 @@
           const newCol = {}
           newCol.show = col.show.replace(/\./g, '~')
           newCol.label = col.label
+          newCol['data-type'] = col.dataType
           cKeys.push(newCol)
         })
         return cKeys

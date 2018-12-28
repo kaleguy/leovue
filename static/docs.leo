@@ -1424,7 +1424,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.18.0
+LeoVue is currently at version 1.18.1
 
 LeoVue 1.18.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -1466,7 +1466,8 @@ If you view this node in Leo, you'll see that in this example all of the data an
           { firstName: 'John', lastName: 'Lennon', instrument: 'Guitar', birthday: '04/10/1940', songs: 72 },
           { firstName: 'Paul', lastName: 'McCartney', instrument: 'Bass', birthday: '18/06/1942', songs: 70 },
           { firstName: 'George', lastName: 'Harrison', instrument: 'Guitar', birthday: '25/02/1943', songs: 22 },
-          { firstName: 'Ringo', lastName: 'Starr', instrument: 'Drums', birthday: '07/07/1940', songs: 2 },
+          { firstName: 'Foo', lastName: 'Bar', instrument: 'Kazoo', birthday: '07/07/1940', songs: 1 },
+          { firstName: 'Mr', lastName: 'X', instrument: 'Wood Blocks', birthday: '07/07/1940', songs: 100 },
      ]"
      sort-by="songs"
      sort-order="asc"
@@ -2591,7 +2592,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.18.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.18.1 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

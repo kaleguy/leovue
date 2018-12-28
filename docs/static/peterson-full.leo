@@ -261,53 +261,58 @@
 <v t="leovue.2-27"></v>
 </v>
 </v>
+<v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
+<v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
 </v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20181220213416.1">{
-"pubdate": "2019/01/01",
-"title": "Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment",
-"citations": "",
-"references": "33",
-"reads": "852",
-"journal": {
-  "href": "",
-  "text": "(Book) Advances in Human Factors in Wearable Technologies and Game Design"
-},
-"abstract": "We propose an interpersonal biofeedback technology which uses music-like stimuli to convey a user’s physiological information to another observer. It is argued that this interpersonal biofeedback may facilitate empathy and interpersonal entrainment. We argue that music is an optimal carrier for biofeedback because it naturally regulates psychophysiology, is cross-modally associated with emotion, and can be attended to peripherally. We propose a research study to investigate the effects of interpersonal biofeedback on emotional mindreading.",
-"authors": [
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/2144193706_John_M_Tennant",
-        "text": "John M. Tennant"
-      },
-      "institution": ""
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/2144186755_Mihnea_C_Moldoveanu",
-        "text": "Mihnea C. Moldoveanu"
-      },
-      "institution": ""
-    },    
-    {
-      "name": {
-        "href": "https://www.researchgate.net/scientific-contributions/2144221686_Simon_Cook",
-        "text": "Simon Cook"
-      },
-      "institution": ""
-    },    
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
-        "text": "Jordan B Peterson"
-      },
-      "institution": "University of Toronto"
-    }
-],
-"url": "https://www.researchgate.net/publication/25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
-"key": "/rg/article?title=25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
-"cached": "2018-12-21T02:33:40.806Z"
+	"pubdate": "2019/01/01",
+	"title": "Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment",
+	"citations": "",
+	"references": "33",
+	"reads": "852 Reads",
+	"journal": {
+		"href": "",
+		"text": "(Book) Advances in Human Factors in Wearable Technologies and Game Design"
+	},
+	"abstract": "We propose an interpersonal biofeedback technology which uses music-like stimuli to convey a user’s physiological information to another observer. It is argued that this interpersonal biofeedback may facilitate empathy and interpersonal entrainment. We argue that music is an optimal carrier for biofeedback because it naturally regulates psychophysiology, is cross-modally associated with emotion, and can be attended to peripherally. We propose a research study to investigate the effects of interpersonal biofeedback on emotional mindreading.",
+	"authors": [{
+			"name": {
+				"href": "https://www.researchgate.net/scientific-contributions/2144193706_John_M_Tennant",
+				"text": "John M. Tennant"
+			},
+			"institution": ""
+		},
+		{
+			"name": {
+				"href": "https://www.researchgate.net/scientific-contributions/2144186755_Mihnea_C_Moldoveanu",
+				"text": "Mihnea C. Moldoveanu"
+			},
+			"institution": ""
+		},
+		{
+			"name": {
+				"href": "https://www.researchgate.net/scientific-contributions/2144221686_Simon_Cook",
+				"text": "Simon Cook"
+			},
+			"institution": ""
+		},
+		{
+			"name": {
+				"href": "https://www.researchgate.net/profile/Jordan_Peterson2",
+				"text": "Jordan B Peterson"
+			},
+			"institution": "University of Toronto"
+		}
+	],
+	"url": "https://www.researchgate.net/publication/25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
+	"key": "/rg/article?title=25961121_Interpersonal_Resonance_Developing_Interpersonal_Biofeedback_for_the_Promotion_of_Empathy_and_Social_Entrainment",
+	"cached": "2018-12-21T02:33:40.806Z",
+	"params": {
+		"template": "rgarticle"
+	}
+
 }</t>
 <t tx="josephorr.20181224141950.1">&lt;summary-table
  :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
@@ -320,6 +325,18 @@
  :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
 &lt;/summary-table&gt;</t>
 <t tx="josephorr.20181226172138.1"></t>
+<t tx="josephorr.20181228080203.1"></t>
+<t tx="josephorr.20181228080308.1">@language md
+
+# About this Document
+
+This outlined site was created with the Open Source outlining editor [Leo](http://www.leoeditor.com) and is being displayed with 
+[LeoVue](https://kaleguy.github.io/leovue/).
+
+To edit this file, download it from [Github](https://github.com/kaleguy/leo-examples/tree/master/docs/peterson). To propose an edit to this 
+site, submit a pull request, or alternatively, fork your copy and publish to your own Github pages account.
+
+</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -357,7 +374,7 @@
 <t tx="leovue.2-10">{
   "pubdate": "2015/10/01",
   "title": "Differences in Media Preference Mediate the Link Between Personality and Political Orientation",
-  "citations": "8",
+  "citations": 8,
   "references": "62",
   "reads": "3,427 Reads",
   "journal": {
@@ -391,7 +408,7 @@
 <t tx="leovue.2-100">{
   "pubdate": "1990/12/31",
   "title": "Information processing, neuropsychological function, and the inherited predisposition to alcoholism",
-  "citations": "53",
+  "citations": 53,
   "references": "137",
   "reads": "134 Reads",
   "journal": {
@@ -425,7 +442,7 @@
 <t tx="leovue.2-101">{
   "pubdate": "1990/12/31",
   "title": "Acute alcohol intoxication and cognitive functioning.",
-  "citations": "108",
+  "citations": 108,
   "references": "",
   "reads": "176 Reads",
   "journal": {
@@ -472,7 +489,7 @@
 <t tx="leovue.2-102">{
   "pubdate": "1990/12/31",
   "title": "A heuristic model for the inherited predisposition to alcoholism",
-  "citations": "24",
+  "citations": 24,
   "references": "46",
   "reads": "157 Reads",
   "journal": {
@@ -512,7 +529,7 @@
 <t tx="leovue.2-103">{
   "pubdate": "1990/12/30",
   "title": "Inherited Predisposition to Alcoholism: Characteristics of Sons of Male Alcoholics",
-  "citations": "150",
+  "citations": 150,
   "references": "1",
   "reads": "4,864 Reads",
   "journal": {
@@ -606,7 +623,7 @@
 <t tx="leovue.2-107">{
   "pubdate": "1989/12/31",
   "title": "Autonomic hyperreactivity and risk for alcoholism",
-  "citations": "19",
+  "citations": 19,
   "references": "36",
   "reads": "341 Reads",
   "journal": {
@@ -646,7 +663,7 @@
 <t tx="leovue.2-11">{
   "pubdate": "2015/06/09",
   "title": "A scalable goal-setting intervention closes both the gender and ethnic minority achievement gap",
-  "citations": "9",
+  "citations": 9,
   "references": "83",
   "reads": "4,317 Reads",
   "journal": {
@@ -687,7 +704,7 @@
 <t tx="leovue.2-12">{
   "pubdate": "2015/04/08",
   "title": "Why Do Conservatives Report Being Happier Than Liberals? The Contribution of Neuroticism",
-  "citations": "9",
+  "citations": 9,
   "references": "46",
   "reads": "4,728 Reads",
   "journal": {
@@ -728,7 +745,7 @@
 <t tx="leovue.2-13">{
   "pubdate": "2014/12/31",
   "title": "Confounding valence and arousal: What really underlies political orientation?",
-  "citations": "6",
+  "citations": 6,
   "references": "23",
   "reads": "1,384 Reads",
   "journal": {
@@ -769,7 +786,7 @@
 <t tx="leovue.2-14">{
   "pubdate": "2014/12/31",
   "title": "Openness to experience, intellect and cognitive ability",
-  "citations": "2",
+  "citations": 2,
   "references": "50",
   "reads": "4,971 Reads",
   "journal": {
@@ -796,7 +813,7 @@
 <t tx="leovue.2-15">{
   "pubdate": "2014/12/25",
   "title": "System Justification and Electrophysiological Responses to Feedback: Support for a Positivity Bias",
-  "citations": "4",
+  "citations": 4,
   "references": "54",
   "reads": "675 Reads",
   "journal": {
@@ -844,7 +861,7 @@
 <t tx="leovue.2-16">{
   "pubdate": "2013/12/31",
   "title": "Spiritual Liberals and Religious Conservatives",
-  "citations": "14",
+  "citations": 14,
   "references": "53",
   "reads": "2,619 Reads",
   "journal": {
@@ -884,7 +901,7 @@
 <t tx="leovue.2-17">{
   "pubdate": "2013/12/31",
   "title": "Does Cultural Exposure Partially Explain the Association Between Personality and Political Orientation?",
-  "citations": "22",
+  "citations": 22,
   "references": "59",
   "reads": "1,460 Reads",
   "journal": {
@@ -924,7 +941,7 @@
 <t tx="leovue.2-18">{
   "pubdate": "2013/12/31",
   "title": "Preliminary Support for a Generalized Arousal Model of Political Conservatism",
-  "citations": "16",
+  "citations": 16,
   "references": "70",
   "reads": "689 Reads",
   "journal": {
@@ -965,7 +982,7 @@
 <t tx="leovue.2-19">{
   "pubdate": "2013/10/01",
   "title": "Unifying the Aspects of the Big Five, the Interpersonal Circumplex, and Trait Affiliation",
-  "citations": "71",
+  "citations": 71,
   "references": "52",
   "reads": "1,978 Reads",
   "journal": {
@@ -1013,7 +1030,7 @@
 <t tx="leovue.2-20">{
   "pubdate": "2013/06/24",
   "title": "Openness to Experience, Intellect, and Cognitive Ability",
-  "citations": "71",
+  "citations": 71,
   "references": "51",
   "reads": "1,716 Reads",
   "journal": {
@@ -1061,7 +1078,7 @@
 <t tx="leovue.2-21">{
   "pubdate": "2013/05/10",
   "title": "Personal narratives as the highest level of cognitive integration",
-  "citations": "16",
+  "citations": 16,
   "references": "24",
   "reads": "2,140 Reads",
   "journal": {
@@ -1101,7 +1118,7 @@
 <t tx="leovue.2-22">{
   "pubdate": "2012/12/31",
   "title": "Psychological Entropy: A Framework for Understanding Uncertainty-Related Anxiety",
-  "citations": "203",
+  "citations": 203,
   "references": "220",
   "reads": "6,762 Reads",
   "journal": {
@@ -1141,7 +1158,7 @@
 <t tx="leovue.2-23">{
   "pubdate": "2012/12/31",
   "title": "Serene Arts: The Effect of Personal Unsettledness and of Paintings' Narrative Structure on Personality",
-  "citations": "4",
+  "citations": 4,
   "references": "33",
   "reads": "380 Reads",
   "journal": {
@@ -1182,7 +1199,7 @@
 <t tx="leovue.2-24">{
   "pubdate": "2012/12/31",
   "title": "From madness to genius: The Openness/Intellect trait domain as a paradoxical simplex",
-  "citations": "122",
+  "citations": 122,
   "references": "152",
   "reads": "1,709 Reads",
   "journal": {
@@ -1223,7 +1240,7 @@
 <t tx="leovue.2-25">{
   "pubdate": "2012/12/30",
   "title": "Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality",
-  "citations": "4",
+  "citations": 4,
   "references": "26",
   "reads": "230 Reads",
   "journal": {
@@ -1264,7 +1281,7 @@
 <t tx="leovue.2-26">{
   "pubdate": "2011/12/31",
   "title": "Creative Exploration and Its Illnesses",
-  "citations": "2",
+  "citations": 2,
   "references": "17",
   "reads": "933 Reads",
   "journal": {
@@ -1291,7 +1308,7 @@
 <t tx="leovue.2-27">{
   "pubdate": "2010/12/31",
   "title": "Compassionate Liberals and Polite Conservatives: Associations of Agreeableness With Political Ideology and Moral Values",
-  "citations": "157",
+  "citations": 157,
   "references": "47",
   "reads": "1,504 Reads",
   "journal": {
@@ -1339,7 +1356,7 @@
 <t tx="leovue.2-28">{
   "pubdate": "2010/12/31",
   "title": "Positive Mood Effects on Delay Discounting",
-  "citations": "46",
+  "citations": 46,
   "references": "37",
   "reads": "684 Reads",
   "journal": {
@@ -1386,7 +1403,7 @@
 <t tx="leovue.2-29">{
   "pubdate": "2010/12/30",
   "title": "The Benefits of Writing",
-  "citations": "1",
+  "citations": 1,
   "references": "35",
   "reads": "2,932 Reads",
   "journal": {
@@ -1419,8 +1436,8 @@
 <t tx="leovue.2-3">{
   "pubdate": "2017/10/27",
   "title": "The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology",
-  "citations": "35",
-  "references": "1",
+  "citations": 35,
+  "references": 1,
   "reads": "2,951 Reads",
   "journal": {
     "href": "journal/0138-9130_Scientometrics",
@@ -1463,7 +1480,7 @@
 <t tx="leovue.2-30">{
   "pubdate": "2010/12/30",
   "title": "Setting, Elaborating, and Reflecting on Personal Goals Improves Academic Performance",
-  "citations": "93",
+  "citations": 93,
   "references": "84",
   "reads": "1,481 Reads",
   "journal": {
@@ -1511,7 +1528,7 @@
 <t tx="leovue.2-31">{
   "pubdate": "2009/12/31",
   "title": "Extraversion, neuroticism, and the prisoner’s dilemma",
-  "citations": "48",
+  "citations": 48,
   "references": "33",
   "reads": "1,000 Reads",
   "journal": {
@@ -1545,7 +1562,7 @@
 <t tx="leovue.2-32">{
   "pubdate": "2009/12/31",
   "title": "Exploring the link between reading fiction and empathy: Ruling out individual differences and examining outcomes",
-  "citations": "152",
+  "citations": 152,
   "references": "64",
   "reads": "893 Reads",
   "journal": {
@@ -1585,7 +1602,7 @@
 <t tx="leovue.2-33">{
   "pubdate": "2009/12/31",
   "title": "On Being Moved by Art: How Reading Fiction Transforms the Self",
-  "citations": "108",
+  "citations": 108,
   "references": "48",
   "reads": "1,388 Reads",
   "journal": {
@@ -1633,7 +1650,7 @@
 <t tx="leovue.2-34">{
   "pubdate": "2009/12/31",
   "title": "Defenceless against art? Impact of reading fiction on emotion in avoidantly attached individuals",
-  "citations": "18",
+  "citations": 18,
   "references": "29",
   "reads": "531 Reads",
   "journal": {
@@ -1681,7 +1698,7 @@
 <t tx="leovue.2-35">{
   "pubdate": "2009/12/31",
   "title": "Metatraits of the Big Five Differentially Predict Engagement and Restraint of Behavior",
-  "citations": "62",
+  "citations": 62,
   "references": "39",
   "reads": "600 Reads",
   "journal": {
@@ -1722,7 +1739,7 @@
 <t tx="leovue.2-36">{
   "pubdate": "2009/12/30",
   "title": "Personality and Language Use in Self-Narratives",
-  "citations": "66",
+  "citations": 66,
   "references": "20",
   "reads": "2,130 Reads",
   "journal": {
@@ -1756,7 +1773,7 @@
 <t tx="leovue.2-37">{
   "pubdate": "2008/12/31",
   "title": "Delay discounting: Interactions between personality and cognitive ability",
-  "citations": "61",
+  "citations": 61,
   "references": "22",
   "reads": "890 Reads",
   "journal": {
@@ -1797,7 +1814,7 @@
 <t tx="leovue.2-38">{
   "pubdate": "2008/12/31",
   "title": "Predicting creativity and academic success with a “Fake-Proof” measure of the Big Five",
-  "citations": "46",
+  "citations": 46,
   "references": "91",
   "reads": "930 Reads",
   "journal": {
@@ -1831,7 +1848,7 @@
 <t tx="leovue.2-39">{
   "pubdate": "2008/12/31",
   "title": "Externalizing Behavior and the Higher Order Factors of the Big Five",
-  "citations": "61",
+  "citations": 61,
   "references": "33",
   "reads": "714 Reads",
   "journal": {
@@ -1880,7 +1897,7 @@
   "pubdate": "2018/09/13",
   "title": "Don’t Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions",
   "citations": "",
-  "references": "59",
+  "references": 59,
   "reads": "5,378 Reads",
   "journal": {
     "href": "journal/0022-3891_Journal_of_Personalit",
@@ -1920,7 +1937,7 @@
 <t tx="leovue.2-40">{
   "pubdate": "2008/08/31",
   "title": "Cognitive Abilities Involved in Insight Problem Solving: An Individual Differences Model",
-  "citations": "58",
+  "citations": 58,
   "references": "66",
   "reads": "1,599 Reads",
   "journal": {
@@ -1961,7 +1978,7 @@
 <t tx="leovue.2-41">{
   "pubdate": "2007/12/31",
   "title": "Morning people are stable people: Circadian rhythm and the higher-order factors of the Big Five",
-  "citations": "118",
+  "citations": 118,
   "references": "51",
   "reads": "1,093 Reads",
   "journal": {
@@ -2009,7 +2026,7 @@
 <t tx="leovue.2-42">{
   "pubdate": "2007/12/31",
   "title": "A Psycho-ontological Analysis of Genesis 2-6.",
-  "citations": "35",
+  "citations": 35,
   "references": [],
   "reads": "1,121 Reads",
   "journal": {
@@ -2036,7 +2053,7 @@
 <t tx="leovue.2-43">{
   "pubdate": "2007/12/31",
   "title": "An evaluation of early and late stage attentional processing of positive and negative information in dysphoria",
-  "citations": "44",
+  "citations": 44,
   "references": "73",
   "reads": "274 Reads",
   "journal": {
@@ -2070,7 +2087,7 @@
 <t tx="leovue.2-44">{
   "pubdate": "2007/12/31",
   "title": "Reducing memory distortions in egoistic self-enhancers: Effects of indirect social facilitation",
-  "citations": "7",
+  "citations": 7,
   "references": "27",
   "reads": "284 Reads",
   "journal": {
@@ -2111,7 +2128,7 @@
 <t tx="leovue.2-45">{
   "pubdate": "2007/12/31",
   "title": "Between Facets and Domains: 10 Aspects of the Big Five",
-  "citations": "617",
+  "citations": 617,
   "references": "65",
   "reads": "5,277 Reads",
   "journal": {
@@ -2152,7 +2169,7 @@
 <t tx="leovue.2-46">{
   "pubdate": "2007/12/31",
   "title": "Prefrontal Cognitive Ability, Intelligence, Big Five Personality, and the Prediction of Advanced Academic and Workplace Performance",
-  "citations": "103",
+  "citations": 103,
   "references": "167",
   "reads": "4,753 Reads",
   "journal": {
@@ -2198,7 +2215,7 @@
 <t tx="leovue.2-47">{
   "pubdate": "2006/12/31",
   "title": "Religion, sovereignty, natural rights, and the constituent elements of experience",
-  "citations": "4",
+  "citations": 4,
   "references": "32",
   "reads": "990 Reads",
   "journal": {
@@ -2225,7 +2242,7 @@
 <t tx="leovue.2-48">{
   "pubdate": "2006/12/31",
   "title": "The Bitter-Sweet Labor of Emoting: The Linguistic Comparison of Writers and Physicists",
-  "citations": "37",
+  "citations": 37,
   "references": "39",
   "reads": "470 Reads",
   "journal": {
@@ -2272,7 +2289,7 @@
 <t tx="leovue.2-49">{
   "pubdate": "2006/12/31",
   "title": "The Dopamine D4 Receptor Gene and Moderation of the Association Between Externalizing Behavior and IQ",
-  "citations": "52",
+  "citations": 52,
   "references": "66",
   "reads": "278 Reads",
   "journal": {
@@ -2321,7 +2338,7 @@
   "pubdate": "2017/04/01",
   "title": "Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation",
   "citations": "",
-  "references": "48",
+  "references": 48,
   "reads": "5,984 Reads",
   "journal": {
     "href": "journal/0922-4777_Reading_and_Writing",
@@ -2360,7 +2377,7 @@
 <t tx="leovue.2-50">{
   "pubdate": "2006/12/31",
   "title": "Differential effects of naltrexone on cardiac, subjective and behavioural reactions to acute ethanol intoxication",
-  "citations": "19",
+  "citations": 19,
   "references": "75",
   "reads": "169 Reads",
   "journal": {
@@ -2408,7 +2425,7 @@
 <t tx="leovue.2-51">{
   "pubdate": "2006/12/31",
   "title": "Self-Liking and Self-Competence Separate Self-Evaluation From Self-Deception: Associations With Personality, Ability, and Achievement",
-  "citations": "35",
+  "citations": 35,
   "references": "101",
   "reads": "685 Reads",
   "journal": {
@@ -2454,7 +2471,7 @@
 <t tx="leovue.2-52">{
   "pubdate": "2006/12/30",
   "title": "Bookworms versus nerds: Exposure to fiction versus non-fiction, divergent associations with social ability, and the simulation of fictional social worlds",
-  "citations": "219",
+  "citations": 219,
   "references": "77",
   "reads": "1,098 Reads",
   "journal": {
@@ -2500,7 +2517,7 @@
 <t tx="leovue.2-53">{
   "pubdate": "2006/12/30",
   "title": "Heart rate increase to alcohol administration and video lottery terminal play among probable pathological gamblers and nonpathological gamblers",
-  "citations": "14",
+  "citations": 14,
   "references": "59",
   "reads": "126 Reads",
   "journal": {
@@ -2546,7 +2563,7 @@
 <t tx="leovue.2-54">{
   "pubdate": "2006/12/01",
   "title": "NUANCE 3.0: Using genetic programming to model variable relationships",
-  "citations": "6",
+  "citations": 6,
   "references": "19",
   "reads": "104 Reads",
   "journal": {
@@ -2587,8 +2604,8 @@
 <t tx="leovue.2-55">{
   "pubdate": "2005/12/31",
   "title": "You Drink, I Drink: Alcohol Consumption, Social Context and Personality.",
-  "citations": "19",
-  "references": "33",
+  "citations": 19,
+  "references": 33,
   "reads": "1,004 Reads",
   "journal": {
     "href": "journal/1541-745X_Individual_Differences_Research",
@@ -2626,7 +2643,7 @@
 <t tx="leovue.2-56">{
   "pubdate": "2005/12/31",
   "title": "Reliability, Validity, and Factor Structure of the Creative Achievement Questionnaire",
-  "citations": "412",
+  "citations": 412,
   "references": "63",
   "reads": "16,616 Reads",
   "journal": {
@@ -2666,7 +2683,7 @@
 <t tx="leovue.2-57">{
   "pubdate": "2005/12/31",
   "title": "Sources of Openness/Intellect: Cognitive and Neuropsychological Correlates of the Fifth Factor of Personality",
-  "citations": "247",
+  "citations": 247,
   "references": "102",
   "reads": "1,475 Reads",
   "journal": {
@@ -2706,7 +2723,7 @@
 <t tx="leovue.2-58">{
   "pubdate": "2005/12/31",
   "title": "Matching effects on eating: Do individual differences make a difference?",
-  "citations": "45",
+  "citations": 45,
   "references": "9",
   "reads": "196 Reads",
   "journal": {
@@ -2751,7 +2768,7 @@
 <t tx="leovue.2-59">{
   "pubdate": "2005/12/30",
   "title": "Attentional biases and memory distortions in self-enhancers",
-  "citations": "9",
+  "citations": 9,
   "references": "34",
   "reads": "220 Reads",
   "journal": {
@@ -2792,7 +2809,7 @@
 <t tx="leovue.2-6">{
   "pubdate": "2016/06/30",
   "title": "Ideological Reactivity: Political Conservatism and Brain Responsivity to Emotional and Neutral Stimuli",
-  "citations": "5",
+  "citations": 5,
   "references": "",
   "reads": "8,637 Reads",
   "journal": {
@@ -2840,7 +2857,7 @@
 <t tx="leovue.2-60">{
   "pubdate": "2005/01/01",
   "title": "Play and the Regulation of Aggression",
-  "citations": "16",
+  "citations": 16,
   "references": "",
   "reads": "49 Reads",
   "journal": {
@@ -2873,7 +2890,7 @@
 <t tx="leovue.2-61">{
   "pubdate": "2004/12/31",
   "title": "Self-induced memory distortions and the allocation of processing resources at encoding and retrieval",
-  "citations": "18",
+  "citations": 18,
   "references": "70",
   "reads": "230 Reads",
   "journal": {
@@ -2907,7 +2924,7 @@
 <t tx="leovue.2-62">{
   "pubdate": "2004/12/31",
   "title": "Defensive Copers Show a Deficit in Passive Avoidance Learning on Newman's Go/No-Go Task: Implications for Self-Deception and Socialization",
-  "citations": "13",
+  "citations": 13,
   "references": "78",
   "reads": "152 Reads",
   "journal": {
@@ -2941,7 +2958,7 @@
 <t tx="leovue.2-63">{
   "pubdate": "2003/12/31",
   "title": "Self-Deception and Failure to Modulate Responses Despite Accruing Evidence of Error",
-  "citations": "25",
+  "citations": 25,
   "references": "67",
   "reads": "322 Reads",
   "journal": {
@@ -2989,7 +3006,7 @@
 <t tx="leovue.2-64">{
   "pubdate": "2003/12/31",
   "title": "Neuropsychological Performance, IQ, Personality, and Grades in a Longitudinal Grade-School Male Sample",
-  "citations": "8",
+  "citations": 8,
   "references": "49",
   "reads": "781 Reads",
   "journal": {
@@ -3036,7 +3053,7 @@
 <t tx="leovue.2-65">{
   "pubdate": "2003/12/31",
   "title": "Decreased Latent Inhibition Is Associated With Increased Creative Achievement in High-Functioning Individuals.",
-  "citations": "382",
+  "citations": 382,
   "references": "47",
   "reads": "7,492 Reads",
   "journal": {
@@ -3076,7 +3093,7 @@
 <t tx="leovue.2-66">{
   "pubdate": "2003/12/30",
   "title": "You can neither remember nor forget what you do not understand",
-  "citations": "4",
+  "citations": 4,
   "references": "71",
   "reads": "11,093 Reads",
   "journal": {
@@ -3110,7 +3127,7 @@
 <t tx="leovue.2-67">{
   "pubdate": "2002/12/31",
   "title": "Complexity Management Theory: Motivation for Ideological Rigidity and Social Conflict",
-  "citations": "49",
+  "citations": 49,
   "references": "78",
   "reads": "8,660 Reads",
   "journal": {
@@ -3144,7 +3161,7 @@
 <t tx="leovue.2-68">{
   "pubdate": "2002/12/31",
   "title": "Higher-order factors of the Big Five predict conformity",
-  "citations": "256",
+  "citations": 256,
   "references": "93",
   "reads": "1,881 Reads",
   "journal": {
@@ -3184,7 +3201,7 @@
 <t tx="leovue.2-69">{
   "pubdate": "2002/12/31",
   "title": "Self-deception and impaired categorization of anomaly",
-  "citations": "14",
+  "citations": 14,
   "references": "85",
   "reads": "357 Reads",
   "journal": {
@@ -3225,7 +3242,7 @@
 <t tx="leovue.2-7">{
   "pubdate": "2016/04/26",
   "title": "From Dispositions to Goals to Ideology: Toward a Synthesis of Personality and Social Psychological Approaches to Political Orientation",
-  "citations": "7",
+  "citations": 7,
   "references": "74",
   "reads": "7,722 Reads",
   "journal": {
@@ -3266,7 +3283,7 @@
 <t tx="leovue.2-70">{
   "pubdate": "2002/12/31",
   "title": "Openness and extraversion are associated with reduced latent inhibition: Replication and commentary",
-  "citations": "105",
+  "citations": 105,
   "references": "52",
   "reads": "1,074 Reads",
   "journal": {
@@ -3307,7 +3324,7 @@
 <t tx="leovue.2-71">{
   "pubdate": "2002/01/01",
   "title": "Higher-order factors of the B5 predict conformity: Are there neuroses of health?",
-  "citations": "57",
+  "citations": 57,
   "references": [],
   "reads": "25 Reads",
   "journal": {
@@ -3346,7 +3363,7 @@
 <t tx="leovue.2-72">{
   "pubdate": "2001/12/31",
   "title": "Reliability and validity of alcohol-induced heart rate increase as a measure of sensitivity to the stimulant properties of alcohol",
-  "citations": "88",
+  "citations": 88,
   "references": "72",
   "reads": "187 Reads",
   "journal": {
@@ -3387,7 +3404,7 @@
 <t tx="leovue.2-73">{
   "pubdate": "2000/12/31",
   "title": "Metaphoric threat is more real than real threat",
-  "citations": "19",
+  "citations": 19,
   "references": "4",
   "reads": "517 Reads",
   "journal": {
@@ -3448,7 +3465,7 @@
 <t tx="leovue.2-75">{
   "pubdate": "2000/12/30",
   "title": "Latent Inhibition and Openness to Experience in a high- achieving student population",
-  "citations": "101",
+  "citations": 101,
   "references": "31",
   "reads": "850 Reads",
   "journal": {
@@ -3482,7 +3499,7 @@
 <t tx="leovue.2-76">{
   "pubdate": "1999/12/31",
   "title": "Maps of Meaning: The architecture of belief (precis)",
-  "citations": "6",
+  "citations": 6,
   "references": "42",
   "reads": "3,442 Reads",
   "journal": {
@@ -3509,7 +3526,7 @@
 <t tx="leovue.2-77">{
   "pubdate": "1999/01/01",
   "title": "Individual motivation for group aggression: Psychological, mythological and neuropsychological perspectives",
-  "citations": "2",
+  "citations": 2,
   "references": "",
   "reads": "150 Reads",
   "journal": {
@@ -3536,7 +3553,7 @@
 <t tx="leovue.2-78">{
   "pubdate": "1997/12/31",
   "title": "Disinhibited Personality and Sensitivity to Alcohol Reinforcement",
-  "citations": "41",
+  "citations": 41,
   "references": "65",
   "reads": "121 Reads",
   "journal": {
@@ -3577,7 +3594,7 @@
 <t tx="leovue.2-79">{
   "pubdate": "1997/12/31",
   "title": "Biphasic Effects of Alcohol on Heart Rate Are Influenced by Alcoholic Family History and Rate of Alcohol Ingestion",
-  "citations": "84",
+  "citations": 84,
   "references": "84",
   "reads": "75 Reads",
   "journal": {
@@ -3624,7 +3641,7 @@
 <t tx="leovue.2-8">{
   "pubdate": "2015/12/31",
   "title": "Openness to Experience and Intellect Differentially Predict Creative Achievement in the Arts and Sciences: Openness, Intellect, and Creativity",
-  "citations": "89",
+  "citations": 89,
   "references": "83",
   "reads": "5,644 Reads",
   "journal": {
@@ -3672,7 +3689,7 @@
 <t tx="leovue.2-80">{
   "pubdate": "1996/12/31",
   "title": "Ethanol-Induced Change in Cardiac and Endogenous Opiate Function and Risk for Alcoholism",
-  "citations": "65",
+  "citations": 65,
   "references": "65",
   "reads": "182 Reads",
   "journal": {
@@ -3720,7 +3737,7 @@
 <t tx="leovue.2-81">{
   "pubdate": "1996/12/31",
   "title": "Characteristics and Putative Mechanisms in Boys at Risk for Drug Abuse and Aggression",
-  "citations": "7",
+  "citations": 7,
   "references": "72",
   "reads": "128 Reads",
   "journal": {
@@ -3754,7 +3771,7 @@
 <t tx="leovue.2-82">{
   "pubdate": "1996/12/31",
   "title": "Fighting as a Function of Personality and Neuropsychological Measures",
-  "citations": "1",
+  "citations": 1,
   "references": "9",
   "reads": "122 Reads",
   "journal": {
@@ -3800,7 +3817,7 @@
 <t tx="leovue.2-83">{
   "pubdate": "1995/12/31",
   "title": "Alcoholism: The role of different motivational systems",
-  "citations": "86",
+  "citations": 86,
   "references": "231",
   "reads": "422 Reads",
   "journal": {
@@ -3834,7 +3851,7 @@
 <t tx="leovue.2-84">{
   "pubdate": "1995/12/31",
   "title": "Provocation, Acute Alcohol Intoxication, Cognitive Performance, and Aggression",
-  "citations": "102",
+  "citations": 102,
   "references": "",
   "reads": "255 Reads",
   "journal": {
@@ -3876,7 +3893,7 @@
   "pubdate": "1995/12/31",
   "title": "Drugs and aggression: Correlations, crime and human manipulative studies and some proposed mechanisms",
   "citations": "58",
-  "references": "42",
+  "references": 42,
   "reads": "189 Reads",
   "journal": {
     "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
@@ -3909,7 +3926,7 @@
 <t tx="leovue.2-86">{
   "pubdate": "1995/12/31",
   "title": "Anxiety sensitivity and self-reported alcohol consumption rates in university women",
-  "citations": "138",
+  "citations": 138,
   "references": "25",
   "reads": "145 Reads",
   "journal": {
@@ -3950,7 +3967,7 @@
 <t tx="leovue.2-87">{
   "pubdate": "1994/12/31",
   "title": "Cardiovascular reactivity as a predictor of alcohol consumption in a taste test situation",
-  "citations": "18",
+  "citations": 18,
   "references": "19",
   "reads": "92 Reads",
   "journal": {
@@ -3990,7 +4007,7 @@
 <t tx="leovue.2-88">{
   "pubdate": "1993/12/31",
   "title": "A biosocial model of the alcohol-aggression relationship",
-  "citations": "121",
+  "citations": 121,
   "references": [],
   "reads": "923 Reads",
   "journal": {
@@ -4031,7 +4048,7 @@
 <t tx="leovue.2-89">{
   "pubdate": "1993/12/31",
   "title": "Heart-rate reactivity and alcohol consumption among sons of alcoholics and sons of non-alcoholics",
-  "citations": "55",
+  "citations": 55,
   "references": "68",
   "reads": "142 Reads",
   "journal": {
@@ -4079,7 +4096,7 @@
 <t tx="leovue.2-9">{
   "pubdate": "2015/12/24",
   "title": "Quantifying the scientific output of new researchers using the zp-index",
-  "citations": "2",
+  "citations": 2,
   "references": "37",
   "reads": "761 Reads",
   "journal": {
@@ -4113,7 +4130,7 @@
 <t tx="leovue.2-90">{
   "pubdate": "1993/12/31",
   "title": "Risk for alcoholism, antisocial behavior, and response perseveration",
-  "citations": "37",
+  "citations": 37,
   "references": "38",
   "reads": "125 Reads",
   "journal": {
@@ -4153,7 +4170,7 @@
 <t tx="leovue.2-91">{
   "pubdate": "1993/12/31",
   "title": "Alcohol, serotonin and aggression",
-  "citations": "3",
+  "citations": 3,
   "references": "",
   "reads": "623 Reads",
   "journal": {
@@ -4226,7 +4243,7 @@
 <t tx="leovue.2-93">{
   "pubdate": "1992/12/31",
   "title": "Factor structure and correlates of the Tridimensional Personality Questionnaire",
-  "citations": "60",
+  "citations": 60,
   "references": "",
   "reads": "110 Reads",
   "journal": {
@@ -4273,7 +4290,7 @@
 <t tx="leovue.2-94">{
   "pubdate": "1992/12/31",
   "title": "Cognitive Dysfunction and the Inherited Predisposition to Alcoholism:",
-  "citations": "104",
+  "citations": 104,
   "references": "",
   "reads": "204 Reads",
   "journal": {
@@ -4313,7 +4330,7 @@
 <t tx="leovue.2-95">{
   "pubdate": "1992/12/31",
   "title": "Etiology",
-  "citations": "4",
+  "citations": 4,
   "references": "",
   "reads": "186 Reads",
   "journal": {
@@ -4347,7 +4364,7 @@
 <t tx="leovue.2-96">{
   "pubdate": "1991/12/31",
   "title": "A biobehavioural model for the inherited predisposition to alcoholism",
-  "citations": "12",
+  "citations": 12,
   "references": "18",
   "reads": "135 Reads",
   "journal": {
@@ -4381,7 +4398,7 @@
 <t tx="leovue.2-97">{
   "pubdate": "1991/12/31",
   "title": "The Tridimensional Personality Questionnaire and the inherited risk for alcoholism",
-  "citations": "19",
+  "citations": 19,
   "references": "5",
   "reads": "79 Reads",
   "journal": {
@@ -4427,7 +4444,7 @@
 <t tx="leovue.2-98">{
   "pubdate": "1991/12/30",
   "title": "Attention-deficit hyperactivity disorder, childhood conduct disorder, and alcoholism: Is there an association?",
-  "citations": "33",
+  "citations": 33,
   "references": "",
   "reads": "192 Reads",
   "journal": {
@@ -4461,7 +4478,7 @@
 <t tx="leovue.2-99">{
   "pubdate": "1990/12/31",
   "title": "Acute alcohol intoxication and cognitive functioning",
-  "citations": "167",
+  "citations": 167,
   "references": "",
   "reads": "5,163 Reads",
   "journal": {
@@ -4508,7 +4525,7 @@
 <t tx="leovue.20181204092754_1">@language html
 
 &lt;summary-table
- :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
 &lt;/summary-table&gt;</t>
 <t tx="leovue.20181220072125_1"></t>
 </tnodes>
