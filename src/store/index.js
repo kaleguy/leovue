@@ -316,7 +316,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
  * @param parentId: id of the item to which child nodes will be appended.
  * @param data: the array to be converted into child nodes
  * @param template: template to use, e.g. rgarticle (see index.html for example)
- * @param urlIsQueryString: use just the portion of the url after last '/' (will be passed to template.host)
+ * @param urlIsQueryString: the url passed is not the full url (will be passed to template.host)
  * @returns {boolean}
  */
 function addChildNodes (context, parentId, data, template, urlIsQueryString, urlTitle, childTemplate, titleKey) {
@@ -336,13 +336,14 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString, url
     if (n.title) {
       vtitle = n.title.text
     }
-    // urlTitle means the title of the list item will be a url instead of a dataSet.
+    // urlTitle means the title of the list item will become a JSON url instead of a dataSet.
     if (urlTitle) {
       let url = n.title.href
       if (urlIsQueryString) {
         url = '/' + url
         url = url.substring(url.lastIndexOf('/') + 1)
       }
+      // e.g. @json-rgarticle [Article Title](Article URL)
       name = `@json${template} [${titleText}](${url})`
     } else {
       name = `@dataSet set${id} ${titleText}`// label
@@ -1538,6 +1539,8 @@ export default new Vuex.Store({
           return showFormattedData(context, id, url, 'rss', 'xml')
         }
         if (/^@(xml|json)/.test(item.name)) {
+          // if there is a hyphen in the directive the second token
+          // is the dataType (more info will be in lconfig keyed by dataType)
           const re = /^@(xml|json)(-.*?)?\s/
           const match = re.exec(item.name)
           let dataType = match[1]

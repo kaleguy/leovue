@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @formio directive
 - format @doc directive
 - fix Accordion mode
+- fix translatePath on settings page
+- font/theme button
+- Twine
 - @tab
 
 ## [1.18.1] - 2018-12-28
