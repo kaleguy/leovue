@@ -18,11 +18,13 @@
 nodeList: 
   listKey: articles
   template: rgarticle
+  titleKey: title.text
+  hrefKey: title.href
+  hrefIsQueryString: true
 filter:
   key: type.text
   value: Article
-urlTitle: true
-urlIsQueryString: true</t>
+</t>
 <t tx="josephorr.20181220072125.1"></t>
 </tnodes>
 </leo_file>

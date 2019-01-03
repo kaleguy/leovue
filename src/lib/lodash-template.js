@@ -85,7 +85,7 @@ function render (json, templateType) {
     return '<h2>No Matching Template</h2>'
   }
   const compiled = _.template(templateString)
-  let html = '<h2>Template Compilation Error</h2>'
+  let html = '<h2 class="error-msg">Template Compilation Error</h2>'
   try {
     html = compiled({data: json})
   } catch (e) {

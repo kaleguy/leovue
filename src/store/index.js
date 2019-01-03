@@ -301,8 +301,8 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
           dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
         }
         const template = nodeList.template || ''
-        addChildNodes(context.state, id, dataArray, template, params.urlIsQueryString,
-          params.urlTitle, nodeList.template, nodeList.titleKey)
+        addChildNodes(context.state, id, dataArray, template, nodeList.hrefIsQueryString,
+          nodeList.hrefKey, nodeList.template, nodeList.titleKey)
       }
     })
     .catch(function (error) {
@@ -319,7 +319,7 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
  * @param urlIsQueryString: the url passed is not the full url (will be passed to template.host)
  * @returns {boolean}
  */
-function addChildNodes (context, parentId, data, template, urlIsQueryString, urlTitle, childTemplate, titleKey) {
+function addChildNodes (context, parentId, data, template, urlIsQueryString, hrefKey, childTemplate, titleKey) {
   if (!_.isArray(data)) { return }
   const item = JSON.search(context.leodata, '//*[id="' + parentId + '"]')[0]
   const children = []
@@ -337,8 +337,8 @@ function addChildNodes (context, parentId, data, template, urlIsQueryString, url
       vtitle = n.title.text
     }
     // urlTitle means the title of the list item will become a JSON url instead of a dataSet.
-    if (urlTitle) {
-      let url = n.title.href
+    if (hrefKey) {
+      let url = _.get(n, hrefKey)
       if (urlIsQueryString) {
         url = '/' + url
         url = url.substring(url.lastIndexOf('/') + 1)

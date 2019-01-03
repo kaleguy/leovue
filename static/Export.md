@@ -35,7 +35,7 @@ If you open the side menu, you can see a link for 'Download Node Data'. This all
 
 If you haven't clicked on any JSON nodes and therefore have not loaded in any JSON data, when you export a node you just get the same data in the original file. 
 
-However, if you have clicked on a JSON node, the file you export will new data in it. In this way you can use LeoVue to load data into a Leo file, that you can then open in Leo for further organization.
+However, if you have clicked on a JSON node, the file you export will new data in it. In this way you can use LeoVue to load data into a Leo file that you can then open in Leo for further organization.
 
 ## An Example: ResearchGate
 
@@ -93,11 +93,13 @@ nodeList:
 ```
 
 * **listKey**: the key in the JSON data that is pointing to the array of items
-* **template**: The template to use to display the item
+* **template**: The template to use to display an item
 
 In this case, LeoVue will construct a set of child nodes from the JSON data array, and each node will get as content a single item from the data array.
 
 You can also tell LeoVue not to create datasets with node content but to instead create more JSON nodes:
+
+
 
 <img src="images/json-list-jbp.png" alt="alt text" width="700">
 
@@ -109,10 +111,17 @@ If you view this in LeoVue and then download the Leo file from LeoVue, you end u
 
 The child nodes are not dataSets, rather they are new JSON nodes. This is because the 'urlTitle' param has been specified.
 
+```
+nodeList: 
+  listKey: articles
+  template: rgarticle-brief
+```
 
+* **titleKey**: the key in the JSON data that is pointing to the array of items
+* **hrefKey**: The key for the url of the item
+* **hrefIsQueryString**: The template to use to display an item
 
-
-
+==========xx
 
 In the present case you can not only have LeoVue retrieve a list of nodes, you can additionally click on each retrieved node and get more JSON data for the given article.
 
