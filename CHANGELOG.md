@@ -17,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Twine
 - @tab
 
+## [1.18.2] - 2018-01-03
+### Changed
+- change params for node list (@json nodes)
+
+
 ## [1.18.1] - 2018-12-28
 ### Changed
 - fix to summary-table sort

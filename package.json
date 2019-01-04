@@ -1,6 +1,6 @@
 {
   "name": "leo-vue",
-  "version": "1.18.1",
+  "version": "1.18.2",
   "description": "HTML5 Viewer for Leo Files with Vue Component Support",
   "author": "Joe Orr",
   "private": false,
@@ -71,7 +71,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.1.1",
     "cross-spawn": "^6.0.4",
-    "css-loader": "^0.28.7",
+    "css-loader": "^0.28.11",
     "escape-html": "^1.0.3",
     "eslint": "^4.11.0",
     "eslint-config-standard": "^10.2.1",

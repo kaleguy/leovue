@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -1425,7 +1425,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.18.1
+LeoVue is currently at version 1.18.2
 
 LeoVue 1.18.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2588,7 +2588,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.18.1 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.18.2 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

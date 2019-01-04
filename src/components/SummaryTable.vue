@@ -10,10 +10,6 @@
                     :key="col.title"
                     v-bind="col"></table-column>
     </table-component>
-    <h1>wut</h1>
-    <div v-for="col in colKeys"
-                  :key="col.title"
-                  v-bind="col"></div>
   </div>
 </template>
 
