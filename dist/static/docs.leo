@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -73,9 +73,9 @@
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
 <v t="josephorr.20180407102550.1"><vh>JSON</vh>
-<v t="josephorr.20180407102553.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
-<v t="josephorr.20180414145445.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20181028132300.1"><vh>Lists from JSON data</vh>
+<v t="josephorr.20190101125029.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
+<v t="josephorr.20190101130116.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
+<v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
 <v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
@@ -84,9 +84,10 @@
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
+<v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -131,7 +132,7 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
+<v t="josephorr.20171109061104.1"><vh>Data</vh>
 <v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
@@ -183,7 +184,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20170401144849.1" a="E"></v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
@@ -2335,11 +2336,6 @@ By default, LeoVue comes with just a 'weather' template for JSON data from OpenW
 templates to this file to format other JSON data sources.
 
 You can also add templates directly to index.html. See the index.html in the LeoVue repo for examples.</t>
-<t tx="josephorr.20180407102553.1">template: weather
-location: NYC Central Park
-source: OpenWeather Map</t>
-<t tx="josephorr.20180414145445.1">template: openbooks
-comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20180414204138.1">@language md
 
 ## The @book Directive
@@ -2655,7 +2651,7 @@ nodeList:
 filter:
   key: type.text
   value: Article
-urlIsQueryString: true</t>
+</t>
 <t tx="josephorr.20181020175246.1">template: repec-articles
 nodeList: 
   listKey: articles
@@ -2829,5 +2825,11 @@ For examples of content directives, see the [[ URL Nodes ]] section.
   &lt;/l-map&gt;
 &lt;/div&gt;</t>
 <t tx="josephorr.20181202130523.1"></t>
+<t tx="josephorr.20190101125029.1">template: weather
+location: NYC Central Park
+source: OpenWeather Map</t>
+<t tx="josephorr.20190101130116.1">template: openbooks
+comments: This is a math book. It was on the Openlibrary site.</t>
+<t tx="josephorr.20190103202205.1"></t>
 </tnodes>
 </leo_file>

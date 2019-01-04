@@ -72,7 +72,7 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20190101125029.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20190101130116.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
@@ -84,6 +84,7 @@
 <v t="josephorr.20180414204148.1"><vh>@book [Concrete Mathematics](0201558025)</vh></v>
 <v t="josephorr.20180414205753.1"><vh>@book [Evolution of Civilizations](0913966576)</vh></v>
 </v>
+<v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
 <v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
@@ -2829,5 +2830,6 @@ location: NYC Central Park
 source: OpenWeather Map</t>
 <t tx="josephorr.20190101130116.1">template: openbooks
 comments: This is a math book. It was on the Openlibrary site.</t>
+<t tx="josephorr.20190103202205.1"></t>
 </tnodes>
 </leo_file>
