@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - font/theme button
 - Twine
 - @tab
+- add lv component list to docs
 
 ## [1.18.3] - 2018-01-05
 ### Added
