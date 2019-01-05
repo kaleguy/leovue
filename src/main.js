@@ -16,6 +16,7 @@ import ForkMeOnGithub from 'fork-me-on-github-vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'timeline-vuejs/dist/timeline-vuejs.css'
 
 // content components
 import Vue2Leaflet from 'vue2-leaflet'
@@ -32,6 +33,7 @@ import TOC from './components/TOC'
 import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
 import ImageLeft from './components/layout/ImageLeft'
+import LVTimeline from './components/LVTimeline'
 import Kanban from './components/Kanban'
 import MermaidBoard from './components/MermaidBoard'
 import D3Board from './components/D3Board'
@@ -48,6 +50,7 @@ Vue.use(VueYouTubeEmbed)
 Vue.use(ForkMeOnGithub)
 Vue.use(BootstrapVue)
 Vue.component('star-rating', StarRating)
+Vue.component('lv-timeline', LVTimeline)
 Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)
 Vue.component('toc', TOC) // table of contents (of child nodes)

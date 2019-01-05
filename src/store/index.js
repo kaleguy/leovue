@@ -1005,7 +1005,10 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   })
   return p
 }
-// add language directives to subtrees of existing language directives
+/**
+  Recursively preprocess tree
+  e.g add language directives to subtrees of existing language directives
+*/
 function setChildDirectives (context, data) {
   const textItems = data.textItems
   data.data.forEach(d => {
@@ -1014,6 +1017,14 @@ function setChildDirectives (context, data) {
 }
 function setChildDirective (context, d, textItems, parentDirective) {
   const text = textItems[d.t]
+  // check for @group, add if found
+  const title = d.name
+  const rex = /@group-(.*?) /
+  const match = rex.exec(title)
+  if (match && match[1]) {
+    d.group = match[1]
+  }
+  // language directive
   const re = /^(@language \w+)/
   let languageDirective = re.exec(text)
   if (languageDirective) {

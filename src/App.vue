@@ -97,7 +97,6 @@
 @import './assets/wikipedia.css'
 @import '~leaflet/dist/leaflet.css'
 
-
 HTML, BODY
   margin: 0
   padding: 0
