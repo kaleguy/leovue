@@ -340,7 +340,14 @@ To edit this file, download it from [Github](https://github.com/kaleguy/leo-exam
 site, submit a pull request, or alternatively, fork your copy and publish to your own Github pages account.
 
 </t>
-<t tx="josephorr.20190105063219.1">&lt;lv-timeline group=1&gt;&lt;/lv-timeline&gt;</t>
+<t tx="josephorr.20190105063219.1">@language html
+
+&lt;lv-timeline 
+ from="pubdate"
+ title="title"
+ description=""
+ group=1&gt;
+&lt;/lv-timeline&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",

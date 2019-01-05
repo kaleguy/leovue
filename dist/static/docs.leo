@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -184,8 +184,8 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
-<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
+<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -290,14 +290,15 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1"><vh>@kanban LeoVue Project Kanban</vh>
-<v t="josephorr.20180122081638.1"><vh>Later</vh>
+<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
+<v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
-</v>
-<v t="josephorr.20180116093114.1"><vh>To Do</vh>
+<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 <v t="josephorr.20180420165601.1"><vh>Runkit Component</vh></v>
+</v>
+<v t="josephorr.20180116093114.1" a="E"><vh>To Do</vh>
 <v t="josephorr.20180402070616.1"><vh>Issues</vh></v>
 <v t="josephorr.20180305204208.1"><vh>Fix animation on initial node click</vh></v>
 <v t="josephorr.20180304114723.1"><vh>Cloud Diagrams</vh></v>
@@ -316,14 +317,14 @@
 <v t="josephorr.20180122081528.1"><vh>content pane</vh></v>
 </v>
 </v>
-<v t="josephorr.20180116093121.1"><vh>Doing</vh>
-<v t="josephorr.20180420165631.1"><vh>@page</vh></v>
+<v t="josephorr.20180116093121.1" a="E"><vh>Doing</vh>
+<v t="josephorr.20190105100914.1"><vh>@tab</vh></v>
+<v t="josephorr.20190105100838.1"><vh>word cloud component</vh></v>
+<v t="josephorr.20190105100846.1"><vh>graphs from group</vh></v>
 <v t="josephorr.20180420165635.1"><vh>?page=</vh></v>
 <v t="josephorr.20180420165609.1"><vh>@sort</vh></v>
-<v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
-<v t="josephorr.20180116093218.1"><vh>Codeceptjs</vh></v>
 </v>
-<v t="josephorr.20180116093125.1"><vh>Done</vh>
+<v t="josephorr.20180116093125.1" a="E"><vh>Done</vh>
 <v t="josephorr.20180303162711.1"><vh>Bookmarks in subtree nodes</vh></v>
 <v t="josephorr.20180303171634.1"><vh>Auto outline wikipedia pages</vh></v>
 <v t="josephorr.20180116093131.1"><vh>Mermaid from subtree</vh>
@@ -343,6 +344,8 @@
 </v>
 <v t="josephorr.20180116093153.1"><vh>Kanban v1</vh></v>
 <v t="josephorr.20180201111523.1"><vh>Cascading Directives</vh></v>
+<v t="josephorr.20180420165631.1"><vh>@page</vh></v>
+<v t="josephorr.20180420165801.1"><vh>logo and title</vh></v>
 </v>
 </v>
 </v>
@@ -1014,7 +1017,7 @@ function setIds (startId, d) {
   }
   vtitle = vtitle
     .replace(/^@[a-zA-Z-]+\sset.*?\s/, '')
-    .replace(/^@[a-zA-Z-]+\s/, '')
+    .replace(/@[a-zA-Z-\d]+\s/g, '') // hide directives in title
     .replace(/&lt;&lt;/g, '\u00AB')
     .replace(/&gt;&gt;/g, '\u00BB')
 
@@ -1425,7 +1428,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.18.2
+LeoVue is currently at version 1.18.3
 
 LeoVue 1.18.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
@@ -2588,7 +2591,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.18.2 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.18.3 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -2800,12 +2803,14 @@ LeoVue adds a few directives not found in the Leo. These are all node level dire
 
 * **@page:** The content for the current item and all child items will appear on one scrolling page. The current page is an example of this directive. Note that the page scrolls as items on the page are selected in the tree menu, rather than a new content item being opened. 
 
-* **dataSet:** This is the only directive that doesn't indicate how content is shown but rather how it is consumed (by components in other nodes). For example:
+* **@dataSet:** This is the only directive that doesn't indicate how content is shown but rather how it is consumed (by components in other nodes). For example:
 
    ```
    @dataSet set1 Some Sample Data
    ```
-   In the above example, the data in the example node will have a key of 'set1' (which can be used by components elsewhere in the tree). The text after the key name will be used as the node label in the tree menu. </t>
+   In the above example, the data in the example node will have a key of 'set1' (which can be used by components elsewhere in the tree). The text after the key name will be used as the node label in the tree menu. 
+   
+* **@group-** Treat the immediate child nodes as one data set.   </t>
 <t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
 
     [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))
@@ -2831,5 +2836,8 @@ source: OpenWeather Map</t>
 <t tx="josephorr.20190101130116.1">template: openbooks
 comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20190103202205.1"></t>
+<t tx="josephorr.20190105100838.1"></t>
+<t tx="josephorr.20190105100846.1"></t>
+<t tx="josephorr.20190105100914.1"></t>
 </tnodes>
 </leo_file>
