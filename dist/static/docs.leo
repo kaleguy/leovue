@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -87,7 +87,7 @@
 <v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -106,7 +106,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -119,12 +119,12 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
 <v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
@@ -185,7 +185,7 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1"></v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -290,7 +290,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
 <v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1" a="E"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
@@ -1282,9 +1282,7 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
   ]
 }
 </t>
-<t tx="josephorr.20171107074208.1">@language md
-
-A line chart with some random data contained in the **set1** @dataTable node.
+<t tx="josephorr.20171107074208.1">@language html
 
 &lt;line-chart dataSet="set1" :gridLines="true" :board="true"/&gt;</t>
 <t tx="josephorr.20171107074219.1">## Data Sets
@@ -1325,7 +1323,7 @@ For a more complete example of JSON data in LeoVue see:
         }
      ]
 }</t>
-<t tx="josephorr.20171107082534.1">@language md
+<t tx="josephorr.20171107082534.1">@language html
 
 A bar chart with some random data contained in the [[set1]] @dataTable node.
 
