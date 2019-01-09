@@ -1,10 +1,9 @@
 <template>
-  <div class="lv-timeline">
-    <timeline
-      :timeline-items="chapters"
-      :message-when-no-items="messageWhenNoItems"
-      :unique-year="true"
-      order="desc"
+  <div class="word-cloud">
+    <vue-word-cloud
+      :words="chapters"
+      :color="([, weight]) => weight > 50 ? 'DeepPink' : weight > 25 ? 'RoyalBlue' : 'Indigo'"
+      font-family="Roboto"
     />
   </div>
 </template>
@@ -12,11 +11,11 @@
 <script>
   import _ from 'lodash'
   import util from '../util'
-  import Timeline from 'timeline-vuejs'
+  const sw = require('stopword')
+  const split = require('split-string-words')
   export default {
-    name: 'lv-timeline',
+    name: 'word-cloud',
     components: {
-      timeline: Timeline
     },
     props: {
       group: {
@@ -54,17 +53,53 @@
           } catch (e) {
             console.log(e, child.id)
           }
-          const o = {}
-          let key = this.from || 'blank'
-          o.from = new Date(_.get(textData, key, ''))
-          key = this.title || 'blank'
-          o.title = _.get(textData, key, '')
-          key = this.description || 'blank'
-          o.description = _.get(textData, key, '')
-          items.push(o)
+          items.push(_.get(textData, 'abstract', ''))
         })
-        return items
-        // return this.$store.state.viewType
+        let text = items.join()
+        // text = stripchar.RSspecChar(text.toLowerCase())
+        text = text.replace(/[[\]&,;'"”’().*?]/g, ' ')
+        // console.log('TTT', text)
+        let words = split(text)
+        words = sw.removeStopwords(words)
+        const wf = {}
+        _.remove(words, word => /\d/.test(word))
+        words.forEach(word => {
+          if (word.length < 4) { return }
+          word = word.toLowerCase()
+          wf[word] = wf[word] ? wf[word] + 1 : 1
+        })
+        // debugger
+        const wordFreq = {}
+        // console.log('WF', wf, wordFreq)
+        Object.keys(wf).forEach(k => {
+          const v = wf[k]
+          if (v > 11) wordFreq[k] = v
+        })
+        const keys = Object.keys(wordFreq)
+        keys.forEach(k => {
+          if (wordFreq[k + 's']) {
+            wordFreq[k] = wordFreq[k] + wordFreq[k + 's']
+            delete wordFreq[k + 's'] // combine plural with singular count
+          }
+          if (wordFreq[k + 'd']) {
+            wordFreq[k] = wordFreq[k] + wordFreq[k + 'd']
+            delete wordFreq[k + 'd'] // combine past tense with present count
+          }
+          if (wordFreq[k + 'ly']) {
+            wordFreq[k] = wordFreq[k] + wordFreq[k + 'ly']
+            delete wordFreq[k + 'ly'] // combine adverb form with adj count
+          }
+        })
+        const c = []
+        Object.keys(wordFreq).forEach(key => {
+          const a = []
+          a.push(key)
+          a.push(wordFreq[key])
+          c.push(a)
+        })
+        // console.log('ITEMS', Object.keys(wordFreq).length, wordFreq)
+        console.log('C', c)
+        return c
       }
     },
     methods: {
@@ -110,6 +145,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-.summary-table
-  cursor: pointer
+.word-cloud
+ margin: 10px
 </style>

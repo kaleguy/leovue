@@ -19,9 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add lv component list to docs
 - fix bookmarked charts
 
-## [1.18.3] - 2018-01-05
+## [1.19.0] - 2018-01-09
 ### Added
 - @group
+- word-cloud component
 
 
 ## [1.18.2] - 2018-01-03

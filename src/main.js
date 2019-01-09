@@ -34,11 +34,13 @@ import NodeLink from './components/NodeLink'
 import MathJaxComponent from './components/MathJax'
 import ImageLeft from './components/layout/ImageLeft'
 import LVTimeline from './components/LVTimeline'
+import WordCloud from './components/WordCloud'
 import Kanban from './components/Kanban'
 import MermaidBoard from './components/MermaidBoard'
 import D3Board from './components/D3Board'
 import { TableComponent, TableColumn } from 'vue-table-component'
 import SummaryTable from './components/SummaryTable'
+import VueWordCloud from 'vuewordcloud'
 
 import {charts} from './content-components/Charts'
 charts(Vue)
@@ -51,6 +53,7 @@ Vue.use(ForkMeOnGithub)
 Vue.use(BootstrapVue)
 Vue.component('star-rating', StarRating)
 Vue.component('lv-timeline', LVTimeline)
+Vue.component('word-cloud', WordCloud)
 Vue.component('img-left', ImageLeft)
 Vue.component('sectionlink', SectionLink)
 Vue.component('toc', TOC) // table of contents (of child nodes)
@@ -71,6 +74,7 @@ Vue.component('table-column', TableColumn)
 Vue.component('kanban', Kanban)
 Vue.component('mermaid-board', MermaidBoard)
 Vue.component('d3-board', D3Board)
+Vue.component(VueWordCloud.name, VueWordCloud)
 
 sync(store, router)
 
