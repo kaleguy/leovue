@@ -22,17 +22,13 @@
         type: String,
         default: ''
       },
-      title: {
-        type: String,
-        default: ''
-      },
       from: {
         type: String,
         default: ''
       },
-      description: {
-        type: String,
-        default: ''
+      threshold: {
+        type: Number,
+        default: 11
       }
     },
     data: () => ({
@@ -53,12 +49,11 @@
           } catch (e) {
             console.log(e, child.id)
           }
-          items.push(_.get(textData, 'abstract', ''))
+          items.push(_.get(textData, this.from, ''))
         })
         let text = items.join()
         // text = stripchar.RSspecChar(text.toLowerCase())
         text = text.replace(/[[\]&,;'"”’().*?]/g, ' ')
-        // console.log('TTT', text)
         let words = split(text)
         words = sw.removeStopwords(words)
         const wf = {}
@@ -70,10 +65,9 @@
         })
         // debugger
         const wordFreq = {}
-        // console.log('WF', wf, wordFreq)
         Object.keys(wf).forEach(k => {
           const v = wf[k]
-          if (v > 11) wordFreq[k] = v
+          if (v > this.threshold) wordFreq[k] = v
         })
         const keys = Object.keys(wordFreq)
         keys.forEach(k => {
@@ -97,8 +91,6 @@
           a.push(wordFreq[key])
           c.push(a)
         })
-        // console.log('ITEMS', Object.keys(wordFreq).length, wordFreq)
-        console.log('C', c)
         return c
       }
     },

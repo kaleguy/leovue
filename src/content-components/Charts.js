@@ -1,7 +1,56 @@
 import VueChartJs from 'vue-chartjs'
 import _ from 'lodash'
+import moment from 'moment'
 
 const defaultColors = ['#8e5ea2', '#3cba9f', '#3e95cd', '#e8c3b9', '#c45850']
+
+function getDataSetFromGroup (data, textItems, group) {
+  const item = JSON.search(data, '//*[group="' + group + '"]')[0]
+  const children = item.children
+  const items = []
+  children.forEach(child => {
+    const t = textItems[child.t]
+    let textData = {}
+    try {
+      textData = JSON.parse(t)
+    } catch (e) {
+      console.log(e, child.id)
+    }
+    items.push(textData)
+  })
+  const dataObject = {}
+  items.forEach(item => {
+    item.year = moment(item).year()
+  })
+  items.forEach(item => {
+    dataObject[item.year] = dataObject[item.year] || 0
+    dataObject[item.year] = dataObject[item.year] + 1
+  })
+  console.log(dataObject)
+
+  const dataSet = {
+    labels: [
+      'January', 'February', 'March', 'April',
+      'May', 'June', 'July', 'August',
+      'September', 'October', 'November', 'December'],
+    datasets: [
+      {
+        label: 'Data One',
+        borderColor: '#8e5ea2',
+        backgroundColor: '#8e5ea2',
+        data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+      },
+      {
+        label: 'Data Two',
+        borderColor: '#f87979',
+        backgroundColor: '#f87979',
+        data: [20, 30, 2, 9, 40, 40, 59, 90, 30, 25, 32, 21]
+      }
+    ]
+  }
+  console.log(group)
+  return dataSet
+}
 
 /**
  * Remove columns from array and return in collection
@@ -68,6 +117,7 @@ function charts (Vue) {
       props: {
         dataSet: String,
         dataTable: String,
+        group: String,
         title: String,
         col: String,
         gridLines: Boolean,
@@ -112,6 +162,16 @@ function charts (Vue) {
         if (type === 'Doughnut') { delete options.scales }
         if (type === 'Polar') { delete options.scales }
         let data = null
+        if (this.group) {
+
+        }
+        if (this.group) {
+          data = getDataSetFromGroup(
+            this.$store.state.leodata,
+            this.$store.state.leotext,
+            this.group
+          )
+        }
         if (this.dataSet) {
           data = this.$store.state.dataSets[this.dataSet]
           if (!data) {
