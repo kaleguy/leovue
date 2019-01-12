@@ -1,0 +1,278 @@
+<html>
+<head>
+  <script defer=defer
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel=stylesheet>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js></script>
+  <script defer=defer src=https://cdn.rawgit.com/OnsenUI/OnsenUI-dist/2.0.0-beta.5/js/onsenui.min.js></script>
+  <script src=https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js></script>
+  <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+  <script>window.lconfig = {
+    "showAppTitle": false,
+    "showHeader": true,
+    "docTitle": "LeoVue Documentation and Example Content",
+    "filename": "static/peterson-full",
+    "firstNodeAsTitle": true,
+    "baseMode": "t", // t = outline, for other types, see below
+    "activeBackgroundColor": "#01FF70", //
+    "itemArrow": "\uf105", // ▹▷▶›>►
+    "leftPaneWidth": '300px',
+    "leftPaneBackground": '#fafafa',
+    "leftPanePadding": '10px',
+    "contentPaneWidth": '780px',
+    "coverPage": true,
+    "viewTypes": [
+      {"name": "Outline", "type": "t"},
+      {"name": "Inline", "type": "a"},
+      {"name": "Graphic Tree", "type": "d"},
+      // {"name": "Dendrogram", "type": "z"},
+      {"name": "Nested Menu", "type": "n"}
+    ],
+    githubRibbon: {
+      text: 'Fork me on GitHub',
+      linkUrl: 'https://github.com/kaleguy/leovue',
+      fixed: true
+    },
+    // dataSources have a template name as key
+    // the template object has one key: host
+    // the host will have the node title appended to fetch JSON which gets processed via the template
+    "dataSources":
+      {
+        "rgarticle": {
+          "host": "http://localhost:8888/rg/article?title=",
+        },
+        "rgarticle-brief": {
+          "host": "http://localhost:8888/rg/article?title=",
+        },
+        "rgarticles": {
+          "host": "http://localhost:8888/rg/articles?name=",
+        },
+        "rgauthor": {
+          "host": "http://localhost:8888/rg/author?name=",
+        },
+        "rgcitations": {
+          "host": "http://localhost:8888/rg/citations?name=",
+        }
+      }
+  }
+  // "leftPaneWidth": 'calc(50vw - 300px)',
+  // "rightPaneWidth": 'calc(50vw + 300px)',
+  // "leftPanePadding": 'calc(50vw - 600px)',</script>
+  <meta charset=utf-8>
+  <title>LeoVue</title>
+  <meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE">
+  <meta name=description
+        content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines.">
+  <link href=static/css/app.css?146b226f238fbded81574d7b5914df3f rel=stylesheet>
+</head>
+<body>
+<div id=app></div>
+<script type=text/ons-template id=popover.html>
+  <ons-popover
+  direction="up down" cancelable>
+  <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
+    <p>This is a popover!</p>
+    <p>
+      <small>Click the background to remove the popover.</small>
+    </p>
+  </div>
+  </ons-popover></script>
+<div id=popup class=popover style=display:none>
+  <div class=arrow></div>
+  <h3 class=popover-header>Popover Title</h3>
+  <div class=popover-body>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia
+    quam venenatis vestibulum.
+  </div>
+</div>
+<script type=text/template id=rgarticle>
+  <div
+  class="rg">
+  <div class="publication-header">
+    <h1>{{- data.title }}</h1>
+    <div class="publication-meta-text">
+      <strong>
+          <span>
+            <a target="_blank" href="{{- data.url }}">Article</a>
+            in
+          <a target="_blank" href="//www.researchgate.net/{{- data.journal.href}}">{{- data.journal.text }}</a>
+        </span>
+      </strong>
+      <span> with {{- data.reads }}</span>
+    </div>
+    <div>
+      <ul>
+        {{ data.authors.forEach(author => { }}
+        <li class="publication-author-list__item">
+          <div>
+            <a target="_blank" href="{{- author.name.href }}">{{- author.name.text }}</a>
+          </div>
+          {{ if (author.rating){ }}
+          <span class="bars-1"/>
+          {{ } }}
+          <span>{{- author.rating }}	{{- author.institution }}</span>
+        </li>
+        {{ }) }}
+      </ul>
+    </div>
+    <div class="publication-abstract">
+      <div>
+        <strong>Abstract</strong>
+      </div>
+      <div>{{- data.abstract }}</div>
+      <div class="references">{{- data.references }} References</div>
+    </div>
+    {{ if (data.correction) { }}
+    <div class="publication-abstract">
+      <div class="hshim"></div>
+      <div>
+        <strong>Correction</strong>
+      </div>
+      <div>{{- data.correction.text }} <a href="{{- data.correction.href }}">Details</a>
+      </div>
+    </div>
+    {{ } }}
+    <div class="footer">
+      <a target="_blank" href="{{- data.url }}">See this article on ResearchGate.</a>
+    </div>
+  </div>
+  </div></script>
+<script type=text/template id=rgarticle-brief>
+  <div
+  class="rg">
+  <div class="publication-header">
+    <h1>{{- data.title.text }}</h1>
+    <div class="publication-meta-text">
+      <span> {{- data['type'].text}}: {{- data.date }} with {{- data.reads }}</span>
+    </div>
+    <div>
+      <ul>
+        {{ data.authors.forEach(author => { }}
+        <li class="publication-author-list__item_brief">
+          <div>
+            <a target="_blank" href="http://researchget.net/{{- author.author.href }}">{{- author.author.text }}</a>
+          </div>
+        </li>
+        {{ }) }}
+      </ul>
+    </div>
+    <div class="publication-abstract">
+      <div>
+        <strong>Abstract</strong>
+      </div>
+      <div>{{- data.abstract }}</div>
+    </div>
+    <div class="footer">
+      <a target="_blank" href="https://www.researchgate.net/{{- data.title.href}}">See this article on ResearchGate.</a>
+    </div>
+  </div>
+  </div></script>
+<script type=text/template id=repec>
+  <div
+  class="rg">
+  <div class="publication-header">
+    <h1>{{- data.bibliographic.name }}</h1>
+    <div>
+      {{- data.author }}
+    </div>
+    <div class="series">
+      {{- data.series && data.series.name }} ({{- data.bibliographic.creation_date || data.bibliographic.year }})
+    </div>
+    <div class="publication-abstract">
+      <div>
+        <strong>Abstract</strong>
+      </div>
+      <div>{{- data.abstract }}</div>
+    </div>
+    <div class="footer">
+      <a target="_blank" href="{{- data.link}}">See this article on IDEAS.</a>
+    </div>
+  </div>
+  </div></script>
+<script type=text/template id=rgauthor>
+  <div
+  class="rg">
+  <h2>Author</h2>
+  <div>{{- data.name}} {{- data.title}}</div>
+  <div>
+    <a target="_blank" href="{{- data.institution.href}}">{{- data.institution.text}}</a>
+  </div>
+  <div>
+    <a target="_blank" href="{{- data.department.href}}">{{- data.department.text}}</a>
+  </div>
+  <h3>ResearchGate Stats</h3>
+  <div>Citations: {{- data.citations}}</div>
+  <div>Reads: {{- data.reads}}</div>
+  <div>Research Items: {{- data.researchItems}}</div>
+  <div><a target="_blank" href="{{- data.url}}">Profile</a></div>
+  </div></script>
+<script type=text/template id=rgarticles>
+  <div
+  class="table-component">
+  <table-component
+    @rowClick="this.$parent.dataTableClick"
+    :data="[
+    {{ data.articles.forEach(article => { }}
+      {{ if (article.type.text === 'Article') { }}
+      {
+        title: '<div>{{- article.title.text}}</div>',
+        date: '<div>{{- moment(article.date).format('YYYY-MM') }}</div>',
+        reads: '{{- article.reads.replace(/[a-zA-Z]/g, '')}}',
+        readNum: {{- article.reads.replace(/[,a-zA-Z]/g, '')}}
+      },
+      {{ } }}
+    {{ }) }}
+     ]"
+    sort-order="asc"
+    sort-by="readNum">
+    <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
+    <table-column show="date" label="Date" header-class="data-cell" cell-class="data-cell"></table-column>
+    <table-column show="reads" label="Reads" sort-by="readNum" cell-class="right"></table-column>
+    <table-column show="readNum" label="R" data-type="numeric" :hidden="true"></table-column>
+  </table-component>
+  </div></script>
+<script type=text/template id=repec-articles>
+  <div
+  class="table-component">
+  <table-component
+    @rowClick="this.$parent.dataTableClick"
+    :data="[
+      {{ data.articles.forEach(article => { }}
+        {
+          title: '<div>{{- article.bibliographic.name}}</div>',
+          year: '<div>{{- article.bibliographic.creation_date || article.bibliographic.year }}</div>'
+        },
+      {{ }) }}
+     ]"
+    sort-order="asc">
+    <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
+    <table-column show="year" label="Year" header-class="data-cell" cell-class="data-cell"></table-column>
+  </table-component>
+  </div></script>
+<script type=text/template id=rgcitations>CITATIONS</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script>
+<script>window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'UA-118289537-1');</script>
+<script src=https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js></script>
+<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+<style type=text/css>#app {
+  font-family: Avenir, Nunito, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+H1, H2 {
+  margin-bottom: 1.5rem;
+}</style>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/leo-vue/dist/static/js/manifest.js>
+</script>
+<script type=text/javascript
+        src=https://cdn.jsdelivr.net/npm/leo-vue/dist/static/js/vendor.js></script>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/leo-vue/dist/static/js/app.js></script>
+</body>
+</html>

@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @tab
 - add lv component list to docs
 - fix bookmarked charts
+- remove font awesome cdn
 
 ## [1.19.1] - 2018-01-10
 ### Added

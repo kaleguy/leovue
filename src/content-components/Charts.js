@@ -1,56 +1,10 @@
 import VueChartJs from 'vue-chartjs'
 import _ from 'lodash'
-import moment from 'moment'
+import Moment from 'moment'
+import { extendMoment } from 'moment-range'
+const moment = extendMoment(Moment)
 
 const defaultColors = ['#8e5ea2', '#3cba9f', '#3e95cd', '#e8c3b9', '#c45850']
-
-function getDataSetFromGroup (data, textItems, group) {
-  const item = JSON.search(data, '//*[group="' + group + '"]')[0]
-  const children = item.children
-  const items = []
-  children.forEach(child => {
-    const t = textItems[child.t]
-    let textData = {}
-    try {
-      textData = JSON.parse(t)
-    } catch (e) {
-      console.log(e, child.id)
-    }
-    items.push(textData)
-  })
-  const dataObject = {}
-  items.forEach(item => {
-    item.year = moment(item).year()
-  })
-  items.forEach(item => {
-    dataObject[item.year] = dataObject[item.year] || 0
-    dataObject[item.year] = dataObject[item.year] + 1
-  })
-  console.log(dataObject)
-
-  const dataSet = {
-    labels: [
-      'January', 'February', 'March', 'April',
-      'May', 'June', 'July', 'August',
-      'September', 'October', 'November', 'December'],
-    datasets: [
-      {
-        label: 'Data One',
-        borderColor: '#8e5ea2',
-        backgroundColor: '#8e5ea2',
-        data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
-      },
-      {
-        label: 'Data Two',
-        borderColor: '#f87979',
-        backgroundColor: '#f87979',
-        data: [20, 30, 2, 9, 40, 40, 59, 90, 30, 25, 32, 21]
-      }
-    ]
-  }
-  console.log(group)
-  return dataSet
-}
 
 /**
  * Remove columns from array and return in collection
@@ -122,6 +76,12 @@ function charts (Vue) {
         col: String,
         gridLines: Boolean,
         board: Boolean,
+        dataKey: String,
+        sparse: Boolean,
+        period: String,
+        legendLabel: String,
+        backgroundColor: String,
+        borderColor: String,
         responsive: {
           type: Boolean,
           default: true
@@ -135,11 +95,67 @@ function charts (Vue) {
           }
           const b = window.document.getElementById('panes-separator')
           let h = (b && b.scrollHeight) || 0
-          console.log(h)
           if (h) {
             h = h - 100
           }
           return h || 400
+        },
+        dataSetFromGroup () {
+          let group = this.group
+          let data = this.$store.state.leodata
+          const textItems = this.$store.state.leotext
+          const item = JSON.search(data, '//*[group="' + group + '"]')[0]
+          const children = item.children
+          const items = []
+          children.forEach(child => {
+            const t = textItems[child.t]
+            let textData = {}
+            try {
+              textData = JSON.parse(t)
+            } catch (e) {
+            }
+            items.push(textData)
+          })
+          let dataObject = {}
+          items.forEach(item => {
+            const key = this.dataKey || 'pubdate'
+            if (this.period) {
+              item.period = moment(item[key])[this.period]()
+            }
+          })
+          items.forEach(item => {
+            dataObject[item.period] = dataObject[item.period] || 0
+            dataObject[item.period] = dataObject[item.period] + 1
+          })
+          const labels = Object.keys(dataObject).sort()
+          // fill in sparse data. Currently only works for years
+          if (this.sparse) {
+            const sparseDataObject = {}
+            const startDate = labels[0]
+            const endDate = _.last(labels)
+            const range = moment.range(startDate, endDate)
+            let dates = Array.from(range.by('year'))
+            dates.shift()
+            dates = dates.map(m => m.format('YYYY'))
+            dates.forEach(date => {
+              sparseDataObject[date] = dataObject[date] || 0
+            })
+            dataObject = sparseDataObject
+          }
+          data = _.values(dataObject)
+          // const backgroundColor = ['#0074D9', '#FF4136', '#2ECC40', '#FF851B', '#7FDBFF', '#B10DC9', '#FFDC00', '#001f3f', '#39CCCC', '#01FF70', '#85144b', '#F012BE', '#3D9970', '#111111', '#AAAAAA']
+          const dataSet = {
+            labels,
+            datasets: [
+              {
+                label: this.legendLabel,
+                borderColor: this.borderColor || this.backgroundColor,
+                backgroundColor: this.backgroundColor,
+                data
+              }
+            ]
+          }
+          return dataSet
         }
       },
       mounted () {
@@ -153,7 +169,11 @@ function charts (Vue) {
               barPercentage: 0.8
             }],
             yAxes: [ {
-              gridLines: { display: this.gridLines }
+              gridLines: { display: this.gridLines },
+              ticks: {
+                beginAtZero: true,
+                padding: 25
+              }
             }]
           }
         }
@@ -163,14 +183,7 @@ function charts (Vue) {
         if (type === 'Polar') { delete options.scales }
         let data = null
         if (this.group) {
-
-        }
-        if (this.group) {
-          data = getDataSetFromGroup(
-            this.$store.state.leodata,
-            this.$store.state.leotext,
-            this.group
-          )
+          data = this.dataSetFromGroup
         }
         if (this.dataSet) {
           data = this.$store.state.dataSets[this.dataSet]

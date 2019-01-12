@@ -138,5 +138,5 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
 .word-cloud
- margin: 10px
+ padding: 10px
 </style>

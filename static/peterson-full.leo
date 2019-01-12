@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leovue.20181220072125_1" a="E"><vh>Research of Jordan Peterson</vh>
+<v t="leovue.20181220072125_1"><vh>Research of Jordan B Peterson</vh></v>
 <v t="leovue.20181204092754_1"><vh>@board @group-1 All</vh>
 <v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-1"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -118,7 +118,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -262,14 +262,14 @@
 </v>
 </v>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
-<v t="josephorr.20190108204954.1" a="E"><vh>Word Clouds</vh>
+<v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
 <v t="josephorr.20190108205009.1"><vh>@board Except Alcohol Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190109081724.1"><vh>Charts</vh></v>
+<v t="josephorr.20190111190948.1"><vh>Charts</vh></v>
+<v t="josephorr.20190112092020.1"><vh>test</vh></v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
 <v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
-</v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20181220213416.1">{
@@ -361,12 +361,21 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 # Word Clouds
 
 &lt;toc/&gt;</t>
-<t tx="josephorr.20190108205009.1">&lt;word-cloud from="abstract" group=2 /&gt;</t>
-<t tx="josephorr.20190109081724.1">@language html
+<t tx="josephorr.20190108205009.1">&lt;word-cloud group=2 /&gt;</t>
+<t tx="josephorr.20190111190948.1">@language html
 
-&lt;bar-chart group="1" /&gt;
+&lt;bar-chart 
+  group=1 
+  sparse=true 
+  period=year 
+  legendLabel="Number of Articles"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190112092020.1">@language html
 
-</t>
+&lt;pie-chart 
+  group=1 
+  dataKey="authors.institution" /&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
