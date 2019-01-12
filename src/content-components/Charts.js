@@ -91,7 +91,7 @@ function charts (Vue) {
         // if board display, make graph 90% of bpane
         height () {
           if (!this.board) {
-            return 400
+            return 500
           }
           const b = window.document.getElementById('panes-separator')
           let h = (b && b.scrollHeight) || 0
@@ -102,11 +102,12 @@ function charts (Vue) {
         },
         dataSetFromGroup () {
           let group = this.group
+          let dataKey = this.dataKey
           let data = this.$store.state.leodata
           const textItems = this.$store.state.leotext
           const item = JSON.search(data, '//*[group="' + group + '"]')[0]
           const children = item.children
-          const items = []
+          let items = []
           children.forEach(child => {
             const t = textItems[child.t]
             let textData = {}
@@ -117,17 +118,30 @@ function charts (Vue) {
             items.push(textData)
           })
           let dataObject = {}
+          // if the data points are in a subobject, get list of those
+          if (this.dataKey.indexOf('.') > -1) {
+            dataKey = this.dataKey.substring(0, this.dataKey.lastIndexOf('.'))
+            dataKey = '//' + dataKey.replace(/\./, '/')
+            items = JSON.search(items, dataKey)
+            dataKey = this.dataKey.substring(this.dataKey.lastIndexOf('.') + 1)
+          }
+          // process the list items
           items.forEach(item => {
             const key = this.dataKey || 'pubdate'
             if (this.period) {
+              dataKey = this.period
               item.period = moment(item[key])[this.period]()
             }
           })
           items.forEach(item => {
-            dataObject[item.period] = dataObject[item.period] || 0
-            dataObject[item.period] = dataObject[item.period] + 1
+            let k = item[dataKey]
+            if (!k) {
+              k = 'N/A'
+            }
+            dataObject[k] = dataObject[k] || 0
+            dataObject[k] = dataObject[k] + 1
           })
-          const labels = Object.keys(dataObject).sort()
+          const labels = Object.keys(dataObject) // .sort()
           // fill in sparse data. Currently only works for years
           if (this.sparse) {
             const sparseDataObject = {}
@@ -229,6 +243,7 @@ function charts (Vue) {
   }
   Vue.component('line-chart', getChartOptions('Line'))
   Vue.component('bar-chart', getChartOptions('Bar'))
+  Vue.component('horizontalBar-chart', getChartOptions('HorizontalBar'))
   Vue.component('pie-chart', getChartOptions('Pie'))
   Vue.component('doughnut-chart', getChartOptions('Doughnut'))
   Vue.component('polar-chart', getChartOptions('PolarArea'))

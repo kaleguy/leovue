@@ -366,14 +366,14 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 
 &lt;bar-chart 
   group=1 
-  sparse=true 
+  :sparse="true" 
   period=year 
   legendLabel="Number of Articles"
   :backgroundColor="'#8e5ea2'"
   dataKey=pubdate /&gt;</t>
 <t tx="josephorr.20190112092020.1">@language html
 
-&lt;pie-chart 
+&lt;horizontalBar-chart 
   group=1 
   dataKey="authors.institution" /&gt;</t>
 <t tx="leovue.2-1">{
