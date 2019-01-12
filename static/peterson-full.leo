@@ -261,13 +261,17 @@
 <v t="leovue.2-27"></v>
 </v>
 </v>
+<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
 <v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
 <v t="josephorr.20190108205009.1"><vh>@board Except Alcohol Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190111190948.1"><vh>Charts</vh></v>
-<v t="josephorr.20190112092020.1"><vh>test</vh></v>
+<v t="josephorr.20190111190948.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20190112170556.1"><vh>@board Article Count</vh></v>
+<v t="josephorr.20190112092020.1"><vh>@board Author Institution</vh></v>
+</v>
+</v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
 <v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
 </vnodes>
@@ -362,20 +366,30 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 
 &lt;toc/&gt;</t>
 <t tx="josephorr.20190108205009.1">&lt;word-cloud group=2 /&gt;</t>
-<t tx="josephorr.20190111190948.1">@language html
+<t tx="josephorr.20190111190948.1">@language md
+
+# Charts
+
+&lt;toc/&gt;</t>
+<t tx="josephorr.20190112092020.1">@language html
+
+&lt;horizontalBar-chart 
+  group=1 
+  legendLabel="Author Institution"
+  :board="true"
+  :backgroundColor="'#8e5ea2'"
+  dataKey="authors.institution" /&gt;</t>
+<t tx="josephorr.20190112170529.1"></t>
+<t tx="josephorr.20190112170556.1">@language html
 
 &lt;bar-chart 
   group=1 
   :sparse="true" 
   period=year 
+  :board="true"
   legendLabel="Number of Articles"
   :backgroundColor="'#8e5ea2'"
   dataKey=pubdate /&gt;</t>
-<t tx="josephorr.20190112092020.1">@language html
-
-&lt;horizontalBar-chart 
-  group=1 
-  dataKey="authors.institution" /&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",

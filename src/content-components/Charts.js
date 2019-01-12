@@ -91,12 +91,13 @@ function charts (Vue) {
         // if board display, make graph 90% of bpane
         height () {
           if (!this.board) {
-            return 500
+            return 400
           }
-          const b = window.document.getElementById('panes-separator')
-          let h = (b && b.scrollHeight) || 0
+          // const b = window.document.getElementById('panes-separator')
+          // let h = (b && b.scrollHeight) || 0
+          let h = window.innerHeight
           if (h) {
-            h = h - 100
+            h = h - 60
           }
           return h || 400
         },
@@ -129,7 +130,7 @@ function charts (Vue) {
           items.forEach(item => {
             const key = this.dataKey || 'pubdate'
             if (this.period) {
-              dataKey = this.period
+              dataKey = 'period'
               item.period = moment(item[key])[this.period]()
             }
           })
@@ -176,6 +177,14 @@ function charts (Vue) {
         const options = {
           responsive: this.responsive,
           maintainAspectRatio: false,
+          layout: {
+            padding: {
+              left: 20,
+              right: 20,
+              top: 20,
+              bottom: 20
+            }
+          },
           scales: {
             xAxes: [ {
               gridLines: { display: this.gridLines },
