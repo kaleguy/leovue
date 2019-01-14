@@ -118,7 +118,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -270,9 +270,10 @@
 <v t="josephorr.20190111190948.1" a="E"><vh>Charts</vh>
 <v t="josephorr.20190112170556.1"><vh>@board Article Count</vh></v>
 <v t="josephorr.20190112092020.1"><vh>@board Author Institution</vh></v>
-</v>
+<v t="josephorr.20190112182206.1"><vh>@board Journal</vh></v>
 </v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
+</v>
 <v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
 </vnodes>
 <tnodes>
@@ -375,8 +376,11 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 
 &lt;horizontalBar-chart 
   group=1 
-  legendLabel="Author Institution"
+  legendLabel="Co-Author Institution (Count)"
   :board="true"
+  sort="value"
+  filterKey="name.text"
+  filterValue="Jordan B Peterson"
   :backgroundColor="'#8e5ea2'"
   dataKey="authors.institution" /&gt;</t>
 <t tx="josephorr.20190112170529.1"></t>
@@ -390,6 +394,14 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   legendLabel="Number of Articles"
   :backgroundColor="'#8e5ea2'"
   dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190112182206.1">&lt;horizontalBar-chart 
+  group=1 
+  legendLabel="Journal"
+  :board="true"
+  :h="1000"
+  sort=value
+  :backgroundColor="'#8e5ea2'"
+  dataKey="journal.text" /&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -1460,8 +1472,8 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   "references": "35",
   "reads": "2,932 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "https://www.researchgate.net/publication/265245291_The_Benefits_of_Writing/download",
+    "text": "N/A"
   },
   "abstract": "This is a brief review of the benefits of writing about uncertainty and trauma (including expressive writing and future goal-setting) prior to and including 2010.",
   "authors": [
@@ -3150,8 +3162,8 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   "references": "71",
   "reads": "11,093 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "https://www.firstthings.com/",
+    "text": "Religion and Public Life"
   },
   "abstract": "Memory is vulnerable, easily distorted to fit beliefs and modes of action that are more expedient than accurate. When the process of remembering becomes collective, such distortion may be greatly increased. Collective memories are acquired and transmitted in a social context, and are therefore the modifiable property of many people (De La Ronde &amp;Swann, 1998; Hardin &amp;Higgins, 1996; Rosenthal &amp;Rubin, 1978; Snyder, 1974). The tendency towards social modification, which can serve positively to unite the members of a group, has a very negative, dangerous, underground aspect. Individuals appear somewhat constrained in their willingness to inflict destruction (or at least in the power to do so). Groups of individuals are not. The dangers of self-deception about past events, far from trivial in the personal case, are tremendously magnified in the social arena. The careless use of memory can lead directly to the grave abuse of people.",
   "authors": [
@@ -3357,7 +3369,7 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
         "href": "https://www.researchgate.net/profile/Kathleen_W_Smith",
         "text": "Kathleen W. Smith"
       },
-      "institution": "Toronto"
+      "institution": "N/A"
     },
     {
       "name": {

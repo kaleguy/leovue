@@ -79,6 +79,10 @@ function charts (Vue) {
         dataKey: String,
         sparse: Boolean,
         period: String,
+        filterKey: String,
+        filterValue: String,
+        sort: String,
+        h: Number,
         legendLabel: String,
         backgroundColor: String,
         borderColor: String,
@@ -95,6 +99,9 @@ function charts (Vue) {
           }
           // const b = window.document.getElementById('panes-separator')
           // let h = (b && b.scrollHeight) || 0
+          if (this.h) {
+            return this.h
+          }
           let h = window.innerHeight
           if (h) {
             h = h - 60
@@ -126,6 +133,11 @@ function charts (Vue) {
             items = JSON.search(items, dataKey)
             dataKey = this.dataKey.substring(this.dataKey.lastIndexOf('.') + 1)
           }
+          console.log(items.length)
+          // debugger
+          if (this.filterKey) {
+            _.remove(items, item => _.get(item, this.filterKey) === this.filterValue)
+          }
           // process the list items
           items.forEach(item => {
             const key = this.dataKey || 'pubdate'
@@ -142,7 +154,7 @@ function charts (Vue) {
             dataObject[k] = dataObject[k] || 0
             dataObject[k] = dataObject[k] + 1
           })
-          const labels = Object.keys(dataObject) // .sort()
+          let labels = Object.keys(dataObject) // .sort()
           // fill in sparse data. Currently only works for years
           if (this.sparse) {
             const sparseDataObject = {}
@@ -156,8 +168,21 @@ function charts (Vue) {
               sparseDataObject[date] = dataObject[date] || 0
             })
             dataObject = sparseDataObject
+            labels = Object.keys(dataObject)
           }
-          data = _.values(dataObject)
+          if (this.sort === 'key') {
+            labels.sort()
+          }
+          if (this.sort === 'value') {
+            labels.sort(function (a, b) {
+              return dataObject[b] - dataObject[a]
+            })
+          }
+          data = []
+          labels.forEach(label => {
+            data.push(dataObject[label])
+          })
+          // data = _.values(dataObject)
           // const backgroundColor = ['#0074D9', '#FF4136', '#2ECC40', '#FF851B', '#7FDBFF', '#B10DC9', '#FFDC00', '#001f3f', '#39CCCC', '#01FF70', '#85144b', '#F012BE', '#3D9970', '#111111', '#AAAAAA']
           const dataSet = {
             labels,
@@ -189,7 +214,11 @@ function charts (Vue) {
             xAxes: [ {
               gridLines: { display: this.gridLines },
               categoryPercentage: 0.9,
-              barPercentage: 0.8
+              barPercentage: 0.8,
+              ticks: {
+                beginAtZero: true,
+                padding: 25
+              }
             }],
             yAxes: [ {
               gridLines: { display: this.gridLines },
