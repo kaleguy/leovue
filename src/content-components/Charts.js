@@ -1,10 +1,131 @@
 import VueChartJs from 'vue-chartjs'
 import _ from 'lodash'
 import Moment from 'moment'
-import { extendMoment } from 'moment-range'
+import {extendMoment} from 'moment-range'
+
 const moment = extendMoment(Moment)
 
 const defaultColors = ['#8e5ea2', '#3cba9f', '#3e95cd', '#e8c3b9', '#c45850']
+
+function dataSetFromGroups (groups, data, textItems, props) {
+  const datasets = []
+  let labels = []
+  groups.forEach(group => {
+    const dataSet = dataSetFromGroup(group, data, textItems, props)
+    labels.push(dataSet.labels)
+    const d = dataSet.datasets[0]
+    d.labels = dataSet.labels
+    d.label = dataSet.groupName
+    datasets.push(d)
+  })
+  // get master label list
+  labels = _.uniq(_.flatten(labels))
+  datasets.forEach((dataSet, index) => {
+    const dataObj = {}
+    // get a hash of labels/data for this dataset
+    for (let i = 0; i < dataSet.labels.length; i++) {
+      const k = dataSet.labels[i]
+      dataObj[k] = dataSet.data[i]
+    }
+    const points = []
+    dataSet.backgroundColor = defaultColors[index]
+    dataSet.borderColor = defaultColors[index]
+    // normalize the data (add zeros for labels not in this dataset)
+    labels.forEach(label => {
+      points.push(dataObj[label] || 0)
+    })
+    dataSet.data = points
+  })
+  return { labels, datasets }
+}
+
+function dataSetFromGroup (group, data, textItems, props) {
+  let dataKey = props.dataKey
+  const item = JSON.search(data, '//*[group="' + group + '"]')[0]
+  const children = item.children
+  let items = []
+  children.forEach(child => {
+    const t = textItems[child.t]
+    let textData = {}
+    try {
+      textData = JSON.parse(t)
+    } catch (e) {
+    }
+    items.push(textData)
+  })
+  let dataObject = {}
+  // if the data points are in a subobject, get list of those
+  if (props.dataKey.indexOf('.') > -1) {
+    dataKey = props.dataKey.substring(0, props.dataKey.lastIndexOf('.'))
+    dataKey = '//' + dataKey.replace(/\./, '/')
+    items = JSON.search(items, dataKey)
+    dataKey = props.dataKey.substring(props.dataKey.lastIndexOf('.') + 1)
+  }
+  console.log(items.length)
+  // debugger
+  if (props.filterKey) {
+    _.remove(items, item => _.get(item, props.filterKey) === props.filterValue)
+  }
+  // process the list items
+  items.forEach(item => {
+    const key = props.dataKey || 'pubdate'
+    if (props.period) {
+      dataKey = 'period'
+      item.period = moment(item[key])[props.period]()
+    }
+  })
+  items.forEach(item => {
+    let k = item[dataKey]
+    if (!k) {
+      k = 'N/A'
+    }
+    dataObject[k] = dataObject[k] || 0
+    dataObject[k] = dataObject[k] + 1
+  })
+  let labels = Object.keys(dataObject) // .sort()
+  // fill in sparse data. Currently only works for years
+  if (props.sparse) {
+    const sparseDataObject = {}
+    const startDate = labels[0]
+    const endDate = _.last(labels)
+    const range = moment.range(startDate, endDate)
+    let dates = Array.from(range.by('year'))
+    dates.shift()
+    dates = dates.map(m => m.format('YYYY'))
+    dates.forEach(date => {
+      sparseDataObject[date] = dataObject[date] || 0
+    })
+    dataObject = sparseDataObject
+    labels = Object.keys(dataObject)
+  }
+  if (props.sort === 'key') {
+    labels.sort()
+  }
+  if (props.sort === 'value') {
+    labels.sort(function (a, b) {
+      return dataObject[b] - dataObject[a]
+    })
+  }
+  data = []
+  labels.forEach(label => {
+    data.push(dataObject[label])
+  })
+  // data = _.values(dataObject)
+  // const backgroundColor = ['#0074D9', '#FF4136', '#2ECC40', '#FF851B', '#7FDBFF', '#B10DC9', '#FFDC00', '#001f3f', '#39CCCC', '#01FF70', '#85144b', '#F012BE', '#3D9970', '#111111', '#AAAAAA']
+  const dataSet = {
+    labels,
+    groupName: item.vtitle,
+    datasets: [
+      {
+        label: props.legendLabel,
+        borderColor: props.borderColor || props.backgroundColor,
+        backgroundColor: props.backgroundColor,
+        data
+      }
+    ]
+  }
+  return dataSet
+}
 
 /**
  * Remove columns from array and return in collection
@@ -20,14 +141,19 @@ function extractOptionColumns (table) {
   })
   return options
 }
+
 function extractColumn (table, options, colName, c) {
   const column = []
   const firstRow = table[0]
-  if (_.isUndefined(colName)) { c = 0 }
+  if (_.isUndefined(colName)) {
+    c = 0
+  }
   if (_.isUndefined(c)) {
     c = -1
     for (let i = 0; i < firstRow.length; i++) {
-      if (firstRow[i] === colName) { c = i }
+      if (firstRow[i] === colName) {
+        c = i
+      }
     }
     if (c === -1) {
       return {}
@@ -61,7 +187,7 @@ function dataTableToDataSet (dataTable) {
     set.fill = false
     datasets.push(set)
   })
-  return { datasets, labels, title, colors }
+  return {datasets, labels, title, colors}
 }
 
 function charts (Vue) {
@@ -72,6 +198,7 @@ function charts (Vue) {
         dataSet: String,
         dataTable: String,
         group: String,
+        groups: Array,
         title: String,
         col: String,
         gridLines: Boolean,
@@ -108,7 +235,9 @@ function charts (Vue) {
           }
           return h || 400
         },
-        dataSetFromGroup () {
+        xdataSetFromGroup () {
+          // const props = this.$options.propsData
+          console.log(dataSetFromGroup)
           let group = this.group
           let dataKey = this.dataKey
           let data = this.$store.state.leodata
@@ -134,7 +263,6 @@ function charts (Vue) {
             dataKey = this.dataKey.substring(this.dataKey.lastIndexOf('.') + 1)
           }
           console.log(items.length)
-          // debugger
           if (this.filterKey) {
             _.remove(items, item => _.get(item, this.filterKey) === this.filterValue)
           }
@@ -211,8 +339,8 @@ function charts (Vue) {
             }
           },
           scales: {
-            xAxes: [ {
-              gridLines: { display: this.gridLines },
+            xAxes: [{
+              gridLines: {display: this.gridLines},
               categoryPercentage: 0.9,
               barPercentage: 0.8,
               ticks: {
@@ -220,8 +348,8 @@ function charts (Vue) {
                 padding: 25
               }
             }],
-            yAxes: [ {
-              gridLines: { display: this.gridLines },
+            yAxes: [{
+              gridLines: {display: this.gridLines},
               ticks: {
                 beginAtZero: true,
                 padding: 25
@@ -230,12 +358,32 @@ function charts (Vue) {
           }
         }
         // kludge...
-        if (type === 'Pie') { delete options.scales }
-        if (type === 'Doughnut') { delete options.scales }
-        if (type === 'Polar') { delete options.scales }
+        if (type === 'Pie') {
+          delete options.scales
+        }
+        if (type === 'Doughnut') {
+          delete options.scales
+        }
+        if (type === 'Polar') {
+          delete options.scales
+        }
         let data = null
+
         if (this.group) {
-          data = this.dataSetFromGroup
+          data = dataSetFromGroup(
+            this.group,
+            this.$store.state.leodata,
+            this.$store.state.leotext,
+            this.$options.propsData
+          )
+        }
+        if (this.groups) {
+          data = dataSetFromGroups(
+            this.groups,
+            this.$store.state.leodata,
+            this.$store.state.leotext,
+            this.$options.propsData
+          )
         }
         if (this.dataSet) {
           data = this.$store.state.dataSets[this.dataSet]
@@ -279,6 +427,7 @@ function charts (Vue) {
     }
     return chartOptions
   }
+
   Vue.component('line-chart', getChartOptions('Line'))
   Vue.component('bar-chart', getChartOptions('Bar'))
   Vue.component('horizontalBar-chart', getChartOptions('HorizontalBar'))

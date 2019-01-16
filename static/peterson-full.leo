@@ -119,7 +119,7 @@
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
 <v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
-<v t="josephorr.20181224141950.1"><vh>@board Alcoholism and Addiction</vh>
+<v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
 <v t="leovue.2-55"></v>
@@ -153,7 +153,7 @@
 <v t="leovue.2-105"></v>
 <v t="leovue.2-107"></v>
 </v>
-<v t="josephorr.20181226172138.1"><vh>@board @group-2 Not Alcoholism or Addiction</vh>
+<v t="josephorr.20181226172138.1"><vh>@board @group-3 Not Alcoholism or Addiction</vh>
 <v t="josephorr.20181220213416.1"></v>
 <v t="leovue.2-1"></v>
 <v t="leovue.2-3"></v>
@@ -229,7 +229,7 @@
 <v t="leovue.2-77"></v>
 <v t="leovue.2-82"></v>
 </v>
-<v t="josephorr.20181226072600.1"><vh>@board Big 5 Personality Traits</vh>
+<v t="josephorr.20181226072600.1"><vh>@board @group-4 Big 5 Personality Traits</vh>
 <v t="leovue.2-7"></v>
 <v t="leovue.2-8"></v>
 <v t="leovue.2-10"></v>
@@ -249,7 +249,7 @@
 <v t="leovue.2-71"></v>
 <v t="leovue.2-75"></v>
 </v>
-<v t="josephorr.20181225065606.1"><vh>@board Political Orientation</vh>
+<v t="josephorr.20181225065606.1"><vh>@board @group-5 Political Orientation</vh>
 <v t="leovue.2-6"></v>
 <v t="leovue.2-7"></v>
 <v t="leovue.2-10"></v>
@@ -271,6 +271,8 @@
 <v t="josephorr.20190112170556.1"><vh>@board Article Count</vh></v>
 <v t="josephorr.20190112092020.1"><vh>@board Author Institution</vh></v>
 <v t="josephorr.20190112182206.1"><vh>@board Journal</vh></v>
+<v t="josephorr.20190114083137.1"><vh>@board Topic Comparison</vh></v>
+<v t="josephorr.20190115212843.1"><vh>@board Topic Comparison #2</vh></v>
 </v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
 </v>
@@ -347,8 +349,7 @@ This outlined site was created with the Open Source outlining editor [Leo](http:
 [LeoVue](https://kaleguy.github.io/leovue/).
 
 To edit this file, download it from [Github](https://github.com/kaleguy/leo-examples/tree/master/docs/peterson). To propose an edit to this 
-site, submit a pull request, or alternatively, fork your copy and publish to your own Github pages account.
-
+site, fork the repo and submit a pull request. Or, publish to your Github pages account or other site using LeoVue.
 </t>
 <t tx="josephorr.20190105063219.1">@language html
 
@@ -366,7 +367,7 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 # Word Clouds
 
 &lt;toc/&gt;</t>
-<t tx="josephorr.20190108205009.1">&lt;word-cloud group=2 /&gt;</t>
+<t tx="josephorr.20190108205009.1">&lt;word-cloud from="abstract" group=3 /&gt;</t>
 <t tx="josephorr.20190111190948.1">@language md
 
 # Charts
@@ -402,6 +403,20 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   sort=value
   :backgroundColor="'#8e5ea2'"
   dataKey="journal.text" /&gt;</t>
+<t tx="josephorr.20190114083137.1">&lt;bar-chart 
+  :groups=[2,3] 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190115212843.1">&lt;bar-chart 
+  :groups=[4,5] 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  backgroundColor="#8e5ea2"
+  dataKey=pubdate /&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -4596,10 +4611,17 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 
 # Research of Jordan B Peterson
 
-With:
+Abstracts from published research with links to full text on [ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2), &lt;br&gt;
+organized in multiple ways with the Leo Outlining Editor, displayed with LeoVue.
 
+* List of article titles with abstracts
 * Summary Tables
 * Multiple Topic Organization
-* Word Cloud, Time Line, List Charts</t>
+* Word Cloud, Time Line, List Charts
+
+[Jordan B Peterson on ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2)
+
+[Jordan B Peterson Home Page](https://jordanbpeterson.com/)
+</t>
 </tnodes>
 </leo_file>

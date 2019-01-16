@@ -1,7 +1,7 @@
 {
   "name": "leo-vue",
-  "version": "1.19.1",
-  "description": "HTML5 Viewer for Leo Files with Vue Component Support",
+  "version": "1.20.0",
+  "description": "Use the Leo Outlining Editor to Create Vue Web Apps",
   "author": "Joe Orr",
   "private": false,
   "scripts": {

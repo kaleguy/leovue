@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add lv component list to docs
 - fix bookmarked charts
 - remove font awesome cdn
+- fix to wordcloud example
+
+## [1.20.0] - 2018-01-16
+### Added
+- groups param in chart components
+
 
 ## [1.19.1] - 2018-01-10
 ### Added

@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leovue.20181220072125_1" a="E"><vh>Research of Jordan Peterson</vh>
+<v t="leovue.20181220072125_1"><vh>Research of Jordan B Peterson</vh></v>
 <v t="leovue.20181204092754_1"><vh>@board @group-1 All</vh>
 <v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-1"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -119,7 +119,7 @@
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
 <v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
-<v t="josephorr.20181224141950.1"><vh>@board Alcoholism and Addiction</vh>
+<v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
 <v t="leovue.2-55"></v>
@@ -153,7 +153,7 @@
 <v t="leovue.2-105"></v>
 <v t="leovue.2-107"></v>
 </v>
-<v t="josephorr.20181226172138.1"><vh>@board @group-2 Not Alcoholism or Addiction</vh>
+<v t="josephorr.20181226172138.1"><vh>@board @group-3 Not Alcoholism or Addiction</vh>
 <v t="josephorr.20181220213416.1"></v>
 <v t="leovue.2-1"></v>
 <v t="leovue.2-3"></v>
@@ -229,7 +229,7 @@
 <v t="leovue.2-77"></v>
 <v t="leovue.2-82"></v>
 </v>
-<v t="josephorr.20181226072600.1"><vh>@board Big 5 Personality Traits</vh>
+<v t="josephorr.20181226072600.1"><vh>@board @group-4 Big 5 Personality Traits</vh>
 <v t="leovue.2-7"></v>
 <v t="leovue.2-8"></v>
 <v t="leovue.2-10"></v>
@@ -249,7 +249,7 @@
 <v t="leovue.2-71"></v>
 <v t="leovue.2-75"></v>
 </v>
-<v t="josephorr.20181225065606.1"><vh>@board Political Orientation</vh>
+<v t="josephorr.20181225065606.1"><vh>@board @group-5 Political Orientation</vh>
 <v t="leovue.2-6"></v>
 <v t="leovue.2-7"></v>
 <v t="leovue.2-10"></v>
@@ -261,15 +261,22 @@
 <v t="leovue.2-27"></v>
 </v>
 </v>
+<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
-<v t="josephorr.20190108204954.1" a="E"><vh>Word Clouds</vh>
+<v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
 <v t="josephorr.20190108205009.1"><vh>@board Except Alcohol Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190109081724.1"><vh>Charts</vh></v>
-<v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
-<v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
+<v t="josephorr.20190111190948.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20190112170556.1"><vh>@board Article Count</vh></v>
+<v t="josephorr.20190112092020.1"><vh>@board Author Institution</vh></v>
+<v t="josephorr.20190112182206.1"><vh>@board Journal</vh></v>
+<v t="josephorr.20190114083137.1"><vh>@board Topic Comparison</vh></v>
+<v t="josephorr.20190115212843.1"><vh>@board Topic Comparison #2</vh></v>
 </v>
+<v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
+</v>
+<v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
 </vnodes>
 <tnodes>
 <t tx="josephorr.20181220213416.1">{
@@ -342,8 +349,7 @@ This outlined site was created with the Open Source outlining editor [Leo](http:
 [LeoVue](https://kaleguy.github.io/leovue/).
 
 To edit this file, download it from [Github](https://github.com/kaleguy/leo-examples/tree/master/docs/peterson). To propose an edit to this 
-site, submit a pull request, or alternatively, fork your copy and publish to your own Github pages account.
-
+site, fork the repo and submit a pull request. Or, publish to your Github pages account or other site using LeoVue.
 </t>
 <t tx="josephorr.20190105063219.1">@language html
 
@@ -361,12 +367,56 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 # Word Clouds
 
 &lt;toc/&gt;</t>
-<t tx="josephorr.20190108205009.1">&lt;word-cloud from="abstract" group=2 /&gt;</t>
-<t tx="josephorr.20190109081724.1">@language html
+<t tx="josephorr.20190108205009.1">&lt;word-cloud from="abstract" group=3 /&gt;</t>
+<t tx="josephorr.20190111190948.1">@language md
 
-&lt;bar-chart group="1" /&gt;
+# Charts
 
-</t>
+&lt;toc/&gt;</t>
+<t tx="josephorr.20190112092020.1">@language html
+
+&lt;horizontalBar-chart 
+  group=1 
+  legendLabel="Co-Author Institution (Count)"
+  :board="true"
+  sort="value"
+  filterKey="name.text"
+  filterValue="Jordan B Peterson"
+  :backgroundColor="'#8e5ea2'"
+  dataKey="authors.institution" /&gt;</t>
+<t tx="josephorr.20190112170529.1"></t>
+<t tx="josephorr.20190112170556.1">@language html
+
+&lt;bar-chart 
+  group=1 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  legendLabel="Number of Articles"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190112182206.1">&lt;horizontalBar-chart 
+  group=1 
+  legendLabel="Journal"
+  :board="true"
+  :h="1000"
+  sort=value
+  :backgroundColor="'#8e5ea2'"
+  dataKey="journal.text" /&gt;</t>
+<t tx="josephorr.20190114083137.1">&lt;bar-chart 
+  :groups=[2,3] 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190115212843.1">&lt;bar-chart 
+  :groups=[4,5] 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  backgroundColor="#8e5ea2"
+  dataKey=pubdate /&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -1437,8 +1487,8 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   "references": "35",
   "reads": "2,932 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "https://www.researchgate.net/publication/265245291_The_Benefits_of_Writing/download",
+    "text": "N/A"
   },
   "abstract": "This is a brief review of the benefits of writing about uncertainty and trauma (including expressive writing and future goal-setting) prior to and including 2010.",
   "authors": [
@@ -3127,8 +3177,8 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
   "references": "71",
   "reads": "11,093 Reads",
   "journal": {
-    "href": "application.LostPassword.html",
-    "text": "Forgot password?"
+    "href": "https://www.firstthings.com/",
+    "text": "Religion and Public Life"
   },
   "abstract": "Memory is vulnerable, easily distorted to fit beliefs and modes of action that are more expedient than accurate. When the process of remembering becomes collective, such distortion may be greatly increased. Collective memories are acquired and transmitted in a social context, and are therefore the modifiable property of many people (De La Ronde &amp;Swann, 1998; Hardin &amp;Higgins, 1996; Rosenthal &amp;Rubin, 1978; Snyder, 1974). The tendency towards social modification, which can serve positively to unite the members of a group, has a very negative, dangerous, underground aspect. Individuals appear somewhat constrained in their willingness to inflict destruction (or at least in the power to do so). Groups of individuals are not. The dangers of self-deception about past events, far from trivial in the personal case, are tremendously magnified in the social arena. The careless use of memory can lead directly to the grave abuse of people.",
   "authors": [
@@ -3334,7 +3384,7 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
         "href": "https://www.researchgate.net/profile/Kathleen_W_Smith",
         "text": "Kathleen W. Smith"
       },
-      "institution": "Toronto"
+      "institution": "N/A"
     },
     {
       "name": {
@@ -4561,10 +4611,17 @@ site, submit a pull request, or alternatively, fork your copy and publish to you
 
 # Research of Jordan B Peterson
 
-With:
+Abstracts from published research with links to full text on [ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2), &lt;br&gt;
+organized in multiple ways with the Leo Outlining Editor, displayed with LeoVue.
 
+* List of article titles with abstracts
 * Summary Tables
 * Multiple Topic Organization
-* Word Cloud, Time Line, List Charts</t>
+* Word Cloud, Time Line, List Charts
+
+[Jordan B Peterson on ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2)
+
+[Jordan B Peterson Home Page](https://jordanbpeterson.com/)
+</t>
 </tnodes>
 </leo_file>
