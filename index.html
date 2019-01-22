@@ -55,6 +55,9 @@
           },
           "rgcitations": {
             "host": "http://localhost:8888/rg/citations?name=",
+          },
+          "rgjournal": {
+            "host": "http://localhost:8888/rg/journal?name=",
           }
         }
     }
@@ -91,8 +94,7 @@
   </div>
 </div>
 <!-- templates -->
-<script type="text/template"
-        id="rgarticle">
+<script type="text/template" id="rgarticle">
   <div class="rg">
     <div class="publication-header">
       <h1>{{- data.title }}</h1>
@@ -144,8 +146,7 @@
     </div>
   </div>
 </script>
-<script type="text/template"
-        id="rgarticle-brief">
+<script type="text/template" id="rgarticle-brief">
   <div class="rg">
     <div class="publication-header">
       <h1>{{- data.title.text }}</h1>
@@ -175,8 +176,7 @@
     </div>
   </div>
 </script>
-<script type="text/template"
-        id="repec">
+<script type="text/template" id="repec">
   <div class="rg">
     <div class="publication-header">
       <h1>{{- data.bibliographic.name }}</h1>
@@ -261,6 +261,27 @@
 <script type="text/template" id="rgcitations">
 CITATIONS
 </script>
+<script type="text/template" id="rgjournal">
+  <h2>{{= data.title}}</h2>
+
+  <div>Publisher: {{= data.publisher}}</div>
+  <div class="hshim"></div>
+  <div class="publication-abstract">
+    {{= data.description}}
+  </div>
+  <div class="hshim"></div>
+  <table class="lv-rowset">
+    <tr><th>RG Impact: </th><td>{{= data.rgimpact}}</td></tr>
+    <tr><th>Halflife: </th><td>{{= data.halflife}}</td></tr>
+    <tr><th>Immediacy:  </th><td>{{= data.immediacy}}</td></tr>
+    <tr><th>Eigen Factor: </th><td>{{= data.eigenfactor}}</td></tr>
+    <tr><th>Influence: </th><td>{{= data.influence}}</td></tr>
+    <tr><th>Website: </th><td>{{= data.website}}</td></tr>
+    <tr><th>ISSN:  </th><td>{{= data.issn}}</td></tr>
+    <tr><th>Doctype:  </th><td>{{= data.doctype}}</td></tr>
+  </table>
+
+</script>
 <!-- End templates -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script>
@@ -282,6 +303,9 @@ CITATIONS
   }
   H1, H2 {
     margin-bottom: 1.5rem;
+  }
+  .lv-rowset DIV {
+    flex: 50%
   }
 </style>
 </body>

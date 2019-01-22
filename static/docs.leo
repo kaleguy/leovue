@@ -87,7 +87,7 @@
 <v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -119,12 +119,12 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
 <v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
@@ -1426,9 +1426,9 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.19.1
+LeoVue is currently at version 1.21.0
 
-LeoVue 1.19.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.21.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -2589,7 +2589,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.20.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.21.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;

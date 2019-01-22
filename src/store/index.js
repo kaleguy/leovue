@@ -301,7 +301,8 @@ function showFormattedData (context, id, url, xslType, dataType, params, t) {
           dataArray = _.filter(dataArray, o => _.get(o, filter.key, '') === filter.value)
         }
         const template = nodeList.template || ''
-        addChildNodes(context.state, id, dataArray, template, nodeList.hrefIsQueryString,
+        addChildNodes(context.state, id, dataArray,
+          template, nodeList.hrefIsQueryString,
           nodeList.hrefKey, nodeList.template, nodeList.titleKey)
       }
     })
@@ -1548,6 +1549,48 @@ export default new Vuex.Store({
           let {url, label} = getUrlFromTitle(item.name) // eslint-disable-line
           if (!url) { return }
           return showFormattedData(context, id, url, 'rss', 'xml')
+        }
+        if (/^@from/.test(item.name)) {
+          let params = jsyaml.load(itemText) || {}
+          const rex = /@from-(.*?) /
+          const match = rex.exec(item.name)
+          let group = null
+          if (match && match[1]) {
+            group = match[1]
+          } else {
+            return
+          }
+          item.name = item.name.replace(rex, '')
+          const groupItem = JSON.search(
+            context.state.leodata,
+            '//*[group="' + group + '"]')[0]
+          const children = groupItem.children
+          let items = []
+          children.forEach(child => {
+            const t = context.state.leotext[child.t]
+            let textData = {}
+            try {
+              textData = JSON.parse(t)
+            } catch (e) {
+            }
+            items.push(textData)
+          })
+          const nodeList = params.nodeList
+          items = JSON.search(items, '//' + nodeList.listKey)
+          // make items unique by listKey
+          const itemHash = {}
+          items.forEach(item => {
+            const k = item[nodeList.titleKey]
+            itemHash[k] = item
+          })
+
+          items = []
+          Object.keys(itemHash).sort().forEach(key => {
+            items.push(itemHash[key])
+          })
+          addChildNodes(context.state, id, items,
+            nodeList.template, nodeList.hrefIsQueryString,
+            nodeList.hrefKey, nodeList.template, nodeList.titleKey)
         }
         if (/^@(xml|json)/.test(item.name)) {
           // if there is a hyphen in the directive the second token

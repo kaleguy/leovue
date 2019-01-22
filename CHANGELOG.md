@@ -14,12 +14,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix Accordion mode
 - fix translatePath on settings page
 - font/theme button
-- Twine
 - @tab
 - add lv component list to docs
 - fix bookmarked charts
 - remove font awesome cdn
 - fix to wordcloud example
+- @hide
+
+## [1.21.0] - 2018-01-22
+### Added
+- @from directive
 
 ## [1.20.0] - 2018-01-16
 ### Added
