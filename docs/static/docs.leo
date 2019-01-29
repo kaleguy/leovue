@@ -31,7 +31,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
-<v t="josephorr.20181120155646.1"><vh>@page Directives</vh>
+<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
 <v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
 <v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
 <v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
@@ -87,7 +87,7 @@
 <v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -119,12 +119,12 @@
 <v t="josephorr.20171118025629.1"><vh>Sequence Diagram</vh></v>
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
-<v t="josephorr.20171105173610.1" a="E"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171105173610.1"><vh>Charts</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1" a="E"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
 <v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
@@ -1426,9 +1426,9 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.19.1
+LeoVue is currently at version 1.21.0
 
-LeoVue 1.19.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 1.21.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
 Current features include:
 * Display Leo content including markdown, html and code highlighting
@@ -2589,7 +2589,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.20.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;1.21.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -2808,7 +2808,9 @@ LeoVue adds a few directives not found in the Leo. These are all node level dire
    ```
    In the above example, the data in the example node will have a key of 'set1' (which can be used by components elsewhere in the tree). The text after the key name will be used as the node label in the tree menu. 
    
-* **@group-** Treat the immediate child nodes as one data set.   </t>
+* **@group-** Treat the immediate child nodes as one data set.   
+* **@from-** Extract a subset of data from the a group.   
+</t>
 <t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
 
     [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))

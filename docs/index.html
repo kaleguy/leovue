@@ -43,12 +43,15 @@
           },
           "rgcitations": {
             "host": "http://localhost:8888/rg/citations?name=",
+          },
+          "rgjournal": {
+            "host": "http://localhost:8888/rg/journal?name=",
           }
         }
     }
     // "leftPaneWidth": 'calc(50vw - 300px)',
     // "rightPaneWidth": 'calc(50vw + 300px)',
-    // "leftPanePadding": 'calc(50vw - 600px)',</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?87879124c614f7898fbdecff9ff1885a rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
+    // "leftPanePadding": 'calc(50vw - 600px)',</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?d5331b883ef6d08dd642b715869c691b rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
     <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
       <p>This is a popover!</p>
       <p><small>Click the background to remove the popover.</small></p>
@@ -199,7 +202,24 @@
       <table-column show="title" label="Title" header-class="title-cell" cell-class="title-cell"></table-column>
       <table-column show="year" label="Year" header-class="data-cell" cell-class="data-cell"></table-column>
     </table-component>
-  </div></script><script type=text/template id=rgcitations>CITATIONS</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
+  </div></script><script type=text/template id=rgcitations>CITATIONS</script><script type=text/template id=rgjournal><h2>{{= data.title}}</h2>
+
+  <div>Publisher: {{= data.publisher}}</div>
+  <div class="hshim"></div>
+  <div class="publication-abstract">
+    {{= data.description}}
+  </div>
+  <div class="hshim"></div>
+  <table class="lv-rowset">
+    <tr><th>RG Impact: </th><td>{{= data.rgimpact}}</td></tr>
+    <tr><th>Halflife: </th><td>{{= data.halflife}}</td></tr>
+    <tr><th>Immediacy:  </th><td>{{= data.immediacy}}</td></tr>
+    <tr><th>Eigen Factor: </th><td>{{= data.eigenfactor}}</td></tr>
+    <tr><th>Influence: </th><td>{{= data.influence}}</td></tr>
+    <tr><th>Website: </th><td>{{= data.website}}</td></tr>
+    <tr><th>ISSN:  </th><td>{{= data.issn}}</td></tr>
+    <tr><th>Doctype:  </th><td>{{= data.doctype}}</td></tr>
+  </table></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-118289537-1"></script><script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-118289537-1');</script><script src=https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js></script><script>var scroll = new SmoothScroll('a[href*="#"]');</script><style type=text/css>#app {
@@ -209,4 +229,7 @@
   }
   H1, H2 {
     margin-bottom: 1.5rem;
-  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?4a9c43a7521903b52bcb></script><script type=text/javascript src=static/js/app.js?00a9167cabbb9f14879a></script></body></html>
+  }
+  .lv-rowset DIV {
+    flex: 50%
+  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?4a9c43a7521903b52bcb></script><script type=text/javascript src=static/js/app.js?d9a206d7bcf86ff5c699></script></body></html>

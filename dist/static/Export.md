@@ -62,7 +62,7 @@ nodeList:
   template: rgarticle-brief
 ```
 
-The JSON that will be downloaded from URL above should look something [like this](https://cdn.jsdelivr.net/npm/leo-vue@1.18.1/static/articles-Jordan_Peterson2.json). 
+The JSON that will be downloaded from the URL above should look something [like this](https://cdn.jsdelivr.net/npm/leo-vue@1.18.1/static/articles-Jordan_Peterson2.json). 
 
 Here's a view of a Leo file with a node like the one above (with a couple of extra params in the content node):
 
@@ -150,10 +150,84 @@ You can also use the @board directive to make the Summary Table take up the full
 The final file in LeoVue:
 
 <img src="images/json-list-jbp-result.png" alt="alt text" width="700">
-
+<br>
 [Research of Jordan B Peterson](https://kaleguy.github.io/leo-examples/peterson/#/t/1) 
 
 The benefit of using LeoVue to download data into Leo for further processing is that you can then organize your content in multiple ways.
 
 Leo's clone nodes have the benefits of both folders (hierarchical groups) and tags (more than one path to a content item). When you are done organizing your content with Leo, you can then view the newly edited Leo file with LeoVue. You can also use Summary Table and other Vue components (e.g. charts) to present different aspects of your content sets.
+
+## JSON extracted from node groups
+
+Using the @from and @group directives, you can take an array of JSON nodes and create a new set of JSON nodes. An example of this follows:
+
+### The @group directive
+
+First, we'll give a node a @group-1 directive. 
+
+This allows us, among other things, to refer to this group the same way we can refer to a single dataSets in the Chartjs components:
+
+```
+<bar-chart 
+  group=1 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  legendLabel="Number of Articles"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate />
+```
+
+Note that instead of the dataSet property, a group has been specified. The group data will be the data set for this bar chart.
+
+<img src="images/article-count.png" alt="alt text" width="700">
+
+### The @from directive
+
+Now that we have grouped the articles to get arrays of JSON data, we can use the @from directive to create new lists extracted from the original group.
+
+In the JSON in the example above, there is a journal object that looks like this:
+
+```
+  "journal": {
+    "href": "journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+    "text": "Journal of psychiatry &neuroscience: JPN"
+  },
+```
+
+Now we would like to make a list of Journals. We can extract this list of journal objects from the JSON group we just made. We make a node with the following title:
+
+```
+@from-1 Journals
+```
+
+And with the following node content:
+
+```
+template: rgjournals
+nodeList: 
+  listKey: journal
+  template: rgjournal
+  hrefKey: href
+  titleKey: text
+  hrefIsQueryString: true
+```
+
+The node title has a "@from-1" directive, so data will be selected from the "1" group. The key ("listKey") of the object to be extracted from each member of the group 1 data set is "journal", so we will get those.
+
+<img src="images/from-directive-leo.png" alt="alt text" width="700">
+
+In LeoVue, the above node will create a set of child nodes from the author keys, like this:
+
+<img src="images/journal-list-leovue.png" alt="alt text" width="700">
+
+We have specified an hrefKey, so each node created by LeoVue will be a @json link node. We can see this if we download (export) the Leo file for the author node from LeoVue and then open in Leo:
+
+<img src="images/journal-leo-result.png" alt="alt text" width="700">
+
+Note that two of the nodes are dataSet nodes. That is because in this example, before downloading the Leo file from the author node, we first clicked on the first two nodes. This caused the link node to execute, fetching the data at the link, and then replacing the node with a dataSet node containing that data.
+
+
+
+
 

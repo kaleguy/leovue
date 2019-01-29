@@ -11,6 +11,7 @@
 <vnodes>
 <v t="josephorr.20181220072125.1" a="E"><vh>Research of Jordan Peterson</vh>
 <v t="josephorr.20181204092754.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
+<v t="josephorr.20190122090141.1"><vh>newHeadline</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -26,5 +27,16 @@ filter:
   value: Article
 </t>
 <t tx="josephorr.20181220072125.1"></t>
+<t tx="josephorr.20190122090141.1">@from-1 journal
+template: rgjournals
+nodeList: 
+  listKey: journal
+  template: rgjournal
+  hrefKey: href
+  titleKey: text
+  hrefIsQueryString: true
+filter:
+  key: type.text
+  value: Article</t>
 </tnodes>
 </leo_file>

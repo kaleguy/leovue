@@ -118,7 +118,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -261,13 +261,13 @@
 <v t="leovue.2-27"></v>
 </v>
 </v>
-<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
+<v t="josephorr.20190112170529.1"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
 <v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
 <v t="josephorr.20190108205009.1"><vh>@board Except Alcohol Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190111190948.1" a="E"><vh>Charts</vh>
+<v t="josephorr.20190111190948.1"><vh>Charts</vh>
 <v t="josephorr.20190112170556.1"><vh>@board Article Count</vh></v>
 <v t="josephorr.20190112092020.1"><vh>@board Author Institution</vh></v>
 <v t="josephorr.20190112182206.1"><vh>@board Journal</vh></v>
@@ -275,6 +275,54 @@
 <v t="josephorr.20190115212843.1"><vh>@board Topic Comparison #2</vh></v>
 </v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
+<v t="josephorr.20190119213120.1"><vh>@board Journals</vh>
+<v t="josephorr.20190119213120.5"><vh>@dataSet set259-3 Addictive Behaviors</vh></v>
+<v t="josephorr.20190119213120.7"><vh>@dataSet set259-5 Alcohol health and research world</vh></v>
+<v t="josephorr.20190119213120.8"><vh>@dataSet set259-6 Alcoholism Clinical and Experimental Research</vh></v>
+<v t="josephorr.20190119213120.9"><vh>@dataSet set259-7 Annals of the New York Academy of Sciences</vh></v>
+<v t="josephorr.20190119213120.10"><vh>@dataSet set259-8 Appetite</vh></v>
+<v t="josephorr.20190119213120.11"><vh>@dataSet set259-9 Archive for the Psychology of Religion / Archiv für Religionspychologie</vh></v>
+<v t="josephorr.20190119213120.12"><vh>@dataSet set259-10 Archives of General Psychiatry</vh></v>
+<v t="josephorr.20190119213120.13"><vh>@dataSet set259-11 Behavior Research Methods</vh></v>
+<v t="josephorr.20190119213120.14"><vh>@dataSet set259-12 Behavioral and Brain Sciences</vh></v>
+<v t="josephorr.20190119213120.15"><vh>@dataSet set259-13 Canadian journal of psychiatry. Revue canadienne de psychiatrie</vh></v>
+<v t="josephorr.20190119213120.16"><vh>@dataSet set259-14 Cognition and Emotion</vh></v>
+<v t="josephorr.20190119213120.17"><vh>@dataSet set259-15 Communications</vh></v>
+<v t="josephorr.20190119213120.18"><vh>@dataSet set259-16 Cortex</vh></v>
+<v t="josephorr.20190119213120.19"><vh>@dataSet set259-17 Creativity Research Journal</vh></v>
+<v t="josephorr.20190119213120.20"><vh>@dataSet set259-18 Emotion</vh></v>
+<v t="josephorr.20190119213120.21"><vh>@dataSet set259-19 Empirical Studies of the Arts</vh></v>
+<v t="josephorr.20190119213120.23"><vh>@dataSet set259-21 Individual Differences Research</vh></v>
+<v t="josephorr.20190119213120.24"><vh>@dataSet set259-22 Journal of Abnormal Psychology</vh></v>
+<v t="josephorr.20190119213120.25"><vh>@dataSet set259-23 Journal of Anxiety Disorders</vh></v>
+<v t="josephorr.20190119213120.26"><vh>@dataSet set259-24 Journal of Applied Psychology</vh></v>
+<v t="josephorr.20190119213120.27"><vh>@dataSet set259-25 Journal of Clinical Psychology</vh></v>
+<v t="josephorr.20190119213120.28"><vh>@dataSet set259-26 Journal of Experimental Psychology General</vh></v>
+<v t="josephorr.20190119213120.29"><vh>@dataSet set259-27 Journal of Personality</vh></v>
+<v t="josephorr.20190119213120.30"><vh>@dataSet set259-28 Journal of Personality Assessment</vh></v>
+<v t="josephorr.20190119213120.31"><vh>@dataSet set259-29 Journal of Personality and Social Psychology</vh></v>
+<v t="josephorr.20190119213120.32"><vh>@dataSet set259-30 Journal of Research in Personality</vh></v>
+<v t="josephorr.20190119213120.33"><vh>@dataSet set259-31 Journal of Social and Political Psychology</vh></v>
+<v t="josephorr.20190119213120.34"><vh>@dataSet set259-32 Journal of psychiatry &amp;neuroscience: JPN</vh></v>
+<v t="josephorr.20190119213120.35"><vh>@dataSet set259-33 Journal of studies on alcohol</vh></v>
+<v t="josephorr.20190119213120.38"><vh>@dataSet set259-36 Neuropsychology Review</vh></v>
+<v t="josephorr.20190119213120.39"><vh>@dataSet set259-37 PLoS ONE</vh></v>
+<v t="josephorr.20190119213120.40"><vh>@dataSet set259-38 Palgrave Communications</vh></v>
+<v t="josephorr.20190119213120.41"><vh>@dataSet set259-39 Personality and Individual Differences</vh></v>
+<v t="josephorr.20190119213120.42"><vh>@dataSet set259-40 Personality and Social Psychology Bulletin</vh></v>
+<v t="josephorr.20190119213120.43"><vh>@dataSet set259-41 Pharmacology Biochemistry and Behavior</vh></v>
+<v t="josephorr.20190119213120.44"><vh>@dataSet set259-42 Political Psychology</vh></v>
+<v t="josephorr.20190119213120.45"><vh>@dataSet set259-43 Progress in Neuro-Psychopharmacology and Biological Psychiatry</vh></v>
+<v t="josephorr.20190119213120.46"><vh>@dataSet set259-44 Psychological Review</vh></v>
+<v t="josephorr.20190119213120.47"><vh>@dataSet set259-45 Psychology of Addictive Behaviors</vh></v>
+<v t="josephorr.20190119213120.48"><vh>@dataSet set259-46 Psychopharmacology</vh></v>
+<v t="josephorr.20190119213120.49"><vh>@dataSet set259-47 Psycoloquy</vh></v>
+<v t="josephorr.20190119213120.50"><vh>@dataSet set259-48 Reading and Writing</vh></v>
+<v t="josephorr.20190119213120.51"><vh>@dataSet set259-49 First Things</vh></v>
+<v t="josephorr.20190119213120.52"><vh>@dataSet set259-50 Scientometrics</vh></v>
+<v t="josephorr.20190119213120.53"><vh>@dataSet set259-51 Social Psychological and Personality Science</vh></v>
+<v t="josephorr.20190119213120.54"><vh>@dataSet set259-52 Social and Personality Psychology Compass</vh></v>
+</v>
 </v>
 <v t="josephorr.20181228080308.1"><vh>About this Document</vh></v>
 </vnodes>
@@ -417,6 +465,905 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
   :board="true"
   backgroundColor="#8e5ea2"
   dataKey=pubdate /&gt;</t>
+<t tx="josephorr.20190119213120.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'eigenfactor', label: 'Eigen Factor'},{show: 'influence', label: 'Influence'}]" &gt;  
+&lt;/summary-table&gt;
+ </t>
+<t tx="josephorr.20190119213120.10">{
+  "title": "Appetite (APPETITE)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Appetite is an international research journal specializing in behavioural nutrition and the cultural, sensory, and physiological influences on choices and intakes of foods and drinks. It covers normal and disordered eating and drinking, dietary attitudes and practices and all aspects of the bases of human and animal behaviour toward food. The journal carries short communications, book reviews and abstracts from major meetings in the social science, psychology or neuroscience of food consumption, including the Society for the Study of Ingestive Behavior, the Association for the Study of Food and Society, and the Association for Research in Nutritional Behaviour.",
+  "rgimpact": "1.47",
+  "halflife": "6.10",
+  "immediacy": "0.49",
+  "eigenfactor": "0.02",
+  "influence": "0.88",
+  "website": "http://www.sciencedirect.com/science/journal/01956663",
+  "issn": "0195-6663",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0195-6663_Appetite",
+  "key": "/rg/journal?name=0195-6663_Appetite",
+  "cached": "2019-01-20T02:19:57.430Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.11">{
+  "title": "Archive for the Psychology of Religion / Archiv für Religionspychologie",
+  "publisher": "Publisher: Internationale Gesellschaft für Religionspsychologie, Brill Academic Publishers",
+  "description": "The Archive for the Psychology of Religion/Archiv für Religionspsychologie is the oldest medium in the psychology of religion. It is the official organ of the Internationale Gesellschaft für Religionspsychologie (International Association for the Psychology of Religion [IAPR]) founded in 1914. Following a reorganization of the IAPR in 2001, the Archiv is now published as an international, peer-reviewed journal. The Archive for the Psychology of Religion/Archiv für Religionspsychologie is open to all scientific methodologies, quantitative and qualitative as well as to established and innovative conceptual and theoretical perspectives in the psychology of religion.",
+  "rgimpact": "0.67",
+  "halflife": "",
+  "immediacy": "0.13",
+  "eigenfactor": "0.00",
+  "influence": "",
+  "website": "http://brill.publisher.ingentaconnect.com/content/brill/arp",
+  "issn": "0084-6724",
+  "material": "Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0084-6724_Archive_for_the_Psychology_of_Religion_Archiv_fuer_Religionspychologie",
+  "key": "/rg/journal?name=0084-6724_Archive_for_the_Psychology_of_Religion_Archiv_fuer_Religionspychologie",
+  "cached": "2019-01-20T02:20:15.932Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.12">{
+  "title": "Archives of General Psychiatry (ARCH GEN PSYCHIAT)",
+  "publisher": "Publisher: American Medical Association, American Medical Association",
+  "description": "The Archives of General Psychiatry strives to publish original, state-of-the-art studies and commentaries of general interest to clinicians, scholars, and research scientists in psychiatry, mental health, behavioral science, and allied fields. Archives seeks to inform and to educate its readers as well as to stimulate debate and further exploration into the nature, causes, treatment, and public health importance of mental illness.",
+  "rgimpact": "6.78",
+  "halflife": "0.00",
+  "immediacy": "2.49",
+  "eigenfactor": "0.05",
+  "influence": "6.13",
+  "website": "http://archpsyc.ama-assn.org/",
+  "issn": "0003-990X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0003-990X_Archives_of_General_Psychiatry",
+  "key": "/rg/journal?name=0003-990X_Archives_of_General_Psychiatry",
+  "cached": "2019-01-20T02:20:27.243Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.13">{
+  "title": "Behavior Research Methods (BEHAV RES METHODS)",
+  "publisher": "Publisher: Psychonomic Society, Springer Verlag",
+  "description": "Behavior Research Methods is the psychologist's primary source for information on the methods, techniques, and instrumentation of research in experimental psychology. The journal focuses particularly on the use of computer technology in psychological research, including the latest hardware and software developments. An annual special issue is also devoted to this field.",
+  "rgimpact": "1.41",
+  "halflife": "6.80",
+  "immediacy": "0.23",
+  "eigenfactor": "0.02",
+  "influence": "1.71",
+  "website": "http://www.psychonomic.org/brmic/",
+  "issn": "1554-351X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/1554-351X_Behavior_Research_Methods",
+  "key": "/rg/journal?name=1554-351X_Behavior_Research_Methods",
+  "cached": "2019-01-20T02:20:36.277Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.14">{
+  "title": "Behavioral and Brain Sciences (Behav Brain Sci)",
+  "publisher": "Publisher: Cambridge University Press (CUP)",
+  "description": "",
+  "rgimpact": "2.14",
+  "halflife": "0.00",
+  "immediacy": "2.75",
+  "eigenfactor": "0.01",
+  "influence": "10.69",
+  "website": "",
+  "issn": "1469-1825",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1469-1825_Behavioral_and_Brain_Sciences",
+  "key": "/rg/journal?name=1469-1825_Behavioral_and_Brain_Sciences",
+  "cached": "2019-01-20T02:20:43.958Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.15">{
+  "title": "Canadian journal of psychiatry. Revue canadienne de psychiatrie (CAN J PSYCHIAT)",
+  "publisher": "Publisher: Canadian Psychiatric Association, Canadian Psychiatric Association",
+  "description": "Established in 1956, The Canadian Journal of Psychiatry is the flagship publication of the CPA. Published 12 times a year, The Canadian Journal of Psychiatry includes peer-reviewed scientific articles on ongoing developments in Canadian and international psychiatry. Regular features include In Review, written by world leaders in psychiatric research; In Debate, which presents the pros and cons of controversial subjects; Original Research; Review Papers; Book Reviews; and Letters to the Editor, all of which contribute to scholarly debate and are published in either English or French. Supplements examine current research topics of special interest.",
+  "rgimpact": "2.42",
+  "halflife": "8.60",
+  "immediacy": "0.99",
+  "eigenfactor": "0.01",
+  "influence": "0.98",
+  "website": "http://publications.cpa-apc.org/browse/sections/0",
+  "issn": "1497-0015",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1497-0015_Canadian_journal_of_psychiatry_Revue_canadienne_de_psychiatrie",
+  "key": "/rg/journal?name=1497-0015_Canadian_journal_of_psychiatry_Revue_canadienne_de_psychiatrie",
+  "cached": "2019-01-20T02:20:54.874Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.16">{
+  "title": "Cognition and Emotion (Cognit Emot)",
+  "publisher": "Publisher: Taylor &amp;Francis (Routledge)",
+  "description": "Cognition &amp;Emotion is devoted to the study of emotion, especially of those aspects of emotion that are related to mental processes. The journal aims to bring together work on emotion undertaken by researchers in cognitive, social, clinical, and developmental psychology, neuropsychology, and cognitive science; it also welcomes psychologically oriented submissions from those in philosophy, anthropology, sociology, and other social sciences and humanities. Examples of topics appropriate for the journal include emotional appraisals; effects of mood or emotion on cognition and motivation; the nature of emotional experience; self-regulation of emotion; social, historical, or cultural aspects of emotion; and the nature of particular emotions or emotionality in general. Cognition &amp;Emotion publishes theoretical papers, original research reports, literature reviews, and extended reviews of selected books. Submissions can be considered for expedited publication as brief reports. The journal also publishes critical abstracts of recent books.",
+  "rgimpact": "2.57",
+  "halflife": "9.40",
+  "immediacy": "0.67",
+  "eigenfactor": "0.01",
+  "influence": "1.07",
+  "website": "http://www.informaworld.com/openurl?genre=journal&amp;issn=02699931",
+  "issn": "1464-0600",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1464-0600_Cognition_and_Emotion",
+  "key": "/rg/journal?name=1464-0600_Cognition_and_Emotion",
+  "cached": "2019-01-20T02:21:06.994Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.17">{
+  "title": "Communications (Communications)",
+  "publisher": "Publisher: École pratique des hautes études (France). Centre d'études des communications de masse; École pratique des hautes études (France). Centre d'études transdisciplinaires (Sociologie, anthropologie, sémiologie); École des hautes études en sciences sociales. Centre d'études transdisciplinaires (Sociologie, anthropologie, sémiologie); École des hautes études en sciences sociales. Centre d'études transdisciplinaires (Sociologie, anthropologie, politique); École des hautes études en sciences sociales. Centre d'études transdisciplinaires (Sociologie, anthropologie, histoire), Editions du Seuil",
+  "description": "",
+  "rgimpact": "0.12",
+  "halflife": "",
+  "immediacy": "0.05",
+  "eigenfactor": "0.00",
+  "influence": "",
+  "website": "",
+  "issn": "0588-8018",
+  "material": "Periodical",
+  "doctype": "Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0588-8018_Communications",
+  "key": "/rg/journal?name=0588-8018_Communications",
+  "cached": "2019-01-20T02:21:14.091Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.18">{
+  "title": "Cortex (CORTEX)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Cortex is an international journal devoted to the study of the inter-relations of the nervous system and behavior, particularly as these are reflected in the effects of brain lesions on cognitive functions. It was founded in 1964. Tra le riviste italiane con maggior impact factor, raccoglie selezionati lavori di ricerca sulle attività nervose superiori. Si rivolge essenzialmente a un pubblico di neurologi e psicologi, ma tratta argomenti di pertinenza anche per gli psichiatri e per quanti sono interessati ad analizzare il comportamento umano e le sue alterazioni in termini di strutture e meccanismi anatomo-fisiologici. Dal 2001 il comitato scientifico, rinnovato e potenziato, è diretto dall'Editor in Chief dott. Sergio Della Sala. In occasioni del 40° anniversario sono stati rinnovati formato e grafica della rivista ed è stato accresciuto il sito web, che mette a disposizione l'archivio e, per gli abbonati, l'ultimo numero e gli articoli che saranno pubblicati nei prossimi numeri.",
+  "rgimpact": "2.70",
+  "halflife": "5.80",
+  "immediacy": "0.97",
+  "eigenfactor": "0.02",
+  "influence": "1.62",
+  "website": "http://www.cortex-online.org/",
+  "issn": "0010-9452",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0010-9452_Cortex",
+  "key": "/rg/journal?name=0010-9452_Cortex",
+  "cached": "2019-01-20T02:21:21.994Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.19">{
+  "title": "Creativity Research Journal (Creativ Res J)",
+  "publisher": "Publisher: Taylor &amp;Francis (Routledge)",
+  "description": "This well-established journal publishes high quality, scholarly research capturing the full range of approaches to the study of creativity--behavioral, clinical, cognitive, cross-cultural, developmental, educational, genetic, organizational, psychoanalytic, psychometric, and social. Interdisciplinary research is also published, as is research within specific domains such as art and science, as well as on critical issues such as aesthetics, genius, imagery, imagination, incubation, insight, intuition, metaphor, play, and problem finding and solving. Integrative literature reviews and theoretical pieces that appreciate empirical work are welcome, but purely speculative articles will not be published.",
+  "rgimpact": "0.72",
+  "halflife": "9.00",
+  "immediacy": "0.15",
+  "eigenfactor": "0.00",
+  "influence": "0.45",
+  "website": "http://www.informaworld.com/openurl?genre=journal&amp;issn=1040-0419",
+  "issn": "1532-6934",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1532-6934_Creativity_Research_Journal",
+  "key": "/rg/journal?name=1532-6934_Creativity_Research_Journal",
+  "cached": "2019-01-20T02:21:29.604Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.20">{
+  "title": "Emotion",
+  "publisher": "Publisher: American Psychological Association, American Psychological Association",
+  "description": "Emotion publishes significant contributions to the study of emotion from a wide range of theoretical traditions and research domains. The journal includes articles that advance knowledge and theory about all aspects of emotional processes, including reports of substantial empirical studies, scholarly reviews, and major theoretical articles.",
+  "rgimpact": "3.80",
+  "halflife": "4.70",
+  "immediacy": "0.25",
+  "eigenfactor": "0.02",
+  "influence": "2.06",
+  "website": "",
+  "issn": "1931-1516",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1931-1516_Emotion",
+  "key": "/rg/journal?name=1931-1516_Emotion",
+  "cached": "2019-01-20T02:22:04.248Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.21">{
+  "title": "Empirical Studies of the Arts (Empir Stud Arts)",
+  "publisher": "Publisher: Baywood Publishing",
+  "description": "Empirical Studies of the Arts aims to be a interdisciplinary forum for theoretical and empirical studies of aesthetics, creativity, and all of the arts. Anthropological, psychological, semiotic, and sociological studies of the creation, perception, and appreciation of literary, musical, and visual art forms. Whether you are an active researcher or an interested bystander, Empirical Studies of the Arts keeps you up to date on the latest trends in scientific studies of the arts.",
+  "rgimpact": "1.00",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "https://us.sagepub.com/en-us/nam/empirical-studies-of-the-arts/journal202393",
+  "issn": "1541-4493",
+  "material": "Periodical, Internet resource",
+  "doctype": "Internet Resource, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1541-4493_Empirical_Studies_of_the_Arts",
+  "key": "/rg/journal?name=1541-4493_Empirical_Studies_of_the_Arts",
+  "cached": "2019-01-20T02:22:12.019Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.23">{
+  "title": "Individual Differences Research",
+  "publisher": "Individual Differences Research Group",
+  "description": "Individual Differences Research (ISSN: 1541-745X) is a peer-reviewed, scholarly journal published quarterly, one volume per year with issues in March, June, September, and December. Individual Differences Research publishes original manuscripts on all topics relevant to the science and application of the psychology of the individual. Most studies submitted to Individual Differences Research use quantitative methodology. However, exceptional qualitative and theoretical manuscripts are also considered for publication. Papers on all topics of psychology which promote the understanding of individuals.",
+  "rgimpact": "0.70",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "",
+  "issn": "1541-745X",
+  "material": "",
+  "doctype": "",
+  "url": "https://www.researchgate.net/journal/1541-745X_Individual_Differences_Research",
+  "key": "/rg/journal?name=1541-745X_Individual_Differences_Research",
+  "cached": "2019-01-20T02:22:21.638Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.24">{
+  "title": "Journal of Abnormal Psychology (J ABNORM PSYCHOL)",
+  "publisher": "Publisher: American Psychological Association, American Psychological Association",
+  "description": "The Journal of Abnormal Psychology publishes articles on basic research and theory in the broad field of abnormal behavior, its determinants, and its correlates. The following general topics fall within its area of major focus: (a) psychopathology - its etiology, development, symptomatology, and course; (b) normal processes in abnormal individuals; (c) pathological or atypical features of the behavior of normal persons; (d) experimental studies, with human or animal subjects, relating to disordered emotional behavior or pathology; (e) sociocultural effects on pathological processes, including the influence of gender and ethnicity; and (f) tests of hypotheses from psychological theories that relate to abnormal behavior. Thus, studies of patient populations, analyses of abnormal behavior and motivation in terms of modern behavior theories, case histories, and theoretical papers of scholarly substance on deviant personality and abnormal affective phenomena would all fall within the boundaries of the journal's interests. Each article should represent an addition to knowledge and understanding of abnormal behavior in its etiology, description, or change. In order to improve the use of journal resources, it has been agreed by the two Editors concerned that the Journal of Abnormal Psychology will not consider articles dealing primarily with the diagnostic practice or treatment of abnormal behavior, and the Journal of Consulting and Clinical Psychology will not consider manuscripts dealing primarily with the etiology or descriptive pathology of abnormal behavior. Articles that appear to have a significant contribution to both of these broad areas may be sent to either journal for editorial decision.",
+  "rgimpact": "6.67",
+  "halflife": "0.00",
+  "immediacy": "0.40",
+  "eigenfactor": "0.02",
+  "influence": "2.36",
+  "website": "http://content.apa.org/journals/abn",
+  "issn": "0021-843X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0021-843X_Journal_of_Abnormal_Psychology",
+  "key": "/rg/journal?name=0021-843X_Journal_of_Abnormal_Psychology",
+  "cached": "2019-01-20T02:22:39.815Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.25">{
+  "title": "Journal of Anxiety Disorders (J ANXIETY DISORD)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Journal of Anxiety Disorders is an interdisciplinary journal that publishes research papers dealing with all aspects of anxiety disorders for all age groups (child, adolescent, adult and geriatric). Areas of focus include: traditional, behavioral, cognitive and biological assessment; diagnosis and classification; psychosocial and psychopharmacological treatment; genetics; epidemiology; and prevention. Theoretical and review articles will be considered for publication if they contribute substantially to current knowledge in the field. The journal also contains sections for clinical reports (single-case experimental designs and preliminary but innovative case series) and book reviews on all aspects of anxiety disorders. Journal of Anxiety Disorders is now available via ContentsDirect, the new pre-publication alerting service from Elsevier Science. ContentsDirect delivers the table of contents of each issue of the journal by e-mail, approximately four to six weeks prior to publication. To subscribe to this free service, please contact alert@elsevier.com The Second International Conference on Child &amp;Adolescent Mental Health takes place in Kuala Lumpur, 6-10 June 2000. Topics include: Assessment, diagnosis, education and treatment of children and adolescents, Child and adolescent psychopathology/social and emotional development, Cross cultural differences, Mental health issues, Model service delivery programs, Educational practices. For full details see http://www.elsevier.nl/locate/camh2000",
+  "rgimpact": "2.62",
+  "halflife": "5.00",
+  "immediacy": "0.44",
+  "eigenfactor": "0.01",
+  "influence": "0.96",
+  "website": "http://www.sciencedirect.com/science/journal/08876185",
+  "issn": "0887-6185",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0887-6185_Journal_of_Anxiety_Disorders",
+  "key": "/rg/journal?name=0887-6185_Journal_of_Anxiety_Disorders",
+  "cached": "2019-01-20T02:22:49.781Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.26">{
+  "title": "Journal of Applied Psychology",
+  "publisher": "Publisher: American Psychological Association",
+  "description": "The Journal of Applied Psychology® emphasizes the publication of original investigations that contribute new knowledge and understanding to fields of applied psychology (other than clinical and applied experimental or human factors, which are more appropriate for other APA journals).",
+  "rgimpact": "4.43",
+  "halflife": "0.00",
+  "immediacy": "0.41",
+  "eigenfactor": "0.03",
+  "influence": "3.25",
+  "website": "https://www.apa.org/pubs/journals/apl/",
+  "issn": "1939-1854",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1939-1854_Journal_of_Applied_Psychology",
+  "key": "/rg/journal?name=1939-1854_Journal_of_Applied_Psychology",
+  "cached": "2019-01-20T02:22:59.263Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.27">{
+  "title": "Journal of Clinical Psychology (J CLIN PSYCHOL)",
+  "publisher": "Publisher: Wiley",
+  "description": "Founded in 1945 the Journal of Clinical Psychology is a peer-reviewed forum devoted to research assessment and practice. Published eight times a year the Journal includes research studies; articles on contemporary professional issues single case research; dissertations in brief; notes from the field; and news and notes. In addition to papers on psychopathology psychodiagnostics and the psychotherapeutic process the journal welcomes articles focusing on psychotherapy effectiveness research psychological assessment and treatment matching and clinical outcomes. From time to time the Journal publishes Special Sections featuring a selection of articles related to a single particularly timely or important theme; individuals interested in Guest Editing a Special Section are encouraged to contact the Editors.",
+  "rgimpact": "0.85",
+  "halflife": "0.00",
+  "immediacy": "0.35",
+  "eigenfactor": "0.01",
+  "influence": "0.82",
+  "website": "http://www.interscience.wiley.com/jpages/0021-9762/",
+  "issn": "0021-9762",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0021-9762_Journal_of_Clinical_Psychology",
+  "key": "/rg/journal?name=0021-9762_Journal_of_Clinical_Psychology",
+  "cached": "2019-01-20T02:23:08.266Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.28">{
+  "title": "Journal of Experimental Psychology General",
+  "publisher": "Publisher: American Psychological Association, American Psychological Association",
+  "description": "The Journal of Experimental Psychology: General® publishes articles describing empirical work that is of broad interest or bridges the traditional interests of two or more communities of psychology.",
+  "rgimpact": "4.86",
+  "halflife": "0.00",
+  "immediacy": "0.38",
+  "eigenfactor": "0.01",
+  "influence": "3.41",
+  "website": "https://www.apa.org/pubs/journals/xge/",
+  "issn": "1939-2222",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1939-2222_Journal_of_Experimental_Psychology_General",
+  "key": "/rg/journal?name=1939-2222_Journal_of_Experimental_Psychology_General",
+  "cached": "2019-01-20T02:23:20.179Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.29">{
+  "title": "Journal of Personality (J PERS)",
+  "publisher": "Publisher: Wiley",
+  "description": "Journal of Personality publishes scientific investigations in the field of personality. It focuses particularly on personality and behavior dynamics personality development and individual differences in the cognitive affective and interpersonal domains. The journal reflects and stimulates interest in the growth of new theoretical and methodological approaches in personality psychology. An article published in Journal of Personality recently won the prestigious.",
+  "rgimpact": "5.31",
+  "halflife": "0.00",
+  "immediacy": "0.18",
+  "eigenfactor": "0.01",
+  "influence": "1.59",
+  "website": "http://www.interscience.wiley.com/jpages/0022-3506/",
+  "issn": "0022-3506",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0022-3506_Journal_of_Personality",
+  "key": "/rg/journal?name=0022-3506_Journal_of_Personality",
+  "cached": "2019-01-20T02:23:27.328Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.30">{
+  "title": "Journal of Personality Assessment (J Pers Assess)",
+  "publisher": "Publisher: Taylor &amp;Francis (Routledge)",
+  "description": "Recognized as the most important forum for research in the field, the Journal of Personality Assessment provides commentaries, case reports, and research studies dealing with the application of methods of personality assessment. Fully documented articles address theoretical, empirical, pedagogical, and professional aspects of using psychological test or interview data to measure or describe personality processes and their behavior implications--to understand and predict how people think, feel, and act. The journal features discussions on the development and utilization of personality assessment methods in clinical, community, counseling, cross-cultural, forensic, and health psychology settings; with the assessment of people of all ages; and with both normal and abnormal personality functioning.",
+  "rgimpact": "2.36",
+  "halflife": "0.00",
+  "immediacy": "0.72",
+  "eigenfactor": "0.00",
+  "influence": "0.66",
+  "website": "http://www.informaworld.com/openurl?genre=journal&amp;issn=0022-3891",
+  "issn": "1532-7752",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1532-7752_Journal_of_Personality_Assessment",
+  "key": "/rg/journal?name=1532-7752_Journal_of_Personality_Assessment",
+  "cached": "2019-01-20T02:23:38.068Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.31">{
+  "title": "Journal of Personality and Social Psychology (J PERS SOC PSYCHOL)",
+  "publisher": "Publisher: American Psychological Association, American Psychological Association",
+  "description": "The Journal of Personality and Social Psychology publishes original papers in all areas of personality and social psychology. It emphasizes empirical reports but may include specialized theoretical, methodological, and review papers. The journal is divided into three independently edited sections: ATTITUDES AND SOCIAL COGNITION addresses those domains of social behavior in which cognition plays a major role, including the interface of cognition with overt behavior, affect, and motivation. Among topics covered are the formation, change, and utilization of attitudes, attributions, and stereotypes, person memory, self-regulation, and the origins and consequences of moods and emotions insofar as these interact with cognition. Of interest also is the influence of cognition and its various interfaces on significant social phenomena such as persuasion, communication, prejudice, social development, and cultural trends. INTERPERSONAL RELATIONS AND GROUP PROCESSES focuses on psychological and structural features of interaction in dyads and groups. Appropriate to this section are papers on the nature and dynamics of interactions and social relationships, including interpersonal attraction, communication, emotion, and relationship development, and on group and organizational processes such as social influence, group decision making and task performance, intergroup relations, and aggression, prosocial behavior and other types of social behavior. PERSONALITY PROCESSES AND INDIVIDUAL DIFFERENCES encourages research on all aspects of personality psychology. This includes, for example, individual differences in behavior, affect, health, coping, and motivation. Articles in traditional areas such as personality development, assessment, structure, and basic processes are also appropriate. Applications of personality psychology to everyday behavior and applied psychology are welcome. Papers on the interplay of culture and personality are also encouraged.",
+  "rgimpact": "4.23",
+  "halflife": "0.00",
+  "immediacy": "0.94",
+  "eigenfactor": "0.05",
+  "influence": "3.65",
+  "website": "http://content.apa.org/journals/psp",
+  "issn": "0022-3514",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0022-3514_Journal_of_Personality_and_Social_Psychology",
+  "key": "/rg/journal?name=0022-3514_Journal_of_Personality_and_Social_Psychology",
+  "cached": "2019-01-20T02:23:46.153Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.32">{
+  "title": "Journal of Research in Personality (J Res Pers)",
+  "publisher": "ScienceDirect",
+  "description": "Emphasizing experimental and descriptive research, the Journal of Research in Personality presents articles that examine important issues in the field of personality and in related fields basic to the understanding of personality. The subject matter includes treatments of genetic, physiological, motivational, learning, perceptual, cognitive, and social processes of both normal and abnormal kinds in human and animal subjects. Features: Brief notes and critiques; Presentations of an integrated series of independent studies concerned with significant theoretical issues relating to personality; Theoretical papers and critical reviews of current experimental and methodological interest.",
+  "rgimpact": "3.29",
+  "halflife": "6.90",
+  "immediacy": "0.26",
+  "eigenfactor": "0.01",
+  "influence": "1.24",
+  "website": "http://www.sciencedirect.com/science/journal/00926566",
+  "issn": "1095-7251",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1095-7251_Journal_of_Research_in_Personality",
+  "key": "/rg/journal?name=1095-7251_Journal_of_Research_in_Personality",
+  "cached": "2019-01-20T02:23:55.377Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.33">{
+  "title": "Journal of Social and Political Psychology",
+  "publisher": "PsychOpen",
+  "description": "The Journal of Social and Political Psychology (JSPP) is a peer-reviewed open-access journal (without author fees). It publishes articles at the intersection of social and political psychology from different epistemological, methodological, theoretical, and cultural perspectives and from different regions across the globe that substantially advance the understanding of social problems, their reduction, and the promotion of social justice. ",
+  "rgimpact": "1.29",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "http://jspp.psychopen.eu/index.php/jspp",
+  "issn": "2195-3325",
+  "material": "",
+  "doctype": "",
+  "url": "https://www.researchgate.net/journal/2195-3325_Journal_of_Social_and_Political_Psychology",
+  "key": "/rg/journal?name=2195-3325_Journal_of_Social_and_Political_Psychology",
+  "cached": "2019-01-20T02:24:05.400Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.34">{
+  "title": "Journal of psychiatry &amp;neuroscience: JPN (J PSYCHIATR NEUROSCI)",
+  "publisher": "Publisher: Canadian College of Neuropsychopharmacology; Canadian Medical Association, Canadian Medical Association",
+  "description": "The Journal of Psychiatry &amp;Neuroscience publishes original research articles and review papers in clinical psychiatry (adult and child) and neuroscience that relate to major psychiatric disorders, particularly schizophrenia, affective disorders and neurodegenerative diseases. The journal therefore provides a forum for original basic and clinical science research that will present its readership with an integrated perspective on current and emerging issues in clinical and biological psychiatry. In this respect, the Journal of Psychiatry &amp;Neuroscience represents a new and unique concept in communication that will bring together the latest advances in both psychiatry and neuroscience.",
+  "rgimpact": "3.68",
+  "halflife": "6.00",
+  "immediacy": "0.90",
+  "eigenfactor": "0.01",
+  "influence": "2.17",
+  "website": "http://www.cma.ca/jpn",
+  "issn": "1180-4882",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+  "key": "/rg/journal?name=1180-4882_Journal_of_psychiatry_neuroscience_JPN",
+  "cached": "2019-01-20T02:24:14.167Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.35">{
+  "title": "Journal of studies on alcohol (J Stud Alcohol)",
+  "publisher": "Publisher: Rutgers Center of Alcohol Studies",
+  "description": "Discontinued in 2006. Continued by Journal of Studies on Alcohol and Drugs (1937-1888). The Journal of Studies on Alcohol, published in the United States, is a refereed journal concerned with scientific research related to alcohol and drugs. It publishes topics related to the uses and abuses of these agents from the perspectives of the behavioral, biological, medical and sociocultural sciences. It has a worldwide readership and draws from an international array of authors. The Journal is abstracted by 37 services worldwide. First appearing in 1940, the Journal is published bimonthly beginning in January. Thematic supplements, free to subscribers, are published periodically. The Journal publishes an Editor's Corner, book reviews, guest editorials and correspondence. The Journal offers authors a venue to submit their work in as timely a fashion as possible. Generally, we try to have reviews completed within two months from submission, usually within five weeks. Overall, we average a 4-8 month time frame from submission to publication, which is quite extraordinary.",
+  "rgimpact": "3.15",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "http://www.jsad.com/",
+  "issn": "0096-882X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0096-882X_Journal_of_studies_on_alcohol",
+  "key": "/rg/journal?name=0096-882X_Journal_of_studies_on_alcohol",
+  "cached": "2019-01-20T02:24:23.502Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.38">{
+  "title": "Neuropsychology Review (NEUROPSYCHOL REV)",
+  "publisher": "Publisher: Springer Verlag",
+  "description": "Neuropsychology Review is a quarterly refereed journal devoted to publishing integrative state-of-the-art review papers on substantive content areas in general neuropsychology. These articles written by leading specialists in the field discuss such contemporary issues as: neuropsychological assessment; the rehabilitation of brain-damaged patients; basic human neuropsychological research; neurobehavioral aspects of disorders of the central nervous system; psychiatric disorders and theoretical analyses of human brain function. The journal's broad perspective is supported by an editorial review board representing a variety of professional disciplines interests and orientations.",
+  "rgimpact": "5.23",
+  "halflife": "6.00",
+  "immediacy": "1.17",
+  "eigenfactor": "0.01",
+  "influence": "2.47",
+  "website": "http://www.springerlink.com/openurl.asp?genre=journal&amp;issn=1040-7308",
+  "issn": "1040-7308",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1040-7308_Neuropsychology_Review",
+  "key": "/rg/journal?name=1040-7308_Neuropsychology_Review",
+  "cached": "2019-01-20T02:24:49.705Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.39">{
+  "title": "PLoS ONE (PLOS ONE)",
+  "publisher": "Publisher: Public Library of Science, Public Library of Science",
+  "description": "PLoS ONE features reports of primary research from all disciplines within science and medicine. By not excluding papers on the basis of subject area, PLoS ONE facilitates the discovery of the connections between papers whether within or between disciplines.",
+  "rgimpact": "3.54",
+  "halflife": "2.70",
+  "immediacy": "0.49",
+  "eigenfactor": "1.54",
+  "influence": "1.21",
+  "website": "http://www.plosone.org/",
+  "issn": "1932-6203",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1932-6203_PLoS_ONE",
+  "key": "/rg/journal?name=1932-6203_PLoS_ONE",
+  "cached": "2019-01-20T02:25:02.184Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.40">{
+  "publisher": "Palgrave MacMillan",
+  "title": "Palgrave Communications",
+  "description": "Palgrave Communications, published by Palgrave Macmillan, is a fully open-access, online journal publishing peer-reviewed academic research across the full spectrum of the humanities and social sciences. The journal publishes research Articles, Reviews and short Comments, and features thematic article collections (‘special issues’). It began publication in January 2015.",
+  "eigenfactor": "",
+  "website": "https://www.nature.com/palcomms/",
+  "key": "/rg/journal?name=",
+  "cached": "2019-01-20T02:25:08.442Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.41">{
+  "title": "Personality and Individual Differences (PERS INDIV DIFFER)",
+  "publisher": "Publisher: International Society for the Study of Individual Differences, Elsevier",
+  "description": "Personality and Individual Differences is devoted to the publication of articles (experimental, theoretical, review) which aim to integrate as far as possible the major factors of personality with empirical paradigms from experimental, physiological, animal, clinical, educational, criminological or industrial psychology or to seek an explanation for the causes and major determinants of individual differences in concepts derived from these disciplines. The editors are concerned with both genetic and environmental causes, and they are particularly interested in possible interaction effects. Ultimately they believe that human beings are bio-social organisms and that work on individual differences can be most fruitfully pursued by paying attention to both these aspects of our nature. They believe that advances are more likely to be made by the use of the hypothetical-deductive method, though empirical data based on sound research and providing interesting new findings, would of course not be rejected simply because they might not have a good theoretical underpinning. All in all, the traditional type of work on traits, abilities, attitudes, types and other latent structures underlying consistencies in behavior has in recent years been receiving rather short shrift in traditional journals of personality; Personality and Individual Differences aims to reinstate it to its proper place in psychology, equal in importance with general experimental work, and interacting with it to make up a unitary science of psychology. The Second International Conference on Child &amp;Adolescent Mental Health takes place in Kuala Lumpur, 6-10 June 2000. Topics include: Assessment, diagnosis, education and treatment of children and adolescents, Child and adolescent psychopathology/social and emotional development, Cross cultural differences, Mental health issues, Model service delivery programs, Educational practices.",
+  "rgimpact": "1.82",
+  "halflife": "8.10",
+  "immediacy": "0.26",
+  "eigenfactor": "0.02",
+  "influence": "0.78",
+  "website": "http://www.sciencedirect.com/science/journal/01918869",
+  "issn": "0191-8869",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0191-8869_Personality_and_Individual_Differences",
+  "key": "/rg/journal?name=0191-8869_Personality_and_Individual_Differences",
+  "cached": "2019-01-20T02:25:18.423Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.42">{
+  "title": "Personality and Social Psychology Bulletin (Pers Soc Psychol Bull)",
+  "publisher": "Publisher: Society for Personality and Social Psychology, SAGE Publications",
+  "description": "Personality and Social Psychology Bulletin publishes theoretical articles and empirical reports of research in all areas of personality and social psychology.",
+  "rgimpact": "3.67",
+  "halflife": "10.00",
+  "immediacy": "0.23",
+  "eigenfactor": "0.02",
+  "influence": "1.92",
+  "website": "http://psp.sagepub.com/",
+  "issn": "1552-7433",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/1552-7433_Personality_and_Social_Psychology_Bulletin",
+  "key": "/rg/journal?name=1552-7433_Personality_and_Social_Psychology_Bulletin",
+  "cached": "2019-01-20T02:25:26.831Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.43">{
+  "title": "Pharmacology Biochemistry and Behavior (PHARMACOL BIOCHEM BE)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Pharmacology Biochemistry &amp;Behavior publishes original reports in the areas of pharmacology, biochemistry, and toxicology in which the primary emphasis and theoretical context are behavioral. Contributions may involve clinical, preclinical, or basic research. Purely behavioral studies generally will not be published unless they have directly demonstrable relevance to the areas of pharmacology, biochemistry, or toxicology. Now Available! ContentsDirect to your PC ContentsDirect, the fastest and most direct alerting service for Elsevier Science journals, is available, free of charge, exclusively from Elsevier Science. Receive the contents of Pharmacology Biochemistry &amp;Behavior via e-mail approximately 2-4 weeks before a journal issue appears in libraries!",
+  "rgimpact": "2.20",
+  "halflife": "0.00",
+  "immediacy": "0.60",
+  "eigenfactor": "0.01",
+  "influence": "0.71",
+  "website": "http://www.sciencedirect.com/science/journal/00913057",
+  "issn": "0091-3057",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0091-3057_Pharmacology_Biochemistry_and_Behavior",
+  "key": "/rg/journal?name=0091-3057_Pharmacology_Biochemistry_and_Behavior",
+  "cached": "2019-01-20T02:25:37.882Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.44">{
+  "title": "Political Psychology (Polit Psychol)",
+  "publisher": "Publisher: International Society of Political Psychology, Wiley",
+  "description": "Understanding the psychological aspects of national and international political developments is increasingly important in this age of international tension and sweeping political change. Political Psychology the journal of the International Society of Political Psychology is dedicated to the analysis of the interrelationships between psychological and political processes. International contributors draw on a diverse range of sources including clinical and cognitive psychology economics history international relations philosophy political science political theory sociology personality and social psychology.",
+  "rgimpact": "1.82",
+  "halflife": "8.00",
+  "immediacy": "0.33",
+  "eigenfactor": "0.00",
+  "influence": "1.45",
+  "website": "http://www.interscience.wiley.com/jpages/0162-895X/",
+  "issn": "1467-9221",
+  "material": "Periodical",
+  "doctype": "Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1467-9221_Political_Psychology",
+  "key": "/rg/journal?name=1467-9221_Political_Psychology",
+  "cached": "2019-01-20T02:25:46.823Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.45">{
+  "title": "Progress in Neuro-Psychopharmacology and Biological Psychiatry (PROG NEURO-PSYCHOPH)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Progress in Neuro-Psychopharmacology &amp;Biological Psychiatry is an international and multidisciplinary research, review and news journal. One of its main aims is to assure rapid publication of authoritative reviews and research papers dealing with experimental and clinical aspects of neuro-psychopharmacology and biological psychiatry. Another important aim of the journal is to supply pertinent information, provided by national and international bodies, that contributes to progress in the scientific and professional fields. Finally, the journal intends to foster and encourage communications between members of the communities of neuro-psychopharmacology and biological psychiatry.",
+  "rgimpact": "3.02",
+  "halflife": "5.90",
+  "immediacy": "1.34",
+  "eigenfactor": "0.02",
+  "influence": "1.00",
+  "website": "http://www.sciencedirect.com/science/journal/02785846",
+  "issn": "0278-5846",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0278-5846_Progress_in_Neuro-Psychopharmacology_and_Biological_Psychiatry",
+  "key": "/rg/journal?name=0278-5846_Progress_in_Neuro-Psychopharmacology_and_Biological_Psychiatry",
+  "cached": "2019-01-20T02:25:58.138Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.46">{
+  "title": "Psychological Review (PSYCHOL REV)",
+  "publisher": "Publisher: American Psychological Association, American Psychological Association",
+  "description": "Psychological Review publishes articles that make important theoretical contributions to any area of scientific psychology. Preference is given to papers that advance theory, but systematic evaluation of alternative theories in a given domain will also be considered for publication. Papers devoted to surveys of the literature, problems of method and design, or reports of empirical findings are not appropriate. The Review also publishes, as Theoretical Notes, commentary that contributes to progress in a given subfield of scientific psychology. Such notes include, but are not limited to, discussions of previously published articles, comments that apply to a class of theoretical models in a given domain, critiques and discussions of alternative theoretical approaches, and metatheoretical commentary on theory testing and related topics.",
+  "rgimpact": "11.60",
+  "halflife": "0.00",
+  "immediacy": "1.19",
+  "eigenfactor": "0.02",
+  "influence": "5.81",
+  "website": "http://content.apa.org/journals/rev",
+  "issn": "0033-295X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0033-295X_Psychological_Review",
+  "key": "/rg/journal?name=0033-295X_Psychological_Review",
+  "cached": "2019-01-20T02:26:23.232Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.47">{
+  "title": "Psychology of Addictive Behaviors (PSYCHOL ADDICT BEHAV)",
+  "publisher": "Publisher: Society of Psychologists in Addictive Behaviors; American Psychological Association. Division 50, American Psychological Association",
+  "description": "The Psychology of Addictive Behaviors publishes peer-reviewed original articles related to the psychological aspects of addictive behaviors. Articles on the following topics are included: (a) alcohol and alcoholism, (b) drug use and abuse, (c) eating disorders, (d) smoking and nicotine addiction, and (e) other compulsive behaviors (e.g., gambling). Full-length research reports, literature reviews, essays, brief reports, and comments are published. The journal is published four times yearly and is abstracted by Psychological Abstracts.",
+  "rgimpact": "2.75",
+  "halflife": "6.90",
+  "immediacy": "0.37",
+  "eigenfactor": "0.01",
+  "influence": "1.08",
+  "website": "http://content.apa.org/journals/adb",
+  "issn": "0893-164X",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0893-164X_Psychology_of_Addictive_Behaviors",
+  "key": "/rg/journal?name=0893-164X_Psychology_of_Addictive_Behaviors",
+  "cached": "2019-01-20T02:26:32.137Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.48">{
+  "title": "Psychopharmacology (PSYCHOPHARMACOLOGY)",
+  "publisher": "Publisher: Springer Verlag",
+  "description": "Psychopharmacology is an international journal of research and scholarship the aims of which are to cover the general area of elucidating mechanisms by which drugs affect behavior both terms intended in the broadest sense. The scope of the Journal extends from clinical psychopharmacology (including trials) to experimental studies on the effects of drugs on cognition and behavior in humans and laboratory studies in experimental animals. The research methodologies (techniques covered) may range from neurochemical assays and electrophysiological recording to studies of functional neuro-imaging and the methods of experimental psychology and ethology as well as clinical neurology and psychiatry. The journal is particularly interested in articles that integrate these levels of analysis.",
+  "rgimpact": "2.43",
+  "halflife": "9.50",
+  "immediacy": "0.95",
+  "eigenfactor": "0.03",
+  "influence": "1.13",
+  "website": "http://www.springer.com/biomed/neuroscience/journal/213",
+  "issn": "0033-3158",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0033-3158_Psychopharmacology",
+  "key": "/rg/journal?name=0033-3158_Psychopharmacology",
+  "cached": "2019-01-20T02:26:44.236Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.49">{
+  "title": "Psycoloquy",
+  "publisher": "American Psychological Association",
+  "description": "Psycoloquy is a refereed international, interdisciplinary electronic journal sponsored by the American Psychological Association (APA). ",
+  "rgimpact": "0.19",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "",
+  "issn": "1055-0143",
+  "material": "",
+  "doctype": "",
+  "url": "https://www.researchgate.net/journal/1055-0143_Psycoloquy",
+  "key": "/rg/journal?name=1055-0143_Psycoloquy",
+  "cached": "2019-01-20T02:26:51.914Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.5">{
+  "title": "Addictive Behaviors (ADDICT BEHAV)",
+  "publisher": "Publisher: Elsevier",
+  "description": "Addictive Behaviors is a professional journal designed to publish original research and theoretical papers in the area of substance abuse. The journal focuses on alcohol and drug abuse, smoking, and problems associated with eating. Articles represent interdisciplinary endeavors with research in such fields as biochemistry, psychology, sociology, psychiatry, neurology, and pharmacology being represented. While theoretical orientations are diverse, the emphasis of the journal is primarily empirical. That is, sound experimental design combined with objective assessment procedures is a requisite for inclusion of papers. Occasionally, uncontrolled clinical demonstrations or case reports appear in brief form if they are innovative and likely to induce further research in the area. A case report, to be acceptable, must embody one or more of the following: (1) a new and original method; (2) an apparently advantageous variation of a previous method; (3) an observation of considerable interest; (4) an unusually clear account of the use of an accepted method. In all instances, baseline and follow-up quantitative data of no less than a six-month duration should be presented. Two major types of research reports are encouraged. The first type includes descriptive studies in which functional relationships between a substance abuse and any one of a combination of social biochemical, cognitive, environmental, attitudinal, emotional, or neurological factors are established. A study in which the relationship between social stress and alcohol consumption were assessed in both alcoholics and social drinkers is included in this category. Descriptive studies which contribute meaningfully to the development and/or modification of clinical treatment strategies are given priority. The second type of study involves clinical outcome data in which treatment or prevention procedures are systematically evaluated by controlled group research or single-case designs. The Second International Conference on Child &amp;Adolescent Mental Health takes place in Kuala Lumpur, 6-10 June 2000. Topics include: Assessment, diagnosis, education and treatment of children and adolescents, Child and adolescent psychopathology/social and emotional development, Cross cultural differences, Mental health issues, Model service delivery programs, Educational practices. For full details see http://www.elsevier.nl/locate/camh2000 Addictions 2000 - 'Prevention of Substance Use Problems: Directions for the Next Millennium' will take place 22-24 September 2000 in Cape Cod, USA. Sessions include: Implications of etiologic research for prevention; Universal to indicated models of prevention; School and community interventions; Prevention - from science to policy.",
+  "rgimpact": "2.65",
+  "halflife": "7.60",
+  "immediacy": "0.58",
+  "eigenfactor": "0.02",
+  "influence": "0.99",
+  "website": "http://www.sciencedirect.com/science/journal/03064603",
+  "issn": "0306-4603",
+  "material": "Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0306-4603_Addictive_Behaviors",
+  "key": "/rg/journal?name=0306-4603_Addictive_Behaviors",
+  "cached": "2019-01-20T02:19:10.122Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.50">{
+  "title": "Reading and Writing (READ WRIT)",
+  "publisher": "Publisher: Springer Verlag",
+  "description": "Reading and writing skills are fundamental to literacy. Consequently the processes involved in reading and writing and the failure to acquire these skills as well as the loss of once well-developed reading and writing abilities have been the targets of intense research activity involving professionals from a variety of disciplines such as neuropsychology cognitive psychology psycholinguistics and education. The findings that have emanated from this research are most often written up in a lingua that is specific to the particular discipline involved and are published in specialized journals. This generally leaves the expert in one area almost totally unaware of what may be taking place in any area other than his own. Reading and Writing cuts through this fog of jargon breaking down the artificial boundaries between disciplines. The journal focuses on the interaction among various fields such as linguistics information processing neuropsychology cognitive psychology speech and hearing science and education. Reading and Writing publishes high quality scientific articles pertaining to the processes acquisition and the loss of reading and writing skills. The journal publishes research articles critical reviews theoretical papers case studies and book reviews. The journal also publishes short articles under 'In Brief' section. Case studies and pilot reports with preliminary results may be suitable for publication in this section. Some topics that are appropriate for publication in the journal are: models of reading writing and spelling at all age levels; orthography and its relation to reading and writing; computer literacy; cross-cultural studies; and developmental and acquired disorders of reading and writing.",
+  "rgimpact": "1.90",
+  "halflife": "8.60",
+  "immediacy": "0.14",
+  "eigenfactor": "0.00",
+  "influence": "0.79",
+  "website": "http://www.springerlink.com/openurl.asp?genre=journal&amp;issn=0922-4777",
+  "issn": "0922-4777",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0922-4777_Reading_and_Writing",
+  "key": "/rg/journal?name=0922-4777_Reading_and_Writing",
+  "cached": "2019-01-20T02:27:02.559Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.51">{
+  "publisher": "Institute on Religion and Public Life",
+  "title": "First Things",
+  "description": "First Things is published by the Institute on Religion and Public Life, an interreligious, nonpartisan research and educational 501(c)(3) organization. The Institute was founded in 1989 by Richard John Neuhaus and his colleagues to confront the ideology of secularism, which insists that the public square must be “naked,” and that faith has no place in shaping the public conversation or in shaping public policy.",
+  "website": "https://www.firstthings.com/",
+  "eigenfactor": "",
+  "key": "/rg/journal?name=",
+  "cached": "2019-01-20T02:27:04.485Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.52">{
+  "title": "Scientometrics (SCIENTOMETRICS)",
+  "publisher": "Publisher: Akadémiai Kiadó",
+  "description": "Scientometrics aims at publishing original studies short communications preliminary reports review papers letters to the editor and book reviews on scientometrics. The topics covered are results of research concerned with the quantitative features and characteristics of science. Emphasis is placed on investigations in which the development and mechanism of science are studied by means of (statistical) mathematical methods. The Journal also provides the reader with important up-to-date information about international meetings and events in scientometrics and related fields. Appropriate bibliographic compilations are published as a separate section. Due to its fully interdisciplinary character Scientometrics is indispensable to research workers and research administrators throughout the world. It provides valuable assistance to librarians and documentalists in central scientific agencies ministries research institutes and laboratories. Scientometrics includes the Journal of Research Communication Studies. Consequently its aims and scope cover that of the latter namely to bring the results of research investigations together in one place in such a form that they will be of use not only to the investigators themselves but also to the entrepreneurs and research workers who form the object of these studies.",
+  "rgimpact": "2.51",
+  "halflife": "6.50",
+  "immediacy": "0.33",
+  "eigenfactor": "0.01",
+  "influence": "0.43",
+  "website": "http://www.springerlink.com/openurl.asp?genre=journal&amp;issn=0138-9130",
+  "issn": "0138-9130",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0138-9130_Scientometrics",
+  "key": "/rg/journal?name=0138-9130_Scientometrics",
+  "cached": "2019-01-20T02:27:13.565Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.53">{
+  "publisher": "Society for Personality and Social Psychology",
+  "title": "Social Psychological and Personality Science",
+  "eigenfactor": "",
+  "description": "&lt;p&gt;Now published eight times per year,&lt;em&gt; Social    Psychological and Personality Science (SPPS)&lt;/em&gt; is a collaboration from the Association for    Research in Personality (ARP), the European Association of Social Psychology (EASP), the Society of    Experimental Social Psychology (SESP), the Society for Personality and Social Psychology (SPSP), and    co-sponsored by the Asian Association of Social Psychology (AASP) and Society of Australasian Social    Psychologists (SASP). The founding and sponsoring societies provide their membership with    complimentary subscriptions, immediately giving the journal a reach of over 7,000 scholars in social    and personality psychology worldwide!&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;SPPS&lt;/em&gt; is a unique short reports journal in social and personality psychology. Its aim is    to publish concise reports of empirical studies that provide meaningful contributions to our    understanding of important issues in social and personality psychology. &lt;em&gt;SPPS&lt;/em&gt; strives to    publish innovative, rigorous, and impactful research. It is geared toward a speedy review and    publication process to allow groundbreaking research to become part of the scientific    conversation quickly. &lt;em&gt;SPPS&lt;/em&gt; now also accepts submissions of replication studies.    Articles cannot exceed 5,000 words (excluding tables, figures, and references) and they may    present new theory, new data, new methods, or any combination of these. Preference will be given    to articles that:&lt;/p&gt;&lt;ul&gt;    &lt;li&gt;represent an advance to social psychological or personality science&lt;/li&gt;    &lt;li&gt;are methodologically rigorous&lt;/li&gt;    &lt;li&gt;have theoretical and practical significance&lt;/li&gt;    &lt;li&gt;help build interdisciplinary bridges among areas in social and personality psychology&lt;/li&gt;    &lt;li&gt;are written to be accessible to a wide range of audiences, including science writers for the        popular press and the public at large&lt;br/&gt;&lt;/li&gt;&lt;/ul&gt;",
+  "key": "/rg/journal?name=",
+  "cached": "2019-01-20T02:27:15.931Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.54">{
+  "title": "Social and Personality Psychology Compass",
+  "publisher": "Publisher: Wiley",
+  "description": "Unique in its range, Social and Personality Psychology Compass is an online-only journal publishing original, peer-reviewed surveys of current research and theory from across the entire discipline.",
+  "rgimpact": "2.67",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "https://onlinelibrary.wiley.com/journal/17519004",
+  "issn": "1751-9004",
+  "material": "",
+  "doctype": "Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/1751-9004_Social_and_Personality_Psychology_Compass",
+  "key": "/rg/journal?name=1751-9004_Social_and_Personality_Psychology_Compass",
+  "cached": "2019-01-20T02:27:33.550Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.7">{
+  "title": "Alcohol health and research world (Alcohol Health Res World)",
+  "publisher": "Publisher: National Institute on Alcohol Abuse and Alcoholism (U.S.); United States. Alcohol, Drug Abuse, and Mental Health Administration; National Institutes of Health (U.S.)",
+  "description": "Discontinued in 1998. Continued by Alcohol Research &amp;Health (1535-7414).",
+  "rgimpact": "0.24",
+  "halflife": "",
+  "immediacy": "",
+  "eigenfactor": "",
+  "influence": "",
+  "website": "http://www.niaaa.nih.gov/Publications/AlcoholResearch/default.htm",
+  "issn": "0090-838X",
+  "material": "Government publication, National government publication, Periodical, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0090-838X_Alcohol_health_and_research_world",
+  "key": "/rg/journal?name=0090-838X_Alcohol_health_and_research_world",
+  "cached": "2019-01-20T02:19:19.159Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.8">{
+  "title": "Alcoholism Clinical and Experimental Research (ALCOHOL CLIN EXP RES)",
+  "publisher": "Publisher: Research Society on Alcoholism (U.S.); National Council on Alcoholism and Drug Dependence (U.S.); International Society for Biomedical Research on Alcoholism, Wiley",
+  "description": "Founded by the National Council on Alcoholism and Drug Dependence, this journal gives readers direct access to the most significant and current findings on the nature and management of this serious health problem. Each month Alcoholism: Clinical and Experimental Research brings health care professionals and researchers the latest clinical studies and research findings on alcoholism, alcohol-induced syndromes and organ damage. Pertinent current papers in the major categories of basic science, clinical research, and treatment methods are included in each issue.",
+  "rgimpact": "0.39",
+  "halflife": "8.70",
+  "immediacy": "0.64",
+  "eigenfactor": "0.02",
+  "influence": "1.02",
+  "website": "http://www.interscience.wiley.com/jpages/0145-6008/",
+  "issn": "0145-6008",
+  "material": "Document, Periodical, Internet resource",
+  "doctype": "Internet Resource, Computer File, Journal / Magazine / Newspaper",
+  "url": "https://www.researchgate.net/journal/0145-6008_Alcoholism_Clinical_and_Experimental_Research",
+  "key": "/rg/journal?name=0145-6008_Alcoholism_Clinical_and_Experimental_Research",
+  "cached": "2019-01-20T02:19:31.906Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
+<t tx="josephorr.20190119213120.9">{
+  "title": "Annals of the New York Academy of Sciences (ANN NY ACAD SCI)",
+  "publisher": "Publisher: New York Academy of Sciences, Wiley",
+  "description": "Published on behalf of the New York Academy of Sciences, the Annals provide multidisciplinary perspectives on research of current scientific interest with far-reaching implications for the wider scientific community and society at large. Scope, although concentrated on biological and medical sciences, extends into fields as diverse as astronomy, psychology, anthropology and philosophy. Each publication assembles the best thinking of key contributors to a field of investigation at a time when emerging developments offer the promise of new insight. These volumes stimulate new ways to think about science by providing a neutral forum for discourse - within and across many institutions and fields.",
+  "rgimpact": "2.02",
+  "halflife": "9.90",
+  "immediacy": "1.11",
+  "eigenfactor": "0.07",
+  "influence": "1.37",
+  "website": "http://www.interscience.wiley.com/jpages/0077-8923/",
+  "issn": "0077-8923",
+  "material": "Series, Internet resource",
+  "doctype": "Journal / Magazine / Newspaper, Internet Resource",
+  "url": "https://www.researchgate.net/journal/0077-8923_Annals_of_the_New_York_Academy_of_Sciences",
+  "key": "/rg/journal?name=0077-8923_Annals_of_the_New_York_Academy_of_Sciences",
+  "cached": "2019-01-20T02:19:48.700Z",
+  "params": {
+    "template": "rgjournal"
+  }
+}</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -3178,7 +4125,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
   "reads": "11,093 Reads",
   "journal": {
     "href": "https://www.firstthings.com/",
-    "text": "Religion and Public Life"
+    "text": "First Things"
   },
   "abstract": "Memory is vulnerable, easily distorted to fit beliefs and modes of action that are more expedient than accurate. When the process of remembering becomes collective, such distortion may be greatly increased. Collective memories are acquired and transmitted in a social context, and are therefore the modifiable property of many people (De La Ronde &amp;Swann, 1998; Hardin &amp;Higgins, 1996; Rosenthal &amp;Rubin, 1978; Snyder, 1974). The tendency towards social modification, which can serve positively to unite the members of a group, has a very negative, dangerous, underground aspect. Individuals appear somewhat constrained in their willingness to inflict destruction (or at least in the power to do so). Groups of individuals are not. The dangers of self-deception about past events, far from trivial in the personal case, are tremendously magnified in the social arena. The careless use of memory can lead directly to the grave abuse of people.",
   "authors": [
