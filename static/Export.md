@@ -168,16 +168,25 @@ First, we'll give a node a @group-1 directive.
 This allows us, among other things, to refer to this group the same way we can refer to a single dataSets in the Chartjs components:
 
 ```
-CHART COMPONENT
+<bar-chart 
+  group=1 
+  :sparse="true" 
+  period=year 
+  :board="true"
+  legendLabel="Number of Articles"
+  :backgroundColor="'#8e5ea2'"
+  dataKey=pubdate />
 ```
 
-CHART COMPONENT SCREENSHOT
+Note that instead of the dataSet property, a group has been specified. The group data will be the data set for this bar chart.
+
+<img src="images/article-count.png" alt="alt text" width="700">
 
 ### The @from directive
 
 Now that we have grouped the articles to get arrays of JSON data, we can use the @from directive to create new lists extracted from the original group.
 
-In the JSON in the example above, there is a journal object looking like this:
+In the JSON in the example above, there is a journal object that looks like this:
 
 ```
   "journal": {
@@ -186,5 +195,39 @@ In the JSON in the example above, there is a journal object looking like this:
   },
 ```
 
-Now we would like to make a list of Journals. 
+Now we would like to make a list of Journals. We can extract this list of journal objects from the JSON group we just made. We make a node with the following title:
+
+```
+@from-1 Journals
+```
+
+And with the following node content:
+
+```
+template: rgjournals
+nodeList: 
+  listKey: journal
+  template: rgjournal
+  hrefKey: href
+  titleKey: text
+  hrefIsQueryString: true
+```
+
+The node title has a "@from-1" directive, so data will be selected from the "1" group. The key ("listKey") of the object to be extracted from each member of the group 1 data set is "journal", so we will get those.
+
+<img src="images/from-directive-leo.png" alt="alt text" width="700">
+
+In LeoVue, the above node will create a set of child nodes from the author keys, like this:
+
+<img src="images/journal-list-leovue.png" alt="alt text" width="700">
+
+We have specified an hrefKey, so each node created by LeoVue will be a @json link node. We can see this if we download (export) the Leo file for the author node from LeoVue and then open in Leo:
+
+<img src="images/journal-leo-result.png" alt="alt text" width="700">
+
+Note that two of the nodes are dataSet nodes. That is because in this example, before downloading the Leo file from the author node, we first clicked on the first two nodes. This caused the link node to execute, fetching the data at the link, and then replacing the node with a dataSet node containing that data.
+
+
+
+
 

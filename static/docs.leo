@@ -31,7 +31,7 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
-<v t="josephorr.20181120155646.1"><vh>@page Directives</vh>
+<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
 <v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
 <v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
 <v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
@@ -2808,7 +2808,9 @@ LeoVue adds a few directives not found in the Leo. These are all node level dire
    ```
    In the above example, the data in the example node will have a key of 'set1' (which can be used by components elsewhere in the tree). The text after the key name will be used as the node label in the tree menu. 
    
-* **@group-** Treat the immediate child nodes as one data set.   </t>
+* **@group-** Treat the immediate child nodes as one data set.   
+* **@from-** Extract a subset of data from the a group.   
+</t>
 <t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
 
     [Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))

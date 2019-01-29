@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - remove font awesome cdn
 - fix to wordcloud example
 - @hide
+- @m
+- @tags
 
 ## [1.21.0] - 2018-01-22
 ### Added

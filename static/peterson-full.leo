@@ -118,7 +118,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -153,7 +153,7 @@
 <v t="leovue.2-105"></v>
 <v t="leovue.2-107"></v>
 </v>
-<v t="josephorr.20181226172138.1" a="E"><vh>@board @group-3 Not Alcoholism or Addiction</vh>
+<v t="josephorr.20181226172138.1"><vh>@board @group-3 Not Alcoholism or Addiction</vh>
 <v t="josephorr.20181220213416.1"></v>
 <v t="leovue.2-1"></v>
 <v t="leovue.2-3"></v>
@@ -261,7 +261,7 @@
 <v t="leovue.2-27"></v>
 </v>
 </v>
-<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
+<v t="josephorr.20190112170529.1"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
 <v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
@@ -275,7 +275,7 @@
 <v t="josephorr.20190115212843.1"><vh>@board Topic Comparison #2</vh></v>
 </v>
 <v t="josephorr.20181228080203.1"><vh>[Jordan B Peterson on Wikipedia](https://en.wikipedia.org/wiki/Jordan_Peterson)</vh></v>
-<v t="josephorr.20190119213120.1" a="E"><vh>@board Journals</vh>
+<v t="josephorr.20190119213120.1"><vh>@board Journals</vh>
 <v t="josephorr.20190119213120.5"><vh>@dataSet set259-3 Addictive Behaviors</vh></v>
 <v t="josephorr.20190119213120.7"><vh>@dataSet set259-5 Alcohol health and research world</vh></v>
 <v t="josephorr.20190119213120.8"><vh>@dataSet set259-6 Alcoholism Clinical and Experimental Research</vh></v>
