@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @m
 - @tags
 
+## [1.21.1] - 2018-01-28
+### Changed
+- remove vendor.js.map from dist
+
+
 ## [1.21.0] - 2018-01-22
 ### Added
 - @from directive
