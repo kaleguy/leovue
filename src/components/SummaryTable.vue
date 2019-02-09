@@ -16,9 +16,23 @@
 <script>
   import _ from 'lodash'
   import util from '../util'
+  function getDataArray (data, type, id) {
+    const item = JSON.search(data, '//*[' + type + '="' + id + '"]')[0]
+    return item
+      ? item.children
+      : []
+  }
   export default {
     name: 'summary-table',
     props: {
+      group: {
+        type: Number,
+        default: null
+      },
+      mgroup: {
+        type: Number,
+        default: null
+      },
       cols: {
         type: Array,
         default: [
@@ -42,12 +56,25 @@
         return cKeys
       },
       chapters () {
+        function getColumnData (cols, d) {
+          const o = {}
+          _.forEach(cols, col => {
+            o[col.show.replace(/\./g, '~')] = _.get(d, col.show, '')
+          })
+          return o
+        }
         let data = this.$store.state.leodata
-        const item = JSON.search(data, '//*[id="' + this.$store.state.currentItem.id + '"]')[0]
-        const children = item.children
+        if (this.group) {
+          console.log('g', this.group)
+        }
+        const id = this.group || this.$store.state.currentItem.id
+        const key = this.group
+          ? 'group'
+          : 'id'
+        const d = getDataArray(data, key, id)
         const items = []
         const textItems = this.$store.state.leotext
-        children.forEach(child => {
+        d.forEach(child => {
           const t = textItems[child.t]
           let textData = {}
           try {
@@ -55,11 +82,7 @@
           } catch (e) {
             console.log(e, child.id)
           }
-          const o = {}
-          _.forEach(this.cols, col => {
-            o[col.show.replace(/\./g, '~')] = _.get(textData, col.show, '')
-          })
-          items.push(o)
+          items.push(getColumnData(this.cols, textData))
         })
         return items
         // return this.$store.state.viewType

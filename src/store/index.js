@@ -722,7 +722,8 @@ function extractCover (ldata) {
 }
 
 /**
- * setData Set data loaded from the Leo file, get content for open items (from path) (open items may need to loaded
+ * setData Set data loaded from the Leo file, get content for open items (from path)
+ * (open items may need to loaded
  * from external sources, e.g. md files. Also process special nodes like @presentation and @page
  * @param context
  * @param ldata
@@ -1006,9 +1007,40 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   })
   return p
 }
+function extractTags (text) {
+  let tags = []
+  const startIndex = text.indexOf('@t\n')
+  if (startIndex < 1) {
+    return null
+  }
+  const endIndex = text.indexOf('\n\n', startIndex)
+  const mText = text.substring(startIndex + 3, endIndex)
+  tags = mText.split('\n')
+  return tags
+}
+function extractMetaData (text) {
+  let metadata = {}
+  const startIndex = text.indexOf('@m\n')
+  if (startIndex < 1) {
+    return null
+  }
+  const endIndex = text.indexOf('\n\n', startIndex)
+  const mText = text.substring(startIndex + 3, endIndex)
+  try {
+    if (mText.indexOf('}') === -1) {
+      metadata = jsyaml.load(mText) || {}
+    } else {
+      metadata = JSON.parse(mText)
+    }
+  } catch (e) {
+    console.log('Bad metadata:', mText, e)
+  }
+  return metadata
+}
 /**
   Recursively preprocess tree
-  e.g add language directives to subtrees of existing language directives
+  e.g add language directives to subtrees of existing language directives,
+  extract metadata, extract group info for each node
 */
 function setChildDirectives (context, data) {
   const textItems = data.textItems
@@ -1018,12 +1050,19 @@ function setChildDirectives (context, data) {
 }
 function setChildDirective (context, d, textItems, parentDirective) {
   const text = textItems[d.t]
-  // check for @group, add if found
+  d.metadata = extractMetaData(text)
+  d.tags = extractTags(text)
+  // check for @group and @mgroup, add if found add param
   const title = d.name
-  const rex = /@group-(.*?) /
-  const match = rex.exec(title)
+  let rex = /@group-(.*?) /
+  let match = rex.exec(title)
   if (match && match[1]) {
     d.group = match[1]
+  }
+  rex = /@mgroup-(.*?) /
+  match = rex.exec(title)
+  if (match && match[1]) {
+    d.mgroup = match[1]
   }
   // language directive
   const re = /^(@language \w+)/

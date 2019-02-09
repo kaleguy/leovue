@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @hide
 - @m
 - @tags
+- convert entities in export
 
 ## [1.21.1] - 2018-01-28
 ### Changed
