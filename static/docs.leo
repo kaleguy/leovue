@@ -31,14 +31,14 @@
 </v>
 <v t="josephorr.20170421082838.1"><vh>Configuring</vh></v>
 <v t="josephorr.20181105183604.1"><vh>Navigating</vh></v>
-<v t="josephorr.20181120155646.1" a="E"><vh>@page Directives</vh>
+<v t="josephorr.20181120155646.1"><vh>@page Directives</vh>
 <v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
 <v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
 <v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -50,7 +50,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -75,7 +75,7 @@
 <v t="josephorr.20180407102550.1"><vh>JSON</vh>
 <v t="josephorr.20190101125029.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20190101130116.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
-<v t="josephorr.20181028132300.1" a="E"><vh>Lists from JSON data</vh>
+<v t="josephorr.20181028132300.1"><vh>Lists from JSON data</vh>
 <v t="josephorr.20181020175246.1"><vh>@json [Papers of Paul Krugman](static/repec-krugman.json)</vh></v>
 <v t="josephorr.20181016191554.1"><vh>@json [Research of Jordan Peterson](static/articles-Jordan_Peterson2.json)</vh></v>
 </v>
@@ -133,7 +133,7 @@
 </v>
 </v>
 <v t="josephorr.20171109061104.1"><vh>Data</vh>
-<v t="josephorr.20171107074219.1" a="E"><vh>Data Sets</vh>
+<v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
 </v>
@@ -186,6 +186,8 @@
 </v>
 <v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
+<v t="josephorr.20190209064826.1"><vh>Single Node Data</vh></v>
+<v t="josephorr.20190209062118.1" a="E"><vh>Data from Node Groups</vh>
 <v t="josephorr.20190202185628.1"><vh>@board @group-4 Research of Jordan B Peterson</vh>
 <v t="josephorr.20190202185628.2"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="josephorr.20190202185628.3"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -294,15 +296,18 @@
 <v t="josephorr.20190202185628.106"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="josephorr.20190202185628.107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20190204084517.1" a="E"><vh>Data Groups</vh>
-<v t="josephorr.20190204084431.1"><vh>@board Research of Jordan B Peterson - Group Table Demo</vh></v>
+<v t="josephorr.20190204084431.1"><vh>@board Research of Jordan B Peterson - Summary Table From Group</vh></v>
+<v t="josephorr.20190209064626.1"><vh>Jordan B Peterson Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190131173223.1"><vh>Movies</vh>
+<v t="josephorr.20190209062531.1" a="E"><vh>Metadata</vh>
+<v t="josephorr.20190209065152.1"><vh>Movies - Summary Table</vh></v>
+<v t="josephorr.20190131173223.1"><vh>@mgroup-1 Movies - Data</vh>
 <v t="josephorr.20190131173340.1"><vh>[Interstellar](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20190131173315.1"><vh>[Days of Heaven](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 </v>
 </v>
-<v t="josephorr.20180123102417.1" a="E"><vh>Summary Nodes</vh>
+</v>
+<v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
 <v t="josephorr.20180123102440.1"><vh>Mermaid</vh>
 <v t="josephorr.20180123094605.1"><vh>@mermaidtd (Simple Example Top Down)</vh>
 <v t="josephorr.20180123100140.1"><vh>{A}</vh>
@@ -407,8 +412,8 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180116093044.1" a="E"><vh>Kanban</vh>
-<v t="josephorr.20180116093050.1" a="E"><vh>@kanban LeoVue Project Kanban</vh>
+<v t="josephorr.20180116093044.1"><vh>Kanban</vh>
+<v t="josephorr.20180116093050.1"><vh>@kanban LeoVue Project Kanban</vh>
 <v t="josephorr.20180122081638.1"><vh>Later</vh>
 <v t="josephorr.20180122081646.1"><vh>Static Site upgrade</vh></v>
 <v t="josephorr.20180130120957.1"><vh>CSS cleanup</vh></v>
@@ -788,9 +793,7 @@ parameters in index.html.
 
 For a quick look at a Leo file, you can also drag and drop the file on to LeoVue.
 </t>
-<t tx="josephorr.20170401114539.1">@m
-description: Sci-fi epic from Bruce Nolan.
-rating: 5</t>
+<t tx="josephorr.20170401114539.1"></t>
 <t tx="josephorr.20170401144849.1">@language md
 
 ## Link Nodes
@@ -2958,12 +2961,24 @@ comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20190105100838.1"></t>
 <t tx="josephorr.20190105100846.1"></t>
 <t tx="josephorr.20190105100914.1"></t>
-<t tx="josephorr.20190131173139.1"></t>
+<t tx="josephorr.20190131173139.1">@language md
+
+Nodes can contain JSON, YAML or CSV data.
+
+Data in a single node:
+* template
+* chart
+
+Data from groups of nodes:
+* table
+* chart </t>
 <t tx="josephorr.20190131173223.1"></t>
 <t tx="josephorr.20190131173315.1">@m
 description: Turn of century love triangle.
 rating: 5</t>
-<t tx="josephorr.20190131173340.1"></t>
+<t tx="josephorr.20190131173340.1">@m
+description: Sci-fi epic from Bruce Nolan.
+rating: 5</t>
 <t tx="josephorr.20190202185628.1">@language html
 
 &lt;summary-table
@@ -7208,6 +7223,13 @@ rating: 5</t>
  :group=4
  :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
 &lt;/summary-table&gt;</t>
-<t tx="josephorr.20190204084517.1"></t>
+<t tx="josephorr.20190209062118.1"></t>
+<t tx="josephorr.20190209062531.1"></t>
+<t tx="josephorr.20190209064626.1">&lt;word-cloud from="abstract" group=4 /&gt;</t>
+<t tx="josephorr.20190209064826.1"></t>
+<t tx="josephorr.20190209065152.1">&lt;summary-table
+ :mgroup=1
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'rating', label: 'Rating'}]" &gt;
+&lt;/summary-table&gt;</t>
 </tnodes>
 </leo_file>

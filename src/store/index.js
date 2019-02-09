@@ -1021,10 +1021,10 @@ function extractTags (text) {
 function extractMetaData (text) {
   let metadata = {}
   const startIndex = text.indexOf('@m\n')
-  if (startIndex < 1) {
+  if (startIndex < 0) {
     return null
   }
-  const endIndex = text.indexOf('\n\n', startIndex)
+  const endIndex = (text + '\n\n').indexOf('\n\n', startIndex)
   const mText = text.substring(startIndex + 3, endIndex)
   try {
     if (mText.indexOf('}') === -1) {
@@ -1033,8 +1033,9 @@ function extractMetaData (text) {
       metadata = JSON.parse(mText)
     }
   } catch (e) {
-    console.log('Bad metadata:', mText, e)
+    console.log('Bad metadata:', mText, startIndex, endIndex, e)
   }
+  console.log('metadata:', metadata)
   return metadata
 }
 /**

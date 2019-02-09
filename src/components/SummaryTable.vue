@@ -64,24 +64,28 @@
           return o
         }
         let data = this.$store.state.leodata
-        if (this.group) {
-          console.log('g', this.group)
-        }
-        const id = this.group || this.$store.state.currentItem.id
+        const id = this.group || this.mgroup || this.$store.state.currentItem.id
         const key = this.group
           ? 'group'
-          : 'id'
+          : this.mgroup
+            ? 'mgroup'
+            : 'id'
         const d = getDataArray(data, key, id)
         const items = []
         const textItems = this.$store.state.leotext
         d.forEach(child => {
-          const t = textItems[child.t]
-          let textData = {}
+          let t = textItems[child.t]
+          let textData = {
+          }
           try {
-            textData = JSON.parse(t)
+            this.mgroup
+              ? textData = child.metadata
+              : textData = JSON.parse(t)
           } catch (e) {
             console.log(e, child.id)
           }
+          textData.title = child.name
+          textData.vtitle = child.vtitle
           items.push(getColumnData(this.cols, textData))
         })
         return items
