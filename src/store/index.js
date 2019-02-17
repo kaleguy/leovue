@@ -760,6 +760,7 @@ function setData (context, ldata, filename, route) {
     loadPages(ldata.data, text)
   }
   getTagList(context, ldata)
+  cleanText(text) // remove metadata from text
   // TODO: refactor use of id vs route.path
   let id = route.params.id
   // check if path is a literate path, translate to number (look up matching node name)
@@ -1008,21 +1009,29 @@ function loadSubtrees (context, trees, data, topId, subpath) {
   })
   return p
 }
-function extractTags (text) {
+function extractTags (textItems, textIndex) {
+  const text = textItems[textIndex]
   let tags = []
   const startIndex = text.indexOf('@t\n')
   if (startIndex < 1) {
     return tags
   }
   let endIndex = text.indexOf('\n\n', startIndex)
-  let mText = null
-  endIndex === -1
-    ? mText = text.substring(startIndex + 3)
-    : mText = text.substring(startIndex + 3, endIndex)
+  let mText = null // metatext
+  // let cText = null // clean text
+  if (endIndex === -1) {
+    mText = text.substring(startIndex + 3)
+    // cText = text.substring(0, startIndex)
+  } else {
+    mText = text.substring(startIndex + 3, endIndex)
+    // cText = text.substring(0, startIndex) + text.substring(endIndex)
+  }
   tags = mText.split('\n')
+  // textItems[textIndex] = cText
   return tags
 }
-function extractMetaData (text) {
+function extractMetaData (textItems, textIndex) {
+  const text = textItems[textIndex]
   let metadata = {}
   const startIndex = text.indexOf('@m\n')
   if (startIndex < 0) {
@@ -1030,6 +1039,8 @@ function extractMetaData (text) {
   }
   const endIndex = (text + '\n\n').indexOf('\n\n', startIndex)
   const mText = text.substring(startIndex + 3, endIndex)
+  // const cText = text.substring(0, startIndex) + text.substring(endIndex)
+  // textItems[textIndex] = cText // clean text
   try {
     if (mText.indexOf('}') === -1) {
       metadata = jsyaml.load(mText) || {}
@@ -1055,6 +1066,36 @@ function pushTags (d, tags) {
   d.children.forEach(child => pushTags(child, tags))
 }
 
+function cleanText (textItems) {
+  const keys = Object.keys(textItems)
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i]
+    textItems[key] = removeMetadata(textItems[key])
+  }
+}
+function removeMetadata (text) {
+  const lines = text.split(/\n/)
+  const cleanLines = []
+  let flag = true
+  let commentFlag = false
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    if (/^```/.test(line)) {
+      commentFlag = !commentFlag
+    }
+    if (/^@[tm]/.test(line)) {
+      flag = false
+    }
+    if (!flag && !line) {
+      flag = true
+    }
+    if (flag || commentFlag) {
+      cleanLines.push(line)
+    }
+  }
+  return cleanLines.join('\n')
+}
+
 /**
   Recursively preprocess tree
   e.g add language directives to subtrees of existing language directives,
@@ -1067,9 +1108,9 @@ function setChildDirectives (context, data) {
   })
 }
 function setChildDirective (context, d, textItems, parentDirective) {
-  const text = textItems[d.t]
-  d.metadata = extractMetaData(text)
-  d.tags = extractTags(text).map(t => { return { 'text': t } })
+  d.metadata = extractMetaData(textItems, d.t)
+  d.tags = extractTags(textItems, d.t).map(t => { return { 'text': t } })
+  let text = textItems[d.t]
   // check for @group and @mgroup, add if found add param
   const title = d.name
   let rex = /@group-(.*?) /

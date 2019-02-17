@@ -295,7 +295,8 @@ function transformLeoXML2XML(xmlString, startId, parser) {
   return p
 }
 let counter = 0
-function setIds (startId, d) {
+function setIds (startId, d, parentId) {
+  d.parentId = parentId || null
   // set viewing title, e.g. title with directives removed
   let vtitle = _.get(d, 'name', '')
   // TODO @rg (Researchgate) functionality should be in separate module
@@ -323,12 +324,12 @@ function setIds (startId, d) {
 
   d.id = counter++
   if (_.isArray(d)) {
-    return d.forEach(i => setIds(startId, i))
+    return d.forEach(i => setIds(startId, i, d.id))
   }
   if (startId) {
     d.id = startId + '-' + d.id
   }
-  d.children.forEach(c => setIds(startId, c))
+  d.children.forEach(child => setIds(startId, child, d.id))
 }
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
     const p = new Promise((resolve, reject) => {

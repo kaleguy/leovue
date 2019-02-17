@@ -9,7 +9,7 @@
     <div class="hit-list">
     <div v-for="chapter in chapters" class="chapter">
       <div class="section-link"
-           @click="gotoSection(chapter.vtitle)">{{chapter.vtitle}}</div>
+           @click="gotoSection(chapter.node.id)">{{chapter.nodePath}} {{chapter.node.vtitle}}</div>
     </div>
     </div>
   </div>
@@ -17,8 +17,15 @@
 
 <script>
   import VueTagsInput from '@johmun/vue-tags-input'
-  import util from '../util'
-  import _ from 'lodash'
+  function getNodePath (leodata, node, p) {
+    p = p || ''
+    const parentNode = JSON.search(leodata, `//*[id="${node.parentId}"]`)[0]
+    const parentId = (parentNode && parentNode.parentId) || null
+    p = parentNode.vtitle + ' / ' + p
+    return parentId
+      ? getNodePath(leodata, parentNode, p)
+      : p
+  }
   export default {
     name: 'tagsearch',
     components: {
@@ -36,8 +43,13 @@
         const leodata = this.$store.state.leodata
         if (!this.tags.length) { return }
         const conditions = this.tags.map(tag => { return `[tags/text="${tag.text}"]` }).join('')
-        const nodes = JSON.search(leodata, `//*${conditions}`)
-        return nodes
+        const arr = []
+        let nodes = JSON.search(leodata, `//*${conditions}`)
+        nodes.forEach(node => {
+          const nodePath = getNodePath(leodata, node)
+          arr.push({ nodePath, node })
+        })
+        return arr
       },
       filteredItems () {
         const tags = this.$store.state.tags
@@ -53,39 +65,8 @@
       }
     },
     methods: {
-      // TODO this is duplicate of TOC method, move to util
-      gotoSection: function (title) {
-        const plainTitle = _.trim(title)
-        const searchTitle = '« ' + plainTitle + ' »'
-        let leodata = this.$store.state.leodata
-        if (window.parent !== window.self) {
-          leodata = window.parent.lconfig.leodata
-        }
-        let titleObj = JSON.search(leodata, '//*[vtitle="' + searchTitle + '"]')[0]
-        if (!titleObj) {
-          let i = 0
-          while (!titleObj && (i < leodata.length)) {
-            titleObj = util.getObjectByKeyFromTree(leodata[i], 'vtitle', plainTitle)
-            i = i + 1
-          }
-        }
-        let id = null
-        let index = null
-        if (titleObj) {
-          id = titleObj.id
-          if (titleObj.index) {
-            index = titleObj.index
-          }
-          this.$store.dispatch('setCurrentItem', {id})
-          if (window.parent !== window.self) {
-            console.log('posting message')
-            window.parent.postMessage(JSON.stringify({
-              namespace: 'leovue',
-              eventName: 'setcurrentitem',
-              state: {id, index}
-            }), '*')
-          }
-        }
+      gotoSection: function (id) {
+        this.$store.dispatch('setCurrentItem', {id})
       }
     }
   }

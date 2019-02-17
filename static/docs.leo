@@ -38,7 +38,7 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -50,7 +50,7 @@
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -87,7 +87,7 @@
 <v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -120,7 +120,7 @@
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
 <v t="josephorr.20171105173610.1"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
@@ -132,7 +132,7 @@
 <v t="josephorr.20171113062955.1"><vh>@board Polar Chart from dataTable</vh></v>
 </v>
 </v>
-<v t="josephorr.20171109061104.1"><vh>Data</vh>
+<v t="josephorr.20171109061104.1" a="E"><vh>Data</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
 <v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data (set 1)</vh></v>
 <v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data (set 2)</vh></v>
@@ -140,7 +140,7 @@
 <v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
-<v t="josephorr.20171113063513.1" a="E"></v>
+<v t="josephorr.20171113063513.1"></v>
 <v t="josephorr.20171113063533.1"></v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
@@ -186,9 +186,9 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20170401144849.1" a="E"></v>
 <v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
-<v t="josephorr.20171109061104.1"></v>
+<v t="josephorr.20171109061104.1" a="E"></v>
 <v t="josephorr.20190209062118.1"><vh>Data from Node Groups</vh>
 <v t="josephorr.20190202185628.1"><vh>@board @group-4 Research of Jordan B Peterson</vh>
 <v t="josephorr.20190202185628.2"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
@@ -301,7 +301,7 @@
 <v t="josephorr.20190204084431.1"><vh>@board Research of Jordan B Peterson - Summary Table From Group</vh></v>
 <v t="josephorr.20190209064626.1"><vh>Jordan B Peterson Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190209062531.1" a="E"><vh>Metadata</vh>
+<v t="josephorr.20190209062531.1"><vh>Metadata</vh>
 <v t="josephorr.20190131173223.1" a="E"><vh>@mgroup-1 Movies - Data</vh>
 <v t="josephorr.20190131173340.1"><vh>[Interstellar](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20190131173315.1"><vh>[Days of Heaven](https://en.wikipedia.org/wiki/Days_of_Heaven)</vh></v>
@@ -309,7 +309,9 @@
 </v>
 <v t="josephorr.20190209065152.1"><vh>Movies - Summary Table</vh></v>
 </v>
-<v t="josephorr.20190216192019.1"><vh>Tags</vh></v>
+<v t="josephorr.20190217141559.1" a="E"><vh>Tags</vh>
+<v t="josephorr.20190216192019.1"><vh>Tag Demo</vh></v>
+</v>
 <v t="josephorr.20190216155227.1"><vh>Import and Export</vh>
 <v t="josephorr.20190216155232.1"><vh>[Importing JSON to Leo](static/Export.md)</vh></v>
 </v>
@@ -1131,7 +1133,8 @@ function transformLeoXML2XML(xmlString, startId, parser) {
   return p
 }
 let counter = 0
-function setIds (startId, d) {
+function setIds (startId, d, parentId) {
+  d.parentId = parentId || null
   // set viewing title, e.g. title with directives removed
   let vtitle = _.get(d, 'name', '')
   // TODO @rg (Researchgate) functionality should be in separate module
@@ -1159,12 +1162,12 @@ function setIds (startId, d) {
 
   d.id = counter++
   if (_.isArray(d)) {
-    return d.forEach(i =&gt; setIds(startId, i))
+    return d.forEach(i =&gt; setIds(startId, i, d.id))
   }
   if (startId) {
     d.id = startId + '-' + d.id
   }
-  d.children.forEach(c =&gt; setIds(startId, c))
+  d.children.forEach(child =&gt; setIds(startId, child, d.id))
 }
 function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
     const p = new Promise((resolve, reject) =&gt; {
@@ -2970,7 +2973,10 @@ For examples of content directives, see the [[ URL Nodes ]] section.
 location: NYC Central Park
 source: OpenWeather Map</t>
 <t tx="josephorr.20190101130116.1">template: openbooks
-comments: This is a math book. It was on the Openlibrary site.</t>
+comments: This is a math book. It was on the Openlibrary site.
+
+@t
+book</t>
 <t tx="josephorr.20190103202205.1"></t>
 <t tx="josephorr.20190105100838.1"></t>
 <t tx="josephorr.20190105100846.1"></t>
@@ -7332,7 +7338,7 @@ The third node shows an example of the Word Cloud component with data from the s
 ```
 
 </t>
-<t tx="josephorr.20190209062531.1"># Metadata
+<t tx="josephorr.20190209062531.1">## Metadata
 
 Using the @m directive, you can also add YAML or JSON data to any regular node. For example, 
 if you have node content like the following:
@@ -7379,7 +7385,7 @@ rating: 5
 
 @t
 movie</t>
-<t tx="josephorr.20190216192019.1">## Tags
+<t tx="josephorr.20190216192019.1">## Tag Search Demo
 
 This is a demo of tagging content with Leo and LeoVue. 
 
@@ -7387,5 +7393,31 @@ Some of the content nodes in this document/site have had tags added with the @t 
 To list documents matching tags, type in the input box below.
 
 &lt;tagsearch/&gt;</t>
+<t tx="josephorr.20190217141559.1"># Tags
+
+Similar to the @m directive, the @t directive allows you to add extra information to a node's content.
+
+In the case of the @t directive, each following line becomes a node tag. The first blank line (or end of node) 
+ends the tag list
+
+```
+@language md
+
+# Interstellar, the Movie
+
+Some text here
+
+@m
+description: Sci-fi epic from Bruce Nolan.
+rating: 5
+
+@t
+movie
+sci-fi
+
+```
+
+You can use the TagSearch component to search for nodes by tag, as in the below Tag Demo.
+</t>
 </tnodes>
 </leo_file>
