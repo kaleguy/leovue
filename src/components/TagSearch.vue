@@ -1,32 +1,59 @@
 <template>
-  <div class="toc">
+  <div>
+    <vue-tags-input
+      v-model="tag"
+      :tags="tags"
+      @tags-changed="newTags => tags = newTags"
+      :autocomplete-items="filteredItems"
+    />
+    <div class="hit-list">
     <div v-for="chapter in chapters" class="chapter">
-         <div class="section-link"
-         @click="gotoSection(chapter.vtitle)">{{chapter.vtitle}}</div>
-  </div>
+      <div class="section-link"
+           @click="gotoSection(chapter.vtitle)">{{chapter.vtitle}}</div>
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import _ from 'lodash'
+  import VueTagsInput from '@johmun/vue-tags-input'
   import util from '../util'
+  import _ from 'lodash'
   export default {
-    name: 'toc',
-    props: {
+    name: 'tagsearch',
+    components: {
+      VueTagsInput
     },
     data () {
       return {
+        tag: '',
+        tags: [
+        ]
       }
     },
     computed: {
       chapters () {
-        let data = this.$store.state.leodata
-        const item = JSON.search(data, '//*[id="' + this.$store.state.currentItem.id + '"]')[0]
-        return item.children
-        // return this.$store.state.viewType
+        const leodata = this.$store.state.leodata
+        if (!this.tags.length) { return }
+        const conditions = this.tags.map(tag => { return `[tags/text="${tag.text}"]` }).join('')
+        const nodes = JSON.search(leodata, `//*${conditions}`)
+        return nodes
+      },
+      filteredItems () {
+        const tags = this.$store.state.tags
+        const tagList = tags.reduce((acc, curr) => {
+          acc.push({ text: curr })
+          return acc
+        }, [])
+        const tag = this.tag.toLowerCase()
+        console.log(this.tags)
+        return tagList.filter(i => {
+          return i.text.toLowerCase().indexOf(tag) !== -1
+        })
       }
     },
     methods: {
+      // TODO this is duplicate of TOC method, move to util
       gotoSection: function (title) {
         const plainTitle = _.trim(title)
         const searchTitle = '« ' + plainTitle + ' »'
@@ -60,15 +87,13 @@
           }
         }
       }
-    },
-    components: {}
+    }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-.toc
-  font-size: 18px
+.hit-list
   margin-top: 30px
 .chapter
   margin-top: 10px

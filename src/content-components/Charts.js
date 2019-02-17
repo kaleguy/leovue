@@ -166,6 +166,11 @@ function extractColumn (table, options, colName, c) {
   options[colName] = column
 }
 
+/**
+ * For csv data
+ * @param dataTable
+ * @returns {{datasets: Array, title: *, colors: (*|string[]), labels: any | T}}
+ */
 function dataTableToDataSet (dataTable) {
   const csvArray = _.cloneDeep(dataTable.arr)
   const title = dataTable.title
@@ -235,6 +240,7 @@ function charts (Vue) {
           }
           return h || 400
         },
+        // deprecated TODO: remove
         xdataSetFromGroup () {
           // const props = this.$options.propsData
           console.log(dataSetFromGroup)

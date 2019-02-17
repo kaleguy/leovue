@@ -38,7 +38,7 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -59,7 +59,7 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
-<v t="josephorr.20180402061306.1" a="E"><vh>Basic Web Content</vh>
+<v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
 </v>
@@ -87,7 +87,7 @@
 <v t="josephorr.20190103202205.1"><vh>[Import with JSON Nodes - Export to Leo](static/Export.md)</vh></v>
 </v>
 </v>
-<v t="josephorr.20170605184042.1"><vh>Vue.js Components</vh>
+<v t="josephorr.20170605184042.1" a="E"><vh>Vue.js Components</vh>
 <v t="josephorr.20170602132642.1"><vh>Youtube Video</vh></v>
 <v t="josephorr.20171104210116.1"><vh>Leaflet Map</vh></v>
 <v t="josephorr.20181121183647.1"><vh>@board Leaflet Map Board View</vh></v>
@@ -106,7 +106,7 @@
 <v t="josephorr.20171108082557.1"><vh>Math Example</vh></v>
 <v t="josephorr.20171109060334.1"><vh>More Math</vh></v>
 </v>
-<v t="josephorr.20171116140935.1"><vh>Tables</vh>
+<v t="josephorr.20171116140935.1" a="E"><vh>Tables</vh>
 <v t="josephorr.20171115100638.1"><vh>Simple Table</vh></v>
 <v t="josephorr.20171116140922.1"><vh>Vue-Table</vh></v>
 <v t="josephorr.20171117082339.1"><vh>Vue-Table from dataTable</vh></v>
@@ -120,11 +120,11 @@
 <v t="josephorr.20171118030227.1"><vh>Gantt</vh></v>
 </v>
 <v t="josephorr.20171105173610.1"><vh>Charts</vh>
-<v t="josephorr.20171113063513.1"><vh>Charts from dataSets</vh>
+<v t="josephorr.20171113063513.1" a="E"><vh>Charts from dataSets</vh>
 <v t="josephorr.20171107074208.1"><vh>@board Line Chart from dataSet</vh></v>
 <v t="josephorr.20171107082534.1"><vh>Bar Chart from dataSet</vh></v>
 </v>
-<v t="josephorr.20171113063533.1"><vh>Charts from dataTable</vh>
+<v t="josephorr.20171113063533.1"><vh>Charts from dataTables</vh>
 <v t="josephorr.20171111182810.1"><vh>@board Line Chart from dataTable</vh></v>
 <v t="josephorr.20171111235348.1"><vh>@board Bar Chart from dataTable</vh></v>
 <v t="josephorr.20171112004405.1"><vh>@board Pie Chart from dataTable</vh></v>
@@ -134,12 +134,14 @@
 </v>
 <v t="josephorr.20171109061104.1"><vh>Data</vh>
 <v t="josephorr.20171107074219.1"><vh>Data Sets</vh>
-<v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data</vh></v>
-<v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data</vh></v>
+<v t="josephorr.20171105192448.1"><vh>@dataSet set1 Some Sample Data (set 1)</vh></v>
+<v t="josephorr.20171107081559.1"><vh>@dataSet set2 Some Sample Data (set 2)</vh></v>
 </v>
 <v t="josephorr.20171109061151.1"><vh>Data Tables</vh>
 <v t="josephorr.20171109061229.1"><vh>@dataTable worldpop World historical and predicted populations (in millions)</vh></v>
 </v>
+<v t="josephorr.20171113063513.1" a="E"></v>
+<v t="josephorr.20171113063533.1"></v>
 </v>
 <v t="josephorr.20171104211357.1"><vh>Other Vue Components</vh></v>
 </v>
@@ -186,8 +188,8 @@
 </v>
 <v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
-<v t="josephorr.20190209064826.1"><vh>Single Node Data</vh></v>
-<v t="josephorr.20190209062118.1" a="E"><vh>Data from Node Groups</vh>
+<v t="josephorr.20171109061104.1"></v>
+<v t="josephorr.20190209062118.1"><vh>Data from Node Groups</vh>
 <v t="josephorr.20190202185628.1"><vh>@board @group-4 Research of Jordan B Peterson</vh>
 <v t="josephorr.20190202185628.2"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="josephorr.20190202185628.3"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -300,11 +302,16 @@
 <v t="josephorr.20190209064626.1"><vh>Jordan B Peterson Word Cloud</vh></v>
 </v>
 <v t="josephorr.20190209062531.1" a="E"><vh>Metadata</vh>
-<v t="josephorr.20190209065152.1"><vh>Movies - Summary Table</vh></v>
-<v t="josephorr.20190131173223.1"><vh>@mgroup-1 Movies - Data</vh>
+<v t="josephorr.20190131173223.1" a="E"><vh>@mgroup-1 Movies - Data</vh>
 <v t="josephorr.20190131173340.1"><vh>[Interstellar](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
-<v t="josephorr.20190131173315.1"><vh>[Days of Heaven](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
+<v t="josephorr.20190131173315.1"><vh>[Days of Heaven](https://en.wikipedia.org/wiki/Days_of_Heaven)</vh></v>
+<v t="josephorr.20190216160449.1"><vh>[Pathar Panchali](https://en.wikipedia.org/wiki/Pather_Panchali)</vh></v>
 </v>
+<v t="josephorr.20190209065152.1"><vh>Movies - Summary Table</vh></v>
+</v>
+<v t="josephorr.20190216192019.1"><vh>Tags</vh></v>
+<v t="josephorr.20190216155227.1"><vh>Import and Export</vh>
+<v t="josephorr.20190216155232.1"><vh>[Importing JSON to Leo](static/Export.md)</vh></v>
 </v>
 </v>
 <v t="josephorr.20180123102417.1"><vh>Summary Nodes</vh>
@@ -1407,26 +1414,27 @@ Some of the examples are adapted from the excellent [Chartjs Intro articles by T
 <t tx="josephorr.20171107074208.1">@language html
 
 &lt;line-chart dataSet="set1" :gridLines="true" :board="true"/&gt;</t>
-<t tx="josephorr.20171107074219.1">## Data Sets
+<t tx="josephorr.20171107074219.1">## DataSet Nodes
 
-A dataset is a node containing JSON data.
+A dataset is a node containing JSON data. The @dataSet directive is used to mark a node as a dataset node.
+
+For example, the first child node of the current node has the following title in Leo:
+```
+@dataSet set1 Some Sample Data (set 1)
+```
+
+LeoVue hides the directive and the set name and just displays the title, so the node appears in LeoVue as:
+
+[[ Some Sample Data (set 1) ]]
+&lt;p&gt;&lt;/p&gt;
 
 You can use a dataset in another component by referring to it by name.
 
-You can also display a dataset as HTML by specifying a lodash template. See this
-sourcefile for examples.
+You can also display a dataset as HTML by specifying a lodash template. Open in Leo the source file for this site to see examples.
 
-If you have a node containing child datasets, you can summarize the datasets in a table 
-like this:
-
-```
-&lt;summary-table
- :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
-&lt;/summary-table&gt;
-```
 
 For a more complete example of JSON data in LeoVue see:
-[Research of Jordan B Peterson](https://kaleguy.github.io/leo-examples/peterson)</t>
+[Research of Jordan B Peterson](https://kaleguy.github.io/jbp)</t>
 <t tx="josephorr.20171107081559.1">@language json
 {
    "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -1447,9 +1455,9 @@ For a more complete example of JSON data in LeoVue see:
 }</t>
 <t tx="josephorr.20171107082534.1">@language html
 
-A bar chart with some random data contained in the [[set1]] @dataTable node.
+A bar chart with some random data contained in the [[set2]] @dataTable node.
 
-&lt;bar-chart :dataSet="'set2'"/&gt;</t>
+&lt;bar-chart dataSet="set2"/&gt;</t>
 <t tx="josephorr.20171107100246.1">@language md
 
 ## MathJax
@@ -1489,6 +1497,8 @@ There are two types of data nodes:
 * **dataTables**: these contain CSV data.</t>
 <t tx="josephorr.20171109061151.1">@language md
 
+## DataTable Nodes
+
 DataTables can be used to put csv data into a Leo node, for viewing with LeoVue.
 
 The first word after the @dataTable directive is the name of the dataTable, and the rest of the node title becomes the dataTable title.
@@ -1511,6 +1521,8 @@ North America,	6, 3,2,	2, 7,	26, 82,	172, 312, 433, #c45850</t>
 <t tx="josephorr.20171113062955.1">&lt;polar-chart dataTable="worldpop" col="2050" title="Predicted Population (millions) in 2050" :board="true" /&gt;</t>
 <t tx="josephorr.20171113063513.1">@language md
 
+## Charts from DataSets
+
 A dataSet is a Leo node with a @dataSet directive. It contains JSON data.
 
 The data in a dataSet can be referred to by name in chart or table components.
@@ -1526,6 +1538,8 @@ Normally content items are limited to 780px wide. However, you can use the @boar
 The first chart is using the @board directive, so the chart displays at 100% width.
 </t>
 <t tx="josephorr.20171113063533.1">@language md
+
+## Charts from DataTables
 
 A dataTable is a Leo node with a @dataTable directive. It contains csv data.
 
@@ -2963,26 +2977,68 @@ comments: This is a math book. It was on the Openlibrary site.</t>
 <t tx="josephorr.20190105100914.1"></t>
 <t tx="josephorr.20190131173139.1">@language md
 
-Nodes can contain JSON, YAML or CSV data.
+# Data in Nodes
 
-Data in a single node:
-* template
-* chart
+You can put JSON or CSV data in a Leo node and LeoVue can display this in various ways.
 
-Data from groups of nodes:
-* table
-* chart </t>
-<t tx="josephorr.20190131173223.1"></t>
+For example:
+
+* Specify a template to display the formatted data
+* Pass a data node to a chart component
+* Pass a data node to a table componet
+
+Regular content nodes and also have JSON or YAML data added with the @m directive.
+
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+&lt;div class="hshim"&gt;&lt;/div&gt;
+
+
+### More on Data Nodes:
+&lt;toc/&gt;
+
+</t>
+<t tx="josephorr.20190131173223.1"># Movies - Metagroup Demo
+
+This node is a demo of the @mgroup directive. In the Leo source file, the current node title looks like this:
+
+```
+@mgroup-1 Movies - Data
+```
+
+The nodes in this group are URL nodes pointing to Wikipedia pages, so the content displayed is Wikipedia content. However, 
+each node has some metadata, and the @mgroup directive creates an array of these metadata items. This array can be passed to 
+table or other components for display.
+
+The [[ Movies - Summary Table ]] node has the following source content:
+
+```
+&lt;summary-table
+ :mgroup=1
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'director', label: 'Director'}, {show: 'rating', label: 'Rating'}]" &gt;
+&lt;/summary-table&gt;
+
+```
+</t>
 <t tx="josephorr.20190131173315.1">@m
 description: Turn of century love triangle.
-rating: 5</t>
+director: Terrence Malick
+rating: 5
+
+@t
+movie
+historical drama</t>
 <t tx="josephorr.20190131173340.1">@m
-description: Sci-fi epic from Bruce Nolan.
-rating: 5</t>
+description: Sci-fi epic.
+director: Bruce Nolan
+rating: 5
+
+@t
+movie</t>
 <t tx="josephorr.20190202185628.1">@language html
 
 &lt;summary-table
- :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
 &lt;/summary-table&gt;</t>
 <t tx="josephorr.20190202185628.10">{
   "pubdate": "2015/12/24",
@@ -7221,15 +7277,115 @@ rating: 5</t>
 
 &lt;summary-table
  :group=4
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20190209062118.1">## Data Groups
+
+Not just single data nodes, but lists of data nodes can be passed to components in LeoVue, allowing 
+for display of list items in tables or charts or other components.
+
+For example, if you have a node containing child datasets, you can summarize the datasets in a table 
+like this:
+
+```
+&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations'}]" &gt;  
+&lt;/summary-table&gt;
+```
+
+You can also create named data groups from data nodes and pass these to components for display.
+
+The @group directive makes a single JSON 
+array from a set of dataset nodes. You can pass this group to a component such as the 
+Summary Table component. To do so, first mark a node with the "@group" directive, then pass that 
+group to a component. 
+
+The child nodes to this node have demos for these techniques. In the first node, the title in Leo looks like this:
+
+```
+@board @group-4 Research of Jordan B Peterson
+```
+
+The content of the node in Leo looks like this:
+
+```
+&lt;summary-table
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
+&lt;/summary-table&gt;
+```
+
+When the node is displayed in LeoVue, you see a table with above values.
+
+The next node has no child nodes, but instead refers to the previous node group (so the table is the same):
+
+```
+&lt;summary-table
+ :group=4
  :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
-&lt;/summary-table&gt;</t>
-<t tx="josephorr.20190209062118.1"></t>
-<t tx="josephorr.20190209062531.1"></t>
+&lt;/summary-table&gt;
+```
+
+The third node shows an example of the Word Cloud component with data from the same group:
+
+```
+&lt;word-cloud from="abstract" group=4 /&gt;
+```
+
+</t>
+<t tx="josephorr.20190209062531.1"># Metadata
+
+Using the @m directive, you can also add YAML or JSON data to any regular node. For example, 
+if you have node content like the following:
+
+```
+@language md
+
+# Interstellar, the Movie
+
+Some text here
+
+@m
+description: Sci-fi epic from Bruce Nolan.
+rating: 5
+```
+
+The lines after "@m" until either the end of the node or the first blank line will be removed from the node content and 
+attached to the node as metadata. You can use this data by creating a group of nodes with metadata using the @mgroup tag.
+
+
+
+</t>
 <t tx="josephorr.20190209064626.1">&lt;word-cloud from="abstract" group=4 /&gt;</t>
-<t tx="josephorr.20190209064826.1"></t>
-<t tx="josephorr.20190209065152.1">&lt;summary-table
+<t tx="josephorr.20190209065152.1">
+## Movie List
+
+&lt;summary-table
  :mgroup=1
- :cols="[{show: 'vtitle', label: 'Title'},{show: 'rating', label: 'Rating'}]" &gt;
+ :cols="[{show: 'vtitle', label: 'Title'},{show: 'director', label: 'Director'},{show: 'rating', label: 'Rating', dataType: 'numeric', cellClass: 'right'}]" &gt;
 &lt;/summary-table&gt;</t>
+<t tx="josephorr.20190216155227.1">## Getting JSON Data Into Your Leo File
+
+In addition to manually adding JSON nodes, you can also use LeoVue to import JSON data into a Leo file.
+
+You can then edit this Leo file and display in LeoVue.
+
+For example, this section contains a detailed example of scraping the ResearchGate site for JSON data, 
+editing in Leo and then displaying via LeoVue.</t>
+<t tx="josephorr.20190216155232.1"></t>
+<t tx="josephorr.20190216160449.1">@m
+description: Portrayal of Indian village life.
+director: Satyajit Ray
+rating: 5
+
+@t
+movie</t>
+<t tx="josephorr.20190216192019.1">## Tags
+
+This is a demo of tagging content with Leo and LeoVue. 
+
+Some of the content nodes in this document/site have had tags added with the @t directive. 
+To list documents matching tags, type in the input box below.
+
+&lt;tagsearch/&gt;</t>
 </tnodes>
 </leo_file>

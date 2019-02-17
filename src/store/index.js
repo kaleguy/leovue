@@ -759,6 +759,7 @@ function setData (context, ldata, filename, route) {
   } else {
     loadPages(ldata.data, text)
   }
+  getTagList(context, ldata)
   // TODO: refactor use of id vs route.path
   let id = route.params.id
   // check if path is a literate path, translate to number (look up matching node name)
@@ -1011,10 +1012,13 @@ function extractTags (text) {
   let tags = []
   const startIndex = text.indexOf('@t\n')
   if (startIndex < 1) {
-    return null
+    return tags
   }
-  const endIndex = text.indexOf('\n\n', startIndex)
-  const mText = text.substring(startIndex + 3, endIndex)
+  let endIndex = text.indexOf('\n\n', startIndex)
+  let mText = null
+  endIndex === -1
+    ? mText = text.substring(startIndex + 3)
+    : mText = text.substring(startIndex + 3, endIndex)
   tags = mText.split('\n')
   return tags
 }
@@ -1038,6 +1042,19 @@ function extractMetaData (text) {
   console.log('metadata:', metadata)
   return metadata
 }
+
+function getTagList (context, data) {
+  const tags = {}
+  data.data.forEach(d => {
+    pushTags(d, tags)
+  })
+  context.commit('SETTAGLIST', {tags})
+}
+function pushTags (d, tags) {
+  d.tags && d.tags.forEach(tag => { tags[tag.text] = 1 })
+  d.children.forEach(child => pushTags(child, tags))
+}
+
 /**
   Recursively preprocess tree
   e.g add language directives to subtrees of existing language directives,
@@ -1052,7 +1069,7 @@ function setChildDirectives (context, data) {
 function setChildDirective (context, d, textItems, parentDirective) {
   const text = textItems[d.t]
   d.metadata = extractMetaData(text)
-  d.tags = extractTags(text)
+  d.tags = extractTags(text).map(t => { return { 'text': t } })
   // check for @group and @mgroup, add if found add param
   const title = d.name
   let rex = /@group-(.*?) /
@@ -1149,7 +1166,7 @@ function loadDataSets (context, data) {
 }
 function loadDataSet (context, item, textItems) {
   const text = textItems[item.t]
-  const matches = item.name.match(/@dataSet ([a-zA-Z0-9]*)(.*)$/)
+  const matches = item.name.match(/@dataSet ([a-zA-Z0-9-]*)(.*)$/)
   if (matches) {
     const k = _.trim(matches[1])
     let v = text.replace(/^@language (\w+)/, '') // get rid of language directive
@@ -1260,6 +1277,7 @@ export default new Vuex.Store({
       state.dataSets[o.k] = o.v
     },
     ADDDATATABLE (state, o) {
+      if (state.dataTables[o.k]) { return } // duplicate names are ignored (could be a clone node)
       state.dataTables[o.k] = o.v
     },
     TOGGLEACCORDION (state) {
@@ -1304,6 +1322,9 @@ export default new Vuex.Store({
       for (let k in text) {
         state.leotext[k] = text[k]
       }
+    },
+    SETTAGLIST (state, o) {
+      state.tags = Object.keys(o.tags)
     },
     INIT (state) {
       state.initialized = true

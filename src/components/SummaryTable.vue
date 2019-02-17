@@ -51,6 +51,7 @@
           newCol.show = col.show.replace(/\./g, '~')
           newCol.label = col.label
           newCol['data-type'] = col.dataType
+          newCol['cell-class'] = col.cellClass
           cKeys.push(newCol)
         })
         return cKeys
