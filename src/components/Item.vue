@@ -15,7 +15,15 @@
         <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
         <span class="otitle">{{model.vtitle}}</span>
+        <span v-show="isClone" @mouseover="showCloneMenu">
+          <icon
+                v-b-popover="'I am popover content!'" title="Popover Title"
+                class="clone-button"
+                name="regular/clone" :scale=".5">
+          </icon>
+        </span>
       </div>
+
     </div>
     <div v-show="isOpen" class="child-items">
       <div v-html="myContent"
@@ -69,6 +77,9 @@ export default {
   computed: {
     arrowIcon: function () {
       return window.lconfig.itemArrow || '▶'
+    },
+    isClone: function () {
+      return this.$store.state.parentTable[this.model.t].length > 1
     },
     isFolder: function () {
       if (/\.leo\)$/.test(this.model.name)) { return true } // subtree
@@ -151,6 +162,9 @@ export default {
     }
   },
   methods: {
+    showCloneMenu: function () {
+      console.log('clone')
+    },
     toggle: function () {
       if (window.lconfig.githubRibbon) {
         const ribbon = document.getElementsByClassName('github-ribbon')
@@ -414,4 +428,6 @@ $contentBorderColor: #ccc
   display: none
 .accordion
   margin-top: 40px
+.clone-button
+  margin-top: -2px
 </style>

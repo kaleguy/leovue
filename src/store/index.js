@@ -761,6 +761,9 @@ function setData (context, ldata, filename, route) {
   }
   getTagList(context, ldata)
   cleanText(text) // remove metadata from text
+  const parentTable = {}
+  buildParentTable(ldata.data, text, parentTable) // for each text item, get an array of parents (if not clone array will have one member)
+  context.commit('PARENTTABLE', { parentTable })
   // TODO: refactor use of id vs route.path
   let id = route.params.id
   // check if path is a literate path, translate to number (look up matching node name)
@@ -1073,6 +1076,18 @@ function cleanText (textItems) {
     textItems[key] = removeMetadata(textItems[key])
   }
 }
+function buildParentTable (item, textItems, table) {
+  _.isArray(item)
+    ? item.forEach(i => buildParentTable(i, textItems, table))
+    : item.children.forEach(child => buildParentTable(child, textItems, table))
+  const t = item.t
+  if (table[t]) {
+
+  }
+  table[t] = table[t]
+    ? table[t].push(item.id) && table[t]
+    : [item.id]
+}
 function removeMetadata (text) {
   const lines = text.split(/\n/)
   const cleanLines = []
@@ -1280,8 +1295,9 @@ function loadDataTable (context, item, textItems) {
 // ========= The Store ===============
 export default new Vuex.Store({
   state: {
-    leotext: {},
-    leodata: {},
+    leotext: {}, // hash of text (content) items
+    leodata: {}, // the nodes (items)
+    parentTable: {}, // lookup table of node ids for each text item
     filename: '',
     initialized: false,
     initializedData: false,
@@ -1453,6 +1469,9 @@ export default new Vuex.Store({
     },
     SUBPATH (state, o) {
       state.subpath = o.subpath
+    },
+    PARENTTABLE (state, o) {
+      state.parentTable = o.parentTable
     }
 
   },
