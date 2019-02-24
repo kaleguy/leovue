@@ -5,8 +5,9 @@
     <div class="item-box"
          :class="{bold: isFolder, iactive: active, topItem: top}"
          >
-      <div
-        @click="toggle">
+      <div>
+        <span @mouseover="hideCloneMenu"
+              @click="toggle">
         <div v-bind:class="{'icon-bracket': top}" class="icon-b"
              v-if="isFolder">
           <div class="arrow"
@@ -15,14 +16,24 @@
         <div class="leo-box"></div>
         <div v-if="!isFolder" class="leaf-button"></div>
         <span class="otitle">{{model.vtitle}}</span>
-        <span v-show="isClone" @mouseover="showCloneMenu">
+        </span>
+        <span v-show="isClone"
+              :id="'popoverButton-sync-' + model.id"
+              @mouseover="showCloneMenu">
           <icon
-                v-b-popover="'I am popover content!'" title="Popover Title"
+
                 class="clone-button"
                 name="regular/clone" :scale=".5">
           </icon>
+          <b-popover :show.sync="show"
+                     :target="'popoverButton-sync-' + model.id"
+                     @shown="setCloneMenuActive"
+                     title="Clone Menu">
+            Hello <strong>World!</strong> longxcontentxlongxcontentxlongxcontentxlongxcontent
+          </b-popover>
         </span>
       </div>
+
 
     </div>
     <div v-show="isOpen" class="child-items">
@@ -71,7 +82,10 @@ export default {
       hasRibbon: true,
       inline: false,
       closearrow: false,
-      myContent: ''
+      myContent: '',
+      show: false,
+      setPop: false,
+      mouseOnPop: false
     }
   },
   computed: {
@@ -162,8 +176,54 @@ export default {
     }
   },
   methods: {
+    foo: function () {
+      console.log('xxx')
+      this.show = false
+    },
+    hideCloneMenu: function () {
+      this.$root.$emit('bv::hide::popover')
+      this.show = false
+    },
     showCloneMenu: function () {
-      console.log('clone')
+      if (this.show) {
+        return
+      }
+      this.$root.$emit('bv::hide::popover')
+      const f = () => {
+        let popBody = document.querySelectorAll('.popover')
+        console.log(popBody.length)
+        popBody = popBody[0]
+        popBody.onmouseout = () => {
+          console.log('MOUSEOUT')
+          // this.show = false
+          // this.setPop = false
+          // popBody.remove()
+          const f = () => {
+            if (!this.mouseOnPop) {
+              this.mouseOnPop = false
+              this.show = false
+              this.setPop = false
+              popBody.remove()
+            }
+          }
+          setTimeout(f, 100)
+        }
+        popBody.onmouseover = () => {
+          console.log('MOUSEOVER')
+          this.mouseOnPop = true
+          // this.show = false
+          // this.setPop = false
+          // popBody.remove()
+        }
+      }
+      console.log(f)
+      // this.setPop || setTimeout(f, 100)
+      const fn = () => { this.show = true }
+      setTimeout(fn, 100)
+      this.setPop = true
+    },
+    setCloneMenuActive: function () {
+      console.log('hi')
     },
     toggle: function () {
       if (window.lconfig.githubRibbon) {
