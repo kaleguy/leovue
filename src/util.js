@@ -10,6 +10,7 @@ const md = require('markdown-it')({
   typographer: true
 })
 
+
 function replaceRelUrls (html, base) {
   const parser = new DOMParser()
   const doc = parser.parseFromString(html, 'text/html')
@@ -250,6 +251,20 @@ function getObjectByKeyFromTree (d, k, v) {
   }
 }
 
+// TODO: move this to tree specific file
+function getNodePath (leodata, node, p) {
+  p = p || ''
+  if (!node.parentId) {
+    return p
+  }
+  const parentNode = JSON.search(leodata, `//*[id="${node.parentId}"]`)[0]
+  const parentId = (parentNode && parentNode.parentId) || null
+  p = parentNode.vtitle + ' / ' + p
+  return parentId
+    ? getNodePath(leodata, parentNode, p)
+    : p
+}
+
 // parseQueryString(window.location.href)
 
 module.exports = {
@@ -262,6 +277,7 @@ module.exports = {
   getObjectByKeyFromTree,
   sendGTag,
   chop,
-  toTitleCase
+  toTitleCase,
+  getNodePath
 }
 

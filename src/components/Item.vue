@@ -27,9 +27,8 @@
           </icon>
           <b-popover :show.sync="show"
                      :target="'popoverButton-sync-' + model.id"
-                     @shown="setCloneMenuActive"
-                     title="Clone Menu">
-            Hello <strong>World!</strong> longxcontentxlongxcontentxlongxcontentxlongxcontent
+                     @shown="setCloneMenuActive">
+                     <span v-html="cloneMenu"></span>
           </b-popover>
         </span>
       </div>
@@ -61,6 +60,24 @@
 
 import Velocity from 'velocity-animate'
 import _ from 'lodash'
+import util from '../util'
+
+const getCloneMenu = function (state, t, getNodePath) {
+  const cloneList = state.parentTable[t] || []
+  const nodes = cloneList.map(id => {
+    return JSON.search(state.leodata, '//*[id="' + id + '"]')[0]
+  })
+  const arr = []
+  nodes.forEach(node => {
+    const nodePath = getNodePath(state.leodata, node)
+    arr.push({ nodePath, node })
+  })
+  const html = []
+  arr.forEach(chapter => {
+    html.push(`<div class="section-link"> ${chapter.nodePath} ${chapter.node.vtitle}</div>`)
+  })
+  return html.join('')
+}
 
 export default {
   name: 'item',
@@ -84,8 +101,7 @@ export default {
       closearrow: false,
       myContent: '',
       show: false,
-      setPop: false,
-      mouseOnPop: false
+      cloneMenu: ''
     }
   },
   computed: {
@@ -176,51 +192,18 @@ export default {
     }
   },
   methods: {
-    foo: function () {
-      console.log('xxx')
-      this.show = false
-    },
     hideCloneMenu: function () {
       this.$root.$emit('bv::hide::popover')
       this.show = false
     },
     showCloneMenu: function () {
+      this.cloneMenu = getCloneMenu(this.$store.state, this.model.t, util.getNodePath)
       if (this.show) {
         return
       }
       this.$root.$emit('bv::hide::popover')
-      const f = () => {
-        let popBody = document.querySelectorAll('.popover')
-        console.log(popBody.length)
-        popBody = popBody[0]
-        popBody.onmouseout = () => {
-          console.log('MOUSEOUT')
-          // this.show = false
-          // this.setPop = false
-          // popBody.remove()
-          const f = () => {
-            if (!this.mouseOnPop) {
-              this.mouseOnPop = false
-              this.show = false
-              this.setPop = false
-              popBody.remove()
-            }
-          }
-          setTimeout(f, 100)
-        }
-        popBody.onmouseover = () => {
-          console.log('MOUSEOVER')
-          this.mouseOnPop = true
-          // this.show = false
-          // this.setPop = false
-          // popBody.remove()
-        }
-      }
-      console.log(f)
-      // this.setPop || setTimeout(f, 100)
       const fn = () => { this.show = true }
       setTimeout(fn, 100)
-      this.setPop = true
     },
     setCloneMenuActive: function () {
       console.log('hi')

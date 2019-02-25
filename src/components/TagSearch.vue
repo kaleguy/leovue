@@ -17,15 +17,7 @@
 
 <script>
   import VueTagsInput from '@johmun/vue-tags-input'
-  function getNodePath (leodata, node, p) {
-    p = p || ''
-    const parentNode = JSON.search(leodata, `//*[id="${node.parentId}"]`)[0]
-    const parentId = (parentNode && parentNode.parentId) || null
-    p = parentNode.vtitle + ' / ' + p
-    return parentId
-      ? getNodePath(leodata, parentNode, p)
-      : p
-  }
+  import util from '../util'
   export default {
     name: 'tagsearch',
     components: {
@@ -46,7 +38,7 @@
         const arr = []
         let nodes = JSON.search(leodata, `//*${conditions}`)
         nodes.forEach(node => {
-          const nodePath = getNodePath(leodata, node)
+          const nodePath = util.getNodePath(leodata, node)
           arr.push({ nodePath, node })
         })
         return arr
