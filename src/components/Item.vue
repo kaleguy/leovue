@@ -28,7 +28,11 @@
           <b-popover :show.sync="show"
                      :target="'popoverButton-sync-' + model.id"
                      @shown="setCloneMenuActive">
-                     <span v-html="cloneMenu"></span>
+                     <span
+                       style="cursor:hand"
+                       @click="gotoClone"
+                       v-html="cloneMenu">
+                     </span>
           </b-popover>
         </span>
       </div>
@@ -75,7 +79,7 @@ const getCloneMenu = function (state, t, getNodePath) {
   })
   const html = []
   arr.forEach(chapter => {
-    html.push(`<div class="section-link"> ${chapter.nodePath} </div>`)
+    html.push(`<div data-id="${chapter.node.id}" class="section-link"> ${chapter.nodePath} </div>`)
   })
   return html.join('')
 }
@@ -193,6 +197,12 @@ export default {
     }
   },
   methods: {
+    gotoClone: function (event) {
+      const id = event.target.dataset.id
+      console.log('Going to node:', id)
+      if (!id) { return }
+      this.$store.dispatch('setCurrentItem', {id})
+    },
     hideCloneMenu: function () {
       this.$root.$emit('bv::hide::popover')
       this.show = false
@@ -207,7 +217,6 @@ export default {
       setTimeout(fn, 100)
     },
     setCloneMenuActive: function () {
-      console.log('hi')
     },
     toggle: function () {
       if (window.lconfig.githubRibbon) {
