@@ -11,8 +11,8 @@
 <vnodes>
 <v t="leovue.20181220072125_1"><vh>Research of Jordan B Peterson</vh></v>
 <v t="leovue.20181204092754_1"><vh>@board @group-1 All</vh>
-<v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-1"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
+<v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-3"><vh>@dataSet set2-3 The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology</vh></v>
 <v t="leovue.2-4"><vh>@dataSet set2-4 Don't Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions</vh></v>
 <v t="leovue.2-5"><vh>@dataSet set2-5 Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation</vh></v>
@@ -118,7 +118,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -260,8 +260,120 @@
 <v t="leovue.2-18"></v>
 <v t="leovue.2-27"></v>
 </v>
+<v t="josephorr.20190226083510.1" a="E"><vh>tldr</vh>
+<v t="josephorr.20190226083958.1" a="E"><vh>No tldr</vh>
+<v t="josephorr.20181220213416.1"></v>
+<v t="leovue.2-3"></v>
+<v t="leovue.2-5"></v>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-9"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-11"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-15"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-21"></v>
+<v t="leovue.2-22"></v>
+<v t="leovue.2-23"></v>
+<v t="leovue.2-25"></v>
+<v t="leovue.2-26"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-28"></v>
+<v t="leovue.2-29"></v>
+<v t="leovue.2-30"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-32"></v>
+<v t="leovue.2-33"></v>
+<v t="leovue.2-34"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-36"></v>
+<v t="leovue.2-37"></v>
+<v t="leovue.2-38"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-40"></v>
+<v t="leovue.2-41"></v>
+<v t="leovue.2-42"></v>
+<v t="leovue.2-43"></v>
+<v t="leovue.2-44"></v>
+<v t="leovue.2-45"></v>
+<v t="leovue.2-46"></v>
+<v t="leovue.2-47"></v>
+<v t="leovue.2-48"></v>
+<v t="leovue.2-49"></v>
+<v t="leovue.2-50"></v>
+<v t="leovue.2-51"></v>
+<v t="leovue.2-52"></v>
+<v t="leovue.2-53"></v>
+<v t="leovue.2-54"></v>
+<v t="leovue.2-55"></v>
+<v t="leovue.2-56"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-58"></v>
+<v t="leovue.2-59"></v>
+<v t="leovue.2-60"></v>
+<v t="leovue.2-61"></v>
+<v t="leovue.2-62"></v>
+<v t="leovue.2-63"></v>
+<v t="leovue.2-64"></v>
+<v t="leovue.2-65"></v>
+<v t="leovue.2-66"></v>
+<v t="leovue.2-67"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-69"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-72"></v>
+<v t="leovue.2-73"></v>
+<v t="leovue.2-74"></v>
+<v t="leovue.2-75"></v>
+<v t="leovue.2-76"></v>
+<v t="leovue.2-77"></v>
+<v t="leovue.2-78"></v>
+<v t="leovue.2-79"></v>
+<v t="leovue.2-80"></v>
+<v t="leovue.2-81"></v>
+<v t="leovue.2-82"></v>
+<v t="leovue.2-83"></v>
+<v t="leovue.2-84"></v>
+<v t="leovue.2-85"></v>
+<v t="leovue.2-86"></v>
+<v t="leovue.2-87"></v>
+<v t="leovue.2-88"></v>
+<v t="leovue.2-89"></v>
+<v t="leovue.2-90"></v>
+<v t="leovue.2-91"></v>
+<v t="leovue.2-92"></v>
+<v t="leovue.2-93"></v>
+<v t="leovue.2-94"></v>
+<v t="leovue.2-95"></v>
+<v t="leovue.2-96"></v>
+<v t="leovue.2-97"></v>
+<v t="leovue.2-98"></v>
+<v t="leovue.2-99"></v>
+<v t="leovue.2-100"></v>
+<v t="leovue.2-101"></v>
+<v t="leovue.2-102"></v>
+<v t="leovue.2-103"></v>
+<v t="leovue.2-104"></v>
+<v t="leovue.2-105"></v>
+<v t="leovue.2-107"></v>
 </v>
-<v t="josephorr.20190112170529.1"><vh>More</vh>
+<v t="josephorr.20190226083528.1" a="E"><vh>@board Has tldr</vh>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-1"></v>
+<v t="leovue.2-4"></v>
+<v t="leovue.2-7"></v>
+</v>
+</v>
+</v>
+<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
 <v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
@@ -1364,6 +1476,11 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "template": "rgjournal"
   }
 }</t>
+<t tx="josephorr.20190226083510.1"></t>
+<t tx="josephorr.20190226083528.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'tldr', label: 'tldr'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20190226083958.1"></t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -1374,6 +1491,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1932-6203_PLoS_ONE",
     "text": "PLoS ONE"
   },
+  "tldr": "The effectiveness of performance feedback differs according to Big 5 personality traits. Discussion includes Goal-Setting and Self Determination theory",
   "abstract": "Although performance feedback is widely employed as a means to improve motivation, the efficacy and reliability of performance feedback is often obscured by individual differences and situational variables. The joint role of these moderating variables remains unknown. Accordingly, we investigate how the motivational impact of feedback is moderated by personality and task-difficulty. Utilizing three samples (total N = 916), we explore how Big Five personality traits moderate the motivational impact of false positive and negative feedback on playful, neutral, and frustrating puzzle tasks, respectively. Conscientious and Neurotic individuals together appear particularly sensitive to task difficulty, becoming significantly more motivated by negative feedback on playful tasks and demotivated by negative feedback on frustrating tasks. Results are discussed in terms of Goal-Setting and Self Determination Theory. Implications for industry and education are considered.",
   "authors": [
     {
@@ -1895,7 +2013,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
      "href": "",
      "text": "Social Psychological and Personality Science"
    },
-  "abstract": "While church and state are officially separated in many Western nations, there is nonetheless a great deal of overlap between the religious beliefs and political orientations of individual citizens. Religious individuals tend to be more conservative, placing a greater emphasis on order, obedience, and tradition. While many religious movements emphasize conservative values, there also exists a tradition of religious thought associated with equality, universalism, and transcendence—values more in line with political liberalism. The current study examined whether these divergent political orientations relate to the distinction between reli-giousness and spirituality. Political orientation, spirituality, and religiousness were assessed in two large community samples (Study 1: N =590; Study 2: N =703). Although spirituality and religiousness were positively correlated, they displayed divergent associations with political orientation: conservatives tended to be more religious, while liberals tend to be more spiritual. Experimentally inducing spiritual experiences similarly resulted in more liberal political attitudes.",
+  "abstract": "While church and state are officially separated in many Western nations, there is nonetheless a great deal of overlap between the religious beliefs and political orientations of individual citizens. Religious individuals tend to be more conservative, placing a greater emphasis on order, obedience, and tradition. While many religious movements emphasize conservative values, there also exists a tradition of religious thought associated with equality, universalism, and transcendence—values more in line with political liberalism. The current study examined whether these divergent political orientations relate to the distinction between religiousness and spirituality. Political orientation, spirituality, and religiousness were assessed in two large community samples (Study 1: N =590; Study 2: N =703). Although spirituality and religiousness were positively correlated, they displayed divergent associations with political orientation: conservatives tended to be more religious, while liberals tend to be more spiritual. Experimentally inducing spiritual experiences similarly resulted in more liberal political attitudes.",
   "authors": [
     {
       "name": {
@@ -2233,6 +2351,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
+  "tldr": "People vary on a spectrum from narrowly focused autistic-like thinking and broad associative schizophrenic like thinking. Both types of thinking have drawbacks and benefits.",
   "abstract": "A novel theory of Openness/Intellect is proposed, which integrates intelligence and positive schizotypy (or apophenia, false detection of patterns or causal connections) within the Big Five. Openness/Intellect comprises a simplex of subtraits arrayed along a single scaling dimension. Openness traits fall in one half of the simplex, bounded by apophenia; Intellect traits fall in the other half, bounded by intelligence. The simplex is paradoxical because intelligence and apophenia are negatively correlated despite both loading positively on the general Openness/Intellect factor. The model was supported in two samples and organizes theories of (1) the relation of intelligence and schizotypy to personality, (2) the psychological and biological mechanisms involved in Openness/Intellect, and (3) the costs and beneﬁts of Openness, proximally and evolutionarily.",
   "authors": [
     {
@@ -2930,6 +3049,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0022-3891_Journal_of_Personalit",
     "text": "Journal of Personality Assessment"
   },
+  "tldr": "Emotion regulation studies usually emphasize down regulation of negative affect. We examine down regulation of positive affect and find predictive of impulsivity and adjustment. ",
   "abstract": "A voluminous literature has documented the importance of emotion regulation for health and well-being. The studies in this literature, however, have generally focused on the down-regulation of negative affect. Few studies have examined the down-regulation of positive affect. In Study 1, we constructed a scale, the revised Regulatory Emotional Self-Efficacy Scale (r–RESE), which assesses both the down- and upregulation of positive affect, in addition to the traditional down-regulation of negative affect. In Study 2, we conducted an extensive validation of the r–RESE scale, using a multimethod approach with informant ratings, to illustrate that the down-regulation of positive affect represents a process independent of each of the other forms of emotion regulation. In Study 3, we provided evidence that the ability to down-regulate positive emotions provides added predictive utility when predicting indexes of impulsivity and adjustment. Across the studies, we illustrate the potential importance of the down-regulation of positive emotions as a topic of study for the field of emotion regulation. CORRECTION: DOI:10.1080/00223891.2017.1339711The cohen’s d’s were not calculated correctly in the descriptive statistics for Study 1–the effect sizes in the paper are double what they should be. On Page 3, the cohen’s d’s in the following paragraph should read as follows: We performed Bonferroni-corrected pairwise t tests to examine differences in composite scores between the four factors. Of all the factors, the down-regulation of anger (D-ANG) had the highest score, D-ANG and U-POS, t(489) d = 11.27, p &lt;.001, d =.51; D-ANG and D-DES, t(489) = 5.00, p &lt;.001, d =.23, although it did not differ significantly from D-POS. Similarly, down-regulation of positive emotions scores (D-POS) and down-regulation of despondency or distress (D-DES) scores did not differ significantly from one another, but both scores were significantly higher than the up-regulation of positive emotions (U-POS), D-POS and U-POS, t(489) = 8.14, p &lt;.001, d =.37; D-POS and D-DES, t(489) = 7.62, p &lt;.001, d =.35. These results suggest that people believe that they are better at down-regulating than up-regulating their emotions, and believe they are best at down-regulating their anger. The authors apologize for their oversight.",
   "authors": [
     {
@@ -4276,6 +4396,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1751-9004_Social_and_Personality_Psychology_Compass",
     "text": "Social and Personality Psychology Compass"
   },
+  "tldr": "The Big 5 Ttraits have sub-traits (aspects). We present a new model (the Disposition-Goals-Ideology model) that suggest connections between particular aspects and political orientation.",
   "abstract": "We review existing research on the associations between political orientation and Big Five traits such as Openness to Experience and Conscientiousness. We suggest that analyzing these traits at the aspect level sheds light on motivational mechanisms underlying these links. For example, we present evidence that only one of the two aspects of Conscientiousness (\"Orderliness\") reliably predicts conservatism. To account for this relationship, and to more generally describe how traits translate into political orientation, we present a new model, the Disposition-Goals-Ideology (DiGI) Model. The DiGI model outlines specific interrelationships among dispositions, goals, and ideological beliefs that help to shape individual differences in political orientation.",
   "authors": [
     {
@@ -4675,7 +4796,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
   },
-  "abstract": "Objective\nThe Big Five personality dimension Openness/Intellect is the trait most closely associated with creativity and creative achievement. Little is known, however, regarding the discriminant validity of its two aspects— Openness to Experience (reflecting cognitive engagement with sensory and perceptual information) and Intellect (reflecting cognitive engagement with abstract and semantic information, primarily through reasoning)— in relation to creativity.Method\nIn four demographically diverse samples totaling 1035 participants, we investigated the independent predictive validity of Openness and Intellect by assessing the relations among cognitive ability, divergent thinking, personality, and creative achievement across the arts and sciences.Results and Conclusions\nWe confirmed the hypothesis that whereas Openness predicts creative achievement in the arts, Intellect predicts creative achievement in the sciences. Inclusion of performance measures of general cognitive ability and divergent thinking indicated that the relation of Intellect to scientific creativity may be due at least in part to these abilities. Lastly, we found that Extraversion additionally predicted creative achievement in the arts, independently of Openness. Results are discussed in the context of dual-process theory.",
+  "abstract": "&lt;div&gt;Objective:&lt;/div&gt;The Big Five personality dimension Openness/Intellect is the trait most closely associated with creativity and creative achievement. Little is known, however, regarding the discriminant validity of its two aspects— Openness to Experience (reflecting cognitive engagement with sensory and perceptual information) and Intellect (reflecting cognitive engagement with abstract and semantic information, primarily through reasoning)— in relation to creativity.&lt;div&gt;Method&lt;/div&gt;In four demographically diverse samples totaling 1035 participants, we investigated the independent predictive validity of Openness and Intellect by assessing the relations among cognitive ability, divergent thinking, personality, and creative achievement across the arts and sciences.Results and Conclusions\nWe confirmed the hypothesis that whereas Openness predicts creative achievement in the arts, Intellect predicts creative achievement in the sciences. Inclusion of performance measures of general cognitive ability and divergent thinking indicated that the relation of Intellect to scientific creativity may be due at least in part to these abilities. Lastly, we found that Extraversion additionally predicted creative achievement in the arts, independently of Openness. Results are discussed in the context of dual-process theory.",
   "authors": [
     {
       "name": {
@@ -5569,6 +5690,8 @@ organized in multiple ways with the Leo Outlining Editor, displayed with LeoVue.
 [Jordan B Peterson on ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2)
 
 [Jordan B Peterson Home Page](https://jordanbpeterson.com/)
+
+This site was last updated on 1/31/2019. 
 </t>
 </tnodes>
 </leo_file>

@@ -85,7 +85,7 @@
           } catch (e) {
             console.log(e, child.id)
           }
-          textData.title = child.name
+          textData.rtitle = child.name
           textData.vtitle = child.vtitle
           items.push(getColumnData(this.cols, textData))
         })

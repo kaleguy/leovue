@@ -253,13 +253,15 @@ function getObjectByKeyFromTree (d, k, v) {
 
 // TODO: move this to tree specific file
 function getNodePath (leodata, node, p) {
-  p = p || ''
-  if (!node.parentId) {
+  p = p
+    ? ' / ' + p
+    : ''
+  if (!node.parentId) { // the parent id the item node
     return p
   }
   const parentNode = JSON.search(leodata, `//*[id="${node.parentId}"]`)[0]
   const parentId = (parentNode && parentNode.parentId) || null
-  p = parentNode.vtitle + ' / ' + p
+  p = parentNode.vtitle + p
   return parentId
     ? getNodePath(leodata, parentNode, p)
     : p

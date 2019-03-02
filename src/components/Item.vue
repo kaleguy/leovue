@@ -69,12 +69,13 @@ const getCloneMenu = function (state, t, getNodePath) {
   })
   const arr = []
   nodes.forEach(node => {
-    const nodePath = getNodePath(state.leodata, node)
+    const nodePath = getNodePath(state.leodata, node, null)
+
     arr.push({ nodePath, node })
   })
   const html = []
   arr.forEach(chapter => {
-    html.push(`<div class="section-link"> ${chapter.nodePath} ${chapter.node.vtitle}</div>`)
+    html.push(`<div class="section-link"> ${chapter.nodePath} </div>`)
   })
   return html.join('')
 }
