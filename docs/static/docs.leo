@@ -38,7 +38,7 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -186,7 +186,7 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1"></v>
+<v t="josephorr.20170401144849.1" a="E"></v>
 <v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
 <v t="josephorr.20190330084806.1"><vh>[Data in Leo/LeoVue - Quick Look](static/Data.md)</vh></v>
 <v t="josephorr.20171109061104.1" a="E"></v>
@@ -592,7 +592,18 @@ c.connect(
 
 Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
 
-As an example, the nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
+As an example, the nodes in this branch are clones of nodes appearing elsewhere in this document.
+
+### The Clone Node Menu
+
+Nodes which are clones appear with a double square icon at the end of the node title:
+
+&lt;img width="700px" src="static/images/leovue-cloned-icon.png"&gt;
+
+Clicking on the clone icon brings up a menu of all locations in the tree at which the cloned node is located:
+
+&lt;img width="700px" src="static/images/leovue-cloned-menu.png"&gt;
+</t>
 <t tx="josephorr.20170326072340.1">## Load File Content into Node
 
 Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
