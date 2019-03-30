@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @m directive (metadata)
 - @mgroup directive (metadata group)
 - @t directive (tags)
+- @clone node icon/menu
 - data feature documentation
 
 
