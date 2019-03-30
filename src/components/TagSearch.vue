@@ -9,7 +9,7 @@
     <div class="hit-list">
     <div v-for="chapter in chapters" class="chapter">
       <div class="section-link"
-           @click="gotoSection(chapter.node.id)">{{chapter.nodePath}} {{chapter.node.vtitle}}</div>
+           @click="gotoSection(chapter.node.id)">{{chapter.nodePath}} / {{chapter.node.vtitle}}</div>
     </div>
     </div>
   </div>

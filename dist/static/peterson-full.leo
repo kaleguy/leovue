@@ -11,8 +11,8 @@
 <vnodes>
 <v t="leovue.20181220072125_1"><vh>Research of Jordan B Peterson</vh></v>
 <v t="leovue.20181204092754_1"><vh>@board @group-1 All</vh>
-<v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-1"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
+<v t="josephorr.20181220213416.1"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="leovue.2-3"><vh>@dataSet set2-3 The publication trajectory of graduate students, post-doctoral fellows, and new professors in psychology</vh></v>
 <v t="leovue.2-4"><vh>@dataSet set2-4 Don't Get Too Excited: Assessing Individual Differences in the Down-Regulation of Positive Emotions</vh></v>
 <v t="leovue.2-5"><vh>@dataSet set2-5 Validating self-paced sentence-by-sentence reading: story comprehension, recall, and narrative transportation</vh></v>
@@ -35,7 +35,6 @@
 <v t="leovue.2-22"><vh>@dataSet set2-22 Psychological Entropy: A Framework for Understanding Uncertainty-Related Anxiety</vh></v>
 <v t="leovue.2-23"><vh>@dataSet set2-23 Serene Arts: The Effect of Personal Unsettledness and of Paintings' Narrative Structure on Personality</vh></v>
 <v t="leovue.2-24"><vh>@dataSet set2-24 From madness to genius: The Openness/Intellect trait domain as a paradoxical simplex</vh></v>
-<v t="leovue.2-25"><vh>@dataSet set2-25 Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality</vh></v>
 <v t="leovue.2-26"><vh>@dataSet set2-26 Creative Exploration and Its Illnesses</vh></v>
 <v t="leovue.2-27"><vh>@dataSet set2-27 Compassionate Liberals and Polite Conservatives: Associations of Agreeableness With Political Ideology and Moral Values</vh></v>
 <v t="leovue.2-28"><vh>@dataSet set2-28 Positive Mood Effects on Delay Discounting</vh></v>
@@ -118,7 +117,7 @@
 <v t="leovue.2-105"><vh>@dataSet set2-105 Response to reward and punishment and the inherited risk for alcoholism</vh></v>
 <v t="leovue.2-107"><vh>@dataSet set2-107 Autonomic hyperreactivity and risk for alcoholism</vh></v>
 </v>
-<v t="josephorr.20181225065128.1"><vh>Topics</vh>
+<v t="josephorr.20181225065128.1" a="E"><vh>Topics</vh>
 <v t="josephorr.20181224141950.1"><vh>@board @group-2 Alcoholism and Addiction</vh>
 <v t="leovue.2-50"></v>
 <v t="leovue.2-53"></v>
@@ -178,7 +177,6 @@
 <v t="leovue.2-22"></v>
 <v t="leovue.2-23"></v>
 <v t="leovue.2-24"></v>
-<v t="leovue.2-25"></v>
 <v t="leovue.2-26"></v>
 <v t="leovue.2-27"></v>
 <v t="leovue.2-28"></v>
@@ -260,8 +258,119 @@
 <v t="leovue.2-18"></v>
 <v t="leovue.2-27"></v>
 </v>
+<v t="josephorr.20190226083510.1" a="E"><vh>tldr</vh>
+<v t="josephorr.20190226083958.1" a="E"><vh>@board No tldr</vh>
+<v t="josephorr.20181220213416.1"></v>
+<v t="leovue.2-3"></v>
+<v t="leovue.2-5"></v>
+<v t="leovue.2-6"></v>
+<v t="leovue.2-9"></v>
+<v t="leovue.2-10"></v>
+<v t="leovue.2-13"></v>
+<v t="leovue.2-14"></v>
+<v t="leovue.2-15"></v>
+<v t="leovue.2-17"></v>
+<v t="leovue.2-19"></v>
+<v t="leovue.2-20"></v>
+<v t="leovue.2-21"></v>
+<v t="leovue.2-22"></v>
+<v t="leovue.2-23"></v>
+<v t="leovue.2-26"></v>
+<v t="leovue.2-29"></v>
+<v t="leovue.2-30"></v>
+<v t="leovue.2-31"></v>
+<v t="leovue.2-33"></v>
+<v t="leovue.2-34"></v>
+<v t="leovue.2-35"></v>
+<v t="leovue.2-37"></v>
+<v t="leovue.2-39"></v>
+<v t="leovue.2-42"></v>
+<v t="leovue.2-43"></v>
+<v t="leovue.2-44"></v>
+<v t="leovue.2-45"></v>
+<v t="leovue.2-46"></v>
+<v t="leovue.2-47"></v>
+<v t="leovue.2-48"></v>
+<v t="leovue.2-49"></v>
+<v t="leovue.2-50"></v>
+<v t="leovue.2-51"></v>
+<v t="leovue.2-53"></v>
+<v t="leovue.2-54"></v>
+<v t="leovue.2-55"></v>
+<v t="leovue.2-56"></v>
+<v t="leovue.2-57"></v>
+<v t="leovue.2-58"></v>
+<v t="leovue.2-59"></v>
+<v t="leovue.2-60"></v>
+<v t="leovue.2-61"></v>
+<v t="leovue.2-62"></v>
+<v t="leovue.2-63"></v>
+<v t="leovue.2-64"></v>
+<v t="leovue.2-65"></v>
+<v t="leovue.2-66"></v>
+<v t="leovue.2-67"></v>
+<v t="leovue.2-68"></v>
+<v t="leovue.2-69"></v>
+<v t="leovue.2-70"></v>
+<v t="leovue.2-71"></v>
+<v t="leovue.2-72"></v>
+<v t="leovue.2-73"></v>
+<v t="leovue.2-74"></v>
+<v t="leovue.2-75"></v>
+<v t="leovue.2-76"></v>
+<v t="leovue.2-77"></v>
+<v t="leovue.2-78"></v>
+<v t="leovue.2-79"></v>
+<v t="leovue.2-80"></v>
+<v t="leovue.2-81"></v>
+<v t="leovue.2-82"></v>
+<v t="leovue.2-83"></v>
+<v t="leovue.2-84"></v>
+<v t="leovue.2-85"></v>
+<v t="leovue.2-86"></v>
+<v t="leovue.2-87"></v>
+<v t="leovue.2-88"></v>
+<v t="leovue.2-89"></v>
+<v t="leovue.2-90"></v>
+<v t="leovue.2-91"></v>
+<v t="leovue.2-92"></v>
+<v t="leovue.2-93"></v>
+<v t="leovue.2-94"></v>
+<v t="leovue.2-95"></v>
+<v t="leovue.2-96"></v>
+<v t="leovue.2-97"></v>
+<v t="leovue.2-98"></v>
+<v t="leovue.2-99"></v>
+<v t="leovue.2-100"></v>
+<v t="leovue.2-101"></v>
+<v t="leovue.2-102"></v>
+<v t="leovue.2-103"></v>
+<v t="leovue.2-104"></v>
+<v t="leovue.2-105"></v>
+<v t="leovue.2-107"></v>
 </v>
-<v t="josephorr.20190112170529.1"><vh>More</vh>
+<v t="josephorr.20190226083528.1" a="E"><vh>@board Has tldr</vh>
+<v t="leovue.2-1"></v>
+<v t="leovue.2-4"></v>
+<v t="leovue.2-7"></v>
+<v t="leovue.2-8"></v>
+<v t="leovue.2-11"></v>
+<v t="leovue.2-12"></v>
+<v t="leovue.2-16"></v>
+<v t="leovue.2-18"></v>
+<v t="leovue.2-24"></v>
+<v t="leovue.2-27"></v>
+<v t="leovue.2-28"></v>
+<v t="leovue.2-32"></v>
+<v t="leovue.2-36"></v>
+<v t="leovue.2-38"></v>
+<v t="leovue.2-40"></v>
+<v t="leovue.2-41"></v>
+<v t="leovue.2-52"></v>
+</v>
+</v>
+</v>
+<v t="josephorr.20190112170529.1" a="E"><vh>More</vh>
 <v t="josephorr.20190105063219.1"><vh>Timeline</vh></v>
 <v t="josephorr.20190108204954.1"><vh>Word Clouds</vh>
 <v t="josephorr.20190105214238.1"><vh>@board All Abstracts Word Cloud</vh></v>
@@ -1364,6 +1473,21 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "template": "rgjournal"
   }
 }</t>
+<t tx="josephorr.20190226083510.1">@language md
+
+# TL;DR
+
+Academic abstracts can be difficult to read for non specialists. This section attempts to summarize some of the abstracts in this collection with two or three sentences.
+
+These summaries are intended as an aid to deciding which articles you might want to spend more time on. They aren't guaranteed to be accurate.
+
+&lt;toc/&gt;</t>
+<t tx="josephorr.20190226083528.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'}, {show: 'tldr', label: 'tldr'}]" &gt;  
+&lt;/summary-table&gt;</t>
+<t tx="josephorr.20190226083958.1">&lt;summary-table
+ :cols="[{show: 'title', label: 'Title'},{show: 'pubdate', label: 'Date'},{show: 'journal.text', label: 'Journal'}, {show: 'citations', label: 'Citations', dataType:'numeric'}]" &gt;  
+&lt;/summary-table&gt;</t>
 <t tx="leovue.2-1">{
   "pubdate": "2018/05/22",
   "title": "Improving the effectiveness of performance feedback by considering personality traits and task demands",
@@ -1374,6 +1498,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1932-6203_PLoS_ONE",
     "text": "PLoS ONE"
   },
+  "tldr": "The effectiveness of performance feedback differs according to Big 5 personality traits. Discussion includes Goal Setting and Self Determination theory",
   "abstract": "Although performance feedback is widely employed as a means to improve motivation, the efficacy and reliability of performance feedback is often obscured by individual differences and situational variables. The joint role of these moderating variables remains unknown. Accordingly, we investigate how the motivational impact of feedback is moderated by personality and task-difficulty. Utilizing three samples (total N = 916), we explore how Big Five personality traits moderate the motivational impact of false positive and negative feedback on playful, neutral, and frustrating puzzle tasks, respectively. Conscientious and Neurotic individuals together appear particularly sensitive to task difficulty, becoming significantly more motivated by negative feedback on playful tasks and demotivated by negative feedback on frustrating tasks. Results are discussed in terms of Goal-Setting and Self Determination Theory. Implications for industry and education are considered.",
   "authors": [
     {
@@ -1697,6 +1822,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "",
     "text": "Palgrave Communications"
   },
+  "tldr":"A brief online exercise aimed at focusing on goals greatly reduced the ethnic minority achievement gap of the experimental group.",
   "abstract": "The gender and ethnicity gap in academic achievement constitutes one of today's key social problems. The current study, therefore, assessed the effects of a brief, evidence-based online intervention aimed at enhancing goal-directed conceptualization and action among first year college students (N = 703) at a large European business school. The academic performance of these students was contrasted with that of three pre-intervention control cohorts (N = 896, 825 and 720), with particular attention paid to the role of gender and ethnicity. The intervention boosted academic achievement and increased retention rates, particularly for ethnic minority and male students (who had underperformed in previous years). The gap in performance between men and women, and for ethnic minorities versus nationals, became considerably smaller within the intervention cohort. After Year 1, the gender gap closed by 98%, and the ethnicity gap by 38% (rising to 93% after the second year). All groups in the intervention cohort performed significantly better than control cohorts, but the effect was particularly large for males and ethnic minorities. The increase in performance was largest for ethnic minority males: they earned 44% more credits, and their retention rate increased 54%. Overall, the results indicate that a comprehensive goal-setting intervention implemented early in students' academic careers can significantly and substantially reduce gender and ethnic minority inequalities in achievement.",
   "authors": [
     {
@@ -1738,6 +1864,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/2195-3325_Journal_of_Social_and_Political_Psychology",
     "text": "Journal of Social and Political Psychology"
   },
+  "tldr": "The Big 5 trait Emotional Stability is a contributor to the reported higher levels of happiness reported by conservatives (vs liberals).", 
   "abstract": "Previous studies suggest that conservatives in the United States are happier than liberals. This difference has been attributed to factors including differences in socioeconomic status, group memberships, and system-justifying beliefs. We suggest that differences between liberals and conservatives in personality traits may provide an additional account for the \"happiness gap\". Specifically, we investigated the role of neuroticism (or conversely, emotional stability) in explaining the conservative-liberal happiness gap. In Study 1 (N = 619), we assessed the correlation between political orientation (PO) and satisfaction with life (SWL), controlling for the Big Five traits, religiosity, income, and demographic variables. Neuroticism, conscientiousness, and religiosity each accounted for the PO-SWL correlation. In Study 2 (N = 700), neuroticism, system justification beliefs, conscientiousness, and income each accounted for PO-SWL correlation. In both studies, neuroticism negatively correlated with conservatism. We suggest that individual differences in neuroticism represent a previously under-examined contributor to the SWL disparity between conservatives and liberals.",
   "authors": [
     {
@@ -1895,7 +2022,8 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
      "href": "",
      "text": "Social Psychological and Personality Science"
    },
-  "abstract": "While church and state are officially separated in many Western nations, there is nonetheless a great deal of overlap between the religious beliefs and political orientations of individual citizens. Religious individuals tend to be more conservative, placing a greater emphasis on order, obedience, and tradition. While many religious movements emphasize conservative values, there also exists a tradition of religious thought associated with equality, universalism, and transcendence—values more in line with political liberalism. The current study examined whether these divergent political orientations relate to the distinction between reli-giousness and spirituality. Political orientation, spirituality, and religiousness were assessed in two large community samples (Study 1: N =590; Study 2: N =703). Although spirituality and religiousness were positively correlated, they displayed divergent associations with political orientation: conservatives tended to be more religious, while liberals tend to be more spiritual. Experimentally inducing spiritual experiences similarly resulted in more liberal political attitudes.",
+   tldr: "Religious traditions can be divided into those emphasizing order and those emphasizing transcendence. These are positively correlated with conservatism and liberalism respectively.",
+  "abstract": "While church and state are officially separated in many Western nations, there is nonetheless a great deal of overlap between the religious beliefs and political orientations of individual citizens. Religious individuals tend to be more conservative, placing a greater emphasis on order, obedience, and tradition. While many religious movements emphasize conservative values, there also exists a tradition of religious thought associated with equality, universalism, and transcendence—values more in line with political liberalism. The current study examined whether these divergent political orientations relate to the distinction between religiousness and spirituality. Political orientation, spirituality, and religiousness were assessed in two large community samples (Study 1: N =590; Study 2: N =703). Although spirituality and religiousness were positively correlated, they displayed divergent associations with political orientation: conservatives tended to be more religious, while liberals tend to be more spiritual. Experimentally inducing spiritual experiences similarly resulted in more liberal political attitudes.",
   "authors": [
     {
       "name": {
@@ -1975,6 +2103,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1932-6203_PLoS_ONE",
     "text": "PLoS ONE"
   },
+  "tldr": "Emotional arousal in general as opposed to negative arousal in particular may underlie political conservatism. An experiment with exposure to film clips.",
   "abstract": "It is widely held that negative emotions such as threat, anxiety, and disgust represent the core psychological factors that enhance conservative political beliefs. We put forward an alternative hypothesis: that conservatism is fundamentally motivated by arousal, and that, in this context, the effect of negative emotion is due to engaging intensely arousing states. Here we show that study participants agreed more with right but not left-wing political speeches after being exposed to positive as well as negative emotion-inducing film-clips. No such effect emerged for neutral-content videos. A follow-up study replicated and extended this effect. These results are consistent with the idea that emotional arousal, in general, and not negative valence, specifically, may underlie political conservatism.",
   "authors": [
     {
@@ -2016,7 +2145,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
   },
-  "abstract": "Objective: \nTwo dimensions of the Big Five, Extraversion and Agreeableness, are strongly related to interpersonal behavior. Factor analysis has indicated that each of the Big Five contains two separable but related aspects. The present study examined the manner in which the aspects of Extraversion (Assertiveness and Enthusiasm) and Agreeableness (Compassion and Politeness) relate to interpersonal behavior and trait affiliation, with the hypothesis that these four aspects have a structure corresponding to the octants of the interpersonal circumplex. A second hypothesis was that measures of trait affiliation would fall between Enthusiasm and Compassion in the IPC.\n\nMethod: \nThese hypotheses were tested in three demographically different samples (N = 469; 294; 409) using both behavioral frequency and trait measures of the interpersonal circumplex, in conjunction with the Big Five Aspect Scales (BFAS) and measures of trait affiliation.\n\nResults: \nBoth hypotheses were strongly supported.\n\nConclusions: \nThese findings provide a more thorough and precise mapping of the interpersonal traits within the Big Five and support the integration of the Big Five with models of interpersonal behavior and trait affiliation.",
+  "abstract": "&lt;div&gt;Objective:&lt;/div&gt;Two dimensions of the Big Five, Extraversion and Agreeableness, are strongly related to interpersonal behavior. Factor analysis has indicated that each of the Big Five contains two separable but related aspects. The present study examined the manner in which the aspects of Extraversion (Assertiveness and Enthusiasm) and Agreeableness (Compassion and Politeness) relate to interpersonal behavior and trait affiliation, with the hypothesis that these four aspects have a structure corresponding to the octants of the interpersonal circumplex. A second hypothesis was that measures of trait affiliation would fall between Enthusiasm and Compassion in the IPC.&lt;div&gt;Method:&lt;/div&gt;These hypotheses were tested in three demographically different samples (N = 469; 294; 409) using both behavioral frequency and trait measures of the interpersonal circumplex, in conjunction with the Big Five Aspect Scales (BFAS) and measures of trait affiliation.&lt;div&gt;Results:&lt;/div&gt;Both hypotheses were strongly supported.&lt;div&gt;Conclusions: &lt;/div&gt;These findings provide a more thorough and precise mapping of the interpersonal traits within the Big Five and support the integration of the Big Five with models of interpersonal behavior and trait affiliation.",
   "authors": [
     {
       "name": {
@@ -2233,6 +2362,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
+  "tldr": "People vary on a spectrum from narrowly focused autistic-like thinking and broad associative schizophrenic like thinking. Both types of thinking have drawbacks and benefits.",
   "abstract": "A novel theory of Openness/Intellect is proposed, which integrates intelligence and positive schizotypy (or apophenia, false detection of patterns or causal connections) within the Big Five. Openness/Intellect comprises a simplex of subtraits arrayed along a single scaling dimension. Openness traits fall in one half of the simplex, bounded by apophenia; Intellect traits fall in the other half, bounded by intelligence. The simplex is paradoxical because intelligence and apophenia are negatively correlated despite both loading positively on the general Openness/Intellect factor. The model was supported in two samples and organizes theories of (1) the relation of intelligence and schizotypy to personality, (2) the psychological and biological mechanisms involved in Openness/Intellect, and (3) the costs and beneﬁts of Openness, proximally and evolutionarily.",
   "authors": [
     {
@@ -2260,47 +2390,6 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
   "url": "https://www.researchgate.net/publication/234817972_From_madness_to_genius_The_OpennessIntellect_trait_domain_as_a_paradoxical_simplex",
   "key": "/rg/article?title=234817972_From_madness_to_genius_The_OpennessIntellect_trait_domain_as_a_paradoxical_simplex",
   "cached": "2018-12-20T23:40:32.530Z",
-  "params": {
-    "template": "rgarticle"
-  }
-}</t>
-<t tx="leovue.2-25">{
-  "pubdate": "2012/12/30",
-  "title": "Serene Arts: The effect of personal unsettledness and of paintings' narrative structure on personality",
-  "citations": 4,
-  "references": "26",
-  "reads": "230 Reads",
-  "journal": {
-    "href": "journal/1541-4493_Empirical_Studies_of_the_Arts",
-    "text": "Empirical Studies of the Arts"
-  },
-  "abstract": "Previous research has demonstrated that art can produce some variation in self-reported personality traits. The present experiment addressed two questions. First, does visual art cause greater fluctuations in personality for unsettled or serene individuals, and second, do unsettled individuals respond more to art as a function of its narrative structure? Participants (N = 61) completed a set of questionnaires, then viewed a series of paintings, Giotto’s Seven Vices, either unmodified to exhibit high narrative structure, or modified to exhibit low narrative structure, and then filled another set of questionnaires. The results show that unsettled individuals experienced significantly less fluctuation of personality across conditions, and that in the condition of low narrative coherence, serene individuals experienced significantly more personality fluctuations than unsettled individuals. The results suggest that unsettled persons may need more narrative coherence in the art they engage with, while serene individuals may remain open to less-structured and more ambiguous art.",
-  "authors": [
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Maja_Djikic",
-        "text": "Maja Djikic"
-      },
-      "institution": "University of Toronto"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Keith_Oatley",
-        "text": "Keith Oatley"
-      },
-      "institution": "University of Toronto"
-    },
-    {
-      "name": {
-        "href": "https://www.researchgate.net/profile/Jordan_Peterson2",
-        "text": "Jordan B Peterson"
-      },
-      "institution": "University of Toronto"
-    }
-  ],
-  "url": "https://www.researchgate.net/publication/259148066_Serene_Arts_The_effect_of_personal_unsettledness_and_of_paintings'_narrative_structure_on_personality",
-  "key": "/rg/article?title=259148066_Serene_Arts_The_effect_of_personal_unsettledness_and_of_paintings%27_narrative_structure_on_personality",
-  "cached": "2018-12-20T23:40:39.731Z",
   "params": {
     "template": "rgarticle"
   }
@@ -2342,6 +2431,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1552-7433_Personality_and_Social_Psychology_Bulletin",
     "text": "Personality and Social Psychology Bulletin"
   },
+  "tldr":"The Big 5 trait Agreeableness can be subdivided into Politeness and Compassion. Conversatism is associated with Politeness and Liberalism with Compassion. In addition conservatism is associated with the Orderliness aspect of Conscientiousness and negatively with Openness/Intellect.",
   "abstract": "Political conservatism has been characterized by resistance to change and acceptance of inequality, with liberalism characterized by the polar opposite of these values. Political attitudes are heritable and may be influenced by basic personality traits. In previous research, conservatism (vs. liberalism) has been associated positively with Conscientiousness and negatively with Openness-Intellect, consistent with the association of conservatism with resistance to change. Less clear, however, are the personality traits relating to egalitarianism. In two studies, using a personality model that divides each of the Big Five into two aspects, the present research found that one aspect of Agreeableness (Compassion) was associated with liberalism and egalitarianism, whereas the other (Politeness) was associated with conservatism and traditionalism. In addition, conservatism and moral traditionalism were positively associated with the Orderliness aspect of Conscientiousness and negatively with Openness-Intellect. These findings contribute to a more nuanced understanding of personality's relation to political attitudes and values.",
   "authors": [
     {
@@ -2390,6 +2480,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1931-1516_Emotion",
     "text": "Emotion"
   },
+  "tldr":"Extraverts are more susceptible to rewards on impulsive decisions.",
   "abstract": "Delay discounting is the process by which the value of an expected reward decreases as the delay to obtaining that reward increases. Individuals with higher discounting rates tend to prefer smaller immediate rewards over larger delayed rewards. Previous research has indicated that personality can influence an individual's discounting rates, with higher levels of Extraversion predicting a preference for immediate gratification. The current study examined how this relationship would be influenced by situational mood inductions. While main effects were observed for both Extraversion and cognitive ability in the prediction of discounting rates, a significant interaction was also observed between Extraversion and positive affect. Extraverted individuals were more likely to prefer an immediate reward when first put in a positive mood. Extraverts thus appear particularly sensitive to impulsive, incentive-reward-driven behavior by temperament and by situational factors heightening positive affect.",
   "authors": [
     {
@@ -2596,6 +2687,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0588-8018_Communications",
     "text": "Communications"
   },
+  "tldr": "Readers of fiction tend to have more empathy. We replicated this finding while controlling for personality differences.",
   "abstract": "Readers of fiction tend to have better abilities of empathy and theory of mind (Mar et al., 2006). We present a study designed to replicate this finding, rule out one possible explanation, and extend the assessment of social outcomes. In order to rule out the role of personality, we first identified Openness as the most consistent correlate. This trait was then statistically controlled for, along with two other important individual differences: the tendency to be drawn into stories and gender. Even after accounting for these variables, fiction exposure still predicted performance on an empathy task. Extending these results, we also found that exposure to fiction was positively correlated with social support. Exposure to nonfiction, in contrast, was associated with loneliness, and negatively related to social support.",
   "authors": [
     {
@@ -2684,7 +2776,8 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
-  "abstract": "An experiment tested the hypothesis that literature can subvert habitual emotional disengagement of\navoidantly attached individuals. After completing the Attachment Style Questionnaire and an Emotion\nChecklist, 166 participants were randomly assigned to either an Art or a Control condition. Those in\nthe Art condition read the short story The Lady with the Toy Dog by [Chekhov, A. (1899/1990). The lady\nwith a toy dog. In S. Applebaum (Ed.), Five great short stories. Dover Thrift Editions: Springer]. Those in\nthe Control condition read a comparison text that was documentary in format, and had the same content,\nlength, reading difficulty, and interest. Following this, all participants completed the Emotion Checklist\nagain. As hypothesized, an interaction between Attachment Style and Condition was found: Individuals\nwho scored above the median on avoidant attachment experienced significantly greater Emotion Change\nin the Art condition than in the Control condition.",
+  "tldr", "",
+  "abstract": "An experiment tested the hypothesis that literature can subvert habitual emotional disengagement of avoidantly attached individuals. After completing the Attachment Style Questionnaire and an Emotion Checklist, 166 participants were randomly assigned to either an Art or a Control condition. Those in the Art condition read the short story The Lady with the Toy Dog by [Chekhov, A. (1899/1990). The lady with a toy dog. In S. Applebaum (Ed.), Five great short stories. Dover Thrift Editions: Springer]. Those in the Control condition read a comparison text that was documentary in format, and had the same content, length, reading difficulty, and interest. Following this, all participants completed the Emotion Checklist\nagain. As hypothesized, an interaction between Attachment Style and Condition was found: Individuals who scored above the median on avoidant attachment experienced significantly greater Emotion Change in the Art condition than in the Control condition.",
   "authors": [
     {
       "name": {
@@ -2773,6 +2866,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
+  "tldr": "Text analysis shows word use correlates with Big 5 traits.",
   "abstract": "Social and personality psychologists have recently begun examining patterns of natural language use in relation to psychological phenomena. One domain of interest has been the relationships between individual differences in personality and the types of words that people use. The current study extends this research by examining the association between personality traits and language use in the production of self-narratives. Ninety-four undergraduate students were led through an automated writing program that facilitated the telling of the past and the planning of the future. Word usage was categorized using James Pennebaker’s Linguistic Inquiry and Word Count (LIWC) text-analysis software. Individual differences in the frequency of word use within these categories were correlated with measures of the Big Five personality traits. Every one of the Big Five was strongly and significantly associated with word use patterns theoretically appropriate to the trait, indicating strong connections between language use and personality.",
   "authors": [
     {
@@ -2848,6 +2942,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1095-7251_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
+  "tldr": "Respondents on personality tests may give false answers to make themselves look better. We developed a test that protects against this strategy. Our test proved more predictive of achievement.",
   "abstract": "Self-report measures of personality appear susceptible to biased responding, especially when administered in competitive environments. Respondents can selectively enhance their positive traits while downplaying negative ones. Consequently, it can be difficult to achieve an accurate representation of personality when there is motivation for favourable self-presentation. In the current study, we developed a relative-scored Big Five measure in which respondents had to make repeated choices between equally desirable personality descriptors. This measure was contrasted with a traditional Big Five measure for its ability to predict GPA and creative achievement under both normal and “fake good” response conditions. While the relative-scored measure significantly predicted these outcomes in both conditions, the Likert questionnaire lost its predictive ability when faking was present. The relative-scored measure thus proved more robust against biased responding than the Likert measure of the Big Five.",
   "authors": [
     {
@@ -2930,6 +3025,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0022-3891_Journal_of_Personalit",
     "text": "Journal of Personality Assessment"
   },
+  "tldr": "Emotion regulation studies usually emphasize down regulation of negative affect. We examine down regulation of positive affect and find it predictive of impulsivity and adjustment. ",
   "abstract": "A voluminous literature has documented the importance of emotion regulation for health and well-being. The studies in this literature, however, have generally focused on the down-regulation of negative affect. Few studies have examined the down-regulation of positive affect. In Study 1, we constructed a scale, the revised Regulatory Emotional Self-Efficacy Scale (r–RESE), which assesses both the down- and upregulation of positive affect, in addition to the traditional down-regulation of negative affect. In Study 2, we conducted an extensive validation of the r–RESE scale, using a multimethod approach with informant ratings, to illustrate that the down-regulation of positive affect represents a process independent of each of the other forms of emotion regulation. In Study 3, we provided evidence that the ability to down-regulate positive emotions provides added predictive utility when predicting indexes of impulsivity and adjustment. Across the studies, we illustrate the potential importance of the down-regulation of positive emotions as a topic of study for the field of emotion regulation. CORRECTION: DOI:10.1080/00223891.2017.1339711The cohen’s d’s were not calculated correctly in the descriptive statistics for Study 1–the effect sizes in the paper are double what they should be. On Page 3, the cohen’s d’s in the following paragraph should read as follows: We performed Bonferroni-corrected pairwise t tests to examine differences in composite scores between the four factors. Of all the factors, the down-regulation of anger (D-ANG) had the highest score, D-ANG and U-POS, t(489) d = 11.27, p &lt;.001, d =.51; D-ANG and D-DES, t(489) = 5.00, p &lt;.001, d =.23, although it did not differ significantly from D-POS. Similarly, down-regulation of positive emotions scores (D-POS) and down-regulation of despondency or distress (D-DES) scores did not differ significantly from one another, but both scores were significantly higher than the up-regulation of positive emotions (U-POS), D-POS and U-POS, t(489) = 8.14, p &lt;.001, d =.37; D-POS and D-DES, t(489) = 7.62, p &lt;.001, d =.35. These results suggest that people believe that they are better at down-regulating than up-regulating their emotions, and believe they are best at down-regulating their anger. The authors apologize for their oversight.",
   "authors": [
     {
@@ -2971,7 +3067,8 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1532-6934_Creativity_Research_Journal",
     "text": "Creativity Research Journal"
   },
-  "abstract": "This study investigated individual differences in cognitive abilities that contribute to\nsolving insight problems. A model is proposed describing three types of cognitive ability\nthat contribute independently to insight: convergent thinking, divergent thinking, and\nbreaking frame. The model was tested in a large sample (N=108) by regressing insight\nproblem solving performance on measures of these three abilities. This analysis demonstrated that all three abilities predicted insight independently. Convergent thinking was further broken down into verbal intelligence and working memory, which also predicted insight independently of each other and of divergent thinking and breaking frame. Finally, when pitted against noninsight problem solving as a predictor in regression, only insight problem solving was uniquely associated with divergent thinking and breaking frame. The model is suggested as a potentially useful taxonomy for the study of ill-defined problems and cognitive abilities.",
+  "tldr": "A model is presented for analyzing insight. The model has three components: Convergent and Divergent Thinking and Breaking Frame",
+  "abstract": "This study investigated individual differences in cognitive abilities that contribute to solving insight problems. A model is proposed describing three types of cognitive ability that contribute independently to insight: convergent thinking, divergent thinking, and breaking frame. The model was tested in a large sample (N=108) by regressing insight problem solving performance on measures of these three abilities. This analysis demonstrated that all three abilities predicted insight independently. Convergent thinking was further broken down into verbal intelligence and working memory, which also predicted insight independently of each other and of divergent thinking and breaking frame. Finally, when pitted against noninsight problem solving as a predictor in regression, only insight problem solving was uniquely associated with divergent thinking and breaking frame. The model is suggested as a potentially useful taxonomy for the study of ill-defined problems and cognitive abilities.",
   "authors": [
     {
       "name": {
@@ -3012,6 +3109,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
   },
+  "tldr": "The trait of stability (a metatrait of the Big 5) correlated to being an early riser.",
   "abstract": "A personality model based on the Big Five and their higher-order factors or metatraits was used to examine associations between personality and individual differences in circadian rhythm, as assessed by the Morningness–Eveningness Questionnaire (MEQ). Based on previous research with Eysenck’s personality model and a neurobiological model implicating serotonergic function in the metatrait Stability (the shared variance of Neuroticism reversed, Agreeableness, and Conscientiousness), we hypothesized that morningness would be positively related to Stability. Structural equation modeling in a sample of 279 undergraduates confirmed this hypothesis.",
   "authors": [
     {
@@ -3060,7 +3158,8 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0084-6724_Archive_for_the_Psychology_of_Religion_Archiv_fuer_Religionspychologie",
     "text": "Archive for the Psychology of Religion / Archiv für Religionspychologie"
   },
-  "abstract": "Individuals operating within the scientific paradigm presume that the world is made of matter. Although the perspective engendered by this presupposition is very powerful, it excludes value and subjective experience from its fundamental ontology. In addition, it provides very little guidance with regards to the fundamentals of ethical action. Individuals within the religious paradigm, by contrast, presume that the world is made out of what matters. From such a perspective, the phenomenon of meaning is the primary reality. This meaning is revealed both subjectively and objectively, and serves—under the appropriate conditions—as an unerring guide to ethical action.The ancient stories of Genesis cannot be properly understood without viewing them from within the religious paradigm. Genesis describes the primary categories of the world of meaning, as well as the eternal interactions of those categories. Order arises out of Chaos, through the creative intermediation of Logos, and man is manifested, in turn. Man, a constrained Logos, exists within a bounded state of being, Eden. Eden is a place where order and chaos, nature and culture, find their optimal state of balance. Because Eden is a walled garden, however—a bounded state of being—something is inevitably excluded. Unfortunately, what is excluded does not simply cease to exist. Every bounded paradise thus contains something forbidden and unknown. Man's curiosity inevitably drives him to investigate what has been excluded. The knowledge thus generated perpetually destroys the presuppositions and boundaries that allow his temporary Edens to exist. Thus, man is eternally fallen. The existential pain generated by this endlessly fallen state can undermine man's belief in the moral justifi0ability of being—and may turn him, like Cain, against brother and God.",
+  "tldr": "An investigation into the psychological meaning of Genesis.",
+  "abstract": "Individuals operating within the scientific paradigm presume that the world is made of matter. Although the perspective engendered by this presupposition is very powerful, it excludes value and subjective experience from its fundamental ontology. In addition, it provides very little guidance with regards to the fundamentals of ethical action. Individuals within the religious paradigm, by contrast, presume that the world is made out of what matters. From such a perspective, the phenomenon of meaning is the primary reality. This meaning is revealed both subjectively and objectively, and serves—under the appropriate conditions—as an unerring guide to ethical action.The ancient stories of Genesis cannot be properly understood without viewing them from within the religious paradigm. Genesis describes the primary categories of the world of meaning, as well as the eternal interactions of those categories. Order arises out of Chaos, through the creative intermediation of Logos, and man is manifested, in turn. Man, a constrained Logos, exists within a bounded state of being, Eden. Eden is a place where order and chaos, nature and culture, find their optimal state of balance. Because Eden is a walled garden, however—a bounded state of being—something is inevitably excluded. Unfortunately, what is excluded does not simply cease to exist. Every bounded paradise thus contains something forbidden and unknown. Man's curiosity inevitably drives him to investigate what has been excluded. The knowledge thus generated perpetually destroys the presuppositions and boundaries that allow his temporary Edens to exist. Thus, man is eternally fallen. The existential pain generated by this endlessly fallen state can undermine man's belief in the moral justifiability of being — and may turn him, like Cain, against brother and God.",
   "authors": [
     {
       "name": {
@@ -3505,6 +3604,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0092-6566_Journal_of_Research_in_Personality",
     "text": "Journal of Research in Personality"
   },
+  "tldr": "Social ability correlates positively with fiction reading, not so for non-fiction.",
   "abstract": "While frequent readers are often stereotyped as socially awkward, this may only be true of non-fiction readers and not readers of fiction. Comprehending characters in a narrative fiction appears to parallel the comprehension of peers in the actual world, while the comprehension of expository non-fiction shares no such parallels. Frequent fiction readers may thus bolster or maintain their social abilities unlike frequent readers of non-fiction. Lifetime exposure to fiction and non-fiction texts was examined along with performance on empathy/social-acumen measures. In general, fiction print-exposure positively predicted measures of social ability, while non-fiction print-exposure was a negative predictor. The tendency to become absorbed in a story also predicted empathy scores. Participant age, experience with English, and intelligence (g) were statistically controlled.",
   "authors": [
     {
@@ -3802,7 +3902,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0191-8869_Personality_and_Individual_Differences",
     "text": "Personality and Individual Differences"
   },
-  "abstract": "One hundred and fifteen undergraduate students (88 women and 27 men, mean age ¼ 19.9 years) from a large urban university participated in this study for course credit. Individuals with moralistic and egoistic biases in self-perception (Paulhus &amp;John, 1998) were tested for attentional biases and memory distortions following bogus personality feedback. Individuals with a moralistic bias (those scoring high on the Impression Management (IM) and Self-Deceptive Denial (SDD) subscales of the Balanced Inventory of Desirable Responding (BIDR; Paulhus, 1991)) showed higher overall viewing times for their feedback, and no memory distortions. In contrast, individuals with an egoistic bias (those scoring high on Self-Deceptive Enhancement (SDE) subscale of the BIDR) exhibited a self-enhancing distortion of memory. These find-ings contribute to our understanding of the different ways individuals may distort information about the self, thus supporting the motivational distinction between egoistic and moralistic biases in self-enhance-ment.",
+  "abstract": "One hundred and fifteen undergraduate students (88 women and 27 men, mean age ¼ 19.9 years) from a large urban university participated in this study for course credit. Individuals with moralistic and egoistic biases in self-perception (Paulhus &amp;John, 1998) were tested for attentional biases and memory distortions following bogus personality feedback. Individuals with a moralistic bias (those scoring high on the Impression Management (IM) and Self-Deceptive Denial (SDD) subscales of the Balanced Inventory of Desirable Responding (BIDR; Paulhus, 1991)) showed higher overall viewing times for their feedback, and no memory distortions. In contrast, individuals with an egoistic bias (those scoring high on Self-Deceptive Enhancement (SDE) subscale of the BIDR) exhibited a self-enhancing distortion of memory. These findings contribute to our understanding of the different ways individuals may distort information about the self, thus supporting the motivational distinction between egoistic and moralistic biases in self-enhancement.",
   "authors": [
     {
       "name": {
@@ -4087,7 +4187,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/0022-3514_Journal_of_Personality_and_Social_Psychology",
     "text": "Journal of Personality and Social Psychology"
   },
-  "abstract": "Reductions in latent inhibition (LI), the capacity to screen from conscious awareness stimuli previously experienced as irrelevant, have been generally associated with the tendency towards psychosis. However, \"failure\" to screen out previously irrelevant stimuli might also hypothetically contribute to original thinking, particularly in combination with high IQ. Meta-analysis of two studies, conducted on youthful high-IQ samples. demonstrated that high lifetime creative achievers had significantly lower LI scores than low creative achievers (r(effect size) = .31, p = .0003, one-tailed). Eminent creative achievers (participants under 21 years who reported unusually high scores in a single domain of creative achievement) were 7 times more likely to have low rather than high LI scores, chi2 (1, N = 25) = 10.69, phi = .47. p = .003.",
+  "abstract": "Reductions in latent inhibition (LI), the capacity to screen from conscious awareness stimuli previously experienced as irrelevant, have been generally associated with the tendency towards psychosis. However, \"failure\" to screen out previously irrelevant stimuli might also hypothetically contribute to original thinking, particularly in combination with high IQ. Meta-analysis of two studies, conducted on youthful high-IQ samples demonstrated that high lifetime creative achievers had significantly lower LI scores than low creative achievers (r(effect size) = .31, p = .0003, one-tailed). Eminent creative achievers (participants under 21 years who reported unusually high scores in a single domain of creative achievement) were 7 times more likely to have low rather than high LI scores, chi2 (1, N = 25) = 10.69, phi = .47. p = .003.",
   "authors": [
     {
       "name": {
@@ -4276,6 +4376,7 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1751-9004_Social_and_Personality_Psychology_Compass",
     "text": "Social and Personality Psychology Compass"
   },
+  "tldr": "The Big 5 Ttraits have sub-traits (aspects). We present a new model (the Disposition-Goals-Ideology model) that suggests connections between particular aspects and political orientation.",
   "abstract": "We review existing research on the associations between political orientation and Big Five traits such as Openness to Experience and Conscientiousness. We suggest that analyzing these traits at the aspect level sheds light on motivational mechanisms underlying these links. For example, we present evidence that only one of the two aspects of Conscientiousness (\"Orderliness\") reliably predicts conservatism. To account for this relationship, and to more generally describe how traits translate into political orientation, we present a new model, the Disposition-Goals-Ideology (DiGI) Model. The DiGI model outlines specific interrelationships among dispositions, goals, and ideological beliefs that help to shape individual differences in political orientation.",
   "authors": [
     {
@@ -4675,7 +4776,8 @@ site, fork the repo and submit a pull request. Or, publish to your Github pages 
     "href": "journal/1467-6494_Journal_of_Personality",
     "text": "Journal of Personality"
   },
-  "abstract": "Objective\nThe Big Five personality dimension Openness/Intellect is the trait most closely associated with creativity and creative achievement. Little is known, however, regarding the discriminant validity of its two aspects— Openness to Experience (reflecting cognitive engagement with sensory and perceptual information) and Intellect (reflecting cognitive engagement with abstract and semantic information, primarily through reasoning)— in relation to creativity.Method\nIn four demographically diverse samples totaling 1035 participants, we investigated the independent predictive validity of Openness and Intellect by assessing the relations among cognitive ability, divergent thinking, personality, and creative achievement across the arts and sciences.Results and Conclusions\nWe confirmed the hypothesis that whereas Openness predicts creative achievement in the arts, Intellect predicts creative achievement in the sciences. Inclusion of performance measures of general cognitive ability and divergent thinking indicated that the relation of Intellect to scientific creativity may be due at least in part to these abilities. Lastly, we found that Extraversion additionally predicted creative achievement in the arts, independently of Openness. Results are discussed in the context of dual-process theory.",
+  "tldr": "The Big 5 trait Openness/Intellect is associated with creativity. We find Openness predictive of creativity in the arts and Intellect predictive of creativity in the sciences.",
+  "abstract": "&lt;div&gt;Objective:&lt;/div&gt;The Big Five personality dimension Openness/Intellect is the trait most closely associated with creativity and creative achievement. Little is known, however, regarding the discriminant validity of its two aspects— Openness to Experience (reflecting cognitive engagement with sensory and perceptual information) and Intellect (reflecting cognitive engagement with abstract and semantic information, primarily through reasoning)— in relation to creativity.&lt;div&gt;Method&lt;/div&gt;In four demographically diverse samples totaling 1035 participants, we investigated the independent predictive validity of Openness and Intellect by assessing the relations among cognitive ability, divergent thinking, personality, and creative achievement across the arts and sciences.&lt;div&gt;Results and Conclusions&lt;/div&gt;We confirmed the hypothesis that whereas Openness predicts creative achievement in the arts, Intellect predicts creative achievement in the sciences. Inclusion of performance measures of general cognitive ability and divergent thinking indicated that the relation of Intellect to scientific creativity may be due at least in part to these abilities. Lastly, we found that Extraversion additionally predicted creative achievement in the arts, independently of Openness. Results are discussed in the context of dual-process theory.",
   "authors": [
     {
       "name": {
@@ -5569,6 +5671,8 @@ organized in multiple ways with the Leo Outlining Editor, displayed with LeoVue.
 [Jordan B Peterson on ResearchGate](https://www.researchgate.net/profile/Jordan_Peterson2)
 
 [Jordan B Peterson Home Page](https://jordanbpeterson.com/)
+
+This site was last updated on 1/31/2019. 
 </t>
 </tnodes>
 </leo_file>

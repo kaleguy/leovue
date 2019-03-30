@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### WIP
 - vtitle on Graphical Tree
 - Graphical tree resizing
-- Export to JSON and LEO format
 - @formio directive
 - format @doc directive
 - fix Accordion mode
@@ -20,39 +19,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - remove font awesome cdn
 - fix to wordcloud example
 - @hide
-- @m
-- @tags
 - convert entities in export
 - node timeline
 
-## [1.21.1] - 2018-01-28
+
+## [2.0.0] - 2019-01-28
+### Added
+- @m directive (metadata)
+- @mgroup directive (metadata group)
+- @t directive (tags)
+- data feature documentation
+
+
+## [1.21.1] - 2019-01-28
 ### Changed
 - remove vendor.js.map from dist
 
 
-## [1.21.0] - 2018-01-22
+## [1.21.0] - 2019-01-22
 ### Added
 - @from directive
 
-## [1.20.0] - 2018-01-16
+## [1.20.0] - 2019-01-16
 ### Added
 - groups param in chart components
 
 
-## [1.19.1] - 2018-01-10
+## [1.19.1] - 2019-01-10
 ### Added
 - from param in wordcloud component
 
 ### Patch
 - Wordcloud fix
 
-## [1.19.0] - 2018-01-09
+## [1.19.0] - 2019-01-09
 ### Added
 - @group
 - word-cloud component
 
 
-## [1.18.2] - 2018-01-03
+## [1.18.2] - 2019-01-03
 ### Changed
 - change params for node list (@json nodes)
 

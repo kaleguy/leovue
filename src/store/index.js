@@ -932,7 +932,7 @@ function loadPage (item, textItems) {
   item.page = { pid: id, id, index: 0 }
   if (!pages) { return }
   // create the page content by combining the child content, and mark each child as a page child
-  const title = `<h1  id="x${id}-${id}" class="x-section">${item.name.replace(/^@page /, '')}</h1>`
+  const title = `<h1  id="x${id}-${id}" class="x-section">${item.vtitle}</h1>`
   let content = util.formatText(textItems[t], true, title)
   const arr = []
   pages.forEach((page, index) => {
@@ -1042,8 +1042,8 @@ function extractMetaData (textItems, textIndex) {
   }
   const endIndex = (text + '\n\n').indexOf('\n\n', startIndex)
   const mText = text.substring(startIndex + 3, endIndex)
-  // const cText = text.substring(0, startIndex) + text.substring(endIndex)
-  // textItems[textIndex] = cText // clean text
+  const cText = text.substring(0, startIndex) + text.substring(endIndex)
+  textItems[textIndex] = cText // clean text
   try {
     if (mText.indexOf('}') === -1) {
       metadata = jsyaml.load(mText) || {}
@@ -1053,7 +1053,7 @@ function extractMetaData (textItems, textIndex) {
   } catch (e) {
     console.log('Bad metadata:', mText, startIndex, endIndex, e)
   }
-  console.log('metadata:', metadata)
+  // console.log('metadata:', metadata)
   return metadata
 }
 

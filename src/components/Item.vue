@@ -199,8 +199,10 @@ export default {
   methods: {
     gotoClone: function (event) {
       const id = event.target.dataset.id
+      this.hideCloneMenu()
       console.log('Going to node:', id)
       if (!id) { return }
+
       this.$store.dispatch('setCurrentItem', {id})
     },
     hideCloneMenu: function () {

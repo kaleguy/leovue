@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -38,19 +38,19 @@
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
 </v>
-<v t="josephorr.20170326174511.1" a="E"><vh>Sample Content</vh>
+<v t="josephorr.20170326174511.1"><vh>Sample Content</vh>
 <v t="josephorr.20170304113011.1"><vh>Code</vh>
 <v t="josephorr.20170304113024.1"><vh>Javascript</vh></v>
 <v t="josephorr.20170304115429.1"><vh>Coffeescript</vh></v>
 </v>
-<v t="josephorr.20170326071708.1"><vh>Some Cloned Nodes</vh>
+<v t="josephorr.20170326071708.1"><vh>Cloned Nodes</vh>
 <v t="josephorr.20170304115429.1"></v>
 <v t="josephorr.20170421082838.1"></v>
 </v>
 <v t="josephorr.20170511082833.1"><vh>Subtrees</vh>
 <v t="josephorr.20170511083006.1"><vh>[Top](static/example.leo)</vh></v>
 </v>
-<v t="josephorr.20170326072340.1" a="E"><vh>File Nodes</vh>
+<v t="josephorr.20170326072340.1"><vh>File Nodes</vh>
 <v t="josephorr.20170408092907.1"><vh>@clean ../src/services/leo.js</vh></v>
 <v t="josephorr.20170328225527.1"><vh>@clean ../src/components/TreeViewer.vue</vh>
 <v t="josephorr.20170328225654.1"><vh>&lt;&lt; template &gt;&gt;</vh></v>
@@ -58,7 +58,7 @@
 <v t="josephorr.20170328225741.1"><vh>&lt;&lt; style &gt;&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"><vh>URL Nodes</vh>
+<v t="josephorr.20170401144849.1"><vh>URL Nodes</vh>
 <v t="josephorr.20180402061306.1"><vh>Basic Web Content</vh>
 <v t="josephorr.20170401114539.1"><vh>[Interstellar on Wikipedia](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20170327233137.1"></v>
@@ -186,10 +186,11 @@
 <v t="josephorr.20171130193909.1"></v>
 </v>
 </v>
-<v t="josephorr.20170401144849.1" a="E"></v>
+<v t="josephorr.20170401144849.1"></v>
 <v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
+<v t="josephorr.20190330084806.1"><vh>[Data in Leo/LeoVue - Quick Look](static/Data.md)</vh></v>
 <v t="josephorr.20171109061104.1" a="E"></v>
-<v t="josephorr.20190209062118.1"><vh>Data from Node Groups</vh>
+<v t="josephorr.20190209062118.1" a="E"><vh>Data from Node Groups</vh>
 <v t="josephorr.20190202185628.1"><vh>@board @group-4 Research of Jordan B Peterson</vh>
 <v t="josephorr.20190202185628.2"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="josephorr.20190202185628.3"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -301,7 +302,12 @@
 <v t="josephorr.20190204084431.1"><vh>@board Research of Jordan B Peterson - Summary Table From Group</vh></v>
 <v t="josephorr.20190209064626.1"><vh>Jordan B Peterson Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190209062531.1"><vh>Metadata</vh>
+<v t="josephorr.20190209062531.1" a="E"><vh>Metadata</vh>
+<v t="josephorr.20190330092530.1"><vh>@page @mgroup-1 Demo nodes for metadata</vh>
+<v t="josephorr.20190330092558.1"><vh>Demo Item 1</vh></v>
+<v t="josephorr.20190330092627.1"><vh>Demo Item 2</vh></v>
+</v>
+<v t="josephorr.20190330102716.1"><vh>Metadata Table Demo</vh></v>
 <v t="josephorr.20190131173223.1" a="E"><vh>@mgroup-1 Movies - Data</vh>
 <v t="josephorr.20190131173340.1"><vh>[Interstellar](https://en.wikipedia.org/wiki/Interstellar_(film))</vh></v>
 <v t="josephorr.20190131173315.1"><vh>[Days of Heaven](https://en.wikipedia.org/wiki/Days_of_Heaven)</vh></v>
@@ -586,7 +592,7 @@ c.connect(
 
 Leo Nodes can be "cloned nodes". This means that two different nodes can point to the same shared content.
 
-The nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
+As an example, the nodes in this branch are clones of nodes appearing elsewhere in this document.</t>
 <t tx="josephorr.20170326072340.1">## Load File Content into Node
 
 Leo Nodes can be @file nodes. This means that Leo keeps a link to an external file and will sync with any changes in the external file. </t>
@@ -1565,11 +1571,14 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 1.21.0
+LeoVue is currently at version 2.0.0
 
-LeoVue 1.21.x is currently is only tested in Chrome and may not display correctly in other browsers.
+LeoVue 2.0.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
-Current features include:
+New in 2.0
+* Metadata and tags
+
+Other features include:
 * Display Leo content including markdown, html and code highlighting
 * Bookmarkable nodes
 * Node titles can be urls to markdown files
@@ -2728,7 +2737,7 @@ The child nodes below contain some examples of Bootstrap Vue components in use.
    &lt;/div&gt;
    &lt;p&gt;
      &lt;a style="display:none" href="https://github.com/kaleguy/leovue/" target="_blank"&gt;GitHub&lt;/a&gt;
-     &lt;a href="#dashboard"&gt;1.21.0 Docs / Demo&lt;/a&gt;
+     &lt;a href="#dashboard"&gt;2.0.0 Docs / Demo&lt;/a&gt;
    &lt;/p&gt;
    &lt;/div&gt;
 &lt;/div&gt;
@@ -7353,12 +7362,14 @@ Some text here
 @m
 description: Sci-fi epic from Bruce Nolan.
 rating: 5
+
 ```
 
 The lines after "@m" until either the end of the node or the first blank line will be removed from the node content and 
 attached to the node as metadata. You can use this data by creating a group of nodes with metadata using the @mgroup tag.
 
-
+For an example of this, see the child items of this node. In the [[Movies]] section below this one. Each movie has some metadata, and this metadata is 
+used to list the movies in a table.
 
 </t>
 <t tx="josephorr.20190209064626.1">&lt;word-cloud from="abstract" group=4 /&gt;</t>
@@ -7366,7 +7377,7 @@ attached to the node as metadata. You can use this data by creating a group of n
 ## Movie List
 
 &lt;summary-table
- :mgroup=1
+ :mgroup=2
  :cols="[{show: 'vtitle', label: 'Title'},{show: 'director', label: 'Director'},{show: 'rating', label: 'Rating', dataType: 'numeric', cellClass: 'right'}]" &gt;
 &lt;/summary-table&gt;</t>
 <t tx="josephorr.20190216155227.1">## Getting JSON Data Into Your Leo File
@@ -7419,5 +7430,24 @@ sci-fi
 
 You can use the TagSearch component to search for nodes by tag, as in the below Tag Demo.
 </t>
+<t tx="josephorr.20190330084806.1"></t>
+<t tx="josephorr.20190330092530.1">
+This section has a couple of simple content items with metadata.</t>
+<t tx="josephorr.20190330092558.1">@m
+color: blue
+size: large
+
+This is the first demo item.</t>
+<t tx="josephorr.20190330092627.1">@m
+color: red
+size: small
+
+This is the second demo item.
+
+</t>
+<t tx="josephorr.20190330102716.1">&lt;summary-table
+ :mgroup=1
+ :cols="[{show: 'color', label: 'Color'},{show: 'size', label: 'Size'}]" &gt;
+&lt;/summary-table&gt;</t>
 </tnodes>
 </leo_file>

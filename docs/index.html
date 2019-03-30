@@ -51,12 +51,12 @@
     }
     // "leftPaneWidth": 'calc(50vw - 300px)',
     // "rightPaneWidth": 'calc(50vw + 300px)',
-    // "leftPanePadding": 'calc(50vw - 600px)',</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?d5331b883ef6d08dd642b715869c691b rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
+    // "leftPanePadding": 'calc(50vw - 600px)',</script><meta charset=utf-8><title>LeoVue</title><meta name=keywords content="knowledge organization, outlines, outliner, outlining IDE"><meta name=description content="Knowledge Organization with Leo and LeoVue: organize content and files into complex outlines."><link href=static/css/app.css?42e944b7efd007d114f360fe53562b17 rel=stylesheet></head><body><div id=app></div><script type=text/ons-template id=popover.html><ons-popover direction="up down" cancelable>
     <div style="text-align: center; opacity: 0.7;" id="popover.content.html">
       <p>This is a popover!</p>
       <p><small>Click the background to remove the popover.</small></p>
     </div>
-  </ons-popover></script><div id=popup class=popover style=display:none><div class=arrow></div><h3 class=popover-header>Popover Title</h3><div class=popover-body>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div></div><script type=text/template id=rgarticle><div class="rg">
+  </ons-popover></script><script type=text/template id=rgarticle><div class="rg">
     <div class="publication-header">
       <h1>{{- data.title }}</h1>
       <div class="publication-meta-text">
@@ -84,11 +84,18 @@
           {{ }) }}
         </ul>
       </div>
+      {{ if (data.tldr) { }}
+      <div>
+        <strong>tldr</strong>
+      </div>
+      <div class="publication-abstract">{{- data.tldr }}</div>
+      <div class="hshim"></div>
+      {{ } }}
       <div class="publication-abstract">
         <div>
           <strong>Abstract</strong>
         </div>
-        <div>{{- data.abstract }}</div>
+        <div>{{= data.abstract }}</div>
         <div class="references">{{- data.references }} References</div>
       </div>
       {{ if (data.correction) { }}
@@ -232,4 +239,4 @@
   }
   .lv-rowset DIV {
     flex: 50%
-  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?4a9c43a7521903b52bcb></script><script type=text/javascript src=static/js/app.js?d9a206d7bcf86ff5c699></script></body></html>
+  }</style><script type=text/javascript src=static/js/manifest.js?70af1ecbef4a66a004a7></script><script type=text/javascript src=static/js/vendor.js?9c96b91a18712587c2f8></script><script type=text/javascript src=static/js/app.js?9408f1cb3e7d711ad740></script></body></html>
