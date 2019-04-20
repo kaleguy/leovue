@@ -1,7 +1,5 @@
 # TODO
 
-* mark cloned nodes
-* link to the leo doc
 * scripts in static site pages
 * back link on static pages
 * escape key
@@ -15,12 +13,6 @@
 # Scraping Feature
 
 @json-[KEY] listed in index.html/dataSources: retrieve JSON from given url
-
-* Mongo cache in scraper
-
-* Retrieve json - format as node content
-** rgauthor
-** rgarticle
 
 Put example of leo file with live links on restify site.
 

@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - @hide
 - convert entities in export
 - node timeline
+- tag buttons, tag groups
 
 
 ## [2.0.0] - 2019-01-28
