@@ -19,7 +19,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'timeline-vuejs/dist/timeline-vuejs.css'
 
 // content components
-import Vue2Leaflet from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
 import InfoCard from 'vue-info-card'
 import VTooltip from 'v-tooltip'
 import VueYouTubeEmbed from 'vue-youtube-embed'
@@ -66,9 +66,9 @@ Vue.component('mermaid', Mermaid)
 Vue.component('mermaidp', MermaidP)
 Vue.component('mj', MathJaxComponent)
 Vue.component('info-card', InfoCard)
-Vue.component('l-map', Vue2Leaflet.LMap)
-Vue.component('l-tilelayer', Vue2Leaflet.LTileLayer)
-Vue.component('l-marker', Vue2Leaflet.LMarker)
+Vue.component('l-map', LMap)
+Vue.component('l-tilelayer', LTileLayer)
+Vue.component('l-marker', LMarker)
 Vue.component('summary-table', SummaryTable)
 Vue.component('table-component', TableComponent)
 Vue.component('table-column', TableColumn)
