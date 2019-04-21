@@ -18,7 +18,7 @@
 <v t="josephorr.20181202130523.1"><vh>[Screenshots](https://leoeditor.com/screen-shots.html)</vh></v>
 <v t="josephorr.20170327233257.1"><vh>Installing Leo</vh></v>
 </v>
-<v t="josephorr.20170327233126.1" a="E"><vh>More About LeoVue</vh>
+<v t="josephorr.20170327233126.1"><vh>More About LeoVue</vh>
 <v t="josephorr.20181006112633.1"><vh>[LeoVue Quick Look](static/QuickLook.md)</vh></v>
 <v t="josephorr.20180304203537.1"><vh>[LeoVue README](README.md)</vh></v>
 <v t="josephorr.20171116064625.1"><vh>Current Feature List</vh></v>
@@ -34,6 +34,7 @@
 <v t="josephorr.20181120155646.1"><vh>@page Directives</vh>
 <v t="josephorr.20181120155705.1"><vh>Leo Directives</vh></v>
 <v t="josephorr.20181120155718.1"><vh>LeoVue Directives</vh></v>
+<v t="josephorr.20190420142344.1"><vh>LeoVue Content Directives</vh></v>
 <v t="josephorr.20181120155733.1"><vh>URL Links in LeoVue</vh></v>
 </v>
 <v t="josephorr.20181007134257.1"><vh>Example Sites</vh></v>
@@ -72,7 +73,7 @@
 <v t="josephorr.20180402071948.1"><vh>XML</vh>
 <v t="josephorr.20180402071950.1"><vh>@xml [New York Weather](xttp://w1.weather.gov/xml/current_obs/display.php?stid=KLGA)</vh></v>
 </v>
-<v t="josephorr.20180407102550.1"><vh>JSON</vh>
+<v t="josephorr.20180407102550.1" a="E"><vh>JSON</vh>
 <v t="josephorr.20190101125029.1"><vh>@json [NYC Weather](https://www.treebased.io/weather/new%20york)</vh></v>
 <v t="josephorr.20190101130116.1"><vh>@json [Math Book](https://openlibrary.org/api/books?format=json&amp;jscmd=data&amp;bibkeys=ISBN:0201558025)</vh></v>
 <v t="josephorr.20181028132300.1"><vh>Lists from JSON data</vh>
@@ -187,10 +188,10 @@
 </v>
 </v>
 <v t="josephorr.20170401144849.1" a="E"></v>
-<v t="josephorr.20190131173139.1" a="E"><vh>Data Nodes</vh>
+<v t="josephorr.20190131173139.1"><vh>Data Nodes</vh>
 <v t="josephorr.20190330084806.1"><vh>[Data in Leo/LeoVue - Quick Look](static/Data.md)</vh></v>
 <v t="josephorr.20171109061104.1" a="E"></v>
-<v t="josephorr.20190209062118.1" a="E"><vh>Data from Node Groups</vh>
+<v t="josephorr.20190209062118.1"><vh>Data from Node Groups</vh>
 <v t="josephorr.20190202185628.1"><vh>@board @group-4 Research of Jordan B Peterson</vh>
 <v t="josephorr.20190202185628.2"><vh>@dataSet set2-0a Interpersonal Resonance: Developing Interpersonal Biofeedback for the Promotion of Empathy and Social Entrainment</vh></v>
 <v t="josephorr.20190202185628.3"><vh>@dataSet set2-1 Improving the effectiveness of performance feedback by considering personality traits and task demands</vh></v>
@@ -302,7 +303,7 @@
 <v t="josephorr.20190204084431.1"><vh>@board Research of Jordan B Peterson - Summary Table From Group</vh></v>
 <v t="josephorr.20190209064626.1"><vh>Jordan B Peterson Word Cloud</vh></v>
 </v>
-<v t="josephorr.20190209062531.1" a="E"><vh>Metadata</vh>
+<v t="josephorr.20190209062531.1"><vh>Metadata</vh>
 <v t="josephorr.20190330092530.1"><vh>@page @mgroup-1 Demo nodes for metadata</vh>
 <v t="josephorr.20190330092558.1"><vh>Demo Item 1</vh></v>
 <v t="josephorr.20190330092627.1"><vh>Demo Item 2</vh></v>
@@ -315,7 +316,7 @@
 </v>
 <v t="josephorr.20190209065152.1"><vh>Movies - Summary Table</vh></v>
 </v>
-<v t="josephorr.20190217141559.1" a="E"><vh>Tags</vh>
+<v t="josephorr.20190217141559.1"><vh>Tags</vh>
 <v t="josephorr.20190216192019.1"><vh>Tag Demo</vh></v>
 </v>
 <v t="josephorr.20190216155227.1"><vh>Import and Export</vh>
@@ -1610,6 +1611,7 @@ Other features include:
 * Optional Google Analytics
 * Arrow key navigation of menu
 * Load JSON - Export to Leo
+* Add metadata and tags to content
 
 Planned features not yet supported:
 * Form.io support
@@ -2511,8 +2513,8 @@ For example:
 @book [Evolution of Civilizations](0913966576)
 ```
 
-The data for the book is taken from OpenLibary.org. If data for the book you want to display is missing, you can
-add it to the OpenLibary database.</t>
+The data for the book is taken from OpenLibrary.org. If data for the book you want to display is missing, you can
+add it to the OpenLibrary database.</t>
 <t tx="josephorr.20180414204148.1">comments: This is a book about Mathematics.</t>
 <t tx="josephorr.20180414205753.1">rating: 5
 comments: |
@@ -2969,6 +2971,10 @@ LeoVue adds a few directives not found in the Leo. These are all node level dire
    
 * **@group-** Treat the immediate child nodes as one data set.   
 * **@from-** Extract a subset of data from the a group.   
+
+* **@mgroup-** Create a group (that is, an object) from the metadata in current nodes child nodes and attach to the node. See the @m directive below, plus examples elsewhere in this document.  
+* **@tgoup-** Same as @m but for tags (see the @t directive).
+
 </t>
 <t tx="josephorr.20181120155733.1">Not exactly a directive, but operates similarly to the content directive above. If you enter a node title like this:
 
@@ -7460,5 +7466,16 @@ This is the second demo item.
  :mgroup=1
  :cols="[{show: 'color', label: 'Color'},{show: 'size', label: 'Size'}]" &gt;
 &lt;/summary-table&gt;</t>
+<t tx="josephorr.20190420142344.1">&lt;p&gt;
+In addition to node level directives, LeoVue has the following content directives, which 
+are placed in node content. 
+&lt;/p&gt;
+
+* **@m:** (metadata) Marks the YAML immediately following as metadata. The YAML will be removed on display and 
+attached to the node as a property. It can be accessed by a component.
+
+* **@t:** (tags) Same as the metadata directive but instead interprets the following contiguous lines as a list
+of tags.
+</t>
 </tnodes>
 </leo_file>
