@@ -1583,7 +1583,7 @@ A basic table component is included for displaying table data. The table compone
 
 # LeoVue Current Feature List
 
-LeoVue is currently at version 2.0.0
+LeoVue is currently at version 2.0.1
 
 LeoVue 2.0.x is currently is only tested in Chrome and may not display correctly in other browsers.
 
