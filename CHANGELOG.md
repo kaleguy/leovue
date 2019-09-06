@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - tag buttons, tag groups
 
 
+## [2.0.1] - 2019-09-06
+### Patch
+- error check for unknown @language
+
 ## [2.0.0] - 2019-01-28
 ### Added
 - @m directive (metadata)

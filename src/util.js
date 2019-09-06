@@ -184,10 +184,14 @@ function chop (s, c) {
 function hiliteCode(text, language) {
   text = text.replace(/<sectionlink :title="'(.*?)'"\/>/g, '«$1»')
   text = text.replace(/<sectionlink title="(.*?)"\/>/g, '«$1»')
-  const mu = hljs.highlight(language, text)
-  text = mu.value
-  text = `<pre v-pre>${text}</pre>`
-  text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
+  try {
+    const mu = hljs.highlight(language, text)
+    text = mu.value
+    text = `<pre v-pre>${text}</pre>`
+    text = text.replace(/«(.*?)»/g, '<span class="csection-link">«$1»</span>')
+  } catch (e) {
+    console.warn(`Highlighting of ${language} not supported.`, e);
+  }
   return text
 }
 
