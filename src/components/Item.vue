@@ -3,25 +3,20 @@
       :nid="nid"
       v-bind:class="{'unselected-sibling': hasOpenSibling}">
     <div class="item-box"
-         :class="{bold: isFolder, iactive: active, topItem: top}"
-         >
+         :class="{bold: isFolder, iactive: active, topItem: top}">
       <div>
-        <span @mouseover="hideCloneMenu"
-              @click="toggle">
-        <div v-bind:class="{'icon-bracket': top}" class="icon-b"
-             v-if="isFolder">
-          <div class="arrow"
-               v-bind:class="{arrowdown: isOpenA}">{{arrowIcon}}</div>
-        </div>
-        <div class="leo-box"></div>
-        <div v-if="!isFolder" class="leaf-button"></div>
-        <span class="otitle">{{model.vtitle}}</span>
+        <span @mouseover="hideCloneMenu" @click="toggle">
+          <div v-bind:class="{'icon-bracket': top}" class="icon-b" v-if="isFolder">
+            <div class="arrow" v-bind:class="{arrowdown: isOpenA}">{{arrowIcon}}</div>
+          </div>
+          <div class="leo-box"></div>
+          <div v-if="!isFolder" class="leaf-button"></div>
+          <span class="otitle">{{model.vtitle}}</span>
         </span>
         <span v-show="isClone"
               :id="'popoverButton-sync-' + model.id"
               @mouseover="showCloneMenu">
           <icon
-
                 class="clone-button"
                 name="regular/clone" :scale=".5">
           </icon>
@@ -36,8 +31,6 @@
           </b-popover>
         </span>
       </div>
-
-
     </div>
     <div v-show="isOpen" class="child-items">
       <div v-html="myContent"

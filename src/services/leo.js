@@ -14,6 +14,7 @@ const xslTemplate = `
     <xsl:variable name="nodeSet" select="//v[@t=$t]"/>
     <xsl:variable name="double_quote">"</xsl:variable>
     <xsl:variable name="apos">'</xsl:variable>
+    <xsl:variable name="tab">&#x9;</xsl:variable>
     {
     "id":  <xsl:value-of select="@id"/>,
     "t":   "<xsl:value-of select="translate(@t,'.','_')"/>",
@@ -235,7 +236,7 @@ function transformLeoXML2XML(xmlString, startId, parser) {
     for (let i = 0; i < tnodes.length; i++) {
       let el = tnodes[i]
       let elText = el.textContent
-      let a = el.getAttribute('tx')
+      let a = el.getAttribute('tx').replace(/\t/g, '');
       a = a.replace(/\./g, '_')
       a = a.replace(/^.*?_/, '')
       if (startId) {
@@ -287,10 +288,10 @@ function transformLeoXML2XML(xmlString, startId, parser) {
       if (startId) {
         pid = startId + '-' + pid
       }
+      vnodes[i].innerHTML = vnodes[i].innerHTML.replace(/[\t\r\n]/g, '')
       vnodes[i].setAttribute('id', '"' + pid + '"')
     }
     resolve({xml, textItems})
-
   })
   return p
 }
@@ -339,7 +340,12 @@ function transformLeoXML2JSON (data, startId, parser, transformer, serializer) {
         jsdata = jsdata.replace(/<\?xml version="1\.0" encoding="UTF-8"\?>/,'')
         jsdata = jsdata.replace(/,\s?$/, '') // kludge to get rid of trailing comma
         jsdata = '[' + jsdata + ']'
-        jsdata = JSON.parse(jsdata)
+        try {
+          jsdata = JSON.parse(jsdata)
+        } catch (e) {
+          console.error('Unparsable Leo file!', e);
+          console.warn(jsdata);
+        }
         setIds(startId, jsdata)
         jsdata.forEach(d => cleanText(d, startId))
         const xdata = {}

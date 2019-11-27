@@ -15,7 +15,12 @@
           <div class="inner-container" id="content-inner-container" style="width:100%; overflow:hidden">
             <div id="content-inner-containerb" class="right-cpane" :style="{overflowY: 'auto'}" v-on:scroll="onScroll" >
               <div :style="{width: cpWidth, marginLeft: 'auto', marginRight: 'auto'}">
-              <component :is="dynComponent" v-bind="$props"/>
+                <div v-if="noCompile">
+                   FOOBAR
+                </div>
+                <div v-if="!noCompile">
+                  <component :is="dynComponent" v-bind="$props"/>
+                </div>
               </div>
             </div>
             </div>
@@ -152,7 +157,6 @@ export default {
       this.$store.dispatch('setCurrentItem', {id})
     },
     dataTableClick (r) {
-      debugger
       const title = r.data.title.replace(/<[^>]*>/g, "")
       // const title = r.data.title.innerHTML.replaceAll("<[^>]*>", "")
       const item = JSON.search(this.$store.state.leodata, '//*[vtitle="' + title + '"]')[0]
@@ -196,6 +200,9 @@ export default {
     },
     currentItemContent () {
       return this.$store.state.currentItemContent
+    },
+    noCompile() {
+      return false
     },
     iframeHTML () {
       if (this.iframeContent) {
