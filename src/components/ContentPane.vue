@@ -15,8 +15,7 @@
           <div class="inner-container" id="content-inner-container" style="width:100%; overflow:hidden">
             <div id="content-inner-containerb" class="right-cpane" :style="{overflowY: 'auto'}" v-on:scroll="onScroll" >
               <div :style="{width: cpWidth, marginLeft: 'auto', marginRight: 'auto'}">
-                <div v-if="noCompile">
-                   FOOBAR
+                <div v-if="noCompile" v-html="currentItemContent">
                 </div>
                 <div v-if="!noCompile">
                   <component :is="dynComponent" v-bind="$props"/>
@@ -130,6 +129,9 @@ export default {
   name: 'contentpane',
   components: {
   },
+  props: {
+    noCompile: false
+  },
   data () {
     return {
       xSections: [],
@@ -201,9 +203,6 @@ export default {
     currentItemContent () {
       return this.$store.state.currentItemContent
     },
-    noCompile() {
-      return false
-    },
     iframeHTML () {
       if (this.iframeContent) {
         return this.$store.state.iframeHTML
@@ -255,6 +254,7 @@ export default {
     });
     const id = this.$store.state.currentItem.id
     const item = JSON.search(this.data, '//*[id="' + id + '"]')[0]
+    this.noCompile = item.noCompile
     overrideXFrame(item, this.$store.state.leotext)
     const clinks = document.getElementsByClassName('csection-link')
     let leodata = this.$store.state.leodata

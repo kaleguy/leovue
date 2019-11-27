@@ -1132,7 +1132,7 @@ function setChildDirective (context, d, textItems, parentDirective) {
   d.tags = extractTags(textItems, d.t).map(t => { return { 'text': t } })
   let text = textItems[d.t]
   if (/@nocompile/.test(text)) {
-    d.nocompile = true
+    d.noCompile = true
     text = text.replace(/@nocompile/, '')
   }
   // check for @group and @mgroup, add if found add param

@@ -25,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - node timeline
 - tag buttons, tag groups
 
+## [2.0.2] - 2019-09-06
+### Patch
+- strip tabs from node titles
+- @nocompile directive to skip Vue compilation on node text
 
 ## [2.0.1] - 2019-09-06
 ### Patch
