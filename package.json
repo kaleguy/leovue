@@ -36,7 +36,7 @@
     "moment": "^2.22.0",
     "moment-range": "^4.0.1",
     "numeral": "^2.0.6",
-    "papaparse": "^4.3.6",
+    "papaparse": "^5.2.0",
     "split-string-words": "^1.0.0",
     "stopword": "^0.2.4",
     "style-loader": "^0.23.0",
