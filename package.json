@@ -26,7 +26,7 @@
     "dataframe-js": "^1.2.4",
     "fork-me-on-github-vue": "^1.0.7",
     "h5o": "^0.11.3",
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.4.1",
     "js-yaml": "^3.11.0",
     "leaflet": "^1.4.0",
     "lodash": "^4.17.10",
