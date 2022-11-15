@@ -53,7 +53,7 @@
     "vue-instant": "^1.0.2",
     "vue-markdown": "^2.2.4",
     "vue-resize-directive": "^1.0.0",
-    "vue-router": "^3.0.1",
+    "vue-router": "^3.6.5",
     "vue-star-rating": "^1.5.1",
     "vue-table-component": "^1.8.0",
     "vue-template-compiler": "^2.3.3",
