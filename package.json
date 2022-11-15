@@ -40,7 +40,7 @@
     "split-string-words": "^1.0.0",
     "stopword": "^0.2.4",
     "style-loader": "^0.23.0",
-    "timeline-vuejs": "1.0.2",
+    "timeline-vuejs": "1.1.7",
     "tooltip.js": "^1.3.0",
     "uri-parse-lib": "^2.1.3",
     "v-tooltip": "^2.0.0-rc.14",
